@@ -1,0 +1,525 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root>
+    <doclet-version-NOT-library-version>1.05</doclet-version-NOT-library-version>
+    <class>
+        <name>ir.blue_saffron.libs.onesignal.ActionButton</name>
+        <shortname>BSOneSignalActionButton</shortname>
+        <owner>process</owner>
+        <property>
+            <name>Text</name>
+            <returntype>java.lang.String</returntype>
+            <comment></comment>
+        </property>
+        <property>
+            <name>Id</name>
+            <returntype>java.lang.String</returntype>
+            <comment></comment>
+        </property>
+        <property>
+            <name>Icon</name>
+            <returntype>java.lang.String</returntype>
+            <comment></comment>
+        </property>
+    </class>
+    <class>
+        <name>ir.blue_saffron.libs.onesignal.BSOneSignal</name>
+        <shortname>BSOneSignal</shortname>
+        <owner>process</owner>
+        <event>OnBSPermissionChanged(stateChanges As BSPermissionStateChanges)</event>
+        <event>OnBSSubscriptionChanged(stateChanges As BSSubscriptionStateChanges)</event>
+        <event>TagsAvailable(Tags As Map)</event>
+        <event>PostNotificationSuccess(Json As String)</event>
+        <event>PostNotificationFailure(Json As String)</event>
+        <method>
+            <name>PromptLocation</name>
+            <comment>Prompts the user for location permissions.
+ This allows for geotagging so you can send notifications to users based on location.
+
+ Make sure you have one of the following permissions in your AndroidManifest as well.
+ android.permission.ACCESS_FINE_LOCATION
+ android.permission.ACCESS_COARSE_LOCATION</comment>
+            <returntype>void</returntype>
+        </method>
+        <method>
+            <name>SendTag</name>
+            <comment>Tag a user based on an app event of your choosing so later you can create segments in Segments to target these users.
+ Use sendTags if you need to set more than one tag on a user at a time.</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>Key</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>Value</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+        <method>
+            <name>AddPermissionObserver</name>
+            <comment>The EventName_OnBSPermissionChanged method will be fired on the passed-in object when a notification permission setting changes.
+ This happens when the user enables or disables notifications for your app from the system settings outside of your app.
+ Disable detection is supported on Android 4.4+.
+
+ Example: &lt;code&gt;
+ BSOneSignal.AddPermissionObserver("EventName")
+
+ Sub EventName_OnBSPermissionChanged(stateChanges As BSPermissionStateChanges)
+ If stateChanges.From.isEnabled And stateChanges.To.isEnabled = False Then
+ Log("Notifications Disabled!")
+ End If
+ Log("OnBSPermissionChanged: " &amp; stateChanges)
+ End Sub&lt;/code&gt;</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>ba</name>
+                <type>anywheresoftware.b4a.BA</type>
+            </parameter>
+            <parameter>
+                <name>EventName</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+        <method>
+            <name>GetTags</name>
+            <comment>Retrieve a list of tags that have been set on the user from the OneSignal server.
+
+ Example: &lt;code&gt;
+ BSOneSignal.GetTags("GetTags")
+
+ Sub GetTags_TagsAvailable(Tags As Map)
+ Log(Tags)
+ End Sub&lt;/code&gt;</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>ba</name>
+                <type>anywheresoftware.b4a.BA</type>
+            </parameter>
+            <parameter>
+                <name>EventName</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+        <method>
+            <name>EnableVibrate</name>
+            <comment>By default OneSignal always vibrates the device when a notification is displayed unless the device is in a total silent mode.
+ Passing false means that the device will only vibrate lightly when the device is in it's vibrate only mode.
+
+ You can link this action to a UI button to give your user a vibration option for your notifications.</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>Enable</name>
+                <type>boolean</type>
+            </parameter>
+        </method>
+        <method>
+            <name>SendTags</name>
+            <comment>Tag a user based on an app event of your choosing so later you can create segments in Segments to target these users.
+
+ Example: &lt;code&gt;
+ Dim map As Map
+ map.Initialize
+ map.Put("key1", "value1")
+ map.Put("key2", "value2")
+ map.Put("key3", "value3")
+
+ BSOneSignal.SendTags(map)&lt;/code&gt;</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>KeyValues</name>
+                <type>anywheresoftware.b4a.objects.collections.Map</type>
+            </parameter>
+        </method>
+        <method>
+            <name>PostNotification</name>
+            <comment>&lt;code&gt;BSOneSignal.PostNotification("EventName", Json)&lt;/code&gt;
+ Json: see Create Notification POST call for all options. &lt;a href="https://documentation.onesignal.com/reference#create-notification"&gt;Create Notification&lt;/a&gt;
+
+ Example: &lt;code&gt;
+ Sub EventName_PostNotificationSuccess(Json As String)
+ Log(Json)
+ End Sub
+
+ Sub EventName_PostNotificationFailure(Json As String)
+ Log(Json)
+ End Sub
+ &lt;/code&gt;</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>ba</name>
+                <type>anywheresoftware.b4a.BA</type>
+            </parameter>
+            <parameter>
+                <name>EventName</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>Json</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+        <method>
+            <name>EnableSound</name>
+            <comment>By default OneSignal plays the system's default notification sound when the device's notification system volume is turned on.
+ Passing false means that the device will only vibrate unless the device is set to a total silent mode.
+
+ You can link this action to a UI button to give your user a different sound option for your notifications.</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>Enable</name>
+                <type>boolean</type>
+            </parameter>
+        </method>
+        <method>
+            <name>CancelNotification</name>
+            <comment>Cancels a single OneSignal notification based on its Android notification integer id.</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>ID</name>
+                <type>int</type>
+            </parameter>
+        </method>
+        <method>
+            <name>ClearOneSignalNotifications</name>
+            <comment>Removes all OneSignal notifications from the Notification Shade.</comment>
+            <returntype>void</returntype>
+        </method>
+        <method>
+            <name>DeleteTags</name>
+            <comment>Deletes one or more tags that were previously set on a user with sendTag or sendTags.
+
+ Example: &lt;code&gt;
+ Dim list As List
+ list.Initialize
+ list.Add("tag1")
+ list.Add("tag2")
+ list.Add("tag3")
+
+ BSOneSignal.DeleteTags(list)&lt;/code&gt;</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>Tags</name>
+                <type>anywheresoftware.b4a.objects.collections.List</type>
+            </parameter>
+        </method>
+        <method>
+            <name>SyncHashedEmail</name>
+            <comment>Sync hashed email if you have a login system or collect it.
+ Will be used to reach the user at the most optimal time of day.
+
+ Email: the email that you want to sync with the user</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>Email</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+        <method>
+            <name>SetSubscription</name>
+            <comment>You can call this method with false to opt users out of receiving all notifications through OneSignal.
+ You can pass true later to opt users back into notifications.</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>Enable</name>
+                <type>boolean</type>
+            </parameter>
+        </method>
+        <method>
+            <name>AddSubscriptionObserver</name>
+            <comment>The EventName_OnBSSubscriptionChanged method will be fired on the passed-in object when a notification subscription property changes.
+
+ This includes the following events:
+ Getting a Registration Id (push token) from Google
+ Getting a player / user id from OneSignal
+ BSOneSignal.setSubscription is called
+ User disables or enables notifications
+
+ Example: &lt;code&gt;
+ BSOneSignal.AddSubscriptionObserver("EventName")
+
+ Sub EventName_OnBSSubscriptionChanged(stateChanges As BSSubscriptionStateChanges)
+ If stateChanges.From.Subscribed = False And stateChanges.To.Subscribed Then
+ Log("You've successfully subscribed to push notifications!")
+ End If
+ Log("Player ID: " &amp; stateChanges.To.UserId)
+ Log("OnBSSubscriptionChanged: " &amp; stateChanges)
+ End Sub&lt;/code&gt;</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>ba</name>
+                <type>anywheresoftware.b4a.BA</type>
+            </parameter>
+            <parameter>
+                <name>EventName</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+        <method>
+            <name>DeleteTag</name>
+            <comment>Deletes a single tag that was previously set on a user with sendTag or sendTags.
+ Use deleteTags if you need to delete more than one.</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>Tag</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+        <property>
+            <name>PermissionSubscriptionState</name>
+            <returntype>ir.blue_saffron.libs.onesignal.BSPermissionSubscriptionState</returntype>
+            <comment>Get the current notification and permission state.</comment>
+        </property>
+        <field>
+            <name>Debug</name>
+            <comment></comment>
+            <returntype>boolean</returntype>
+        </field>
+    </class>
+    <class>
+        <name>ir.blue_saffron.libs.onesignal.BSOneSignalPush</name>
+        <shortname>BSOneSignalPush</shortname>
+        <owner>process</owner>
+        <method>
+            <name>Initialize</name>
+            <comment>Example: &lt;code&gt;
+ Dim BSPush As BSOneSignalPush
+ BSPush.Initialize(StartingIntent)&lt;/code&gt;
+
+ Version: 3.65
+ Author: Hossein Zaaferani
+ WebSite: &lt;a href="http://Blue-saffron.ir"&gt;Blue-saffron.ir&lt;/a&gt;</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>StartingIntent</name>
+                <type>android.content.Intent</type>
+            </parameter>
+        </method>
+        <property>
+            <name>AdditionalData</name>
+            <returntype>java.lang.String</returntype>
+            <comment>Return your include additional data(Key and Value)
+ Return JSON string
+
+ Example: &lt;code&gt;
+ Dim json1 As JSONParser
+ json1.Initialize(BSPush.AdditionalData)
+ Dim map1 As Map = json1.NextObject
+
+ Log(map1.Get("key"))&lt;/code&gt;</comment>
+        </property>
+        <property>
+            <name>Action</name>
+            <returntype>java.lang.String</returntype>
+            <comment>used to check action
+
+ values:
+ &lt;code&gt; ACTION_BACKGROUND_DATA&lt;/code&gt;
+ &lt;code&gt; ACTION_NOTIFICATION_OPEN&lt;/code&gt;</comment>
+        </property>
+        <property>
+            <name>CollapseId</name>
+            <returntype>java.lang.String</returntype>
+            <comment>Return collapse Key/ID</comment>
+        </property>
+        <property>
+            <name>NotificationID</name>
+            <returntype>java.lang.String</returntype>
+            <comment>Return OneSignal notification UUID</comment>
+        </property>
+        <property>
+            <name>FromProjectNumber</name>
+            <returntype>java.lang.String</returntype>
+            <comment>The Google project number the notification was sent under.</comment>
+        </property>
+        <property>
+            <name>LaunchURL</name>
+            <returntype>java.lang.String</returntype>
+            <comment>Return LaunchURL Example: http://blue-saffron.ir</comment>
+        </property>
+        <property>
+            <name>GroupKey</name>
+            <returntype>java.lang.String</returntype>
+            <comment>Notifications with this same key will be grouped together as a single summary notification.</comment>
+        </property>
+        <property>
+            <name>Title</name>
+            <returntype>java.lang.String</returntype>
+            <comment>Return your push notification title</comment>
+        </property>
+        <property>
+            <name>LargeIcon</name>
+            <returntype>java.lang.String</returntype>
+            <comment>Return LargeIcon url or resource name</comment>
+        </property>
+        <property>
+            <name>Sound</name>
+            <returntype>java.lang.String</returntype>
+            <comment>Return Sound resource name</comment>
+        </property>
+        <property>
+            <name>GroupMessage</name>
+            <returntype>java.lang.String</returntype>
+            <comment>Summary text displayed in the summary notification.</comment>
+        </property>
+        <property>
+            <name>ActionButtons</name>
+            <returntype>anywheresoftware.b4a.objects.collections.List</returntype>
+            <comment>Example: &lt;code&gt;
+ Dim BSPush As BSOneSignalPush
+ BSPush.Initialize(StartingIntent)
+
+ Dim ActionButton As BSOneSignalActionButton
+ For i = 0 To BSPush1.ActionButtons.Size - 1
+
+ ActionButton = BSPush1.ActionButtons.Get(i)
+ Log(ActionButton.Id)
+ Log(ActionButton.Text)
+ Log(ActionButton.Icon)
+
+ Next&lt;/code&gt;</comment>
+        </property>
+        <property>
+            <name>SmallIcon</name>
+            <returntype>java.lang.String</returntype>
+            <comment>Return SmallIcon resource name</comment>
+        </property>
+        <property>
+            <name>LedColor</name>
+            <returntype>java.lang.String</returntype>
+            <comment>Devices that have a notification LED will blink in this color. ARGB format.</comment>
+        </property>
+        <property>
+            <name>RawPayload</name>
+            <returntype>java.lang.String</returntype>
+            <comment>Return Raw JSON payload string received from OneSignal</comment>
+        </property>
+        <property>
+            <name>Content</name>
+            <returntype>java.lang.String</returntype>
+            <comment>Return your push notification content</comment>
+        </property>
+        <property>
+            <name>LockScreenVisibility</name>
+            <returntype>int</returntype>
+            <comment>Privacy setting for how the notification should be shown on the lockscreen of Android 5+ devices.
+ 1 (DEFAULT) - Public (fully visible)
+ 0 - Private (Contents are hidden)
+ -1 - Secret (not shown).</comment>
+        </property>
+        <property>
+            <name>SmallIconAccentColor</name>
+            <returntype>java.lang.String</returntype>
+            <comment>Return ARGB Hex value: FFFF0000</comment>
+        </property>
+        <property>
+            <name>BigPicture</name>
+            <returntype>java.lang.String</returntype>
+            <comment>Return BigPicture url or resource name</comment>
+        </property>
+        <property>
+            <name>ActionSelectedId</name>
+            <returntype>java.lang.String</returntype>
+            <comment>The ID associated with the button tapped. __DEFAULT__ when the actionType is NotificationTapped</comment>
+        </property>
+        <field>
+            <name>ACTION_NOTIFICATION_OPEN</name>
+            <comment></comment>
+            <returntype>java.lang.String</returntype>
+        </field>
+        <field>
+            <name>DEFAULT_ACTION_SELECTED</name>
+            <comment></comment>
+            <returntype>java.lang.String</returntype>
+        </field>
+        <field>
+            <name>ACTION_BACKGROUND_DATA</name>
+            <comment></comment>
+            <returntype>java.lang.String</returntype>
+        </field>
+    </class>
+    <class>
+        <name>ir.blue_saffron.libs.onesignal.BSPermissionState</name>
+        <shortname>BSPermissionState</shortname>
+        <owner>process</owner>
+        <property>
+            <name>Enabled</name>
+            <returntype>boolean</returntype>
+            <comment></comment>
+        </property>
+    </class>
+    <class>
+        <name>ir.blue_saffron.libs.onesignal.BSPermissionStateChanges</name>
+        <shortname>BSPermissionStateChanges</shortname>
+        <owner>process</owner>
+        <property>
+            <name>To</name>
+            <returntype>ir.blue_saffron.libs.onesignal.BSPermissionState</returntype>
+            <comment></comment>
+        </property>
+        <property>
+            <name>From</name>
+            <returntype>ir.blue_saffron.libs.onesignal.BSPermissionState</returntype>
+            <comment></comment>
+        </property>
+    </class>
+    <class>
+        <name>ir.blue_saffron.libs.onesignal.BSPermissionSubscriptionState</name>
+        <shortname>BSPermissionSubscriptionState</shortname>
+        <owner>process</owner>
+        <property>
+            <name>SubscriptionStatus</name>
+            <returntype>ir.blue_saffron.libs.onesignal.BSSubscriptionState</returntype>
+            <comment></comment>
+        </property>
+        <property>
+            <name>PermissionStatus</name>
+            <returntype>ir.blue_saffron.libs.onesignal.BSPermissionState</returntype>
+            <comment></comment>
+        </property>
+    </class>
+    <class>
+        <name>ir.blue_saffron.libs.onesignal.BSSubscriptionState</name>
+        <shortname>BSSubscriptionState</shortname>
+        <owner>process</owner>
+        <property>
+            <name>UserId</name>
+            <returntype>java.lang.String</returntype>
+            <comment></comment>
+        </property>
+        <property>
+            <name>Subscribed</name>
+            <returntype>boolean</returntype>
+            <comment></comment>
+        </property>
+        <property>
+            <name>PushToken</name>
+            <returntype>java.lang.String</returntype>
+            <comment></comment>
+        </property>
+        <property>
+            <name>UserSubscriptionSetting</name>
+            <returntype>boolean</returntype>
+            <comment></comment>
+        </property>
+    </class>
+    <class>
+        <name>ir.blue_saffron.libs.onesignal.BSSubscriptionStateChanges</name>
+        <shortname>BSSubscriptionStateChanges</shortname>
+        <owner>process</owner>
+        <property>
+            <name>To</name>
+            <returntype>ir.blue_saffron.libs.onesignal.BSSubscriptionState</returntype>
+            <comment></comment>
+        </property>
+        <property>
+            <name>From</name>
+            <returntype>ir.blue_saffron.libs.onesignal.BSSubscriptionState</returntype>
+            <comment></comment>
+        </property>
+    </class>
+    <version>3.65</version>
+    <author>Hossein Zaaferani</author>
+    <dependsOn>google-play-services</dependsOn>
+    <dependsOn>android-support-v4</dependsOn>
+    <dependsOn>OneSignalSDK-3.6.5</dependsOn>
+    <dependsOn>JSON</dependsOn>
+</root>

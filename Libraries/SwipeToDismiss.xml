@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root>
+    <doclet-version-NOT-library-version>1.04</doclet-version-NOT-library-version>
+    <class>
+        <name>de.donmanfred.SwipeDismissTouchListener</name>
+        <comment>A {@link View.OnTouchListener} that makes any {@link View} dismissable when the
+ user swipes (drags her finger) horizontally across the view.
+
+ &lt;p&gt;&lt;em&gt;For {@link ListView} list items that don't manage their own touch events
+ (i.e. you're using
+ {@link ListView#setOnItemClickListener(AdapterView.OnItemClickListener)}
+ or an equivalent listener on {@link ListActivity} or
+ {@link ListFragment}, use {@link SwipeDismissListViewTouchListener} instead.&lt;/em&gt;&lt;/p&gt;
+
+ &lt;p&gt;Example usage:&lt;/p&gt;
+
+ &lt;pre&gt;
+ view.setOnTouchListener(new SwipeDismissTouchListener(
+         view,
+         null, // Optional token/cookie object
+         new SwipeDismissTouchListener.OnDismissCallback() {
+             public void onDismiss(View view, Object token) {
+                 parent.removeView(view);
+             }
+         }));
+ &lt;/pre&gt;
+
+ &lt;p&gt;This class Requires API level 12 or later due to use of {@link
+ android.view.ViewPropertyAnimator}.&lt;/p&gt;</comment>
+        <owner>process</owner>
+        <method>
+            <name>onTouch</name>
+            <comment></comment>
+            <returntype>boolean</returntype>
+            <parameter>
+                <name>view</name>
+                <type>android.view.View</type>
+            </parameter>
+            <parameter>
+                <name>motionEvent</name>
+                <type>android.view.MotionEvent</type>
+            </parameter>
+        </method>
+    </class>
+    <class>
+        <name>de.donmanfred.SwipeToDismissWrapper</name>
+        <shortname>SwipeToDismiss</shortname>
+        <owner>process</owner>
+        <event>ondismiss(tag As Object)</event>
+        <method>
+            <name>Initialize</name>
+            <comment></comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>ba</name>
+                <type>anywheresoftware.b4a.BA</type>
+            </parameter>
+            <parameter>
+                <name>EventName</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>v</name>
+                <type>android.view.View</type>
+            </parameter>
+            <parameter>
+                <name>tag</name>
+                <type>java.lang.Object</type>
+            </parameter>
+        </method>
+    </class>
+    <version>1.0</version>
+</root>

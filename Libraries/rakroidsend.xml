@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <doclet-version-NOT-library-version>1.00</doclet-version-NOT-library-version>
+  <dependsOn>reflection</dependsOn>
+  <class>
+    <name>b4a.example.send</name>
+    <shortname>send</shortname>
+    <owner>process</owner>
+    <method>
+      <name>IsInitialized</name>
+      <comment>Tests whether the object has been initialized.</comment>
+      <returntype>boolean</returntype>
+    </method>
+    <method>
+      <name DesignerName="Class_Globals">_class_globals</name>
+      <returntype>String</returntype>
+    </method>
+    <method>
+      <name DesignerName="ersal">_ersal</name>
+      <comment>پشتیبانی
+line , viber , yahoo , other </comment>
+      <returntype>String</returntype>
+      <parameter>
+        <name>مسیر</name>
+        <type>String</type>
+      </parameter>
+      <parameter>
+        <name>پوشه</name>
+        <type>String</type>
+      </parameter>
+      <parameter>
+        <name>فایل</name>
+        <type>String</type>
+      </parameter>
+      <parameter>
+        <name>برنامه</name>
+        <type>String</type>
+      </parameter>
+    </method>
+    <method>
+      <name DesignerName="Initialize">_initialize</name>
+      <returntype>String</returntype>
+      <parameter>
+        <name>ba</name>
+        <type>anywheresoftware.b4a.BA</type>
+      </parameter>
+    </method>
+  </class>
+  <version>1</version>
+</root>

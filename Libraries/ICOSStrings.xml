@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root>
+    <doclet-version-NOT-library-version>1.01</doclet-version-NOT-library-version>
+    <class>
+        <name>giuseppe.salvi.icos.library.ICOSStrings</name>
+        <shortname>ICOSStrings</shortname>
+        <owner>activity</owner>
+        <method>
+            <name>ExtractVAT</name>
+            <comment>Dim s As ICOSString
+ Dim label1 As Label
+ Example:
+ Label1.text=s.ExtractVAT(100,15)
+ Result is 86.9565</comment>
+            <returntype>double</returntype>
+            <parameter>
+                <name>Value</name>
+                <type>int</type>
+            </parameter>
+            <parameter>
+                <name>Vat</name>
+                <type>float</type>
+            </parameter>
+        </method>
+        <method>
+            <name>StrLeft</name>
+            <comment>Dim s As ICOSString
+ Dim label1 As Label
+ Example:
+ Label1.text=s.StrLeft$("Hello Basic4Android" , 5)
+ "Hello"</comment>
+            <returntype>java.lang.String</returntype>
+            <parameter>
+                <name>text</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>value</name>
+                <type>int</type>
+            </parameter>
+        </method>
+        <method>
+            <name>Mid</name>
+            <comment>Dim s As ICOSString
+ Dim label1 As Label
+ Example:
+ Label1.text=s.Mid$("Hello Basic4Android" , 7 , 13)
+ "BasicAndroid"</comment>
+            <returntype>java.lang.String</returntype>
+            <parameter>
+                <name>text</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>value1</name>
+                <type>int</type>
+            </parameter>
+            <parameter>
+                <name>value2</name>
+                <type>int</type>
+            </parameter>
+        </method>
+        <method>
+            <name>StrRight</name>
+            <comment>Dim s As ICOSString
+ Dim label1 As Label
+ Example:
+ Label1.text=s.StrRight$("Hello Basic4Android" , 7)
+ "Android"</comment>
+            <returntype>java.lang.String</returntype>
+            <parameter>
+                <name>text</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>value</name>
+                <type>int</type>
+            </parameter>
+        </method>
+        <method>
+            <name>CalculatesVAT</name>
+            <comment>Dim s As ICOSString
+ Dim label1 As Label
+ Example:
+ Label1.text=s.CalculatesVAT(100,15)
+ Result is 115</comment>
+            <returntype>int</returntype>
+            <parameter>
+                <name>Value</name>
+                <type>int</type>
+            </parameter>
+            <parameter>
+                <name>Vat</name>
+                <type>int</type>
+            </parameter>
+        </method>
+        <property>
+            <name>Version</name>
+            <returntype>double</returntype>
+            <comment>Return the version of this library</comment>
+        </property>
+    </class>
+    <version>1.4</version>
+    <author>Giuseppe Salvi</author>
+</root>

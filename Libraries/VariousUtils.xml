@@ -1,0 +1,1429 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <doclet-version-NOT-library-version>1.00</doclet-version-NOT-library-version>
+  <dependsOn>javaobject</dependsOn>
+  <class>
+    <name>My.VariousUtilities.stringutilities</name>
+    <shortname>StringUtilities</shortname>
+    <owner>process</owner>
+    <method>
+      <name>IsInitialized</name>
+      <comment>Tests whether the object has been initialized.</comment>
+      <returntype>boolean</returntype>
+    </method>
+    <method>
+      <name DesignerName="charArrayToString">_chararraytostring</name>
+      <comment>Converts an array of characters to a String
+Example:
+Dim returnString As String
+Dim charArray(5) As Char
+charArray(0) = "H"
+charArray(1) = "e"
+charArray(2) = "l"
+charArray(3) = "l"
+charArray(4) = "o"
+returnString = msu.charArrayToString(charArray)
+Log(returnString)
+</comment>
+      <returntype>String</returntype>
+      <parameter>
+        <name>charArray</name>
+        <type>char[]</type>
+      </parameter>
+    </method>
+    <method>
+      <name DesignerName="Class_Globals">_class_globals</name>
+      <returntype>String</returntype>
+    </method>
+    <method>
+      <name DesignerName="containString">_containstring</name>
+      <comment>This method returns True/False If the input String contains a given substring.
+Example:
+Dim msu As StringUtilities
+
+Dim mystring As String
+mystring = "Replace Region"
+Log(msu.containString(mystring, "place"))</comment>
+      <returntype>boolean</returntype>
+      <parameter>
+        <name>inputString</name>
+        <type>String</type>
+      </parameter>
+      <parameter>
+        <name>subString</name>
+        <type>String</type>
+      </parameter>
+    </method>
+    <method>
+      <name DesignerName="count">_count</name>
+      <comment>Count the number of instances of a substring within inputString.
+Example:
+Dim inputString, subString As String
+inputString = "one plus two is the same as two plus one"
+subString = "two"
+Dim answer as int
+answer = msu.count(inputString, subString)
+Log(answer)
+
+It is case sensitive
+</comment>
+      <returntype>int</returntype>
+      <parameter>
+        <name>inputString</name>
+        <type>String</type>
+      </parameter>
+      <parameter>
+        <name>subString</name>
+        <type>String</type>
+      </parameter>
+    </method>
+    <method>
+      <name DesignerName="difference">_difference</name>
+      <comment>Compare two Strings and return the portion where they differ.
+(More precisely, return the remainder of the second String,
+ starting from where it's different from the first.)
+Example:
+Dim str1, str2, dif As String
+str1 = "i am a machine"
+str2 = "i am a robot"
+dif = msu.difference(str1, str2)
+Log(dif)
+
+</comment>
+      <returntype>String</returntype>
+      <parameter>
+        <name>str1</name>
+        <type>String</type>
+      </parameter>
+      <parameter>
+        <name>str2</name>
+        <type>String</type>
+      </parameter>
+    </method>
+    <method>
+      <name DesignerName="doubleToString">_doubletostring</name>
+      <comment>Converts a Double to String
+Example:
+Dim number As Double = 3.14159
+Dim returnString As String
+returnString = msu.doubleToString(number)
+Log(returnString)
+</comment>
+      <returntype>String</returntype>
+      <parameter>
+        <name>number</name>
+        <type>double</type>
+      </parameter>
+    </method>
+    <method>
+      <name DesignerName="indexOfDifference">_indexofdifference</name>
+      <comment>Compare two Strings and returns the index at which the Strings begin to differ.
+The index of the first characters of str1 and str2 = 0
+Example:
+Dim str1, str2 As String
+Dim index as Int
+str1 = "i am a machine"
+str2 = "i am a robot"
+index = msu.indexOfDifference(str1, str2)
+Log(index)
+</comment>
+      <returntype>int</returntype>
+      <parameter>
+        <name>str1</name>
+        <type>String</type>
+      </parameter>
+      <parameter>
+        <name>str2</name>
+        <type>String</type>
+      </parameter>
+    </method>
+    <method>
+      <name DesignerName="Initialize">_initialize</name>
+      <comment>Initializes the object.</comment>
+      <returntype>String</returntype>
+      <parameter>
+        <name>ba</name>
+        <type>anywheresoftware.b4a.BA</type>
+      </parameter>
+    </method>
+    <method>
+      <name DesignerName="intToBinaryString">_inttobinarystring</name>
+      <comment>Converts an Integer to a binary String
+Example:
+Dim intNumber As Int = 100
+Dim returnString As String
+returnString = msu.intToBinaryString(intNumber)
+Log(returnString)	
+</comment>
+      <returntype>String</returntype>
+      <parameter>
+        <name>number</name>
+        <type>int</type>
+      </parameter>
+    </method>
+    <method>
+      <name DesignerName="intToHexString">_inttohexstring</name>
+      <comment>Converts an Integer to a Hex String
+Example:
+Dim intNumber As Int = 30
+Dim returnString As String
+returnString = msu.intToHexString(intNumber)
+Log(returnString)	
+</comment>
+      <returntype>String</returntype>
+      <parameter>
+        <name>number</name>
+        <type>int</type>
+      </parameter>
+    </method>
+    <method>
+      <name DesignerName="intToOctalString">_inttooctalstring</name>
+      <comment>Converts an Integer to an Octal String
+Example:
+Dim intNumber As Int = 100
+Dim returnString As String
+returnString = msu.intToOctalString(intNumber)
+Log(returnString)	
+</comment>
+      <returntype>String</returntype>
+      <parameter>
+        <name>number</name>
+        <type>int</type>
+      </parameter>
+    </method>
+    <method>
+      <name DesignerName="intToString">_inttostring</name>
+      <comment>Converts an Integer to String
+Example:
+Dim intNumber As int = 101
+Dim returnString As String
+returnString = msu.intToString(intNumber)
+Log(returnString)
+</comment>
+      <returntype>String</returntype>
+      <parameter>
+        <name>number</name>
+        <type>int</type>
+      </parameter>
+    </method>
+    <method>
+      <name DesignerName="isEmpty">_isempty</name>
+      <comment>Test if inputString is empty or null
+Example:
+Dim inputString As String
+inputString = ""
+Dim answer as Boolean
+answer = msu.isEmpty(inputString)
+Log(answer)
+</comment>
+      <returntype>boolean</returntype>
+      <parameter>
+        <name>inputString</name>
+        <type>String</type>
+      </parameter>
+    </method>
+    <method>
+      <name DesignerName="Left">_left</name>
+      <comment>Returns the leftmost number of characters of inputString equivalent to returnLength 
+Example:
+Dim inputString As String
+Dim returnLength As Int = 9
+inputString = "This is a test string"
+Log(msu.Left(inputString, returnLength))
+</comment>
+      <returntype>String</returntype>
+      <parameter>
+        <name>inputString</name>
+        <type>String</type>
+      </parameter>
+      <parameter>
+        <name>returnLength</name>
+        <type>int</type>
+      </parameter>
+    </method>
+    <method>
+      <name DesignerName="Mid">_mid</name>
+      <comment>Returns a substring of inputString starting from StartIndex with a length of returnLength
+Example:
+Dim inputString As String
+inputString = "This is a test string"
+Dim startIndex as int = 5
+Dim returnLength As Int = 9
+Log(msu.Mid(inputString, startIndex, returnLength))
+
+The index of the first character of inputString = 0
+</comment>
+      <returntype>String</returntype>
+      <parameter>
+        <name>inputString</name>
+        <type>String</type>
+      </parameter>
+      <parameter>
+        <name>startIndex</name>
+        <type>int</type>
+      </parameter>
+      <parameter>
+        <name>returnLength</name>
+        <type>int</type>
+      </parameter>
+    </method>
+    <method>
+      <name DesignerName="removeCharAtPosition">_removecharatposition</name>
+      <comment>Remove all occurences of a character from a String
+The index of the first characters of inputString = 0
+It is Case Sensitive
+Example:
+Dim inputString As String = "This is a test"
+Dim position as Int = 3
+Dim returnString As String
+returnString = msu.removeCharAtPosition(inputString, position)
+Log(returnString)	
+</comment>
+      <returntype>String</returntype>
+      <parameter>
+        <name>inputString</name>
+        <type>String</type>
+      </parameter>
+      <parameter>
+        <name>position</name>
+        <type>int</type>
+      </parameter>
+    </method>
+    <method>
+      <name DesignerName="removeCharFromString">_removecharfromstring</name>
+      <comment>Remove all occurences of a character from a String
+It is Case Sensitive
+Example:
+Dim inputString As String = "This is a severe test of removing the character s from this String"
+Dim returnString As String
+returnString = msu.removeCharFromString(intNumber)
+Log(returnString)	
+</comment>
+      <returntype>String</returntype>
+      <parameter>
+        <name>inputString</name>
+        <type>String</type>
+      </parameter>
+      <parameter>
+        <name>removeChar</name>
+        <type>char</type>
+      </parameter>
+    </method>
+    <method>
+      <name DesignerName="replaceAllOccur">_replacealloccur</name>
+      <comment>Replaces all occurances of a given String with a new one
+Example:
+Dim msu As StringUtilities
+
+Dim mystring As String
+mystring = "Replace Region"
+Log(msu.replaceAllOccur(mystring, "Re", "Ra"))</comment>
+      <returntype>String</returntype>
+      <parameter>
+        <name>inputString</name>
+        <type>String</type>
+      </parameter>
+      <parameter>
+        <name>oldString</name>
+        <type>String</type>
+      </parameter>
+      <parameter>
+        <name>newString</name>
+        <type>String</type>
+      </parameter>
+    </method>
+    <method>
+      <name DesignerName="replaceChar">_replacechar</name>
+      <comment>Replace all occurances of a char in a string with a new char
+Example:
+Dim msu As StringUtilities
+
+Dim mystring As String
+mystring = "Basic4Android is Great!"
+Log(msu.replaceChar(mystring, "G", "g"))</comment>
+      <returntype>String</returntype>
+      <parameter>
+        <name>inputString</name>
+        <type>String</type>
+      </parameter>
+      <parameter>
+        <name>oldChar</name>
+        <type>char</type>
+      </parameter>
+      <parameter>
+        <name>newChar</name>
+        <type>char</type>
+      </parameter>
+    </method>
+    <method>
+      <name DesignerName="replaceFirstOccur">_replacefirstoccur</name>
+      <comment>Replaces only the first occurances of a given String with a new one
+Example:
+Dim msu As StringUtilities
+
+Dim mystring As String
+mystring = "Replace Region"
+Log(msu.replaceFirstOccur(mystring, "Re", "Ra"))</comment>
+      <returntype>String</returntype>
+      <parameter>
+        <name>inputString</name>
+        <type>String</type>
+      </parameter>
+      <parameter>
+        <name>oldString</name>
+        <type>String</type>
+      </parameter>
+      <parameter>
+        <name>newString</name>
+        <type>String</type>
+      </parameter>
+    </method>
+    <method>
+      <name DesignerName="reverseString">_reversestring</name>
+      <comment>Reverses the order of a String
+Example:
+Dim msu As StringUtilities
+
+Dim mystring As String
+Log(msu.reverseString("Basic4Android is Great!"))</comment>
+      <returntype>String</returntype>
+      <parameter>
+        <name>origString</name>
+        <type>String</type>
+      </parameter>
+    </method>
+    <method>
+      <name DesignerName="Right">_right</name>
+      <comment>Returns the rightmost number of characters of inputString equivalent to returnLength 
+Example:
+Dim inputString As String
+Dim returnLength As Int = 11
+inputString = "This is a test string"
+Log(msu.Right(inputString, returnLength))
+</comment>
+      <returntype>String</returntype>
+      <parameter>
+        <name>inputString</name>
+        <type>String</type>
+      </parameter>
+      <parameter>
+        <name>returnLength</name>
+        <type>int</type>
+      </parameter>
+    </method>
+    <method>
+      <name DesignerName="sortStringArrayDecendingCaseInSensitive">_sortstringarraydecendingcaseinsensitive</name>
+      <comment>Sorts an Array of strings In decending order (case insensitive)
+Example:
+Dim msu As StringUtilities
+
+Dim mywords() As String
+mywords = Array As String("a", "B", "c", "D", "z")
+mywords = msu.sortStringArrayDecendingCaseInSensitive(mywords)
+For i = 0 To mywords.Length-1
+  Log(mywords(i))
+Next</comment>
+      <returntype>String[]</returntype>
+      <parameter>
+        <name>strNames</name>
+        <type>String[]</type>
+      </parameter>
+    </method>
+    <method>
+      <name DesignerName="sortStringArrayDecendingCaseSensitive">_sortstringarraydecendingcasesensitive</name>
+      <comment>Sorts an Array of strings In decending order (case sensitive)
+Example:
+Dim msu As StringUtilities
+
+Dim mywords() As String
+mywords = Array As String("a", "B", "c", "D", "z")
+mywords = msu.sortStringArrayDecendingCaseSensitive(mywords)
+For i = 0 To mywords.Length-1
+  Log(mywords(i))
+Next</comment>
+      <returntype>String[]</returntype>
+      <parameter>
+        <name>strNames</name>
+        <type>String[]</type>
+      </parameter>
+    </method>
+    <method>
+      <name DesignerName="sortStringCaseInSensitive">_sortstringcaseinsensitive</name>
+      <comment>Sorts an Array of strings in decending order (case insensitive)
+Example:
+Dim msu As StringUtilities
+
+Dim mywords() As String
+mywords = Array As String("Today", "Is", "the", "First", "day", "of", "the", "Rest", "of", "my", "life")
+mywords = msu.sortStringCaseInSensitive(mywords)
+For i = 0 To mywords.Length-1
+  Log(mywords(i))
+Next</comment>
+      <returntype>String[]</returntype>
+      <parameter>
+        <name>strNames</name>
+        <type>String[]</type>
+      </parameter>
+    </method>
+    <method>
+      <name DesignerName="sortStringCaseSensitive">_sortstringcasesensitive</name>
+      <comment>Sorts an Array of strings in decending order (case sensitive)
+Example:
+Dim msu As StringUtilities
+
+Dim mywords() As String
+mywords = Array As String("Basic", "4", "Android", "is", "great")
+mywords = msu.sortStringCaseSensitive(mywords)
+For i = 0 To mywords.Length-1
+  Log(mywords(i))
+Next</comment>
+      <returntype>String[]</returntype>
+      <parameter>
+        <name>strNames</name>
+        <type>String[]</type>
+      </parameter>
+    </method>
+    <method>
+      <name DesignerName="stringLength">_stringlength</name>
+      <comment>Get the length of a String
+Example:
+Dim msu As StringUtilities
+
+Dim mystring As String
+mystring = "Basic4Android is Great!"
+Log(msu.stringLength(mystring))</comment>
+      <returntype>int</returntype>
+      <parameter>
+        <name>origString</name>
+        <type>String</type>
+      </parameter>
+    </method>
+    <method>
+      <name DesignerName="stringStartsWith">_stringstartswith</name>
+      <comment>This method returns true/false when the input string starts with the substring
+Example:
+Dim msu As StringUtilities
+
+Dim mystring As String
+mystring = "Replace Region"
+Log(msu.stringStartsWith(mystring, "Repla"))</comment>
+      <returntype>boolean</returntype>
+      <parameter>
+        <name>inputString</name>
+        <type>String</type>
+      </parameter>
+      <parameter>
+        <name>subString</name>
+        <type>String</type>
+      </parameter>
+    </method>
+    <method>
+      <name DesignerName="stringToCharArray">_stringtochararray</name>
+      <comment>Converts a String to an array of characters
+Example:
+Dim inputString As String
+Dim charArray() as Char
+inputString = "i am a machine"
+charArray = msu.stringToCharArray(inputString)
+</comment>
+      <returntype>char[]</returntype>
+      <parameter>
+        <name>inputString</name>
+        <type>String</type>
+      </parameter>
+    </method>
+    <method>
+      <name DesignerName="stringToHashCode">_stringtohashcode</name>
+      <comment>Converts a String to a Hash Code
+Example:
+Dim inputString As String = "Hello"
+Dim hashValue As int
+hashValue = msu.stringToHashCode(inputString)
+Log(hashValue)	
+</comment>
+      <returntype>int</returntype>
+      <parameter>
+        <name>inputString</name>
+        <type>String</type>
+      </parameter>
+    </method>
+    <method>
+      <name DesignerName="stringToInt">_stringtoint</name>
+      <comment>Converts a String to an Integer
+Example:
+Dim inputString As String = "1001"
+Dim i As Int
+i = msu.stringToInt(inputString)
+Log(i)	
+</comment>
+      <returntype>int</returntype>
+      <parameter>
+        <name>inputString</name>
+        <type>String</type>
+      </parameter>
+    </method>
+    <method>
+      <name DesignerName="StringToLowerCase">_stringtolowercase</name>
+      <comment>Converts a String To LOWERCASE
+Example:
+Dim msu As StringUtilities
+
+Dim mystring As String
+mystring = "Basic4Android is Great!"
+Log(msu.StringToLowerCase(mystring))</comment>
+      <returntype>String</returntype>
+      <parameter>
+        <name>origString</name>
+        <type>String</type>
+      </parameter>
+    </method>
+    <method>
+      <name DesignerName="StringToUpperCase">_stringtouppercase</name>
+      <comment>Converts a String To UPPERCASE
+Example:
+Dim msu As StringUtilities
+
+Dim mystring As String
+mystring = "Basic4Android is Great!"
+Log(msu.StringToUpperCase(mystring))</comment>
+      <returntype>String</returntype>
+      <parameter>
+        <name>origString</name>
+        <type>String</type>
+      </parameter>
+    </method>
+    <method>
+      <name DesignerName="subString1">_substring1</name>
+      <comment>Returns a substring of the String starting from index
+Example:
+Dim msu As StringUtilities
+
+Dim inputString As String
+Dim startIndex as int = 8
+inputString = "This is a test string"
+inputString = msu.subString1(inputString, startIndex)
+Log(inputString)
+
+startIndex = 0 will be the first character of inputString</comment>
+      <returntype>String</returntype>
+      <parameter>
+        <name>inputString</name>
+        <type>String</type>
+      </parameter>
+      <parameter>
+        <name>startIndex</name>
+        <type>int</type>
+      </parameter>
+    </method>
+    <method>
+      <name DesignerName="subString2">_substring2</name>
+      <comment>Returns a substring of inputString starting from fromIndex upto toIndex-1
+Here fromIndex is inclusive while toIndex is exclusive.
+Example:
+Dim inputString As String
+Dim fromIndex As Int = 5
+Dim toIndex As Int = 9
+inputString = "This is a test string"
+Log(msu.subString2(inputString, fromIndex, toIndex))
+
+The index of the first character of inputString = 0
+</comment>
+      <returntype>String</returntype>
+      <parameter>
+        <name>inputString</name>
+        <type>String</type>
+      </parameter>
+      <parameter>
+        <name>fromIndex</name>
+        <type>int</type>
+      </parameter>
+      <parameter>
+        <name>toIndex</name>
+        <type>int</type>
+      </parameter>
+    </method>
+    <method>
+      <name DesignerName="substringAfter">_substringafter</name>
+      <comment>Gets the substring after the first occurrence of a separator.
+The separator is not returned.
+Example:
+Dim str1, str2, substr As String
+str1 = "i am a machine"
+str2 = "am "
+substr = msu.substringAfter(str1, str2)
+Log(substr)
+</comment>
+      <returntype>String</returntype>
+      <parameter>
+        <name>str1</name>
+        <type>String</type>
+      </parameter>
+      <parameter>
+        <name>str2</name>
+        <type>String</type>
+      </parameter>
+    </method>
+    <method>
+      <name DesignerName="substringBetween1">_substringbetween1</name>
+      <comment>Get the substring of InputString that is nested inbetween two instances of the same tag string.
+Example:
+Dim inputString, tagString As String
+inputString = "tagabcdefghijktag"
+tagString = "tag"
+Log(msu.substringBetween1(inputString, tagString))
+</comment>
+      <returntype>String</returntype>
+      <parameter>
+        <name>inputString</name>
+        <type>String</type>
+      </parameter>
+      <parameter>
+        <name>tagString</name>
+        <type>String</type>
+      </parameter>
+    </method>
+    <method>
+      <name DesignerName="substringBetween2">_substringbetween2</name>
+      <comment>Get the substring of InputString that is nested inbetween openString and closeString
+Example:
+Dim inputString, openString, closeString As String
+inputString = "taga{bcdef]ghijktag"
+openString = "{"
+closeString = "]"
+Log(msu.substringBetween2(inputString, openString, closeString))
+</comment>
+      <returntype>String</returntype>
+      <parameter>
+        <name>inputString</name>
+        <type>String</type>
+      </parameter>
+      <parameter>
+        <name>openString</name>
+        <type>String</type>
+      </parameter>
+      <parameter>
+        <name>closeString</name>
+        <type>String</type>
+      </parameter>
+    </method>
+    <method>
+      <name DesignerName="Trim">_trim</name>
+      <comment>Removes the leading AND trailing spaces from a String
+Example:
+Dim msu As StringUtilities
+
+Dim mystring As String
+mystring = "    Replace Region    "
+Log(msu.Trim(mystring, "place"))</comment>
+      <returntype>String</returntype>
+      <parameter>
+        <name>inputString</name>
+        <type>String</type>
+      </parameter>
+    </method>
+  </class>
+  <class>
+    <name>My.VariousUtilities.bitmaputilities</name>
+    <shortname>BitmapUtilities</shortname>
+    <owner>process</owner>
+    <method>
+      <name>IsInitialized</name>
+      <comment>Tests whether the object has been initialized.</comment>
+      <returntype>boolean</returntype>
+    </method>
+    <method>
+      <name DesignerName="applyBlackFilter">_applyblackfilter</name>
+      <returntype>anywheresoftware.b4a.objects.drawable.CanvasWrapper.BitmapWrapper</returntype>
+      <parameter>
+        <name>src</name>
+        <type>anywheresoftware.b4a.objects.drawable.CanvasWrapper.BitmapWrapper</type>
+      </parameter>
+    </method>
+    <method>
+      <name DesignerName="applyBoostEffect">_applyboosteffect</name>
+      <returntype>anywheresoftware.b4a.objects.drawable.CanvasWrapper.BitmapWrapper</returntype>
+      <parameter>
+        <name>src</name>
+        <type>anywheresoftware.b4a.objects.drawable.CanvasWrapper.BitmapWrapper</type>
+      </parameter>
+      <parameter>
+        <name>a_type</name>
+        <type>int</type>
+      </parameter>
+      <parameter>
+        <name>level</name>
+        <type>double</type>
+      </parameter>
+    </method>
+    <method>
+      <name DesignerName="applyBrightnessEffect">_applybrightnesseffect</name>
+      <returntype>anywheresoftware.b4a.objects.drawable.CanvasWrapper.BitmapWrapper</returntype>
+      <parameter>
+        <name>src</name>
+        <type>anywheresoftware.b4a.objects.drawable.CanvasWrapper.BitmapWrapper</type>
+      </parameter>
+      <parameter>
+        <name>value</name>
+        <type>int</type>
+      </parameter>
+    </method>
+    <method>
+      <name DesignerName="applyColorFilterEffect">_applycolorfiltereffect</name>
+      <comment>Apply color filters
+Example:
+Dim ImageView1 As ImageView
+Dim mbu As BitmapUtilities
+Dim mBitmapImage As Bitmap
+
+mbu.Initialize
+
+Dim red, green, blue as Double
+red = 1.0
+green = 0.0
+blue = 0.0
+ImageView1.Bitmap = mbu.applyColorFilterEffect(mBitmapImage, depth, red, green, blue)</comment>
+      <returntype>anywheresoftware.b4a.objects.drawable.CanvasWrapper.BitmapWrapper</returntype>
+      <parameter>
+        <name>src</name>
+        <type>anywheresoftware.b4a.objects.drawable.CanvasWrapper.BitmapWrapper</type>
+      </parameter>
+      <parameter>
+        <name>red</name>
+        <type>double</type>
+      </parameter>
+      <parameter>
+        <name>green</name>
+        <type>double</type>
+      </parameter>
+      <parameter>
+        <name>blue</name>
+        <type>double</type>
+      </parameter>
+    </method>
+    <method>
+      <name DesignerName="applyContrastEffect">_applycontrasteffect</name>
+      <comment>Rotate the bitmap image through the number of degrees 
+Example:
+Dim ImageView1 As ImageView
+Dim mbu As BitmapUtilities
+Dim mBitmapImage As Bitmap
+
+mbu.Initialize
+
+Dim value as Double
+value = 50
+ImageView1.Bitmap = mbu.applyContrastEffect(mBitmapImage, value)</comment>
+      <returntype>anywheresoftware.b4a.objects.drawable.CanvasWrapper.BitmapWrapper</returntype>
+      <parameter>
+        <name>src</name>
+        <type>anywheresoftware.b4a.objects.drawable.CanvasWrapper.BitmapWrapper</type>
+      </parameter>
+      <parameter>
+        <name>value</name>
+        <type>double</type>
+      </parameter>
+    </method>
+    <method>
+      <name DesignerName="applyDecreaseColorDepthEffect">_applydecreasecolordeptheffect</name>
+      <comment>Decrease the color depth of the bitmap image
+Example:
+Dim ImageView1 As ImageView
+Dim mbu As BitmapUtilities
+Dim mBitmapImage As Bitmap
+
+mbu.Initialize
+
+Dim depth as Int
+depth = 32
+ImageView1.Bitmap = mbu.applyDecreaseColorDepthEffect(mBitmapImage, depth)</comment>
+      <returntype>anywheresoftware.b4a.objects.drawable.CanvasWrapper.BitmapWrapper</returntype>
+      <parameter>
+        <name>src</name>
+        <type>anywheresoftware.b4a.objects.drawable.CanvasWrapper.BitmapWrapper</type>
+      </parameter>
+      <parameter>
+        <name>depth</name>
+        <type>int</type>
+      </parameter>
+    </method>
+    <method>
+      <name DesignerName="applyEmbossEffect">_applyembosseffect</name>
+      <returntype>anywheresoftware.b4a.objects.drawable.CanvasWrapper.BitmapWrapper</returntype>
+      <parameter>
+        <name>src</name>
+        <type>anywheresoftware.b4a.objects.drawable.CanvasWrapper.BitmapWrapper</type>
+      </parameter>
+    </method>
+    <method>
+      <name DesignerName="applyEngraveEffect">_applyengraveeffect</name>
+      <returntype>anywheresoftware.b4a.objects.drawable.CanvasWrapper.BitmapWrapper</returntype>
+      <parameter>
+        <name>src</name>
+        <type>anywheresoftware.b4a.objects.drawable.CanvasWrapper.BitmapWrapper</type>
+      </parameter>
+    </method>
+    <method>
+      <name DesignerName="applyFleaEffect">_applyfleaeffect</name>
+      <returntype>anywheresoftware.b4a.objects.drawable.CanvasWrapper.BitmapWrapper</returntype>
+      <parameter>
+        <name>src</name>
+        <type>anywheresoftware.b4a.objects.drawable.CanvasWrapper.BitmapWrapper</type>
+      </parameter>
+    </method>
+    <method>
+      <name DesignerName="applyGammaEffect">_applygammaeffect</name>
+      <comment>Adjust the Gamma value of an image (Gamma correction / encoding)
+Example:
+Dim ImageView1 As ImageView
+Dim mbu As BitmapUtilities
+Dim mBitmapImage As Bitmap
+
+mbu.Initialize
+
+mBitmapImage.Initialize(File.DirAssets,"your_picture.png")
+ImageView1.Bitmap = mbu.applyGammaEffect(mBitmapImage, 1.8, 1.8, 1.8) </comment>
+      <returntype>anywheresoftware.b4a.objects.drawable.CanvasWrapper.BitmapWrapper</returntype>
+      <parameter>
+        <name>src</name>
+        <type>anywheresoftware.b4a.objects.drawable.CanvasWrapper.BitmapWrapper</type>
+      </parameter>
+      <parameter>
+        <name>red</name>
+        <type>double</type>
+      </parameter>
+      <parameter>
+        <name>green</name>
+        <type>double</type>
+      </parameter>
+      <parameter>
+        <name>blue</name>
+        <type>double</type>
+      </parameter>
+    </method>
+    <method>
+      <name DesignerName="applyGaussianBlurEffect">_applygaussianblureffect</name>
+      <returntype>anywheresoftware.b4a.objects.drawable.CanvasWrapper.BitmapWrapper</returntype>
+      <parameter>
+        <name>src</name>
+        <type>anywheresoftware.b4a.objects.drawable.CanvasWrapper.BitmapWrapper</type>
+      </parameter>
+    </method>
+    <method>
+      <name DesignerName="applyGreyscaleEffect">_applygreyscaleeffect</name>
+      <comment>Covert the bitmap to Greyscale
+Example:
+Dim ImageView1 As ImageView
+Dim mbu As BitmapUtilities
+Dim mBitmapImage As Bitmap
+
+mbu.Initialize
+
+mBitmapImage.Initialize(File.DirAssets,"your_picture.png")
+ImageView1.Bitmap = mbu.applyGreyscaleEffect(mBitmapImage) </comment>
+      <returntype>anywheresoftware.b4a.objects.drawable.CanvasWrapper.BitmapWrapper</returntype>
+      <parameter>
+        <name>src</name>
+        <type>anywheresoftware.b4a.objects.drawable.CanvasWrapper.BitmapWrapper</type>
+      </parameter>
+    </method>
+    <method>
+      <name DesignerName="applyHighlightEffect">_applyhighlighteffect</name>
+      <comment>Highlighting a bitmap image 
+Example:
+Dim ImageView1 As ImageView
+Dim mbu As BitmapUtilities
+Dim mBitmapImage As Bitmap
+
+mbu.Initialize
+
+mBitmapImage.Initialize(File.DirAssets,"your_picture.png")
+ImageView1.Bitmap = mbu.applyHighlightEffect(mBitmapImage) </comment>
+      <returntype>anywheresoftware.b4a.objects.drawable.CanvasWrapper.BitmapWrapper</returntype>
+      <parameter>
+        <name>src</name>
+        <type>anywheresoftware.b4a.objects.drawable.CanvasWrapper.BitmapWrapper</type>
+      </parameter>
+    </method>
+    <method>
+      <name DesignerName="applyHueFilter">_applyhuefilter</name>
+      <returntype>anywheresoftware.b4a.objects.drawable.CanvasWrapper.BitmapWrapper</returntype>
+      <parameter>
+        <name>src</name>
+        <type>anywheresoftware.b4a.objects.drawable.CanvasWrapper.BitmapWrapper</type>
+      </parameter>
+      <parameter>
+        <name>level</name>
+        <type>int</type>
+      </parameter>
+    </method>
+    <method>
+      <name DesignerName="applyInvertEffect">_applyinverteffect</name>
+      <comment>Invert the colors of a bitmap
+Example:
+Dim ImageView1 As ImageView
+Dim mbu As BitmapUtilities
+Dim mBitmapImage As Bitmap
+
+mbu.Initialize
+
+mBitmapImage.Initialize(File.DirAssets,"your_picture.png")
+ImageView1.Bitmap = mbu.applyInvertEffect(mBitmapImage) </comment>
+      <returntype>anywheresoftware.b4a.objects.drawable.CanvasWrapper.BitmapWrapper</returntype>
+      <parameter>
+        <name>src</name>
+        <type>anywheresoftware.b4a.objects.drawable.CanvasWrapper.BitmapWrapper</type>
+      </parameter>
+    </method>
+    <method>
+      <name DesignerName="applyMeanRemovalEffect">_applymeanremovaleffect</name>
+      <returntype>anywheresoftware.b4a.objects.drawable.CanvasWrapper.BitmapWrapper</returntype>
+      <parameter>
+        <name>src</name>
+        <type>anywheresoftware.b4a.objects.drawable.CanvasWrapper.BitmapWrapper</type>
+      </parameter>
+    </method>
+    <method>
+      <name DesignerName="applyReflection">_applyreflection</name>
+      <returntype>anywheresoftware.b4a.objects.drawable.CanvasWrapper.BitmapWrapper</returntype>
+      <parameter>
+        <name>src</name>
+        <type>anywheresoftware.b4a.objects.drawable.CanvasWrapper.BitmapWrapper</type>
+      </parameter>
+    </method>
+    <method>
+      <name DesignerName="applyRoundCornerEffect">_applyroundcornereffect</name>
+      <returntype>anywheresoftware.b4a.objects.drawable.CanvasWrapper.BitmapWrapper</returntype>
+      <parameter>
+        <name>src</name>
+        <type>anywheresoftware.b4a.objects.drawable.CanvasWrapper.BitmapWrapper</type>
+      </parameter>
+      <parameter>
+        <name>aRound</name>
+        <type>float</type>
+      </parameter>
+    </method>
+    <method>
+      <name DesignerName="applySaturationFilter">_applysaturationfilter</name>
+      <returntype>anywheresoftware.b4a.objects.drawable.CanvasWrapper.BitmapWrapper</returntype>
+      <parameter>
+        <name>src</name>
+        <type>anywheresoftware.b4a.objects.drawable.CanvasWrapper.BitmapWrapper</type>
+      </parameter>
+      <parameter>
+        <name>level</name>
+        <type>int</type>
+      </parameter>
+    </method>
+    <method>
+      <name DesignerName="applySepiaToningEffect">_applysepiatoningeffect</name>
+      <comment>Create a Sepia Toning Effect
+Example:
+Dim ImageView1 As ImageView
+Dim mbu As BitmapUtilities
+Dim mBitmapImage As Bitmap
+
+mbu.Initialize
+
+Dim depth as Int
+depth = 24
+Dim red, green, blue as Double
+red = 3.0
+green = 0.0
+blue = 0.0
+ImageView1.Bitmap = mbu.applySepiaToningEffect(mBitmapImage, depth, red, green, blue)</comment>
+      <returntype>anywheresoftware.b4a.objects.drawable.CanvasWrapper.BitmapWrapper</returntype>
+      <parameter>
+        <name>src</name>
+        <type>anywheresoftware.b4a.objects.drawable.CanvasWrapper.BitmapWrapper</type>
+      </parameter>
+      <parameter>
+        <name>depth</name>
+        <type>int</type>
+      </parameter>
+      <parameter>
+        <name>red</name>
+        <type>double</type>
+      </parameter>
+      <parameter>
+        <name>green</name>
+        <type>double</type>
+      </parameter>
+      <parameter>
+        <name>blue</name>
+        <type>double</type>
+      </parameter>
+    </method>
+    <method>
+      <name DesignerName="applyShadingFilter">_applyshadingfilter</name>
+      <returntype>anywheresoftware.b4a.objects.drawable.CanvasWrapper.BitmapWrapper</returntype>
+      <parameter>
+        <name>src</name>
+        <type>anywheresoftware.b4a.objects.drawable.CanvasWrapper.BitmapWrapper</type>
+      </parameter>
+      <parameter>
+        <name>shadingColor</name>
+        <type>int</type>
+      </parameter>
+    </method>
+    <method>
+      <name DesignerName="applySharpenEffect">_applysharpeneffect</name>
+      <returntype>anywheresoftware.b4a.objects.drawable.CanvasWrapper.BitmapWrapper</returntype>
+      <parameter>
+        <name>src</name>
+        <type>anywheresoftware.b4a.objects.drawable.CanvasWrapper.BitmapWrapper</type>
+      </parameter>
+      <parameter>
+        <name>weight</name>
+        <type>double</type>
+      </parameter>
+    </method>
+    <method>
+      <name DesignerName="applySmoothEffect">_applysmootheffect</name>
+      <returntype>anywheresoftware.b4a.objects.drawable.CanvasWrapper.BitmapWrapper</returntype>
+      <parameter>
+        <name>src</name>
+        <type>anywheresoftware.b4a.objects.drawable.CanvasWrapper.BitmapWrapper</type>
+      </parameter>
+      <parameter>
+        <name>value</name>
+        <type>double</type>
+      </parameter>
+    </method>
+    <method>
+      <name DesignerName="applySnowEffect">_applysnoweffect</name>
+      <returntype>anywheresoftware.b4a.objects.drawable.CanvasWrapper.BitmapWrapper</returntype>
+      <parameter>
+        <name>src</name>
+        <type>anywheresoftware.b4a.objects.drawable.CanvasWrapper.BitmapWrapper</type>
+      </parameter>
+    </method>
+    <method>
+      <name DesignerName="applyTintEffect">_applytinteffect</name>
+      <returntype>anywheresoftware.b4a.objects.drawable.CanvasWrapper.BitmapWrapper</returntype>
+      <parameter>
+        <name>src</name>
+        <type>anywheresoftware.b4a.objects.drawable.CanvasWrapper.BitmapWrapper</type>
+      </parameter>
+      <parameter>
+        <name>degree</name>
+        <type>int</type>
+      </parameter>
+    </method>
+    <method>
+      <name DesignerName="applyWaterMarkEffect">_applywatermarkeffect</name>
+      <returntype>anywheresoftware.b4a.objects.drawable.CanvasWrapper.BitmapWrapper</returntype>
+      <parameter>
+        <name>src</name>
+        <type>anywheresoftware.b4a.objects.drawable.CanvasWrapper.BitmapWrapper</type>
+      </parameter>
+      <parameter>
+        <name>watermark</name>
+        <type>String</type>
+      </parameter>
+      <parameter>
+        <name>x</name>
+        <type>int</type>
+      </parameter>
+      <parameter>
+        <name>y</name>
+        <type>int</type>
+      </parameter>
+      <parameter>
+        <name>color</name>
+        <type>int</type>
+      </parameter>
+      <parameter>
+        <name>alpha</name>
+        <type>int</type>
+      </parameter>
+      <parameter>
+        <name>size</name>
+        <type>int</type>
+      </parameter>
+      <parameter>
+        <name>underline</name>
+        <type>boolean</type>
+      </parameter>
+    </method>
+    <method>
+      <name DesignerName="blur">_blur</name>
+      <returntype>anywheresoftware.b4a.objects.drawable.CanvasWrapper.BitmapWrapper</returntype>
+      <parameter>
+        <name>src</name>
+        <type>anywheresoftware.b4a.objects.drawable.CanvasWrapper.BitmapWrapper</type>
+      </parameter>
+      <parameter>
+        <name>radius</name>
+        <type>int</type>
+      </parameter>
+    </method>
+    <method>
+      <name DesignerName="Class_Globals">_class_globals</name>
+      <returntype>String</returntype>
+    </method>
+    <method>
+      <name DesignerName="drawLayoutDropShadow">_drawlayoutdropshadow</name>
+      <returntype>anywheresoftware.b4a.objects.drawable.CanvasWrapper.BitmapWrapper</returntype>
+      <parameter>
+        <name>src</name>
+        <type>anywheresoftware.b4a.objects.drawable.CanvasWrapper.BitmapWrapper</type>
+      </parameter>
+    </method>
+    <method>
+      <name DesignerName="drawRing">_drawring</name>
+      <returntype>anywheresoftware.b4a.objects.drawable.CanvasWrapper.BitmapWrapper</returntype>
+      <parameter>
+        <name>src</name>
+        <type>anywheresoftware.b4a.objects.drawable.CanvasWrapper.BitmapWrapper</type>
+      </parameter>
+      <parameter>
+        <name>deltaRadius</name>
+        <type>int</type>
+      </parameter>
+      <parameter>
+        <name>color</name>
+        <type>int</type>
+      </parameter>
+    </method>
+    <method>
+      <name DesignerName="drawRing2">_drawring2</name>
+      <returntype>anywheresoftware.b4a.objects.drawable.CanvasWrapper.BitmapWrapper</returntype>
+      <parameter>
+        <name>src</name>
+        <type>anywheresoftware.b4a.objects.drawable.CanvasWrapper.BitmapWrapper</type>
+      </parameter>
+      <parameter>
+        <name>deltaRadius</name>
+        <type>int</type>
+      </parameter>
+      <parameter>
+        <name>color</name>
+        <type>int</type>
+      </parameter>
+      <parameter>
+        <name>bordercolor</name>
+        <type>int</type>
+      </parameter>
+    </method>
+    <method>
+      <name DesignerName="flipImage">_flipimage</name>
+      <comment>Flip the bitmap image horizontally or vertically 
+Example:
+Dim ImageView1 As ImageView
+Dim mbu As BitmapUtilities
+Dim mBitmapImage As Bitmap
+
+mbu.Initialize
+
+Dim vertical, horizontal As Int
+vertical = 1
+horizontal = 2
+ImageView1.Bitmap = mbu.flipImage(mBitmapImage, horizontal) or 
+ImageView1.Bitmap = mbu.flipImage(mBitmapImage, vertical)</comment>
+      <returntype>anywheresoftware.b4a.objects.drawable.CanvasWrapper.BitmapWrapper</returntype>
+      <parameter>
+        <name>src</name>
+        <type>anywheresoftware.b4a.objects.drawable.CanvasWrapper.BitmapWrapper</type>
+      </parameter>
+      <parameter>
+        <name>direction</name>
+        <type>int</type>
+      </parameter>
+    </method>
+    <method>
+      <name DesignerName="getBubbleBitmap">_getbubblebitmap</name>
+      <returntype>anywheresoftware.b4a.objects.drawable.CanvasWrapper.BitmapWrapper</returntype>
+      <parameter>
+        <name>src</name>
+        <type>anywheresoftware.b4a.objects.drawable.CanvasWrapper.BitmapWrapper</type>
+      </parameter>
+    </method>
+    <method>
+      <name DesignerName="getCircledStar">_getcircledstar</name>
+      <returntype>anywheresoftware.b4a.objects.drawable.CanvasWrapper.BitmapWrapper</returntype>
+      <parameter>
+        <name>src</name>
+        <type>anywheresoftware.b4a.objects.drawable.CanvasWrapper.BitmapWrapper</type>
+      </parameter>
+    </method>
+    <method>
+      <name DesignerName="getConeBitmap">_getconebitmap</name>
+      <returntype>anywheresoftware.b4a.objects.drawable.CanvasWrapper.BitmapWrapper</returntype>
+      <parameter>
+        <name>src</name>
+        <type>anywheresoftware.b4a.objects.drawable.CanvasWrapper.BitmapWrapper</type>
+      </parameter>
+    </method>
+    <method>
+      <name DesignerName="getHeartBitmap">_getheartbitmap</name>
+      <returntype>anywheresoftware.b4a.objects.drawable.CanvasWrapper.BitmapWrapper</returntype>
+      <parameter>
+        <name>src</name>
+        <type>anywheresoftware.b4a.objects.drawable.CanvasWrapper.BitmapWrapper</type>
+      </parameter>
+    </method>
+    <method>
+      <name DesignerName="getHexagonShape">_gethexagonshape</name>
+      <returntype>anywheresoftware.b4a.objects.drawable.CanvasWrapper.BitmapWrapper</returntype>
+      <parameter>
+        <name>src</name>
+        <type>anywheresoftware.b4a.objects.drawable.CanvasWrapper.BitmapWrapper</type>
+      </parameter>
+    </method>
+    <method>
+      <name DesignerName="getRoundBitmap">_getroundbitmap</name>
+      <returntype>anywheresoftware.b4a.objects.drawable.CanvasWrapper.BitmapWrapper</returntype>
+      <parameter>
+        <name>src</name>
+        <type>anywheresoftware.b4a.objects.drawable.CanvasWrapper.BitmapWrapper</type>
+      </parameter>
+      <parameter>
+        <name>borderColor</name>
+        <type>int</type>
+      </parameter>
+      <parameter>
+        <name>borderWidth</name>
+        <type>int</type>
+      </parameter>
+    </method>
+    <method>
+      <name DesignerName="getStarBitmap">_getstarbitmap</name>
+      <returntype>anywheresoftware.b4a.objects.drawable.CanvasWrapper.BitmapWrapper</returntype>
+      <parameter>
+        <name>src</name>
+        <type>anywheresoftware.b4a.objects.drawable.CanvasWrapper.BitmapWrapper</type>
+      </parameter>
+      <parameter>
+        <name>steps</name>
+        <type>int</type>
+      </parameter>
+    </method>
+    <method>
+      <name DesignerName="getTriangleShape">_gettriangleshape</name>
+      <returntype>anywheresoftware.b4a.objects.drawable.CanvasWrapper.BitmapWrapper</returntype>
+      <parameter>
+        <name>src</name>
+        <type>anywheresoftware.b4a.objects.drawable.CanvasWrapper.BitmapWrapper</type>
+      </parameter>
+    </method>
+    <method>
+      <name DesignerName="Initialize">_initialize</name>
+      <comment>Initializes the object.</comment>
+      <returntype>String</returntype>
+      <parameter>
+        <name>ba</name>
+        <type>anywheresoftware.b4a.BA</type>
+      </parameter>
+    </method>
+    <method>
+      <name DesignerName="overlay">_overlay</name>
+      <returntype>anywheresoftware.b4a.objects.drawable.CanvasWrapper.BitmapWrapper</returntype>
+      <parameter>
+        <name>src</name>
+        <type>anywheresoftware.b4a.objects.drawable.CanvasWrapper.BitmapWrapper</type>
+      </parameter>
+      <parameter>
+        <name>rotation</name>
+        <type>float</type>
+      </parameter>
+    </method>
+    <method>
+      <name DesignerName="rotateImage">_rotateimage</name>
+      <comment>Rotate the bitmap image through the number of degrees 
+Example:
+Dim ImageView1 As ImageView
+Dim mbu As BitmapUtilities
+Dim mBitmapImage As Bitmap
+
+mbu.Initialize
+
+Dim degree as Int
+degree = 270
+ImageView1.Bitmap = mbu.rotateImage(mBitmapImage, degree)</comment>
+      <returntype>anywheresoftware.b4a.objects.drawable.CanvasWrapper.BitmapWrapper</returntype>
+      <parameter>
+        <name>src</name>
+        <type>anywheresoftware.b4a.objects.drawable.CanvasWrapper.BitmapWrapper</type>
+      </parameter>
+      <parameter>
+        <name>degree</name>
+        <type>int</type>
+      </parameter>
+    </method>
+    <method>
+      <name DesignerName="squareImage">_squareimage</name>
+      <returntype>anywheresoftware.b4a.objects.drawable.CanvasWrapper.BitmapWrapper</returntype>
+      <parameter>
+        <name>src</name>
+        <type>anywheresoftware.b4a.objects.drawable.CanvasWrapper.BitmapWrapper</type>
+      </parameter>
+    </method>
+    <method>
+      <name DesignerName="toRoundCorner">_toroundcorner</name>
+      <returntype>anywheresoftware.b4a.objects.drawable.CanvasWrapper.BitmapWrapper</returntype>
+      <parameter>
+        <name>src</name>
+        <type>anywheresoftware.b4a.objects.drawable.CanvasWrapper.BitmapWrapper</type>
+      </parameter>
+      <parameter>
+        <name>color</name>
+        <type>int</type>
+      </parameter>
+    </method>
+    <method>
+      <name DesignerName="toRounded">_torounded</name>
+      <returntype>anywheresoftware.b4a.objects.drawable.CanvasWrapper.BitmapWrapper</returntype>
+      <parameter>
+        <name>src</name>
+        <type>anywheresoftware.b4a.objects.drawable.CanvasWrapper.BitmapWrapper</type>
+      </parameter>
+      <parameter>
+        <name>color</name>
+        <type>int</type>
+      </parameter>
+      <parameter>
+        <name>borderDips</name>
+        <type>int</type>
+      </parameter>
+      <parameter>
+        <name>desireWidth</name>
+        <type>int</type>
+      </parameter>
+    </method>
+  </class>
+  <class>
+    <name>My.VariousUtilities.sensorutilities</name>
+    <shortname>SensorUtilities</shortname>
+    <owner>process</owner>
+    <method>
+      <name>IsInitialized</name>
+      <comment>Tests whether the object has been initialized.</comment>
+      <returntype>boolean</returntype>
+    </method>
+    <method>
+      <name DesignerName="Class_Globals">_class_globals</name>
+      <returntype>String</returntype>
+    </method>
+    <method>
+      <name DesignerName="Initialize">_initialize</name>
+      <comment>Initializes the object.</comment>
+      <returntype>String</returntype>
+      <parameter>
+        <name>ba</name>
+        <type>anywheresoftware.b4a.BA</type>
+      </parameter>
+    </method>
+    <method>
+      <name DesignerName="listDeviceSensors">_listdevicesensors</name>
+      <comment>Get a List of all sensors available on the device
+Example:
+Dim su as SensorUtilities
+su.Initialize
+Dim sensorList As List 
+sensorlist = su.listDeviceSensors
+</comment>
+      <returntype>String</returntype>
+    </method>
+  </class>
+  <version>1</version>
+</root>

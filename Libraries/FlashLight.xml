@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root>
+    <doclet-version-NOT-library-version>1.04</doclet-version-NOT-library-version>
+    <class>
+        <name>com.imageview.scale.FlashLight</name>
+        <shortname>FlashLight</shortname>
+        <owner>process</owner>
+        <method>
+            <name>TurnFlashOn</name>
+            <comment>Turn the camera flash ON (in TORCH MODE)
+You need to add the following to the manifest file of the B4A project:
+AddPermission("android.permission.CAMERA")
+Example:&lt;code&gt;
+Dim myflash as flash
+log(myflash.TurnFlashOn(True))
+&lt;/code&gt;</comment>
+            <returntype>java.lang.String</returntype>
+            <parameter>
+                <name>turnOn</name>
+                <type>boolean</type>
+            </parameter>
+        </method>
+        <method>
+            <name>TurnFlashOff</name>
+            <comment>Turn OFF the camera flash (that is in TORCH MODE)
+You need to add the following to the manifest file of the B4A project:
+AddPermission("android.permission.CAMERA")
+Example:&lt;code&gt;
+Dim myflash as flash
+Log(mf.TurnFlashOff)
+&lt;/code&gt;</comment>
+            <returntype>java.lang.String</returntype>
+        </method>
+    </class>
+    <version>1.0</version>
+</root>

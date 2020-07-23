@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root>
+    <doclet-version-NOT-library-version>1.00</doclet-version-NOT-library-version>
+    <class>
+        <name>com.rootsoft.arlib.ARLib</name>
+        <shortname>AugmentedReality</shortname>
+        <comment>The new, improved camera library has a lot of new functions! These include:
+ flashlight, scene modes, orientations, front- and back camera, picture size,
+ white balance and a lot more! Only one process can access the camera at any
+ time. Therefore it is highly recommended to initialize the camera object in
+ Activity_Resume and release it in Activity_Pause. A working example with
+ explanations is available
+ &lt;link&gt;here|http://www.basic4ppc.com/forum/basic4android
+ -getting-started-tutorials/6891-take-pictures-internal-camera.html&lt;/link&gt;.</comment>
+        <owner>activity</owner>
+        <permission>android.permission.CAMERA</permission>
+        <permission>android.permission.WRITE_EXTERNAL_STORAGE</permission>
+        <method>
+            <name>draw</name>
+            <comment>Draw all ARObjects.
+gl: </comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>gl</name>
+                <type>javax.microedition.khronos.opengles.GL10</type>
+            </parameter>
+        </method>
+        <method>
+            <name>addVisibilityListener</name>
+            <comment></comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>markerVisibilityListener</name>
+                <type>com.rootsoft.arlib.MarkerVisibilityListener</type>
+            </parameter>
+        </method>
+        <method>
+            <name>detectMarkers</name>
+            <comment>Detects the markers in the image, and updates the state of the
+ MarkerInfo accordingly.
+image: </comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>image</name>
+                <type>byte[]</type>
+            </parameter>
+        </method>
+        <method>
+            <name>registerARObject</name>
+            <comment>Registers an object to the ARToolkit. This means:
+ The toolkit will try to determine the pose of the object.
+ If it is visible the draw method of the object will be invoked.
+ The corresponding translation matrix will be applied inside opengl
+ before doing so.
+ TODO: registering a object with the same pattern twice will not work, as arloadpatt will create different IDs for the same pattern, and the detecting function will return only the first id as being detected. we need to store patt load id's in an hash -&gt; loadpatt as a native function returning the ID -&gt; pass this id to the object registering function.
+arobject: The object that shell be registered.</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>arobject</name>
+                <type>com.rootsoft.arlib.ARObject</type>
+            </parameter>
+        </method>
+        <method>
+            <name>initGL</name>
+            <comment>initialize the objects.
+gl: </comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>gl</name>
+                <type>javax.microedition.khronos.opengles.GL10</type>
+            </parameter>
+        </method>
+        <method>
+            <name>unregisterARObject</name>
+            <comment></comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>arobject</name>
+                <type>com.rootsoft.arlib.ARObject</type>
+            </parameter>
+        </method>
+        <method>
+            <name>arUtilMatInv</name>
+            <comment>Inverse a three by four matrix.
+ Matrix has to be 3 by 4! (but is actually a 4 by 4 homogene matrix.)
+mat1: contains the matrix to be inversed.
+mat2: will contain the resulting matrix.
+Return type: @return:success?</comment>
+            <returntype>int</returntype>
+            <parameter>
+                <name>mat1</name>
+                <type>double[]</type>
+            </parameter>
+            <parameter>
+                <name>mat2</name>
+                <type>double[]</type>
+            </parameter>
+        </method>
+        <method>
+            <name>arUtilMatMul</name>
+            <comment>Multiply one (three by four) matrix by another.
+ Matrix has to be 3 by 4! (but is actually a 4 by 4 homogene matrix.)
+multiplier: 
+multiplicand: 
+result: contains the result, after the method returns.
+Return type: @return:</comment>
+            <returntype>int</returntype>
+            <parameter>
+                <name>multiplier</name>
+                <type>double[]</type>
+            </parameter>
+            <parameter>
+                <name>multiplicand</name>
+                <type>double[]</type>
+            </parameter>
+            <parameter>
+                <name>result</name>
+                <type>double[]</type>
+            </parameter>
+        </method>
+        <property>
+            <name>VisListener</name>
+            <parameter>
+                <name>visListener</name>
+                <type>com.rootsoft.arlib.MarkerVisibilityListener</type>
+            </parameter>
+            <comment></comment>
+        </property>
+    </class>
+    <version>1.0</version>
+    <author>XverhelstX</author>
+</root>

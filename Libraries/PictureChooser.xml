@@ -1,0 +1,321 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <doclet-version-NOT-library-version>1.00</doclet-version-NOT-library-version>
+  <dependsOn>javaobject</dependsOn>
+  <dependsOn>phone</dependsOn>
+  <dependsOn>reflection</dependsOn>
+  <dependsOn>rsimageprocessing</dependsOn>
+  <dependsOn>jpegutils</dependsOn>
+  <dependsOn>runtimepermissions</dependsOn>
+  <dependsOn>cropimageview</dependsOn>
+  <dependsOn>hitex_gpuimage</dependsOn>
+  <dependsOn>com.android.support:support-v4</dependsOn>
+  <dependsOn>android-support-v4</dependsOn>
+  <class>
+    <name>b4a.exampleddd.picturechooser</name>
+    <shortname>PictureChooser</shortname>
+    <owner>activity</owner>
+    <permission>android.permission.CAMERA</permission>
+    <permission>android.hardware.camera</permission>
+    <permission>android.hardware.camera.autofocus</permission>
+    <event>Result(Bitmap As Bitmap)</event>
+    <event>Result2(Dir As String,Filename As String)</event>
+    <event>Error</event>
+    <method>
+      <name>IsInitialized</name>
+      <comment>Tests whether the object has been initialized.</comment>
+      <returntype>boolean</returntype>
+    </method>
+    <method>
+      <name DesignerName="CheckPermissionCamera">_checkpermissioncamera</name>
+      <returntype>boolean</returntype>
+    </method>
+    <method>
+      <name DesignerName="ChooseFromCamera">_choosefromcamera</name>
+      <comment>use below permission
+&lt;code&gt;&lt;uses-feature android:name="android.hardware.camera" /&gt;
+AddPermission(android.permission.CAMERA)
+AddPermission(android.hardware.camera)
+AddPermission(android.hardware.camera.autofocus)&lt;/code&gt;
+
+&lt;code&gt;
+Dim r As RuntimePermissions
+r.CheckAndRequest(r.PERMISSION_CAMERA)
+&lt;/code&gt;
+
+&lt;code&gt;Sub Activity_PermissionResult (Permission As String, Result As Boolean)
+
+	Dim r as RuntimePermissions
+	if Permission = r.PERMISSION_CAMERA Then
+
+	End If
+
+End Sub&lt;/code&gt;
+
+</comment>
+      <returntype>String</returntype>
+    </method>
+    <method>
+      <name DesignerName="ChooseFromGallery">_choosefromgallery</name>
+      <returntype>String</returntype>
+    </method>
+    <method>
+      <name DesignerName="getDir" HideFromIDE="true">_getdir</name>
+      <comment>Get picture's dir
+</comment>
+      <returntype>String</returntype>
+    </method>
+    <method>
+      <name DesignerName="getFilename" HideFromIDE="true">_getfilename</name>
+      <comment>Get picture's filename
+</comment>
+      <returntype>String</returntype>
+    </method>
+    <method>
+      <name DesignerName="getVisibleCamera" HideFromIDE="true">_getvisiblecamera</name>
+      <comment>get camera state (show or hide)
+</comment>
+      <returntype>boolean</returntype>
+    </method>
+    <method>
+      <name DesignerName="gpu_PictureTaken">_gpu_picturetaken</name>
+      <returntype>String</returntype>
+      <parameter>
+        <name>Data</name>
+        <type>byte[]</type>
+      </parameter>
+    </method>
+    <method>
+      <name DesignerName="Initialize">_initialize</name>
+      <comment>Note: You have to declare varible in Process_Globals
+Add resouce for cropimageview
+</comment>
+      <returntype>String</returntype>
+      <parameter>
+        <name>ba</name>
+        <type>anywheresoftware.b4a.BA</type>
+      </parameter>
+      <parameter>
+        <name>Parent</name>
+        <type>anywheresoftware.b4a.objects.PanelWrapper</type>
+      </parameter>
+      <parameter>
+        <name>Module</name>
+        <type>Object</type>
+      </parameter>
+      <parameter>
+        <name>EventResult</name>
+        <type>String</type>
+      </parameter>
+    </method>
+    <method>
+      <name DesignerName="ResizeBitmap">_resizebitmap</name>
+      <returntype>anywheresoftware.b4a.objects.drawable.CanvasWrapper.BitmapWrapper</returntype>
+      <parameter>
+        <name>Original</name>
+        <type>anywheresoftware.b4a.objects.drawable.CanvasWrapper.BitmapWrapper</type>
+      </parameter>
+      <parameter>
+        <name>Width</name>
+        <type>int</type>
+      </parameter>
+      <parameter>
+        <name>Height</name>
+        <type>int</type>
+      </parameter>
+    </method>
+    <method>
+      <name DesignerName="ResizePicture">_resizepicture</name>
+      <returntype>String</returntype>
+      <parameter>
+        <name>Dir</name>
+        <type>String</type>
+      </parameter>
+      <parameter>
+        <name>Filename</name>
+        <type>String</type>
+      </parameter>
+      <parameter>
+        <name>OutputFilename</name>
+        <type>String</type>
+      </parameter>
+      <parameter>
+        <name>Width</name>
+        <type>int</type>
+      </parameter>
+      <parameter>
+        <name>Height</name>
+        <type>int</type>
+      </parameter>
+    </method>
+    <method>
+      <name DesignerName="RotateBitmap">_rotatebitmap</name>
+      <returntype>anywheresoftware.b4a.objects.drawable.CanvasWrapper.BitmapWrapper</returntype>
+      <parameter>
+        <name>Original</name>
+        <type>anywheresoftware.b4a.objects.drawable.CanvasWrapper.BitmapWrapper</type>
+      </parameter>
+      <parameter>
+        <name>Degree</name>
+        <type>float</type>
+      </parameter>
+    </method>
+    <method>
+      <name DesignerName="RoundBitmap">_roundbitmap</name>
+      <returntype>anywheresoftware.b4a.objects.drawable.CanvasWrapper.BitmapWrapper</returntype>
+      <parameter>
+        <name>Bitmap</name>
+        <type>anywheresoftware.b4a.objects.drawable.CanvasWrapper.BitmapWrapper</type>
+      </parameter>
+    </method>
+    <method>
+      <name DesignerName="RoundBitmap2">_roundbitmap2</name>
+      <returntype>anywheresoftware.b4a.objects.drawable.CanvasWrapper.BitmapWrapper</returntype>
+      <parameter>
+        <name>Bitmap</name>
+        <type>anywheresoftware.b4a.objects.drawable.CanvasWrapper.BitmapWrapper</type>
+      </parameter>
+      <parameter>
+        <name>Corner</name>
+        <type>int</type>
+      </parameter>
+    </method>
+    <method>
+      <name DesignerName="SaveBitmap">_savebitmap</name>
+      <comment>save picture with jpeg format
+</comment>
+      <returntype>String</returntype>
+      <parameter>
+        <name>Bitmap</name>
+        <type>anywheresoftware.b4a.objects.drawable.CanvasWrapper.BitmapWrapper</type>
+      </parameter>
+      <parameter>
+        <name>Dir</name>
+        <type>String</type>
+      </parameter>
+      <parameter>
+        <name>Filename</name>
+        <type>String</type>
+      </parameter>
+    </method>
+    <method>
+      <name DesignerName="SaveBitmap2">_savebitmap2</name>
+      <comment>save picture with png format
+</comment>
+      <returntype>String</returntype>
+      <parameter>
+        <name>Bitmap</name>
+        <type>anywheresoftware.b4a.objects.drawable.CanvasWrapper.BitmapWrapper</type>
+      </parameter>
+      <parameter>
+        <name>Dir</name>
+        <type>String</type>
+      </parameter>
+      <parameter>
+        <name>Filename</name>
+        <type>String</type>
+      </parameter>
+    </method>
+    <method>
+      <name DesignerName="SaveBitmap3">_savebitmap3</name>
+      <comment>quality is between 1 and 100
+format is JPEG,PNG
+</comment>
+      <returntype>String</returntype>
+      <parameter>
+        <name>Bitmap</name>
+        <type>anywheresoftware.b4a.objects.drawable.CanvasWrapper.BitmapWrapper</type>
+      </parameter>
+      <parameter>
+        <name>Dir</name>
+        <type>String</type>
+      </parameter>
+      <parameter>
+        <name>Filename</name>
+        <type>String</type>
+      </parameter>
+      <parameter>
+        <name>Format</name>
+        <type>String</type>
+      </parameter>
+      <parameter>
+        <name>Quality</name>
+        <type>int</type>
+      </parameter>
+    </method>
+    <method>
+      <name DesignerName="setCrop" HideFromIDE="true">_setcrop</name>
+      <comment>Crop picture after select from gallery or camera
+</comment>
+      <returntype>String</returntype>
+      <parameter>
+        <name>Value</name>
+        <type>boolean</type>
+      </parameter>
+    </method>
+    <method>
+      <name DesignerName="setScaleCrop" HideFromIDE="true">_setscalecrop</name>
+      <comment>if set False,user cannot crop picture with custome shape
+</comment>
+      <returntype>String</returntype>
+      <parameter>
+        <name>Value</name>
+        <type>boolean</type>
+      </parameter>
+    </method>
+    <method>
+      <name DesignerName="setVisibleCamera" HideFromIDE="true">_setvisiblecamera</name>
+      <comment>for hide camera view
+</comment>
+      <returntype>String</returntype>
+      <parameter>
+        <name>Value</name>
+        <type>boolean</type>
+      </parameter>
+    </method>
+    <property>
+      <name DesignerName="Dir">_dir</name>
+      <comment>Get picture's dir
+</comment>
+      <returntype>String</returntype>
+    </property>
+    <property>
+      <name DesignerName="Filename">_filename</name>
+      <comment>Get picture's filename
+</comment>
+      <returntype>String</returntype>
+    </property>
+    <property>
+      <name DesignerName="VisibleCamera">_visiblecamera</name>
+      <comment>get camera state (show or hide)
+</comment>
+      <returntype>boolean</returntype>
+      <parameter>
+        <name>Value</name>
+        <type>boolean</type>
+      </parameter>
+    </property>
+    <property>
+      <name DesignerName="Crop">_crop</name>
+      <comment>Crop picture after select from gallery or camera
+</comment>
+      <returntype>void</returntype>
+      <parameter>
+        <name>Value</name>
+        <type>boolean</type>
+      </parameter>
+    </property>
+    <property>
+      <name DesignerName="ScaleCrop">_scalecrop</name>
+      <comment>if set False,user cannot crop picture with custome shape
+</comment>
+      <returntype>void</returntype>
+      <parameter>
+        <name>Value</name>
+        <type>boolean</type>
+      </parameter>
+    </property>
+  </class>
+  <version>1.3</version>
+  <author>www.iranapp.org</author>
+</root>

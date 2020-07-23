@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root>
+    <doclet-version-NOT-library-version>1.00</doclet-version-NOT-library-version>
+    <class>
+        <name>com.BennyG.BGCellLocation.BGCellLocation</name>
+        <shortname>BGCellLocation</shortname>
+        <owner>process</owner>
+        <permission>android.permission.ACCESS_COARSE_LOCATION</permission>
+        <permission>android.permission.INTERNET</permission>
+        <method>
+            <name>getCellLocation2</name>
+            <comment>Returns a string with Latitude and Longitude seperated by comma (,) without a decimal point.
+Returns "not found" in case of failure</comment>
+            <returntype>java.lang.String</returntype>
+            <parameter>
+                <name>ba</name>
+                <type>anywheresoftware.b4a.BA</type>
+            </parameter>
+            <parameter>
+                <name>cid</name>
+                <type>int</type>
+            </parameter>
+            <parameter>
+                <name>lac</name>
+                <type>int</type>
+            </parameter>
+        </method>
+        <method>
+            <name>getNeighboringCells</name>
+            <comment>Returns a List of neighboring cell IDs and Rssi (signal strength) separated by comma (,). 
+Returns an empty List if none is found.
+Will return -1 as cell ID when using UMTS cells.</comment>
+            <returntype>java.util.List</returntype>
+            <parameter>
+                <name>ba</name>
+                <type>anywheresoftware.b4a.BA</type>
+            </parameter>
+        </method>
+        <method>
+            <name>getCellLocation</name>
+            <comment>Returns a string with Latitude and Longitude seperated by comma (,) in decimal form.
+Returns "not found" in case of failure</comment>
+            <returntype>java.lang.String</returntype>
+            <parameter>
+                <name>ba</name>
+                <type>anywheresoftware.b4a.BA</type>
+            </parameter>
+            <parameter>
+                <name>cid</name>
+                <type>int</type>
+            </parameter>
+            <parameter>
+                <name>lac</name>
+                <type>int</type>
+            </parameter>
+        </method>
+    </class>
+    <version>1.01</version>
+    <author>Benny G</author>
+</root>

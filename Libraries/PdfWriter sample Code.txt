@@ -1,0 +1,74 @@
+'Activity module
+Sub Process_Globals
+	'These global variables will be declared once when the application starts.
+	'These variables can be accessed from all modules.
+	Dim PDFContent As String
+
+End Sub
+
+Sub Globals
+	'These global variables will be redeclared each time the activity is created.
+	'These variables can only be accessed from this module.
+	Dim PDFWriter1 As PDFWriter
+	Dim PaperSize As PDFPaperSizes
+	Dim Fonts As PDFStandardFonts
+	Dim Label1 As Label
+End Sub
+
+Sub Activity_Create(FirstTime As Boolean)
+	If FirstTime Then
+		PDFWriter1.Initialize("PDFWriter1",PaperSize.A4_WIDTH, PaperSize.A4_HEIGHT)
+	End If
+
+	Activity.LoadLayout("Main.bal")
+	Activity.AddMenuItem("Make document","mnuMakeDoc")
+	Activity.AddMenuItem("Save document","mnuSaveDoc")
+	Activity.AddMenuItem("Show document","mnuShowDoc")
+End Sub
+
+Sub Activity_Resume
+
+End Sub
+
+Sub Activity_Pause (UserClosed As Boolean)
+
+End Sub
+
+Sub mnuMakeDoc_Click
+	ProgressDialogShow("Generating Document.")
+	PDFWriter1.setFont(Fonts.SUBTYPE, Fonts.TIMES_ROMAN)
+   	PDFWriter1.addRawContent("1 0 0 rg\n")
+    PDFWriter1.addText(70, 50, 12, "This is an example of PDFWriter.")
+    PDFWriter1.setFont2(Fonts.SUBTYPE, Fonts.COURIER, Fonts.WIN_ANSI_ENCODING)
+    PDFWriter1.addRawContent("0 0 0 rg\n")
+    PDFWriter1.addText2(30, 90, 10, "© CRL", Fonts.DEGREES_270_ROTATION)
+    PDFWriter1.newPage()
+    PDFWriter1.addRawContent("[] 0 d\n")
+    PDFWriter1.addRawContent("1 w\n")
+    PDFWriter1.addRawContent("0 0 1 RG\n")
+    PDFWriter1.addRawContent("0 1 0 rg\n")
+    PDFWriter1.addRectangle(40, 50, 280, 50)
+    PDFWriter1.addText(85, 75, 18, "Code Research Laboratories")
+    PDFWriter1.newPage()
+    PDFWriter1.setFont(Fonts.SUBTYPE, Fonts.COURIER_BOLD)
+    PDFWriter1.addText(150, 150, 14, "Ported by: RootSoft LLC.")
+    PDFWriter1.addLine(150, 140, 270, 140)
+	PDFWriter1.ConverseDocument
+End Sub
+
+Sub PDFWriter1_ConversionDone (Content As String)
+	PDFContent = Content
+	ProgressDialogHide
+	ToastMessageShow("Conversion has been done.",False)
+End Sub
+
+Sub mnuShowDoc_Click
+	Label1.Text = PDFWriter1.outputToScreen
+End Sub
+
+Sub mnuSaveDoc_Click
+	PDFWriter1.outputToFile(File.DirDefaultExternal,"myNewPDF.pdf",PDFContent,"ISO-8859-1")
+	ToastMessageShow("PDF Saved.",False)
+End Sub
+
+

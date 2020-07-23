@@ -1,0 +1,67 @@
+﻿Version=6.5
+NumberOfModules=11
+Module1=StudentViews
+Module2=StudentCommunication
+Module3=StudentApp
+Module4=StudentImage
+Module5=StudentString
+Module6=StudentContact
+Module7=StudentIntents
+Module8=StudentFile
+Module9=StudentShare
+Module10=StudentScrollViewPropeties
+Module11=StudentEncryption
+Build1=Default,b4a.example
+ManifestCode='This code will be applied to the manifest file during compilation.~\n~'You do not need to modify it in most cases.~\n~'See this link for for more information: http://www.basic4ppc.com/forum/showthread.php?p=78136~\n~AddManifestText(~\n~<uses-sdk android:minSdkVersion="4" android:targetSdkVersion="14"/>~\n~<supports-screens android:largeScreens="true" ~\n~    android:normalScreens="true" ~\n~    android:smallScreens="true" ~\n~    android:anyDensity="true"/>)~\n~SetApplicationAttribute(android:icon, "@drawable/icon")~\n~SetApplicationAttribute(android:label, "$LABEL$")~\n~~\n~'End of default text.~\n~
+IconFile=
+NumberOfFiles=0
+NumberOfLibraries=14
+Library1=byteconverter
+Library2=core
+Library3=encryption
+Library4=http
+Library5=phone
+Library6=reflection
+Library7=sql
+Library8=sl
+Library9=stringutils
+Library10=ahlocale
+Library11=javaobject
+Library12=androidresources
+Library13=clipboard
+Library14=contentresolver
+@EndOfDesignText@
+#Region  Project Attributes 
+	#ApplicationLabel: B4A Example
+	#VersionCode: 1
+	#VersionName: 
+	'SupportedOrientations possible values: unspecified, landscape or portrait.
+	#SupportedOrientations: unspecified
+	#CanInstallToExternalStorage: False
+#End Region
+
+#Region  Activity Attributes 
+	#FullScreen: False
+	#IncludeTitle: True
+#End Region
+
+Sub Process_Globals
+
+End Sub
+
+Sub Globals
+
+End Sub
+
+Sub Activity_Create(FirstTime As Boolean)
+End Sub
+
+Sub Activity_Resume
+
+End Sub
+
+Sub Activity_Pause (UserClosed As Boolean)
+
+End Sub
+
+

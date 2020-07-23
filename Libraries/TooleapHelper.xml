@@ -1,0 +1,383 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root>
+    <doclet-version-NOT-library-version>1.02</doclet-version-NOT-library-version>
+    <class>
+        <name>com.maximussoft.tooleaphelper.TooleapManager</name>
+        <shortname>MSTooleapManager</shortname>
+        <owner>process</owner>
+        <method>
+            <name>getVisibleAppId</name>
+            <comment>Get the Mini-App ID of the Mini-App currently visible to the user.
+Return type: @return:long appID</comment>
+            <returntype>long</returntype>
+            <parameter>
+                <name>ba</name>
+                <type>anywheresoftware.b4a.BA</type>
+            </parameter>
+        </method>
+        <method>
+            <name>updateMiniAppAndNotify</name>
+            <comment>Update the Mini-App and post a notification to be shown.
+appId: of the miniApp to be updated
+miniApp: to be updated
+Return type: @return:boolean (whether app was successfully updated or not)</comment>
+            <returntype>boolean</returntype>
+            <parameter>
+                <name>ba</name>
+                <type>anywheresoftware.b4a.BA</type>
+            </parameter>
+            <parameter>
+                <name>appId</name>
+                <type>long</type>
+            </parameter>
+            <parameter>
+                <name>miniApp</name>
+                <type>com.maximussoft.tooleaphelper.PopoutMiniAppWrapper2</type>
+            </parameter>
+        </method>
+        <method>
+            <name>getMiniApp</name>
+            <comment>Get the Mini-App data associated with the appID
+appID: of the miniApp to be returned
+Return type: @return:MSTooleapMiniApp</comment>
+            <returntype>com.maximussoft.tooleaphelper.PopoutMiniAppWrapper2</returntype>
+            <parameter>
+                <name>ba</name>
+                <type>anywheresoftware.b4a.BA</type>
+            </parameter>
+            <parameter>
+                <name>appID</name>
+                <type>long</type>
+            </parameter>
+        </method>
+        <method>
+            <name>getAllMiniApps</name>
+            <comment>Get a list containing all of the active Mini-Apps added to the Tooleap Service.
+Return type: @return:List of all active MSTooleapMiniApp</comment>
+            <returntype>anywheresoftware.b4a.objects.collections.List</returntype>
+            <parameter>
+                <name>ba</name>
+                <type>anywheresoftware.b4a.BA</type>
+            </parameter>
+        </method>
+        <method>
+            <name>removeAllMiniApps</name>
+            <comment>Remove all the Mini-Apps added to the Tooleap service</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>ba</name>
+                <type>anywheresoftware.b4a.BA</type>
+            </parameter>
+        </method>
+        <method>
+            <name>updateMiniApp</name>
+            <comment>Update the Mini-App.
+  You can use this to update the text or notification properties
+appId: of the miniApp to be updated
+miniApp: 
+Return type: @return:boolean (whether app was successfully updated or not)</comment>
+            <returntype>boolean</returntype>
+            <parameter>
+                <name>ba</name>
+                <type>anywheresoftware.b4a.BA</type>
+            </parameter>
+            <parameter>
+                <name>appId</name>
+                <type>long</type>
+            </parameter>
+            <parameter>
+                <name>miniApp</name>
+                <type>com.maximussoft.tooleaphelper.PopoutMiniAppWrapper2</type>
+            </parameter>
+        </method>
+        <method>
+            <name>removeMiniApp</name>
+            <comment>Remove an existing Mini-App from Tooleap.
+appId: of miniApp to be removed</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>ba</name>
+                <type>anywheresoftware.b4a.BA</type>
+            </parameter>
+            <parameter>
+                <name>appId</name>
+                <type>long</type>
+            </parameter>
+        </method>
+        <method>
+            <name>getMiniAppNotificationBadge</name>
+            <comment>Get the current numeric value of the notification badge
+appId: of the MiniApp
+Return type: @return:Int</comment>
+            <returntype>int</returntype>
+            <parameter>
+                <name>ba</name>
+                <type>anywheresoftware.b4a.BA</type>
+            </parameter>
+            <parameter>
+                <name>appId</name>
+                <type>long</type>
+            </parameter>
+        </method>
+        <method>
+            <name>addMiniApp</name>
+            <comment>Add a new Mini-App to Tooleap.
+miniApp: is the miniApp to be added
+Return type: @return:long (appID)</comment>
+            <returntype>long</returntype>
+            <parameter>
+                <name>ba</name>
+                <type>anywheresoftware.b4a.BA</type>
+            </parameter>
+            <parameter>
+                <name>miniApp</name>
+                <type>com.maximussoft.tooleaphelper.PopoutMiniAppWrapper2</type>
+            </parameter>
+        </method>
+    </class>
+    <class>
+        <name>com.maximussoft.tooleaphelper.TooleapActivityHelper</name>
+        <shortname>MSTooleapActivityHelper</shortname>
+        <owner>activity</owner>
+        <method>
+            <name>isStartedByTooleap</name>
+            <comment>Returns if a TooleapActivity was started in normal mode or in MiniApp mode
+Return type: @return:boolean</comment>
+            <returntype>boolean</returntype>
+            <parameter>
+                <name>ba</name>
+                <type>anywheresoftware.b4a.BA</type>
+            </parameter>
+        </method>
+        <method>
+            <name>getCurrentActivityTooleapAppId</name>
+            <comment>Returns the Tooleap AppID for the current activity
+Return type: @return:long</comment>
+            <returntype>long</returntype>
+            <parameter>
+                <name>ba</name>
+                <type>anywheresoftware.b4a.BA</type>
+            </parameter>
+        </method>
+    </class>
+    <class>
+        <name>com.maximussoft.tooleaphelper.PopoutMiniAppWrapper2</name>
+        <shortname>MSTooleapMiniApp</shortname>
+        <objectwrapper>com.tooleap.sdk.TooleapMiniApp</objectwrapper>
+        <owner>process</owner>
+        <method>
+            <name>SetFilterList</name>
+            <comment>Set the availability of the Mini-App by providing a filter list of applications
+ Only pertinent to persistent miniapps
+filterList: is a list of packagenames
+ListType: can be either LISTTYPE_WHITELIST or LISTTYPE_BLACKLIST</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>pList</name>
+                <type>anywheresoftware.b4a.objects.collections.List</type>
+            </parameter>
+            <parameter>
+                <name>ListType</name>
+                <type>int</type>
+            </parameter>
+        </method>
+        <method>
+            <name>Initialize</name>
+            <comment>Create a new TooleapMiniApp
+intent: Intent is in the form of: 
+                        Dim i As Intent
+                        i.Initialize("","")
+                        i.SetComponent("com.maximussoft.tooleap/.test")
+type: Can be one of the miniApp types</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>ba</name>
+                <type>anywheresoftware.b4a.BA</type>
+            </parameter>
+            <parameter>
+                <name>intent</name>
+                <type>anywheresoftware.b4a.objects.IntentWrapper</type>
+            </parameter>
+            <parameter>
+                <name>type</name>
+                <type>int</type>
+            </parameter>
+        </method>
+        <method>
+            <name>SetContextualFilterList</name>
+            <comment>Set the availability of the Mini-App by providing a contextual filter list of applications
+ Only pertinent to persistent miniapps
+contextual: : Can be 
+ CONTEXTUAL_BROWSER - An application list of all browser apps on the device
+ CONTEXTUAL_HOME_SCREEN - The device home screen application
+ CONTEXTUAL_MY_APPLICATION - The developer’s application (your app’s package name)</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>contextual</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>ListType</name>
+                <type>int</type>
+            </parameter>
+        </method>
+        <method>
+            <name>hasFilter</name>
+            <comment>Returns whether the Mini-App has a filter list defined
+ Only for PersistentMiniApps
+Return type: @return:boolean whether the miniapp has a whitelist or blacklist filter</comment>
+            <returntype>boolean</returntype>
+        </method>
+        <method>
+            <name>allowUserToDismiss</name>
+            <comment>Set whether this persistent mini app is dismissible (determines the close button availability).
+ Only for PersistentMiniApps
+isDismissible: </comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>isDismissible</name>
+                <type>boolean</type>
+            </parameter>
+        </method>
+        <method>
+            <name>Initialize2</name>
+            <comment>Quick method to initialize miniApp
+ActivityName: : Name of activity (in lowercase)
+title: : Title of miniApp
+notification: : Notification text</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>ba</name>
+                <type>anywheresoftware.b4a.BA</type>
+            </parameter>
+            <parameter>
+                <name>ActivityName</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>title</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>notification</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+        <method>
+            <name>IsInitialized</name>
+            <comment></comment>
+            <returntype>boolean</returntype>
+        </method>
+        <property>
+            <name>ContentIntent</name>
+            <returntype>anywheresoftware.b4a.objects.IntentWrapper</returntype>
+            <comment>Returns the content intent which was set during Initialize</comment>
+        </property>
+        <property>
+            <name>bubbleBackgroundColor</name>
+            <parameter>
+                <name>color</name>
+                <type>int</type>
+            </parameter>
+            <comment>The Bubble's background color for this Mini-App in ARGB format.</comment>
+        </property>
+        <property>
+            <name>NotificationBadgeNumber</name>
+            <parameter>
+                <name>Number</name>
+                <type>int</type>
+            </parameter>
+            <comment>The numeric value of the notification badge</comment>
+        </property>
+        <property>
+            <name>NotificationText</name>
+            <parameter>
+                <name>Text</name>
+                <type>java.lang.CharSequence</type>
+            </parameter>
+            <comment>The text to be displayed in the text balloon when the notification first arrives.</comment>
+        </property>
+        <property>
+            <name>ContentTitle</name>
+            <parameter>
+                <name>Title</name>
+                <type>java.lang.CharSequence</type>
+            </parameter>
+            <comment>The text to be displayed as the title of the Mini-App.</comment>
+        </property>
+        <property>
+            <name>AppID</name>
+            <returntype>long</returntype>
+            <comment>Gets the AppID for this miniApp</comment>
+        </property>
+        <property>
+            <name>ContentText</name>
+            <parameter>
+                <name>Text</name>
+                <type>java.lang.CharSequence</type>
+            </parameter>
+            <comment>The text to be displayed at second line of text in the applications menu.</comment>
+        </property>
+        <property>
+            <name>When</name>
+            <returntype>java.util.Date</returntype>
+            <comment>The timestamp pertaining to the notification (usually the time the event occurred).</comment>
+        </property>
+        <property>
+            <name>Icon</name>
+            <parameter>
+                <name>icon</name>
+                <type>android.graphics.Bitmap</type>
+            </parameter>
+            <comment>Bitmap representing the icon data.</comment>
+        </property>
+        <field>
+            <name>CONTEXTUAL_BROWSER</name>
+            <comment></comment>
+            <returntype>java.lang.String</returntype>
+        </field>
+        <field>
+            <name>LISTTYPE_WHITELIST</name>
+            <comment></comment>
+            <returntype>int</returntype>
+        </field>
+        <field>
+            <name>TYPE_HOME_MINIAPP</name>
+            <comment></comment>
+            <returntype>int</returntype>
+        </field>
+        <field>
+            <name>TYPE_POPOUT_MINIAPP</name>
+            <comment></comment>
+            <returntype>int</returntype>
+        </field>
+        <field>
+            <name>LISTTYPE_BLACKLIST</name>
+            <comment></comment>
+            <returntype>int</returntype>
+        </field>
+        <field>
+            <name>TYPE_NOTIFICATION_MINIAPP</name>
+            <comment></comment>
+            <returntype>int</returntype>
+        </field>
+        <field>
+            <name>CONTEXTUAL_MY_APPLICATION</name>
+            <comment></comment>
+            <returntype>java.lang.String</returntype>
+        </field>
+        <field>
+            <name>TYPE_PERSISTENT_MINIAPP</name>
+            <comment></comment>
+            <returntype>int</returntype>
+        </field>
+        <field>
+            <name>CONTEXTUAL_HOME_SCREEN</name>
+            <comment></comment>
+            <returntype>java.lang.String</returntype>
+        </field>
+    </class>
+    <version>0.05</version>
+    <author>thedesolatesoul</author>
+    <dependsOn>tooleap-sdk-0.9.4</dependsOn>
+</root>

@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root>
+    <doclet-version-NOT-library-version>1.05</doclet-version-NOT-library-version>
+    <class>
+        <name>anywheresoftware.b4a.dropbox.DbxAccountManagerWrapper</name>
+        <shortname>DbxAccountManager</shortname>
+        <owner>process</owner>
+        <event>AccountReady (Success As Boolean)</event>
+        <event>SyncCompleted (Success As Boolean)</event>
+        <event>DownloadCompleted (Success As Boolean, LocalDir As String, LocalFileName As String)</event>
+        <permission>android.permission.INTERNET</permission>
+        <permission>android.permission.ACCESS_NETWORK_STATE</permission>
+        <method>
+            <name>Initialize</name>
+            <comment>Initializes the object.
+AppKey - The app key from Dropbox developer console.
+AppSecret - The app secret from Dropbox developer console.
+EventName - Sets the subs that will handle the events.</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>AppKey</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>AppSecret</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>EventName</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+        <method>
+            <name>DownloadFile</name>
+            <comment>Downloads a file. If the file is not already in the cache then it will be automatically downloaded.
+The DownloadComplete event will be raised when the local file is ready.
+RemoteDir / RemoteFile - Remote path. The root folder (which is the app folder) is "/".
+LocalDir / LocalFile - The local file.</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>ba</name>
+                <type>anywheresoftware.b4a.BA</type>
+            </parameter>
+            <parameter>
+                <name>RemoteDir</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>RemoteFile</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>LocalDir</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>LocalFile</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+        <method>
+            <name>Sync</name>
+            <comment>Forces a check for new file info from the server. The SyncCompleted event will be raised when the sync is completed.</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>ba</name>
+                <type>anywheresoftware.b4a.BA</type>
+            </parameter>
+        </method>
+        <method>
+            <name>UnlinkAccount</name>
+            <comment>Unlinks the application from the user's Dropbox account.</comment>
+            <returntype>void</returntype>
+        </method>
+        <method>
+            <name>ListFiles</name>
+            <comment>Returns a List with the infos of the files and folders under the given path.
+Each item in the list is a DbxFileInfo object.</comment>
+            <returntype>anywheresoftware.b4a.objects.collections.List</returntype>
+            <parameter>
+                <name>Dir</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+        <method>
+            <name>UploadFile</name>
+            <comment>Writes a file to the local Dropbox cache. The file will be automatically uploaded to the Dropbox account.
+LocalDir / LocalFile - Path to the local file.
+RemoteDir / RemoteFile - Remote path. The root folder (which is the app folder) is "/".
+
+No event is raised after this action.</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>LocalDir</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>LocalFile</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>RemoteDir</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>RemoteFile</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+        <method>
+            <name>LinkAccount</name>
+            <comment>Links the application with the user's Dropbox account.
+If the account was not linked before then the user will be shown an authentication form.
+The AccountReady event will be raised when the account is ready.</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>ba</name>
+                <type>anywheresoftware.b4a.BA</type>
+            </parameter>
+        </method>
+        <field>
+            <name>AutoSync</name>
+            <comment>If True then the cache will be synchronized automatically when a file is downloaded to assure that the latest file is downloaded.</comment>
+            <returntype>boolean</returntype>
+        </field>
+    </class>
+    <class>
+        <name>anywheresoftware.b4a.dropbox.DbxAccountManagerWrapper.DbxFileInfoWrapper</name>
+        <shortname>DbxFileInfo</shortname>
+        <objectwrapper>com.dropbox.sync.android.DbxFileInfo</objectwrapper>
+        <owner>process</owner>
+        <method>
+            <name>IsInitialized</name>
+            <comment></comment>
+            <returntype>boolean</returntype>
+        </method>
+        <property>
+            <name>Name</name>
+            <returntype>java.lang.String</returntype>
+            <comment>Returns the file or folder name.</comment>
+        </property>
+        <property>
+            <name>ModifiedTime</name>
+            <returntype>long</returntype>
+            <comment>Returns the last modified time based on the local device system clock.</comment>
+        </property>
+        <property>
+            <name>IsFolder</name>
+            <returntype>boolean</returntype>
+            <comment>Tests whether this is a folder.</comment>
+        </property>
+        <property>
+            <name>Size</name>
+            <returntype>long</returntype>
+            <comment>Returns the file size in bytes.</comment>
+        </property>
+    </class>
+    <version>3.0</version>
+    <dependsOn>dropbox-sync-sdk-android</dependsOn>
+</root>

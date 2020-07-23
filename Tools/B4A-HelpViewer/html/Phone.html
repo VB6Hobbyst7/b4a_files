@@ -1,0 +1,690 @@
+<HTML>
+<HEAD>
+<META http-equiv="Content-Type" content="text/html; charset=utf-8">
+<TITLE>
+Basic4android - Phone
+</TITLE>
+<link rel="stylesheet" type="text/css" href="images/help.css" />
+
+</HEAD>
+
+<BODY BGCOLOR="white" leftmargin="50">
+<a name="top"/>
+<h1>Phone</h1>
+
+</h5>The Phone library contains all kinds of features related to the Android phone.<br/><b>Phone</b> object includes information about the device and also other general features.<br/><b>PhoneAccelerometer</b> and PhoneOrientation objects are now replaced with PhoneSensors which support other sensors as well.<br/><b>PhoneEvents</b> allows you to handle all kinds of system events.<br/><b>PhoneSms</b> supports sending Sms messages.<br/><b>SmsMessages</b> together with Sms support fetching messages from the phone database.<br/><b>SmsInterceptor</b> intercepts incoming Sms messages.<br/><b>PhoneIntents</b> and PhoneCalls include several useful intents.<br/><b>Intent</b> is a raw Intent object that you can configure as needed.<br/><b>Email</b> helps with building an Intent that sends an email.<br/><b>PhoneWakeState</b> allows you to force the screen and power to keep on.<br/><b>Contact</b> and Contacts give access to the stored contacts.<br/><b>ContentChooser</b> allows the user to choose content from other applications. For example the user can choose an image from the Gallery application.<br/><b>VoiceRecognition</b> converts speech to text.<br/><b>LogCat</b> tracks the internal phone logs.<br/><b>PackageManager</b> allows you to retrieve information about the installed applications.
+<h4>List of types:</h4>
+<a href='#contact'>Contact</a><br/><a href='#contacts'>Contacts</a><br/><a href='#contentchooser'>ContentChooser</a><br/><a href='#email'>Email</a><br/><a href='#intent'>Intent</a><br/><a href='#logcat'>LogCat</a><br/><a href='#packagemanager'>PackageManager</a><br/><a href='#phone'>Phone</a><br/><a href='#phoneaccelerometer'>PhoneAccelerometer</a><br/><a href='#phonecalls'>PhoneCalls</a><br/><a href='#phoneevents'>PhoneEvents</a><br/><a href='#phoneintents'>PhoneIntents</a><br/><a href='#phoneorientation'>PhoneOrientation</a><br/><a href='#phonesensors'>PhoneSensors</a><br/><a href='#phonesms'>PhoneSms</a><br/><a href='#phonewakestate'>PhoneWakeState</a><br/><a href='#sms'>Sms</a><br/><a href='#smsinterceptor'>SmsInterceptor</a><br/><a href='#smsmessages'>SmsMessages</a><br/><a href='#voicerecognition'>VoiceRecognition</a><br/>
+<hr/>
+<h3><u><a name='contact'>Contact</a></u></h3>
+</h5>Represents a single contact.<br/>The Contacts object should be used to get lists of Contact objects.<br/>EMAIL_x constants are the possible email types.<br/>PHONE_x constants are the possible phone types.
+<br/>
+
+<h4>Events:</h4>
+None
+<h4>Members:</h4><br/>
+<img src='images/11.png'/>&nbsp;&nbsp;<span style="color: #000000;"><a href='#contact_displayname'><b>DisplayName</b></a> </span><span style="color: #0000FF;">As</span><span style="color: #000000;"> </span><span style="color: #008B8B;">String</span><br/><br/>
+<img src='images/11.png'/>&nbsp;&nbsp;<span style="color: #000000;"><a href='#contact_email_custom'><b>EMAIL_CUSTOM</b></a> </span><span style="color: #0000FF;">As</span><span style="color: #000000;"> </span><span style="color: #008B8B;">Int</span><br/><br/>
+<img src='images/11.png'/>&nbsp;&nbsp;<span style="color: #000000;"><a href='#contact_email_home'><b>EMAIL_HOME</b></a> </span><span style="color: #0000FF;">As</span><span style="color: #000000;"> </span><span style="color: #008B8B;">Int</span><br/><br/>
+<img src='images/11.png'/>&nbsp;&nbsp;<span style="color: #000000;"><a href='#contact_email_other'><b>EMAIL_OTHER</b></a> </span><span style="color: #0000FF;">As</span><span style="color: #000000;"> </span><span style="color: #008B8B;">Int</span><br/><br/>
+<img src='images/11.png'/>&nbsp;&nbsp;<span style="color: #000000;"><a href='#contact_email_work'><b>EMAIL_WORK</b></a> </span><span style="color: #0000FF;">As</span><span style="color: #000000;"> </span><span style="color: #008B8B;">Int</span><br/><br/>
+<img src='images/15.png'/>&nbsp;&nbsp;<span style="color: #000000;"><a href='#contact_getemails'><b>GetEmails</b></a> </span><span style="color: #0000FF;">As</span><span style="color: #000000;"> </span><span style="color: #008B8B;">Map</span><br/><br/>
+<img src='images/15.png'/>&nbsp;&nbsp;<span style="color: #000000;"><a href='#contact_getphones'><b>GetPhones</b></a> </span><span style="color: #0000FF;">As</span><span style="color: #000000;"> </span><span style="color: #008B8B;">Map</span><br/><br/>
+<img src='images/15.png'/>&nbsp;&nbsp;<span style="color: #000000;"><a href='#contact_getphoto'><b>GetPhoto</b></a> </span><span style="color: #0000FF;">As</span><span style="color: #000000;"> BitmapWrapper</span><br/><br/>
+<img src='images/11.png'/>&nbsp;&nbsp;<span style="color: #000000;"><a href='#contact_id'><b>Id</b></a> </span><span style="color: #0000FF;">As</span><span style="color: #000000;"> </span><span style="color: #008B8B;">Int</span><br/><br/>
+<img src='images/11.png'/>&nbsp;&nbsp;<span style="color: #000000;"><a href='#contact_lasttimecontacted'><b>LastTimeContacted</b></a> </span><span style="color: #0000FF;">As</span><span style="color: #000000;"> </span><span style="color: #008B8B;">Long</span><br/><br/>
+<img src='images/11.png'/>&nbsp;&nbsp;<span style="color: #000000;"><a href='#contact_name'><b>Name</b></a> </span><span style="color: #0000FF;">As</span><span style="color: #000000;"> </span><span style="color: #008B8B;">String</span><br/><br/>
+<img src='images/11.png'/>&nbsp;&nbsp;<span style="color: #000000;"><a href='#contact_notes'><b>Notes</b></a> </span><span style="color: #0000FF;">As</span><span style="color: #000000;"> </span><span style="color: #008B8B;">String</span><br/><br/>
+<img src='images/11.png'/>&nbsp;&nbsp;<span style="color: #000000;"><a href='#contact_phone_custom'><b>PHONE_CUSTOM</b></a> </span><span style="color: #0000FF;">As</span><span style="color: #000000;"> </span><span style="color: #008B8B;">Int</span><br/><br/>
+<img src='images/11.png'/>&nbsp;&nbsp;<span style="color: #000000;"><a href='#contact_phone_fax_home'><b>PHONE_FAX_HOME</b></a> </span><span style="color: #0000FF;">As</span><span style="color: #000000;"> </span><span style="color: #008B8B;">Int</span><br/><br/>
+<img src='images/11.png'/>&nbsp;&nbsp;<span style="color: #000000;"><a href='#contact_phone_fax_work'><b>PHONE_FAX_WORK</b></a> </span><span style="color: #0000FF;">As</span><span style="color: #000000;"> </span><span style="color: #008B8B;">Int</span><br/><br/>
+<img src='images/11.png'/>&nbsp;&nbsp;<span style="color: #000000;"><a href='#contact_phone_home'><b>PHONE_HOME</b></a> </span><span style="color: #0000FF;">As</span><span style="color: #000000;"> </span><span style="color: #008B8B;">Int</span><br/><br/>
+<img src='images/11.png'/>&nbsp;&nbsp;<span style="color: #000000;"><a href='#contact_phone_mobile'><b>PHONE_MOBILE</b></a> </span><span style="color: #0000FF;">As</span><span style="color: #000000;"> </span><span style="color: #008B8B;">Int</span><br/><br/>
+<img src='images/11.png'/>&nbsp;&nbsp;<span style="color: #000000;"><a href='#contact_phone_other'><b>PHONE_OTHER</b></a> </span><span style="color: #0000FF;">As</span><span style="color: #000000;"> </span><span style="color: #008B8B;">Int</span><br/><br/>
+<img src='images/11.png'/>&nbsp;&nbsp;<span style="color: #000000;"><a href='#contact_phone_pager'><b>PHONE_PAGER</b></a> </span><span style="color: #0000FF;">As</span><span style="color: #000000;"> </span><span style="color: #008B8B;">Int</span><br/><br/>
+<img src='images/11.png'/>&nbsp;&nbsp;<span style="color: #000000;"><a href='#contact_phone_work'><b>PHONE_WORK</b></a> </span><span style="color: #0000FF;">As</span><span style="color: #000000;"> </span><span style="color: #008B8B;">Int</span><br/><br/>
+<img src='images/11.png'/>&nbsp;&nbsp;<span style="color: #000000;"><a href='#contact_phonenumber'><b>PhoneNumber</b></a> </span><span style="color: #0000FF;">As</span><span style="color: #000000;"> </span><span style="color: #008B8B;">String</span><br/><br/>
+<img src='images/11.png'/>&nbsp;&nbsp;<span style="color: #000000;"><a href='#contact_starred'><b>Starred</b></a> </span><span style="color: #0000FF;">As</span><span style="color: #000000;"> </span><span style="color: #008B8B;">Boolean</span><br/><br/>
+<img src='images/11.png'/>&nbsp;&nbsp;<span style="color: #000000;"><a href='#contact_timescontacted'><b>TimesContacted</b></a> </span><span style="color: #0000FF;">As</span><span style="color: #000000;"> </span><span style="color: #008B8B;">Int</span><br/><br/>
+
+<h4>Members description:</h4>
+<a name='contact_displayname'/>
+<h5><img src='images/11.png'/>
+<span style="color: #000000;">DisplayName </span><span style="color: #0000FF;">As</span><span style="color: #000000;"> </span><span style="color: #008B8B;">String</span></h5>The displayed name. Equals to the Name if the Name is not empty, otherwise equals to the contacts first email address.<a name='contact_email_custom'/>
+<h5><img src='images/11.png'/>
+<span style="color: #000000;">EMAIL_CUSTOM </span><span style="color: #0000FF;">As</span><span style="color: #000000;"> </span><span style="color: #008B8B;">Int</span></h5><a name='contact_email_home'/>
+<h5><img src='images/11.png'/>
+<span style="color: #000000;">EMAIL_HOME </span><span style="color: #0000FF;">As</span><span style="color: #000000;"> </span><span style="color: #008B8B;">Int</span></h5><a name='contact_email_other'/>
+<h5><img src='images/11.png'/>
+<span style="color: #000000;">EMAIL_OTHER </span><span style="color: #0000FF;">As</span><span style="color: #000000;"> </span><span style="color: #008B8B;">Int</span></h5><a name='contact_email_work'/>
+<h5><img src='images/11.png'/>
+<span style="color: #000000;">EMAIL_WORK </span><span style="color: #0000FF;">As</span><span style="color: #000000;"> </span><span style="color: #008B8B;">Int</span></h5><a name='contact_getemails'/>
+<h5><img src='images/15.png'/>
+<span style="color: #000000;">GetEmails </span><span style="color: #0000FF;">As</span><span style="color: #000000;"> </span><span style="color: #008B8B;">Map</span></h5>Returns a Map with the contacts email addresses as keys and the email types as values.<br/>This call executes an additional query.<a name='contact_getphones'/>
+<h5><img src='images/15.png'/>
+<span style="color: #000000;">GetPhones </span><span style="color: #0000FF;">As</span><span style="color: #000000;"> </span><span style="color: #008B8B;">Map</span></h5>Returns a Map with all the contacts phone numbers as keys and the phone types as values.<br/>This call executes an additional query.<a name='contact_getphoto'/>
+<h5><img src='images/15.png'/>
+<span style="color: #000000;">GetPhoto </span><span style="color: #0000FF;">As</span><span style="color: #000000;"> BitmapWrapper</span></h5>Returns the contact photo or Null if there is no attached photo.<br/>This call executes an additional query.<a name='contact_id'/>
+<h5><img src='images/11.png'/>
+<span style="color: #000000;">Id </span><span style="color: #0000FF;">As</span><span style="color: #000000;"> </span><span style="color: #008B8B;">Int</span></h5>Internal Id.<a name='contact_lasttimecontacted'/>
+<h5><img src='images/11.png'/>
+<span style="color: #000000;">LastTimeContacted </span><span style="color: #0000FF;">As</span><span style="color: #000000;"> </span><span style="color: #008B8B;">Long</span></h5>Last time that this contact was contacted. Value is a ticks value.<a name='contact_name'/>
+<h5><img src='images/11.png'/>
+<span style="color: #000000;">Name </span><span style="color: #0000FF;">As</span><span style="color: #000000;"> </span><span style="color: #008B8B;">String</span></h5>Contact name.<a name='contact_notes'/>
+<h5><img src='images/11.png'/>
+<span style="color: #000000;">Notes </span><span style="color: #0000FF;">As</span><span style="color: #000000;"> </span><span style="color: #008B8B;">String</span></h5><a name='contact_phone_custom'/>
+<h5><img src='images/11.png'/>
+<span style="color: #000000;">PHONE_CUSTOM </span><span style="color: #0000FF;">As</span><span style="color: #000000;"> </span><span style="color: #008B8B;">Int</span></h5><a name='contact_phone_fax_home'/>
+<h5><img src='images/11.png'/>
+<span style="color: #000000;">PHONE_FAX_HOME </span><span style="color: #0000FF;">As</span><span style="color: #000000;"> </span><span style="color: #008B8B;">Int</span></h5><a name='contact_phone_fax_work'/>
+<h5><img src='images/11.png'/>
+<span style="color: #000000;">PHONE_FAX_WORK </span><span style="color: #0000FF;">As</span><span style="color: #000000;"> </span><span style="color: #008B8B;">Int</span></h5><a name='contact_phone_home'/>
+<h5><img src='images/11.png'/>
+<span style="color: #000000;">PHONE_HOME </span><span style="color: #0000FF;">As</span><span style="color: #000000;"> </span><span style="color: #008B8B;">Int</span></h5><a name='contact_phone_mobile'/>
+<h5><img src='images/11.png'/>
+<span style="color: #000000;">PHONE_MOBILE </span><span style="color: #0000FF;">As</span><span style="color: #000000;"> </span><span style="color: #008B8B;">Int</span></h5><a name='contact_phone_other'/>
+<h5><img src='images/11.png'/>
+<span style="color: #000000;">PHONE_OTHER </span><span style="color: #0000FF;">As</span><span style="color: #000000;"> </span><span style="color: #008B8B;">Int</span></h5><a name='contact_phone_pager'/>
+<h5><img src='images/11.png'/>
+<span style="color: #000000;">PHONE_PAGER </span><span style="color: #0000FF;">As</span><span style="color: #000000;"> </span><span style="color: #008B8B;">Int</span></h5><a name='contact_phone_work'/>
+<h5><img src='images/11.png'/>
+<span style="color: #000000;">PHONE_WORK </span><span style="color: #0000FF;">As</span><span style="color: #000000;"> </span><span style="color: #008B8B;">Int</span></h5><a name='contact_phonenumber'/>
+<h5><img src='images/11.png'/>
+<span style="color: #000000;">PhoneNumber </span><span style="color: #0000FF;">As</span><span style="color: #000000;"> </span><span style="color: #008B8B;">String</span></h5>Primary phone number.<a name='contact_starred'/>
+<h5><img src='images/11.png'/>
+<span style="color: #000000;">Starred </span><span style="color: #0000FF;">As</span><span style="color: #000000;"> </span><span style="color: #008B8B;">Boolean</span></h5>Whether this contact is a "favorite" contact.<a name='contact_timescontacted'/>
+<h5><img src='images/11.png'/>
+<span style="color: #000000;">TimesContacted </span><span style="color: #0000FF;">As</span><span style="color: #000000;"> </span><span style="color: #008B8B;">Int</span></h5>Number of times that this contact was contacted.<hr/>
+<h3><u><a name='contacts'>Contacts</a></u></h3>
+</h5>Contacts object allows you to access the device stored contacts.<br/>The following code finds all contacts named John (actually it will find all contacts which their name contains the string "john"),<br/>and print its fields to the LogCat. It will also fetch the contact photo if it exists.<br/>Example:<span class='pre'><span style="color: #000000;"><br/></span><span style="color: #0000FF;">Dim</span><span style="color: #000000;"> Contacts1 </span><span style="color: #0000FF;">As</span><span style="color: #000000;"> Contacts<br/></span><span style="color: #0000FF;">Dim</span><span style="color: #000000;"> listOfContacts </span><span style="color: #0000FF;">As</span><span style="color: #000000;"> </span><span style="color: #008B8B;">List</span><span style="color: #000000;"><br/>listOfContacts = Contacts1.FindByName(</span><span style="color: #800000;">"</span><span style="color: #800000;">John</span><span style="color: #800000;">"</span><span style="color: #000000;">, False)<br/></span><span style="color: #0000FF;">For</span><span style="color: #000000;"> i = </span><span style="color: #800080;">0</span><span style="color: #000000;"> </span><span style="color: #0000FF;">To</span><span style="color: #000000;"> listOfContacts.Size - </span><span style="color: #800080;">1</span><span style="color: #000000;"><br/>&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #0000FF;">Dim</span><span style="color: #000000;"> Contact </span><span style="color: #0000FF;">As</span><span style="color: #000000;"> Contact<br/>&nbsp;&nbsp;&nbsp;&nbsp;Contact = listOfContacts.Get(i)<br/>&nbsp;&nbsp;&nbsp;&nbsp;Log(Contact) </span><span style="color: #008000;">'</span><span style="color: #008000;">will print the fields to the LogCat</span><span style="color: #008000;"><br/></span><span style="color: #000000;">&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #0000FF;">Dim</span><span style="color: #000000;"> photo </span><span style="color: #0000FF;">As</span><span style="color: #000000;"> </span><span style="color: #008B8B;">Bitmap</span><span style="color: #000000;"><br/>&nbsp;&nbsp;&nbsp;&nbsp;photo = Contact.GetPhoto<br/>&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #0000FF;">If</span><span style="color: #000000;"> photo &lt;&gt; Null </span><span style="color: #0000FF;">Then</span><span style="color: #000000;"> Activity.SetBackgroundImage(photo)<br/>&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #0000FF;">Dim</span><span style="color: #000000;"> emails </span><span style="color: #0000FF;">As</span><span style="color: #000000;"> </span><span style="color: #008B8B;">Map</span><span style="color: #000000;"><br/>&nbsp;&nbsp;&nbsp;&nbsp;emails = Contact.GetEmails<br/>&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #0000FF;">If</span><span style="color: #000000;"> emails.Size &gt; </span><span style="color: #800080;">0</span><span style="color: #000000;"> </span><span style="color: #0000FF;">Then</span><span style="color: #000000;"> Log(</span><span style="color: #800000;">"</span><span style="color: #800000;">Email addresses: </span><span style="color: #800000;">"</span><span style="color: #000000;"> &amp; emails)<br/>&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #0000FF;">Dim</span><span style="color: #000000;"> phones </span><span style="color: #0000FF;">As</span><span style="color: #000000;"> </span><span style="color: #008B8B;">Map</span><span style="color: #000000;"><br/>&nbsp;&nbsp;&nbsp;&nbsp;phones = Contact.GetPhones<br/>&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #0000FF;">If</span><span style="color: #000000;"> phones.Size &gt; </span><span style="color: #800080;">0</span><span style="color: #000000;"> </span><span style="color: #0000FF;">Then</span><span style="color: #000000;"> Log(</span><span style="color: #800000;">"</span><span style="color: #800000;">Phone numbers: </span><span style="color: #800000;">"</span><span style="color: #000000;"> &amp; phones)<br/></span><span style="color: #0000FF;">Next</span></span>
+<br/>
+<h4>Permissions:</h4>android.permission.READ_CONTACTS<br/>
+<h4>Events:</h4>
+None
+<h4>Members:</h4><br/>
+<img src='images/15.png'/>&nbsp;&nbsp;<span style="color: #000000;"><a href='#contacts_findbymail'><b>FindByMail</b></a> (Email </span><span style="color: #0000FF;">As</span><span style="color: #000000;"> </span><span style="color: #008B8B;">String</span><span style="color: #000000;">, Exact </span><span style="color: #0000FF;">As</span><span style="color: #000000;"> </span><span style="color: #008B8B;">Boolean</span><span style="color: #000000;">) </span><span style="color: #0000FF;">As</span><span style="color: #000000;"> </span><span style="color: #008B8B;">List</span><br/><br/>
+<img src='images/15.png'/>&nbsp;&nbsp;<span style="color: #000000;"><a href='#contacts_findbyname'><b>FindByName</b></a> (Name </span><span style="color: #0000FF;">As</span><span style="color: #000000;"> </span><span style="color: #008B8B;">String</span><span style="color: #000000;">, Exact </span><span style="color: #0000FF;">As</span><span style="color: #000000;"> </span><span style="color: #008B8B;">Boolean</span><span style="color: #000000;">) </span><span style="color: #0000FF;">As</span><span style="color: #000000;"> </span><span style="color: #008B8B;">List</span><br/><br/>
+<img src='images/15.png'/>&nbsp;&nbsp;<span style="color: #000000;"><a href='#contacts_getall'><b>GetAll</b></a> </span><span style="color: #0000FF;">As</span><span style="color: #000000;"> </span><span style="color: #008B8B;">List</span><br/><br/>
+<img src='images/15.png'/>&nbsp;&nbsp;<span style="color: #000000;"><a href='#contacts_getbyid'><b>GetById</b></a> (Id </span><span style="color: #0000FF;">As</span><span style="color: #000000;"> </span><span style="color: #008B8B;">Int</span><span style="color: #000000;">) </span><span style="color: #0000FF;">As</span><span style="color: #000000;"> Contact</span><br/><br/>
+
+<h4>Members description:</h4>
+<a name='contacts_findbymail'/>
+<h5><img src='images/15.png'/>
+<span style="color: #000000;">FindByMail (Email </span><span style="color: #0000FF;">As</span><span style="color: #000000;"> </span><span style="color: #008B8B;">String</span><span style="color: #000000;">, Exact </span><span style="color: #0000FF;">As</span><span style="color: #000000;"> </span><span style="color: #008B8B;">Boolean</span><span style="color: #000000;">) </span><span style="color: #0000FF;">As</span><span style="color: #000000;"> </span><span style="color: #008B8B;">List</span></h5>Returns a List of Contact objects with all contacts matching the given email.<br/>Email - The email to search for.<br/>Exact - If True then only contacts with the exact email address (case sensitive) will return<br/>, otherwise all contacts email addresses that include the Email string will return (case insensitive).<a name='contacts_findbyname'/>
+<h5><img src='images/15.png'/>
+<span style="color: #000000;">FindByName (Name </span><span style="color: #0000FF;">As</span><span style="color: #000000;"> </span><span style="color: #008B8B;">String</span><span style="color: #000000;">, Exact </span><span style="color: #0000FF;">As</span><span style="color: #000000;"> </span><span style="color: #008B8B;">Boolean</span><span style="color: #000000;">) </span><span style="color: #0000FF;">As</span><span style="color: #000000;"> </span><span style="color: #008B8B;">List</span></h5>Returns a List of Contact objects with all contacts matching the given name.<br/>Name - The name to search for.<br/>Exact - If True then only contacts with the exact name value (case sensitive) will return<br/>, otherwise all contacts names that include the Name string will return (case insensitive).<a name='contacts_getall'/>
+<h5><img src='images/15.png'/>
+<span style="color: #000000;">GetAll </span><span style="color: #0000FF;">As</span><span style="color: #000000;"> </span><span style="color: #008B8B;">List</span></h5>Returns a List of Contact objects with all the contacts. This list can be very large.<a name='contacts_getbyid'/>
+<h5><img src='images/15.png'/>
+<span style="color: #000000;">GetById (Id </span><span style="color: #0000FF;">As</span><span style="color: #000000;"> </span><span style="color: #008B8B;">Int</span><span style="color: #000000;">) </span><span style="color: #0000FF;">As</span><span style="color: #000000;"> Contact</span></h5>Returns the Contact with the specified Id.<br/> Returns Null if no matching contact found.<hr/>
+<h3><u><a name='contentchooser'>ContentChooser</a></u></h3>
+</h5>The ContentChooser object allows the user to select a specific type of content using other installed applications.<br/>For example the user can use the internal Gallery application to select an image.<br/>If the user has installed a file manager then the ContentChooser can be used to select general files.<br/>This object should usually be declared as a process global object.<br/>After initializing the object you can let the user select content by calling Show with the required MIME types.<br/>The Result event will be raised with a Success flag and with the content Dir and FileName.<br/>Note that these values may point to resources other than regular files. Still you can pass them to methods that expect Dir and FileName.<br/>Only content types that can be opened with an InputStream are supported.
+<br/>
+
+<h4>Events:</h4>
+Result (Success As Boolean, Dir As String, FileName As String)<br/>
+<h4>Members:</h4><br/>
+<img src='images/15.png'/>&nbsp;&nbsp;<span style="color: #000000;"><a href='#contentchooser_initialize'><b>Initialize</b></a> (EventName </span><span style="color: #0000FF;">As</span><span style="color: #000000;"> </span><span style="color: #008B8B;">String</span><span style="color: #000000;">)</span><br/><br/>
+<img src='images/15.png'/>&nbsp;&nbsp;<span style="color: #000000;"><a href='#contentchooser_show'><b>Show</b></a> (Mime </span><span style="color: #0000FF;">As</span><span style="color: #000000;"> </span><span style="color: #008B8B;">String</span><span style="color: #000000;">, Title </span><span style="color: #0000FF;">As</span><span style="color: #000000;"> </span><span style="color: #008B8B;">String</span><span style="color: #000000;">)</span><br/><br/>
+
+<h4>Members description:</h4>
+<a name='contentchooser_initialize'/>
+<h5><img src='images/15.png'/>
+<span style="color: #000000;">Initialize (EventName </span><span style="color: #0000FF;">As</span><span style="color: #000000;"> </span><span style="color: #008B8B;">String</span><span style="color: #000000;">)</span></h5>Initializes the object and sets the Sub that will handle the Result event.<br/>Example:<span class='pre'><span style="color: #000000;"><br/></span><span style="color: #0000FF;">Dim</span><span style="color: #000000;"> CC </span><span style="color: #0000FF;">As</span><span style="color: #000000;"> ContentChooser<br/>CC.Initialize(</span><span style="color: #800000;">"</span><span style="color: #800000;">CC</span><span style="color: #800000;">"</span><span style="color: #000000;">)</span></span><a name='contentchooser_show'/>
+<h5><img src='images/15.png'/>
+<span style="color: #000000;">Show (Mime </span><span style="color: #0000FF;">As</span><span style="color: #000000;"> </span><span style="color: #008B8B;">String</span><span style="color: #000000;">, Title </span><span style="color: #0000FF;">As</span><span style="color: #000000;"> </span><span style="color: #008B8B;">String</span><span style="color: #000000;">)</span></h5>Sends the request to the system. If there are more than one applications that support the given Mime then a list with the applications will be displayed to the user.<br/>The Result event will be raised after the user chose an item or canceled the dialog.<br/>Mime - The content MIME type.<br/>Title - The title of the chooser dialog (when there is more than one application).<br/>Examples:<span class='pre'><span style="color: #000000;"><br/>CC.Show(</span><span style="color: #800000;">"</span><span style="color: #800000;">image/*</span><span style="color: #800000;">"</span><span style="color: #000000;">, </span><span style="color: #800000;">"</span><span style="color: #800000;">Choose image</span><span style="color: #800000;">"</span><span style="color: #000000;">)<br/>CC.Show(</span><span style="color: #800000;">"</span><span style="color: #800000;">audio/*</span><span style="color: #800000;">"</span><span style="color: #000000;">, </span><span style="color: #800000;">"</span><span style="color: #800000;">Choose audio file</span><span style="color: #800000;">"</span><span style="color: #000000;">)</span></span><hr/>
+<h3><u><a name='email'>Email</a></u></h3>
+</h5>Using an Email object you can create an intent that holds a complete email message.<br/>You can then launch the email application by calling StartActivity. Note that the email will not be sent automatically. The user will need to press on the send button.<br/>Example:<span class='pre'><span style="color: #000000;"><br/></span><span style="color: #0000FF;">Dim</span><span style="color: #000000;"> Message </span><span style="color: #0000FF;">As</span><span style="color: #000000;"> Email<br/>Message.To.Add(</span><span style="color: #800000;">"</span><span style="color: #800000;">SomeEmail@example.com</span><span style="color: #800000;">"</span><span style="color: #000000;">)<br/>Message.Attachments.Add(File.Combine(File.DirRootExternal, </span><span style="color: #800000;">"</span><span style="color: #800000;">SomeFile.txt</span><span style="color: #800000;">"</span><span style="color: #000000;">))<br/>StartActivity(Message.GetIntent)</span></span>
+<br/>
+
+<h4>Events:</h4>
+None
+<h4>Members:</h4><br/>
+<img src='images/11.png'/>&nbsp;&nbsp;<span style="color: #000000;"><a href='#email_attachments'><b>Attachments</b></a> </span><span style="color: #0000FF;">As</span><span style="color: #000000;"> </span><span style="color: #008B8B;">List</span><br/><br/>
+<img src='images/11.png'/>&nbsp;&nbsp;<span style="color: #000000;"><a href='#email_bcc'><b>BCC</b></a> </span><span style="color: #0000FF;">As</span><span style="color: #000000;"> </span><span style="color: #008B8B;">List</span><br/><br/>
+<img src='images/11.png'/>&nbsp;&nbsp;<span style="color: #000000;"><a href='#email_body'><b>Body</b></a> </span><span style="color: #0000FF;">As</span><span style="color: #000000;"> </span><span style="color: #008B8B;">String</span><br/><br/>
+<img src='images/11.png'/>&nbsp;&nbsp;<span style="color: #000000;"><a href='#email_cc'><b>CC</b></a> </span><span style="color: #0000FF;">As</span><span style="color: #000000;"> </span><span style="color: #008B8B;">List</span><br/><br/>
+<img src='images/15.png'/>&nbsp;&nbsp;<span style="color: #000000;"><a href='#email_getintent'><b>GetIntent</b></a> </span><span style="color: #0000FF;">As</span><span style="color: #000000;"> android.content.Intent</span><br/><br/>
+<img src='images/11.png'/>&nbsp;&nbsp;<span style="color: #000000;"><a href='#email_subject'><b>Subject</b></a> </span><span style="color: #0000FF;">As</span><span style="color: #000000;"> </span><span style="color: #008B8B;">String</span><br/><br/>
+<img src='images/11.png'/>&nbsp;&nbsp;<span style="color: #0000FF;"><a href='#email_to'><b>To</b></a></span><span style="color: #000000;"> </span><span style="color: #0000FF;">As</span><span style="color: #000000;"> </span><span style="color: #008B8B;">List</span><br/><br/>
+
+<h4>Members description:</h4>
+<a name='email_attachments'/>
+<h5><img src='images/11.png'/>
+<span style="color: #000000;">Attachments </span><span style="color: #0000FF;">As</span><span style="color: #000000;"> </span><span style="color: #008B8B;">List</span></h5><a name='email_bcc'/>
+<h5><img src='images/11.png'/>
+<span style="color: #000000;">BCC </span><span style="color: #0000FF;">As</span><span style="color: #000000;"> </span><span style="color: #008B8B;">List</span></h5><a name='email_body'/>
+<h5><img src='images/11.png'/>
+<span style="color: #000000;">Body </span><span style="color: #0000FF;">As</span><span style="color: #000000;"> </span><span style="color: #008B8B;">String</span></h5><a name='email_cc'/>
+<h5><img src='images/11.png'/>
+<span style="color: #000000;">CC </span><span style="color: #0000FF;">As</span><span style="color: #000000;"> </span><span style="color: #008B8B;">List</span></h5><a name='email_getintent'/>
+<h5><img src='images/15.png'/>
+<span style="color: #000000;">GetIntent </span><span style="color: #0000FF;">As</span><span style="color: #000000;"> android.content.Intent</span></h5>Returns the Intent that should be sent with StartActivity.<a name='email_subject'/>
+<h5><img src='images/11.png'/>
+<span style="color: #000000;">Subject </span><span style="color: #0000FF;">As</span><span style="color: #000000;"> </span><span style="color: #008B8B;">String</span></h5><a name='email_to'/>
+<h5><img src='images/11.png'/>
+<span style="color: #0000FF;">To</span><span style="color: #000000;"> </span><span style="color: #0000FF;">As</span><span style="color: #000000;"> </span><span style="color: #008B8B;">List</span></h5><hr/>
+<h3><u><a name='intent'>Intent</a></u></h3>
+</h5>Intent objects are messages which you can send to the OS in order to do some external action.<br/>The Intent object should be sent with <span class='pre'><span style="color: #000000;">StartActivity</span></span> keyword.<br/>See this <a href='http://developer.android.com/intl/fr/reference/android/content/Intent.html'>page</a> for a list of standard constants.<br/>Example, launch YouTube application:<span class='pre'><span style="color: #000000;"><br/></span><span style="color: #0000FF;">Dim</span><span style="color: #000000;"> Intent1 </span><span style="color: #0000FF;">As</span><span style="color: #000000;"> Intent<br/>Intent1.Initialize(Intent1.ACTION_MAIN, </span><span style="color: #800000;">""</span><span style="color: #000000;">)<br/>Intent1.SetComponent(</span><span style="color: #800000;">"</span><span style="color: #800000;">com.google.android.youtube/.HomeActivity</span><span style="color: #800000;">"</span><span style="color: #000000;">)<br/>StartActivity(Intent1)</span></span>
+<br/>
+
+<h4>Events:</h4>
+None
+<h4>Members:</h4><br/>
+<img src='images/11.png'/>&nbsp;&nbsp;<span style="color: #000000;"><a href='#intent_action_call'><b>ACTION_CALL</b></a> </span><span style="color: #0000FF;">As</span><span style="color: #000000;"> </span><span style="color: #008B8B;">String</span><br/><br/>
+<img src='images/11.png'/>&nbsp;&nbsp;<span style="color: #000000;"><a href='#intent_action_edit'><b>ACTION_EDIT</b></a> </span><span style="color: #0000FF;">As</span><span style="color: #000000;"> </span><span style="color: #008B8B;">String</span><br/><br/>
+<img src='images/11.png'/>&nbsp;&nbsp;<span style="color: #000000;"><a href='#intent_action_main'><b>ACTION_MAIN</b></a> </span><span style="color: #0000FF;">As</span><span style="color: #000000;"> </span><span style="color: #008B8B;">String</span><br/><br/>
+<img src='images/11.png'/>&nbsp;&nbsp;<span style="color: #000000;"><a href='#intent_action_pick'><b>ACTION_PICK</b></a> </span><span style="color: #0000FF;">As</span><span style="color: #000000;"> </span><span style="color: #008B8B;">String</span><br/><br/>
+<img src='images/11.png'/>&nbsp;&nbsp;<span style="color: #000000;"><a href='#intent_action_send'><b>ACTION_SEND</b></a> </span><span style="color: #0000FF;">As</span><span style="color: #000000;"> </span><span style="color: #008B8B;">String</span><br/><br/>
+<img src='images/11.png'/>&nbsp;&nbsp;<span style="color: #000000;"><a href='#intent_action_view'><b>ACTION_VIEW</b></a> </span><span style="color: #0000FF;">As</span><span style="color: #000000;"> </span><span style="color: #008B8B;">String</span><br/><br/>
+<img src='images/15.png'/>&nbsp;&nbsp;<span style="color: #000000;"><a href='#intent_addcategory'><b>AddCategory</b></a> (Category </span><span style="color: #0000FF;">As</span><span style="color: #000000;"> </span><span style="color: #008B8B;">String</span><span style="color: #000000;">)</span><br/><br/>
+<img src='images/15.png'/>&nbsp;&nbsp;<span style="color: #000000;"><a href='#intent_extrastostring'><b>ExtrasToString</b></a> </span><span style="color: #0000FF;">As</span><span style="color: #000000;"> </span><span style="color: #008B8B;">String</span><br/><br/>
+<img src='images/19.png'/>&nbsp;&nbsp;<span style="color: #000000;"><a href='#intent_flags'><b>Flags</b></a> </span><span style="color: #0000FF;">As</span><span style="color: #000000;"> </span><span style="color: #008B8B;">Int</span><br/><br/>
+<img src='images/15.png'/>&nbsp;&nbsp;<span style="color: #000000;"><a href='#intent_getdata'><b>GetData</b></a></span><br/><br/>
+<img src='images/15.png'/>&nbsp;&nbsp;<span style="color: #000000;"><a href='#intent_getextra'><b>GetExtra</b></a> (Name </span><span style="color: #0000FF;">As</span><span style="color: #000000;"> </span><span style="color: #008B8B;">String</span><span style="color: #000000;">) </span><span style="color: #0000FF;">As</span><span style="color: #000000;"> </span><span style="color: #008B8B;">Object</span><br/><br/>
+<img src='images/15.png'/>&nbsp;&nbsp;<span style="color: #000000;"><a href='#intent_hasextra'><b>HasExtra</b></a> (Name </span><span style="color: #0000FF;">As</span><span style="color: #000000;"> </span><span style="color: #008B8B;">String</span><span style="color: #000000;">) </span><span style="color: #0000FF;">As</span><span style="color: #000000;"> </span><span style="color: #008B8B;">Boolean</span><br/><br/>
+<img src='images/15.png'/>&nbsp;&nbsp;<span style="color: #000000;"><a href='#intent_initialize'><b>Initialize</b></a> (Action </span><span style="color: #0000FF;">As</span><span style="color: #000000;"> </span><span style="color: #008B8B;">String</span><span style="color: #000000;">, Uri </span><span style="color: #0000FF;">As</span><span style="color: #000000;"> </span><span style="color: #008B8B;">String</span><span style="color: #000000;">)</span><br/><br/>
+<img src='images/15.png'/>&nbsp;&nbsp;<span style="color: #000000;"><a href='#intent_initialize2'><b>Initialize2</b></a> (Uri </span><span style="color: #0000FF;">As</span><span style="color: #000000;"> </span><span style="color: #008B8B;">String</span><span style="color: #000000;">, Flags </span><span style="color: #0000FF;">As</span><span style="color: #000000;"> </span><span style="color: #008B8B;">Int</span><span style="color: #000000;">)</span><br/><br/>
+<img src='images/15.png'/>&nbsp;&nbsp;<span style="color: #000000;"><a href='#intent_isinitialized'><b>IsInitialized</b></a> </span><span style="color: #0000FF;">As</span><span style="color: #000000;"> </span><span style="color: #008B8B;">Boolean</span><br/><br/>
+<img src='images/15.png'/>&nbsp;&nbsp;<span style="color: #000000;"><a href='#intent_putextra'><b>PutExtra</b></a> (Name </span><span style="color: #0000FF;">As</span><span style="color: #000000;"> </span><span style="color: #008B8B;">String</span><span style="color: #000000;">, Value </span><span style="color: #0000FF;">As</span><span style="color: #000000;"> </span><span style="color: #008B8B;">Object</span><span style="color: #000000;">)</span><br/><br/>
+<img src='images/15.png'/>&nbsp;&nbsp;<span style="color: #000000;"><a href='#intent_setcomponent'><b>SetComponent</b></a> (Component </span><span style="color: #0000FF;">As</span><span style="color: #000000;"> </span><span style="color: #008B8B;">String</span><span style="color: #000000;">)</span><br/><br/>
+<img src='images/15.png'/>&nbsp;&nbsp;<span style="color: #000000;"><a href='#intent_settype'><b>SetType</b></a> (</span><span style="color: #0000FF;">Type</span><span style="color: #000000;"> </span><span style="color: #0000FF;">As</span><span style="color: #000000;"> </span><span style="color: #008B8B;">String</span><span style="color: #000000;">)</span><br/><br/>
+<img src='images/15.png'/>&nbsp;&nbsp;<span style="color: #000000;"><a href='#intent_wrapasintentchooser'><b>WrapAsIntentChooser</b></a> (Title </span><span style="color: #0000FF;">As</span><span style="color: #000000;"> </span><span style="color: #008B8B;">String</span><span style="color: #000000;">)</span><br/><br/>
+
+<h4>Members description:</h4>
+<a name='intent_action_call'/>
+<h5><img src='images/11.png'/>
+<span style="color: #000000;">ACTION_CALL </span><span style="color: #0000FF;">As</span><span style="color: #000000;"> </span><span style="color: #008B8B;">String</span></h5><a name='intent_action_edit'/>
+<h5><img src='images/11.png'/>
+<span style="color: #000000;">ACTION_EDIT </span><span style="color: #0000FF;">As</span><span style="color: #000000;"> </span><span style="color: #008B8B;">String</span></h5><a name='intent_action_main'/>
+<h5><img src='images/11.png'/>
+<span style="color: #000000;">ACTION_MAIN </span><span style="color: #0000FF;">As</span><span style="color: #000000;"> </span><span style="color: #008B8B;">String</span></h5><a name='intent_action_pick'/>
+<h5><img src='images/11.png'/>
+<span style="color: #000000;">ACTION_PICK </span><span style="color: #0000FF;">As</span><span style="color: #000000;"> </span><span style="color: #008B8B;">String</span></h5><a name='intent_action_send'/>
+<h5><img src='images/11.png'/>
+<span style="color: #000000;">ACTION_SEND </span><span style="color: #0000FF;">As</span><span style="color: #000000;"> </span><span style="color: #008B8B;">String</span></h5><a name='intent_action_view'/>
+<h5><img src='images/11.png'/>
+<span style="color: #000000;">ACTION_VIEW </span><span style="color: #0000FF;">As</span><span style="color: #000000;"> </span><span style="color: #008B8B;">String</span></h5><a name='intent_addcategory'/>
+<h5><img src='images/15.png'/>
+<span style="color: #000000;">AddCategory (Category </span><span style="color: #0000FF;">As</span><span style="color: #000000;"> </span><span style="color: #008B8B;">String</span><span style="color: #000000;">)</span></h5>Adds a category describing the intent required operation.<a name='intent_extrastostring'/>
+<h5><img src='images/15.png'/>
+<span style="color: #000000;">ExtrasToString </span><span style="color: #0000FF;">As</span><span style="color: #000000;"> </span><span style="color: #008B8B;">String</span></h5>Returns a string containing the extra items. This is useful for debugging.<a name='intent_flags'/>
+<h5><img src='images/19.png'/>
+<span style="color: #000000;">Flags </span><span style="color: #0000FF;">As</span><span style="color: #000000;"> </span><span style="color: #008B8B;">Int</span></h5>Gets or sets the flags component.<a name='intent_getdata'/>
+<h5><img src='images/15.png'/>
+<span style="color: #000000;">GetData</span></h5>Retrieves the data component as a string.<a name='intent_getextra'/>
+<h5><img src='images/15.png'/>
+<span style="color: #000000;">GetExtra (Name </span><span style="color: #0000FF;">As</span><span style="color: #000000;"> </span><span style="color: #008B8B;">String</span><span style="color: #000000;">) </span><span style="color: #0000FF;">As</span><span style="color: #000000;"> </span><span style="color: #008B8B;">Object</span></h5>Returns the item value with the given key.<a name='intent_hasextra'/>
+<h5><img src='images/15.png'/>
+<span style="color: #000000;">HasExtra (Name </span><span style="color: #0000FF;">As</span><span style="color: #000000;"> </span><span style="color: #008B8B;">String</span><span style="color: #000000;">) </span><span style="color: #0000FF;">As</span><span style="color: #000000;"> </span><span style="color: #008B8B;">Boolean</span></h5>Tests whether an item with the given key exists.<a name='intent_initialize'/>
+<h5><img src='images/15.png'/>
+<span style="color: #000000;">Initialize (Action </span><span style="color: #0000FF;">As</span><span style="color: #000000;"> </span><span style="color: #008B8B;">String</span><span style="color: #000000;">, Uri </span><span style="color: #0000FF;">As</span><span style="color: #000000;"> </span><span style="color: #008B8B;">String</span><span style="color: #000000;">)</span></h5>Initializes the object using the given Action and data Uri. Action can be one of the action constants or any other string.<br/>Pass an empty string if a Uri is not required.<a name='intent_initialize2'/>
+<h5><img src='images/15.png'/>
+<span style="color: #000000;">Initialize2 (Uri </span><span style="color: #0000FF;">As</span><span style="color: #000000;"> </span><span style="color: #008B8B;">String</span><span style="color: #000000;">, Flags </span><span style="color: #0000FF;">As</span><span style="color: #000000;"> </span><span style="color: #008B8B;">Int</span><span style="color: #000000;">)</span></h5>Initializes the object by parsing the Uri.<br/>Flags - Additional integer value. Pass 0 if it is not required.<br/>Example:<span class='pre'><span style="color: #000000;"><br/></span><span style="color: #0000FF;">Dim</span><span style="color: #000000;"> Intent1 </span><span style="color: #0000FF;">As</span><span style="color: #000000;"> Intent<br/>Intent1.Initialize2(</span><span style="color: #800000;">"</span><span style="color: #800000;">http://www.basic4ppc.com</span><span style="color: #800000;">"</span><span style="color: #000000;">, </span><span style="color: #800080;">0</span><span style="color: #000000;">)<br/>StartActivity(Intent1)</span></span><a name='intent_isinitialized'/>
+<h5><img src='images/15.png'/>
+<span style="color: #000000;">IsInitialized </span><span style="color: #0000FF;">As</span><span style="color: #000000;"> </span><span style="color: #008B8B;">Boolean</span></h5><a name='intent_putextra'/>
+<h5><img src='images/15.png'/>
+<span style="color: #000000;">PutExtra (Name </span><span style="color: #0000FF;">As</span><span style="color: #000000;"> </span><span style="color: #008B8B;">String</span><span style="color: #000000;">, Value </span><span style="color: #0000FF;">As</span><span style="color: #000000;"> </span><span style="color: #008B8B;">Object</span><span style="color: #000000;">)</span></h5>Adds extra data to the intent.<a name='intent_setcomponent'/>
+<h5><img src='images/15.png'/>
+<span style="color: #000000;">SetComponent (Component </span><span style="color: #0000FF;">As</span><span style="color: #000000;"> </span><span style="color: #008B8B;">String</span><span style="color: #000000;">)</span></h5>Explicitly sets the component that will handle this intent.<a name='intent_settype'/>
+<h5><img src='images/15.png'/>
+<span style="color: #000000;">SetType (</span><span style="color: #0000FF;">Type</span><span style="color: #000000;"> </span><span style="color: #0000FF;">As</span><span style="color: #000000;"> </span><span style="color: #008B8B;">String</span><span style="color: #000000;">)</span></h5>Sets the MIME type.<br/>Example:<span class='pre'><span style="color: #000000;"><br/>Intent1.SetType(</span><span style="color: #800000;">"</span><span style="color: #800000;">plain/text</span><span style="color: #800000;">"</span><span style="color: #000000;">)</span></span><a name='intent_wrapasintentchooser'/>
+<h5><img src='images/15.png'/>
+<span style="color: #000000;">WrapAsIntentChooser (Title </span><span style="color: #0000FF;">As</span><span style="color: #000000;"> </span><span style="color: #008B8B;">String</span><span style="color: #000000;">)</span></h5>Wraps the intent in another "chooser" intent. A dialog will be displayed to the user with the available services that can act on the intent.<br/><span class='pre'><span style="color: #000000;">WrapAsIntentChooser</span></span> should be the last method called before sending the intent.<hr/>
+<h3><u><a name='logcat'>LogCat</a></u></h3>
+</h5>LogCat allows you to read the internal phone logs.<br/>Refer to the <a href='http://developer.android.com/intl/fr/guide/developing/tools/adb.html#logcat'>LogCat documentation</a> for more information about the optional arguments.<br/>The LogCatData event is raised when there is new data available.<br/>You should use BytesToString to convert the raw bytes to string.
+<br/>
+<h4>Permissions:</h4>android.permission.READ_LOGS<br/>
+<h4>Events:</h4>
+LogCatData (Buffer() As Byte, Length As Int)<br/>
+<h4>Members:</h4><br/>
+<img src='images/15.png'/>&nbsp;&nbsp;<span style="color: #000000;"><a href='#logcat_logcatstart'><b>LogCatStart</b></a> (Args() </span><span style="color: #0000FF;">As</span><span style="color: #000000;"> </span><span style="color: #008B8B;">String</span><span style="color: #000000;">, EventName </span><span style="color: #0000FF;">As</span><span style="color: #000000;"> </span><span style="color: #008B8B;">String</span><span style="color: #000000;">)</span><br/><br/>
+<img src='images/15.png'/>&nbsp;&nbsp;<span style="color: #000000;"><a href='#logcat_logcatstop'><b>LogCatStop</b></a></span><br/><br/>
+
+<h4>Members description:</h4>
+<a name='logcat_logcatstart'/>
+<h5><img src='images/15.png'/>
+<span style="color: #000000;">LogCatStart (Args() </span><span style="color: #0000FF;">As</span><span style="color: #000000;"> </span><span style="color: #008B8B;">String</span><span style="color: #000000;">, EventName </span><span style="color: #0000FF;">As</span><span style="color: #000000;"> </span><span style="color: #008B8B;">String</span><span style="color: #000000;">)</span></h5>Starts tracking the logs.<br/>Args - Optional arguments passed to the internal LogCat command.<br/>EventName - The Sub that will handle the LogCatData event.<a name='logcat_logcatstop'/>
+<h5><img src='images/15.png'/>
+<span style="color: #000000;">LogCatStop</span></h5>Stops tracking the logs.<hr/>
+<h3><u><a name='packagemanager'>PackageManager</a></u></h3>
+</h5>The PackageManager allows you to find information about installed applications.<br/>Applications are referenced using their package name.<br/>You can get a list of all the packages by calling GetInstalledPackages.
+<br/>
+
+<h4>Events:</h4>
+None
+<h4>Members:</h4><br/>
+<img src='images/15.png'/>&nbsp;&nbsp;<span style="color: #000000;"><a href='#packagemanager_getapplicationicon'><b>GetApplicationIcon</b></a> (Package </span><span style="color: #0000FF;">As</span><span style="color: #000000;"> </span><span style="color: #008B8B;">String</span><span style="color: #000000;">) </span><span style="color: #0000FF;">As</span><span style="color: #000000;"> android.graphics.drawable.Drawable</span><br/><br/>
+<img src='images/15.png'/>&nbsp;&nbsp;<span style="color: #000000;"><a href='#packagemanager_getapplicationintent'><b>GetApplicationIntent</b></a> (Package </span><span style="color: #0000FF;">As</span><span style="color: #000000;"> </span><span style="color: #008B8B;">String</span><span style="color: #000000;">) </span><span style="color: #0000FF;">As</span><span style="color: #000000;"> Intent</span><br/><br/>
+<img src='images/15.png'/>&nbsp;&nbsp;<span style="color: #000000;"><a href='#packagemanager_getapplicationlabel'><b>GetApplicationLabel</b></a> (Package </span><span style="color: #0000FF;">As</span><span style="color: #000000;"> </span><span style="color: #008B8B;">String</span><span style="color: #000000;">) </span><span style="color: #0000FF;">As</span><span style="color: #000000;"> </span><span style="color: #008B8B;">String</span><br/><br/>
+<img src='images/15.png'/>&nbsp;&nbsp;<span style="color: #000000;"><a href='#packagemanager_getinstalledpackages'><b>GetInstalledPackages</b></a> </span><span style="color: #0000FF;">As</span><span style="color: #000000;"> </span><span style="color: #008B8B;">List</span><br/><br/>
+<img src='images/15.png'/>&nbsp;&nbsp;<span style="color: #000000;"><a href='#packagemanager_getversioncode'><b>GetVersionCode</b></a> (Package </span><span style="color: #0000FF;">As</span><span style="color: #000000;"> </span><span style="color: #008B8B;">String</span><span style="color: #000000;">) </span><span style="color: #0000FF;">As</span><span style="color: #000000;"> </span><span style="color: #008B8B;">Int</span><br/><br/>
+<img src='images/15.png'/>&nbsp;&nbsp;<span style="color: #000000;"><a href='#packagemanager_getversionname'><b>GetVersionName</b></a> (Package </span><span style="color: #0000FF;">As</span><span style="color: #000000;"> </span><span style="color: #008B8B;">String</span><span style="color: #000000;">) </span><span style="color: #0000FF;">As</span><span style="color: #000000;"> </span><span style="color: #008B8B;">String</span><br/><br/>
+
+<h4>Members description:</h4>
+<a name='packagemanager_getapplicationicon'/>
+<h5><img src='images/15.png'/>
+<span style="color: #000000;">GetApplicationIcon (Package </span><span style="color: #0000FF;">As</span><span style="color: #000000;"> </span><span style="color: #008B8B;">String</span><span style="color: #000000;">) </span><span style="color: #0000FF;">As</span><span style="color: #000000;"> android.graphics.drawable.Drawable</span></h5>Returns the application icon.<br/>Example:<span class='pre'><span style="color: #000000;"><br/></span><span style="color: #0000FF;">Dim</span><span style="color: #000000;"> pm </span><span style="color: #0000FF;">As</span><span style="color: #000000;"> PackageManager<br/>Activity.Background = pm.GetApplicationIcon(</span><span style="color: #800000;">"</span><span style="color: #800000;">com.google.android.youtube</span><span style="color: #800000;">"</span><span style="color: #000000;">)</span></span><a name='packagemanager_getapplicationintent'/>
+<h5><img src='images/15.png'/>
+<span style="color: #000000;">GetApplicationIntent (Package </span><span style="color: #0000FF;">As</span><span style="color: #000000;"> </span><span style="color: #008B8B;">String</span><span style="color: #000000;">) </span><span style="color: #0000FF;">As</span><span style="color: #000000;"> Intent</span></h5>Returns an Intent object that can be used to start the given application.<br/>Example:<span class='pre'><span style="color: #000000;"><br/></span><span style="color: #0000FF;">Dim</span><span style="color: #000000;"> in </span><span style="color: #0000FF;">As</span><span style="color: #000000;"> Intent<br/></span><span style="color: #0000FF;">Dim</span><span style="color: #000000;"> pm </span><span style="color: #0000FF;">As</span><span style="color: #000000;"> PackageManager<br/>in = pm.GetApplicationIntent(</span><span style="color: #800000;">"</span><span style="color: #800000;">com.google.android.youtube</span><span style="color: #800000;">"</span><span style="color: #000000;">)<br/></span><span style="color: #0000FF;">If</span><span style="color: #000000;"> in.IsInitialized </span><span style="color: #0000FF;">Then</span><span style="color: #000000;"> StartActivity(in)<br/>StartActivity(in)</span></span><a name='packagemanager_getapplicationlabel'/>
+<h5><img src='images/15.png'/>
+<span style="color: #000000;">GetApplicationLabel (Package </span><span style="color: #0000FF;">As</span><span style="color: #000000;"> </span><span style="color: #008B8B;">String</span><span style="color: #000000;">) </span><span style="color: #0000FF;">As</span><span style="color: #000000;"> </span><span style="color: #008B8B;">String</span></h5>Returns the application label.<a name='packagemanager_getinstalledpackages'/>
+<h5><img src='images/15.png'/>
+<span style="color: #000000;">GetInstalledPackages </span><span style="color: #0000FF;">As</span><span style="color: #000000;"> </span><span style="color: #008B8B;">List</span></h5>Returns a list of the installed packages.<br/>Example:<span class='pre'><span style="color: #000000;"><br/></span><span style="color: #0000FF;">Dim</span><span style="color: #000000;"> pm </span><span style="color: #0000FF;">As</span><span style="color: #000000;"> PackageManager<br/></span><span style="color: #0000FF;">Dim</span><span style="color: #000000;"> packages </span><span style="color: #0000FF;">As</span><span style="color: #000000;"> </span><span style="color: #008B8B;">List</span><span style="color: #000000;"><br/>packages = pm.GetInstalledPackages<br/></span><span style="color: #0000FF;">For</span><span style="color: #000000;"> i = </span><span style="color: #800080;">0</span><span style="color: #000000;"> </span><span style="color: #0000FF;">To</span><span style="color: #000000;"> packages.Size - </span><span style="color: #800080;">1</span><span style="color: #000000;"><br/>&nbsp;&nbsp;&nbsp;&nbsp;Log(packages.Get(i))<br/></span><span style="color: #0000FF;">Next</span></span><a name='packagemanager_getversioncode'/>
+<h5><img src='images/15.png'/>
+<span style="color: #000000;">GetVersionCode (Package </span><span style="color: #0000FF;">As</span><span style="color: #000000;"> </span><span style="color: #008B8B;">String</span><span style="color: #000000;">) </span><span style="color: #0000FF;">As</span><span style="color: #000000;"> </span><span style="color: #008B8B;">Int</span></h5>Returns the application version code.<a name='packagemanager_getversionname'/>
+<h5><img src='images/15.png'/>
+<span style="color: #000000;">GetVersionName (Package </span><span style="color: #0000FF;">As</span><span style="color: #000000;"> </span><span style="color: #008B8B;">String</span><span style="color: #000000;">) </span><span style="color: #0000FF;">As</span><span style="color: #000000;"> </span><span style="color: #008B8B;">String</span></h5>Returns the application version name.<hr/>
+<h3><u><a name='phone'>Phone</a></u></h3>
+
+<br/>
+<h4>Permissions:</h4>android.permission.READ_PHONE_STATE<br/>android.permission.VIBRATE<br/>
+<h4>Events:</h4>
+None
+<h4>Members:</h4><br/>
+<img src='images/15.png'/>&nbsp;&nbsp;<span style="color: #000000;"><a href='#phone_getdatastate'><b>GetDataState</b></a> </span><span style="color: #0000FF;">As</span><span style="color: #000000;"> </span><span style="color: #008B8B;">String</span><br/><br/>
+<img src='images/15.png'/>&nbsp;&nbsp;<span style="color: #000000;"><a href='#phone_getdeviceid'><b>GetDeviceId</b></a> </span><span style="color: #0000FF;">As</span><span style="color: #000000;"> </span><span style="color: #008B8B;">String</span><br/><br/>
+<img src='images/15.png'/>&nbsp;&nbsp;<span style="color: #000000;"><a href='#phone_getline1number'><b>GetLine1Number</b></a> </span><span style="color: #0000FF;">As</span><span style="color: #000000;"> </span><span style="color: #008B8B;">String</span><br/><br/>
+<img src='images/15.png'/>&nbsp;&nbsp;<span style="color: #000000;"><a href='#phone_getmaxvolume'><b>GetMaxVolume</b></a> (Channel </span><span style="color: #0000FF;">As</span><span style="color: #000000;"> </span><span style="color: #008B8B;">Int</span><span style="color: #000000;">) </span><span style="color: #0000FF;">As</span><span style="color: #000000;"> </span><span style="color: #008B8B;">Int</span><br/><br/>
+<img src='images/15.png'/>&nbsp;&nbsp;<span style="color: #000000;"><a href='#phone_getnetworkoperatorname'><b>GetNetworkOperatorName</b></a> </span><span style="color: #0000FF;">As</span><span style="color: #000000;"> </span><span style="color: #008B8B;">String</span><br/><br/>
+<img src='images/15.png'/>&nbsp;&nbsp;<span style="color: #000000;"><a href='#phone_getnetworktype'><b>GetNetworkType</b></a> </span><span style="color: #0000FF;">As</span><span style="color: #000000;"> </span><span style="color: #008B8B;">String</span><br/><br/>
+<img src='images/15.png'/>&nbsp;&nbsp;<span style="color: #000000;"><a href='#phone_getphonetype'><b>GetPhoneType</b></a> </span><span style="color: #0000FF;">As</span><span style="color: #000000;"> </span><span style="color: #008B8B;">String</span><br/><br/>
+<img src='images/15.png'/>&nbsp;&nbsp;<span style="color: #000000;"><a href='#phone_getresourcedrawable'><b>GetResourceDrawable</b></a> (ResourceId </span><span style="color: #0000FF;">As</span><span style="color: #000000;"> </span><span style="color: #008B8B;">Int</span><span style="color: #000000;">) </span><span style="color: #0000FF;">As</span><span style="color: #000000;"> android.graphics.drawable.Drawable</span><br/><br/>
+<img src='images/15.png'/>&nbsp;&nbsp;<span style="color: #000000;"><a href='#phone_getringermode'><b>GetRingerMode</b></a> </span><span style="color: #0000FF;">As</span><span style="color: #000000;"> </span><span style="color: #008B8B;">Int</span><br/><br/>
+<img src='images/15.png'/>&nbsp;&nbsp;<span style="color: #000000;"><a href='#phone_getsettings'><b>GetSettings</b></a> (Settings </span><span style="color: #0000FF;">As</span><span style="color: #000000;"> </span><span style="color: #008B8B;">String</span><span style="color: #000000;">) </span><span style="color: #0000FF;">As</span><span style="color: #000000;"> </span><span style="color: #008B8B;">String</span><br/><br/>
+<img src='images/15.png'/>&nbsp;&nbsp;<span style="color: #000000;"><a href='#phone_getsimoperator'><b>GetSimOperator</b></a> </span><span style="color: #0000FF;">As</span><span style="color: #000000;"> </span><span style="color: #008B8B;">String</span><br/><br/>
+<img src='images/15.png'/>&nbsp;&nbsp;<span style="color: #000000;"><a href='#phone_getsimserialnumber'><b>GetSimSerialNumber</b></a> </span><span style="color: #0000FF;">As</span><span style="color: #000000;"> </span><span style="color: #008B8B;">String</span><br/><br/>
+<img src='images/15.png'/>&nbsp;&nbsp;<span style="color: #000000;"><a href='#phone_getsubscriberid'><b>GetSubscriberId</b></a> </span><span style="color: #0000FF;">As</span><span style="color: #000000;"> </span><span style="color: #008B8B;">String</span><br/><br/>
+<img src='images/15.png'/>&nbsp;&nbsp;<span style="color: #000000;"><a href='#phone_getvolume'><b>GetVolume</b></a> (Channel </span><span style="color: #0000FF;">As</span><span style="color: #000000;"> </span><span style="color: #008B8B;">Int</span><span style="color: #000000;">) </span><span style="color: #0000FF;">As</span><span style="color: #000000;"> </span><span style="color: #008B8B;">Int</span><br/><br/>
+<img src='images/15.png'/>&nbsp;&nbsp;<span style="color: #000000;"><a href='#phone_isairplanemodeon'><b>IsAirplaneModeOn</b></a> </span><span style="color: #0000FF;">As</span><span style="color: #000000;"> </span><span style="color: #008B8B;">Boolean</span><br/><br/>
+<img src='images/15.png'/>&nbsp;&nbsp;<span style="color: #000000;"><a href='#phone_isnetworkroaming'><b>IsNetworkRoaming</b></a> </span><span style="color: #0000FF;">As</span><span style="color: #000000;"> </span><span style="color: #008B8B;">Boolean</span><br/><br/>
+<img src='images/19.png'/>&nbsp;&nbsp;<span style="color: #000000;"><a href='#phone_manufacturer'><b>Manufacturer</b></a> </span><span style="color: #0000FF;">As</span><span style="color: #000000;"> </span><span style="color: #008B8B;">String</span><span style="color: #000000;">  [read only]</span><br/><br/>
+<img src='images/19.png'/>&nbsp;&nbsp;<span style="color: #000000;"><a href='#phone_model'><b>Model</b></a> </span><span style="color: #0000FF;">As</span><span style="color: #000000;"> </span><span style="color: #008B8B;">String</span><span style="color: #000000;">  [read only]</span><br/><br/>
+<img src='images/19.png'/>&nbsp;&nbsp;<span style="color: #000000;"><a href='#phone_product'><b>Product</b></a> </span><span style="color: #0000FF;">As</span><span style="color: #000000;"> </span><span style="color: #008B8B;">String</span><span style="color: #000000;">  [read only]</span><br/><br/>
+<img src='images/11.png'/>&nbsp;&nbsp;<span style="color: #000000;"><a href='#phone_ringer_normal'><b>RINGER_NORMAL</b></a> </span><span style="color: #0000FF;">As</span><span style="color: #000000;"> </span><span style="color: #008B8B;">Int</span><br/><br/>
+<img src='images/11.png'/>&nbsp;&nbsp;<span style="color: #000000;"><a href='#phone_ringer_silent'><b>RINGER_SILENT</b></a> </span><span style="color: #0000FF;">As</span><span style="color: #000000;"> </span><span style="color: #008B8B;">Int</span><br/><br/>
+<img src='images/11.png'/>&nbsp;&nbsp;<span style="color: #000000;"><a href='#phone_ringer_vibrate'><b>RINGER_VIBRATE</b></a> </span><span style="color: #0000FF;">As</span><span style="color: #000000;"> </span><span style="color: #008B8B;">Int</span><br/><br/>
+<img src='images/19.png'/>&nbsp;&nbsp;<span style="color: #000000;"><a href='#phone_sdkversion'><b>SdkVersion</b></a> </span><span style="color: #0000FF;">As</span><span style="color: #000000;"> </span><span style="color: #008B8B;">Int</span><span style="color: #000000;">  [read only]</span><br/><br/>
+<img src='images/15.png'/>&nbsp;&nbsp;<span style="color: #000000;"><a href='#phone_setmute'><b>SetMute</b></a> (Channel </span><span style="color: #0000FF;">As</span><span style="color: #000000;"> </span><span style="color: #008B8B;">Int</span><span style="color: #000000;">, Mute </span><span style="color: #0000FF;">As</span><span style="color: #000000;"> </span><span style="color: #008B8B;">Boolean</span><span style="color: #000000;">)</span><br/><br/>
+<img src='images/15.png'/>&nbsp;&nbsp;<span style="color: #000000;"><a href='#phone_setringermode'><b>SetRingerMode</b></a> (Mode </span><span style="color: #0000FF;">As</span><span style="color: #000000;"> </span><span style="color: #008B8B;">Int</span><span style="color: #000000;">)</span><br/><br/>
+<img src='images/15.png'/>&nbsp;&nbsp;<span style="color: #000000;"><a href='#phone_setscreenbrightness'><b>SetScreenBrightness</b></a> (Value </span><span style="color: #0000FF;">As</span><span style="color: #000000;"> </span><span style="color: #008B8B;">Float</span><span style="color: #000000;">)</span><br/><br/>
+<img src='images/15.png'/>&nbsp;&nbsp;<span style="color: #000000;"><a href='#phone_setscreenorientation'><b>SetScreenOrientation</b></a> (Orientation </span><span style="color: #0000FF;">As</span><span style="color: #000000;"> </span><span style="color: #008B8B;">Int</span><span style="color: #000000;">)</span><br/><br/>
+<img src='images/15.png'/>&nbsp;&nbsp;<span style="color: #000000;"><a href='#phone_setvolume'><b>SetVolume</b></a> (Channel </span><span style="color: #0000FF;">As</span><span style="color: #000000;"> </span><span style="color: #008B8B;">Int</span><span style="color: #000000;">, VolumeIndex </span><span style="color: #0000FF;">As</span><span style="color: #000000;"> </span><span style="color: #008B8B;">Int</span><span style="color: #000000;">, ShowUI </span><span style="color: #0000FF;">As</span><span style="color: #000000;"> </span><span style="color: #008B8B;">Boolean</span><span style="color: #000000;">)</span><br/><br/>
+<img src='images/15.png'/>&nbsp;&nbsp;<span style="color: #000000;"><a href='#phone_shell'><b>Shell</b></a> (Command </span><span style="color: #0000FF;">As</span><span style="color: #000000;"> </span><span style="color: #008B8B;">String</span><span style="color: #000000;">, Args() </span><span style="color: #0000FF;">As</span><span style="color: #000000;"> </span><span style="color: #008B8B;">String</span><span style="color: #000000;">, StdOut </span><span style="color: #0000FF;">As</span><span style="color: #000000;"> </span><span style="color: #008B8B;">StringBuilder</span><span style="color: #000000;">, StdErr </span><span style="color: #0000FF;">As</span><span style="color: #000000;"> </span><span style="color: #008B8B;">StringBuilder</span><span style="color: #000000;">) </span><span style="color: #0000FF;">As</span><span style="color: #000000;"> </span><span style="color: #008B8B;">Int</span><br/><br/>
+<img src='images/15.png'/>&nbsp;&nbsp;<span style="color: #000000;"><a href='#phone_vibrate'><b>Vibrate</b></a> (TimeMs </span><span style="color: #0000FF;">As</span><span style="color: #000000;"> </span><span style="color: #008B8B;">Long</span><span style="color: #000000;">)</span><br/><br/>
+<img src='images/11.png'/>&nbsp;&nbsp;<span style="color: #000000;"><a href='#phone_volume_alarm'><b>VOLUME_ALARM</b></a> </span><span style="color: #0000FF;">As</span><span style="color: #000000;"> </span><span style="color: #008B8B;">Int</span><br/><br/>
+<img src='images/11.png'/>&nbsp;&nbsp;<span style="color: #000000;"><a href='#phone_volume_music'><b>VOLUME_MUSIC</b></a> </span><span style="color: #0000FF;">As</span><span style="color: #000000;"> </span><span style="color: #008B8B;">Int</span><br/><br/>
+<img src='images/11.png'/>&nbsp;&nbsp;<span style="color: #000000;"><a href='#phone_volume_notification'><b>VOLUME_NOTIFICATION</b></a> </span><span style="color: #0000FF;">As</span><span style="color: #000000;"> </span><span style="color: #008B8B;">Int</span><br/><br/>
+<img src='images/11.png'/>&nbsp;&nbsp;<span style="color: #000000;"><a href='#phone_volume_ring'><b>VOLUME_RING</b></a> </span><span style="color: #0000FF;">As</span><span style="color: #000000;"> </span><span style="color: #008B8B;">Int</span><br/><br/>
+<img src='images/11.png'/>&nbsp;&nbsp;<span style="color: #000000;"><a href='#phone_volume_system'><b>VOLUME_SYSTEM</b></a> </span><span style="color: #0000FF;">As</span><span style="color: #000000;"> </span><span style="color: #008B8B;">Int</span><br/><br/>
+<img src='images/11.png'/>&nbsp;&nbsp;<span style="color: #000000;"><a href='#phone_volume_voice_call'><b>VOLUME_VOICE_CALL</b></a> </span><span style="color: #0000FF;">As</span><span style="color: #000000;"> </span><span style="color: #008B8B;">Int</span><br/><br/>
+
+<h4>Members description:</h4>
+<a name='phone_getdatastate'/>
+<h5><img src='images/15.png'/>
+<span style="color: #000000;">GetDataState </span><span style="color: #0000FF;">As</span><span style="color: #000000;"> </span><span style="color: #008B8B;">String</span></h5>Returns the current cellular data connection state.<br/>Possible values: DISCONNECTED, CONNECTING, CONNECTED, SUSPENDED.<a name='phone_getdeviceid'/>
+<h5><img src='images/15.png'/>
+<span style="color: #000000;">GetDeviceId </span><span style="color: #0000FF;">As</span><span style="color: #000000;"> </span><span style="color: #008B8B;">String</span></h5>Returns a unique device Id.<a name='phone_getline1number'/>
+<h5><img src='images/15.png'/>
+<span style="color: #000000;">GetLine1Number </span><span style="color: #0000FF;">As</span><span style="color: #000000;"> </span><span style="color: #008B8B;">String</span></h5>Returns the phone number string for line 1 as configured in the SIM card.<br/>Returns an empty string if it is not available.<a name='phone_getmaxvolume'/>
+<h5><img src='images/15.png'/>
+<span style="color: #000000;">GetMaxVolume (Channel </span><span style="color: #0000FF;">As</span><span style="color: #000000;"> </span><span style="color: #008B8B;">Int</span><span style="color: #000000;">) </span><span style="color: #0000FF;">As</span><span style="color: #000000;"> </span><span style="color: #008B8B;">Int</span></h5>Gets the maximum volume index (value) for the given channel.<br/>Channel - One of the VOLUME constants.<a name='phone_getnetworkoperatorname'/>
+<h5><img src='images/15.png'/>
+<span style="color: #000000;">GetNetworkOperatorName </span><span style="color: #0000FF;">As</span><span style="color: #000000;"> </span><span style="color: #008B8B;">String</span></h5>Returns the name of current registered operator.<br/>Returns an empty string if it is not available.<a name='phone_getnetworktype'/>
+<h5><img src='images/15.png'/>
+<span style="color: #000000;">GetNetworkType </span><span style="color: #0000FF;">As</span><span style="color: #000000;"> </span><span style="color: #008B8B;">String</span></h5>Returns the currently used network type.<br/>Possible values: 1xRTT, CDMA, EDGE, EVDO_0, EVDO_A, EVDO_B, GPRS, HSDPA, <br/>HSPA, HSUPA, IDEN, UMTS, UNKNOWN.<a name='phone_getphonetype'/>
+<h5><img src='images/15.png'/>
+<span style="color: #000000;">GetPhoneType </span><span style="color: #0000FF;">As</span><span style="color: #000000;"> </span><span style="color: #008B8B;">String</span></h5>Returns the phone radio type. Possible values: CDMA, GSM, NONE.<a name='phone_getresourcedrawable'/>
+<h5><img src='images/15.png'/>
+<span style="color: #000000;">GetResourceDrawable (ResourceId </span><span style="color: #0000FF;">As</span><span style="color: #000000;"> </span><span style="color: #008B8B;">Int</span><span style="color: #000000;">) </span><span style="color: #0000FF;">As</span><span style="color: #000000;"> android.graphics.drawable.Drawable</span></h5>Returns an internal drawable object.<br/>See this <a href='http://developer.android.com/intl/fr/reference/android/R.drawable.html'>page</a> for a list of available resources.<br/>Example:<span class='pre'><span style="color: #000000;"><br/></span><span style="color: #0000FF;">Dim</span><span style="color: #000000;"> p </span><span style="color: #0000FF;">As</span><span style="color: #000000;"> Phone<br/></span><span style="color: #0000FF;">Dim</span><span style="color: #000000;"> bd </span><span style="color: #0000FF;">As</span><span style="color: #000000;"> </span><span style="color: #008B8B;">BitmapDrawable</span><span style="color: #000000;"><br/>bd = p.GetResourceDrawable(</span><span style="color: #800080;">17301618</span><span style="color: #000000;">)<br/>Activity.AddMenuItem2(</span><span style="color: #800000;">"</span><span style="color: #800000;">Menu1</span><span style="color: #800000;">"</span><span style="color: #000000;">, </span><span style="color: #800000;">"</span><span style="color: #800000;">Menu1</span><span style="color: #800000;">"</span><span style="color: #000000;">, bd.Bitmap)</span></span><a name='phone_getringermode'/>
+<h5><img src='images/15.png'/>
+<span style="color: #000000;">GetRingerMode </span><span style="color: #0000FF;">As</span><span style="color: #000000;"> </span><span style="color: #008B8B;">Int</span></h5>Returns the phone ringer mode.<br/>Value will be one of the RINGER constants.<a name='phone_getsettings'/>
+<h5><img src='images/15.png'/>
+<span style="color: #000000;">GetSettings (Settings </span><span style="color: #0000FF;">As</span><span style="color: #000000;"> </span><span style="color: #008B8B;">String</span><span style="color: #000000;">) </span><span style="color: #0000FF;">As</span><span style="color: #000000;"> </span><span style="color: #008B8B;">String</span></h5>Returns the value of the phone settings based on the given key.<br/>The possible keys are listed <a href='http://developer.android.com/intl/fr/reference/android/provider/Settings.Secure.html'>here</a>.<br/>The keys are lower cased.<br/>Example:<span class='pre'><span style="color: #000000;"><br/></span><span style="color: #0000FF;">Dim</span><span style="color: #000000;"> p </span><span style="color: #0000FF;">As</span><span style="color: #000000;"> Phone<br/>Log(GetSettings(</span><span style="color: #800000;">"</span><span style="color: #800000;">android_id</span><span style="color: #800000;">"</span><span style="color: #000000;">))</span></span><a name='phone_getsimoperator'/>
+<h5><img src='images/15.png'/>
+<span style="color: #000000;">GetSimOperator </span><span style="color: #0000FF;">As</span><span style="color: #000000;"> </span><span style="color: #008B8B;">String</span></h5>Returns the code of the SIM provider.<br/>Returns an empty string if it is not available.<a name='phone_getsimserialnumber'/>
+<h5><img src='images/15.png'/>
+<span style="color: #000000;">GetSimSerialNumber </span><span style="color: #0000FF;">As</span><span style="color: #000000;"> </span><span style="color: #008B8B;">String</span></h5>Returns the serial number of the SIM card.<br/>Returns an empty string if it is not available.<a name='phone_getsubscriberid'/>
+<h5><img src='images/15.png'/>
+<span style="color: #000000;">GetSubscriberId </span><span style="color: #0000FF;">As</span><span style="color: #000000;"> </span><span style="color: #008B8B;">String</span></h5>Returns the unique subscriber id.<br/>Returns an empty string if it is not available.<a name='phone_getvolume'/>
+<h5><img src='images/15.png'/>
+<span style="color: #000000;">GetVolume (Channel </span><span style="color: #0000FF;">As</span><span style="color: #000000;"> </span><span style="color: #008B8B;">Int</span><span style="color: #000000;">) </span><span style="color: #0000FF;">As</span><span style="color: #000000;"> </span><span style="color: #008B8B;">Int</span></h5>Returns the volume of the specified channel.<br/>Channel - One of the VOLUME constants.<a name='phone_isairplanemodeon'/>
+<h5><img src='images/15.png'/>
+<span style="color: #000000;">IsAirplaneModeOn </span><span style="color: #0000FF;">As</span><span style="color: #000000;"> </span><span style="color: #008B8B;">Boolean</span></h5>Tests whether the phone "airplane mode" is on.<a name='phone_isnetworkroaming'/>
+<h5><img src='images/15.png'/>
+<span style="color: #000000;">IsNetworkRoaming </span><span style="color: #0000FF;">As</span><span style="color: #000000;"> </span><span style="color: #008B8B;">Boolean</span></h5>Returns true if the device is considered roaming on the current network.<a name='phone_manufacturer'/>
+<h5><img src='images/19.png'/>
+<span style="color: #000000;">Manufacturer </span><span style="color: #0000FF;">As</span><span style="color: #000000;"> </span><span style="color: #008B8B;">String</span><span style="color: #000000;">  [read only]</span></h5><a name='phone_model'/>
+<h5><img src='images/19.png'/>
+<span style="color: #000000;">Model </span><span style="color: #0000FF;">As</span><span style="color: #000000;"> </span><span style="color: #008B8B;">String</span><span style="color: #000000;">  [read only]</span></h5><a name='phone_product'/>
+<h5><img src='images/19.png'/>
+<span style="color: #000000;">Product </span><span style="color: #0000FF;">As</span><span style="color: #000000;"> </span><span style="color: #008B8B;">String</span><span style="color: #000000;">  [read only]</span></h5><a name='phone_ringer_normal'/>
+<h5><img src='images/11.png'/>
+<span style="color: #000000;">RINGER_NORMAL </span><span style="color: #0000FF;">As</span><span style="color: #000000;"> </span><span style="color: #008B8B;">Int</span></h5>Normal phone ringer mode.<a name='phone_ringer_silent'/>
+<h5><img src='images/11.png'/>
+<span style="color: #000000;">RINGER_SILENT </span><span style="color: #0000FF;">As</span><span style="color: #000000;"> </span><span style="color: #008B8B;">Int</span></h5>Phone ringer will be silent and it will not vibrate.<a name='phone_ringer_vibrate'/>
+<h5><img src='images/11.png'/>
+<span style="color: #000000;">RINGER_VIBRATE </span><span style="color: #0000FF;">As</span><span style="color: #000000;"> </span><span style="color: #008B8B;">Int</span></h5>Phone ringer will vibrate and silent.<a name='phone_sdkversion'/>
+<h5><img src='images/19.png'/>
+<span style="color: #000000;">SdkVersion </span><span style="color: #0000FF;">As</span><span style="color: #000000;"> </span><span style="color: #008B8B;">Int</span><span style="color: #000000;">  [read only]</span></h5>Returns an integer describing the SDK version.<a name='phone_setmute'/>
+<h5><img src='images/15.png'/>
+<span style="color: #000000;">SetMute (Channel </span><span style="color: #0000FF;">As</span><span style="color: #000000;"> </span><span style="color: #008B8B;">Int</span><span style="color: #000000;">, Mute </span><span style="color: #0000FF;">As</span><span style="color: #000000;"> </span><span style="color: #008B8B;">Boolean</span><span style="color: #000000;">)</span></h5>Mutes or unmutes the given channel.<br/>Channel - One of the VOLUME constants.<br/>Mute - Whether to mute or unmute the channel.<a name='phone_setringermode'/>
+<h5><img src='images/15.png'/>
+<span style="color: #000000;">SetRingerMode (Mode </span><span style="color: #0000FF;">As</span><span style="color: #000000;"> </span><span style="color: #008B8B;">Int</span><span style="color: #000000;">)</span></h5>Sets the phone ringer mode.<br/>Mode - One of the RINGER constants.<br/>Example:<span class='pre'><span style="color: #000000;"><br/></span><span style="color: #0000FF;">Dim</span><span style="color: #000000;"> p </span><span style="color: #0000FF;">As</span><span style="color: #000000;"> Phone<br/>p.SetRingerMode(p.RINGER_VIBRATE)</span></span><a name='phone_setscreenbrightness'/>
+<h5><img src='images/15.png'/>
+<span style="color: #000000;">SetScreenBrightness (Value </span><span style="color: #0000FF;">As</span><span style="color: #000000;"> </span><span style="color: #008B8B;">Float</span><span style="color: #000000;">)</span></h5>Sets the brightness of the current activity. This method cannot be called from a service module.<br/>Value - A float between 0 to 1. Set -1 for automatic brightness.<br/>Example:<span class='pre'><span style="color: #000000;"><br/></span><span style="color: #0000FF;">Sub </span><span style="color: #000000;">Process_Globals<br/>&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #0000FF;">Dim</span><span style="color: #000000;"> phone1 </span><span style="color: #0000FF;">As</span><span style="color: #000000;"> Phone<br/></span><span style="color: #0000FF;">End Sub</span><span style="color: #000000;"><br/><br/></span><span style="color: #0000FF;">Sub </span><span style="color: #000000;">Globals<br/>&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #0000FF;">Dim</span><span style="color: #000000;"> sb </span><span style="color: #0000FF;">As</span><span style="color: #000000;"> </span><span style="color: #008B8B;">SeekBar</span><span style="color: #000000;"><br/></span><span style="color: #0000FF;">End Sub</span><span style="color: #000000;"><br/><br/></span><span style="color: #0000FF;">Sub </span><span style="color: #000000;">Activity_Create(FirstTime </span><span style="color: #0000FF;">As</span><span style="color: #000000;"> </span><span style="color: #008B8B;">Boolean</span><span style="color: #000000;">)<br/>&nbsp;&nbsp;&nbsp;&nbsp;sb.Initialize(</span><span style="color: #800000;">"</span><span style="color: #800000;">sb</span><span style="color: #800000;">"</span><span style="color: #000000;">)<br/>&nbsp;&nbsp;&nbsp;&nbsp;sb.Max = </span><span style="color: #800080;">100</span><span style="color: #000000;"><br/>&nbsp;&nbsp;&nbsp;&nbsp;sb.Value = </span><span style="color: #800080;">50</span><span style="color: #000000;"><br/>&nbsp;&nbsp;&nbsp;&nbsp;Activity.AddView(sb, </span><span style="color: #800080;">10dip</span><span style="color: #000000;">, </span><span style="color: #800080;">10dip</span><span style="color: #000000;">, </span><span style="color: #800080;">90%x</span><span style="color: #000000;">, </span><span style="color: #800080;">30dip</span><span style="color: #000000;">)<br/></span><span style="color: #0000FF;">End Sub</span><span style="color: #000000;"><br/></span><span style="color: #0000FF;">Sub </span><span style="color: #000000;">sb_ValueChanged (Value </span><span style="color: #0000FF;">As</span><span style="color: #000000;"> </span><span style="color: #008B8B;">Int</span><span style="color: #000000;">, UserChanged </span><span style="color: #0000FF;">As</span><span style="color: #000000;"> </span><span style="color: #008B8B;">Boolean</span><span style="color: #000000;">)<br/>&nbsp;&nbsp;&nbsp;&nbsp;phone1.SetScreenBrightness(Max(Value, </span><span style="color: #800080;">5</span><span style="color: #000000;">) / </span><span style="color: #800080;">100</span><span style="color: #000000;">)<br/></span><span style="color: #0000FF;">End Sub</span></span><a name='phone_setscreenorientation'/>
+<h5><img src='images/15.png'/>
+<span style="color: #000000;">SetScreenOrientation (Orientation </span><span style="color: #0000FF;">As</span><span style="color: #000000;"> </span><span style="color: #008B8B;">Int</span><span style="color: #000000;">)</span></h5>Changes the current activity orientation. This method cannot be called from a service module.<br/>Orientation - -1 for unspecified, 0 for landscape and 1 for portrait.<a name='phone_setvolume'/>
+<h5><img src='images/15.png'/>
+<span style="color: #000000;">SetVolume (Channel </span><span style="color: #0000FF;">As</span><span style="color: #000000;"> </span><span style="color: #008B8B;">Int</span><span style="color: #000000;">, VolumeIndex </span><span style="color: #0000FF;">As</span><span style="color: #000000;"> </span><span style="color: #008B8B;">Int</span><span style="color: #000000;">, ShowUI </span><span style="color: #0000FF;">As</span><span style="color: #000000;"> </span><span style="color: #008B8B;">Boolean</span><span style="color: #000000;">)</span></h5>Sets the volume of the specified channel.<br/>Channel - One of the VOLUME constants.<br/>VolumeIndex - The volume index. GetMaxVolume can be used to find the largest possible value.<br/>ShowUI - Whether to show the volume UI windows.<br/>Example:<span class='pre'><span style="color: #000000;"><br/></span><span style="color: #0000FF;">Dim</span><span style="color: #000000;"> p </span><span style="color: #0000FF;">As</span><span style="color: #000000;"> Phone<br/>p.SetVolume(p.VOLUME_MUSIC, </span><span style="color: #800080;">3</span><span style="color: #000000;">, True)</span></span><a name='phone_shell'/>
+<h5><img src='images/15.png'/>
+<span style="color: #000000;">Shell (Command </span><span style="color: #0000FF;">As</span><span style="color: #000000;"> </span><span style="color: #008B8B;">String</span><span style="color: #000000;">, Args() </span><span style="color: #0000FF;">As</span><span style="color: #000000;"> </span><span style="color: #008B8B;">String</span><span style="color: #000000;">, StdOut </span><span style="color: #0000FF;">As</span><span style="color: #000000;"> </span><span style="color: #008B8B;">StringBuilder</span><span style="color: #000000;">, StdErr </span><span style="color: #0000FF;">As</span><span style="color: #000000;"> </span><span style="color: #008B8B;">StringBuilder</span><span style="color: #000000;">) </span><span style="color: #0000FF;">As</span><span style="color: #000000;"> </span><span style="color: #008B8B;">Int</span></h5>Runs a native shell command. Many commands are inaccessible because of OS security restrictions.<br/>Command - Command to run.<br/>Args - Additional arguments. Can be Null if not needed.<br/>StdOut - A StringBuilder that will hold the standard output value. Can be Null if not needed.<br/>StdErr - A StringBuilder that will hold the standard error value. Can be Null if not needed.<br/>Returns the process exit value.<br/>Example:<span class='pre'><span style="color: #000000;"><br/></span><span style="color: #0000FF;">Dim</span><span style="color: #000000;"> p </span><span style="color: #0000FF;">As</span><span style="color: #000000;"> Phone<br/></span><span style="color: #0000FF;">Dim</span><span style="color: #000000;"> sb </span><span style="color: #0000FF;">As</span><span style="color: #000000;"> </span><span style="color: #008B8B;">StringBuilder</span><span style="color: #000000;"><br/>sb.Initialize<br/>p.Shell(</span><span style="color: #800000;">"</span><span style="color: #800000;">df</span><span style="color: #800000;">"</span><span style="color: #000000;">, Null, sb, Null)<br/>Msgbox(sb.ToString, </span><span style="color: #800000;">"</span><span style="color: #800000;">Free space:</span><span style="color: #800000;">"</span><span style="color: #000000;">)</span></span><a name='phone_vibrate'/>
+<h5><img src='images/15.png'/>
+<span style="color: #000000;">Vibrate (TimeMs </span><span style="color: #0000FF;">As</span><span style="color: #000000;"> </span><span style="color: #008B8B;">Long</span><span style="color: #000000;">)</span></h5>Vibrates the phone for the specified duration.<a name='phone_volume_alarm'/>
+<h5><img src='images/11.png'/>
+<span style="color: #000000;">VOLUME_ALARM </span><span style="color: #0000FF;">As</span><span style="color: #000000;"> </span><span style="color: #008B8B;">Int</span></h5>Alarms channel.<a name='phone_volume_music'/>
+<h5><img src='images/11.png'/>
+<span style="color: #000000;">VOLUME_MUSIC </span><span style="color: #0000FF;">As</span><span style="color: #000000;"> </span><span style="color: #008B8B;">Int</span></h5>Music channel.<a name='phone_volume_notification'/>
+<h5><img src='images/11.png'/>
+<span style="color: #000000;">VOLUME_NOTIFICATION </span><span style="color: #0000FF;">As</span><span style="color: #000000;"> </span><span style="color: #008B8B;">Int</span></h5>Notifications channel.<a name='phone_volume_ring'/>
+<h5><img src='images/11.png'/>
+<span style="color: #000000;">VOLUME_RING </span><span style="color: #0000FF;">As</span><span style="color: #000000;"> </span><span style="color: #008B8B;">Int</span></h5>Phone ring channel.<a name='phone_volume_system'/>
+<h5><img src='images/11.png'/>
+<span style="color: #000000;">VOLUME_SYSTEM </span><span style="color: #0000FF;">As</span><span style="color: #000000;"> </span><span style="color: #008B8B;">Int</span></h5>System sounds channel.<a name='phone_volume_voice_call'/>
+<h5><img src='images/11.png'/>
+<span style="color: #000000;">VOLUME_VOICE_CALL </span><span style="color: #0000FF;">As</span><span style="color: #000000;"> </span><span style="color: #008B8B;">Int</span></h5>Voice calls channel.<hr/>
+<h3><u><a name='phoneaccelerometer'>PhoneAccelerometer</a></u></h3>
+</h5>This object gives access to the internal accelerometers sensors.<br/>See the <a href='http://www.basic4ppc.com/forum/basic4android-getting-started-tutorials/6647-orientation-accelerometer.html'>Orientation and accelerometers example</a>.<br/>This object should be declared as a process global object.
+<br/>
+
+<h4>Events:</h4>
+AccelerometerChanged (X As Float, Y As Float, Z As Float)<br/>
+<h4>Members:</h4><br/>
+<img src='images/15.png'/>&nbsp;&nbsp;<span style="color: #000000;"><a href='#phoneaccelerometer_startlistening'><b>StartListening</b></a> (EventName </span><span style="color: #0000FF;">As</span><span style="color: #000000;"> </span><span style="color: #008B8B;">String</span><span style="color: #000000;">)</span><br/><br/>
+<img src='images/15.png'/>&nbsp;&nbsp;<span style="color: #000000;"><a href='#phoneaccelerometer_stoplistening'><b>StopListening</b></a></span><br/><br/>
+
+<h4>Members description:</h4>
+<a name='phoneaccelerometer_startlistening'/>
+<h5><img src='images/15.png'/>
+<span style="color: #000000;">StartListening (EventName </span><span style="color: #0000FF;">As</span><span style="color: #000000;"> </span><span style="color: #008B8B;">String</span><span style="color: #000000;">)</span></h5>Starts listening for AccelerometerChanged events.<a name='phoneaccelerometer_stoplistening'/>
+<h5><img src='images/15.png'/>
+<span style="color: #000000;">StopListening</span></h5>Stops listening for events.<hr/>
+<h3><u><a name='phonecalls'>PhoneCalls</a></u></h3>
+</h5>This object creates an intent that launches the phone application.<br/>The reason that it is not part of the PhoneIntents library is that it requires an additional permission.
+<br/>
+<h4>Permissions:</h4>android.permission.CALL_PHONE<br/>
+<h4>Events:</h4>
+None
+<h4>Members:</h4><br/>
+<img src='images/15.png'/>&nbsp;&nbsp;<span style="color: #000000;"><a href='#phonecalls_call'><b>Call</b></a> (PhoneNumber </span><span style="color: #0000FF;">As</span><span style="color: #000000;"> </span><span style="color: #008B8B;">String</span><span style="color: #000000;">) </span><span style="color: #0000FF;">As</span><span style="color: #000000;"> android.content.Intent</span><br/><br/>
+
+<h4>Members description:</h4>
+<a name='phonecalls_call'/>
+<h5><img src='images/15.png'/>
+<span style="color: #000000;">Call (PhoneNumber </span><span style="color: #0000FF;">As</span><span style="color: #000000;"> </span><span style="color: #008B8B;">String</span><span style="color: #000000;">) </span><span style="color: #0000FF;">As</span><span style="color: #000000;"> android.content.Intent</span></h5>Creates an intent that will call a phone number.<br/>Example:<span class='pre'><span style="color: #000000;"><br/></span><span style="color: #0000FF;">Dim</span><span style="color: #000000;"> p </span><span style="color: #0000FF;">As</span><span style="color: #000000;"> PhoneCalls<br/>StartActivity(p.Call(</span><span style="color: #800000;">"</span><span style="color: #800000;">1234567890</span><span style="color: #800000;">"</span><span style="color: #000000;">))</span></span><hr/>
+<h3><u><a name='phoneevents'>PhoneEvents</a></u></h3>
+</h5>The Android OS sends all kinds of messages to notify applications of changes in the system.<br/>The PhoneEvents object allows you to catch such messages and handle those events in your program.<br/>Usually you will want to add this object to a Service module instead of an Activity module in order not to miss events that happen while<br/>your activity is paused.<br/>Working with this object is quite simple. You should declare this object in Sub Process_Globals and initialize it in Sub Service_Create.<br/>From now on your declared sub events will handle the events.<br/>The Intent object which was sent by the system is passed as the last parameter.<br/>The events supported are:<br/><b>AirplaneModeChanged</b> - Raised when the "airplane mode" state changes.<br/>State - True when airplane mode is active.<br/><b>BatteryChanged</b> - Raised when the battery status changes.<br/>Level - The current level.<br/>Scale - The maximum level.<br/>Plugged - Whether the device is plugged to an electricity source.<br/><b>ConnectivityChanged</b> - There was a change in the state of the WIFI network or the MOBILE network (other network).<br/>NetworkType - WIFI or MOBILE.<br/>State - One of the following values: CONNECTING, CONNECTED, SUSPENDED, DISCONNECTING, DISCONNECTED, UNKNOWN.<br/><b>DeviceStorageLow</b> - The device internal memory condition is low.<br/><b>DeviceStorageOk</b> - The device internal low memory condition no longer exists.<br/><b>PackageAdded</b> - An application was installed.<br/>Package - The application package name.<br/><b>PackageRemoved</b> - An application was uninstalled.<br/>Package - The application package name.<br/><b>PhoneStateChanged</b> - The phone state has changed.<br/>State - One of the three values: IDLE, OFFHOOK, RINGING. OFFHOOK means that there is a call or that the phone is dialing.<br/>IncomingCall - Available when the State value is RINGING.<br/><b>ScreenOff</b> - The screen has turned off.<br/><b>ScreenOn</b> - The screen has turned on.<br/><b>Shutdown</b> - The phone is shutting down (turned off not just sleeping).<br/><b>TextToSpeechFinish</b> - The Text To Speech engine has finished processing the messages in the queue.<br/><b>UserPresent</b> - The user has unlocked the keyguard screen.
+<br/>
+<h4>Permissions:</h4>android.permission.READ_PHONE_STATE<br/>
+<h4>Events:</h4>
+AirplaneModeChanged (State As Boolean, Intent As Intent)<br/>BatteryChanged (Level As Int, Scale As Int, Plugged As Boolean, Intent As Intent)<br/>ConnectivityChanged (NetworkType As String, State As String, Intent As Intent)<br/>DeviceStorageLow (Intent As Intent)<br/>DeviceStorageOk (Intent As Intent)<br/>PackageAdded (Package As String, Intent As Intent)<br/>PackageRemoved (Package As String, Intent As Intent)<br/>PhoneStateChanged (State As String, IncomingNumber As String, Intent As Intent)<br/>ScreenOff (Intent As Intent)<br/>ScreenOn (Intent As Intent)<br/>Shutdown (Intent As Intent)<br/>TextToSpeechFinish (Intent As Intent)<br/>UserPresent (Intent As Intent)<br/>
+<h4>Members:</h4><br/>
+<img src='images/15.png'/>&nbsp;&nbsp;<span style="color: #000000;"><a href='#phoneevents_initialize'><b>Initialize</b></a> (EventName </span><span style="color: #0000FF;">As</span><span style="color: #000000;"> </span><span style="color: #008B8B;">String</span><span style="color: #000000;">)</span><br/><br/>
+<img src='images/15.png'/>&nbsp;&nbsp;<span style="color: #000000;"><a href='#phoneevents_stoplistening'><b>StopListening</b></a></span><br/><br/>
+
+<h4>Members description:</h4>
+<a name='phoneevents_initialize'/>
+<h5><img src='images/15.png'/>
+<span style="color: #000000;">Initialize (EventName </span><span style="color: #0000FF;">As</span><span style="color: #000000;"> </span><span style="color: #008B8B;">String</span><span style="color: #000000;">)</span></h5>Initializes the object and starts listening for events.<a name='phoneevents_stoplistening'/>
+<h5><img src='images/15.png'/>
+<span style="color: #000000;">StopListening</span></h5>Stops listening for events. You can later call Initialize to start listening for events again.<hr/>
+<h3><u><a name='phoneintents'>PhoneIntents</a></u></h3>
+</h5>This object contains methods that create intents objects. An intent does nothing until you call StartActivity with the intent.<br/>Calling StartActivity sends the intent to the OS.
+<br/>
+
+<h4>Events:</h4>
+None
+<h4>Members:</h4><br/>
+<img src='images/15.png'/>&nbsp;&nbsp;<span style="color: #000000;"><a href='#phoneintents_openbrowser'><b>OpenBrowser</b></a> (Uri </span><span style="color: #0000FF;">As</span><span style="color: #000000;"> </span><span style="color: #008B8B;">String</span><span style="color: #000000;">) </span><span style="color: #0000FF;">As</span><span style="color: #000000;"> android.content.Intent</span><br/><br/>
+<img src='images/15.png'/>&nbsp;&nbsp;<span style="color: #000000;"><a href='#phoneintents_playaudio'><b>PlayAudio</b></a> (Dir </span><span style="color: #0000FF;">As</span><span style="color: #000000;"> </span><span style="color: #008B8B;">String</span><span style="color: #000000;">, File </span><span style="color: #0000FF;">As</span><span style="color: #000000;"> </span><span style="color: #008B8B;">String</span><span style="color: #000000;">) </span><span style="color: #0000FF;">As</span><span style="color: #000000;"> android.content.Intent</span><br/><br/>
+<img src='images/15.png'/>&nbsp;&nbsp;<span style="color: #000000;"><a href='#phoneintents_playvideo'><b>PlayVideo</b></a> (Dir </span><span style="color: #0000FF;">As</span><span style="color: #000000;"> </span><span style="color: #008B8B;">String</span><span style="color: #000000;">, File </span><span style="color: #0000FF;">As</span><span style="color: #000000;"> </span><span style="color: #008B8B;">String</span><span style="color: #000000;">) </span><span style="color: #0000FF;">As</span><span style="color: #000000;"> android.content.Intent</span><br/><br/>
+
+<h4>Members description:</h4>
+<a name='phoneintents_openbrowser'/>
+<h5><img src='images/15.png'/>
+<span style="color: #000000;">OpenBrowser (Uri </span><span style="color: #0000FF;">As</span><span style="color: #000000;"> </span><span style="color: #008B8B;">String</span><span style="color: #000000;">) </span><span style="color: #0000FF;">As</span><span style="color: #000000;"> android.content.Intent</span></h5>Creates an intent that will open the specified URI.<br/>Example:<span class='pre'><span style="color: #000000;"><br/>StartActivity (PhoneIntents.OpenBrowser(</span><span style="color: #800000;">"</span><span style="color: #800000;">http://www.google.com</span><span style="color: #800000;">"</span><span style="color: #000000;">))</span></span><a name='phoneintents_playaudio'/>
+<h5><img src='images/15.png'/>
+<span style="color: #000000;">PlayAudio (Dir </span><span style="color: #0000FF;">As</span><span style="color: #000000;"> </span><span style="color: #008B8B;">String</span><span style="color: #000000;">, File </span><span style="color: #0000FF;">As</span><span style="color: #000000;"> </span><span style="color: #008B8B;">String</span><span style="color: #000000;">) </span><span style="color: #0000FF;">As</span><span style="color: #000000;"> android.content.Intent</span></h5>Creates an intent that will start playing the given audio file with the default player.<br/>This method cannot work with internal files.<a name='phoneintents_playvideo'/>
+<h5><img src='images/15.png'/>
+<span style="color: #000000;">PlayVideo (Dir </span><span style="color: #0000FF;">As</span><span style="color: #000000;"> </span><span style="color: #008B8B;">String</span><span style="color: #000000;">, File </span><span style="color: #0000FF;">As</span><span style="color: #000000;"> </span><span style="color: #008B8B;">String</span><span style="color: #000000;">) </span><span style="color: #0000FF;">As</span><span style="color: #000000;"> android.content.Intent</span></h5>Creates an intent that will start playing the given video file with the default player.<br/>This method cannot work with internal files.<hr/>
+<h3><u><a name='phoneorientation'>PhoneOrientation</a></u></h3>
+</h5>This object gives access to the internal orientation sensors.<br/>See the <a href='http://www.basic4ppc.com/forum/basic4android-getting-started-tutorials/6647-orientation-accelerometer.html'>Orientation and accelerometers example</a>.<br/>This object should be declared as a process global object.
+<br/>
+
+<h4>Events:</h4>
+OrientationChanged (Azimuth As Float, Pitch As Float, Roll As Float)<br/>
+<h4>Members:</h4><br/>
+<img src='images/15.png'/>&nbsp;&nbsp;<span style="color: #000000;"><a href='#phoneorientation_startlistening'><b>StartListening</b></a> (EventName </span><span style="color: #0000FF;">As</span><span style="color: #000000;"> </span><span style="color: #008B8B;">String</span><span style="color: #000000;">)</span><br/><br/>
+<img src='images/15.png'/>&nbsp;&nbsp;<span style="color: #000000;"><a href='#phoneorientation_stoplistening'><b>StopListening</b></a></span><br/><br/>
+
+<h4>Members description:</h4>
+<a name='phoneorientation_startlistening'/>
+<h5><img src='images/15.png'/>
+<span style="color: #000000;">StartListening (EventName </span><span style="color: #0000FF;">As</span><span style="color: #000000;"> </span><span style="color: #008B8B;">String</span><span style="color: #000000;">)</span></h5>Starts listening for OrientationChanged events.<a name='phoneorientation_stoplistening'/>
+<h5><img src='images/15.png'/>
+<span style="color: #000000;">StopListening</span></h5>Stops listening for events.<hr/>
+<h3><u><a name='phonesensors'>PhoneSensors</a></u></h3>
+</h5>The PhoneSensors object allows you to listen for changes in one of the device sensors.<br/>See the <a href='http://www.basic4ppc.com/forum/basic4android-getting-started-tutorials/6647-orientation-accelerometer.html'>Sensors example</a>.<br/>Most devices do not support all sensors. The StartListening method returns False if the sensor is not supported.<br/>After initializing the object and calling StartListening, the SensorChanged event will be raised each time the sensor value changes.<br/>The value is passed as an array of Floats. Some sensors pass a single value and some pass three values.
+<br/>
+
+<h4>Events:</h4>
+SensorChanged (Values() As Float)<br/>
+<h4>Members:</h4><br/>
+<img src='images/15.png'/>&nbsp;&nbsp;<span style="color: #000000;"><a href='#phonesensors_initialize'><b>Initialize</b></a> (SensorType </span><span style="color: #0000FF;">As</span><span style="color: #000000;"> </span><span style="color: #008B8B;">Int</span><span style="color: #000000;">)</span><br/><br/>
+<img src='images/15.png'/>&nbsp;&nbsp;<span style="color: #000000;"><a href='#phonesensors_initialize2'><b>Initialize2</b></a> (SensorType </span><span style="color: #0000FF;">As</span><span style="color: #000000;"> </span><span style="color: #008B8B;">Int</span><span style="color: #000000;">, SensorDelay </span><span style="color: #0000FF;">As</span><span style="color: #000000;"> </span><span style="color: #008B8B;">Int</span><span style="color: #000000;">)</span><br/><br/>
+<img src='images/19.png'/>&nbsp;&nbsp;<span style="color: #000000;"><a href='#phonesensors_maxvalue'><b>MaxValue</b></a> </span><span style="color: #0000FF;">As</span><span style="color: #000000;"> </span><span style="color: #008B8B;">Float</span><span style="color: #000000;">  [read only]</span><br/><br/>
+<img src='images/15.png'/>&nbsp;&nbsp;<span style="color: #000000;"><a href='#phonesensors_startlistening'><b>StartListening</b></a> (EventName </span><span style="color: #0000FF;">As</span><span style="color: #000000;"> </span><span style="color: #008B8B;">String</span><span style="color: #000000;">) </span><span style="color: #0000FF;">As</span><span style="color: #000000;"> </span><span style="color: #008B8B;">Boolean</span><br/><br/>
+<img src='images/15.png'/>&nbsp;&nbsp;<span style="color: #000000;"><a href='#phonesensors_stoplistening'><b>StopListening</b></a></span><br/><br/>
+<img src='images/11.png'/>&nbsp;&nbsp;<span style="color: #000000;"><a href='#phonesensors_type_accelerometer'><b>TYPE_ACCELEROMETER</b></a> </span><span style="color: #0000FF;">As</span><span style="color: #000000;"> </span><span style="color: #008B8B;">Int</span><br/><br/>
+<img src='images/11.png'/>&nbsp;&nbsp;<span style="color: #000000;"><a href='#phonesensors_type_gyroscope'><b>TYPE_GYROSCOPE</b></a> </span><span style="color: #0000FF;">As</span><span style="color: #000000;"> </span><span style="color: #008B8B;">Int</span><br/><br/>
+<img src='images/11.png'/>&nbsp;&nbsp;<span style="color: #000000;"><a href='#phonesensors_type_light'><b>TYPE_LIGHT</b></a> </span><span style="color: #0000FF;">As</span><span style="color: #000000;"> </span><span style="color: #008B8B;">Int</span><br/><br/>
+<img src='images/11.png'/>&nbsp;&nbsp;<span style="color: #000000;"><a href='#phonesensors_type_magnetic_field'><b>TYPE_MAGNETIC_FIELD</b></a> </span><span style="color: #0000FF;">As</span><span style="color: #000000;"> </span><span style="color: #008B8B;">Int</span><br/><br/>
+<img src='images/11.png'/>&nbsp;&nbsp;<span style="color: #000000;"><a href='#phonesensors_type_orientation'><b>TYPE_ORIENTATION</b></a> </span><span style="color: #0000FF;">As</span><span style="color: #000000;"> </span><span style="color: #008B8B;">Int</span><br/><br/>
+<img src='images/11.png'/>&nbsp;&nbsp;<span style="color: #000000;"><a href='#phonesensors_type_pressure'><b>TYPE_PRESSURE</b></a> </span><span style="color: #0000FF;">As</span><span style="color: #000000;"> </span><span style="color: #008B8B;">Int</span><br/><br/>
+<img src='images/11.png'/>&nbsp;&nbsp;<span style="color: #000000;"><a href='#phonesensors_type_proximity'><b>TYPE_PROXIMITY</b></a> </span><span style="color: #0000FF;">As</span><span style="color: #000000;"> </span><span style="color: #008B8B;">Int</span><br/><br/>
+<img src='images/11.png'/>&nbsp;&nbsp;<span style="color: #000000;"><a href='#phonesensors_type_temperature'><b>TYPE_TEMPERATURE</b></a> </span><span style="color: #0000FF;">As</span><span style="color: #000000;"> </span><span style="color: #008B8B;">Int</span><br/><br/>
+
+<h4>Members description:</h4>
+<a name='phonesensors_initialize'/>
+<h5><img src='images/15.png'/>
+<span style="color: #000000;">Initialize (SensorType </span><span style="color: #0000FF;">As</span><span style="color: #000000;"> </span><span style="color: #008B8B;">Int</span><span style="color: #000000;">)</span></h5>Initializes the object and sets the sensor type (one of the TYPE_ constants).<a name='phonesensors_initialize2'/>
+<h5><img src='images/15.png'/>
+<span style="color: #000000;">Initialize2 (SensorType </span><span style="color: #0000FF;">As</span><span style="color: #000000;"> </span><span style="color: #008B8B;">Int</span><span style="color: #000000;">, SensorDelay </span><span style="color: #0000FF;">As</span><span style="color: #000000;"> </span><span style="color: #008B8B;">Int</span><span style="color: #000000;">)</span></h5>Initializes the object and sets the sensor type and sensor events rate.<br/>SensorType - One of the TYPE_ constants.<br/>SensorDelay - A value between 0 (fastest rate) to 3 (slowest rate). This is only a hint to the system.<a name='phonesensors_maxvalue'/>
+<h5><img src='images/19.png'/>
+<span style="color: #000000;">MaxValue </span><span style="color: #0000FF;">As</span><span style="color: #000000;"> </span><span style="color: #008B8B;">Float</span><span style="color: #000000;">  [read only]</span></h5>Returns the maximum value for this sensor.<br/>Returns -1 if this sensor is not supported.<a name='phonesensors_startlistening'/>
+<h5><img src='images/15.png'/>
+<span style="color: #000000;">StartListening (EventName </span><span style="color: #0000FF;">As</span><span style="color: #000000;"> </span><span style="color: #008B8B;">String</span><span style="color: #000000;">) </span><span style="color: #0000FF;">As</span><span style="color: #000000;"> </span><span style="color: #008B8B;">Boolean</span></h5>Starts listening for sensor events.<br/>Returns True if the sensor is supported.<br/>Usually you will want to start listening in Sub Activity_Resume and stop listening in Sub Activity_Pause.<a name='phonesensors_stoplistening'/>
+<h5><img src='images/15.png'/>
+<span style="color: #000000;">StopListening</span></h5>Stops listening for events.<a name='phonesensors_type_accelerometer'/>
+<h5><img src='images/11.png'/>
+<span style="color: #000000;">TYPE_ACCELEROMETER </span><span style="color: #0000FF;">As</span><span style="color: #000000;"> </span><span style="color: #008B8B;">Int</span></h5>Three values - Acceleration measured in Meters / Second ^ 2 for each axis (X, Y and Z).<a name='phonesensors_type_gyroscope'/>
+<h5><img src='images/11.png'/>
+<span style="color: #000000;">TYPE_GYROSCOPE </span><span style="color: #0000FF;">As</span><span style="color: #000000;"> </span><span style="color: #008B8B;">Int</span></h5>Three values - Angular velocity measured in Radians / Second around each of the three axis.<a name='phonesensors_type_light'/>
+<h5><img src='images/11.png'/>
+<span style="color: #000000;">TYPE_LIGHT </span><span style="color: #0000FF;">As</span><span style="color: #000000;"> </span><span style="color: #008B8B;">Int</span></h5>Single value - Ambient light level measured in SI lux units.<a name='phonesensors_type_magnetic_field'/>
+<h5><img src='images/11.png'/>
+<span style="color: #000000;">TYPE_MAGNETIC_FIELD </span><span style="color: #0000FF;">As</span><span style="color: #000000;"> </span><span style="color: #008B8B;">Int</span></h5>Three values - Ambient magnetic field measured in micro-Tesla for the X, Y and Z axis.<a name='phonesensors_type_orientation'/>
+<h5><img src='images/11.png'/>
+<span style="color: #000000;">TYPE_ORIENTATION </span><span style="color: #0000FF;">As</span><span style="color: #000000;"> </span><span style="color: #008B8B;">Int</span></h5>Three values - Orientation measured in degrees for azimuth, pitch and roll.<a name='phonesensors_type_pressure'/>
+<h5><img src='images/11.png'/>
+<span style="color: #000000;">TYPE_PRESSURE </span><span style="color: #0000FF;">As</span><span style="color: #000000;"> </span><span style="color: #008B8B;">Int</span></h5>Single value - Atmospheric pressure.<a name='phonesensors_type_proximity'/>
+<h5><img src='images/11.png'/>
+<span style="color: #000000;">TYPE_PROXIMITY </span><span style="color: #0000FF;">As</span><span style="color: #000000;"> </span><span style="color: #008B8B;">Int</span></h5>Single value - Proximity measured in centimeters. Most devices will return only two possible values representing "near" and "far".<br/>"far" should match MaxRange and "near" should be a value smaller than MaxRange.<a name='phonesensors_type_temperature'/>
+<h5><img src='images/11.png'/>
+<span style="color: #000000;">TYPE_TEMPERATURE </span><span style="color: #0000FF;">As</span><span style="color: #000000;"> </span><span style="color: #008B8B;">Int</span></h5>Single value - Ambient temperature.<hr/>
+<h3><u><a name='phonesms'>PhoneSms</a></u></h3>
+
+<br/>
+<h4>Permissions:</h4>android.permission.SEND_SMS<br/>
+<h4>Events:</h4>
+None
+<h4>Members:</h4><br/>
+<img src='images/15.png'/>&nbsp;&nbsp;<span style="color: #000000;"><a href='#phonesms_send'><b>Send</b></a> (PhoneNumber </span><span style="color: #0000FF;">As</span><span style="color: #000000;"> </span><span style="color: #008B8B;">String</span><span style="color: #000000;">, Text </span><span style="color: #0000FF;">As</span><span style="color: #000000;"> </span><span style="color: #008B8B;">String</span><span style="color: #000000;">)</span><br/><br/>
+
+<h4>Members description:</h4>
+<a name='phonesms_send'/>
+<h5><img src='images/15.png'/>
+<span style="color: #000000;">Send (PhoneNumber </span><span style="color: #0000FF;">As</span><span style="color: #000000;"> </span><span style="color: #008B8B;">String</span><span style="color: #000000;">, Text </span><span style="color: #0000FF;">As</span><span style="color: #000000;"> </span><span style="color: #008B8B;">String</span><span style="color: #000000;">)</span></h5>Sends an Sms message. Note that this method actually sends the message (unlike most other methods that<br/>create an intent object).<hr/>
+<h3><u><a name='phonewakestate'>PhoneWakeState</a></u></h3>
+</h5>The PhoneWakeState object allows you to prevent the device from turning off the screen.<br/>Once you call KeepAlive the phone screen will stay on till you call ReleaseKeepAlive.<br/>It is important to eventually release it.<br/>A recommended usage is to call KeepAlive in Activity_Resume and call ReleaseKeepAlive in Activity_Pause.<br/>Note that the user can still turn off the screen by pressing on the power button.<br/>Calling PartialLock will prevent the CPU from going to sleep even if the user presses on the power button.<br/>It will not however affect the screen.
+<br/>
+<h4>Permissions:</h4>android.permission.WAKE_LOCK<br/>
+<h4>Events:</h4>
+None
+<h4>Members:</h4><br/>
+<img src='images/15.png'/>&nbsp;&nbsp;<span style="color: #000000;"><a href='#phonewakestate_keepalive'><b>KeepAlive</b></a> (BrightScreen </span><span style="color: #0000FF;">As</span><span style="color: #000000;"> </span><span style="color: #008B8B;">Boolean</span><span style="color: #000000;">)</span><br/><br/>
+<img src='images/15.png'/>&nbsp;&nbsp;<span style="color: #000000;"><a href='#phonewakestate_partiallock'><b>PartialLock</b></a></span><br/><br/>
+<img src='images/15.png'/>&nbsp;&nbsp;<span style="color: #000000;"><a href='#phonewakestate_releasekeepalive'><b>ReleaseKeepAlive</b></a></span><br/><br/>
+<img src='images/15.png'/>&nbsp;&nbsp;<span style="color: #000000;"><a href='#phonewakestate_releasepartiallock'><b>ReleasePartialLock</b></a></span><br/><br/>
+
+<h4>Members description:</h4>
+<a name='phonewakestate_keepalive'/>
+<h5><img src='images/15.png'/>
+<span style="color: #000000;">KeepAlive (BrightScreen </span><span style="color: #0000FF;">As</span><span style="color: #000000;"> </span><span style="color: #008B8B;">Boolean</span><span style="color: #000000;">)</span></h5>Prevents the device from going to sleep.<br/>Call ReleaseKeepAlive to release the power lock.<br/>BrightScreen - Whether to keep the screen bright or dimmed.<a name='phonewakestate_partiallock'/>
+<h5><img src='images/15.png'/>
+<span style="color: #000000;">PartialLock</span></h5>Acquires a partial lock. This will prevent the CPU from going to sleep, even if the user presses on the power button.<br/>Make sure to call ReleasePartialLock eventually to release this lock.<a name='phonewakestate_releasekeepalive'/>
+<h5><img src='images/15.png'/>
+<span style="color: #000000;">ReleaseKeepAlive</span></h5>Releases the power lock and allows the device to go to sleep.<a name='phonewakestate_releasepartiallock'/>
+<h5><img src='images/15.png'/>
+<span style="color: #000000;">ReleasePartialLock</span></h5>Releases a partial lock that was previously acquired by calling PartialLock.<hr/>
+<h3><u><a name='sms'>Sms</a></u></h3>
+</h5>Represents an SMS message.<br/>SMS messages are retrieved using SmsMessages object.
+<br/>
+
+<h4>Events:</h4>
+None
+<h4>Members:</h4><br/>
+<img src='images/11.png'/>&nbsp;&nbsp;<span style="color: #000000;"><a href='#sms_address'><b>Address</b></a> </span><span style="color: #0000FF;">As</span><span style="color: #000000;"> </span><span style="color: #008B8B;">String</span><br/><br/>
+<img src='images/11.png'/>&nbsp;&nbsp;<span style="color: #000000;"><a href='#sms_body'><b>Body</b></a> </span><span style="color: #0000FF;">As</span><span style="color: #000000;"> </span><span style="color: #008B8B;">String</span><br/><br/>
+<img src='images/11.png'/>&nbsp;&nbsp;<span style="color: #000000;"><a href='#sms_date'><b>Date</b></a> </span><span style="color: #0000FF;">As</span><span style="color: #000000;"> </span><span style="color: #008B8B;">Long</span><br/><br/>
+<img src='images/11.png'/>&nbsp;&nbsp;<span style="color: #000000;"><a href='#sms_id'><b>Id</b></a> </span><span style="color: #0000FF;">As</span><span style="color: #000000;"> </span><span style="color: #008B8B;">Int</span><br/><br/>
+<img src='images/11.png'/>&nbsp;&nbsp;<span style="color: #000000;"><a href='#sms_personid'><b>PersonId</b></a> </span><span style="color: #0000FF;">As</span><span style="color: #000000;"> </span><span style="color: #008B8B;">Int</span><br/><br/>
+<img src='images/11.png'/>&nbsp;&nbsp;<span style="color: #000000;"><a href='#sms_read'><b>Read</b></a> </span><span style="color: #0000FF;">As</span><span style="color: #000000;"> </span><span style="color: #008B8B;">Boolean</span><br/><br/>
+<img src='images/11.png'/>&nbsp;&nbsp;<span style="color: #000000;"><a href='#sms_threadid'><b>ThreadId</b></a> </span><span style="color: #0000FF;">As</span><span style="color: #000000;"> </span><span style="color: #008B8B;">Int</span><br/><br/>
+<img src='images/11.png'/>&nbsp;&nbsp;<span style="color: #0000FF;"><a href='#sms_type'><b>Type</b></a></span><span style="color: #000000;"> </span><span style="color: #0000FF;">As</span><span style="color: #000000;"> </span><span style="color: #008B8B;">Int</span><br/><br/>
+
+<h4>Members description:</h4>
+<a name='sms_address'/>
+<h5><img src='images/11.png'/>
+<span style="color: #000000;">Address </span><span style="color: #0000FF;">As</span><span style="color: #000000;"> </span><span style="color: #008B8B;">String</span></h5>The message address.<a name='sms_body'/>
+<h5><img src='images/11.png'/>
+<span style="color: #000000;">Body </span><span style="color: #0000FF;">As</span><span style="color: #000000;"> </span><span style="color: #008B8B;">String</span></h5>Message body.<a name='sms_date'/>
+<h5><img src='images/11.png'/>
+<span style="color: #000000;">Date </span><span style="color: #0000FF;">As</span><span style="color: #000000;"> </span><span style="color: #008B8B;">Long</span></h5>The date of this message.<a name='sms_id'/>
+<h5><img src='images/11.png'/>
+<span style="color: #000000;">Id </span><span style="color: #0000FF;">As</span><span style="color: #000000;"> </span><span style="color: #008B8B;">Int</span></h5>Message internal id.<a name='sms_personid'/>
+<h5><img src='images/11.png'/>
+<span style="color: #000000;">PersonId </span><span style="color: #0000FF;">As</span><span style="color: #000000;"> </span><span style="color: #008B8B;">Int</span></h5>The id of the person who sent the message.<br/>Will be -1 if this data is missing.<br/>You can find more information about this person by calling <span class='pre'><span style="color: #000000;">Contacts.GetById</span></span>.<a name='sms_read'/>
+<h5><img src='images/11.png'/>
+<span style="color: #000000;">Read </span><span style="color: #0000FF;">As</span><span style="color: #000000;"> </span><span style="color: #008B8B;">Boolean</span></h5>Whether this message has been read.<a name='sms_threadid'/>
+<h5><img src='images/11.png'/>
+<span style="color: #000000;">ThreadId </span><span style="color: #0000FF;">As</span><span style="color: #000000;"> </span><span style="color: #008B8B;">Int</span></h5>Thread id.<a name='sms_type'/>
+<h5><img src='images/11.png'/>
+<span style="color: #0000FF;">Type</span><span style="color: #000000;"> </span><span style="color: #0000FF;">As</span><span style="color: #000000;"> </span><span style="color: #008B8B;">Int</span></h5>The message type. One of the SmsMessages constant values.<hr/>
+<h3><u><a name='smsinterceptor'>SmsInterceptor</a></u></h3>
+</h5>Listens for incoming SMS messages.<br/>The MessageReceived event is raised when a new message arrives.
+<br/>
+<h4>Permissions:</h4>android.permission.RECEIVE_SMS<br/>
+<h4>Events:</h4>
+MessageReceived (From As String, Body As String)<br/>
+<h4>Members:</h4><br/>
+<img src='images/15.png'/>&nbsp;&nbsp;<span style="color: #000000;"><a href='#smsinterceptor_initialize'><b>Initialize</b></a> (EventName </span><span style="color: #0000FF;">As</span><span style="color: #000000;"> </span><span style="color: #008B8B;">String</span><span style="color: #000000;">)</span><br/><br/>
+<img src='images/15.png'/>&nbsp;&nbsp;<span style="color: #000000;"><a href='#smsinterceptor_stoplistening'><b>StopListening</b></a></span><br/><br/>
+
+<h4>Members description:</h4>
+<a name='smsinterceptor_initialize'/>
+<h5><img src='images/15.png'/>
+<span style="color: #000000;">Initialize (EventName </span><span style="color: #0000FF;">As</span><span style="color: #000000;"> </span><span style="color: #008B8B;">String</span><span style="color: #000000;">)</span></h5>Initializes the object and starts listening for new messages.<a name='smsinterceptor_stoplistening'/>
+<h5><img src='images/15.png'/>
+<span style="color: #000000;">StopListening</span></h5>Stops listening for events. You can later call Initialize to start listening again.<hr/>
+<h3><u><a name='smsmessages'>SmsMessages</a></u></h3>
+</h5>Provides access to the stored SMS messages.<br/>Note that you can use PhoneSms to send SMS messages.<br/>Example of printing all messages from the last week:<span class='pre'><span style="color: #000000;"><br/></span><span style="color: #0000FF;">Dim</span><span style="color: #000000;"> SmsMessages1 </span><span style="color: #0000FF;">As</span><span style="color: #000000;"> SmsMessages<br/></span><span style="color: #0000FF;">Dim</span><span style="color: #000000;"> List1 </span><span style="color: #0000FF;">As</span><span style="color: #000000;"> </span><span style="color: #008B8B;">List</span><span style="color: #000000;"><br/>List1 = SmsMessages1.GetAllSince(DateTime.Add(DateTime.Now, </span><span style="color: #800080;">0</span><span style="color: #000000;">, </span><span style="color: #800080;">0</span><span style="color: #000000;">, -</span><span style="color: #800080;">7</span><span style="color: #000000;">))<br/></span><span style="color: #0000FF;">For</span><span style="color: #000000;"> i = </span><span style="color: #800080;">0</span><span style="color: #000000;"> </span><span style="color: #0000FF;">To</span><span style="color: #000000;"> List1.Size - </span><span style="color: #800080;">1</span><span style="color: #000000;"><br/>&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #0000FF;">Dim</span><span style="color: #000000;"> Sms </span><span style="color: #0000FF;">As</span><span style="color: #000000;"> Sms<br/>&nbsp;&nbsp;&nbsp;&nbsp;Sms = List1.Get(i)<br/>&nbsp;&nbsp;&nbsp;&nbsp;Log(Sms)<br/></span><span style="color: #0000FF;">Next</span></span>
+<br/>
+<h4>Permissions:</h4>android.permission.READ_SMS<br/>
+<h4>Events:</h4>
+None
+<h4>Members:</h4><br/>
+<img src='images/15.png'/>&nbsp;&nbsp;<span style="color: #000000;"><a href='#smsmessages_getall'><b>GetAll</b></a> </span><span style="color: #0000FF;">As</span><span style="color: #000000;"> </span><span style="color: #008B8B;">List</span><br/><br/>
+<img src='images/15.png'/>&nbsp;&nbsp;<span style="color: #000000;"><a href='#smsmessages_getallsince'><b>GetAllSince</b></a> (Date </span><span style="color: #0000FF;">As</span><span style="color: #000000;"> </span><span style="color: #008B8B;">Long</span><span style="color: #000000;">) </span><span style="color: #0000FF;">As</span><span style="color: #000000;"> </span><span style="color: #008B8B;">List</span><br/><br/>
+<img src='images/15.png'/>&nbsp;&nbsp;<span style="color: #000000;"><a href='#smsmessages_getbetweendates'><b>GetBetweenDates</b></a> (StartDate </span><span style="color: #0000FF;">As</span><span style="color: #000000;"> </span><span style="color: #008B8B;">Long</span><span style="color: #000000;">, EndDate </span><span style="color: #0000FF;">As</span><span style="color: #000000;"> </span><span style="color: #008B8B;">Long</span><span style="color: #000000;">) </span><span style="color: #0000FF;">As</span><span style="color: #000000;"> </span><span style="color: #008B8B;">List</span><br/><br/>
+<img src='images/15.png'/>&nbsp;&nbsp;<span style="color: #000000;"><a href='#smsmessages_getbypersonid'><b>GetByPersonId</b></a> (PersonId </span><span style="color: #0000FF;">As</span><span style="color: #000000;"> </span><span style="color: #008B8B;">Int</span><span style="color: #000000;">) </span><span style="color: #0000FF;">As</span><span style="color: #000000;"> </span><span style="color: #008B8B;">List</span><br/><br/>
+<img src='images/15.png'/>&nbsp;&nbsp;<span style="color: #000000;"><a href='#smsmessages_getbythreadid'><b>GetByThreadId</b></a> (ThreadId </span><span style="color: #0000FF;">As</span><span style="color: #000000;"> </span><span style="color: #008B8B;">Int</span><span style="color: #000000;">) </span><span style="color: #0000FF;">As</span><span style="color: #000000;"> </span><span style="color: #008B8B;">List</span><br/><br/>
+<img src='images/15.png'/>&nbsp;&nbsp;<span style="color: #000000;"><a href='#smsmessages_getbytype'><b>GetByType</b></a> (</span><span style="color: #0000FF;">Type</span><span style="color: #000000;"> </span><span style="color: #0000FF;">As</span><span style="color: #000000;"> </span><span style="color: #008B8B;">Int</span><span style="color: #000000;">) </span><span style="color: #0000FF;">As</span><span style="color: #000000;"> </span><span style="color: #008B8B;">List</span><br/><br/>
+<img src='images/15.png'/>&nbsp;&nbsp;<span style="color: #000000;"><a href='#smsmessages_getunreadmessages'><b>GetUnreadMessages</b></a> </span><span style="color: #0000FF;">As</span><span style="color: #000000;"> </span><span style="color: #008B8B;">List</span><br/><br/>
+<img src='images/11.png'/>&nbsp;&nbsp;<span style="color: #000000;"><a href='#smsmessages_type_draft'><b>TYPE_DRAFT</b></a> </span><span style="color: #0000FF;">As</span><span style="color: #000000;"> </span><span style="color: #008B8B;">Int</span><br/><br/>
+<img src='images/11.png'/>&nbsp;&nbsp;<span style="color: #000000;"><a href='#smsmessages_type_failed'><b>TYPE_FAILED</b></a> </span><span style="color: #0000FF;">As</span><span style="color: #000000;"> </span><span style="color: #008B8B;">Int</span><br/><br/>
+<img src='images/11.png'/>&nbsp;&nbsp;<span style="color: #000000;"><a href='#smsmessages_type_inbox'><b>TYPE_INBOX</b></a> </span><span style="color: #0000FF;">As</span><span style="color: #000000;"> </span><span style="color: #008B8B;">Int</span><br/><br/>
+<img src='images/11.png'/>&nbsp;&nbsp;<span style="color: #000000;"><a href='#smsmessages_type_outbox'><b>TYPE_OUTBOX</b></a> </span><span style="color: #0000FF;">As</span><span style="color: #000000;"> </span><span style="color: #008B8B;">Int</span><br/><br/>
+<img src='images/11.png'/>&nbsp;&nbsp;<span style="color: #000000;"><a href='#smsmessages_type_queued'><b>TYPE_QUEUED</b></a> </span><span style="color: #0000FF;">As</span><span style="color: #000000;"> </span><span style="color: #008B8B;">Int</span><br/><br/>
+<img src='images/11.png'/>&nbsp;&nbsp;<span style="color: #000000;"><a href='#smsmessages_type_sent'><b>TYPE_SENT</b></a> </span><span style="color: #0000FF;">As</span><span style="color: #000000;"> </span><span style="color: #008B8B;">Int</span><br/><br/>
+<img src='images/11.png'/>&nbsp;&nbsp;<span style="color: #000000;"><a href='#smsmessages_type_unknown'><b>TYPE_UNKNOWN</b></a> </span><span style="color: #0000FF;">As</span><span style="color: #000000;"> </span><span style="color: #008B8B;">Int</span><br/><br/>
+
+<h4>Members description:</h4>
+<a name='smsmessages_getall'/>
+<h5><img src='images/15.png'/>
+<span style="color: #000000;">GetAll </span><span style="color: #0000FF;">As</span><span style="color: #000000;"> </span><span style="color: #008B8B;">List</span></h5>Returns all stored messages.<a name='smsmessages_getallsince'/>
+<h5><img src='images/15.png'/>
+<span style="color: #000000;">GetAllSince (Date </span><span style="color: #0000FF;">As</span><span style="color: #000000;"> </span><span style="color: #008B8B;">Long</span><span style="color: #000000;">) </span><span style="color: #0000FF;">As</span><span style="color: #000000;"> </span><span style="color: #008B8B;">List</span></h5>Returns all messages since the given date.<a name='smsmessages_getbetweendates'/>
+<h5><img src='images/15.png'/>
+<span style="color: #000000;">GetBetweenDates (StartDate </span><span style="color: #0000FF;">As</span><span style="color: #000000;"> </span><span style="color: #008B8B;">Long</span><span style="color: #000000;">, EndDate </span><span style="color: #0000FF;">As</span><span style="color: #000000;"> </span><span style="color: #008B8B;">Long</span><span style="color: #000000;">) </span><span style="color: #0000FF;">As</span><span style="color: #000000;"> </span><span style="color: #008B8B;">List</span></h5>Returns all messages between the given dates. Start value is inclusive and end value is exclusive.<a name='smsmessages_getbypersonid'/>
+<h5><img src='images/15.png'/>
+<span style="color: #000000;">GetByPersonId (PersonId </span><span style="color: #0000FF;">As</span><span style="color: #000000;"> </span><span style="color: #008B8B;">Int</span><span style="color: #000000;">) </span><span style="color: #0000FF;">As</span><span style="color: #000000;"> </span><span style="color: #008B8B;">List</span></h5>Returns a list with all messages received from the person with the given id.<a name='smsmessages_getbythreadid'/>
+<h5><img src='images/15.png'/>
+<span style="color: #000000;">GetByThreadId (ThreadId </span><span style="color: #0000FF;">As</span><span style="color: #000000;"> </span><span style="color: #008B8B;">Int</span><span style="color: #000000;">) </span><span style="color: #0000FF;">As</span><span style="color: #000000;"> </span><span style="color: #008B8B;">List</span></h5>Returns a list with all messages with the given ThreadId.<a name='smsmessages_getbytype'/>
+<h5><img src='images/15.png'/>
+<span style="color: #000000;">GetByType (</span><span style="color: #0000FF;">Type</span><span style="color: #000000;"> </span><span style="color: #0000FF;">As</span><span style="color: #000000;"> </span><span style="color: #008B8B;">Int</span><span style="color: #000000;">) </span><span style="color: #0000FF;">As</span><span style="color: #000000;"> </span><span style="color: #008B8B;">List</span></h5>Returns a list with all messages of the given type. The type should be one of the type constants.<a name='smsmessages_getunreadmessages'/>
+<h5><img src='images/15.png'/>
+<span style="color: #000000;">GetUnreadMessages </span><span style="color: #0000FF;">As</span><span style="color: #000000;"> </span><span style="color: #008B8B;">List</span></h5>Returns all unread messages.<a name='smsmessages_type_draft'/>
+<h5><img src='images/11.png'/>
+<span style="color: #000000;">TYPE_DRAFT </span><span style="color: #0000FF;">As</span><span style="color: #000000;"> </span><span style="color: #008B8B;">Int</span></h5><a name='smsmessages_type_failed'/>
+<h5><img src='images/11.png'/>
+<span style="color: #000000;">TYPE_FAILED </span><span style="color: #0000FF;">As</span><span style="color: #000000;"> </span><span style="color: #008B8B;">Int</span></h5><a name='smsmessages_type_inbox'/>
+<h5><img src='images/11.png'/>
+<span style="color: #000000;">TYPE_INBOX </span><span style="color: #0000FF;">As</span><span style="color: #000000;"> </span><span style="color: #008B8B;">Int</span></h5><a name='smsmessages_type_outbox'/>
+<h5><img src='images/11.png'/>
+<span style="color: #000000;">TYPE_OUTBOX </span><span style="color: #0000FF;">As</span><span style="color: #000000;"> </span><span style="color: #008B8B;">Int</span></h5><a name='smsmessages_type_queued'/>
+<h5><img src='images/11.png'/>
+<span style="color: #000000;">TYPE_QUEUED </span><span style="color: #0000FF;">As</span><span style="color: #000000;"> </span><span style="color: #008B8B;">Int</span></h5><a name='smsmessages_type_sent'/>
+<h5><img src='images/11.png'/>
+<span style="color: #000000;">TYPE_SENT </span><span style="color: #0000FF;">As</span><span style="color: #000000;"> </span><span style="color: #008B8B;">Int</span></h5><a name='smsmessages_type_unknown'/>
+<h5><img src='images/11.png'/>
+<span style="color: #000000;">TYPE_UNKNOWN </span><span style="color: #0000FF;">As</span><span style="color: #000000;"> </span><span style="color: #008B8B;">Int</span></h5><hr/>
+<h3><u><a name='voicerecognition'>VoiceRecognition</a></u></h3>
+</h5>Most Android devices support voice recognition (speech to text). Usually the service works by sending the audio stream to some external server<br/>which analyzes the stream and returns the possible results.<br/>Working with this object is quite simple.<br/>You should declare a VoiceRecognition object as a process global object and initialize it in Activity_Create when FirstTime is True.<br/>Later when you call Listen a dialog will be displayed, asking the user to speak. The Result event will be raised with a Success flag and a list with the possible results (usually one result).
+<br/>
+
+<h4>Events:</h4>
+Result (Success As Boolean, Texts As List)<br/>
+<h4>Members:</h4><br/>
+<img src='images/15.png'/>&nbsp;&nbsp;<span style="color: #000000;"><a href='#voicerecognition_initialize'><b>Initialize</b></a> (EventName </span><span style="color: #0000FF;">As</span><span style="color: #000000;"> </span><span style="color: #008B8B;">String</span><span style="color: #000000;">)</span><br/><br/>
+<img src='images/15.png'/>&nbsp;&nbsp;<span style="color: #000000;"><a href='#voicerecognition_issupported'><b>IsSupported</b></a> </span><span style="color: #0000FF;">As</span><span style="color: #000000;"> </span><span style="color: #008B8B;">Boolean</span><br/><br/>
+<img src='images/19.png'/>&nbsp;&nbsp;<span style="color: #000000;"><a href='#voicerecognition_language'><b>Language</b></a> </span><span style="color: #0000FF;">As</span><span style="color: #000000;"> </span><span style="color: #008B8B;">String</span><span style="color: #000000;">  [write only]</span><br/><br/>
+<img src='images/15.png'/>&nbsp;&nbsp;<span style="color: #000000;"><a href='#voicerecognition_listen'><b>Listen</b></a></span><br/><br/>
+<img src='images/19.png'/>&nbsp;&nbsp;<span style="color: #000000;"><a href='#voicerecognition_prompt'><b>Prompt</b></a> </span><span style="color: #0000FF;">As</span><span style="color: #000000;"> </span><span style="color: #008B8B;">String</span><span style="color: #000000;">  [write only]</span><br/><br/>
+
+<h4>Members description:</h4>
+<a name='voicerecognition_initialize'/>
+<h5><img src='images/15.png'/>
+<span style="color: #000000;">Initialize (EventName </span><span style="color: #0000FF;">As</span><span style="color: #000000;"> </span><span style="color: #008B8B;">String</span><span style="color: #000000;">)</span></h5>Initializes the object and sets the Sub that will catch the Ready event.<br/>Example:<span class='pre'><span style="color: #000000;"><br/></span><span style="color: #0000FF;">Dim</span><span style="color: #000000;"> VR </span><span style="color: #0000FF;">As</span><span style="color: #000000;"> VoiceRecognition<br/>VR.Initialize(</span><span style="color: #800000;">"</span><span style="color: #800000;">VR</span><span style="color: #800000;">"</span><span style="color: #000000;">)</span></span><a name='voicerecognition_issupported'/>
+<h5><img src='images/15.png'/>
+<span style="color: #000000;">IsSupported </span><span style="color: #0000FF;">As</span><span style="color: #000000;"> </span><span style="color: #008B8B;">Boolean</span></h5>Tests whether voice recognition is supported on this device.<a name='voicerecognition_language'/>
+<h5><img src='images/19.png'/>
+<span style="color: #000000;">Language </span><span style="color: #0000FF;">As</span><span style="color: #000000;"> </span><span style="color: #008B8B;">String</span><span style="color: #000000;">  [write only]</span></h5>Sets the language used. By default the device default language is used.<br/>Example:<span class='pre'><span style="color: #000000;"><br/>VR.Language = </span><span style="color: #800000;">"</span><span style="color: #800000;">en</span><span style="color: #800000;">"</span></span><a name='voicerecognition_listen'/>
+<h5><img src='images/15.png'/>
+<span style="color: #000000;">Listen</span></h5>Starts listening. The Ready event will be raised when the result arrives.<a name='voicerecognition_prompt'/>
+<h5><img src='images/19.png'/>
+<span style="color: #000000;">Prompt </span><span style="color: #0000FF;">As</span><span style="color: #000000;"> </span><span style="color: #008B8B;">String</span><span style="color: #000000;">  [write only]</span></h5>Sets the prompt that is displayed in the "Speak now" dialog in addition to the "Speak now" message.
+<hr/>
+<a href="#top">Top</a>
+</body>
+</html>

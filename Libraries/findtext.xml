@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <doclet-version-NOT-library-version>1.00</doclet-version-NOT-library-version>
+  <dependsOn>richstring</dependsOn>
+  <class>
+    <name>b4a.example.findtext</name>
+    <shortname>findtext</shortname>
+    <owner>process</owner>
+    <method>
+      <name>IsInitialized</name>
+      <comment>Tests whether the object has been initialized.</comment>
+      <returntype>boolean</returntype>
+    </method>
+    <method>
+      <name DesignerName="Class_Globals">_class_globals</name>
+      <returntype>String</returntype>
+    </method>
+    <method>
+      <name DesignerName="findtext1">_findtext1</name>
+      <comment>this is a library for quick search and highlight text in lable,edittext,....
+add Richstring library
+
+color: 1=Red , 2=Black , 3=White , 4=Green , 5=Blue , 6=Magenta , 7=Yellow
+example:
+
+Dim find as Findtext
+Dim l1 As Label
+Dim et1 As EditText
+Dim et2 As EditText
+Dim s as string
+
+find.findtext1(l1,et1,1) 
+find.findtext1(et2,et1,7) 
+find.findtext2(et2,s,7)
+
+By:www.ShamimeVesal.ir </comment>
+      <returntype>String</returntype>
+      <parameter>
+        <name>MainTxt</name>
+        <type>anywheresoftware.b4a.objects.LabelWrapper</type>
+      </parameter>
+      <parameter>
+        <name>TargetTxt</name>
+        <type>anywheresoftware.b4a.objects.EditTextWrapper</type>
+      </parameter>
+      <parameter>
+        <name>COLOR</name>
+        <type>int</type>
+      </parameter>
+    </method>
+    <method>
+      <name DesignerName="findtext2">_findtext2</name>
+      <comment>this is a library for quick search and highlight text in lable,edittext,....
+add Richstring library
+
+color: 1=Red , 2=Black , 3=White , 4=Green , 5=Blue , 6=Magenta , 7=Yellow
+example:
+
+Dim find as Findtext
+Dim l1 As Label
+Dim et1 As EditText
+Dim et2 As EditText
+Dim s as string
+
+find.findtext1(l1,et1,1) 
+find.findtext1(et2,et1,7) 
+find.findtext2(et2,s,7)
+
+By:www.ShamimeVesal.ir </comment>
+      <returntype>String</returntype>
+      <parameter>
+        <name>MainTxt</name>
+        <type>anywheresoftware.b4a.objects.LabelWrapper</type>
+      </parameter>
+      <parameter>
+        <name>TargetTxt</name>
+        <type>String</type>
+      </parameter>
+      <parameter>
+        <name>COLOR</name>
+        <type>int</type>
+      </parameter>
+    </method>
+  </class>
+  <version>1</version>
+</root>

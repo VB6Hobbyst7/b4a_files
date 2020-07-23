@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root>
+    <doclet-version-NOT-library-version>1.05</doclet-version-NOT-library-version>
+    <class>
+        <name>ir.hitex.sneaker.Hitex_Sneaker</name>
+        <shortname>Hitex_Sneaker</shortname>
+        <owner>activity</owner>
+        <method>
+            <name>Initialize</name>
+            <comment></comment>
+            <returntype>ir.hitex.sneaker.Hitex_Sneaker.Hi_Sneaker</returntype>
+            <parameter>
+                <name>ba</name>
+                <type>anywheresoftware.b4a.BA</type>
+            </parameter>
+        </method>
+    </class>
+    <class>
+        <name>ir.hitex.sneaker.Hitex_Sneaker.Hi_Sneaker</name>
+        <owner>process</owner>
+        <method>
+            <name>Sneak</name>
+            <comment>Shows sneaker with custom color and icon.</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>BackgroundColor</name>
+                <type>int</type>
+            </parameter>
+        </method>
+        <method>
+            <name>Message</name>
+            <comment>Sets the message to sneaker</comment>
+            <returntype>ir.hitex.sneaker.Hitex_Sneaker.Hi_Sneaker</returntype>
+            <parameter>
+                <name>Message</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+        <method>
+            <name>Message2</name>
+            <comment>Sets the message to sneaker with color</comment>
+            <returntype>ir.hitex.sneaker.Hitex_Sneaker.Hi_Sneaker</returntype>
+            <parameter>
+                <name>Message</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>Color</name>
+                <type>int</type>
+            </parameter>
+        </method>
+        <method>
+            <name>Typeface</name>
+            <comment>Set font for title and message</comment>
+            <returntype>ir.hitex.sneaker.Hitex_Sneaker.Hi_Sneaker</returntype>
+            <parameter>
+                <name>Typeface</name>
+                <type>anywheresoftware.b4a.keywords.constants.TypefaceWrapper</type>
+            </parameter>
+        </method>
+        <method>
+            <name>SneakError</name>
+            <comment>Shows error sneaker with fixed icon, background color and icon color.
+ Icons, background and text colors for this are not customizable</comment>
+            <returntype>void</returntype>
+        </method>
+        <method>
+            <name>Title</name>
+            <comment>Sets the title of the sneaker</comment>
+            <returntype>ir.hitex.sneaker.Hitex_Sneaker.Hi_Sneaker</returntype>
+            <parameter>
+                <name>Title</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+        <method>
+            <name>SneakWarning</name>
+            <comment>Shows warning sneaker with fixed icon, background color and icon color.
+ Icons, background and text colors for this are not customizable</comment>
+            <returntype>void</returntype>
+        </method>
+        <method>
+            <name>Duration</name>
+            <comment>Sets the duration for sneaker.
+ After this duration sneaker will disappear</comment>
+            <returntype>ir.hitex.sneaker.Hitex_Sneaker.Hi_Sneaker</returntype>
+            <parameter>
+                <name>Duration</name>
+                <type>int</type>
+            </parameter>
+        </method>
+        <method>
+            <name>Height</name>
+            <comment>Sets the height to sneaker</comment>
+            <returntype>ir.hitex.sneaker.Hitex_Sneaker.Hi_Sneaker</returntype>
+            <parameter>
+                <name>Height</name>
+                <type Pixel="true">int</type>
+            </parameter>
+        </method>
+        <method>
+            <name>Icon</name>
+            <comment>Sets the icon to sneaker
+ Icon resource for sneaker</comment>
+            <returntype>ir.hitex.sneaker.Hitex_Sneaker.Hi_Sneaker</returntype>
+            <parameter>
+                <name>Icon</name>
+                <type>int</type>
+            </parameter>
+        </method>
+        <method>
+            <name>Title2</name>
+            <comment>Sets the title of the sneaker with color</comment>
+            <returntype>ir.hitex.sneaker.Hitex_Sneaker.Hi_Sneaker</returntype>
+            <parameter>
+                <name>Title</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>Color</name>
+                <type>int</type>
+            </parameter>
+        </method>
+        <method>
+            <name>SneakSuccess</name>
+            <comment>Shows success sneaker with fixed icon, background color and icon color.
+ Icons, background and text colors for this are not customizable</comment>
+            <returntype>void</returntype>
+        </method>
+    </class>
+    <version>1.1</version>
+    <author>Sadeq Nameni (Hitexroid)</author>
+    <dependsOn>com.android.support:support-v4</dependsOn>
+    <dependsOn>com.android.support:appcompat-v7</dependsOn>
+</root>

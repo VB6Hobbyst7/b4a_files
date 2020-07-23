@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root>
+    <doclet-version-NOT-library-version>1.02</doclet-version-NOT-library-version>
+    <class>
+        <name>com.rootsoft.rsswipetodismiss.RSSwipeToDismissListView</name>
+        <shortname>RSSwipeToDismissListView</shortname>
+        <objectwrapper>com.rootsoft.rsswipetodismiss.SwipeDismissListViewTouchListener</objectwrapper>
+        <owner>process</owner>
+        <method>
+            <name>Initialize</name>
+            <comment>Create a ListView-specific touch listener. ListViews are given special treatment because
+ by default they handle touches for their list items... i.e. they're in charge of drawing
+ the pressed state (the list selector), handling list item clicks, etc.
+view: The ListView to make dismissable.</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>ba</name>
+                <type>anywheresoftware.b4a.BA</type>
+            </parameter>
+            <parameter>
+                <name>EventName</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>View</name>
+                <type>android.widget.ListView</type>
+            </parameter>
+        </method>
+        <method>
+            <name>setScrollListener</name>
+            <comment>Setting this scroll listener is required to ensure that during ListView scrolling,
+ we don't look for swipes.</comment>
+            <returntype>void</returntype>
+        </method>
+        <method>
+            <name>IsInitialized</name>
+            <comment></comment>
+            <returntype>boolean</returntype>
+        </method>
+        <property>
+            <name>Enabled</name>
+            <parameter>
+                <name>enabled</name>
+                <type>boolean</type>
+            </parameter>
+            <comment>Enables or disables (pauses or resumes) watching for swipe-to-dismiss gestures.</comment>
+        </property>
+        <property>
+            <name>SwipeListener</name>
+            <parameter>
+                <name>enable</name>
+                <type>boolean</type>
+            </parameter>
+            <comment></comment>
+        </property>
+    </class>
+    <class>
+        <name>com.rootsoft.rsswipetodismiss.RSSwipeToDismiss</name>
+        <shortname>RSSwipeToDismiss</shortname>
+        <objectwrapper>com.rootsoft.rsswipetodismiss.SwipeDismissTouchListener</objectwrapper>
+        <owner>process</owner>
+        <method>
+            <name>Initialize</name>
+            <comment>Constructs a new swipe-to-dismiss touch listener for the given view.
+view: The view to make dismissable.</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>ba</name>
+                <type>anywheresoftware.b4a.BA</type>
+            </parameter>
+            <parameter>
+                <name>EventName</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>View</name>
+                <type>anywheresoftware.b4a.objects.ConcreteViewWrapper</type>
+            </parameter>
+        </method>
+        <method>
+            <name>Initialize2</name>
+            <comment>Constructs a new swipe-to-dismiss touch listener for the given view.
+view: The view to make dismissable.
+token: An optional token/cookie object to be passed through to the callback.</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>ba</name>
+                <type>anywheresoftware.b4a.BA</type>
+            </parameter>
+            <parameter>
+                <name>EventName</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>View</name>
+                <type>anywheresoftware.b4a.objects.ConcreteViewWrapper</type>
+            </parameter>
+            <parameter>
+                <name>token</name>
+                <type>java.lang.Object</type>
+            </parameter>
+        </method>
+        <method>
+            <name>IsInitialized</name>
+            <comment></comment>
+            <returntype>boolean</returntype>
+        </method>
+        <property>
+            <name>SwipeListener</name>
+            <parameter>
+                <name>enable</name>
+                <type>boolean</type>
+            </parameter>
+            <comment></comment>
+        </property>
+    </class>
+    <version>1.0</version>
+    <author>XverhelstX</author>
+</root>

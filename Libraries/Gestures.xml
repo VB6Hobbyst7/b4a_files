@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root>
+    <doclet-version-NOT-library-version>1.02</doclet-version-NOT-library-version>
+    <class>
+        <name>anywheresoftware.b4a.agraham.gestures.Gestures</name>
+        <shortname>Gestures</shortname>
+        <comment>This library allows views to support Gestures (multi-touch).
+There is a single Gestures object provided by this library.</comment>
+        <owner>activity</owner>
+        <method>
+            <name>SetOnTouchListener</name>
+            <comment>Target must be a View of some sort.
+Sets the onTouchListener of the view to a Sub that must have a signature of
+Sub Whatever(view As Object, pointerID as Int, action As Int, X As Float, Y As Float) As Boolean.
+The view parameter is the Android View object that is raising the touch event.
+The X and Y parameters are the data for the pointer ID parameter.
+This Sub must return True if it wants to consume the event or False otherwise.</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>ba</name>
+                <type>anywheresoftware.b4a.BA</type>
+            </parameter>
+            <parameter>
+                <name>view</name>
+                <type>android.view.View</type>
+            </parameter>
+            <parameter>
+                <name>sub</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+        <method>
+            <name>GetX</name>
+            <comment>Returns the X position for the specified pointerID or -1 if there is no data for that pointer.</comment>
+            <returntype>float</returntype>
+            <parameter>
+                <name>pointerID</name>
+                <type>int</type>
+            </parameter>
+        </method>
+        <method>
+            <name>GetY</name>
+            <comment>Returns the Y position for the specified pointerID or -1 if there is no data for that pointer.</comment>
+            <returntype>float</returntype>
+            <parameter>
+                <name>pointerID</name>
+                <type>int</type>
+            </parameter>
+        </method>
+        <method>
+            <name>GetPointerCount</name>
+            <comment>Returns the number of pointers in contact with the screen.</comment>
+            <returntype>int</returntype>
+        </method>
+        <method>
+            <name>GetPointerID</name>
+            <comment>Pointer data is returned internally in arrays of length PointerCount which always start at index 0.
+This returns the pointerID whose data is at the specified index in those arrays.
+Returns -1 if there is no pointerID at that index.</comment>
+            <returntype>int</returntype>
+            <parameter>
+                <name>pointerindex</name>
+                <type>int</type>
+            </parameter>
+        </method>
+        <property>
+            <name>Version</name>
+            <returntype>double</returntype>
+            <comment>Returns the version of the library.</comment>
+        </property>
+        <field>
+            <name>ACTION_POINTER_DOWN</name>
+            <comment></comment>
+            <returntype>int</returntype>
+        </field>
+        <field>
+            <name>ACTION_DOWN</name>
+            <comment></comment>
+            <returntype>int</returntype>
+        </field>
+        <field>
+            <name>ACTION_POINTER_UP</name>
+            <comment></comment>
+            <returntype>int</returntype>
+        </field>
+        <field>
+            <name>ACTION_UP</name>
+            <comment></comment>
+            <returntype>int</returntype>
+        </field>
+        <field>
+            <name>ACTION_MOVE</name>
+            <comment></comment>
+            <returntype>int</returntype>
+        </field>
+    </class>
+    <version>1.2</version>
+    <comment>A gesture is the sequence of one or more touch events on the screen.
+Each successive touch during a gesture is given it's own pointer ID that it maintains during the gesture.
+Pointer IDs may be reused by the system during a gesture.
+
+A gesture always starts with an ACTION_DOWN for pointer ID 0. 
+During a gesture as a new pointer touches the screen an ACTION_POINTER_DOWN occurs for each new pointerID.
+During a gesture as a pointer leaves the screen an ACTION_POINTER_UP occurs for each pointerID.
+As pointers move during a gesture an ACTION_MOVE occurs for pointerID 0 with data available for all pointers.
+A gesture always ends with an ACTION_UP for the last pointer ID in contact with the screen.
+
+The position X and Y data is returned internally in data arrays of length PointerCount which always starts at index 0.
+The indices do not necessarily correspond to the pointer IDs.
+The pointer IDs in use can be obtained with the GetPointerID method for an index between 0 and PointerCount-1 and used to obtain the data for that pointer.
+
+The Android documentation says the gesture ends "when the final pointer goes up".
+This is not true for the authors phone where only two pointers appear to be supported.
+On this phone the gesture ends as soon as the first pointer is lifted off the screen even if the second pointer is still in contact with the screeen.
+In this case an ACTION_POINTER_UP for the first pointer with XY data available for both pointers by GetX and GetY is generated followed by an ACTION_UP for the second pointer with no data available.
+
+It is suggested that you set the initial position of each pointer ID on ACTION_DOWN or ACTION_POINTER_DOWN using the pointer ID and the X and Y parameters of the event.
+Update all pointer ID positions on ACTION_MOVE using GetPointerCount and GetPointerID and set the final position of each pointer ID on ACTION_POINTER_UP or ACTION__UP using the pointer ID and the X and Y parameters of the event.
+Assume that the gesture ends on receipt of ACTION_UP.
+Doing it this way avoids detecting and dealing with the anomaly noted above it if exists on a particular device.
+
+Owing to the limited resolution of capactive screens it is possible for the touch screen electronics to be unable to differentiate between two pointers close together. This can cause gesture sequences of moves that appear to be different to what actually occurred.
+For example if two pointers start diagonally opposite on the screen, move to cross over in the middle of the screen and end on the opposite diagonal this may appear as a sequence where each pointer moves to the middle and then back to its origin.
+On the authors phone this "switchover" can occur when the two pointers cross each other on either the vertical or horizontal exes even if well separated on the other axis.
+Worse still only one axis value can switch from one pointer ID to another indicating that the pointers are in totally different positions to where they actually are. This makes writing gesture recognition code quite "interesting"!</comment>
+    <author>Andrew Graham</author>
+</root>

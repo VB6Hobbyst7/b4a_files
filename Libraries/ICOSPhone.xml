@@ -1,0 +1,401 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root>
+    <doclet-version-NOT-library-version>1.01</doclet-version-NOT-library-version>
+    <class>
+        <name>giuseppe.salvi.icos.library.ICOSPhone</name>
+        <shortname>ICOSPhone</shortname>
+        <owner>activity</owner>
+        <permission>android.permission.ACCESS_NETWORK_STATE</permission>
+        <permission>android.permission.ACCESS_LOCATION</permission>
+        <permission>android.permission.ACCESS_GPS</permission>
+        <permission>android.permission.ACCESS_ASSISTED_GPS</permission>
+        <permission>android.permission.ACCESS_CELL_ID</permission>
+        <permission>android.permission.ACCESS_COARSE_LOCATION</permission>
+        <permission>android.permission.ACCESS_CHECKIN_PROPERTIES</permission>
+        <permission>android.permission.ACCESS_LOCATION_EXTRA_COMMANDS</permission>
+        <permission>android.permission.ACCESS_FINE_LOCATION</permission>
+        <permission>android.permission.ACCESS_WIFI_STATE</permission>
+        <permission>android.permission.BLUETOOTH_ADMIN</permission>
+        <permission>android.permission.BLUETOOTH</permission>
+        <permission>android.permission.BOOT_COMPLETED</permission>
+        <permission>android.permission.CALL_PHONE</permission>
+        <permission>android.permission.CALL_PRIVILEGED</permission>
+        <permission>android.permission.CAMERA</permission>
+        <permission>android.permission.CHANGE_WIFI_STATE</permission>
+        <permission>android.permission.FLASHLIGHT</permission>
+        <permission>android.permission-group.HARDWARE_CONTROLS</permission>
+        <permission>android.permission.HARDWARE_TEST</permission>
+        <permission>android.permission.INTERNET</permission>
+        <permission>android.permission.MODIFY_PHONE_STATE</permission>
+        <permission>android.permission.PROCESS_OUTGOING_CALLS</permission>
+        <permission>android.permission.READ_PHONE_STATE</permission>
+        <permission>android.permission.RECEIVE_SMS</permission>
+        <permission>android.permission.READ_SMS</permission>
+        <permission>android.permission.RECEIVE_BOOT_COMPLETED</permission>
+        <permission>android.permission.SEND_SMS</permission>
+        <permission>android.permission.SET_WALLPAPER</permission>
+        <permission>android.permission.UPDATE_DEVICE_STATS</permission>
+        <permission>android.permission.WAKE_LOCK</permission>
+        <permission>android.permission.WRITE_SETTINGS</permission>
+        <permission>android.permission.WRITE_SECURE_SETTINGS</permission>
+        <permission>android.permission.WRITE_SMS</permission>
+        <method>
+            <name>Initialize</name>
+            <comment>Initialize the Object.
+ Example:
+ Dim ph As ICOSPhone
+ ph.Initialize("ph")</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>ba</name>
+                <type>anywheresoftware.b4a.BA</type>
+            </parameter>
+            <parameter>
+                <name>EventName</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+        <method>
+            <name>Farenheit</name>
+            <comment>Example:
+ Dim ph As ICOSPhone
+ dim Label1 As Label
+ Label1.Text=ph.TempFarenheit
+ Return the degrees in Farenheit of your Battery</comment>
+            <returntype>java.lang.String</returntype>
+        </method>
+        <method>
+            <name>MakeCall</name>
+            <comment>Examples:
+ Dim Button1 As Button
+ Dim ph As ICOSPhone
+ 
+ Sub Button1_Click
+ ph.MakeCall
+ End Sub</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>ba</name>
+                <type>anywheresoftware.b4a.BA</type>
+            </parameter>
+            <parameter>
+                <name>Call</name>
+                <type>android.graphics.Bitmap</type>
+            </parameter>
+        </method>
+        <method>
+            <name>StartCamera</name>
+            <comment>Examples:
+ Dim Button1 As Button
+ Dim ph As ICOSPhone
+ 
+ Sub Button1_Click
+ ph.StartCamera
+ End Sub
+ Start On the Camera</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>ba</name>
+                <type>anywheresoftware.b4a.BA</type>
+            </parameter>
+        </method>
+        <method>
+            <name>LedOnOff</name>
+            <comment>Example:
+ Dim ph As ICOSPhone
+ ph.LedOnOff
+ Flash Mode On
+ 
+ This W'll turn Flash Mode  ON or OFF if is supported.</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>ba</name>
+                <type>anywheresoftware.b4a.BA</type>
+            </parameter>
+            <parameter>
+                <name>LedOn</name>
+                <type>android.graphics.Bitmap</type>
+            </parameter>
+            <parameter>
+                <name>LedOff</name>
+                <type>android.graphics.Bitmap</type>
+            </parameter>
+        </method>
+        <method>
+            <name>GetDisplayMetricsWidth</name>
+            <comment>Example:
+ Dim ph As ICOSPhone
+ ph.GetDisplayWidth
+ return the Display Width in pixel (ex. 600)</comment>
+            <returntype>int</returntype>
+            <parameter>
+                <name>ba</name>
+                <type>anywheresoftware.b4a.BA</type>
+            </parameter>
+        </method>
+        <method>
+            <name>GetDisplayMetricsHeight</name>
+            <comment>Example:
+ Dim ph As ICOSPhone
+ ph.GetDisplayHeight
+ return the DisplayHeight in pixel (ex. 1024)</comment>
+            <returntype>int</returntype>
+            <parameter>
+                <name>ba</name>
+                <type>anywheresoftware.b4a.BA</type>
+            </parameter>
+        </method>
+        <method>
+            <name>WiFiOnOff</name>
+            <comment>Examples:
+ Dim Button1 As Button
+ Dim ph As ICOSPhone
+ 
+ Sub Button1_Click
+ ph.EnableDisableWiFi
+ End Sub
+ Enable / Disable your WIFI</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>ba</name>
+                <type>anywheresoftware.b4a.BA</type>
+            </parameter>
+            <parameter>
+                <name>WiFiOn</name>
+                <type>android.graphics.Bitmap</type>
+            </parameter>
+            <parameter>
+                <name>WiFiOff</name>
+                <type>android.graphics.Bitmap</type>
+            </parameter>
+        </method>
+        <method>
+            <name>Celsius</name>
+            <comment>Example:
+ Dim ph As ICOSPhone
+ dim Label1 As Label
+ Label1.Text=ph.TempCelsius
+ Return the degrees in Celsius of your Battery</comment>
+            <returntype>java.lang.String</returntype>
+        </method>
+        <method>
+            <name>OpenWiFiSettings</name>
+            <comment>Examples:
+ Dim Button1 As Button
+ Dim ph As ICOSPhone
+ 
+ Sub Button1_Click
+ ph.OpenWifiSettings
+ End Sub
+ Open WiFi Settings</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>ba</name>
+                <type>anywheresoftware.b4a.BA</type>
+            </parameter>
+        </method>
+        <method>
+            <name>BluetoothOnOff</name>
+            <comment>Examples:
+ Dim Button1 As Button
+ Dim ph As ICOSPhone
+ 
+ Sub Button1_Click
+ ph.EnableDisableBluetooth
+ End Sub
+ Enable or Disable BlueTooth</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>ba</name>
+                <type>anywheresoftware.b4a.BA</type>
+            </parameter>
+            <parameter>
+                <name>BTooth</name>
+                <type>android.graphics.Bitmap</type>
+            </parameter>
+        </method>
+        <method>
+            <name>Level</name>
+            <comment>Example:
+ Dim ph As ICOSPhone
+ Dim Pb As ProgressBar
+ Dim Button1 As Button
+ 
+ Sub Button1_Click
+ pb.Progress=Level
+ End Sub
+ Return the amount of level of your Battery</comment>
+            <returntype>float</returntype>
+        </method>
+        <method>
+            <name>GPSOnOff</name>
+            <comment>Example:
+ Dim ph As ICOSPhone
+ ph.GPSOnOff
+ W'll start GPS On or Off</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>ba</name>
+                <type>anywheresoftware.b4a.BA</type>
+            </parameter>
+            <parameter>
+                <name>Gps</name>
+                <type>android.graphics.Bitmap</type>
+            </parameter>
+        </method>
+        <method>
+            <name>OpenGpsSetting</name>
+            <comment>Examples:
+ Dim Button1 As Button
+ Dim ph As ICOSPhone
+ 
+ Sub Button1_Click
+ ph.OpenGpsSetting
+ End Sub
+ Open Gps Setting</comment>
+            <returntype>void</returntype>
+        </method>
+        <property>
+            <name>AccessWiFiState</name>
+            <returntype>java.lang.String</returntype>
+            <comment>Example:
+ Dim ph As ICOSPhone
+ ph.AccessWiFiState
+ return the AccessWiFiState</comment>
+        </property>
+        <property>
+            <name>SimCardNumber</name>
+            <returntype>java.lang.String</returntype>
+            <comment>Example:
+ Dim ph As ICOSPhone
+ ph.SimCardNumber
+ return the SimCardNumber</comment>
+        </property>
+        <property>
+            <name>AvailMemory</name>
+            <returntype>java.lang.String</returntype>
+            <comment>Examples:
+ Dim Button1 As Button
+ Dim Label1 As Label
+ Dim ph As ICOSPhone
+ 
+ Sub Button1_Click
+ label1.Text=ph.AvailMemory
+ End Sub
+ Return Avail Memory</comment>
+        </property>
+        <property>
+            <name>Brightness</name>
+            <parameter>
+                <name>Brightness</name>
+                <type>float</type>
+            </parameter>
+            <comment>Example:
+ Dim ph As ICOSPhone
+ ph.Brightness
+ W'll set the Brightness of your screen</comment>
+        </property>
+        <property>
+            <name>OSVersion</name>
+            <returntype>java.lang.String</returntype>
+            <comment>Examples:
+ Dim Button1 As Button
+ Dim Label1 As Label
+ Dim ph As ICOSPhone
+ 
+ Sub Button1_Click
+ label1.Text=ph.OSVersion
+ End Sub
+ Display OSVersion of your device</comment>
+        </property>
+        <property>
+            <name>TotalMemory</name>
+            <returntype>java.lang.String</returntype>
+            <comment>Examples:
+ Dim Button1 As Button
+ Dim Label1 As Label
+ Dim ph As ICOSPhone
+ 
+ Sub Button1_Click
+ label1.Text=ph.TotalMemory
+ End Sub
+ Return Total Memory</comment>
+        </property>
+        <property>
+            <name>DeviceModel</name>
+            <returntype>java.lang.String</returntype>
+            <comment>Examples:
+ Dim Button1 As Button
+ Dim Label1 As Label
+ Dim ph As ICOSPhone
+ 
+ Sub Button1_Click
+ label1.Text=ph.DeviceModel
+ End Sub
+ Display the model of your device</comment>
+        </property>
+        <property>
+            <name>MacAddres</name>
+            <returntype>java.lang.String</returntype>
+            <comment>Example:
+ Dim ph As ICOSPhone
+ ph.MacAddres
+ return the MacAddres</comment>
+        </property>
+        <property>
+            <name>BlueToothSerial</name>
+            <returntype>java.lang.String</returntype>
+            <comment>Example:
+ Dim ph As ICOSPhone
+ ph.BlueToothSerial
+ If the Bluetooth is on w'll return the serial</comment>
+        </property>
+        <property>
+            <name>NetworkOperatorName</name>
+            <returntype>java.lang.String</returntype>
+            <comment>Examples:
+ Dim Button1 As Button
+ Dim Label1 As Label
+ Dim ph As ICOSPhone
+ 
+ Sub Button1_Click
+ label1.Text=ph.NetworkOperatorName
+ End Sub
+ Display the name of your NetworkOperator</comment>
+        </property>
+        <property>
+            <name>IPAddress</name>
+            <returntype>java.lang.String</returntype>
+            <comment>Examples:
+ Dim Button1 As Button
+ Dim Label1 As Label
+ Dim ph As ICOSPhone
+ 
+ Sub Button1_Click
+ label1.Text=ph.IPAddress
+ End Sub
+ Display your IP-Address</comment>
+        </property>
+        <property>
+            <name>UsedMemory</name>
+            <returntype>java.lang.String</returntype>
+            <comment>Examples:
+ Dim Button1 As Button
+ Dim Label1 As Label
+ Dim ph As ICOSPhone
+ 
+ Sub Button1_Click
+ label1.Text=ph.UsedMemory
+ End Sub
+ Return Used Memory</comment>
+        </property>
+        <property>
+            <name>Version</name>
+            <returntype>double</returntype>
+            <comment>Return The Version Of this Library</comment>
+        </property>
+    </class>
+    <version>1.4</version>
+    <comment></comment>
+    <author>Giuseppe Salvi</author>
+</root>

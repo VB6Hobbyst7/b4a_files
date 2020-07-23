@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <doclet-version-NOT-library-version>1.00</doclet-version-NOT-library-version>
+  <dependsOn>abextdrawing</dependsOn>
+  <class>
+    <name>com.ab.ab3dcamera.menu3d._item3d</name>
+    <shortname>item3D</shortname>
+    <owner>process</owner>
+    <method>
+      <name>Initialize</name>
+      <comment>Initializes the fields to their default value.</comment>
+      <returntype>void</returntype>
+    </method>
+    <field>
+      <name>IsInitialized</name>
+      <comment>Tests whether the object has been initialized.</comment>
+      <returntype>boolean</returntype>
+    </field>
+    <field>
+      <name>bmp</name>
+      <returntype>anywheresoftware.b4a.objects.drawable.CanvasWrapper.BitmapWrapper</returntype>
+    </field>
+    <field>
+      <name>Top</name>
+      <returntype>int</returntype>
+    </field>
+    <field>
+      <name>Left</name>
+      <returntype>int</returntype>
+    </field>
+    <field>
+      <name>Width</name>
+      <returntype>int</returntype>
+    </field>
+    <field>
+      <name>Height</name>
+      <returntype>int</returntype>
+    </field>
+  </class>
+  <class>
+    <name>com.ab.ab3dcamera.menu3d</name>
+    <shortname>Menu3D</shortname>
+    <owner>activity</owner>
+    <method>
+      <name>IsInitialized</name>
+      <comment>Tests whether the object has been initialized.</comment>
+      <returntype>boolean</returntype>
+    </method>
+    <method>
+      <name DesignerName="AddMenu">_addmenu</name>
+      <returntype>String</returntype>
+      <parameter>
+        <name>BackgroudImage</name>
+        <type>anywheresoftware.b4a.objects.drawable.CanvasWrapper.BitmapWrapper</type>
+      </parameter>
+      <parameter>
+        <name>IconImage</name>
+        <type>anywheresoftware.b4a.objects.drawable.CanvasWrapper.BitmapWrapper</type>
+      </parameter>
+      <parameter>
+        <name>Title</name>
+        <type>String</type>
+      </parameter>
+      <parameter>
+        <name>Description</name>
+        <type>String</type>
+      </parameter>
+    </method>
+    <method>
+      <name DesignerName="ApplyAnimation">_applyanimation</name>
+      <returntype>String</returntype>
+      <parameter>
+        <name>Action</name>
+        <type>int</type>
+      </parameter>
+      <parameter>
+        <name>Y</name>
+        <type>int</type>
+      </parameter>
+    </method>
+    <method>
+      <name DesignerName="Class_Globals">_class_globals</name>
+      <returntype>String</returntype>
+    </method>
+    <method>
+      <name DesignerName="Initialize">_initialize</name>
+      <comment>Initializes the object. You can add parameters to this method if needed.</comment>
+      <returntype>String</returntype>
+      <parameter>
+        <name>ba</name>
+        <type>anywheresoftware.b4a.BA</type>
+      </parameter>
+      <parameter>
+        <name>MenuItemHeight</name>
+        <type>int</type>
+      </parameter>
+      <parameter>
+        <name>Activity1</name>
+        <type>anywheresoftware.b4a.objects.ActivityWrapper</type>
+      </parameter>
+      <parameter>
+        <name>MenuPanel</name>
+        <type>anywheresoftware.b4a.objects.PanelWrapper</type>
+      </parameter>
+      <parameter>
+        <name>TextSize</name>
+        <type>int</type>
+      </parameter>
+      <parameter>
+        <name>TextColor</name>
+        <type>int</type>
+      </parameter>
+      <parameter>
+        <name>Font</name>
+        <type>anywheresoftware.b4a.keywords.constants.TypefaceWrapper</type>
+      </parameter>
+    </method>
+    <method>
+      <name DesignerName="ShowMenu">_showmenu</name>
+      <returntype>String</returntype>
+    </method>
+  </class>
+  <version>1</version>
+</root>

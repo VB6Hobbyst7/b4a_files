@@ -1,0 +1,386 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root>
+    <doclet-version-NOT-library-version>1.02</doclet-version-NOT-library-version>
+    <class>
+        <name>iranapp.org.datetimelibrary.TimeAgo</name>
+        <owner>process</owner>
+        <method>
+            <name>timeAgo</name>
+            <comment></comment>
+            <returntype>java.lang.String</returntype>
+            <parameter>
+                <name>millis</name>
+                <type>long</type>
+            </parameter>
+        </method>
+    </class>
+    <class>
+        <name>iranapp.org.datetimelibrary.NumberToWordsConverter</name>
+        <owner>process</owner>
+        <method>
+            <name>convert</name>
+            <comment></comment>
+            <returntype>java.lang.String</returntype>
+            <parameter>
+                <name>i</name>
+                <type>java.lang.Integer</type>
+            </parameter>
+        </method>
+    </class>
+    <class>
+        <name>iranapp.org.datetimelibrary.Main</name>
+        <owner>process</owner>
+        <method>
+            <name>setIranianDate</name>
+            <comment>setIranianDate:
+ Sets the date according to the Iranian calendar and adjusts the other dates.
+year: int
+month: int
+day: int</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>year</name>
+                <type>int</type>
+            </parameter>
+            <parameter>
+                <name>month</name>
+                <type>int</type>
+            </parameter>
+            <parameter>
+                <name>day</name>
+                <type>int</type>
+            </parameter>
+        </method>
+        <method>
+            <name>setJulianDate</name>
+            <comment>setJulianDate:
+ Sets the date according to the Julian calendar and adjusts the other dates.
+year: int
+month: int
+day: int</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>year</name>
+                <type>int</type>
+            </parameter>
+            <parameter>
+                <name>month</name>
+                <type>int</type>
+            </parameter>
+            <parameter>
+                <name>day</name>
+                <type>int</type>
+            </parameter>
+        </method>
+        <method>
+            <name>setGregorianDate</name>
+            <comment>setGregorianDate:
+ Sets the date according to the Gregorian calendar and adjusts the other dates.
+year: int
+month: int
+day: int</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>year</name>
+                <type>int</type>
+            </parameter>
+            <parameter>
+                <name>month</name>
+                <type>int</type>
+            </parameter>
+            <parameter>
+                <name>day</name>
+                <type>int</type>
+            </parameter>
+        </method>
+        <method>
+            <name>toString</name>
+            <comment>toString:
+ Overrides the default toString() method to return all dates.
+Return type: @return:String</comment>
+            <returntype>java.lang.String</returntype>
+        </method>
+        <method>
+            <name>nextDay</name>
+            <comment>nextDay:
+ Go to next julian day number (JDN) and adjusts the other dates.</comment>
+            <returntype>void</returntype>
+        </method>
+        <method>
+            <name>previousDay</name>
+            <comment>previousDay:
+ Go to previous julian day number (JDN) and adjusts the otehr dates.</comment>
+            <returntype>void</returntype>
+        </method>
+        <property>
+            <name>JulianDate</name>
+            <returntype>java.lang.String</returntype>
+            <comment>getJulianDate:
+ Returns a string version of Julian date</comment>
+        </property>
+        <property>
+            <name>DayOfWeek</name>
+            <returntype>int</returntype>
+            <comment>getDayOfWeek:
+ Returns the week day number. Monday=0..Sunday=6;</comment>
+        </property>
+        <property>
+            <name>JulianMonth</name>
+            <returntype>int</returntype>
+            <comment>getJulianMonth:
+ Returns the 'month' part of the Julian date.</comment>
+        </property>
+        <property>
+            <name>GregorianDay</name>
+            <returntype>int</returntype>
+            <comment>getGregorianDay:
+ Returns the 'day' part of the Gregorian date.</comment>
+        </property>
+        <property>
+            <name>JulianDay</name>
+            <returntype>int</returntype>
+            <comment>getJulianDay()
+ Returns the 'day' part of the Julian date.</comment>
+        </property>
+        <property>
+            <name>IranianDate</name>
+            <returntype>java.lang.String</returntype>
+            <comment>getIranianDate:
+ Returns a string version of Iranian date</comment>
+        </property>
+        <property>
+            <name>WeekDayStr</name>
+            <returntype>java.lang.String</returntype>
+            <comment>getWeekDayStr:
+ Returns the week day name.</comment>
+        </property>
+        <property>
+            <name>IranianMonth</name>
+            <returntype>int</returntype>
+            <comment>getIranianMonth:
+ Returns the 'month' part of the Iranian date.</comment>
+        </property>
+        <property>
+            <name>IranianYear</name>
+            <returntype>int</returntype>
+            <comment>getIranianYear:
+ Returns the 'year' part of the Iranian date.</comment>
+        </property>
+        <property>
+            <name>GregorianDate</name>
+            <returntype>java.lang.String</returntype>
+            <comment>getGregorianDate:
+ Returns a string version of Gregorian date</comment>
+        </property>
+        <property>
+            <name>GregorianYear</name>
+            <returntype>int</returntype>
+            <comment>getGregorianYear:
+ Returns the 'year' part of the Gregorian date.</comment>
+        </property>
+        <property>
+            <name>IranianDay</name>
+            <returntype>int</returntype>
+            <comment>getIranianDay:
+ Returns the 'day' part of the Iranian date.</comment>
+        </property>
+        <property>
+            <name>JulianYear</name>
+            <returntype>int</returntype>
+            <comment>getJulianYear:
+ Returns the 'year' part of the Julian date.</comment>
+        </property>
+        <property>
+            <name>GregorianMonth</name>
+            <returntype>int</returntype>
+            <comment>getGregorianMonth:
+ Returns the 'month' part of the Gregorian date.</comment>
+        </property>
+    </class>
+    <class>
+        <name>iranapp.org.datetimelibrary.DateTimeLibrary</name>
+        <shortname>DateTimeLibrary</shortname>
+        <owner>process</owner>
+        <method>
+            <name>GetPersianDate</name>
+            <comment>Author: www.iranapp.org
+Get Perisan Date
+For Get Current Persian Date set all Parameter(year,month,day) to 0</comment>
+            <returntype>java.lang.String</returntype>
+            <parameter>
+                <name>Year</name>
+                <type>int</type>
+            </parameter>
+            <parameter>
+                <name>Month</name>
+                <type>int</type>
+            </parameter>
+            <parameter>
+                <name>Day</name>
+                <type>int</type>
+            </parameter>
+            <parameter>
+                <name>Separator</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+        <method>
+            <name>FormatPrice</name>
+            <comment>Author: www.iranapp.org
+ Convert your number to price format</comment>
+            <returntype>java.lang.String</returntype>
+            <parameter>
+                <name>Number</name>
+                <type>double</type>
+            </parameter>
+        </method>
+        <method>
+            <name>GetTimeAgo</name>
+            <comment>Author: www.iranapp.org
+Get different between two date and get time ago</comment>
+            <returntype>java.lang.String</returntype>
+            <parameter>
+                <name>time</name>
+                <type>long</type>
+            </parameter>
+            <parameter>
+                <name>ba</name>
+                <type>anywheresoftware.b4a.BA</type>
+            </parameter>
+        </method>
+        <method>
+            <name>Number2Word</name>
+            <comment>Author: www.iranapp.org
+ Convert number to word
+ Example : 10000 =&gt; ده هزار</comment>
+            <returntype>java.lang.String</returntype>
+            <parameter>
+                <name>Number</name>
+                <type>int</type>
+            </parameter>
+        </method>
+    </class>
+    <class>
+        <name>iranapp.org.datetimelibrary.R</name>
+        <owner>process</owner>
+    </class>
+    <class>
+        <name>iranapp.org.datetimelibrary.R.attr</name>
+        <owner>process</owner>
+    </class>
+    <class>
+        <name>iranapp.org.datetimelibrary.R.drawable</name>
+        <owner>process</owner>
+        <field>
+            <name>ic_launcher</name>
+            <comment></comment>
+            <returntype>int</returntype>
+        </field>
+    </class>
+    <class>
+        <name>iranapp.org.datetimelibrary.R.string</name>
+        <owner>process</owner>
+        <field>
+            <name>time_ago_years</name>
+            <comment></comment>
+            <returntype>int</returntype>
+        </field>
+        <field>
+            <name>time_ago_hours</name>
+            <comment></comment>
+            <returntype>int</returntype>
+        </field>
+        <field>
+            <name>time_ago_hour</name>
+            <comment></comment>
+            <returntype>int</returntype>
+        </field>
+        <field>
+            <name>time_ago_year</name>
+            <comment></comment>
+            <returntype>int</returntype>
+        </field>
+        <field>
+            <name>time_ago_minute</name>
+            <comment></comment>
+            <returntype>int</returntype>
+        </field>
+        <field>
+            <name>app_name</name>
+            <comment></comment>
+            <returntype>int</returntype>
+        </field>
+        <field>
+            <name>time_ago_seconds</name>
+            <comment></comment>
+            <returntype>int</returntype>
+        </field>
+        <field>
+            <name>time_ago_suffix</name>
+            <comment></comment>
+            <returntype>int</returntype>
+        </field>
+        <field>
+            <name>time_ago_minutes</name>
+            <comment></comment>
+            <returntype>int</returntype>
+        </field>
+        <field>
+            <name>time_ago_months</name>
+            <comment></comment>
+            <returntype>int</returntype>
+        </field>
+        <field>
+            <name>time_ago_day</name>
+            <comment></comment>
+            <returntype>int</returntype>
+        </field>
+        <field>
+            <name>time_ago_days</name>
+            <comment></comment>
+            <returntype>int</returntype>
+        </field>
+        <field>
+            <name>time_ago_month</name>
+            <comment></comment>
+            <returntype>int</returntype>
+        </field>
+        <field>
+            <name>time_ago_prefix</name>
+            <comment></comment>
+            <returntype>int</returntype>
+        </field>
+    </class>
+    <class>
+        <name>iranapp.org.datetimelibrary.R.style</name>
+        <owner>process</owner>
+        <field>
+            <name>AppBaseTheme</name>
+            <comment>Base application theme, dependent on API level. This theme is replaced
+        by AppBaseTheme from res/values-vXX/styles.xml on newer devices.
+    
+
+            Theme customizations available in newer API levels can go in
+            res/values-vXX/styles.xml, while customizations related to
+            backward-compatibility can go here.</comment>
+            <returntype>int</returntype>
+        </field>
+        <field>
+            <name>AppTheme</name>
+            <comment>Application theme. 
+ All customizations that are NOT specific to a particular API-level can go here.</comment>
+            <returntype>int</returntype>
+        </field>
+    </class>
+    <class>
+        <name>iranapp.org.datetimelibrary.BuildConfig</name>
+        <owner>process</owner>
+        <field>
+            <name>DEBUG</name>
+            <comment></comment>
+            <returntype>boolean</returntype>
+        </field>
+    </class>
+    <version>1.0</version>
+    <author>www.iranapp.org</author>
+</root>

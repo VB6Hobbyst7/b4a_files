@@ -1,0 +1,197 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root>
+    <doclet-version-NOT-library-version>1.04</doclet-version-NOT-library-version>
+    <class>
+        <name>anywheresoftware.b4a.objects.BleManager</name>
+        <shortname>BleManager</shortname>
+        <owner>process</owner>
+        <event>DiscoveryFinished</event>
+        <event>DeviceFound (Name As String, MacAddress As String)</event>
+        <event>Connected (Services As Map)</event>
+        <event>Disconnected</event>
+        <event>CharacteristicRead (Success As Boolean, Characteristic As BleCharacteristic)</event>
+        <permission>android.permission.BLUETOOTH</permission>
+        <permission>android.permission.BLUETOOTH_ADMIN</permission>
+        <method>
+            <name>Connect</name>
+            <comment>Connects to the device with the given MAC address. You can only connect to a previously discovered device.
+AutoConnect - Whether to directly connect to the remote device (false) or to automatically connect as soon as the remote
+              device becomes available (true).</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>MacAddress</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>AutoConnect</name>
+                <type>boolean</type>
+            </parameter>
+        </method>
+        <method>
+            <name>Initialize</name>
+            <comment>Initializes the object and sets the subs that will handle the events.</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>ba</name>
+                <type>anywheresoftware.b4a.BA</type>
+            </parameter>
+            <parameter>
+                <name>EventName</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+        <method>
+            <name>Scan</name>
+            <comment>Starts scanning for devices.
+PeriodMs - Scan period measured in milliseconds.
+ServiceUUIDs - An array of UUIDs. Only devices supporting one of the UUIDs will be discovered. Pass Null to discover all devices.
+
+Returns True if the process started successfully.</comment>
+            <returntype>boolean</returntype>
+            <parameter>
+                <name>ba</name>
+                <type>anywheresoftware.b4a.BA</type>
+            </parameter>
+            <parameter>
+                <name>PeriodMs</name>
+                <type>long</type>
+            </parameter>
+            <parameter>
+                <name>ServiceUUIDs</name>
+                <type>java.lang.String[]</type>
+            </parameter>
+        </method>
+        <method>
+            <name>ReadCharacteristic</name>
+            <comment>Starts an asynchronous reading of a characteristic.</comment>
+            <returntype>boolean</returntype>
+            <parameter>
+                <name>Characteristic</name>
+                <type>anywheresoftware.b4a.objects.BleManager.GattCharacteristic</type>
+            </parameter>
+        </method>
+        <property>
+            <name>BleSupported</name>
+            <returntype>boolean</returntype>
+            <comment>Tests whether BLE is supported.</comment>
+        </property>
+    </class>
+    <class>
+        <name>anywheresoftware.b4a.objects.BleManager.GattServiceWrapper</name>
+        <shortname>BleService</shortname>
+        <objectwrapper>android.bluetooth.BluetoothGattService</objectwrapper>
+        <owner>process</owner>
+        <method>
+            <name>GetCharacteristics</name>
+            <comment></comment>
+            <returntype>anywheresoftware.b4a.objects.collections.Map</returntype>
+        </method>
+        <method>
+            <name>IsInitialized</name>
+            <comment></comment>
+            <returntype>boolean</returntype>
+        </method>
+        <property>
+            <name>Uuid</name>
+            <returntype>java.lang.String</returntype>
+            <comment>Returns the service UUID.</comment>
+        </property>
+    </class>
+    <class>
+        <name>anywheresoftware.b4a.objects.BleManager.GattCharacteristic</name>
+        <shortname>BleCharacteristic</shortname>
+        <objectwrapper>android.bluetooth.BluetoothGattCharacteristic</objectwrapper>
+        <owner>process</owner>
+        <method>
+            <name>GetIntValue</name>
+            <comment></comment>
+            <returntype>int</returntype>
+            <parameter>
+                <name>FormatType</name>
+                <type>int</type>
+            </parameter>
+            <parameter>
+                <name>Offset</name>
+                <type>int</type>
+            </parameter>
+        </method>
+        <method>
+            <name>GetFloatValue</name>
+            <comment></comment>
+            <returntype>float</returntype>
+            <parameter>
+                <name>FormatType</name>
+                <type>int</type>
+            </parameter>
+            <parameter>
+                <name>Offset</name>
+                <type>int</type>
+            </parameter>
+        </method>
+        <method>
+            <name>GetValue</name>
+            <comment>Returns the raw value.</comment>
+            <returntype>byte[]</returntype>
+        </method>
+        <method>
+            <name>GetStringValue</name>
+            <comment></comment>
+            <returntype>java.lang.String</returntype>
+            <parameter>
+                <name>Offset</name>
+                <type>int</type>
+            </parameter>
+        </method>
+        <method>
+            <name>IsInitialized</name>
+            <comment></comment>
+            <returntype>boolean</returntype>
+        </method>
+        <property>
+            <name>Uuid</name>
+            <returntype>java.lang.String</returntype>
+            <comment>Gets the characteristic Uuid.</comment>
+        </property>
+        <field>
+            <name>FORMAT_FLOAT</name>
+            <comment>Characteristic value format type float (32-bit float)</comment>
+            <returntype>int</returntype>
+        </field>
+        <field>
+            <name>FORMAT_UINT32</name>
+            <comment>Characteristic value format type uint32</comment>
+            <returntype>int</returntype>
+        </field>
+        <field>
+            <name>FORMAT_SINT16</name>
+            <comment>Characteristic value format type sint16</comment>
+            <returntype>int</returntype>
+        </field>
+        <field>
+            <name>FORMAT_SINT8</name>
+            <comment>Characteristic value format type sint8</comment>
+            <returntype>int</returntype>
+        </field>
+        <field>
+            <name>FORMAT_SINT32</name>
+            <comment>Characteristic value format type sint32</comment>
+            <returntype>int</returntype>
+        </field>
+        <field>
+            <name>FORMAT_UINT16</name>
+            <comment>Characteristic value format type uint16</comment>
+            <returntype>int</returntype>
+        </field>
+        <field>
+            <name>FORMAT_SFLOAT</name>
+            <comment>Characteristic value format type sfloat (16-bit float)</comment>
+            <returntype>int</returntype>
+        </field>
+        <field>
+            <name>FORMAT_UINT8</name>
+            <comment>Characteristic value format type uint8</comment>
+            <returntype>int</returntype>
+        </field>
+    </class>
+    <version>1.0</version>
+</root>

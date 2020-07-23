@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root>
+    <doclet-version-NOT-library-version>1.02</doclet-version-NOT-library-version>
+    <class>
+        <name>com.maximussoft.msos.MSOS</name>
+        <shortname>MSOS</shortname>
+        <owner>activity</owner>
+        <permission>android.permission.GET_TASKS</permission>
+        <method>
+            <name>getForegroundApp</name>
+            <comment>Returns a list of processes with the corresponding IMPORTANCE FLAG set
+ The format of the return list is &lt;processname&gt;|&lt;pid&gt;|&lt;uid&gt;</comment>
+            <returntype>anywheresoftware.b4a.objects.collections.List</returntype>
+            <parameter>
+                <name>ba</name>
+                <type>anywheresoftware.b4a.BA</type>
+            </parameter>
+            <parameter>
+                <name>pImportance</name>
+                <type>int</type>
+            </parameter>
+        </method>
+        <method>
+            <name>getSystemTotalMemorySize</name>
+            <comment>Gets the Total Memory size availble to the kernel, this excludes DMA buffers and other low level allocations</comment>
+            <returntype>long</returntype>
+            <parameter>
+                <name>ba</name>
+                <type>anywheresoftware.b4a.BA</type>
+            </parameter>
+        </method>
+        <method>
+            <name>getFormattedSystemTotalMemorySize</name>
+            <comment>Gets the formatted string for Total Memory size availble to the kernel, this excludes DMA buffers and other low level allocations</comment>
+            <returntype>java.lang.String</returntype>
+            <parameter>
+                <name>ba</name>
+                <type>anywheresoftware.b4a.BA</type>
+            </parameter>
+        </method>
+        <method>
+            <name>formateFileSize</name>
+            <comment>Formats the raw size of anything in bytes into a human readable string
+size: in bytes
+Return type: @return:a formatted string</comment>
+            <returntype>java.lang.String</returntype>
+            <parameter>
+                <name>ba</name>
+                <type>anywheresoftware.b4a.BA</type>
+            </parameter>
+            <parameter>
+                <name>size</name>
+                <type>long</type>
+            </parameter>
+        </method>
+        <method>
+            <name>getSystemAvailabeMemorySize</name>
+            <comment>Gets available/free system memory in bytes
+ba: 
+Return type: @return:</comment>
+            <returntype>long</returntype>
+            <parameter>
+                <name>ba</name>
+                <type>anywheresoftware.b4a.BA</type>
+            </parameter>
+        </method>
+        <method>
+            <name>getFormattedSystemAvailabeMemorySize</name>
+            <comment>Gets available/free system memory as a formatted string
+ba: 
+Return type: @return:</comment>
+            <returntype>java.lang.String</returntype>
+            <parameter>
+                <name>ba</name>
+                <type>anywheresoftware.b4a.BA</type>
+            </parameter>
+        </method>
+        <method>
+            <name>getProcessMemoryInfo</name>
+            <comment>Returns memory information about a process id
+  Get the process id from getForegroundApp
+pid: 
+Return type: @return:</comment>
+            <returntype>int</returntype>
+            <parameter>
+                <name>ba</name>
+                <type>anywheresoftware.b4a.BA</type>
+            </parameter>
+            <parameter>
+                <name>pid</name>
+                <type>int</type>
+            </parameter>
+        </method>
+        <method>
+            <name>getForegroundTask</name>
+            <comment>Returns a list of Running tasks
+ The format of the return list is &lt;packagename&gt;|&lt;topactivity&gt;</comment>
+            <returntype>anywheresoftware.b4a.objects.collections.List</returntype>
+            <parameter>
+                <name>ba</name>
+                <type>anywheresoftware.b4a.BA</type>
+            </parameter>
+        </method>
+        <property>
+            <name>NumCores</name>
+            <returntype>int</returntype>
+            <comment>Gets the number of cores available in this device, across all processors.
+ Requires: Ability to peruse the filesystem at "/sys/devices/system/cpu"</comment>
+        </property>
+        <field>
+            <name>IMPORTANCE_FOREGROUND</name>
+            <comment></comment>
+            <returntype>int</returntype>
+        </field>
+        <field>
+            <name>IMPORTANCE_VISIBLE</name>
+            <comment></comment>
+            <returntype>int</returntype>
+        </field>
+    </class>
+    <version>0.01</version>
+    <author>thedesolatesoul</author>
+</root>

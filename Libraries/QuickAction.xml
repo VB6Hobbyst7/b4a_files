@@ -1,0 +1,242 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root>
+    <doclet-version-NOT-library-version>1.04</doclet-version-NOT-library-version>
+    <class>
+        <name>QuickActionw.QuickWrap</name>
+        <shortname>QuickAction</shortname>
+        <owner>activity</owner>
+        <event>onaction(title as string)</event>
+        <method>
+            <name>Initialize</name>
+            <comment></comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>ba</name>
+                <type>anywheresoftware.b4a.BA</type>
+            </parameter>
+            <parameter>
+                <name>eventName</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+        <method>
+            <name>SetTextBackgroundDrawable</name>
+            <comment>Set the drawable that appears behind the Action text labels
+textBackgroundDrawable: the desired drawable
+Return type: @return:the QuickActionView</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>textBackgroundDrawable</name>
+                <type>int</type>
+            </parameter>
+        </method>
+        <method>
+            <name>SetTextPaddingRight</name>
+            <comment>Set the text right padding for the Action labels
+textPaddingRight: the top padding in pixels
+Return type: @return:the QuickActionView</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>textPaddingRight</name>
+                <type>int</type>
+            </parameter>
+        </method>
+        <method>
+            <name>SetTextPaddingBottom</name>
+            <comment>Set the text bottom padding for the Action labels
+textPaddingBottom: the top padding in pixels
+Return type: @return:the QuickActionView</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>textPaddingBottom</name>
+                <type>int</type>
+            </parameter>
+        </method>
+        <method>
+            <name>SetTextColor</name>
+            <comment>Set the text color for the Action labels
+textColor: the desired text color
+Return type: @return:the QuickActionView</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>textColor</name>
+                <type>int</type>
+            </parameter>
+        </method>
+        <method>
+            <name>SetIndicatorDrawable</name>
+            <comment>Set the indicator drawable (the drawable that appears at the point the user has long pressed
+indicatorDrawable: the indicator drawable
+Return type: @return:the QuickActionView</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>indicatorDrawable</name>
+                <type>android.graphics.drawable.Drawable</type>
+            </parameter>
+        </method>
+        <method>
+            <name>AddActions</name>
+            <comment>Add actions to the QuickActionView from the given menu resource id.
+menuId: menu resource id
+Return type: @return:the QuickActionView</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>menuId</name>
+                <type>int</type>
+            </parameter>
+        </method>
+        <method>
+            <name>Register</name>
+            <comment>Register the QuickActionView to appear when the passed view is long pressed
+view: the view to have long press responses
+Return type: @return:the QuickActionView</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>view</name>
+                <type>android.view.View</type>
+            </parameter>
+        </method>
+        <method>
+            <name>AddAction</name>
+            <comment>Adds an action to the QuickActionView
+action: the action to add
+Return type: @return:the QuickActionView</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>action</name>
+                <type>com.ovenbits.quickactionview.Action</type>
+            </parameter>
+        </method>
+        <method>
+            <name>RemoveAction</name>
+            <comment>Remove an individual action from the QuickActionView
+actionId: the action id
+Return type: @return:the QuickActionView</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>actionId</name>
+                <type>int</type>
+            </parameter>
+        </method>
+        <method>
+            <name>SetActionConfig</name>
+            <comment>Set a custom configuration for the action with the given id
+config: the configuration to attach
+actionId: the action id
+Return type: @return:this QuickActionView</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>config</name>
+                <type>com.ovenbits.quickactionview.Action.Config</type>
+            </parameter>
+            <parameter>
+                <name>actionId</name>
+                <type>int</type>
+            </parameter>
+        </method>
+        <method>
+            <name>SetTextPaddingTop</name>
+            <comment>Set the text top padding for the Action labels
+textPaddingTop: the top padding in pixels
+Return type: @return:the QuickActionView</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>textPaddingTop</name>
+                <type>int</type>
+            </parameter>
+        </method>
+        <method>
+            <name>SetTextPaddingLeft</name>
+            <comment>Set the text left padding for the Action labels
+textPaddingLeft: the top padding in pixels
+Return type: @return:the QuickActionView</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>textPaddingLeft</name>
+                <type>int</type>
+            </parameter>
+        </method>
+        <method>
+            <name>SetTypeface</name>
+            <comment>Set the typeface for the Action labels
+typeface: the desired typeface
+Return type: @return:the QuickActionView</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>typeface</name>
+                <type>android.graphics.Typeface</type>
+            </parameter>
+        </method>
+        <method>
+            <name>SetScrimColor</name>
+            <comment>Set the scrim color (the background behind the QuickActionView)
+scrimColor: the desired scrim color
+Return type: @return:the QuickActionView</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>scrimColor</name>
+                <type>int</type>
+            </parameter>
+        </method>
+        <method>
+            <name>SetTextSize</name>
+            <comment>Set the text size for the Action labels
+textSize: the desired textSize (in pixels)
+Return type: @return:the QuickActionView</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>textSize</name>
+                <type>int</type>
+            </parameter>
+        </method>
+        <method>
+            <name>Unregister</name>
+            <comment>Unregister the view so that it can no longer be long pressed to show the QuickActionView
+view: the view to unregister</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>view</name>
+                <type>android.view.View</type>
+            </parameter>
+        </method>
+        <method>
+            <name>SetBackgroundColor</name>
+            <comment>Set the action's background color. If you want to have a pressed state,
+ see {@link #setBackgroundColorStateList(ColorStateList)}
+backgroundColor: the desired background color
+Return type: @return:the QuickActionView</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>backgroundColor</name>
+                <type>int</type>
+            </parameter>
+        </method>
+        <method>
+            <name>RemoveActions</name>
+            <comment>Removes all actions from the QuickActionView
+Return type: @return:the QuickActionView</comment>
+            <returntype>void</returntype>
+        </method>
+        <method>
+            <name>ActionItem</name>
+            <comment></comment>
+            <returntype>com.ovenbits.quickactionview.Action</returntype>
+            <parameter>
+                <name>id</name>
+                <type>int</type>
+            </parameter>
+            <parameter>
+                <name>title</name>
+                <type>java.lang.CharSequence</type>
+            </parameter>
+            <parameter>
+                <name>icon</name>
+                <type>android.graphics.drawable.Drawable</type>
+            </parameter>
+        </method>
+    </class>
+    <version>1.11</version>
+    <author>Mohsen Soltaniyan</author>
+    <dependsOn>android-support-v4</dependsOn>
+    <dependsOn>android-support-v7-appcompat</dependsOn>
+</root>

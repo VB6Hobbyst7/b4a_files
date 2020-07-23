@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <doclet-version-NOT-library-version>1.00</doclet-version-NOT-library-version>
+  <dependsOn>reflection</dependsOn>
+  <dependsOn>stringutils</dependsOn>
+  <dependsOn>richstring</dependsOn>
+  <dependsOn>javaobject</dependsOn>
+  <class>
+    <name>njdude.customtooltip.lib.customtooltip</name>
+    <shortname>CustomTooltip</shortname>
+    <owner>activity</owner>
+    <method>
+      <name>IsInitialized</name>
+      <comment>Tests whether the object has been initialized.</comment>
+      <returntype>boolean</returntype>
+    </method>
+    <method>
+      <name DesignerName="Hide">_hide</name>
+      <comment>Hides the CustomTooltip.</comment>
+      <returntype>String</returntype>
+    </method>
+    <method>
+      <name DesignerName="Initialize">_initialize</name>
+      <comment>Initializes the CustomTooltip library.
+Parent: Activity or Panel where the custom view will be added to.
+EditTextName: EditText where the tooltip will show.
+AutoScaleText: True = Auto scale, False = Do not auto scale.</comment>
+      <returntype>String</returntype>
+      <parameter>
+        <name>ba</name>
+        <type>anywheresoftware.b4a.BA</type>
+      </parameter>
+      <parameter>
+        <name>Parent</name>
+        <type>anywheresoftware.b4a.objects.PanelWrapper</type>
+      </parameter>
+      <parameter>
+        <name>EditTextName</name>
+        <type>anywheresoftware.b4a.objects.EditTextWrapper</type>
+      </parameter>
+      <parameter>
+        <name>AutoScaleText</name>
+        <type>boolean</type>
+      </parameter>
+    </method>
+    <method>
+      <name DesignerName="setDelay" HideFromIDE="true">_setdelay</name>
+      <comment>Interval: Milliseconds (1000 = 1 second).</comment>
+      <returntype>String</returntype>
+      <parameter>
+        <name>Interval</name>
+        <type>int</type>
+      </parameter>
+    </method>
+    <method>
+      <name DesignerName="setRichText" HideFromIDE="true">_setrichtext</name>
+      <comment>Set the CustomTooltip text using a RichString.</comment>
+      <returntype>String</returntype>
+      <parameter>
+        <name>Text</name>
+        <type>anywheresoftware.b4a.agraham.richstring.RichStringBuilder.RichString</type>
+      </parameter>
+    </method>
+    <method>
+      <name DesignerName="setText" HideFromIDE="true">_settext</name>
+      <comment>Set the CustomTooltip text.</comment>
+      <returntype>String</returntype>
+      <parameter>
+        <name>Text</name>
+        <type>String</type>
+      </parameter>
+    </method>
+    <method>
+      <name DesignerName="setTextColor" HideFromIDE="true">_settextcolor</name>
+      <comment>Sets the CustomTooltip text color.</comment>
+      <returntype>String</returntype>
+      <parameter>
+        <name>Color</name>
+        <type>int</type>
+      </parameter>
+    </method>
+    <method>
+      <name DesignerName="Show">_show</name>
+      <comment>Shows the CustomTooltip.</comment>
+      <returntype>String</returntype>
+    </method>
+    <property>
+      <name DesignerName="Delay">_delay</name>
+      <comment>Interval: Milliseconds (1000 = 1 second).</comment>
+      <returntype>void</returntype>
+      <parameter>
+        <name>Value</name>
+        <type>int</type>
+      </parameter>
+    </property>
+    <property>
+      <name DesignerName="RichText">_richtext</name>
+      <comment>Set the CustomTooltip text using a RichString.</comment>
+      <returntype>void</returntype>
+      <parameter>
+        <name>Value</name>
+        <type>anywheresoftware.b4a.agraham.richstring.RichStringBuilder.RichString</type>
+      </parameter>
+    </property>
+    <property>
+      <name DesignerName="Text">_text</name>
+      <comment>Set the CustomTooltip text.</comment>
+      <returntype>void</returntype>
+      <parameter>
+        <name>Value</name>
+        <type>String</type>
+      </parameter>
+    </property>
+    <property>
+      <name DesignerName="TextColor">_textcolor</name>
+      <comment>Sets the CustomTooltip text color.</comment>
+      <returntype>void</returntype>
+      <parameter>
+        <name>Value</name>
+        <type>int</type>
+      </parameter>
+    </property>
+  </class>
+  <class>
+    <name>njdude.customtooltip.lib.jarfileloader</name>
+    <shortname>JarFileLoader</shortname>
+    <owner>process</owner>
+    <method>
+      <name>IsInitialized</name>
+      <comment>Tests whether the object has been initialized.</comment>
+      <returntype>boolean</returntype>
+    </method>
+    <method>
+      <name DesignerName="Initialize">_initialize</name>
+      <returntype>String</returntype>
+      <parameter>
+        <name>ba</name>
+        <type>anywheresoftware.b4a.BA</type>
+      </parameter>
+      <parameter>
+        <name>FromAssetsFile</name>
+        <type>boolean</type>
+      </parameter>
+    </method>
+    <method>
+      <name DesignerName="LoadBitmapFromJar">_loadbitmapfromjar</name>
+      <returntype>anywheresoftware.b4a.objects.drawable.CanvasWrapper.BitmapWrapper</returntype>
+      <parameter>
+        <name>FileName</name>
+        <type>String</type>
+      </parameter>
+    </method>
+    <method>
+      <name DesignerName="LoadFileFromJar">_loadfilefromjar</name>
+      <returntype>anywheresoftware.b4a.objects.streams.File.InputStreamWrapper</returntype>
+      <parameter>
+        <name>FileName</name>
+        <type>String</type>
+      </parameter>
+    </method>
+    <method>
+      <name DesignerName="LoadNinePatchDrawable">_loadninepatchdrawable</name>
+      <returntype>Object</returntype>
+      <parameter>
+        <name>FileName</name>
+        <type>String</type>
+      </parameter>
+      <parameter>
+        <name>Left</name>
+        <type>int</type>
+      </parameter>
+      <parameter>
+        <name>Right</name>
+        <type>int</type>
+      </parameter>
+    </method>
+    <method>
+      <name DesignerName="LoadTextFromJar">_loadtextfromjar</name>
+      <returntype>String</returntype>
+      <parameter>
+        <name>FileName</name>
+        <type>String</type>
+      </parameter>
+    </method>
+  </class>
+  <version>1</version>
+  <author>NJDude</author>
+</root>

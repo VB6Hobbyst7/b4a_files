@@ -1,0 +1,378 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <doclet-version-NOT-library-version>1.00</doclet-version-NOT-library-version>
+  <dependsOn>xmlsax</dependsOn>
+  <dependsOn>http</dependsOn>
+  <dependsOn>reflection</dependsOn>
+  <class>
+    <name>njdude.customrssview.sample.customrssview</name>
+    <shortname>CustomRSSView</shortname>
+    <owner>activity</owner>
+    <permission>android.permission.INTERNET</permission>
+    <permission>android.permission.WRITE_EXTERNAL_STORAGE</permission>
+    <event>ItemClicked(URL As String)</event>
+    <event>FinishedLoading</event>
+    <event>ErrorMessage(Message As String)</event>
+    <method>
+      <name>IsInitialized</name>
+      <comment>Tests whether the object has been initialized.</comment>
+      <returntype>boolean</returntype>
+    </method>
+    <method>
+      <name DesignerName="AddToRSSView">_addtorssview</name>
+      <comment>Add data to the CustomRSSView.</comment>
+      <returntype>String</returntype>
+      <parameter>
+        <name>Title</name>
+        <type>String</type>
+      </parameter>
+      <parameter>
+        <name>Author</name>
+        <type>String</type>
+      </parameter>
+      <parameter>
+        <name>Image</name>
+        <type>String</type>
+      </parameter>
+      <parameter>
+        <name>Description</name>
+        <type>String</type>
+      </parameter>
+      <parameter>
+        <name>PubDate</name>
+        <type>String</type>
+      </parameter>
+      <parameter>
+        <name>Link</name>
+        <type>String</type>
+      </parameter>
+    </method>
+    <method>
+      <name DesignerName="AuthorTextColor">_authortextcolor</name>
+      <comment>Red, Green, Blue: Values 0 - 255.</comment>
+      <returntype>String</returntype>
+      <parameter>
+        <name>Red</name>
+        <type>int</type>
+      </parameter>
+      <parameter>
+        <name>Green</name>
+        <type>int</type>
+      </parameter>
+      <parameter>
+        <name>Blue</name>
+        <type>int</type>
+      </parameter>
+    </method>
+    <method>
+      <name DesignerName="CustomRSSViewBackgroundColor">_customrssviewbackgroundcolor</name>
+      <comment>Red, Green, Blue: Values 0 - 255.
+Alpha: Value 0 - 100.</comment>
+      <returntype>String</returntype>
+      <parameter>
+        <name>Red</name>
+        <type>int</type>
+      </parameter>
+      <parameter>
+        <name>Green</name>
+        <type>int</type>
+      </parameter>
+      <parameter>
+        <name>Blue</name>
+        <type>int</type>
+      </parameter>
+      <parameter>
+        <name>Alpha</name>
+        <type>int</type>
+      </parameter>
+    </method>
+    <method>
+      <name DesignerName="DescriptionBackgroundColor">_descriptionbackgroundcolor</name>
+      <comment>Red, Green, Blue: Values 0 - 255.
+Alpha: Value 0 - 100.</comment>
+      <returntype>String</returntype>
+      <parameter>
+        <name>Red</name>
+        <type>int</type>
+      </parameter>
+      <parameter>
+        <name>Green</name>
+        <type>int</type>
+      </parameter>
+      <parameter>
+        <name>Blue</name>
+        <type>int</type>
+      </parameter>
+      <parameter>
+        <name>Alpha</name>
+        <type>int</type>
+      </parameter>
+    </method>
+    <method>
+      <name DesignerName="DescriptionTextColor">_descriptiontextcolor</name>
+      <comment>Red, Green, Blue: Values 0 - 255.</comment>
+      <returntype>String</returntype>
+      <parameter>
+        <name>Red</name>
+        <type>int</type>
+      </parameter>
+      <parameter>
+        <name>Green</name>
+        <type>int</type>
+      </parameter>
+      <parameter>
+        <name>Blue</name>
+        <type>int</type>
+      </parameter>
+    </method>
+    <method>
+      <name DesignerName="getIsOpen" HideFromIDE="true">_getisopen</name>
+      <comment>Returns True if open, False if not.</comment>
+      <returntype>boolean</returntype>
+    </method>
+    <method>
+      <name DesignerName="HideCustomRSSView">_hidecustomrssview</name>
+      <comment>Hides the CustomRSSView.</comment>
+      <returntype>String</returntype>
+    </method>
+    <method>
+      <name DesignerName="Initialize">_initialize</name>
+      <comment>Initializes the CustomRSSView library.
+Parent: Activity or Panel where the custom view will be added to.
+Module: Me (Required).
+EventName: Prefix to be used on the event responses.
+Top: CustomRSSView top position.
+Height: CustomRSSView height.</comment>
+      <returntype>String</returntype>
+      <parameter>
+        <name>ba</name>
+        <type>anywheresoftware.b4a.BA</type>
+      </parameter>
+      <parameter>
+        <name>Parent</name>
+        <type>anywheresoftware.b4a.objects.PanelWrapper</type>
+      </parameter>
+      <parameter>
+        <name>Module</name>
+        <type>Object</type>
+      </parameter>
+      <parameter>
+        <name>EventName</name>
+        <type>String</type>
+      </parameter>
+      <parameter>
+        <name>Top</name>
+        <type>int</type>
+      </parameter>
+      <parameter>
+        <name>Height</name>
+        <type>int</type>
+      </parameter>
+    </method>
+    <method>
+      <name DesignerName="ItemBackgroundColor">_itembackgroundcolor</name>
+      <comment>Red, Green, Blue: Values 0 - 255.
+Alpha: Value 0 - 100.</comment>
+      <returntype>String</returntype>
+      <parameter>
+        <name>Red</name>
+        <type>int</type>
+      </parameter>
+      <parameter>
+        <name>Green</name>
+        <type>int</type>
+      </parameter>
+      <parameter>
+        <name>Blue</name>
+        <type>int</type>
+      </parameter>
+      <parameter>
+        <name>Alpha</name>
+        <type>int</type>
+      </parameter>
+    </method>
+    <method>
+      <name DesignerName="ParseOfflineRSS">_parseofflinerss</name>
+      <comment>Parse an offline RSS Feed.</comment>
+      <returntype>String</returntype>
+      <parameter>
+        <name>Directory</name>
+        <type>String</type>
+      </parameter>
+      <parameter>
+        <name>FileName</name>
+        <type>String</type>
+      </parameter>
+    </method>
+    <method>
+      <name DesignerName="ParseRSS">_parserss</name>
+      <comment>Parse an online RSS Feed.</comment>
+      <returntype>String</returntype>
+      <parameter>
+        <name>URL</name>
+        <type>String</type>
+      </parameter>
+    </method>
+    <method>
+      <name DesignerName="PrepareRSSView">_preparerssview</name>
+      <comment>Prepare the CustomRSSView to receive data.
+This MUST be called before using AddToRSSView.</comment>
+      <returntype>String</returntype>
+    </method>
+    <method>
+      <name DesignerName="PublishedTextColor">_publishedtextcolor</name>
+      <comment>Red, Green, Blue: Values 0 - 255.</comment>
+      <returntype>String</returntype>
+      <parameter>
+        <name>Red</name>
+        <type>int</type>
+      </parameter>
+      <parameter>
+        <name>Green</name>
+        <type>int</type>
+      </parameter>
+      <parameter>
+        <name>Blue</name>
+        <type>int</type>
+      </parameter>
+    </method>
+    <method>
+      <name DesignerName="ResetToDefaults">_resettodefaults</name>
+      <comment>Reset all the CustomRSSView colors to default.</comment>
+      <returntype>String</returntype>
+    </method>
+    <method>
+      <name DesignerName="setAuthorPrompt" HideFromIDE="true">_setauthorprompt</name>
+      <comment>Sets the Author field prompt.</comment>
+      <returntype>String</returntype>
+      <parameter>
+        <name>Prompt</name>
+        <type>String</type>
+      </parameter>
+    </method>
+    <method>
+      <name DesignerName="setPublishedPrompt" HideFromIDE="true">_setpublishedprompt</name>
+      <comment>Sets the Published field prompt.</comment>
+      <returntype>String</returntype>
+      <parameter>
+        <name>Prompt</name>
+        <type>String</type>
+      </parameter>
+    </method>
+    <method>
+      <name DesignerName="ShowRSSView">_showrssview</name>
+      <comment>Show the CustomRSSView.</comment>
+      <returntype>String</returntype>
+    </method>
+    <method>
+      <name DesignerName="TitleBackgroundColor">_titlebackgroundcolor</name>
+      <comment>Red, Green, Blue: Values 0 - 255.
+Alpha: Value 0 - 100.</comment>
+      <returntype>String</returntype>
+      <parameter>
+        <name>Red</name>
+        <type>int</type>
+      </parameter>
+      <parameter>
+        <name>Green</name>
+        <type>int</type>
+      </parameter>
+      <parameter>
+        <name>Blue</name>
+        <type>int</type>
+      </parameter>
+      <parameter>
+        <name>Alpha</name>
+        <type>int</type>
+      </parameter>
+    </method>
+    <method>
+      <name DesignerName="TitleTextColor">_titletextcolor</name>
+      <comment>Red, Green, Blue: Values 0 - 255.</comment>
+      <returntype>String</returntype>
+      <parameter>
+        <name>Red</name>
+        <type>int</type>
+      </parameter>
+      <parameter>
+        <name>Green</name>
+        <type>int</type>
+      </parameter>
+      <parameter>
+        <name>Blue</name>
+        <type>int</type>
+      </parameter>
+    </method>
+    <property>
+      <name DesignerName="IsOpen">_isopen</name>
+      <comment>Returns True if open, False if not.</comment>
+      <returntype>boolean</returntype>
+    </property>
+    <property>
+      <name DesignerName="AuthorPrompt">_authorprompt</name>
+      <comment>Sets the Author field prompt.</comment>
+      <returntype>void</returntype>
+      <parameter>
+        <name>Value</name>
+        <type>String</type>
+      </parameter>
+    </property>
+    <property>
+      <name DesignerName="PublishedPrompt">_publishedprompt</name>
+      <comment>Sets the Published field prompt.</comment>
+      <returntype>void</returntype>
+      <parameter>
+        <name>Value</name>
+        <type>String</type>
+      </parameter>
+    </property>
+  </class>
+  <class>
+    <name>njdude.customrssview.sample.jarfileloader</name>
+    <shortname>JarFileLoader</shortname>
+    <owner>process</owner>
+    <method>
+      <name>IsInitialized</name>
+      <comment>Tests whether the object has been initialized.</comment>
+      <returntype>boolean</returntype>
+    </method>
+    <method>
+      <name DesignerName="Initialize">_initialize</name>
+      <returntype>String</returntype>
+      <parameter>
+        <name>ba</name>
+        <type>anywheresoftware.b4a.BA</type>
+      </parameter>
+      <parameter>
+        <name>FromAssetsFile</name>
+        <type>boolean</type>
+      </parameter>
+    </method>
+    <method>
+      <name DesignerName="LoadBitmapFromJar">_loadbitmapfromjar</name>
+      <returntype>anywheresoftware.b4a.objects.drawable.CanvasWrapper.BitmapWrapper</returntype>
+      <parameter>
+        <name>FileName</name>
+        <type>String</type>
+      </parameter>
+    </method>
+    <method>
+      <name DesignerName="LoadFileFromJar">_loadfilefromjar</name>
+      <returntype>anywheresoftware.b4a.objects.streams.File.InputStreamWrapper</returntype>
+      <parameter>
+        <name>FileName</name>
+        <type>String</type>
+      </parameter>
+    </method>
+    <method>
+      <name DesignerName="LoadTextFileFromJar">_loadtextfilefromjar</name>
+      <returntype>String</returntype>
+      <parameter>
+        <name>FileName</name>
+        <type>String</type>
+      </parameter>
+    </method>
+  </class>
+  <version>1.4</version>
+  <author>NJDude</author>
+</root>

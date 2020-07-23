@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <doclet-version-NOT-library-version>1.00</doclet-version-NOT-library-version>
+  <dependsOn>phone</dependsOn>
+  <dependsOn>reflection</dependsOn>
+  <dependsOn>b4alocationmanager</dependsOn>
+  <dependsOn>gps</dependsOn>
+  <class>
+    <name>b4a.example.deviceinfo</name>
+    <shortname>DeviceInfo</shortname>
+    <owner>process</owner>
+    <permission>android.permission.READ_PHONE_STATE</permission>
+    <permission>android.permission.ACCESS_COARSE_LOCATION</permission>
+    <permission>android.permission.INTERNET</permission>
+    <permission>android.permission.ACCESS_FINE_LOCATION</permission>
+    <permission>android.permission.ACCESS_MOCK_LOCATION</permission>
+    <method>
+      <name>IsInitialized</name>
+      <comment>Tests whether the object has been initialized.</comment>
+      <returntype>boolean</returntype>
+    </method>
+    <method>
+      <name DesignerName="getAirplaceMode" HideFromIDE="true">_getairplacemode</name>
+      <returntype>boolean</returntype>
+    </method>
+    <method>
+      <name DesignerName="getCellularData" HideFromIDE="true">_getcellulardata</name>
+      <returntype>String</returntype>
+    </method>
+    <method>
+      <name DesignerName="getCurrentLanguage" HideFromIDE="true">_getcurrentlanguage</name>
+      <returntype>String</returntype>
+    </method>
+    <method>
+      <name DesignerName="getDensity" HideFromIDE="true">_getdensity</name>
+      <returntype>int</returntype>
+    </method>
+    <method>
+      <name DesignerName="getDeviceID" HideFromIDE="true">_getdeviceid</name>
+      <returntype>String</returntype>
+    </method>
+    <method>
+      <name DesignerName="getDisplayInch" HideFromIDE="true">_getdisplayinch</name>
+      <returntype>int</returntype>
+    </method>
+    <method>
+      <name DesignerName="getLocation" HideFromIDE="true">_getlocation</name>
+      <returntype>anywheresoftware.b4a.keywords.Common.ResumableSubWrapper</returntype>
+    </method>
+    <method>
+      <name DesignerName="getManufacture" HideFromIDE="true">_getmanufacture</name>
+      <returntype>String</returntype>
+    </method>
+    <method>
+      <name DesignerName="getModel" HideFromIDE="true">_getmodel</name>
+      <returntype>String</returntype>
+    </method>
+    <method>
+      <name DesignerName="getNetworkOperatorName" HideFromIDE="true">_getnetworkoperatorname</name>
+      <returntype>String</returntype>
+    </method>
+    <method>
+      <name DesignerName="getNetworkType" HideFromIDE="true">_getnetworktype</name>
+      <returntype>String</returntype>
+    </method>
+    <method>
+      <name DesignerName="getPhoneType" HideFromIDE="true">_getphonetype</name>
+      <returntype>String</returntype>
+    </method>
+    <method>
+      <name DesignerName="getProduct" HideFromIDE="true">_getproduct</name>
+      <returntype>String</returntype>
+    </method>
+    <method>
+      <name DesignerName="getRoamingNetwork" HideFromIDE="true">_getroamingnetwork</name>
+      <returntype>boolean</returntype>
+    </method>
+    <method>
+      <name DesignerName="getSdkVersion" HideFromIDE="true">_getsdkversion</name>
+      <returntype>int</returntype>
+    </method>
+    <method>
+      <name DesignerName="getSimOperator" HideFromIDE="true">_getsimoperator</name>
+      <returntype>String</returntype>
+    </method>
+    <method>
+      <name DesignerName="Initialize">_initialize</name>
+      <comment>Initializes the object. You can add parameters to this method if needed.
+</comment>
+      <returntype>String</returntype>
+      <parameter>
+        <name>ba</name>
+        <type>anywheresoftware.b4a.BA</type>
+      </parameter>
+    </method>
+    <property>
+      <name DesignerName="AirplaceMode">_airplacemode</name>
+      <returntype>boolean</returntype>
+    </property>
+    <property>
+      <name DesignerName="CellularData">_cellulardata</name>
+      <returntype>String</returntype>
+    </property>
+    <property>
+      <name DesignerName="CurrentLanguage">_currentlanguage</name>
+      <returntype>String</returntype>
+    </property>
+    <property>
+      <name DesignerName="Density">_density</name>
+      <returntype>int</returntype>
+    </property>
+    <property>
+      <name DesignerName="DeviceID">_deviceid</name>
+      <returntype>String</returntype>
+    </property>
+    <property>
+      <name DesignerName="DisplayInch">_displayinch</name>
+      <returntype>int</returntype>
+    </property>
+    <property>
+      <name DesignerName="Location">_location</name>
+      <returntype>anywheresoftware.b4a.keywords.Common.ResumableSubWrapper</returntype>
+    </property>
+    <property>
+      <name DesignerName="Manufacture">_manufacture</name>
+      <returntype>String</returntype>
+    </property>
+    <property>
+      <name DesignerName="Model">_model</name>
+      <returntype>String</returntype>
+    </property>
+    <property>
+      <name DesignerName="NetworkOperatorName">_networkoperatorname</name>
+      <returntype>String</returntype>
+    </property>
+    <property>
+      <name DesignerName="NetworkType">_networktype</name>
+      <returntype>String</returntype>
+    </property>
+    <property>
+      <name DesignerName="PhoneType">_phonetype</name>
+      <returntype>String</returntype>
+    </property>
+    <property>
+      <name DesignerName="Product">_product</name>
+      <returntype>String</returntype>
+    </property>
+    <property>
+      <name DesignerName="RoamingNetwork">_roamingnetwork</name>
+      <returntype>boolean</returntype>
+    </property>
+    <property>
+      <name DesignerName="SdkVersion">_sdkversion</name>
+      <returntype>int</returntype>
+    </property>
+    <property>
+      <name DesignerName="SimOperator">_simoperator</name>
+      <returntype>String</returntype>
+    </property>
+  </class>
+  <version>1</version>
+  <author>www.iranapp.org</author>
+</root>

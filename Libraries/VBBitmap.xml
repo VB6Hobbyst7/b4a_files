@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root>
+    <doclet-version-NOT-library-version>1.02</doclet-version-NOT-library-version>
+    <class>
+        <name>vb.smart.bitmaps.smartbm</name>
+        <shortname>SmartBitmap</shortname>
+        <comment>Load a simple bitmap correctly</comment>
+        <owner>activity</owner>
+        <permission>android.permission.WRITE_EXTERNAL_STORAGE</permission>
+        <method>
+            <name>loadbitmap2</name>
+            <comment>loadbitmap2(String Directory, String Filename, Integer SampleSize, Boolean RGB565)
+ returns a safe sized bitmap
+ dont use file.dirassets ever, copy image over to another place from project
+ example: 	Activity.SetBackgroundImage(mm.loadbitmap2(File.DirInternal,"/moon.jpg",8))
+ SampleSize, can be 2, 4, ,6, 8,....16, 32...etc
+ RGB565=True will set options.inPreferredConfig = Config.RGB_565;</comment>
+            <returntype>android.graphics.Bitmap</returntype>
+            <parameter>
+                <name>Directory</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>Filename</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>SampleSize</name>
+                <type>java.lang.Integer</type>
+            </parameter>
+            <parameter>
+                <name>RGB565</name>
+                <type>java.lang.Boolean</type>
+            </parameter>
+        </method>
+        <method>
+            <name>nativeUsage</name>
+            <comment>returns free memory available from heap
+ Debug.getNativeHeapAllocatedSize();</comment>
+            <returntype>double</returntype>
+        </method>
+        <method>
+            <name>heapRemaining</name>
+            <comment>returns heapRemaining  
+ Runtime.getRuntime().freeMemory();</comment>
+            <returntype>double</returntype>
+        </method>
+        <method>
+            <name>FreeMem2</name>
+            <comment>returns freeMemory
+ long freeMemory = (Runtime.getRuntime().maxMemory()) - (Debug.getNativeHeapAllocatedSize());</comment>
+            <returntype>long</returntype>
+        </method>
+        <method>
+            <name>heapSize</name>
+            <comment>returns totalMemory
+ Runtime.getRuntime().totalMemory();</comment>
+            <returntype>double</returntype>
+        </method>
+        <method>
+            <name>HowBig</name>
+            <comment>HowBig(String Directory, String Filename)
+ returns height/width as one combined string variable</comment>
+            <returntype>java.lang.String</returntype>
+            <parameter>
+                <name>Directory</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>Filename</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+        <method>
+            <name>MaxMem</name>
+            <comment>returns MaxMemory
+ Runtime.getRuntime().maxMemory()</comment>
+            <returntype>double</returntype>
+        </method>
+        <method>
+            <name>loadbitmap</name>
+            <comment>returns a simple bitmap
+ dont use file.dirassets ever, copy image over to another place from project
+ example: 	Activity.loadbitmap(mm.GetSafeBitmap(File.DirInternal,"/moon.jpg",Activity.height,Activity.width))
+ If this runs into memory problems, it's going to load a really low res image which will look bad
+ but it might not crash the app</comment>
+            <returntype>android.graphics.Bitmap</returntype>
+            <parameter>
+                <name>Directory</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>Filename</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>reqWidth</name>
+                <type>java.lang.Integer</type>
+            </parameter>
+            <parameter>
+                <name>reqHeight</name>
+                <type>java.lang.Integer</type>
+            </parameter>
+        </method>
+        <method>
+            <name>FreeMem</name>
+            <comment>returns free memory available from heap
+  double memoryAvailable = Runtime.getRuntime().maxMemory() - (heapSize - heapRemaining) - nativeUsage;</comment>
+            <returntype>double</returntype>
+        </method>
+        <method>
+            <name>Garbage</name>
+            <comment>Runs the Garbage Collector to free memory
+ Make sure your code is good first you are not initializing bitmaps aggressively
+  No amount of System.gc() calls will help a memory leak  
+  You should split up the work and cache your data to file(s) and remove objects accordingly. 
+  If you really need more memory you should run your java app with larger heap memory set</comment>
+            <returntype>void</returntype>
+        </method>
+        <property>
+            <name>GlobalFreedSize</name>
+            <returntype>long</returntype>
+            <comment>returns getGlobalFreedSize;</comment>
+        </property>
+        <property>
+            <name>GlobalAllocSize</name>
+            <returntype>long</returntype>
+            <comment>returns getGlobalAllocSize;</comment>
+        </property>
+    </class>
+    <version>1.0</version>
+</root>

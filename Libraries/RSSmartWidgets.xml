@@ -1,0 +1,469 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root>
+    <doclet-version-NOT-library-version>1.02</doclet-version-NOT-library-version>
+    <class>
+        <name>com.rootsoft.rssmartwidgets.RSSmartWidgets</name>
+        <shortname>RSSmartWidgets</shortname>
+        <owner>process</owner>
+        <method>
+            <name>Initialize</name>
+            <comment>Initializes the Smart Widgets.
+EventName: 
+HostId: The hostId is a number of your choosing that should be internally 
+ unique to your app (that is, you don't need to worry about collisions 
+ with other apps on the system).  It's designed for cases where you 
+ want two unique AppWidgetHosts inside of the same application, so the 
+ system can optimize and only send updates to actively listening hosts.</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>ba</name>
+                <type>anywheresoftware.b4a.BA</type>
+            </parameter>
+            <parameter>
+                <name>EventName</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>HostId</name>
+                <type>int</type>
+            </parameter>
+        </method>
+        <method>
+            <name>StartListening</name>
+            <comment>Start listening to pending intents from the widgets.</comment>
+            <returntype>void</returntype>
+        </method>
+        <method>
+            <name>RemoveWidget</name>
+            <comment>Remove view from the layout and host.</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>hostView</name>
+                <type>android.appwidget.AppWidgetHostView</type>
+            </parameter>
+        </method>
+        <method>
+            <name>getAppWidgetInfo</name>
+            <comment>Get the available info about the AppWidget.
+ Returns A appWidgetId. If the appWidgetId has not been bound to a provider yet, or you don't have access to that appWidgetId, null is returned.</comment>
+            <returntype>android.appwidget.AppWidgetProviderInfo</returntype>
+            <parameter>
+                <name>appWidgetId</name>
+                <type>int</type>
+            </parameter>
+        </method>
+        <method>
+            <name>CreateSmartWidget2</name>
+            <comment>Creates a smart widget.</comment>
+            <returntype>android.appwidget.AppWidgetHostView</returntype>
+            <parameter>
+                <name>widgetPackage</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+        <method>
+            <name>CreateSmartWidget</name>
+            <comment>Creates a smart widget.</comment>
+            <returntype>android.appwidget.AppWidgetHostView</returntype>
+            <parameter>
+                <name>appWidgetId</name>
+                <type>int</type>
+            </parameter>
+        </method>
+        <method>
+            <name>AddView</name>
+            <comment>Adds a view to the given panel.
+view: 
+hostView: </comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>Panel</name>
+                <type>anywheresoftware.b4a.objects.PanelWrapper</type>
+            </parameter>
+            <parameter>
+                <name>hostView</name>
+                <type>android.appwidget.AppWidgetHostView</type>
+            </parameter>
+            <parameter>
+                <name>left</name>
+                <type>int</type>
+            </parameter>
+            <parameter>
+                <name>top</name>
+                <type>int</type>
+            </parameter>
+        </method>
+        <method>
+            <name>StopListening</name>
+            <comment>Stops listening to pending intents from the widgets.</comment>
+            <returntype>void</returntype>
+        </method>
+        <method>
+            <name>SelectWidget</name>
+            <comment>Let user pick a widget from the list of installed AppWidgets</comment>
+            <returntype>void</returntype>
+        </method>
+        <method>
+            <name>AppWidget</name>
+            <comment></comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>appWidgetId</name>
+                <type>int</type>
+            </parameter>
+            <parameter>
+                <name>info</name>
+                <type>android.appwidget.AppWidgetProviderInfo</type>
+            </parameter>
+        </method>
+        <property>
+            <name>AppToStart</name>
+            <returntype>java.lang.String</returntype>
+            <parameter>
+                <name>appToStart</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <comment></comment>
+        </property>
+        <property>
+            <name>AppWidgetId</name>
+            <returntype>int</returntype>
+            <comment>Gets the app widgets id.</comment>
+        </property>
+        <property>
+            <name>HostId</name>
+            <returntype>int</returntype>
+            <parameter>
+                <name>hostId</name>
+                <type>int</type>
+            </parameter>
+            <comment>Gets or sets the host id.</comment>
+        </property>
+        <property>
+            <name>OnLongClickListener</name>
+            <parameter>
+                <name>hostview</name>
+                <type>android.appwidget.AppWidgetHostView</type>
+            </parameter>
+            <comment></comment>
+        </property>
+        <property>
+            <name>RunningAppPackageNames</name>
+            <returntype>anywheresoftware.b4a.objects.collections.List</returntype>
+            <comment></comment>
+        </property>
+        <property>
+            <name>InstalledProviders</name>
+            <returntype>anywheresoftware.b4a.objects.collections.List</returntype>
+            <comment>Return a list of the AppWidget providers that are currently installed.</comment>
+        </property>
+        <property>
+            <name>HostView</name>
+            <returntype>android.appwidget.AppWidgetHostView</returntype>
+            <comment></comment>
+        </property>
+    </class>
+    <class>
+        <name>com.rootsoft.rssmartwidgets.RSAppWidgetProviderInfo</name>
+        <shortname>RSWidgetProviderInfo</shortname>
+        <objectwrapper>android.appwidget.AppWidgetProviderInfo</objectwrapper>
+        <owner>process</owner>
+        <method>
+            <name>Initialize</name>
+            <comment>Initializes this Widget Provider Info.</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>ba</name>
+                <type>anywheresoftware.b4a.BA</type>
+            </parameter>
+            <parameter>
+                <name>EventName</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+        <method>
+            <name>IsInitialized</name>
+            <comment></comment>
+            <returntype>boolean</returntype>
+        </method>
+        <property>
+            <name>UpdatePeriodMillis</name>
+            <returntype>int</returntype>
+            <comment>How often, in milliseconds, that this AppWidget wants to be updated. 
+ The AppWidget manager may place a limit on how often a AppWidget is updated.</comment>
+        </property>
+        <property>
+            <name>AutoAdvanceViewId</name>
+            <returntype>int</returntype>
+            <comment>The view id of the AppWidget subview which should be auto-advanced by the widget's host.</comment>
+        </property>
+        <property>
+            <name>PreviewImage</name>
+            <returntype>int</returntype>
+            <comment>A preview of what the AppWidget will look like after it's configured. 
+ If not supplied, the AppWidget's icon will be used.</comment>
+        </property>
+        <property>
+            <name>MinHeight</name>
+            <returntype>int</returntype>
+            <comment>The default height of the widget when added to a host, in dp. 
+ The widget will get at least this height, and will often be given more, depending on the host.</comment>
+        </property>
+        <property>
+            <name>MinWidth</name>
+            <returntype>int</returntype>
+            <comment>The default height of the widget when added to a host, in dp. 
+ The widget will get at least this width, and will often be given more, depending on the host.</comment>
+        </property>
+        <property>
+            <name>ResizeMode</name>
+            <returntype>int</returntype>
+            <comment>The rules by which a widget can be resized.</comment>
+        </property>
+        <property>
+            <name>MinResizeWidth</name>
+            <returntype>int</returntype>
+            <comment>Minimum width (in dp) which the widget can be resized to. 
+ This field has no effect if it is greater than minWidth or if horizontal resizing isn't enabled (see resizeMode).</comment>
+        </property>
+        <property>
+            <name>WidgetCategory</name>
+            <returntype>int</returntype>
+            <comment>Determines whether this widget can be displayed on the home screen, the keyguard, or both. 
+ A widget which is displayed on both needs to ensure that it follows the design guidelines for both widget classes. 
+ This can be achieved by querying the AppWidget options in its widget provider's update method.</comment>
+        </property>
+        <property>
+            <name>PackageName</name>
+            <returntype>java.lang.String</returntype>
+            <comment>The packagename of the widget.</comment>
+        </property>
+        <property>
+            <name>MinResizeHeight</name>
+            <returntype>int</returntype>
+            <comment>Minimum height (in dp) which the widget can be resized to. 
+ This field has no effect if it is greater than minHeight or if vertical resizing isn't enabled (see resizeMode).</comment>
+        </property>
+        <property>
+            <name>InitialLayout</name>
+            <returntype>int</returntype>
+            <comment>The resource id of the initial layout for this AppWidget. This should be displayed until the RemoteViews for the AppWidget is available.</comment>
+        </property>
+        <property>
+            <name>Label</name>
+            <returntype>java.lang.String</returntype>
+            <comment>The label to display to the user in the AppWidget picker. If not supplied in the xml, the application label will be used.</comment>
+        </property>
+        <property>
+            <name>InitialKeyguardLayout</name>
+            <returntype>int</returntype>
+            <comment>The resource id of the initial layout for this AppWidget when it is displayed on keyguard.</comment>
+        </property>
+        <property>
+            <name>Icon</name>
+            <returntype>int</returntype>
+            <comment>The icon to display for this AppWidget in the AppWidget picker. If not supplied in the xml, the application icon will be used.</comment>
+        </property>
+    </class>
+    <class>
+        <name>com.rootsoft.rssmartwidgets.RSAppWidgetHostView</name>
+        <shortname>RSWidgetHostView</shortname>
+        <objectwrapper>android.appwidget.AppWidgetHostView</objectwrapper>
+        <owner>activity</owner>
+        <method>
+            <name>Initialize</name>
+            <comment>Initializes this widget host view.</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>ba</name>
+                <type>anywheresoftware.b4a.BA</type>
+            </parameter>
+            <parameter>
+                <name>EventName</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+        <method>
+            <name>BringToFront</name>
+            <comment></comment>
+            <returntype>void</returntype>
+        </method>
+        <method>
+            <name>RequestFocus</name>
+            <comment></comment>
+            <returntype>boolean</returntype>
+        </method>
+        <method>
+            <name>RemoveView</name>
+            <comment></comment>
+            <returntype>void</returntype>
+        </method>
+        <method>
+            <name>SetBackgroundImage</name>
+            <comment></comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>arg0</name>
+                <type>android.graphics.Bitmap</type>
+            </parameter>
+        </method>
+        <method>
+            <name>Invalidate</name>
+            <comment></comment>
+            <returntype>void</returntype>
+        </method>
+        <method>
+            <name>SetLayout</name>
+            <comment></comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>arg0</name>
+                <type>int</type>
+            </parameter>
+            <parameter>
+                <name>arg1</name>
+                <type>int</type>
+            </parameter>
+            <parameter>
+                <name>arg2</name>
+                <type>int</type>
+            </parameter>
+            <parameter>
+                <name>arg3</name>
+                <type>int</type>
+            </parameter>
+        </method>
+        <method>
+            <name>Invalidate3</name>
+            <comment></comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>arg0</name>
+                <type>int</type>
+            </parameter>
+            <parameter>
+                <name>arg1</name>
+                <type>int</type>
+            </parameter>
+            <parameter>
+                <name>arg2</name>
+                <type>int</type>
+            </parameter>
+            <parameter>
+                <name>arg3</name>
+                <type>int</type>
+            </parameter>
+        </method>
+        <method>
+            <name>Invalidate2</name>
+            <comment></comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>arg0</name>
+                <type>android.graphics.Rect</type>
+            </parameter>
+        </method>
+        <method>
+            <name>SendToBack</name>
+            <comment></comment>
+            <returntype>void</returntype>
+        </method>
+        <method>
+            <name>IsInitialized</name>
+            <comment></comment>
+            <returntype>boolean</returntype>
+        </method>
+        <property>
+            <name>Top</name>
+            <returntype>int</returntype>
+            <parameter>
+                <name>arg0</name>
+                <type>int</type>
+            </parameter>
+            <comment></comment>
+        </property>
+        <property>
+            <name>Enabled</name>
+            <returntype>boolean</returntype>
+            <parameter>
+                <name>arg0</name>
+                <type>boolean</type>
+            </parameter>
+            <comment></comment>
+        </property>
+        <property>
+            <name>Visible</name>
+            <returntype>boolean</returntype>
+            <parameter>
+                <name>arg0</name>
+                <type>boolean</type>
+            </parameter>
+            <comment></comment>
+        </property>
+        <property>
+            <name>Background</name>
+            <returntype>android.graphics.drawable.Drawable</returntype>
+            <parameter>
+                <name>arg0</name>
+                <type>android.graphics.drawable.Drawable</type>
+            </parameter>
+            <comment></comment>
+        </property>
+        <property>
+            <name>Height</name>
+            <returntype>int</returntype>
+            <parameter>
+                <name>arg0</name>
+                <type>int</type>
+            </parameter>
+            <comment></comment>
+        </property>
+        <property>
+            <name>Left</name>
+            <returntype>int</returntype>
+            <parameter>
+                <name>arg0</name>
+                <type>int</type>
+            </parameter>
+            <comment></comment>
+        </property>
+        <property>
+            <name>Color</name>
+            <parameter>
+                <name>arg0</name>
+                <type>int</type>
+            </parameter>
+            <comment></comment>
+        </property>
+        <property>
+            <name>Tag</name>
+            <returntype>java.lang.Object</returntype>
+            <parameter>
+                <name>arg0</name>
+                <type>java.lang.Object</type>
+            </parameter>
+            <comment></comment>
+        </property>
+        <property>
+            <name>AppWidgetId</name>
+            <returntype>int</returntype>
+            <comment>Gets this view app widget id.</comment>
+        </property>
+        <property>
+            <name>Width</name>
+            <returntype>int</returntype>
+            <parameter>
+                <name>arg0</name>
+                <type>int</type>
+            </parameter>
+            <comment></comment>
+        </property>
+        <property>
+            <name>AppWidgetInfo</name>
+            <returntype>android.appwidget.AppWidgetProviderInfo</returntype>
+            <comment>Gets the app widget provider info.</comment>
+        </property>
+    </class>
+    <version>1.0</version>
+    <author>XverhelstX</author>
+</root>

@@ -1,0 +1,40 @@
+// OnStartAfterOpenPorts
+// This script is executed after ports are opened
+
+
+// redirect all communications to TETHER chain
+$iptables -t nat -A OUTPUT -j TETHER
+
+if $lastResultSuccess = false then
+   $LogE forward output to tether nok
+   $LogE lastResultStdErr   : "$lastResultStdErr"
+fi
+
+// FORWARD UDP/TCP to TETHER Chain
+//--------------------------------------------------
+
+// forward all TCP ports to redsocks (except range 42000 to 42499 used by reverse tethering) 
+$iptables -t nat -A TETHER -o $myInterface -p tcp --dport 1:41999 -j REDIRECT --to 42002
+$iptables -t nat -A TETHER -o $myInterface -p tcp --dport 42500:65535 -j REDIRECT --to 42002
+
+// Forward all UDP ports to redsocks (53,...)
+// redsocks (42001) will communicate with Socks5Server (port 42003) that return the UdpRelay (42004)
+$iptables -t nat -A TETHER -o $myInterface -p udp --dport 1:41999 -j REDIRECT --to 42001
+$iptables -t nat -A TETHER -o $myInterface -p udp --dport 42500:65535 -j REDIRECT --to 42001
+
+//$LogD Linux interfaces after updates :
+//--------------------------------------------------
+//netcfg
+//$LogD  $lastResultStdout
+//$LogD
+//$busybox route
+//$LogD  $lastResultStdout
+//$LogD
+
+// proxy_socks.sh start will be started 
+
+
+
+
+
+

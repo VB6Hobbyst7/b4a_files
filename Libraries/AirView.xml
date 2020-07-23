@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root>
+    <doclet-version-NOT-library-version>1.02</doclet-version-NOT-library-version>
+    <class>
+        <name>BarxDroid.AirView.AirView</name>
+        <shortname>AirViewListener</shortname>
+        <owner>process</owner>
+        <event>HoverStart(x as Float, y as Float)</event>
+        <event>HoverEnd(x as Float, y as Float)</event>
+        <event>HoverMove(x as Float, y as Float)</event>
+        <method>
+            <name>Initialize</name>
+            <comment>Initializes a Hover Listener against a given View.
+ 
+ View - The View that will react to the Hover event
+ EventName - The sub that will handle the events
+ 
+ Be sure to add the following to the manifest using the Manifest Editor:-
+ AddActivityText(Main, &amp;lt;intent-filter&amp;gt;
+ &amp;lt;action android:name=&amp;quot;com.sec.android.airview.HOVER&amp;quot; /&amp;gt;
+ &amp;lt;/intent-filter&amp;gt;)</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>ba</name>
+                <type>anywheresoftware.b4a.BA</type>
+            </parameter>
+            <parameter>
+                <name>view</name>
+                <type>android.view.View</type>
+            </parameter>
+            <parameter>
+                <name>Eventname</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+    </class>
+    <version>1.1</version>
+    <author>BarxDroid</author>
+</root>

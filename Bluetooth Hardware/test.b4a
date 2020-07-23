@@ -1,0 +1,71 @@
+﻿Version=5.8
+NumberOfModules=5
+Module1=HardwareClass
+Module2=actTemperature
+Module3=actReleh
+Module4=actLight
+Module5=actLamp
+Build1=Default,b4a.example
+ManifestCode='This code will be applied to the manifest file during compilation.~\n~'You do not need to modify it in most cases.~\n~'See this link for for more information: http://www.basic4ppc.com/forum/showthread.php?p=78136~\n~AddManifestText(~\n~<uses-sdk android:minSdkVersion="4" android:targetSdkVersion="14"/>~\n~<supports-screens android:largeScreens="true" ~\n~    android:normalScreens="true" ~\n~    android:smallScreens="true" ~\n~    android:anyDensity="true"/>)~\n~SetApplicationAttribute(android:icon, "@drawable/icon")~\n~SetApplicationAttribute(android:label, "$LABEL$")~\n~'End of default text.~\n~
+IconFile=
+NumberOfFiles=4
+File1=frm1.bal
+File2=frmlamp.bal
+File3=frmmain.bal
+File4=frmreleh.bal
+NumberOfLibraries=3
+Library1=core
+Library2=serial
+Library3=randomaccessfile
+@EndOfDesignText@
+#Region  Project Attributes 
+	#ApplicationLabel: کنترل دستگاه
+	#VersionCode: 1
+	#VersionName: 
+	'SupportedOrientations possible values: unspecified, landscape or portrait.
+	#SupportedOrientations: unspecified
+	#CanInstallToExternalStorage: False
+#End Region
+
+#Region  Activity Attributes 
+	#FullScreen: True
+	#IncludeTitle: False
+#End Region
+
+Sub Process_Globals
+
+End Sub
+
+Sub Globals
+
+End Sub
+
+Sub Activity_Create(FirstTime As Boolean)
+	
+	Activity.LoadLayout("frmmain")
+	
+End Sub
+
+Sub Activity_Resume
+
+End Sub
+
+Sub Activity_Pause (UserClosed As Boolean)
+
+End Sub
+
+Sub btndama_Click
+	StartActivity(actTemperature)
+End Sub
+
+Sub btnnor_Click
+	StartActivity(actLight)
+End Sub
+
+Sub btnrele_Click
+	StartActivity(actReleh)
+End Sub
+
+Sub btnlamp_Click
+	StartActivity(actLamp)
+End Sub

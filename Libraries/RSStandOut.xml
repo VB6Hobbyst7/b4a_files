@@ -1,0 +1,963 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root>
+    <doclet-version-NOT-library-version>1.02</doclet-version-NOT-library-version>
+    <class>
+        <name>com.rootsoft.rsstandout.StandOutFlags</name>
+        <shortname>RSStandOutFlags</shortname>
+        <owner>process</owner>
+        <field>
+            <name>FLAG_WINDOW_PINCH_RESIZE_ENABLE</name>
+            <comment></comment>
+            <returntype>int</returntype>
+        </field>
+        <field>
+            <name>FLAG_ADD_FUNCTIONALITY_DROP_DOWN_DISABLE</name>
+            <comment></comment>
+            <returntype>int</returntype>
+        </field>
+        <field>
+            <name>FLAG_DECORATION_SYSTEM</name>
+            <comment></comment>
+            <returntype>int</returntype>
+        </field>
+        <field>
+            <name>FLAG_WINDOW_FOCUSABLE_DISABLE</name>
+            <comment></comment>
+            <returntype>int</returntype>
+        </field>
+        <field>
+            <name>FLAG_ADD_FUNCTIONALITY_RESIZE_DISABLE</name>
+            <comment></comment>
+            <returntype>int</returntype>
+        </field>
+        <field>
+            <name>FLAG_FIX_COMPATIBILITY_ALL_DISABLE</name>
+            <comment></comment>
+            <returntype>int</returntype>
+        </field>
+        <field>
+            <name>FLAG_DECORATION_RESIZE_DISABLE</name>
+            <comment></comment>
+            <returntype>int</returntype>
+        </field>
+        <field>
+            <name>FLAG_DECORATION_MOVE_DISABLE</name>
+            <comment></comment>
+            <returntype>int</returntype>
+        </field>
+        <field>
+            <name>FLAG_DECORATION_MAXIMIZE_DISABLE</name>
+            <comment></comment>
+            <returntype>int</returntype>
+        </field>
+        <field>
+            <name>FLAG_DECORATION_CLOSE_DISABLE</name>
+            <comment></comment>
+            <returntype>int</returntype>
+        </field>
+        <field>
+            <name>FLAG_WINDOW_EDGE_LIMITS_ENABLE</name>
+            <comment></comment>
+            <returntype>int</returntype>
+        </field>
+        <field>
+            <name>FLAG_WINDOW_FOCUS_INDICATOR_DISABLE</name>
+            <comment></comment>
+            <returntype>int</returntype>
+        </field>
+        <field>
+            <name>FLAG_WINDOW_ASPECT_RATIO_ENABLE</name>
+            <comment></comment>
+            <returntype>int</returntype>
+        </field>
+        <field>
+            <name>FLAG_BODY_MOVE_ENABLE</name>
+            <comment></comment>
+            <returntype>int</returntype>
+        </field>
+        <field>
+            <name>FLAG_WINDOW_BRING_TO_FRONT_ON_TAP</name>
+            <comment></comment>
+            <returntype>int</returntype>
+        </field>
+        <field>
+            <name>FLAG_WINDOW_HIDE_ENABLE</name>
+            <comment></comment>
+            <returntype>int</returntype>
+        </field>
+        <field>
+            <name>FLAG_ADD_FUNCTIONALITY_ALL_DISABLE</name>
+            <comment></comment>
+            <returntype>int</returntype>
+        </field>
+        <field>
+            <name>FLAG_WINDOW_BRING_TO_FRONT_ON_TOUCH</name>
+            <comment></comment>
+            <returntype>int</returntype>
+        </field>
+    </class>
+    <class>
+        <name>com.rootsoft.rsstandout.RSStandOutWindow.RSWindow</name>
+        <shortname>RSStandOutWindow</shortname>
+        <objectwrapper>wei.mark.standout.ui.Window</objectwrapper>
+        <owner>process</owner>
+        <method>
+            <name>Initialize</name>
+            <comment>Initializes the object and sets the subs that will handle the events.</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>ba</name>
+                <type>anywheresoftware.b4a.BA</type>
+            </parameter>
+            <parameter>
+                <name>EventName</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+        <method>
+            <name>BringToFront</name>
+            <comment>Bring the window corresponding to this id in front of all other windows.
+ The window may flicker as it is removed and restored by the system.
+id: The id of the window to bring to the front.</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>id</name>
+                <type>int</type>
+            </parameter>
+        </method>
+        <method>
+            <name>Unfocus</name>
+            <comment>Remove focus for the window corresponding to this id. Once a window is
+ unfocused, it will stop receiving key events.
+id: The id of the window.
+Return type: @return:True if focus changed successfully, false if it failed.</comment>
+            <returntype>boolean</returntype>
+            <parameter>
+                <name>id</name>
+                <type>int</type>
+            </parameter>
+        </method>
+        <method>
+            <name>getWindow</name>
+            <comment>Return the window corresponding to the id, if it exists in cache. The
+ window will not be created with
+ {@link #createAndAttachView(int, ViewGroup)}. This means the returned
+ value will be null if the window is not shown or hidden.
+id: The id of the window.
+Return type: @return:The window if it is shown/hidden, or null if it is closed.</comment>
+            <returntype>wei.mark.standout.ui.Window</returntype>
+            <parameter>
+                <name>id</name>
+                <type>int</type>
+            </parameter>
+        </method>
+        <method>
+            <name>isExistingId</name>
+            <comment>Return whether the window corresponding to the id exists. This is useful
+ for testing if the id is being restored (return true) or shown for the
+ first time (return false).
+id: The id of the window.
+Return type: @return:True if the window corresponding to the id is either shown or
+         hidden, or false if it has never been shown or was previously
+         closed.</comment>
+            <returntype>boolean</returntype>
+            <parameter>
+                <name>id</name>
+                <type>int</type>
+            </parameter>
+        </method>
+        <method>
+            <name>setTitle</name>
+            <comment>Change the title of the window, if such a title exists. A title exists if
+ {@link StandOutFlags#FLAG_DECORATION_SYSTEM} is set, or if your own view
+ contains a TextView with id R.id.title.
+id: The id of the window.
+text: The new title.</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>id</name>
+                <type>int</type>
+            </parameter>
+            <parameter>
+                <name>text</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+        <method>
+            <name>Focus</name>
+            <comment>Request focus for the window corresponding to this id. A maximum of one
+ window can have focus, and that window will receive all key events,
+ including Back and Menu.
+id: The id of the window.
+Return type: @return:True if focus changed successfully, false if it failed.</comment>
+            <returntype>boolean</returntype>
+            <parameter>
+                <name>id</name>
+                <type>int</type>
+            </parameter>
+        </method>
+        <method>
+            <name>UpdateViewLayout</name>
+            <comment>Update the window corresponding to this id with the given params.
+id: The id of the window.
+params: The updated layout params to apply.</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>id</name>
+                <type>int</type>
+            </parameter>
+            <parameter>
+                <name>params</name>
+                <type>com.rootsoft.rsstandout.RSStandOutLayoutParams</type>
+            </parameter>
+        </method>
+        <method>
+            <name>setIcon</name>
+            <comment>Change the icon of the window, if such a icon exists. A icon exists if
+ {@link StandOutFlags#FLAG_DECORATION_SYSTEM} is set, or if your own view
+ contains a TextView with id R.id.window_icon.
+id: The id of the window.
+drawableRes: The new icon.</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>id</name>
+                <type>int</type>
+            </parameter>
+            <parameter>
+                <name>drawableRes</name>
+                <type>int</type>
+            </parameter>
+        </method>
+        <method>
+            <name>IsInitialized</name>
+            <comment></comment>
+            <returntype>boolean</returntype>
+        </method>
+        <property>
+            <name>ContentPanel</name>
+            <returntype>anywheresoftware.b4a.objects.PanelWrapper</returntype>
+            <comment>Gets the panel content.</comment>
+        </property>
+        <property>
+            <name>FocusedWindow</name>
+            <returntype>wei.mark.standout.ui.Window</returntype>
+            <parameter>
+                <name>window</name>
+                <type>wei.mark.standout.ui.Window</type>
+            </parameter>
+            <comment>Return the window that currently has focus.</comment>
+        </property>
+        <property>
+            <name>UniqueId</name>
+            <returntype>int</returntype>
+            <comment>Gets a unique id for this window.</comment>
+        </property>
+    </class>
+    <class>
+        <name>com.rootsoft.rsstandout.RSStandOutLayoutParams</name>
+        <shortname>RSStandOutLayoutParams</shortname>
+        <objectwrapper>wei.mark.standout.StandOutWindow.StandOutLayoutParams</objectwrapper>
+        <owner>process</owner>
+        <method>
+            <name>Initialize</name>
+            <comment>Initializes the layout parameters.
+id: The id of the window.</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>id</name>
+                <type>int</type>
+            </parameter>
+        </method>
+        <method>
+            <name>Initialize4</name>
+            <comment>Initializes the layout parameters.
+id: The id of the window.
+w: The width of the window.
+h: The height of the window.
+xpos: The x position of the window.
+ypos: The y position of the window.
+minWidth: The minimum width of the window.
+minHeight: The minimum height of the window.</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>id</name>
+                <type>int</type>
+            </parameter>
+            <parameter>
+                <name>w</name>
+                <type>int</type>
+            </parameter>
+            <parameter>
+                <name>h</name>
+                <type>int</type>
+            </parameter>
+            <parameter>
+                <name>xpos</name>
+                <type>int</type>
+            </parameter>
+            <parameter>
+                <name>ypos</name>
+                <type>int</type>
+            </parameter>
+            <parameter>
+                <name>minWidth</name>
+                <type>int</type>
+            </parameter>
+            <parameter>
+                <name>minHeight</name>
+                <type>int</type>
+            </parameter>
+        </method>
+        <method>
+            <name>Initialize5</name>
+            <comment>Initializes the layout parameters.
+id: The id of the window.
+w: The width of the window.
+h: The height of the window.
+xpos: The x position of the window.
+ypos: The y position of the window.
+minWidth: The minimum width of the window.
+minHeight: The mininum height of the window.
+threshold: The touch distance threshold that distinguishes a tap from
+            a drag.</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>id</name>
+                <type>int</type>
+            </parameter>
+            <parameter>
+                <name>w</name>
+                <type>int</type>
+            </parameter>
+            <parameter>
+                <name>h</name>
+                <type>int</type>
+            </parameter>
+            <parameter>
+                <name>xpos</name>
+                <type>int</type>
+            </parameter>
+            <parameter>
+                <name>ypos</name>
+                <type>int</type>
+            </parameter>
+            <parameter>
+                <name>minWidth</name>
+                <type>int</type>
+            </parameter>
+            <parameter>
+                <name>minHeight</name>
+                <type>int</type>
+            </parameter>
+            <parameter>
+                <name>threshold</name>
+                <type>int</type>
+            </parameter>
+        </method>
+        <method>
+            <name>Initialize2</name>
+            <comment>Initializes the layout parameters.
+id: The id of the window.
+w: The width of the window.
+h: The height of the window.</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>id</name>
+                <type>int</type>
+            </parameter>
+            <parameter>
+                <name>w</name>
+                <type>int</type>
+            </parameter>
+            <parameter>
+                <name>h</name>
+                <type>int</type>
+            </parameter>
+        </method>
+        <method>
+            <name>Initialize3</name>
+            <comment>Initializes the layout parameters.
+id: The id of the window.
+w: The width of the window.
+h: The height of the window.
+xpos: The x position of the window.
+ypos: The y position of the window.</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>id</name>
+                <type>int</type>
+            </parameter>
+            <parameter>
+                <name>w</name>
+                <type>int</type>
+            </parameter>
+            <parameter>
+                <name>h</name>
+                <type>int</type>
+            </parameter>
+            <parameter>
+                <name>xpos</name>
+                <type>int</type>
+            </parameter>
+            <parameter>
+                <name>ypos</name>
+                <type>int</type>
+            </parameter>
+        </method>
+        <method>
+            <name>IsInitialized</name>
+            <comment></comment>
+            <returntype>boolean</returntype>
+        </method>
+        <property>
+            <name>FocusFlag</name>
+            <parameter>
+                <name>focused</name>
+                <type>boolean</type>
+            </parameter>
+            <comment></comment>
+        </property>
+    </class>
+    <class>
+        <name>com.rootsoft.rsstandout.RSStandOutDropDownItem</name>
+        <shortname>RSStandOutDropDownItem</shortname>
+        <objectwrapper>wei.mark.standout.StandOutWindow.DropDownListItem</objectwrapper>
+        <owner>process</owner>
+        <method>
+            <name>Initialize</name>
+            <comment>Initializes this ... library</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>ba</name>
+                <type>anywheresoftware.b4a.BA</type>
+            </parameter>
+            <parameter>
+                <name>EventName</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>Icon</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>Title</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>tag</name>
+                <type>java.lang.Object</type>
+            </parameter>
+        </method>
+        <method>
+            <name>IsInitialized</name>
+            <comment></comment>
+            <returntype>boolean</returntype>
+        </method>
+        <property>
+            <name>Tag</name>
+            <returntype>java.lang.Object</returntype>
+            <comment></comment>
+        </property>
+    </class>
+    <class>
+        <name>com.rootsoft.rsstandout.RSStandOutConstants</name>
+        <shortname>RSStandOutConstants</shortname>
+        <owner>process</owner>
+        <field>
+            <name>ACTION_CLOSE</name>
+            <comment>Intent action: Close an existing window with an existing id.</comment>
+            <returntype>java.lang.String</returntype>
+        </field>
+        <field>
+            <name>DEFAULT_ID</name>
+            <comment>StandOut window id: You may use this sample id for your first window.</comment>
+            <returntype>int</returntype>
+        </field>
+        <field>
+            <name>ONGOING_NOTIFICATION_ID</name>
+            <comment>Special StandOut window id: You may NOT use this id for any windows.</comment>
+            <returntype>int</returntype>
+        </field>
+        <field>
+            <name>AUTO_POSITION</name>
+            <comment></comment>
+            <returntype>int</returntype>
+        </field>
+        <field>
+            <name>LEFT</name>
+            <comment></comment>
+            <returntype>int</returntype>
+        </field>
+        <field>
+            <name>DISREGARD_ID</name>
+            <comment>StandOut window id: You may use this id when you want it to be
+ disregarded. The system makes no distinction for this id; it is only used
+ to improve code readability.</comment>
+            <returntype>int</returntype>
+        </field>
+        <field>
+            <name>ACTION_SHOW</name>
+            <comment>Intent action: Show a new window corresponding to the id.</comment>
+            <returntype>java.lang.String</returntype>
+        </field>
+        <field>
+            <name>BOTTOM</name>
+            <comment></comment>
+            <returntype>int</returntype>
+        </field>
+        <field>
+            <name>ACTION_RESTORE</name>
+            <comment>Intent action: Restore a previously hidden window corresponding to the
+ id. The window should be previously hidden with {@link #ACTION_HIDE}.</comment>
+            <returntype>java.lang.String</returntype>
+        </field>
+        <field>
+            <name>ACTION_CLOSE_ALL</name>
+            <comment>Intent action: Close all existing windows.</comment>
+            <returntype>java.lang.String</returntype>
+        </field>
+        <field>
+            <name>RIGHT</name>
+            <comment></comment>
+            <returntype>int</returntype>
+        </field>
+        <field>
+            <name>ACTION_HIDE</name>
+            <comment>Intent action: Hide an existing window with an existing id. To enable the
+ ability to restore this window, make sure you implement
+ {@link #getHiddenNotification(int)}.</comment>
+            <returntype>java.lang.String</returntype>
+        </field>
+        <field>
+            <name>TOP</name>
+            <comment></comment>
+            <returntype>int</returntype>
+        </field>
+        <field>
+            <name>ACTION_SEND_DATA</name>
+            <comment>Intent action: Send data to a new or existing window.</comment>
+            <returntype>java.lang.String</returntype>
+        </field>
+        <field>
+            <name>CENTER</name>
+            <comment></comment>
+            <returntype>int</returntype>
+        </field>
+    </class>
+    <class>
+        <name>com.rootsoft.rsstandout.RSStandOut</name>
+        <shortname>RSStandOut</shortname>
+        <owner>process</owner>
+        <permission>android.permission.SYSTEM_ALERT_WINDOW</permission>
+        <method>
+            <name>getCloseIntent</name>
+            <comment>See {@link #close(Context, Class, int)}.
+context: A Context of the application package implementing this class.
+cls: The Service extending {@link StandOutWindow} that is managing
+            the window.
+id: The id representing this window. If the id exists, and the
+            corresponding window was previously hidden, then that window
+            will be restored.
+Return type: @return:An {@link Intent} to use with
+         {@link Context#startService(Intent)}.</comment>
+            <returntype>android.content.Intent</returntype>
+            <parameter>
+                <name>id</name>
+                <type>int</type>
+            </parameter>
+        </method>
+        <method>
+            <name>getShowIntent</name>
+            <comment>See {@link #show(Context, Class, int)}.
+id: The id representing this window. If the id exists, and the
+            corresponding window was previously hidden, then that window
+            will be restored.
+Return type: @return:An {@link Intent} to use with
+         {@link Context#startService(Intent)}.</comment>
+            <returntype>android.content.Intent</returntype>
+            <parameter>
+                <name>id</name>
+                <type>int</type>
+            </parameter>
+        </method>
+        <method>
+            <name>Initialize</name>
+            <comment>Initializes this ... library</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>ba</name>
+                <type>anywheresoftware.b4a.BA</type>
+            </parameter>
+            <parameter>
+                <name>EventName</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+        <method>
+            <name>Close</name>
+            <comment>Close an existing window with an existing id.</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>id</name>
+                <type>int</type>
+            </parameter>
+        </method>
+        <method>
+            <name>SendData</name>
+            <comment>This allows windows of different applications to communicate with each
+ other.
+ 
+ Send {@link Parceleable} data in a {@link Bundle} to a new or existing
+ windows. The implementation of the recipient window can handle what to do
+ with the data. To receive a result, provide the class and id of the
+ sender.
+toId: The id of the receiving window, or DISREGARD_ID.
+requestCode: Provide a request code to declare what kind of data is being
+            sent.
+data: A bundle of parceleable data to be sent to the receiving
+            window.
+fromId: Provide the id of the sending window if you want a result.</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>toId</name>
+                <type>int</type>
+            </parameter>
+            <parameter>
+                <name>requestCode</name>
+                <type>int</type>
+            </parameter>
+            <parameter>
+                <name>data</name>
+                <type>android.os.Bundle</type>
+            </parameter>
+            <parameter>
+                <name>fromId</name>
+                <type>int</type>
+            </parameter>
+        </method>
+        <method>
+            <name>Hide</name>
+            <comment>Hide the existing window corresponding to the id. To enable the ability
+ to restore this window, make sure you implement
+ {@link #getHiddenNotification(int)}.
+id: The id representing this window. The window must previously be
+            shown.</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>id</name>
+                <type>int</type>
+            </parameter>
+        </method>
+        <method>
+            <name>Show</name>
+            <comment>Show a new window corresponding to the id, or restore a previously hidden
+ window.
+id: The id representing this window. If the id exists, and the
+            corresponding window was previously hidden, then that window
+            will be restored.</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>id</name>
+                <type>int</type>
+            </parameter>
+        </method>
+        <method>
+            <name>getSendDataIntent</name>
+            <comment>See {@link #sendData(Context, Class, int, int, Bundle, Class, int)}.
+context: A Context of the application package implementing the class of
+            the sending window.
+toCls: The Service's class extending {@link StandOutWindow} that is
+            managing the receiving window.
+toId: The id of the receiving window.
+requestCode: Provide a request code to declare what kind of data is being
+            sent.
+data: A bundle of parceleable data to be sent to the receiving
+            window.
+fromCls: If the sending window wants a result, provide the class of the
+            sending window.
+fromId: If the sending window wants a result, provide the id of the
+            sending window.
+Return type: @return:An {@link Intnet} to use with
+         {@link Context#startService(Intent)}.</comment>
+            <returntype>android.content.Intent</returntype>
+            <parameter>
+                <name>toId</name>
+                <type>int</type>
+            </parameter>
+            <parameter>
+                <name>requestCode</name>
+                <type>int</type>
+            </parameter>
+            <parameter>
+                <name>data</name>
+                <type>android.os.Bundle</type>
+            </parameter>
+            <parameter>
+                <name>fromId</name>
+                <type>int</type>
+            </parameter>
+        </method>
+        <method>
+            <name>CloseAll</name>
+            <comment>Close all existing windows.
+context: A Context of the application package implementing this class.
+cls: The Service extending {@link StandOutWindow} that is managing
+            the window.</comment>
+            <returntype>void</returntype>
+        </method>
+        <method>
+            <name>getHideIntent</name>
+            <comment>See {@link #hide(Context, Class, int)}.
+context: A Context of the application package implementing this class.
+cls: The Service extending {@link StandOutWindow} that is managing
+            the window.
+id: The id representing this window. If the id exists, and the
+            corresponding window was previously hidden, then that window
+            will be restored.
+Return type: @return:An {@link Intent} to use with
+         {@link Context#startService(Intent)}.</comment>
+            <returntype>android.content.Intent</returntype>
+            <parameter>
+                <name>id</name>
+                <type>int</type>
+            </parameter>
+        </method>
+        <property>
+            <name>StartIntent</name>
+            <returntype>android.content.Intent</returntype>
+            <comment></comment>
+        </property>
+        <property>
+            <name>CloseAllIntent</name>
+            <returntype>android.content.Intent</returntype>
+            <comment>See {@link #closeAll(Context, Class, int)}.</comment>
+        </property>
+    </class>
+    <class>
+        <name>com.rootsoft.rsstandout.RSFrameLayout</name>
+        <shortname>RSFrameLayout</shortname>
+        <objectwrapper>android.widget.FrameLayout</objectwrapper>
+        <owner>process</owner>
+        <method>
+            <name>BringToFront</name>
+            <comment></comment>
+            <returntype>void</returntype>
+        </method>
+        <method>
+            <name>RequestFocus</name>
+            <comment></comment>
+            <returntype>boolean</returntype>
+        </method>
+        <method>
+            <name>RemoveView</name>
+            <comment></comment>
+            <returntype>void</returntype>
+        </method>
+        <method>
+            <name>SetBackgroundImage</name>
+            <comment></comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>arg0</name>
+                <type>android.graphics.Bitmap</type>
+            </parameter>
+        </method>
+        <method>
+            <name>RequestViewByTag</name>
+            <comment></comment>
+            <returntype>android.view.View</returntype>
+            <parameter>
+                <name>tag</name>
+                <type>java.lang.Object</type>
+            </parameter>
+        </method>
+        <method>
+            <name>Invalidate3</name>
+            <comment></comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>arg0</name>
+                <type>int</type>
+            </parameter>
+            <parameter>
+                <name>arg1</name>
+                <type>int</type>
+            </parameter>
+            <parameter>
+                <name>arg2</name>
+                <type>int</type>
+            </parameter>
+            <parameter>
+                <name>arg3</name>
+                <type>int</type>
+            </parameter>
+        </method>
+        <method>
+            <name>Invalidate2</name>
+            <comment></comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>arg0</name>
+                <type>android.graphics.Rect</type>
+            </parameter>
+        </method>
+        <method>
+            <name>IsInitialized</name>
+            <comment></comment>
+            <returntype>boolean</returntype>
+        </method>
+        <method>
+            <name>Initialize</name>
+            <comment></comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>frameLayout</name>
+                <type>android.widget.FrameLayout</type>
+            </parameter>
+        </method>
+        <method>
+            <name>getView</name>
+            <comment></comment>
+            <returntype>android.view.View</returntype>
+            <parameter>
+                <name>index</name>
+                <type>int</type>
+            </parameter>
+        </method>
+        <method>
+            <name>SetLayout</name>
+            <comment></comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>arg0</name>
+                <type>int</type>
+            </parameter>
+            <parameter>
+                <name>arg1</name>
+                <type>int</type>
+            </parameter>
+            <parameter>
+                <name>arg2</name>
+                <type>int</type>
+            </parameter>
+            <parameter>
+                <name>arg3</name>
+                <type>int</type>
+            </parameter>
+        </method>
+        <method>
+            <name>Invalidate</name>
+            <comment></comment>
+            <returntype>void</returntype>
+        </method>
+        <method>
+            <name>AddView</name>
+            <comment></comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>child</name>
+                <type>anywheresoftware.b4a.objects.PanelWrapper</type>
+            </parameter>
+            <parameter>
+                <name>width</name>
+                <type>int</type>
+            </parameter>
+            <parameter>
+                <name>height</name>
+                <type>int</type>
+            </parameter>
+        </method>
+        <method>
+            <name>SendToBack</name>
+            <comment></comment>
+            <returntype>void</returntype>
+        </method>
+        <property>
+            <name>Enabled</name>
+            <returntype>boolean</returntype>
+            <parameter>
+                <name>arg0</name>
+                <type>boolean</type>
+            </parameter>
+            <comment></comment>
+        </property>
+        <property>
+            <name>Top</name>
+            <returntype>int</returntype>
+            <parameter>
+                <name>arg0</name>
+                <type>int</type>
+            </parameter>
+            <comment></comment>
+        </property>
+        <property>
+            <name>Visible</name>
+            <returntype>boolean</returntype>
+            <parameter>
+                <name>arg0</name>
+                <type>boolean</type>
+            </parameter>
+            <comment></comment>
+        </property>
+        <property>
+            <name>Tag</name>
+            <returntype>java.lang.Object</returntype>
+            <parameter>
+                <name>arg0</name>
+                <type>java.lang.Object</type>
+            </parameter>
+            <comment></comment>
+        </property>
+        <property>
+            <name>Height</name>
+            <returntype>int</returntype>
+            <parameter>
+                <name>arg0</name>
+                <type>int</type>
+            </parameter>
+            <comment></comment>
+        </property>
+        <property>
+            <name>Background</name>
+            <returntype>android.graphics.drawable.Drawable</returntype>
+            <parameter>
+                <name>arg0</name>
+                <type>android.graphics.drawable.Drawable</type>
+            </parameter>
+            <comment></comment>
+        </property>
+        <property>
+            <name>Width</name>
+            <returntype>int</returntype>
+            <parameter>
+                <name>arg0</name>
+                <type>int</type>
+            </parameter>
+            <comment></comment>
+        </property>
+        <property>
+            <name>NumberOfViews</name>
+            <returntype>int</returntype>
+            <comment></comment>
+        </property>
+        <property>
+            <name>Left</name>
+            <returntype>int</returntype>
+            <parameter>
+                <name>arg0</name>
+                <type>int</type>
+            </parameter>
+            <comment></comment>
+        </property>
+        <property>
+            <name>Color</name>
+            <parameter>
+                <name>arg0</name>
+                <type>int</type>
+            </parameter>
+            <comment></comment>
+        </property>
+    </class>
+    <version>1.0</version>
+    <author>XverhelstX</author>
+</root>

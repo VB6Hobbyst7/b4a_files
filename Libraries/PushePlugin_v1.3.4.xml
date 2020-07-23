@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root>
+    <doclet-version-NOT-library-version>1.02</doclet-version-NOT-library-version>
+    <class>
+        <name>co.ronash.pushe.wrapper.PusheWrapper</name>
+        <shortname>Pushe</shortname>
+        <owner>process</owner>
+        <permission>com.google.android.c2dm.permission.RECEIVE</permission>
+        <permission>android.permission.INTERNET</permission>
+        <permission>android.permission.WAKE_LOCK</permission>
+        <permission>android.permission.RECEIVE_BOOT_COMPLETED</permission>
+        <permission>android.permission.ACCESS_WIFI_STATE</permission>
+        <permission>android.permission.ACCESS_NETWORK_STATE</permission>
+        <permission>android.permission.ACCESS_COARSE_LOCATION</permission>
+        <method>
+            <name>unSubscribe</name>
+            <comment>unsubscribe from a topic (chanel)
+ba: 
+tagName: </comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>ba</name>
+                <type>anywheresoftware.b4a.BA</type>
+            </parameter>
+            <parameter>
+                <name>tagName</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+        <method>
+            <name>sendAdvancedNotifToUser</name>
+            <comment>Sending an advanced notification to another installation of the app by 
+ having pusheId of that installation. Notification should be represented as a valid json string
+ba: 
+pusheId: 
+notificationJson: </comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>ba</name>
+                <type>anywheresoftware.b4a.BA</type>
+            </parameter>
+            <parameter>
+                <name>pusheId</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>notificationJson</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+        <method>
+            <name>subscribe</name>
+            <comment>Subscribe to a topic (chanel)
+ba: 
+tagName: </comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>ba</name>
+                <type>anywheresoftware.b4a.BA</type>
+            </parameter>
+            <parameter>
+                <name>tagName</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+        <method>
+            <name>sendCustomJsonToUser</name>
+            <comment>Sending a custom json to another installation of the app by having pusheId 
+ of that installation. custom json should be represented as a valid json string
+ba: 
+pusheId: 
+customJson: </comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>ba</name>
+                <type>anywheresoftware.b4a.BA</type>
+            </parameter>
+            <parameter>
+                <name>pusheId</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>customJson</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+        <method>
+            <name>notificationOn</name>
+            <comment>make publishing notification on
+ba: </comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>ba</name>
+                <type>anywheresoftware.b4a.BA</type>
+            </parameter>
+        </method>
+        <method>
+            <name>getPusheId</name>
+            <comment>Returns pusheId for current installation as a String
+ba: 
+Return type: @return:String</comment>
+            <returntype>java.lang.String</returntype>
+            <parameter>
+                <name>ba</name>
+                <type>anywheresoftware.b4a.BA</type>
+            </parameter>
+        </method>
+        <method>
+            <name>sendSimpleNotifToUser</name>
+            <comment>Sending a simple notification with just a title and content to another
+ installation of the app by having pusheId of that installation
+ba: 
+pusheId: 
+title: 
+content: </comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>ba</name>
+                <type>anywheresoftware.b4a.BA</type>
+            </parameter>
+            <parameter>
+                <name>pusheId</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>title</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>conntent</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+        <method>
+            <name>pusheInitialized</name>
+            <comment>Returns a boolean indicating if pushe is initialized
+ba: 
+Return type: @return:boolean</comment>
+            <returntype>boolean</returntype>
+            <parameter>
+                <name>ba</name>
+                <type>anywheresoftware.b4a.BA</type>
+            </parameter>
+        </method>
+        <method>
+            <name>notificationOff</name>
+            <comment>make publishing notification off
+ba: </comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>ba</name>
+                <type>anywheresoftware.b4a.BA</type>
+            </parameter>
+        </method>
+        <method>
+            <name>initialize</name>
+            <comment></comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>ba</name>
+                <type>anywheresoftware.b4a.BA</type>
+            </parameter>
+        </method>
+    </class>
+    <class>
+        <name>co.ronash.pushe.wrapper.PusheWrapper.PusheB4AUtil</name>
+        <shortname>PusheB4AUtil</shortname>
+        <owner>process</owner>
+        <method>
+            <name>getPusheJsonMsg</name>
+            <comment>Extract user's JSON message from input
+pIntent: 
+Return type: @return:custom JSON content of message if exists</comment>
+            <returntype>java.lang.String</returntype>
+            <parameter>
+                <name>pIntent</name>
+                <type>android.content.Intent</type>
+            </parameter>
+        </method>
+    </class>
+    <version>1.34</version>
+    <dependsOn>android-support-v4</dependsOn>
+    <dependsOn>pushe-1.3.4.aar</dependsOn>
+    <dependsOn>com.google.android.gms:play-services-gcm</dependsOn>
+    <dependsOn>android-job-1.1.12.aar</dependsOn>    
+    <dependsOn>cat-1.0.5.aar</dependsOn>
+</root>

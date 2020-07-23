@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <doclet-version-NOT-library-version>1.00</doclet-version-NOT-library-version>
+  <dependsOn>json</dependsOn>
+  <dependsOn includesSingletonModules="true">httputils2</dependsOn>
+  <dependsOn>okhttp</dependsOn>
+  <dependsOn>javaobject</dependsOn>
+  <dependsOn>stringutils</dependsOn>
+  <dependsOn>okhttp-2.4.0</dependsOn>
+  <dependsOn>okio-1.4.0</dependsOn>
+  <class>
+    <name>youtube.example.phonevalidate._typelevel</name>
+    <shortname>typeLevel</shortname>
+    <owner>process</owner>
+    <method>
+      <name>Initialize</name>
+      <comment>Initializes the fields to their default value.</comment>
+      <returntype>void</returntype>
+    </method>
+    <field>
+      <name>IsInitialized</name>
+      <comment>Tests whether the object has been initialized.</comment>
+      <returntype>boolean</returntype>
+    </field>
+    <field>
+      <name>error</name>
+      <returntype>String</returntype>
+    </field>
+    <field>
+      <name>valid</name>
+      <returntype>boolean</returntype>
+    </field>
+    <field>
+      <name>location</name>
+      <returntype>String</returntype>
+    </field>
+    <field>
+      <name>TypePhone</name>
+      <returntype>String</returntype>
+    </field>
+    <field>
+      <name>Is_Mobile</name>
+      <returntype>boolean</returntype>
+    </field>
+    <field>
+      <name>local_number</name>
+      <returntype>String</returntype>
+    </field>
+    <field>
+      <name>country_code</name>
+      <returntype>String</returntype>
+    </field>
+  </class>
+  <class>
+    <name>youtube.example.phonevalidate</name>
+    <shortname>PhoneValidate</shortname>
+    <owner>process</owner>
+    <method>
+      <name>IsInitialized</name>
+      <comment>Tests whether the object has been initialized.</comment>
+      <returntype>boolean</returntype>
+    </method>
+    <method>
+      <name DesignerName="Initialize">_initialize</name>
+      <comment>Do you want check is Number Phone is Valid:&lt;br /&gt;Example:&lt;br /&gt;Dim checkphone As PhoneValidate&lt;br /&gt;checkphone.Initialize(&amp;quot;1-888-322-1122&amp;quot;,&amp;quot;Fe5pwHzYKdmshHMC2Kq7NUIN0X3Ap1J54u4jsn62nFgdNmBJX9&amp;quot;, Me, &amp;quot;check_validate&amp;quot;)&lt;br /&gt;.....&lt;br /&gt;Sub check(valore As typeLevel)&lt;br /&gt;Log(&amp;quot;Error: &amp;quot; &amp;amp; valore.error)&lt;br /&gt;Log(&amp;quot;Valid: &amp;quot; &amp;amp; valore.valid )&lt;br /&gt;Log(&amp;quot;Location: &amp;quot; &amp;amp; valore.location)&lt;br /&gt;Log(&amp;quot;Country Code: &amp;quot; &amp;amp; valore.country_code)&lt;br /&gt;Log(&amp;quot;is mobile: &amp;quot; &amp;amp; valore.Is_Mobile)&lt;br /&gt;Log(&amp;quot;Local Number: &amp;quot; &amp;amp; valore.local_number )&lt;br /&gt;Log(&amp;quot;Type Phone: &amp;quot; &amp;amp; valore.TypePhone )&lt;br /&gt;End Sub&lt;br /&gt;******&lt;br /&gt;NOTE: Free account limit: 50 / day&lt;br /&gt;If you want more information or Premium see this site:https://www.neutrinoapi.com/plans/&lt;br /&gt;</comment>
+      <returntype>String</returntype>
+      <parameter>
+        <name>ba</name>
+        <type>anywheresoftware.b4a.BA</type>
+      </parameter>
+      <parameter>
+        <name>numberphone</name>
+        <type>String</type>
+      </parameter>
+      <parameter>
+        <name>yourkey</name>
+        <type>String</type>
+      </parameter>
+      <parameter>
+        <name>Module</name>
+        <type>Object</type>
+      </parameter>
+      <parameter>
+        <name>EventName</name>
+        <type>String</type>
+      </parameter>
+    </method>
+  </class>
+  <version>1</version>
+  <author>Devil-App</author>
+</root>

@@ -1,0 +1,56 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <doclet-version-NOT-library-version>1.00</doclet-version-NOT-library-version>
+  <dependsOn>preferenceactivity</dependsOn>
+  <dependsOn>phone</dependsOn>
+  <dependsOn>reflection</dependsOn>
+  <dependsOn>mshortcut</dependsOn>
+  <class>
+    <name>b4a.ir.test.shortcut.mshortcut</name>
+    <shortname>MShortcut</shortname>
+    <owner>process</owner>
+    <event>OnError (ErrorMessage as string)</event>
+    <event>OnShortcutExists</event>
+    <method>
+      <name DesignerName="IsInitialized">_isinitialized</name>
+      <comment> Is MShortcut class initilized.</comment>
+      <returntype>boolean</returntype>
+    </method>
+    <method>
+      <name DesignerName="GenerateShortcut">_generateshortcut</name>
+      <comment>Create yout shortcut to this app, you should add following permisson to manifest editor before using this method:
+com.android.launcher.permission.INSTALL_SHORTCUT
+ApplicationName: Name of your app, shortcut title will set to it.
+ApplicationIcon: A bitmap to show it as icon in shortcut.</comment>
+      <returntype>String</returntype>
+      <parameter>
+        <name>ApplicationName</name>
+        <type>String</type>
+      </parameter>
+      <parameter>
+        <name>ApplicationIcon</name>
+        <type>anywheresoftware.b4a.objects.drawable.CanvasWrapper.BitmapWrapper</type>
+      </parameter>
+    </method>
+    <method>
+      <name DesignerName="Initialize">_initialize</name>
+      <comment>Initilize MShortcut Class.
+EventName: Name of the events.
+Module: Must Be me.</comment>
+      <returntype>String</returntype>
+      <parameter>
+        <name>ba</name>
+        <type>anywheresoftware.b4a.BA</type>
+      </parameter>
+      <parameter>
+        <name>EventName</name>
+        <type>String</type>
+      </parameter>
+      <parameter>
+        <name>module</name>
+        <type>Object</type>
+      </parameter>
+    </method>
+  </class>
+  <version>1</version>
+</root>

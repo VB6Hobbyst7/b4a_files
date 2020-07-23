@@ -1,0 +1,406 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root>
+    <doclet-version-NOT-library-version>1.04</doclet-version-NOT-library-version>
+    <class>
+        <name>collapsecalendarviewwrapper.collapseCalendarViewWrapper</name>
+        <shortname>CollapseCalendarView</shortname>
+        <objectwrapper>main.java.com.wefika.calendar.CollapseCalendarView</objectwrapper>
+        <owner>process</owner>
+        <event>date_selected(date As String)</event>
+        <method>
+            <name>DesignerCreateView</name>
+            <comment></comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>base</name>
+                <type>anywheresoftware.b4a.objects.PanelWrapper</type>
+            </parameter>
+            <parameter>
+                <name>lw</name>
+                <type>anywheresoftware.b4a.objects.LabelWrapper</type>
+            </parameter>
+            <parameter>
+                <name>props</name>
+                <type>anywheresoftware.b4a.objects.collections.Map</type>
+            </parameter>
+        </method>
+        <method>
+            <name>IsInitialized</name>
+            <comment></comment>
+            <returntype>boolean</returntype>
+        </method>
+        <method>
+            <name>Initialize</name>
+            <comment>Initialize with the name of the Event that will be raised when a date is clicked,
+ the number of years backwards from the present date (0, 1, 2, 3......), and
+ the number of years forward from the present date (0, 1, 2, 3......)</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>ba</name>
+                <type>anywheresoftware.b4a.BA</type>
+            </parameter>
+            <parameter>
+                <name>EventName</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>minusyears</name>
+                <type>int</type>
+            </parameter>
+            <parameter>
+                <name>plusyears</name>
+                <type>int</type>
+            </parameter>
+        </method>
+        <method>
+            <name>BringToFront</name>
+            <comment></comment>
+            <returntype>void</returntype>
+        </method>
+        <method>
+            <name>SetLayout</name>
+            <comment></comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>arg0</name>
+                <type Pixel="true">int</type>
+            </parameter>
+            <parameter>
+                <name>arg1</name>
+                <type Pixel="true">int</type>
+            </parameter>
+            <parameter>
+                <name>arg2</name>
+                <type Pixel="true">int</type>
+            </parameter>
+            <parameter>
+                <name>arg3</name>
+                <type Pixel="true">int</type>
+            </parameter>
+        </method>
+        <method>
+            <name>SendToBack</name>
+            <comment></comment>
+            <returntype>void</returntype>
+        </method>
+        <method>
+            <name>SetVisibleAnimated</name>
+            <comment></comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>arg0</name>
+                <type>int</type>
+            </parameter>
+            <parameter>
+                <name>arg1</name>
+                <type>boolean</type>
+            </parameter>
+        </method>
+        <method>
+            <name>RemoveView</name>
+            <comment></comment>
+            <returntype>void</returntype>
+        </method>
+        <method>
+            <name>Invalidate3</name>
+            <comment></comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>arg0</name>
+                <type>int</type>
+            </parameter>
+            <parameter>
+                <name>arg1</name>
+                <type>int</type>
+            </parameter>
+            <parameter>
+                <name>arg2</name>
+                <type>int</type>
+            </parameter>
+            <parameter>
+                <name>arg3</name>
+                <type>int</type>
+            </parameter>
+        </method>
+        <method>
+            <name>Invalidate2</name>
+            <comment></comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>arg0</name>
+                <type>android.graphics.Rect</type>
+            </parameter>
+        </method>
+        <method>
+            <name>setminusYearsPlusMonths</name>
+            <comment>Set the number of years back and the number of months forward from the present date
+ This is the range that the calendar will display</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>minusyears</name>
+                <type>int</type>
+            </parameter>
+            <parameter>
+                <name>plusmonths</name>
+                <type>int</type>
+            </parameter>
+        </method>
+        <method>
+            <name>SetColorAnimated</name>
+            <comment></comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>arg0</name>
+                <type>int</type>
+            </parameter>
+            <parameter>
+                <name>arg1</name>
+                <type>int</type>
+            </parameter>
+            <parameter>
+                <name>arg2</name>
+                <type>int</type>
+            </parameter>
+        </method>
+        <method>
+            <name>SetBackgroundImage</name>
+            <comment></comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>arg0</name>
+                <type>android.graphics.Bitmap</type>
+            </parameter>
+        </method>
+        <method>
+            <name>Invalidate</name>
+            <comment></comment>
+            <returntype>void</returntype>
+        </method>
+        <method>
+            <name>setminusMonthsPlusYears</name>
+            <comment>Set the number of months back and the number of years forward from the present date
+ This is the range that the calendar will display</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>minusmonths</name>
+                <type>int</type>
+            </parameter>
+            <parameter>
+                <name>plusyears</name>
+                <type>int</type>
+            </parameter>
+        </method>
+        <method>
+            <name>SetLayoutAnimated</name>
+            <comment></comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>arg0</name>
+                <type>int</type>
+            </parameter>
+            <parameter>
+                <name>arg1</name>
+                <type Pixel="true">int</type>
+            </parameter>
+            <parameter>
+                <name>arg2</name>
+                <type Pixel="true">int</type>
+            </parameter>
+            <parameter>
+                <name>arg3</name>
+                <type Pixel="true">int</type>
+            </parameter>
+            <parameter>
+                <name>arg4</name>
+                <type Pixel="true">int</type>
+            </parameter>
+        </method>
+        <method>
+            <name>RequestFocus</name>
+            <comment></comment>
+            <returntype>boolean</returntype>
+        </method>
+        <property>
+            <name>DayNameTextSize</name>
+            <parameter>
+                <name>daynametextsize</name>
+                <type>int</type>
+            </parameter>
+            <comment>Set the size of the Day names</comment>
+        </property>
+        <property>
+            <name>DayNameColor</name>
+            <parameter>
+                <name>color</name>
+                <type>int</type>
+            </parameter>
+            <comment>Set the color of the Day names</comment>
+        </property>
+        <property>
+            <name>Left</name>
+            <returntype>int</returntype>
+            <parameter>
+                <name>left</name>
+                <type>int</type>
+            </parameter>
+            <comment></comment>
+        </property>
+        <property>
+            <name>Background</name>
+            <returntype>android.graphics.drawable.Drawable</returntype>
+            <parameter>
+                <name>arg0</name>
+                <type>android.graphics.drawable.Drawable</type>
+            </parameter>
+            <comment></comment>
+        </property>
+        <property>
+            <name>minusYears</name>
+            <parameter>
+                <name>minusyears</name>
+                <type>int</type>
+            </parameter>
+            <comment>Set the number of years backwards from the present date
+ This method should be used with "plusYears = x" where x = 0, 1, 2, 3, .....
+ The range that the calendar will display will be from (present date - minusyears) to (present date + plusyears)</comment>
+        </property>
+        <property>
+            <name>Parent</name>
+            <returntype>java.lang.Object</returntype>
+            <comment></comment>
+        </property>
+        <property>
+            <name>plusMonths</name>
+            <parameter>
+                <name>plusmonths</name>
+                <type>int</type>
+            </parameter>
+            <comment>Set the number of months forward from the present date
+ This method should be used with "minusMonths = x" where x = 0, 1, 2, 3, .....
+ The range that the calendar will display will be from (present date - minusmonths) to (present date + plusmonths)</comment>
+        </property>
+        <property>
+            <name>plusYears</name>
+            <parameter>
+                <name>plusyears</name>
+                <type>int</type>
+            </parameter>
+            <comment>Set the number of years forward from the present date
+ This method should be used with "minusYears = x" where x = 0, 1, 2, 3, .....
+ The range that the calendar will display will be from (present date - minusyears) to (present date + plusyears)</comment>
+        </property>
+        <property>
+            <name>Color</name>
+            <parameter>
+                <name>arg0</name>
+                <type>int</type>
+            </parameter>
+            <comment></comment>
+        </property>
+        <property>
+            <name>Enabled</name>
+            <returntype>boolean</returntype>
+            <parameter>
+                <name>arg0</name>
+                <type>boolean</type>
+            </parameter>
+            <comment></comment>
+        </property>
+        <property>
+            <name>minusMonths</name>
+            <parameter>
+                <name>minusmonths</name>
+                <type>int</type>
+            </parameter>
+            <comment>Set the number of months backwards from the present date
+ This method should be used with "plusMonths = x" where x = 0, 1, 2, 3, .....
+ The range that the calendar will display will be from (present date - minusmonths) to (present date + plusmonths)</comment>
+        </property>
+        <property>
+            <name>MaxDate</name>
+            <returntype>java.lang.String</returntype>
+            <comment>Returns the maximum date that the calendar has been set to</comment>
+        </property>
+        <property>
+            <name>Top</name>
+            <returntype>int</returntype>
+            <parameter>
+                <name>top</name>
+                <type>int</type>
+            </parameter>
+            <comment></comment>
+        </property>
+        <property>
+            <name>Visible</name>
+            <returntype>boolean</returntype>
+            <parameter>
+                <name>arg0</name>
+                <type>boolean</type>
+            </parameter>
+            <comment></comment>
+        </property>
+        <property>
+            <name>SelectedDate</name>
+            <returntype>java.lang.String</returntype>
+            <comment>Returns the date that has been clicked on</comment>
+        </property>
+        <property>
+            <name>TitleTextSize</name>
+            <parameter>
+                <name>titletextsize</name>
+                <type>int</type>
+            </parameter>
+            <comment>Set the size of the Title Text (i.e the Month/Year and the Week Number)</comment>
+        </property>
+        <property>
+            <name>Height</name>
+            <returntype>int</returntype>
+            <parameter>
+                <name>height</name>
+                <type>int</type>
+            </parameter>
+            <comment></comment>
+        </property>
+        <property>
+            <name>MinDate</name>
+            <returntype>java.lang.String</returntype>
+            <comment>Returns the minimum date that the calendar has been set to</comment>
+        </property>
+        <property>
+            <name>TitleTextColor</name>
+            <parameter>
+                <name>titletextcolor</name>
+                <type>int</type>
+            </parameter>
+            <comment>Set the color of the Title Text (i.e the Month/Year and the Week Number)</comment>
+        </property>
+        <property>
+            <name>Tag</name>
+            <returntype>java.lang.Object</returntype>
+            <parameter>
+                <name>arg0</name>
+                <type>java.lang.Object</type>
+            </parameter>
+            <comment></comment>
+        </property>
+        <property>
+            <name>Width</name>
+            <returntype>int</returntype>
+            <parameter>
+                <name>Width</name>
+                <type>int</type>
+            </parameter>
+            <comment></comment>
+        </property>
+        <field>
+            <name>ba</name>
+            <comment></comment>
+            <returntype>anywheresoftware.b4a.BA</returntype>
+        </field>
+    </class>
+    <version>1.0</version>
+    <author>Github: Blaz Solar, Wrapped by: Johan Schoeman</author>
+    <dependsOn>android-support-v4</dependsOn>
+    <dependsOn>commons-lang3-3.4</dependsOn>
+    <dependsOn>joda-time-2.0</dependsOn>
+</root>

@@ -1,0 +1,118 @@
+<HTML>
+<HEAD>
+<META http-equiv="Content-Type" content="text/html; charset=utf-8">
+<TITLE>
+Basic4android - ABWifi
+</TITLE>
+<link rel="stylesheet" type="text/css" href="images/help.css" />
+
+</HEAD>
+
+<BODY BGCOLOR="white" leftmargin="50">
+<a name="top"/>
+<h1>ABWifi</h1>
+<h3>Written by Alain Bailleul</h3>
+</h5>
+<h4>List of types:</h4>
+<a href='#abfoundlocation'>ABFoundLocation</a><br/><a href='#abwifi'>ABWifi</a><br/><a href='#abwifiinfo'>ABWifiInfo</a><br/>
+<hr/>
+<h3><u><a name='abfoundlocation'>ABFoundLocation</a></u></h3>
+</h5>returns an ABFoundLocation object. This contains the Latitude and Longitude<br/>found by using the Wifi signal and GSM Triangulation.
+<br/>
+
+<h4>Events:</h4>
+None
+<h4>Members:</h4><br/>
+<img src='images/11.png'/>&nbsp;&nbsp;<span style="color: #000000;"><a href='#abfoundlocation_latitude'><b>Latitude</b></a>&nbsp;</span><span style="color: #0000FF;">As</span><span style="color: #000000;">&nbsp;</span><span style="color: #008B8B;">Double</span><br/><br/>
+<img src='images/11.png'/>&nbsp;&nbsp;<span style="color: #000000;"><a href='#abfoundlocation_longitude'><b>Longitude</b></a>&nbsp;</span><span style="color: #0000FF;">As</span><span style="color: #000000;">&nbsp;</span><span style="color: #008B8B;">Double</span><br/><br/>
+
+<h4>Members description:</h4>
+<a name='abfoundlocation_latitude'/>
+<h5><img src='images/11.png'/>
+<span style="color: #000000;">Latitude&nbsp;</span><span style="color: #0000FF;">As</span><span style="color: #000000;">&nbsp;</span><span style="color: #008B8B;">Double</span></h5><a name='abfoundlocation_longitude'/>
+<h5><img src='images/11.png'/>
+<span style="color: #000000;">Longitude&nbsp;</span><span style="color: #0000FF;">As</span><span style="color: #000000;">&nbsp;</span><span style="color: #008B8B;">Double</span></h5><hr/>
+<h3><u><a name='abwifi'>ABWifi</a></u></h3>
+</h5>This library allows you to get Wifi information.<br/> <br/> Extra added is a location function<br/> It uses the Wifi Signal and GSM Triangulation to get the latitude and longitude of the device <br/> without an active GPS.
+<br/>
+<h4>Permissions:</h4>android.permission.ACCESS_WIFI_STATE<br/>android.permission.CHANGE_WIFI_STATE<br/>android.permission.INTERNET<br/>android.permission.ACCESS_FINE_LOCATION<br/>
+<h4>Events:</h4>
+FoundLocation()<br/>
+<h4>Members:</h4><br/>
+<img src='images/15.png'/>&nbsp;&nbsp;<span style="color: #000000;"><a href='#abwifi_abgetcurrentwifiinfo'><b>ABGetCurrentWifiInfo</b></a>&nbsp;</span><span style="color: #0000FF;">As</span><span style="color: #000000;">&nbsp;ABWifiInfo</span><br/><br/>
+<img src='images/15.png'/>&nbsp;&nbsp;<span style="color: #000000;"><a href='#abwifi_abgetfoundlocation'><b>ABGetFoundLocation</b></a>&nbsp;</span><span style="color: #0000FF;">As</span><span style="color: #000000;">&nbsp;ABFoundLocation</span><br/><br/>
+<img src='images/15.png'/>&nbsp;&nbsp;<span style="color: #000000;"><a href='#abwifi_abgetlocation'><b>ABGetLocation</b></a>&nbsp;(eventName&nbsp;</span><span style="color: #0000FF;">As</span><span style="color: #000000;">&nbsp;</span><span style="color: #008B8B;">String</span><span style="color: #000000;">)&nbsp;</span><span style="color: #0000FF;">As</span><span style="color: #000000;">&nbsp;</span><span style="color: #008B8B;">Boolean</span><br/><br/>
+<img src='images/15.png'/>&nbsp;&nbsp;<span style="color: #000000;"><a href='#abwifi_abgetwifinetwork'><b>ABGetWifiNetwork</b></a>&nbsp;(index&nbsp;</span><span style="color: #0000FF;">As</span><span style="color: #000000;">&nbsp;Integer)&nbsp;</span><span style="color: #0000FF;">As</span><span style="color: #000000;">&nbsp;ABWifiInfo</span><br/><br/>
+<img src='images/15.png'/>&nbsp;&nbsp;<span style="color: #000000;"><a href='#abwifi_abloadwifi'><b>ABLoadWifi</b></a>&nbsp;</span><span style="color: #0000FF;">As</span><span style="color: #000000;">&nbsp;</span><span style="color: #008B8B;">Boolean</span><br/><br/>
+<img src='images/15.png'/>&nbsp;&nbsp;<span style="color: #000000;"><a href='#abwifi_abnumberofavailablewifinetworks'><b>ABNumberOfAvailableWifiNetworks</b></a>&nbsp;</span><span style="color: #0000FF;">As</span><span style="color: #000000;">&nbsp;Integer</span><br/><br/>
+<img src='images/15.png'/>&nbsp;&nbsp;<span style="color: #000000;"><a href='#abwifi_abwifilasterror'><b>ABWifiLastError</b></a>&nbsp;</span><span style="color: #0000FF;">As</span><span style="color: #000000;">&nbsp;</span><span style="color: #008B8B;">String</span><br/><br/>
+
+<h4>Members description:</h4>
+<a name='abwifi_abgetcurrentwifiinfo'/>
+<h5><img src='images/15.png'/>
+<span style="color: #000000;">ABGetCurrentWifiInfo&nbsp;</span><span style="color: #0000FF;">As</span><span style="color: #000000;">&nbsp;ABWifiInfo</span></h5>Returns the current connected ABWifiInfo after using the ABLoadWifi() function.<br/><br/> See ABLoadWifi() for an example.<a name='abwifi_abgetfoundlocation'/>
+<h5><img src='images/15.png'/>
+<span style="color: #000000;">ABGetFoundLocation&nbsp;</span><span style="color: #0000FF;">As</span><span style="color: #000000;">&nbsp;ABFoundLocation</span></h5>returns the current ABFoundLocation by using the ABGetLocation() function.<br/><br/>see ABGetLocation() for an example.<a name='abwifi_abgetlocation'/>
+<h5><img src='images/15.png'/>
+<span style="color: #000000;">ABGetLocation&nbsp;(eventName&nbsp;</span><span style="color: #0000FF;">As</span><span style="color: #000000;">&nbsp;</span><span style="color: #008B8B;">String</span><span style="color: #000000;">)&nbsp;</span><span style="color: #0000FF;">As</span><span style="color: #000000;">&nbsp;</span><span style="color: #008B8B;">Boolean</span></h5>Gets the current location of the device by using the Wifi signal <br/>and GSM Triangulation<br/><br/>Example:<span class='pre'><span style="color: #000000;"><br/><br/></span><span style="color: #0000FF;">Sub&nbsp;</span><span style="color: #000000;">Process_Globals<br/>&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #0000FF;">Dim</span><span style="color: #000000;">&nbsp;myWifi&nbsp;</span><span style="color: #0000FF;">As</span><span style="color: #000000;">&nbsp;ABWifi<br/></span><span style="color: #0000FF;">End&nbsp;Sub</span><span style="color: #000000;"><br/><br/></span><span style="color: #0000FF;">Sub&nbsp;</span><span style="color: #000000;">Globals<br/>&nbsp;&nbsp;&nbsp;</span><span style="color: #0000FF;">Dim</span><span style="color: #000000;">&nbsp;Button1&nbsp;</span><span style="color: #0000FF;">As</span><span style="color: #000000;">&nbsp;</span><span style="color: #008B8B;">Button</span><span style="color: #000000;"><br/></span><span style="color: #0000FF;">End&nbsp;Sub</span><span style="color: #000000;"><br/><br/></span><span style="color: #0000FF;">Sub&nbsp;</span><span style="color: #000000;">Button1_Click<br/>&nbsp;&nbsp;&nbsp;</span><span style="color: #0000FF;">Dim</span><span style="color: #000000;">&nbsp;r&nbsp;</span><span style="color: #0000FF;">As</span><span style="color: #000000;">&nbsp;</span><span style="color: #008B8B;">Boolean</span><span style="color: #000000;"><br/>&nbsp;&nbsp;&nbsp;r&nbsp;=&nbsp;myWifi.ABGetLocation(</span><span style="color: #800000;">"myWifi"</span><span style="color: #000000;">)&nbsp;&nbsp;&nbsp;&nbsp;<br/>&nbsp;&nbsp;&nbsp;</span><span style="color: #0000FF;">If</span><span style="color: #000000;">&nbsp;r&nbsp;=&nbsp;False&nbsp;</span><span style="color: #0000FF;">Then</span><span style="color: #000000;"><br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Msgbox&nbsp;(myWifi.ABWifiLastError(),&nbsp;</span><span style="color: #800000;">""</span><span style="color: #000000;">)<br/>&nbsp;&nbsp;&nbsp;</span><span style="color: #0000FF;">End</span><span style="color: #000000;">&nbsp;</span><span style="color: #0000FF;">If</span><span style="color: #000000;"><br/></span><span style="color: #0000FF;">End&nbsp;Sub</span><span style="color: #000000;"><br/><br/></span><span style="color: #0000FF;">Sub&nbsp;</span><span style="color: #000000;">myWifi_FoundLocation&nbsp;()<br/>&nbsp;&nbsp;&nbsp;</span><span style="color: #0000FF;">Dim</span><span style="color: #000000;">&nbsp;ResLocation&nbsp;</span><span style="color: #0000FF;">As</span><span style="color: #000000;">&nbsp;ABFoundLocation<br/>&nbsp;&nbsp;&nbsp;resLocation&nbsp;=&nbsp;myWifi.ABGetFoundLocation()<br/>&nbsp;&nbsp;&nbsp;&nbsp;Msgbox&nbsp;(</span><span style="color: #800000;">""</span><span style="color: #000000;">&nbsp;&amp;&nbsp;ResLocation.Latitude&nbsp;&amp;&nbsp;</span><span style="color: #800000;">"&nbsp;-&nbsp;"</span><span style="color: #000000;">&nbsp;&amp;&nbsp;ResLocation.Longitude,&nbsp;</span><span style="color: #800000;">""</span><span style="color: #000000;">)<br/></span><span style="color: #0000FF;">End&nbsp;Sub</span><span style="color: #000000;">&nbsp;&nbsp;&nbsp;&nbsp;<br/></span></span><a name='abwifi_abgetwifinetwork'/>
+<h5><img src='images/15.png'/>
+<span style="color: #000000;">ABGetWifiNetwork&nbsp;(index&nbsp;</span><span style="color: #0000FF;">As</span><span style="color: #000000;">&nbsp;Integer)&nbsp;</span><span style="color: #0000FF;">As</span><span style="color: #000000;">&nbsp;ABWifiInfo</span></h5>Returns an ABWifiInfo object that are found by using the ABLoadWifi() function.<br/> <br/> See ABLoadWifi() for an example.<a name='abwifi_abloadwifi'/>
+<h5><img src='images/15.png'/>
+<span style="color: #000000;">ABLoadWifi&nbsp;</span><span style="color: #0000FF;">As</span><span style="color: #000000;">&nbsp;</span><span style="color: #008B8B;">Boolean</span></h5>Loads the Wifi information.<br/> <br/> Example:<span class='pre'><span style="color: #000000;"><br/>&nbsp;<br/>&nbsp;</span><span style="color: #0000FF;">Sub&nbsp;</span><span style="color: #000000;">Process_Globals<br/>&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #0000FF;">Dim</span><span style="color: #000000;">&nbsp;myWifi&nbsp;</span><span style="color: #0000FF;">As</span><span style="color: #000000;">&nbsp;ABWifi<br/>&nbsp;</span><span style="color: #0000FF;">End&nbsp;Sub</span><span style="color: #000000;"><br/>&nbsp;<br/>&nbsp;</span><span style="color: #0000FF;">Sub&nbsp;</span><span style="color: #000000;">Globals<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #0000FF;">Dim</span><span style="color: #000000;">&nbsp;Button1&nbsp;</span><span style="color: #0000FF;">As</span><span style="color: #000000;">&nbsp;</span><span style="color: #008B8B;">Button</span><span style="color: #000000;"><br/>&nbsp;</span><span style="color: #0000FF;">End&nbsp;Sub</span><span style="color: #000000;"><br/>&nbsp;<br/>&nbsp;</span><span style="color: #0000FF;">Sub&nbsp;</span><span style="color: #000000;">Button1_Click<br/>&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #0000FF;">Dim</span><span style="color: #000000;">&nbsp;r&nbsp;</span><span style="color: #0000FF;">As</span><span style="color: #000000;">&nbsp;</span><span style="color: #008B8B;">Boolean</span><span style="color: #000000;"><br/>&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #0000FF;">Dim</span><span style="color: #000000;">&nbsp;a&nbsp;</span><span style="color: #0000FF;">As</span><span style="color: #000000;">&nbsp;</span><span style="color: #008B8B;">Int</span><span style="color: #000000;"><br/>&nbsp;&nbsp;&nbsp;&nbsp;r&nbsp;=&nbsp;myWifi.ABLoadWifi()<br/>&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #0000FF;">If</span><span style="color: #000000;">&nbsp;r&nbsp;=&nbsp;True&nbsp;</span><span style="color: #0000FF;">Then</span><span style="color: #000000;"><br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Msgbox&nbsp;(myWifi.ABGetCurrentWifiInfo().SSID,&nbsp;</span><span style="color: #800000;">""</span><span style="color: #000000;">)<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #0000FF;">For</span><span style="color: #000000;">&nbsp;a&nbsp;=&nbsp;</span><span style="color: #800080;">0</span><span style="color: #000000;">&nbsp;</span><span style="color: #0000FF;">To</span><span style="color: #000000;">&nbsp;myWifi.ABNumberOfAvailableWifiNetworks&nbsp;-&nbsp;</span><span style="color: #800080;">1</span><span style="color: #000000;"><br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Msgbox&nbsp;(myWifi.ABGetWifiNetwork(a).SSID&nbsp;&amp;&nbsp;</span><span style="color: #800000;">"&nbsp;"</span><span style="color: #000000;">&nbsp;&amp;&nbsp;myWifi.ABGetWifiNetwork(a).Level,&nbsp;</span><span style="color: #800000;">""</span><span style="color: #000000;">)<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #0000FF;">Next</span><span style="color: #000000;"><br/>&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #0000FF;">Else</span><span style="color: #000000;"><br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Msgbox(myWifi.ABWifiLastError,</span><span style="color: #800000;">""</span><span style="color: #000000;">)&nbsp;<br/>&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #0000FF;">End</span><span style="color: #000000;">&nbsp;</span><span style="color: #0000FF;">If</span><span style="color: #000000;"><br/>&nbsp;</span><span style="color: #0000FF;">End&nbsp;Sub</span><span style="color: #000000;"><br/></span></span><a name='abwifi_abnumberofavailablewifinetworks'/>
+<h5><img src='images/15.png'/>
+<span style="color: #000000;">ABNumberOfAvailableWifiNetworks&nbsp;</span><span style="color: #0000FF;">As</span><span style="color: #000000;">&nbsp;Integer</span></h5>Returns the number of available Wifi Networks<a name='abwifi_abwifilasterror'/>
+<h5><img src='images/15.png'/>
+<span style="color: #000000;">ABWifiLastError&nbsp;</span><span style="color: #0000FF;">As</span><span style="color: #000000;">&nbsp;</span><span style="color: #008B8B;">String</span></h5>returns the last error message if any<br/><br/>Example:<span class='pre'><span style="color: #000000;"><br/></span><span style="color: #0000FF;">If</span><span style="color: #000000;">&nbsp;myWifi.ABWifiLastError&nbsp;&lt;&gt;&nbsp;</span><span style="color: #800000;">""</span><span style="color: #000000;">&nbsp;</span><span style="color: #0000FF;">Then</span><span style="color: #000000;"><br/>&nbsp;&nbsp;&nbsp;&nbsp;Msgbox(myWifi.ABWifiLastError,</span><span style="color: #800000;">""</span><span style="color: #000000;">)<br/></span><span style="color: #0000FF;">Else</span><span style="color: #000000;"><br/>&nbsp;&nbsp;&nbsp;&nbsp;Msgbox(</span><span style="color: #800000;">"everything&nbsp;ok"</span><span style="color: #000000;">,&nbsp;</span><span style="color: #800000;">""</span><span style="color: #000000;">)<br/></span><span style="color: #0000FF;">End</span><span style="color: #000000;">&nbsp;</span><span style="color: #0000FF;">If</span><span style="color: #000000;">&nbsp;<br/></span></span><hr/>
+<h3><u><a name='abwifiinfo'>ABWifiInfo</a></u></h3>
+</h5>Returns an ABWifiInfo Object.<br/> <br/> Properties: <br/> (Some properties are only filled for the connected Wifi, see ABGetCurrentWifiInfo())  <br/> <br/> BSSID (String)<br/> MacAddress (String)<br/> NetworkId (Integer)<br/> Rssi (Integer)<br/> SSID (String)<br/> HiddenSSID (Boolean)<br/> FullString (String)<br/> Level (Integer)<br/> IsConnected (Boolean)<br/> Frequency (Integer)<br/> Capabilities (String)<br/> LinkSpeed (Integer)<br/> State (String)
+<br/>
+
+<h4>Events:</h4>
+None
+<h4>Members:</h4><br/>
+<img src='images/11.png'/>&nbsp;&nbsp;<span style="color: #000000;"><a href='#abwifiinfo_bssid'><b>BSSID</b></a>&nbsp;</span><span style="color: #0000FF;">As</span><span style="color: #000000;">&nbsp;</span><span style="color: #008B8B;">String</span><br/><br/>
+<img src='images/11.png'/>&nbsp;&nbsp;<span style="color: #000000;"><a href='#abwifiinfo_capabilities'><b>Capabilities</b></a>&nbsp;</span><span style="color: #0000FF;">As</span><span style="color: #000000;">&nbsp;</span><span style="color: #008B8B;">String</span><br/><br/>
+<img src='images/11.png'/>&nbsp;&nbsp;<span style="color: #000000;"><a href='#abwifiinfo_frequency'><b>Frequency</b></a>&nbsp;</span><span style="color: #0000FF;">As</span><span style="color: #000000;">&nbsp;Integer</span><br/><br/>
+<img src='images/11.png'/>&nbsp;&nbsp;<span style="color: #000000;"><a href='#abwifiinfo_fullstring'><b>FullString</b></a>&nbsp;</span><span style="color: #0000FF;">As</span><span style="color: #000000;">&nbsp;</span><span style="color: #008B8B;">String</span><br/><br/>
+<img src='images/11.png'/>&nbsp;&nbsp;<span style="color: #000000;"><a href='#abwifiinfo_hiddenssid'><b>HiddenSSID</b></a>&nbsp;</span><span style="color: #0000FF;">As</span><span style="color: #000000;">&nbsp;</span><span style="color: #008B8B;">Boolean</span><br/><br/>
+<img src='images/11.png'/>&nbsp;&nbsp;<span style="color: #000000;"><a href='#abwifiinfo_isconnected'><b>IsConnected</b></a>&nbsp;</span><span style="color: #0000FF;">As</span><span style="color: #000000;">&nbsp;</span><span style="color: #008B8B;">Boolean</span><br/><br/>
+<img src='images/11.png'/>&nbsp;&nbsp;<span style="color: #000000;"><a href='#abwifiinfo_level'><b>Level</b></a>&nbsp;</span><span style="color: #0000FF;">As</span><span style="color: #000000;">&nbsp;Integer</span><br/><br/>
+<img src='images/11.png'/>&nbsp;&nbsp;<span style="color: #000000;"><a href='#abwifiinfo_linkspeed'><b>LinkSpeed</b></a>&nbsp;</span><span style="color: #0000FF;">As</span><span style="color: #000000;">&nbsp;Integer</span><br/><br/>
+<img src='images/11.png'/>&nbsp;&nbsp;<span style="color: #000000;"><a href='#abwifiinfo_macaddress'><b>MacAddress</b></a>&nbsp;</span><span style="color: #0000FF;">As</span><span style="color: #000000;">&nbsp;</span><span style="color: #008B8B;">String</span><br/><br/>
+<img src='images/11.png'/>&nbsp;&nbsp;<span style="color: #000000;"><a href='#abwifiinfo_networkid'><b>NetworkId</b></a>&nbsp;</span><span style="color: #0000FF;">As</span><span style="color: #000000;">&nbsp;Integer</span><br/><br/>
+<img src='images/11.png'/>&nbsp;&nbsp;<span style="color: #000000;"><a href='#abwifiinfo_rssi'><b>Rssi</b></a>&nbsp;</span><span style="color: #0000FF;">As</span><span style="color: #000000;">&nbsp;Integer</span><br/><br/>
+<img src='images/11.png'/>&nbsp;&nbsp;<span style="color: #000000;"><a href='#abwifiinfo_ssid'><b>SSID</b></a>&nbsp;</span><span style="color: #0000FF;">As</span><span style="color: #000000;">&nbsp;</span><span style="color: #008B8B;">String</span><br/><br/>
+<img src='images/11.png'/>&nbsp;&nbsp;<span style="color: #000000;"><a href='#abwifiinfo_state'><b>State</b></a>&nbsp;</span><span style="color: #0000FF;">As</span><span style="color: #000000;">&nbsp;</span><span style="color: #008B8B;">String</span><br/><br/>
+
+<h4>Members description:</h4>
+<a name='abwifiinfo_bssid'/>
+<h5><img src='images/11.png'/>
+<span style="color: #000000;">BSSID&nbsp;</span><span style="color: #0000FF;">As</span><span style="color: #000000;">&nbsp;</span><span style="color: #008B8B;">String</span></h5><a name='abwifiinfo_capabilities'/>
+<h5><img src='images/11.png'/>
+<span style="color: #000000;">Capabilities&nbsp;</span><span style="color: #0000FF;">As</span><span style="color: #000000;">&nbsp;</span><span style="color: #008B8B;">String</span></h5><a name='abwifiinfo_frequency'/>
+<h5><img src='images/11.png'/>
+<span style="color: #000000;">Frequency&nbsp;</span><span style="color: #0000FF;">As</span><span style="color: #000000;">&nbsp;Integer</span></h5><a name='abwifiinfo_fullstring'/>
+<h5><img src='images/11.png'/>
+<span style="color: #000000;">FullString&nbsp;</span><span style="color: #0000FF;">As</span><span style="color: #000000;">&nbsp;</span><span style="color: #008B8B;">String</span></h5><a name='abwifiinfo_hiddenssid'/>
+<h5><img src='images/11.png'/>
+<span style="color: #000000;">HiddenSSID&nbsp;</span><span style="color: #0000FF;">As</span><span style="color: #000000;">&nbsp;</span><span style="color: #008B8B;">Boolean</span></h5><a name='abwifiinfo_isconnected'/>
+<h5><img src='images/11.png'/>
+<span style="color: #000000;">IsConnected&nbsp;</span><span style="color: #0000FF;">As</span><span style="color: #000000;">&nbsp;</span><span style="color: #008B8B;">Boolean</span></h5><a name='abwifiinfo_level'/>
+<h5><img src='images/11.png'/>
+<span style="color: #000000;">Level&nbsp;</span><span style="color: #0000FF;">As</span><span style="color: #000000;">&nbsp;Integer</span></h5><a name='abwifiinfo_linkspeed'/>
+<h5><img src='images/11.png'/>
+<span style="color: #000000;">LinkSpeed&nbsp;</span><span style="color: #0000FF;">As</span><span style="color: #000000;">&nbsp;Integer</span></h5><a name='abwifiinfo_macaddress'/>
+<h5><img src='images/11.png'/>
+<span style="color: #000000;">MacAddress&nbsp;</span><span style="color: #0000FF;">As</span><span style="color: #000000;">&nbsp;</span><span style="color: #008B8B;">String</span></h5><a name='abwifiinfo_networkid'/>
+<h5><img src='images/11.png'/>
+<span style="color: #000000;">NetworkId&nbsp;</span><span style="color: #0000FF;">As</span><span style="color: #000000;">&nbsp;Integer</span></h5><a name='abwifiinfo_rssi'/>
+<h5><img src='images/11.png'/>
+<span style="color: #000000;">Rssi&nbsp;</span><span style="color: #0000FF;">As</span><span style="color: #000000;">&nbsp;Integer</span></h5><a name='abwifiinfo_ssid'/>
+<h5><img src='images/11.png'/>
+<span style="color: #000000;">SSID&nbsp;</span><span style="color: #0000FF;">As</span><span style="color: #000000;">&nbsp;</span><span style="color: #008B8B;">String</span></h5><a name='abwifiinfo_state'/>
+<h5><img src='images/11.png'/>
+<span style="color: #000000;">State&nbsp;</span><span style="color: #0000FF;">As</span><span style="color: #000000;">&nbsp;</span><span style="color: #008B8B;">String</span></h5>
+<hr/>
+<a href="#top">Top</a>
+</body>
+</html>

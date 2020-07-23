@@ -1,0 +1,1579 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <doclet-version-NOT-library-version>1.00</doclet-version-NOT-library-version>
+  <dependsOn>byteconverter</dependsOn>
+  <dependsOn>encryption</dependsOn>
+  <dependsOn>http</dependsOn>
+  <dependsOn>phone</dependsOn>
+  <dependsOn>reflection</dependsOn>
+  <dependsOn>sql</dependsOn>
+  <dependsOn>sl</dependsOn>
+  <dependsOn>stringutils</dependsOn>
+  <dependsOn>ahlocale</dependsOn>
+  <dependsOn>javaobject</dependsOn>
+  <dependsOn>androidresources</dependsOn>
+  <dependsOn>clipboard</dependsOn>
+  <dependsOn>contentresolver</dependsOn>
+  <class>
+    <name>b4a.example.studentviews</name>
+    <shortname>StudentViews</shortname>
+    <owner>process</owner>
+    <permission>android.permission.CAMERA</permission>
+    <permission>android.permission.SET_WALLPAPER</permission>
+    <permission>android.permission.READ_PHONE_STATE</permission>
+    <permission>android.permission.INTERNET</permission>
+    <permission>android.permission.ACCESS_FINE_LOCATION</permission>
+    <method>
+      <name>IsInitialized</name>
+      <comment>Tests whether the object has been initialized.</comment>
+      <returntype>boolean</returntype>
+    </method>
+    <method>
+      <name DesignerName="AddImage2Edittext">_addimage2edittext</name>
+      <comment>Add Icon inside Edit Text</comment>
+      <returntype>String</returntype>
+      <parameter>
+        <name>EditText1</name>
+        <type>anywheresoftware.b4a.objects.EditTextWrapper</type>
+      </parameter>
+      <parameter>
+        <name>bitmap1</name>
+        <type>anywheresoftware.b4a.objects.drawable.BitmapDrawable</type>
+      </parameter>
+    </method>
+    <method>
+      <name DesignerName="AddMenu">_addmenu</name>
+      <comment>add menu to activity</comment>
+      <returntype>String</returntype>
+      <parameter>
+        <name>activity1</name>
+        <type>anywheresoftware.b4a.objects.ActivityWrapper</type>
+      </parameter>
+      <parameter>
+        <name>sTitle</name>
+        <type>String</type>
+      </parameter>
+      <parameter>
+        <name>sIcon</name>
+        <type>anywheresoftware.b4a.objects.drawable.CanvasWrapper.BitmapWrapper</type>
+      </parameter>
+      <parameter>
+        <name>sEventName</name>
+        <type>String</type>
+      </parameter>
+    </method>
+    <method>
+      <name DesignerName="BorderPanel">_borderpanel</name>
+      <comment>add border to panel</comment>
+      <returntype>String</returntype>
+      <parameter>
+        <name>pnl</name>
+        <type>anywheresoftware.b4a.objects.PanelWrapper</type>
+      </parameter>
+      <parameter>
+        <name>BorderWidth</name>
+        <type>float</type>
+      </parameter>
+      <parameter>
+        <name>FillColor</name>
+        <type>int</type>
+      </parameter>
+      <parameter>
+        <name>BorderColor</name>
+        <type>int</type>
+      </parameter>
+    </method>
+    <method>
+      <name DesignerName="ChangeAllViewFont">_changeallviewfont</name>
+      <comment>change all view than have fontmaily properties in activity</comment>
+      <returntype>String</returntype>
+      <parameter>
+        <name>act1</name>
+        <type>anywheresoftware.b4a.objects.ActivityWrapper</type>
+      </parameter>
+      <parameter>
+        <name>sFontName</name>
+        <type>String</type>
+      </parameter>
+    </method>
+    <method>
+      <name DesignerName="Class_Globals">_class_globals</name>
+      <returntype>String</returntype>
+    </method>
+    <method>
+      <name DesignerName="ConvertLabel2Link">_convertlabel2link</name>
+      <comment>conver label to link</comment>
+      <returntype>String</returntype>
+      <parameter>
+        <name>Label1</name>
+        <type>anywheresoftware.b4a.objects.LabelWrapper</type>
+      </parameter>
+      <parameter>
+        <name>Text</name>
+        <type>String</type>
+      </parameter>
+    </method>
+    <method>
+      <name DesignerName="CreateDialog">_createdialog</name>
+      <comment>add SetActivityAttribute(main, android:theme, @android:style/Theme.Translucent.NoTitleBar) to manifest for create form example viber</comment>
+      <returntype>String</returntype>
+      <parameter>
+        <name>activity</name>
+        <type>anywheresoftware.b4a.objects.ActivityWrapper</type>
+      </parameter>
+    </method>
+    <method>
+      <name DesignerName="EditTextSearch">_edittextsearch</name>
+      <comment>add searchable option for editext</comment>
+      <returntype>String</returntype>
+      <parameter>
+        <name>EditTxt</name>
+        <type>anywheresoftware.b4a.objects.EditTextWrapper</type>
+      </parameter>
+    </method>
+    <method>
+      <name DesignerName="FitLabelHeight">_fitlabelheight</name>
+      <comment>fit label height</comment>
+      <returntype>String</returntype>
+      <parameter>
+        <name>lbl</name>
+        <type>anywheresoftware.b4a.objects.LabelWrapper</type>
+      </parameter>
+    </method>
+    <method>
+      <name DesignerName="GetARGB">_getargb</name>
+      <comment>get argb of color</comment>
+      <returntype>int[]</returntype>
+      <parameter>
+        <name>Color</name>
+        <type>int</type>
+      </parameter>
+    </method>
+    <method>
+      <name DesignerName="GetCookieWebView">_getcookiewebview</name>
+      <comment>get cookie of webview</comment>
+      <returntype>String</returntype>
+      <parameter>
+        <name>URL</name>
+        <type>String</type>
+      </parameter>
+    </method>
+    <method>
+      <name DesignerName="GetDevicePhysicalSize">_getdevicephysicalsize</name>
+      <comment>get device scale</comment>
+      <returntype>float</returntype>
+    </method>
+    <method>
+      <name DesignerName="GetNPDrawable">_getnpdrawable</name>
+      <comment>get picture from res folder
+you can save pictrue in any dip
+drawable-hdpi or drawable-mdpi or drawable-xhdpi</comment>
+      <returntype>Object</returntype>
+      <parameter>
+        <name>Name</name>
+        <type>String</type>
+      </parameter>
+    </method>
+    <method>
+      <name DesignerName="GetOrientation">_getorientation</name>
+      <comment>get orientation of screen</comment>
+      <returntype>int</returntype>
+    </method>
+    <method>
+      <name DesignerName="GetParent">_getparent</name>
+      <comment>get parent of view</comment>
+      <returntype>anywheresoftware.b4a.objects.ConcreteViewWrapper</returntype>
+      <parameter>
+        <name>v</name>
+        <type>anywheresoftware.b4a.objects.ConcreteViewWrapper</type>
+      </parameter>
+    </method>
+    <method>
+      <name DesignerName="GetScreenShot">_getscreenshot</name>
+      <comment>get screenshot of view</comment>
+      <returntype>anywheresoftware.b4a.objects.drawable.CanvasWrapper.BitmapWrapper</returntype>
+      <parameter>
+        <name>view1</name>
+        <type>anywheresoftware.b4a.objects.ConcreteViewWrapper</type>
+      </parameter>
+      <parameter>
+        <name>sPath</name>
+        <type>String</type>
+      </parameter>
+    </method>
+    <method>
+      <name DesignerName="GetScreenShot1">_getscreenshot1</name>
+      <comment>get screenshot with other way and save image in file</comment>
+      <returntype>anywheresoftware.b4a.objects.drawable.CanvasWrapper.BitmapWrapper</returntype>
+      <parameter>
+        <name>act1</name>
+        <type>anywheresoftware.b4a.objects.ActivityWrapper</type>
+      </parameter>
+      <parameter>
+        <name>sDir</name>
+        <type>String</type>
+      </parameter>
+      <parameter>
+        <name>sFilename</name>
+        <type>String</type>
+      </parameter>
+    </method>
+    <method>
+      <name DesignerName="GetSelectionEnd">_getselectionend</name>
+      <comment>get text of selection text in edittext</comment>
+      <returntype>int</returntype>
+      <parameter>
+        <name>txt</name>
+        <type>anywheresoftware.b4a.objects.EditTextWrapper</type>
+      </parameter>
+    </method>
+    <method>
+      <name DesignerName="Initialize">_initialize</name>
+      <returntype>String</returntype>
+      <parameter>
+        <name>ba</name>
+        <type>anywheresoftware.b4a.BA</type>
+      </parameter>
+    </method>
+    <method>
+      <name DesignerName="LabelSpace">_labelspace</name>
+      <comment>change space of line in view</comment>
+      <returntype>String</returntype>
+      <parameter>
+        <name>view1</name>
+        <type>anywheresoftware.b4a.objects.ConcreteViewWrapper</type>
+      </parameter>
+    </method>
+    <method>
+      <name DesignerName="MarginEditText">_marginedittext</name>
+      <comment>set margin of edittext</comment>
+      <returntype>String</returntype>
+      <parameter>
+        <name>EditText1</name>
+        <type>anywheresoftware.b4a.objects.EditTextWrapper</type>
+      </parameter>
+      <parameter>
+        <name>Left</name>
+        <type>int</type>
+      </parameter>
+      <parameter>
+        <name>Top</name>
+        <type>int</type>
+      </parameter>
+      <parameter>
+        <name>Right</name>
+        <type>int</type>
+      </parameter>
+      <parameter>
+        <name>Bottom</name>
+        <type>int</type>
+      </parameter>
+    </method>
+    <method>
+      <name DesignerName="OpenSpinner">_openspinner</name>
+      <comment>perform spinner to open list without click on spinner</comment>
+      <returntype>String</returntype>
+      <parameter>
+        <name>s</name>
+        <type>anywheresoftware.b4a.objects.SpinnerWrapper</type>
+      </parameter>
+    </method>
+    <method>
+      <name DesignerName="PanelIndexOf">_panelindexof</name>
+      <comment>get index of view in panel</comment>
+      <returntype>int</returntype>
+      <parameter>
+        <name>P</name>
+        <type>anywheresoftware.b4a.objects.PanelWrapper</type>
+      </parameter>
+      <parameter>
+        <name>v</name>
+        <type>anywheresoftware.b4a.objects.ConcreteViewWrapper</type>
+      </parameter>
+    </method>
+    <method>
+      <name DesignerName="RemoveEllipsize">_removeellipsize</name>
+      <comment>remove ellipsize of label</comment>
+      <returntype>String</returntype>
+      <parameter>
+        <name>TextView</name>
+        <type>anywheresoftware.b4a.objects.LabelWrapper</type>
+      </parameter>
+    </method>
+    <method>
+      <name DesignerName="SetAlpha">_setalpha</name>
+      <comment>set opacity of view</comment>
+      <returntype>String</returntype>
+      <parameter>
+        <name>Control</name>
+        <type>anywheresoftware.b4a.objects.ConcreteViewWrapper</type>
+      </parameter>
+      <parameter>
+        <name>Alpha</name>
+        <type>int</type>
+      </parameter>
+    </method>
+    <method>
+      <name DesignerName="SetAnimation">_setanimation</name>
+      <comment>set animation for activity.you must be download animation xml file from basic4android forum</comment>
+      <returntype>String</returntype>
+      <parameter>
+        <name>InAnimation</name>
+        <type>String</type>
+      </parameter>
+      <parameter>
+        <name>OutAnimation</name>
+        <type>String</type>
+      </parameter>
+    </method>
+    <method>
+      <name DesignerName="SetColorList">_setcolorlist</name>
+      <comment>set background statelist to label</comment>
+      <returntype>String</returntype>
+      <parameter>
+        <name>Label1</name>
+        <type>anywheresoftware.b4a.objects.LabelWrapper</type>
+      </parameter>
+      <parameter>
+        <name>DefaultColor</name>
+        <type>int</type>
+      </parameter>
+      <parameter>
+        <name>PressedColor</name>
+        <type>int</type>
+      </parameter>
+    </method>
+    <method>
+      <name DesignerName="setCursorVisible">_setcursorvisible</name>
+      <comment>show cursor of editext</comment>
+      <returntype>String</returntype>
+      <parameter>
+        <name>edt</name>
+        <type>anywheresoftware.b4a.objects.EditTextWrapper</type>
+      </parameter>
+      <parameter>
+        <name>Visible</name>
+        <type>boolean</type>
+      </parameter>
+    </method>
+    <method>
+      <name DesignerName="SetEllipsize">_setellipsize</name>
+      <comment>set ellipsize of labe;</comment>
+      <returntype>String</returntype>
+      <parameter>
+        <name>TextView</name>
+        <type>anywheresoftware.b4a.objects.LabelWrapper</type>
+      </parameter>
+      <parameter>
+        <name>Mode</name>
+        <type>String</type>
+      </parameter>
+    </method>
+    <method>
+      <name DesignerName="SetHeightTextFont">_setheighttextfont</name>
+      <comment>set space line of edittext</comment>
+      <returntype>String</returntype>
+      <parameter>
+        <name>sText</name>
+        <type>anywheresoftware.b4a.objects.EditTextWrapper</type>
+      </parameter>
+    </method>
+    <method>
+      <name DesignerName="SetPressed">_setpressed</name>
+      <comment>set press state for button</comment>
+      <returntype>String</returntype>
+      <parameter>
+        <name>cmd</name>
+        <type>anywheresoftware.b4a.objects.ButtonWrapper</type>
+      </parameter>
+      <parameter>
+        <name>Pressed</name>
+        <type>boolean</type>
+      </parameter>
+    </method>
+    <method>
+      <name DesignerName="SetProgressDrawable">_setprogressdrawable</name>
+      <comment>set style to porgressbar</comment>
+      <returntype>String</returntype>
+      <parameter>
+        <name>p</name>
+        <type>anywheresoftware.b4a.objects.ProgressBarWrapper</type>
+      </parameter>
+      <parameter>
+        <name>drawable</name>
+        <type>Object</type>
+      </parameter>
+    </method>
+    <method>
+      <name DesignerName="setShadowLayer">_setshadowlayer</name>
+      <comment>change opacity of view</comment>
+      <returntype>String</returntype>
+      <parameter>
+        <name>lbl</name>
+        <type>anywheresoftware.b4a.objects.ConcreteViewWrapper</type>
+      </parameter>
+      <parameter>
+        <name>Radius</name>
+        <type>float</type>
+      </parameter>
+      <parameter>
+        <name>dx</name>
+        <type>float</type>
+      </parameter>
+      <parameter>
+        <name>dy</name>
+        <type>float</type>
+      </parameter>
+      <parameter>
+        <name>Color</name>
+        <type>int</type>
+      </parameter>
+    </method>
+    <method>
+      <name DesignerName="setTextIsSelectable">_settextisselectable</name>
+      <comment>set selectable for editext</comment>
+      <returntype>String</returntype>
+      <parameter>
+        <name>edt</name>
+        <type>anywheresoftware.b4a.objects.EditTextWrapper</type>
+      </parameter>
+      <parameter>
+        <name>Selectable</name>
+        <type>boolean</type>
+      </parameter>
+    </method>
+    <method>
+      <name DesignerName="SetTextShadow">_settextshadow</name>
+      <comment>set shadow for view</comment>
+      <returntype>String</returntype>
+      <parameter>
+        <name>pView</name>
+        <type>anywheresoftware.b4a.objects.ConcreteViewWrapper</type>
+      </parameter>
+      <parameter>
+        <name>pRadius</name>
+        <type>float</type>
+      </parameter>
+      <parameter>
+        <name>pDx</name>
+        <type>float</type>
+      </parameter>
+      <parameter>
+        <name>pDy</name>
+        <type>float</type>
+      </parameter>
+      <parameter>
+        <name>pColor</name>
+        <type>int</type>
+      </parameter>
+    </method>
+    <method>
+      <name DesignerName="SetTextSize">_settextsize</name>
+      <comment>automatic set label textsize according to screen dpi</comment>
+      <returntype>String</returntype>
+      <parameter>
+        <name>lbl</name>
+        <type>anywheresoftware.b4a.objects.LabelWrapper</type>
+      </parameter>
+      <parameter>
+        <name>txt</name>
+        <type>String</type>
+      </parameter>
+    </method>
+    <method>
+      <name DesignerName="TurnOnFlashLight">_turnonflashlight</name>
+      <comment>turn on flashlight of camera</comment>
+      <returntype>String</returntype>
+    </method>
+    <field>
+      <name DesignerName="Ellipsize_END">_ellipsize_end</name>
+      <returntype>String</returntype>
+    </field>
+    <field>
+      <name DesignerName="Ellipsize_START">_ellipsize_start</name>
+      <returntype>String</returntype>
+    </field>
+    <field>
+      <name DesignerName="sl">_sl</name>
+      <returntype>anywheresoftware.b4a.student.StudentLibrary</returntype>
+    </field>
+  </class>
+  <class>
+    <name>b4a.example.studentcommunication</name>
+    <shortname>StudentCommunication</shortname>
+    <owner>process</owner>
+    <permission>android.permission.INTERNET</permission>
+    <permission>android.permission.CAMERA</permission>
+    <permission>android.permission.SET_WALLPAPER</permission>
+    <permission>android.permission.READ_PHONE_STATE</permission>
+    <permission>android.permission.ACCESS_FINE_LOCATION</permission>
+    <method>
+      <name>IsInitialized</name>
+      <comment>Tests whether the object has been initialized.</comment>
+      <returntype>boolean</returntype>
+    </method>
+    <method>
+      <name DesignerName="AddMessageToLogs">_addmessagetologs</name>
+      <comment>AddPermission(android.permission.WRITE_SMS)
+AddPermission(android.permission.READ_SMS)</comment>
+      <returntype>String</returntype>
+      <parameter>
+        <name>body</name>
+        <type>String</type>
+      </parameter>
+      <parameter>
+        <name>address</name>
+        <type>String</type>
+      </parameter>
+    </method>
+    <method>
+      <name DesignerName="Call">_call</name>
+      <comment>call intent</comment>
+      <returntype>String</returntype>
+      <parameter>
+        <name>Command</name>
+        <type>String</type>
+      </parameter>
+    </method>
+    <method>
+      <name DesignerName="CheckGPS">_checkgps</name>
+      <comment>check gps is enable</comment>
+      <returntype>boolean</returntype>
+    </method>
+    <method>
+      <name DesignerName="CheckInternet">_checkinternet</name>
+      <comment>If return True Then Internet is active</comment>
+      <returntype>boolean</returntype>
+    </method>
+    <method>
+      <name DesignerName="Class_Globals">_class_globals</name>
+      <returntype>String</returntype>
+    </method>
+    <method>
+      <name DesignerName="GetCurrentMail">_getcurrentmail</name>
+      <comment>get current email active in android.Permission android.permission.GET_ACCOUNTS</comment>
+      <returntype>String</returntype>
+    </method>
+    <method>
+      <name DesignerName="GetGregorianDate">_getgregoriandate</name>
+      <comment>get gregoriandate</comment>
+      <returntype>String</returntype>
+      <parameter>
+        <name>Year</name>
+        <type>int</type>
+      </parameter>
+      <parameter>
+        <name>Month</name>
+        <type>int</type>
+      </parameter>
+      <parameter>
+        <name>Day</name>
+        <type>int</type>
+      </parameter>
+      <parameter>
+        <name>Separetor</name>
+        <type>String</type>
+      </parameter>
+    </method>
+    <method>
+      <name DesignerName="GetPersianDate">_getpersiandate</name>
+      <comment>get persian date</comment>
+      <returntype>String</returntype>
+      <parameter>
+        <name>Year</name>
+        <type>int</type>
+      </parameter>
+      <parameter>
+        <name>Month</name>
+        <type>int</type>
+      </parameter>
+      <parameter>
+        <name>Day</name>
+        <type>int</type>
+      </parameter>
+      <parameter>
+        <name>Separetor</name>
+        <type>String</type>
+      </parameter>
+    </method>
+    <method>
+      <name DesignerName="GetPhoneNumber">_getphonenumber</name>
+      <comment>Get Simcard Number</comment>
+      <returntype>String</returntype>
+    </method>
+    <method>
+      <name DesignerName="GetUserAccounts">_getuseraccounts</name>
+      <comment>get register account in android</comment>
+      <returntype>anywheresoftware.b4a.objects.collections.List</returntype>
+    </method>
+    <method>
+      <name DesignerName="Initialize">_initialize</name>
+      <returntype>String</returntype>
+      <parameter>
+        <name>ba</name>
+        <type>anywheresoftware.b4a.BA</type>
+      </parameter>
+    </method>
+    <method>
+      <name DesignerName="KillCall">_killcall</name>
+      <comment>kill call(incoming and outcoming call</comment>
+      <returntype>String</returntype>
+    </method>
+    <method>
+      <name DesignerName="SendMail">_sendmail</name>
+      <comment>send email intent</comment>
+      <returntype>String</returntype>
+      <parameter>
+        <name>sTo</name>
+        <type>String</type>
+      </parameter>
+      <parameter>
+        <name>sBody</name>
+        <type>String</type>
+      </parameter>
+      <parameter>
+        <name>sSubject</name>
+        <type>String</type>
+      </parameter>
+    </method>
+    <method>
+      <name DesignerName="SendRequest2Server">_sendrequest2server</name>
+      <comment>post data to url</comment>
+      <returntype>boolean</returntype>
+      <parameter>
+        <name>strUrl</name>
+        <type>String</type>
+      </parameter>
+      <parameter>
+        <name>strRequest</name>
+        <type>String</type>
+      </parameter>
+    </method>
+    <method>
+      <name DesignerName="SendSms">_sendsms</name>
+      <comment>send sms</comment>
+      <returntype>String</returntype>
+      <parameter>
+        <name>PhoneNumber</name>
+        <type>String</type>
+      </parameter>
+      <parameter>
+        <name>Text</name>
+        <type>String</type>
+      </parameter>
+    </method>
+    <method>
+      <name DesignerName="SendSmsIntent">_sendsmsintent</name>
+      <comment>send sms intent</comment>
+      <returntype>String</returntype>
+      <parameter>
+        <name>PhoneNumber</name>
+        <type>String</type>
+      </parameter>
+      <parameter>
+        <name>Text</name>
+        <type>String</type>
+      </parameter>
+    </method>
+    <method>
+      <name DesignerName="UseLocalhost">_uselocalhost</name>
+      <comment>use 10.0.2.2 to connect localhost server(for phpmyadmin and other server)</comment>
+      <returntype>String</returntype>
+    </method>
+    <field>
+      <name DesignerName="ht">_ht</name>
+      <returntype>anywheresoftware.b4a.http.HttpClientWrapper</returntype>
+    </field>
+    <field>
+      <name DesignerName="hr">_hr</name>
+      <returntype>anywheresoftware.b4a.http.HttpClientWrapper.HttpUriRequestWrapper</returntype>
+    </field>
+    <field>
+      <name DesignerName="sl">_sl</name>
+      <returntype>anywheresoftware.b4a.student.StudentLibrary</returntype>
+    </field>
+  </class>
+  <class>
+    <name>b4a.example.studentapp</name>
+    <shortname>StudentApp</shortname>
+    <owner>process</owner>
+    <permission>android.permission.VIBRATE</permission>
+    <method>
+      <name>IsInitialized</name>
+      <comment>Tests whether the object has been initialized.</comment>
+      <returntype>boolean</returntype>
+    </method>
+    <method>
+      <name DesignerName="Calculator">_calculator</name>
+      <comment>run calculator of android</comment>
+      <returntype>String</returntype>
+    </method>
+    <method>
+      <name DesignerName="Class_Globals">_class_globals</name>
+      <returntype>String</returntype>
+    </method>
+    <method>
+      <name DesignerName="CreateShortCut">_createshortcut</name>
+      <comment>Create Shortcut in Home Android</comment>
+      <returntype>String</returntype>
+      <parameter>
+        <name>act1</name>
+        <type>anywheresoftware.b4a.objects.ActivityWrapper</type>
+      </parameter>
+      <parameter>
+        <name>icon</name>
+        <type>anywheresoftware.b4a.objects.drawable.CanvasWrapper.BitmapWrapper</type>
+      </parameter>
+      <parameter>
+        <name>sTitle</name>
+        <type>String</type>
+      </parameter>
+      <parameter>
+        <name>sPackageName</name>
+        <type>String</type>
+      </parameter>
+    </method>
+    <method>
+      <name DesignerName="FindDefaultApp">_finddefaultapp</name>
+      <comment>find default app</comment>
+      <returntype>String</returntype>
+      <parameter>
+        <name>In</name>
+        <type>anywheresoftware.b4a.objects.IntentWrapper</type>
+      </parameter>
+    </method>
+    <method>
+      <name DesignerName="GetCellID">_getcellid</name>
+      <comment>get cell id</comment>
+      <returntype>String[]</returntype>
+    </method>
+    <method>
+      <name DesignerName="GetDefaultLanguage">_getdefaultlanguage</name>
+      <comment>get current language of android</comment>
+      <returntype>String</returntype>
+    </method>
+    <method>
+      <name DesignerName="GetFreeMemory">_getfreememory</name>
+      <comment>get free memory</comment>
+      <returntype>long</returntype>
+    </method>
+    <method>
+      <name DesignerName="GetPackageName">_getpackagename</name>
+      <comment>get current package name</comment>
+      <returntype>String</returntype>
+    </method>
+    <method>
+      <name DesignerName="Initialize">_initialize</name>
+      <comment>Initializes the object. You can add parameters to this method if needed.</comment>
+      <returntype>String</returntype>
+      <parameter>
+        <name>ba</name>
+        <type>anywheresoftware.b4a.BA</type>
+      </parameter>
+    </method>
+    <method>
+      <name DesignerName="InstallApp">_installapp</name>
+      <comment>install app intent</comment>
+      <returntype>String</returntype>
+      <parameter>
+        <name>sDir</name>
+        <type>String</type>
+      </parameter>
+      <parameter>
+        <name>sFilename</name>
+        <type>String</type>
+      </parameter>
+    </method>
+    <method>
+      <name DesignerName="isSystemapp">_issystemapp</name>
+      <comment>get package type (system,non-system)</comment>
+      <returntype>boolean</returntype>
+      <parameter>
+        <name>app</name>
+        <type>String</type>
+      </parameter>
+    </method>
+    <method>
+      <name DesignerName="MXPlayer">_mxplayer</name>
+      <comment>play video in mxplayer(online and ofline)</comment>
+      <returntype>String</returntype>
+      <parameter>
+        <name>sUrl</name>
+        <type>String</type>
+      </parameter>
+    </method>
+    <method>
+      <name DesignerName="NotifyIcon">_notifyicon</name>
+      <comment>notify icon</comment>
+      <returntype>String</returntype>
+      <parameter>
+        <name>sTitle</name>
+        <type>String</type>
+      </parameter>
+      <parameter>
+        <name>sInfo</name>
+        <type>String</type>
+      </parameter>
+      <parameter>
+        <name>sSound</name>
+        <type>boolean</type>
+      </parameter>
+      <parameter>
+        <name>sVibrate</name>
+        <type>boolean</type>
+      </parameter>
+    </method>
+    <method>
+      <name DesignerName="OpenBazaarApp">_openbazaarapp</name>
+      <comment>open your app in bazaar</comment>
+      <returntype>String</returntype>
+      <parameter>
+        <name>sPackageName</name>
+        <type>String</type>
+      </parameter>
+      <parameter>
+        <name>blnView</name>
+        <type>boolean</type>
+      </parameter>
+    </method>
+    <method>
+      <name DesignerName="OpenGoogleMap">_opengooglemap</name>
+      <comment>open googlemap in android</comment>
+      <returntype>String</returntype>
+      <parameter>
+        <name>sLatitude</name>
+        <type>String</type>
+      </parameter>
+      <parameter>
+        <name>sLongitude</name>
+        <type>String</type>
+      </parameter>
+    </method>
+    <method>
+      <name DesignerName="PlayRinger">_playringer</name>
+      <comment>play current ringtone default</comment>
+      <returntype>String</returntype>
+    </method>
+    <method>
+      <name DesignerName="RunApp">_runapp</name>
+      <comment>run app intent</comment>
+      <returntype>String</returntype>
+      <parameter>
+        <name>sIntent</name>
+        <type>String</type>
+      </parameter>
+    </method>
+    <method>
+      <name DesignerName="ShowHomeScreen">_showhomescreen</name>
+      <comment>show home screen force</comment>
+      <returntype>String</returntype>
+    </method>
+    <method>
+      <name DesignerName="UninstallApp">_uninstallapp</name>
+      <comment>uninstall intent app</comment>
+      <returntype>String</returntype>
+      <parameter>
+        <name>sPackageName</name>
+        <type>String</type>
+      </parameter>
+    </method>
+    <method>
+      <name DesignerName="WritePhoneSetting">_writephonesetting</name>
+      <comment>AddPermission("android.permission.WRITE_SETTINGS")
+WritePhoneSetting("screen_brightness", Value) =&gt; for absolute change setting for all
+p.SetScreenBrightness(Value/255)</comment>
+      <returntype>String</returntype>
+      <parameter>
+        <name>Setting</name>
+        <type>String</type>
+      </parameter>
+      <parameter>
+        <name>Value</name>
+        <type>int</type>
+      </parameter>
+    </method>
+    <field>
+      <name DesignerName="not1">_not1</name>
+      <returntype>anywheresoftware.b4a.objects.NotificationWrapper</returntype>
+    </field>
+    <field>
+      <name DesignerName="mp">_mp</name>
+      <returntype>anywheresoftware.b4a.objects.MediaPlayerWrapper</returntype>
+    </field>
+  </class>
+  <class>
+    <name>b4a.example.studentstring</name>
+    <shortname>StudentString</shortname>
+    <owner>process</owner>
+    <permission>android.permission.CAMERA</permission>
+    <permission>android.permission.SET_WALLPAPER</permission>
+    <permission>android.permission.READ_PHONE_STATE</permission>
+    <permission>android.permission.INTERNET</permission>
+    <permission>android.permission.ACCESS_FINE_LOCATION</permission>
+    <method>
+      <name>IsInitialized</name>
+      <comment>Tests whether the object has been initialized.</comment>
+      <returntype>boolean</returntype>
+    </method>
+    <method>
+      <name DesignerName="Class_Globals">_class_globals</name>
+      <returntype>String</returntype>
+    </method>
+    <method>
+      <name DesignerName="ConvertNumber2Currency">_convertnumber2currency</name>
+      <comment>conver number to curreny format example 250000 to 250,000</comment>
+      <returntype>String</returntype>
+      <parameter>
+        <name>MyNumber</name>
+        <type>double</type>
+      </parameter>
+    </method>
+    <method>
+      <name DesignerName="ConvertNumbers2Persian">_convertnumbers2persian</name>
+      <comment>convert english numbers to persian numbers</comment>
+      <returntype>String</returntype>
+      <parameter>
+        <name>sNumber</name>
+        <type>String</type>
+      </parameter>
+    </method>
+    <method>
+      <name DesignerName="getDate">_getdate</name>
+      <comment>get current persian date</comment>
+      <returntype>String</returntype>
+      <parameter>
+        <name>sDate</name>
+        <type>String</type>
+      </parameter>
+    </method>
+    <method>
+      <name DesignerName="GetMD5">_getmd5</name>
+      <comment>get md5 of string</comment>
+      <returntype>String</returntype>
+      <parameter>
+        <name>sStr</name>
+        <type>String</type>
+      </parameter>
+      <parameter>
+        <name>sOnlynumber</name>
+        <type>boolean</type>
+      </parameter>
+    </method>
+    <method>
+      <name DesignerName="GetPathFromContentResult">_getpathfromcontentresult</name>
+      <comment>convert uri address to standard address</comment>
+      <returntype>String</returntype>
+      <parameter>
+        <name>UriString</name>
+        <type>String</type>
+      </parameter>
+    </method>
+    <method>
+      <name DesignerName="GetSH1">_getsh1</name>
+      <comment>get sha1 of string</comment>
+      <returntype>String</returntype>
+      <parameter>
+        <name>st1</name>
+        <type>String</type>
+      </parameter>
+    </method>
+    <method>
+      <name DesignerName="Initialize">_initialize</name>
+      <comment>Initializes the object. You can add parameters to this method if needed.</comment>
+      <returntype>String</returntype>
+      <parameter>
+        <name>ba</name>
+        <type>anywheresoftware.b4a.BA</type>
+      </parameter>
+    </method>
+    <method>
+      <name DesignerName="SortMap">_sortmap</name>
+      <comment>sort map</comment>
+      <returntype>String</returntype>
+      <parameter>
+        <name>m</name>
+        <type>anywheresoftware.b4a.objects.collections.Map</type>
+      </parameter>
+    </method>
+    <field>
+      <name DesignerName="sl">_sl</name>
+      <returntype>anywheresoftware.b4a.student.StudentLibrary</returntype>
+    </field>
+  </class>
+  <class>
+    <name>b4a.example.studentcontact</name>
+    <shortname>StudentContact</shortname>
+    <owner>process</owner>
+    <permission>android.permission.READ_CONTACTS</permission>
+    <method>
+      <name>IsInitialized</name>
+      <comment>Tests whether the object has been initialized.</comment>
+      <returntype>boolean</returntype>
+    </method>
+    <method>
+      <name DesignerName="CheckExistContact">_checkexistcontact</name>
+      <comment>check contact number in contacts</comment>
+      <returntype>boolean</returntype>
+      <parameter>
+        <name>sNumber</name>
+        <type>String</type>
+      </parameter>
+    </method>
+    <method>
+      <name DesignerName="Class_Globals">_class_globals</name>
+      <returntype>String</returntype>
+    </method>
+    <method>
+      <name DesignerName="GetContactInformation">_getcontactinformation</name>
+      <comment>get contact information from phonenumber</comment>
+      <returntype>anywheresoftware.b4a.phone.ContactsWrapper.Contact</returntype>
+      <parameter>
+        <name>sNumber</name>
+        <type>String</type>
+      </parameter>
+    </method>
+    <method>
+      <name DesignerName="Initialize">_initialize</name>
+      <comment>Initializes the object. You can add parameters to this method if needed.</comment>
+      <returntype>String</returntype>
+      <parameter>
+        <name>ba</name>
+        <type>anywheresoftware.b4a.BA</type>
+      </parameter>
+    </method>
+    <method>
+      <name DesignerName="ListContact">_listcontact</name>
+      <comment>get list of contact</comment>
+      <returntype>anywheresoftware.b4a.objects.collections.Map</returntype>
+    </method>
+  </class>
+  <class>
+    <name>b4a.example.studentintents</name>
+    <shortname>StudentIntents</shortname>
+    <owner>process</owner>
+    <method>
+      <name>IsInitialized</name>
+      <comment>Tests whether the object has been initialized.</comment>
+      <returntype>boolean</returntype>
+    </method>
+    <method>
+      <name DesignerName="Class_Globals">_class_globals</name>
+      <returntype>String</returntype>
+    </method>
+    <method>
+      <name DesignerName="SettingIntent">_settingintent</name>
+      <comment>show setting</comment>
+      <returntype>String</returntype>
+    </method>
+  </class>
+  <class>
+    <name>b4a.example.studentfile</name>
+    <shortname>StudentFile</shortname>
+    <owner>process</owner>
+    <method>
+      <name>IsInitialized</name>
+      <comment>Tests whether the object has been initialized.</comment>
+      <returntype>boolean</returntype>
+    </method>
+    <method>
+      <name DesignerName="Class_Globals">_class_globals</name>
+      <returntype>String</returntype>
+    </method>
+    <method>
+      <name DesignerName="GetBasename">_getbasename</name>
+      <comment>get basename of fullpath</comment>
+      <returntype>String</returntype>
+      <parameter>
+        <name>fullpath</name>
+        <type>String</type>
+      </parameter>
+    </method>
+    <method>
+      <name DesignerName="GetFileExt">_getfileext</name>
+      <comment>get extension of filename</comment>
+      <returntype>String</returntype>
+      <parameter>
+        <name>FullPath</name>
+        <type>String</type>
+      </parameter>
+    </method>
+    <method>
+      <name DesignerName="GetFilename">_getfilename</name>
+      <comment>get filename of fullpath</comment>
+      <returntype>String</returntype>
+      <parameter>
+        <name>fullpath</name>
+        <type>String</type>
+      </parameter>
+    </method>
+    <method>
+      <name DesignerName="GetPath">_getpath</name>
+      <comment>get address of path</comment>
+      <returntype>String</returntype>
+      <parameter>
+        <name>Path</name>
+        <type>String</type>
+      </parameter>
+    </method>
+    <method>
+      <name DesignerName="Initialize">_initialize</name>
+      <comment>Initializes the object. You can add parameters to this method if needed.</comment>
+      <returntype>String</returntype>
+      <parameter>
+        <name>ba</name>
+        <type>anywheresoftware.b4a.BA</type>
+      </parameter>
+    </method>
+    <method>
+      <name DesignerName="RenameFile">_renamefile</name>
+      <comment>rename file</comment>
+      <returntype>boolean</returntype>
+      <parameter>
+        <name>OriginalFileName</name>
+        <type>String</type>
+      </parameter>
+      <parameter>
+        <name>NewFileName</name>
+        <type>String</type>
+      </parameter>
+    </method>
+    <method>
+      <name DesignerName="RenameFolder">_renamefolder</name>
+      <comment>rename folder</comment>
+      <returntype>String</returntype>
+      <parameter>
+        <name>Parent</name>
+        <type>String</type>
+      </parameter>
+      <parameter>
+        <name>CurrentFolder</name>
+        <type>String</type>
+      </parameter>
+      <parameter>
+        <name>NewFolder</name>
+        <type>String</type>
+      </parameter>
+    </method>
+  </class>
+  <class>
+    <name>b4a.example.studentshare</name>
+    <shortname>StudentShare</shortname>
+    <owner>process</owner>
+    <method>
+      <name>IsInitialized</name>
+      <comment>Tests whether the object has been initialized.</comment>
+      <returntype>boolean</returntype>
+    </method>
+    <method>
+      <name DesignerName="Class_Globals">_class_globals</name>
+      <returntype>String</returntype>
+    </method>
+    <method>
+      <name DesignerName="Initialize">_initialize</name>
+      <comment>Initializes the object. You can add parameters to this method if needed.</comment>
+      <returntype>String</returntype>
+      <parameter>
+        <name>ba</name>
+        <type>anywheresoftware.b4a.BA</type>
+      </parameter>
+    </method>
+    <method>
+      <name DesignerName="ShareInstagram">_shareinstagram</name>
+      <comment>share file in instagram</comment>
+      <returntype>String</returntype>
+      <parameter>
+        <name>sDir</name>
+        <type>String</type>
+      </parameter>
+      <parameter>
+        <name>sFileName</name>
+        <type>String</type>
+      </parameter>
+      <parameter>
+        <name>sSubject</name>
+        <type>String</type>
+      </parameter>
+    </method>
+    <method>
+      <name DesignerName="ShareString">_sharestring</name>
+      <comment>share string</comment>
+      <returntype>String</returntype>
+      <parameter>
+        <name>sInfo</name>
+        <type>String</type>
+      </parameter>
+      <parameter>
+        <name>sBody</name>
+        <type>String</type>
+      </parameter>
+      <parameter>
+        <name>sSubject</name>
+        <type>String</type>
+      </parameter>
+    </method>
+    <method>
+      <name DesignerName="ShareTwitter">_sharetwitter</name>
+      <comment>share file in twitter</comment>
+      <returntype>String</returntype>
+      <parameter>
+        <name>sDir</name>
+        <type>String</type>
+      </parameter>
+      <parameter>
+        <name>sFileName</name>
+        <type>String</type>
+      </parameter>
+      <parameter>
+        <name>sSubject</name>
+        <type>String</type>
+      </parameter>
+    </method>
+  </class>
+  <class>
+    <name>b4a.example.studentscrollviewpropeties</name>
+    <shortname>StudentScrollViewPropeties</shortname>
+    <owner>process</owner>
+    <method>
+      <name>IsInitialized</name>
+      <comment>Tests whether the object has been initialized.</comment>
+      <returntype>boolean</returntype>
+    </method>
+    <method>
+      <name DesignerName="Class_Globals">_class_globals</name>
+      <returntype>String</returntype>
+    </method>
+    <method>
+      <name DesignerName="getOverScrollMode">_getoverscrollmode</name>
+      <comment>gets the OverScrollMode mode of the SvrollView
+    OVER_SCROLL_ALWAYS                        = 0
+    OVER_SCROLL_IF_CONTENT_SCROLLS = 1
+    OVER_SCROLL_NEVER                            = 2</comment>
+      <returntype>int</returntype>
+      <parameter>
+        <name>v</name>
+        <type>anywheresoftware.b4a.objects.ConcreteViewWrapper</type>
+      </parameter>
+    </method>
+    <method>
+      <name DesignerName="getScrollBarDefaultDelayBeforeFade">_getscrollbardefaultdelaybeforefade</name>
+      <comment>sets the ScrollBarDefaultDelayBeforeFade of the SvrollView in milliseconds
+DelayBeforeFade is the time before the ScrollBar disappears</comment>
+      <returntype>int</returntype>
+      <parameter>
+        <name>v</name>
+        <type>anywheresoftware.b4a.objects.ConcreteViewWrapper</type>
+      </parameter>
+    </method>
+    <method>
+      <name DesignerName="getScrollBarFadeDuration">_getscrollbarfadeduration</name>
+      <comment>gets the ScrollBarFadeDuration of the SvrollView in milliseconds
+ScrollBarFadeDuration is the fading duration (slowly disappearing)</comment>
+      <returntype>int</returntype>
+      <parameter>
+        <name>v</name>
+        <type>anywheresoftware.b4a.objects.ConcreteViewWrapper</type>
+      </parameter>
+    </method>
+    <method>
+      <name DesignerName="getScrollBarSize">_getscrollbarsize</name>
+      <comment>Gets the ScrollBar size in pixels
+    unfortunately this seem not worfink, no effect on my devices</comment>
+      <returntype>int</returntype>
+      <parameter>
+        <name>v</name>
+        <type>anywheresoftware.b4a.objects.ConcreteViewWrapper</type>
+      </parameter>
+    </method>
+    <method>
+      <name DesignerName="getScrollBarStyle">_getscrollbarstyle</name>
+      <comment>Gets the ScrollBar style
+    SCROLLBARS_INSIDE_OVERLAY    = 0  (0x00000000)
+    SCROLLBARS_INSIDE_INSET          = 16777216 (0x01000000)
+    SCROLLBARS_OUTSIDE_INSET        = 50331648 (0x03000000)
+    SCROLLBARS_OUTSIDE_OVERLAY  = 33554432 (0x02000000)</comment>
+      <returntype>int</returntype>
+      <parameter>
+        <name>v</name>
+        <type>anywheresoftware.b4a.objects.ConcreteViewWrapper</type>
+      </parameter>
+    </method>
+    <method>
+      <name DesignerName="getVerticalFadingEdgeLength">_getverticalfadingedgelength</name>
+      <comment>Gets the length, in pixels, of the fading edge (the shadows on top and bottom of the ScrollView</comment>
+      <returntype>int</returntype>
+      <parameter>
+        <name>v</name>
+        <type>anywheresoftware.b4a.objects.ConcreteViewWrapper</type>
+      </parameter>
+    </method>
+    <method>
+      <name DesignerName="getVerticalScrollbarPosition">_getverticalscrollbarposition</name>
+      <comment>Gets the vertical Scrollbar position of the ScrollView
+    SCROLLBAR_POSITION_DEFAULT    = 0  position defined by the operating system
+    SCROLLBAR_POSITION_LEFT        = 1
+    SCROLLBAR_POSITION_RIGHT        = 2</comment>
+      <returntype>int</returntype>
+      <parameter>
+        <name>v</name>
+        <type>anywheresoftware.b4a.objects.ConcreteViewWrapper</type>
+      </parameter>
+    </method>
+    <method>
+      <name DesignerName="HideScrollbar">_hidescrollbar</name>
+      <comment>hide scrollview scollbar</comment>
+      <returntype>String</returntype>
+      <parameter>
+        <name>ScrollView1</name>
+        <type>anywheresoftware.b4a.objects.ScrollViewWrapper</type>
+      </parameter>
+    </method>
+    <method>
+      <name DesignerName="Initialize">_initialize</name>
+      <comment>Initializes the object. You can add parameters to this method if needed.</comment>
+      <returntype>String</returntype>
+      <parameter>
+        <name>ba</name>
+        <type>anywheresoftware.b4a.BA</type>
+      </parameter>
+    </method>
+    <method>
+      <name DesignerName="setOverScrollMode">_setoverscrollmode</name>
+      <comment>sets the OverScrollMode mode of the SvrollView
+    OVER_SCROLL_ALWAYS                        = 0
+    OVER_SCROLL_IF_CONTENT_SCROLLS = 1
+    OVER_SCROLL_NEVER                            = 2</comment>
+      <returntype>String</returntype>
+      <parameter>
+        <name>v</name>
+        <type>anywheresoftware.b4a.objects.ConcreteViewWrapper</type>
+      </parameter>
+      <parameter>
+        <name>Mode</name>
+        <type>int</type>
+      </parameter>
+    </method>
+    <method>
+      <name DesignerName="setScrollBarDefaultDelayBeforeFade">_setscrollbardefaultdelaybeforefade</name>
+      <comment>sets the ScrollBarDefaultDelayBeforeFade of the SvrollView in milliseconds
+DelayBeforeFade is the time before the ScrollBar disappears</comment>
+      <returntype>String</returntype>
+      <parameter>
+        <name>v</name>
+        <type>anywheresoftware.b4a.objects.ConcreteViewWrapper</type>
+      </parameter>
+      <parameter>
+        <name>Duration</name>
+        <type>int</type>
+      </parameter>
+    </method>
+    <method>
+      <name DesignerName="setScrollBarFadeDuration">_setscrollbarfadeduration</name>
+      <comment>sets the ScrollBarFadeDuration of the SvrollView in milliseconds
+ScrollBarFadeDuration is the fading duration (slowly disappearing)</comment>
+      <returntype>String</returntype>
+      <parameter>
+        <name>v</name>
+        <type>anywheresoftware.b4a.objects.ConcreteViewWrapper</type>
+      </parameter>
+      <parameter>
+        <name>FadeDuration</name>
+        <type>int</type>
+      </parameter>
+    </method>
+    <method>
+      <name DesignerName="setScrollBarSize">_setscrollbarsize</name>
+      <comment>Sets the ScrollBar size in pixels
+    unfortunately this seem not worfink, no effect on my devices</comment>
+      <returntype>String</returntype>
+      <parameter>
+        <name>v</name>
+        <type>anywheresoftware.b4a.objects.ConcreteViewWrapper</type>
+      </parameter>
+      <parameter>
+        <name>Size</name>
+        <type>int</type>
+      </parameter>
+    </method>
+    <method>
+      <name DesignerName="setScrollBarStyle">_setscrollbarstyle</name>
+      <comment>Sets the ScrollBar style
+    SCROLLBARS_INSIDE_OVERLAY    = 0 (0x00000000)
+    SCROLLBARS_INSIDE_INSET          = 16777216 (0x01000000)
+    SCROLLBARS_OUTSIDE_INSET        = 50331648 (0x03000000)
+    SCROLLBARS_OUTSIDE_OVERLAY  = 33554432 (0x02000000)</comment>
+      <returntype>String</returntype>
+      <parameter>
+        <name>v</name>
+        <type>anywheresoftware.b4a.objects.ConcreteViewWrapper</type>
+      </parameter>
+      <parameter>
+        <name>Style</name>
+        <type>int</type>
+      </parameter>
+    </method>
+    <method>
+      <name DesignerName="setVerticalFadingEdgeEnabled">_setverticalfadingedgeenabled</name>
+      <comment>enables the VerticalFadingEdge of the SvrollView
+the VerticalFadingEdges are the 'shadows' on top and bottom of the ScrollView</comment>
+      <returntype>String</returntype>
+      <parameter>
+        <name>v</name>
+        <type>anywheresoftware.b4a.objects.ConcreteViewWrapper</type>
+      </parameter>
+      <parameter>
+        <name>Enabled</name>
+        <type>boolean</type>
+      </parameter>
+    </method>
+    <method>
+      <name DesignerName="setVerticalScrollBarEnabled">_setverticalscrollbarenabled</name>
+      <comment>displays or hides the VerticalScrollBar of the ScrollView</comment>
+      <returntype>String</returntype>
+      <parameter>
+        <name>v</name>
+        <type>anywheresoftware.b4a.objects.ConcreteViewWrapper</type>
+      </parameter>
+      <parameter>
+        <name>Enabled</name>
+        <type>boolean</type>
+      </parameter>
+    </method>
+    <method>
+      <name DesignerName="setVerticalScrollbarPosition">_setverticalscrollbarposition</name>
+      <comment>Sets the vertical Scrollbar position of the ScrollView
+    SCROLLBAR_POSITION_DEFAULT    = 0  position defined by the operating system
+    SCROLLBAR_POSITION_LEFT        = 1
+    SCROLLBAR_POSITION_RIGHT        = 2</comment>
+      <returntype>String</returntype>
+      <parameter>
+        <name>v</name>
+        <type>anywheresoftware.b4a.objects.ConcreteViewWrapper</type>
+      </parameter>
+      <parameter>
+        <name>Position</name>
+        <type>int</type>
+      </parameter>
+    </method>
+  </class>
+  <class>
+    <name>b4a.example.studentimage</name>
+    <shortname>StudentImage</shortname>
+    <owner>process</owner>
+    <permission>android.permission.CAMERA</permission>
+    <permission>android.permission.SET_WALLPAPER</permission>
+    <permission>android.permission.READ_PHONE_STATE</permission>
+    <permission>android.permission.INTERNET</permission>
+    <permission>android.permission.ACCESS_FINE_LOCATION</permission>
+    <permission>android.permission.WRITE_EXTERNAL_STORAGE</permission>
+    <method>
+      <name>IsInitialized</name>
+      <comment>Tests whether the object has been initialized.</comment>
+      <returntype>boolean</returntype>
+    </method>
+    <method>
+      <name DesignerName="Class_Globals">_class_globals</name>
+      <returntype>String</returntype>
+    </method>
+    <method>
+      <name DesignerName="CreateScaledBitmap">_createscaledbitmap</name>
+      <comment>zoom of image with filter</comment>
+      <returntype>anywheresoftware.b4a.objects.drawable.CanvasWrapper.BitmapWrapper</returntype>
+      <parameter>
+        <name>Original</name>
+        <type>anywheresoftware.b4a.objects.drawable.CanvasWrapper.BitmapWrapper</type>
+      </parameter>
+      <parameter>
+        <name>Width</name>
+        <type>int</type>
+      </parameter>
+      <parameter>
+        <name>Height</name>
+        <type>int</type>
+      </parameter>
+      <parameter>
+        <name>Filter</name>
+        <type>boolean</type>
+      </parameter>
+    </method>
+    <method>
+      <name DesignerName="CropImageInGallery">_cropimageingallery</name>
+      <comment>crop image using any app and return result of crop for save</comment>
+      <returntype>anywheresoftware.b4a.objects.IntentWrapper</returntype>
+      <parameter>
+        <name>Directory</name>
+        <type>String</type>
+      </parameter>
+      <parameter>
+        <name>PictureName</name>
+        <type>String</type>
+      </parameter>
+    </method>
+    <method>
+      <name DesignerName="GetWallpaper">_getwallpaper</name>
+      <comment>get wallpaper of android </comment>
+      <returntype>anywheresoftware.b4a.objects.drawable.CanvasWrapper.BitmapWrapper</returntype>
+    </method>
+    <method>
+      <name DesignerName="Initialize">_initialize</name>
+      <comment>Initializes the object. You can add parameters to this method if needed.</comment>
+      <returntype>String</returntype>
+      <parameter>
+        <name>ba</name>
+        <type>anywheresoftware.b4a.BA</type>
+      </parameter>
+    </method>
+    <method>
+      <name DesignerName="LoadImageFromUrl">_loadimagefromurl</name>
+      <comment>load image from url to imageview</comment>
+      <returntype>String</returntype>
+      <parameter>
+        <name>sLink</name>
+        <type>String</type>
+      </parameter>
+      <parameter>
+        <name>imgView</name>
+        <type>anywheresoftware.b4a.objects.ImageViewWrapper</type>
+      </parameter>
+    </method>
+    <method>
+      <name DesignerName="OpenGallery">_opengallery</name>
+      <comment>open a filename image in gallery </comment>
+      <returntype>String</returntype>
+      <parameter>
+        <name>filename</name>
+        <type>String</type>
+      </parameter>
+    </method>
+    <method>
+      <name DesignerName="ResizeBitmap">_resizebitmap</name>
+      <comment>resize the image</comment>
+      <returntype>anywheresoftware.b4a.objects.drawable.CanvasWrapper.BitmapWrapper</returntype>
+      <parameter>
+        <name>original</name>
+        <type>anywheresoftware.b4a.objects.drawable.CanvasWrapper.BitmapWrapper</type>
+      </parameter>
+      <parameter>
+        <name>width</name>
+        <type>int</type>
+      </parameter>
+      <parameter>
+        <name>height</name>
+        <type>int</type>
+      </parameter>
+    </method>
+    <method>
+      <name DesignerName="SetWallpaper">_setwallpaper</name>
+      <comment>set image to android wallpaper</comment>
+      <returntype>boolean</returntype>
+      <parameter>
+        <name>sBitmap</name>
+        <type>anywheresoftware.b4a.objects.drawable.CanvasWrapper.BitmapWrapper</type>
+      </parameter>
+    </method>
+    <field>
+      <name DesignerName="sl">_sl</name>
+      <returntype>anywheresoftware.b4a.student.StudentLibrary</returntype>
+    </field>
+  </class>
+  <version>1</version>
+</root>

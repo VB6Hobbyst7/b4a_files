@@ -1,0 +1,430 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root>
+    <doclet-version-NOT-library-version>1.02</doclet-version-NOT-library-version>
+    <class>
+        <name>de.amberhome.quickaction.QuickAction3D</name>
+        <shortname>AHQuickAction3D</shortname>
+        <owner>process</owner>
+        <event>Click (Position as Int, ActionItemID as Int)</event>
+        <event>Dismiss</event>
+        <method>
+            <name>Initialize</name>
+            <comment>Initialize the AHQuickAction3D object
+ 
+ EventName - Event name Orientation - Orientation of the popup window</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>ba</name>
+                <type>anywheresoftware.b4a.BA</type>
+            </parameter>
+            <parameter>
+                <name>EventName</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>Orientation</name>
+                <type>int</type>
+            </parameter>
+        </method>
+        <method>
+            <name>AddActionItem</name>
+            <comment>Add action item
+ 
+ Action - AHActionItem object</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>Action</name>
+                <type>de.amberhome.quickaction.ActionItem</type>
+            </parameter>
+        </method>
+        <method>
+            <name>Show</name>
+            <comment>Show quickaction popup. Popup is automatically positioned, on top or
+ bottom of anchor view.
+ 
+ AnchorView - View that is used as an anchor</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>AnchorView</name>
+                <type>android.view.View</type>
+            </parameter>
+        </method>
+        <method>
+            <name>GetActionItem</name>
+            <comment>Get action item at an index
+ 
+ Index - Index of item</comment>
+            <returntype>de.amberhome.quickaction.ActionItem</returntype>
+            <parameter>
+                <name>Index</name>
+                <type>int</type>
+            </parameter>
+        </method>
+        <property>
+            <name>AnimStyle</name>
+            <parameter>
+                <name>AnimStyle</name>
+                <type>int</type>
+            </parameter>
+            <comment>Set animation style
+ 
+ AnimStyle - animation style, default is set to ANIM_AUTO</comment>
+        </property>
+        <property>
+            <name>ItemCount</name>
+            <returntype>int</returntype>
+            <comment>Get number of action items</comment>
+        </property>
+        <field>
+            <name>ANIM_REFLECT</name>
+            <comment></comment>
+            <returntype>int</returntype>
+        </field>
+        <field>
+            <name>ANIM_GROW_FROM_CENTER</name>
+            <comment></comment>
+            <returntype>int</returntype>
+        </field>
+        <field>
+            <name>ANIM_GROW_FROM_LEFT</name>
+            <comment></comment>
+            <returntype>int</returntype>
+        </field>
+        <field>
+            <name>ANIM_GROW_FROM_RIGHT</name>
+            <comment></comment>
+            <returntype>int</returntype>
+        </field>
+        <field>
+            <name>HORIZONTAL</name>
+            <comment></comment>
+            <returntype>int</returntype>
+        </field>
+        <field>
+            <name>ANIM_AUTO</name>
+            <comment></comment>
+            <returntype>int</returntype>
+        </field>
+        <field>
+            <name>VERTICAL</name>
+            <comment></comment>
+            <returntype>int</returntype>
+        </field>
+    </class>
+    <class>
+        <name>de.amberhome.quickaction.ActionItem</name>
+        <shortname>AHActionItem</shortname>
+        <comment>This object can hold a menu Item for the popup windows with icon and text.</comment>
+        <owner>process</owner>
+        <method>
+            <name>Initialize</name>
+            <comment>Initializes the action item
+
+ ActionId - Id for the action item. Pass any number here.
+ Title - Text for the item
+ Icon - Icon for the item. Pass Null if you want a text only item.</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>ActionId</name>
+                <type>int</type>
+            </parameter>
+            <parameter>
+                <name>Title</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>Icon</name>
+                <type>android.graphics.drawable.Drawable</type>
+            </parameter>
+        </method>
+        <property>
+            <name>Sticky</name>
+            <returntype>boolean</returntype>
+            <parameter>
+                <name>Sticky</name>
+                <type>boolean</type>
+            </parameter>
+            <comment>Set or get sticky status of button
+ 
+ Sticky - true for sticky, pop up sends event but does not disappear</comment>
+        </property>
+        <property>
+            <name>Tag</name>
+            <returntype>java.lang.Object</returntype>
+            <parameter>
+                <name>Tag</name>
+                <type>java.lang.Object</type>
+            </parameter>
+            <comment>Set or get action tag object
+ 
+ Tag - Tag object to set</comment>
+        </property>
+        <property>
+            <name>Selected</name>
+            <returntype>boolean</returntype>
+            <parameter>
+                <name>Selected</name>
+                <type>boolean</type>
+            </parameter>
+            <comment>Set or get selected flag;
+ 
+ Selected - Flag to indicate the item is selected</comment>
+        </property>
+        <property>
+            <name>Icon</name>
+            <returntype>android.graphics.drawable.Drawable</returntype>
+            <parameter>
+                <name>Icon</name>
+                <type>android.graphics.drawable.Drawable</type>
+            </parameter>
+            <comment>Set or get action icon
+ 
+ Icon - action icon as a drawable</comment>
+        </property>
+        <property>
+            <name>Title</name>
+            <returntype>java.lang.String</returntype>
+            <parameter>
+                <name>Title</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <comment>Set or get action title
+ 
+ Title - Action title</comment>
+        </property>
+        <property>
+            <name>ActionId</name>
+            <returntype>int</returntype>
+            <parameter>
+                <name>ActionId</name>
+                <type>int</type>
+            </parameter>
+            <comment>Set or get action id
+ 
+ ActionId - Action id for this action</comment>
+        </property>
+    </class>
+    <class>
+        <name>de.amberhome.quickaction.QuickAction</name>
+        <shortname>AHQuickAction</shortname>
+        <owner>process</owner>
+        <event>Click (Position as Int, ActionItemID as Int)</event>
+        <event>Dismiss</event>
+        <method>
+            <name>Initialize</name>
+            <comment>Initialize the AHQuickAction3D object
+ 
+ EventName - Event name</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>ba</name>
+                <type>anywheresoftware.b4a.BA</type>
+            </parameter>
+            <parameter>
+                <name>EventName</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+        <method>
+            <name>AddActionItem</name>
+            <comment>Add action item
+ 
+ Action - AHActionItem object</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>Action</name>
+                <type>de.amberhome.quickaction.ActionItem</type>
+            </parameter>
+        </method>
+        <method>
+            <name>Show</name>
+            <comment>Show quickaction popup. Popup is automatically positioned, on top or bottom of anchor view.
+ 
+ AnchorView - View that is used as an anchor</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>AnchorView</name>
+                <type>android.view.View</type>
+            </parameter>
+        </method>
+        <method>
+            <name>GetActionItem</name>
+            <comment>Get action item at an index
+ 
+ Index - Index of item</comment>
+            <returntype>de.amberhome.quickaction.ActionItem</returntype>
+            <parameter>
+                <name>Index</name>
+                <type>int</type>
+            </parameter>
+        </method>
+        <property>
+            <name>AnimStyle</name>
+            <parameter>
+                <name>AnimStyle</name>
+                <type>int</type>
+            </parameter>
+            <comment>Set animation style
+ 
+ AnimStyle - animation style, default is set to ANIM_AUTO</comment>
+        </property>
+        <property>
+            <name>ItemCount</name>
+            <returntype>int</returntype>
+            <comment>Get number of action items</comment>
+        </property>
+        <property>
+            <name>AnimateTrack</name>
+            <parameter>
+                <name>mAnimateTrack</name>
+                <type>boolean</type>
+            </parameter>
+            <comment>Flag, if the track should be animated when the popup window opens.</comment>
+        </property>
+        <field>
+            <name>ANIM_GROW_FROM_CENTER</name>
+            <comment></comment>
+            <returntype>int</returntype>
+        </field>
+        <field>
+            <name>ANIM_GROW_FROM_LEFT</name>
+            <comment></comment>
+            <returntype>int</returntype>
+        </field>
+        <field>
+            <name>ANIM_GROW_FROM_RIGHT</name>
+            <comment></comment>
+            <returntype>int</returntype>
+        </field>
+        <field>
+            <name>ANIM_AUTO</name>
+            <comment></comment>
+            <returntype>int</returntype>
+        </field>
+    </class>
+    <class>
+        <name>de.amberhome.quickaction.ICSMenu</name>
+        <shortname>AHPopupMenu</shortname>
+        <owner>process</owner>
+        <event>Click (Position as Int, ActionItemID as Int)</event>
+        <event>Dismiss</event>
+        <method>
+            <name>Initialize</name>
+            <comment>Initialize the AHQuickAction3D object
+ 
+ EventName - Event name</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>ba</name>
+                <type>anywheresoftware.b4a.BA</type>
+            </parameter>
+            <parameter>
+                <name>EventName</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+        <method>
+            <name>AddActionItem</name>
+            <comment>Add action item
+ 
+ Action - AHActionItem object</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>Action</name>
+                <type>de.amberhome.quickaction.ActionItem</type>
+            </parameter>
+        </method>
+        <method>
+            <name>Show</name>
+            <comment>Show ICS style popup menu. menu is automatically positioned, on top or
+ bottom of anchor view.
+ 
+ AnchorView - View that is used as an anchor</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>AnchorView</name>
+                <type>android.view.View</type>
+            </parameter>
+        </method>
+        <method>
+            <name>GetActionItem</name>
+            <comment></comment>
+            <returntype>de.amberhome.quickaction.ActionItem</returntype>
+            <parameter>
+                <name>Index</name>
+                <type>int</type>
+            </parameter>
+        </method>
+        <property>
+            <name>AnimStyle</name>
+            <parameter>
+                <name>AnimStyle</name>
+                <type>int</type>
+            </parameter>
+            <comment>Set animation style
+ 
+ AnimStyle - animation style, default is set to ANIM_AUTO</comment>
+        </property>
+        <property>
+            <name>ItemCount</name>
+            <returntype>int</returntype>
+            <comment>Get number of action items</comment>
+        </property>
+        <field>
+            <name>ANIM_REFLECT</name>
+            <comment></comment>
+            <returntype>int</returntype>
+        </field>
+        <field>
+            <name>ANIM_GROW_FROM_CENTER</name>
+            <comment></comment>
+            <returntype>int</returntype>
+        </field>
+        <field>
+            <name>ANIM_GROW_FROM_LEFT</name>
+            <comment></comment>
+            <returntype>int</returntype>
+        </field>
+        <field>
+            <name>ANIM_GROW_FROM_RIGHT</name>
+            <comment></comment>
+            <returntype>int</returntype>
+        </field>
+        <field>
+            <name>ANIM_AUTO</name>
+            <comment></comment>
+            <returntype>int</returntype>
+        </field>
+        <field>
+            <name>VERTICAL</name>
+            <comment></comment>
+            <returntype>int</returntype>
+        </field>
+    </class>
+    <version>1.01</version>
+    <comment>This library provides two objects for some nice looking popup menus.
+ 
+  The AHQuickAction object is a popup window with horizontally aligned items.
+  You can see this popup window in many apps like Tapatalk or Folder Organizer.
+  
+  The AHQuickAction3D object is a popup that can be used horizontally and
+  vertically. You can find a similar popup in many Google apps like 3D-Gallery
+  and Text&amp;Tables.
+  
+  This library is somewhat different to other libraries because it makes use
+  of standard Android resource files. Resource files cannot be published inside
+  a .jar file and so you have to copy them to your Basic4Android project directory.
+  
+  Copy the whole "res" directory structure to the "Objects" directory of your B4A
+  project and VERY IMPORTANT: make them READ ONLY! Otherwise B4A will delete them
+  when compiling. After you make any change to the Objecs/res directory use
+  "Clean project" menu item in B4A to force the compiler to recreate the R.java file.
+  
+  If you forget to make the resource files read only then you will most likely get
+  a ResourceNotFound exception when you try to use the popup objects.
+  
+  The objects are ported from open source projects and you can find them here:
+  &lt;link&gt;NewQuickAction|https://github.com/lorensiuswlt/NewQuickAction&lt;/link&gt;
+  &lt;link&gt;NewQuickAction3D|https://github.com/lorensiuswlt/NewQuickAction3D&lt;/link&gt;</comment>
+    <author>Markus Stipp</author>
+</root>

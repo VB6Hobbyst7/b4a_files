@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <title>MediaBrowser</title>
+		<style type="text/css">
+			body{
+				background-color:#E1DEE6;
+				color:#222;
+				font-family:Arial,Helvetica,sans-serif;
+				font-size:14px;
+				margin:0;
+				padding:0;
+			}
+			h3{
+				background-color:#869BBF;
+				margin:0;
+				padding:5px;
+			}
+			ul{
+				list-style:none;
+				margin:5px;
+				padding:0;
+			}
+			ul li{
+				background-color:#FFF;
+				border:1px solid #666;
+				margin:0;
+				padding:5px;
+			}
+			ul li:first-child, h3{
+				border-top-left-radius:5px;
+				border-top-right-radius:5px;
+			}
+			ul li:last-child, h3{
+				border-bottom-left-radius:5px;
+				border-bottom-right-radius:5px;
+			}
+			ul h3:first-child{
+				background-color:#869BDF;
+				margin-bottom:5px;
+			}
+		</style>
+    </head>
+    <body><h3>MediaBrowser</h3>
+<ul>
+<li><h3>MediaBrowser</h3>
+<h3>Events:</h3>
+<ul>
+<li><b>MediaCompleted</b></li>
+<li><b>ScanCompleted</b> (Path <span style='color:blue'>As</span> <span style='color:#008B8B'>String</span>)</li>
+<li><b>SeekCompleted</b></li>
+</ul>
+<h3>Fields:</h3>
+<ul>
+<li><b>Tag <span style='color:blue'>As</span> <span style='color:#008B8B'>Object</span></b>
+</li>
+</ul>
+<h3>Methods:</h3>
+<ul>
+<li><b>GetAudioFileInfo</b> (Path <span style='color:blue'>As</span> <span style='color:#008B8B'>String</span>, File <span style='color:blue'>As</span> <span style='color:#008B8B'>String</span>)<b> <span style='color:blue'>As</span> <span style='color:#008B8B'>Map</span></b>
+<br><i>Returns a Map containing info from the MediaStore about an audio file.
+  
+The fields that are returned are:
+"ID"
+"Title"
+"Album"
+"Artist"
+"Track"
+"Year"
+"Location"
+"DisplayName"
+"Duration" (in ms)</i>
+</li>
+<li><b>GetAudioFileInfoByID</b> (External <span style='color:blue'>As</span> <span style='color:#008B8B'>Boolean</span>, ID <span style='color:blue'>As</span> <span style='color:#008B8B'>Long</span>)<b> <span style='color:blue'>As</span> <span style='color:#008B8B'>Map</span></b>
+<br><i>Returns a Map containing info from the MediaStore about an audio file.
+  
+The fields that are returned are:
+"ID"
+"Title"
+"Album"
+"Artist"
+"Track"
+"Year"
+"Location"
+"DisplayName"
+"Duration" (in ms)</i>
+</li>
+<li><b>GetExtImageFileInfo</b> (Location <span style='color:blue'>As</span> <span style='color:#008B8B'>String</span>)<b> <span style='color:blue'>As</span> <span style='color:#008B8B'>Map</span></b>
+<br><i>Returns a Map containing info from the MediaStore about an external image file.
+Location = complete path name for the file.
+  
+The fields that are returned are:
+"ID"
+"Location"
+"DisplayName"
+"DateTaken" (in ticks from 1970)
+"Height" (with Android 3.0+)
+"Width" (with Android 3.0+)
+"Size" (in bytes)</i>
+</li>
+<li><b>GetExtVideoFileInfo</b> (Location <span style='color:blue'>As</span> <span style='color:#008B8B'>String</span>)<b> <span style='color:blue'>As</span> <span style='color:#008B8B'>Map</span></b>
+<br><i>Returns a Map containing info from the MediaStore about an external video file.
+Location = complete path name for the file.
+  
+The fields that are returned are:
+"ID"
+"Location"
+"DisplayName"
+"DateTaken" (in ticks from 1970)
+"Resolution" (can be Null for some files)
+"Size" (in bytes)</i>
+</li>
+<li><b>GetImageDimensions</b> (Location <span style='color:blue'>As</span> <span style='color:#008B8B'>String</span>)<b> <span style='color:blue'>As</span> <span style='color:#008B8B'>Map</span></b>
+<br><i>Returns a map containing width and height of the specified file.
+Location = complete path name for the file.</i>
+</li>
+<li><b>GetImageFileInfoByID</b> (External <span style='color:blue'>As</span> <span style='color:#008B8B'>Boolean</span>, ID <span style='color:blue'>As</span> <span style='color:#008B8B'>Long</span>)<b> <span style='color:blue'>As</span> <span style='color:#008B8B'>Map</span></b>
+<br><i>Returns a Map containing info from the MediaStore about an image file.
+  
+The fields that are returned are:
+"ID"
+"Location"
+"DisplayName"
+"DateTaken" (in ticks from 1970)
+"Height" (with Android 3.0+)
+"Width" (with Android 3.0+)
+"Size" (in bytes)</i>
+</li>
+<li><b>GetImgThumbnailByID</b> (ID <span style='color:blue'>As</span> <span style='color:#008B8B'>Long</span>, Mini <span style='color:blue'>As</span> <span style='color:#008B8B'>Boolean</span>)<b> <span style='color:blue'>As</span> <span style='color:#008B8B'>Bitmap</span></b>
+<br><i>Returns the micro thumbnail (96x96) or mini thumbnail (512x384) of an image file (it is generated if it doesn't exist).</i>
+</li>
+<li><b>GetMediaAudioList</b> (External <span style='color:blue'>As</span> <span style='color:#008B8B'>Boolean</span>, SortCol <span style='color:blue'>As</span> <span style='color:#008B8B'>String</span>)<b> <span style='color:blue'>As</span> <span style='color:#008B8B'>Map</span></b>
+<br><i>Returns a Map containing a list of all Audio files in the MediaStore which can be sorted.
+
+The allowed fields for sorting are:
+Null (if Null is used, it will sort on the ID)
+"title"
+"album"
+"artist"
+"track"
+"year"
+"_data" (location)
+"_display_name"
+"duration"
+  
+The fields that are returned are:
+"ID"
+"Title"
+"Album"
+"Artist"
+"Track"
+"Year"
+"Location"
+"DisplayName"
+"Duration" (in ms)</i>
+</li>
+<li><b>GetMediaImageList</b> (External <span style='color:blue'>As</span> <span style='color:#008B8B'>Boolean</span>, SortCol <span style='color:blue'>As</span> <span style='color:#008B8B'>String</span>)<b> <span style='color:blue'>As</span> <span style='color:#008B8B'>Map</span></b>
+<br><i>Returns a Map containing a list of all Image files in the MediaStore which can be sorted.
+
+The allowed fields for sorting are:
+Null (if Null is used, it will sort on the ID)
+"_data" (location)
+"_display_name"
+"datetaken"
+"size"
+  
+The fields that are returned are:
+"ID"
+"Location"
+"DisplayName"
+"DateTaken" (in ticks from 1970)
+"Height" (with Android 3.0+)
+"Width" (with Android 3.0+)
+"Size" (in bytes)</i>
+</li>
+<li><b>GetMediaVideoList</b> (External <span style='color:blue'>As</span> <span style='color:#008B8B'>Boolean</span>, SortCol <span style='color:blue'>As</span> <span style='color:#008B8B'>String</span>)<b> <span style='color:blue'>As</span> <span style='color:#008B8B'>Map</span></b>
+<br><i>Returns a Map containing a list of all Video files in the MediaStore which can be sorted.
+  
+The allowed fields for sorting are:
+Null (if Null is used, it will sort on the ID)
+"_data" (location)
+"_display_name"
+"datetaken"
+"_size"
+  
+The fields that are returned are:
+"ID"
+"Location"
+"DisplayName"
+"DateTaken" (in ticks from 1970)
+"Resolution" (can be Null for some files)
+"Size" (in bytes)</i>
+</li>
+<li><b>GetVideoFileInfoByID</b> (External <span style='color:blue'>As</span> <span style='color:#008B8B'>Boolean</span>, ID <span style='color:blue'>As</span> <span style='color:#008B8B'>Long</span>)<b> <span style='color:blue'>As</span> <span style='color:#008B8B'>Map</span></b>
+<br><i>Returns a Map containing info from the MediaStore about a video file.
+  
+The fields that are returned are:
+"ID"
+"Location"
+"DisplayName"
+"DateTaken" (in ticks from 1970)
+"Resolution" (can be Null for some files)
+"Size" (in bytes)</i>
+</li>
+<li><b>GetVideoThumbnailByID</b> (ID <span style='color:blue'>As</span> <span style='color:#008B8B'>Long</span>, Mini <span style='color:blue'>As</span> <span style='color:#008B8B'>Boolean</span>)<b> <span style='color:blue'>As</span> <span style='color:#008B8B'>Bitmap</span></b>
+<br><i>Returns the micro thumbnail (96x96) or mini thumbnail (512x384) of a video file (it is generated if it doesn't exist). 
+There's a known bug on some Android versions with micro thumbnails:
+If the micro thumbnail can't be generated (e.g. video file format not recognized), the result is either null or a random thumbnail. Thus, for video files, it is strongly recommended to check if the mini thumbnail is initialized before trying to get the micro thumbnail.</i>
+</li>
+<li><b>Initialize</b> (EventName <span style='color:blue'>As</span> <span style='color:#008B8B'>String</span>)<b></b>
+</li>
+<li><b>MediaAudioPlay</b> (External <span style='color:blue'>As</span> <span style='color:#008B8B'>Boolean</span>, ID <span style='color:blue'>As</span> <span style='color:#008B8B'>Int</span>)<b></b>
+<br><i>Plays an audio file.
+Raises the "MediaCompleted" event when the file end is reached.</i>
+</li>
+<li><b>MediaIsLooping <span style='color:blue'>As</span> <span style='color:#008B8B'>Boolean</span></b>
+<br><i>Checks whether the player is looping or non-looping.</i>
+</li>
+<li><b>MediaIsPlaying <span style='color:blue'>As</span> <span style='color:#008B8B'>Boolean</span></b>
+</li>
+<li><b>MediaLength <span style='color:blue'>As</span> <span style='color:#008B8B'>Int</span></b>
+<br><i>Returns the duration in ms.</i>
+</li>
+<li><b>MediaPause</b>
+</li>
+<li><b>MediaPosition <span style='color:blue'>As</span> <span style='color:#008B8B'>Int</span></b>
+<br><i>Gets the current playback position.</i>
+</li>
+<li><b>MediaResume</b>
+</li>
+<li><b>MediaSeek</b> (position <span style='color:blue'>As</span> <span style='color:#008B8B'>Int</span>)<b></b>
+<br><i>Seeks to specified time position (in ms).
+Raises the event "SeekCompleted" when the position change has been completed.</i>
+</li>
+<li><b>MediaSetLooping</b> (Looping <span style='color:blue'>As</span> <span style='color:#008B8B'>Boolean</span>)<b></b>
+<br><i>Sets the player to be looping or non-looping.</i>
+</li>
+<li><b>MediaSetVolume</b> (leftVolume <span style='color:blue'>As</span> <span style='color:#008B8B'>Float</span>, rightVolume <span style='color:blue'>As</span> <span style='color:#008B8B'>Float</span>)<b></b>
+<br><i>Sets the volume on this player (and this player only).
+Note that the passed volume values are raw scalars. UI controls should be scaled logarithmically.
+This function must be called AFTER MediaAudioPlay.</i>
+</li>
+<li><b>MediaStop</b>
+<br><i>Stops the playback and releases the allocated resources.</i>
+</li>
+<li><b>ScanNewMedia</b> (Paths() <span style='color:blue'>As</span> <span style='color:#008B8B'>String</span>)<b></b>
+<br><i>Requests the media scanner to scan the given files and add them to the MediaStore.
+ Raises the "ScanCompleted" event after each file is scanned.</i>
+</li>
+</ul>
+</ul>
+<ul><li><h3>Author: Edward Smith and F. Leneuf-Magaud</h3></li></ul>
+<ul><li><h3>Version: 1.3</h3></li></ul></body>
+</html>

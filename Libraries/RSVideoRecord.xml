@@ -1,0 +1,243 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root>
+    <doclet-version-NOT-library-version>1.02</doclet-version-NOT-library-version>
+    <class>
+        <name>com.rootsoft.videorecord.VideoRecord</name>
+        <shortname>RSVideoRecord</shortname>
+        <comment>The camera object allows you to use the device back facing camera to take pictures and show preview images.
+Currently the camera orientation is always landscape. Usually you will want to force the application to also be in landscape mode (Project - Supported Orientations).
+Only one process can access the camera at any time. Therefore it is highly recommended to initialize the camera object in Activity_Resume and release it in Activity_Pause.
+A working example with explanations is available &lt;link&gt;here|http://www.basic4ppc.com/forum/basic4android-getting-started-tutorials/6891-take-pictures-internal-camera.html&lt;/link&gt;.</comment>
+        <owner>activity</owner>
+        <event>Ready (Success As Boolean)</event>
+        <event>PictureTaken (Data() As Byte)</event>
+        <permission>android.permission.CAMERA</permission>
+        <permission>android.permission.WRITE_EXTERNAL_STORAGE</permission>
+        <permission>android.permission.RECORD_AUDIO</permission>
+        <permission>android.permission.FLASHLIGHT</permission>
+        <permission>android.permission.RECORD_VIDEO</permission>
+        <permission>android.permission.WRITE_SECURE_SETTINGS</permission>
+        <method>
+            <name>lockCamera</name>
+            <comment>Lock camera
+ Calls this after releaseMediaRecorder</comment>
+            <returntype>void</returntype>
+        </method>
+        <method>
+            <name>Initialize</name>
+            <comment>Initializes the camera.
+	Panel - The preview images will be displayed on the panel.
+	EventName - Events subs prefix.
+	The Ready event will be raised when the camera has finished opening.</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>ba</name>
+                <type>anywheresoftware.b4a.BA</type>
+            </parameter>
+            <parameter>
+                <name>Panel</name>
+                <type>android.view.ViewGroup</type>
+            </parameter>
+            <parameter>
+                <name>EventName</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+        <method>
+            <name>setOutputFile2</name>
+            <comment>Special method. Do not use this yet.
+hostname: 
+port: </comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>hostname</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>port</name>
+                <type>int</type>
+            </parameter>
+        </method>
+        <method>
+            <name>setScreenSize</name>
+            <comment>Sets the screensize
+ Call this after outputformat
+ Make sure that the preview sizes are supported!
+x: 
+y: </comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>x</name>
+                <type>int</type>
+            </parameter>
+            <parameter>
+                <name>y</name>
+                <type>int</type>
+            </parameter>
+        </method>
+        <method>
+            <name>stop</name>
+            <comment>Stops recording</comment>
+            <returntype>void</returntype>
+        </method>
+        <method>
+            <name>StopPreview</name>
+            <comment>Stops displaying the camera output</comment>
+            <returntype>void</returntype>
+        </method>
+        <method>
+            <name>unlockCamera</name>
+            <comment>Unlocks the camera.
+ Calls this before initMediaRecorder</comment>
+            <returntype>void</returntype>
+        </method>
+        <method>
+            <name>getSupportedPictureSizeHeight</name>
+            <comment>Returns the supported picture height of the given index.
+ You can call getSupportedPictureSize to get the size of the list.
+ This way you can extract the index of the supported sizes
+Return type: @return:</comment>
+            <returntype>int</returntype>
+            <parameter>
+                <name>index</name>
+                <type>int</type>
+            </parameter>
+        </method>
+        <method>
+            <name>prepare</name>
+            <comment>Prepare the videorecorder
+ Call this after setpreviewdisplay (so after done initializing your mediaRecorder)</comment>
+            <returntype>void</returntype>
+        </method>
+        <method>
+            <name>releaseMediaRecorder</name>
+            <comment>Releases the media recorder
+ Calls this after resetMediaRecorder</comment>
+            <returntype>void</returntype>
+        </method>
+        <method>
+            <name>setPreviewDisplay</name>
+            <comment>Sets the preview display.
+ Cal this after setOutputfile</comment>
+            <returntype>void</returntype>
+        </method>
+        <method>
+            <name>Release</name>
+            <comment>Releases the camera object and allows other processes to access the camera.</comment>
+            <returntype>void</returntype>
+        </method>
+        <method>
+            <name>resetMediaRecorder</name>
+            <comment>Resets the mediarecorder
+ Calls this after stop</comment>
+            <returntype>void</returntype>
+        </method>
+        <method>
+            <name>start</name>
+            <comment>Starts recording
+ Call this after prepare</comment>
+            <returntype>void</returntype>
+        </method>
+        <method>
+            <name>getSupportedPictureSizeWidth</name>
+            <comment>Returns the supported picture width of the given index.
+ You can call getSupportedPictureSize to get the size of the list.
+ This way you can extract the index of the supported sizes
+Return type: @return:</comment>
+            <returntype>int</returntype>
+            <parameter>
+                <name>index</name>
+                <type>int</type>
+            </parameter>
+        </method>
+        <method>
+            <name>StartPreview</name>
+            <comment>Starts displaying the camera output.</comment>
+            <returntype>void</returntype>
+        </method>
+        <method>
+            <name>initMediaRecorder</name>
+            <comment>Initializes the media recorder.
+ Calls this between unlockCamera and AudioSource</comment>
+            <returntype>void</returntype>
+        </method>
+        <method>
+            <name>setOutputFile</name>
+            <comment>Sets the output file
+ Calln this after profile or AudioSource, videoSource, outputformat.
+dir: 
+name: </comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>dir</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>name</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+        <property>
+            <name>SupportedPictureSize</name>
+            <returntype>int</returntype>
+            <comment>Returns the size of the supported pictures off the device.
+ e.g returns 4 when 4 sizes are supported.</comment>
+        </property>
+        <property>
+            <name>OutputFormat</name>
+            <parameter>
+                <name>format</name>
+                <type>int</type>
+            </parameter>
+            <comment>Sets the output format
+ Call this after VideoSource</comment>
+        </property>
+        <property>
+            <name>AudioEncoder</name>
+            <parameter>
+                <name>audioEncoder</name>
+                <type>int</type>
+            </parameter>
+            <comment>Sets the audioencoder
+ Call this after setscreensize</comment>
+        </property>
+        <property>
+            <name>Profile</name>
+            <parameter>
+                <name>profile</name>
+                <type>int</type>
+            </parameter>
+            <comment>Sets the profile.
+ Only supported by API Lvl 8 (2.2)
+ You should not use this with setOutputFormat, setAudioEncoder setVideoEncoder and setVideoSize.</comment>
+        </property>
+        <property>
+            <name>VideoEncoder</name>
+            <parameter>
+                <name>videoEncoder</name>
+                <type>int</type>
+            </parameter>
+            <comment>Sets the video encoder
+ Call this after audioEncoder</comment>
+        </property>
+        <property>
+            <name>VideoSource</name>
+            <parameter>
+                <name>videoSource</name>
+                <type>int</type>
+            </parameter>
+            <comment>Sets he video source
+ Calls this after setAudioSource</comment>
+        </property>
+        <property>
+            <name>AudioSource</name>
+            <parameter>
+                <name>audioSource</name>
+                <type>int</type>
+            </parameter>
+            <comment>Sets the audio source.
+ Calls this after initMediaRecorder</comment>
+        </property>
+    </class>
+    <version>1.0</version>
+</root>

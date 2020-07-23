@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <doclet-version-NOT-library-version>1.00</doclet-version-NOT-library-version>
+  <dependsOn>javaobject</dependsOn>
+  <dependsOn>appcompat</dependsOn>
+  <dependsOn>android-support-v4</dependsOn>
+  <dependsOn>android-support-v7-appcompat</dependsOn>
+  <class>
+    <name>b4a.example.sh_parallax</name>
+    <shortname>SH_parallax</shortname>
+    <owner>process</owner>
+    <method>
+      <name DesignerName="About">_about</name>
+      <returntype>String</returntype>
+    </method>
+    <method>
+      <name DesignerName="ActionBarfade">_actionbarfade</name>
+      <returntype>String</returntype>
+      <parameter>
+        <name>scrollratio</name>
+        <type>float</type>
+      </parameter>
+      <parameter>
+        <name>ActionBar</name>
+        <type>de.amberhome.objects.appcompat.ACToolbarLightWrapper</type>
+      </parameter>
+      <parameter>
+        <name>r</name>
+        <type>int</type>
+      </parameter>
+      <parameter>
+        <name>g</name>
+        <type>int</type>
+      </parameter>
+      <parameter>
+        <name>b</name>
+        <type>int</type>
+      </parameter>
+    </method>
+    <method>
+      <name DesignerName="Initialize">_initialize</name>
+      <comment>---HAMIDREZAABBASI---</comment>
+      <returntype>String</returntype>
+      <parameter>
+        <name>ba</name>
+        <type>anywheresoftware.b4a.BA</type>
+      </parameter>
+    </method>
+    <method>
+      <name DesignerName="parallax">_parallax</name>
+      <returntype>String</returntype>
+      <parameter>
+        <name>scrollposition</name>
+        <type>int</type>
+      </parameter>
+      <parameter>
+        <name>img</name>
+        <type>anywheresoftware.b4a.objects.ImageViewWrapper</type>
+      </parameter>
+    </method>
+    <method>
+      <name DesignerName="setScroll">_setscroll</name>
+      <returntype>String</returntype>
+      <parameter>
+        <name>img</name>
+        <type>anywheresoftware.b4a.objects.ImageViewWrapper</type>
+      </parameter>
+      <parameter>
+        <name>ActionBar</name>
+        <type>de.amberhome.objects.appcompat.ACToolbarLightWrapper</type>
+      </parameter>
+      <parameter>
+        <name>Position</name>
+        <type>int</type>
+      </parameter>
+    </method>
+    <field>
+      <name DesignerName="mLast">_mlast</name>
+      <returntype>int</returntype>
+    </field>
+    <field>
+      <name DesignerName="ratio">_ratio</name>
+      <returntype>float</returntype>
+    </field>
+  </class>
+  <version>1.1</version>
+  <author>hamidreza</author>
+</root>

@@ -1,0 +1,65 @@
+<HTML>
+<HEAD>
+<META http-equiv="Content-Type" content="text/html; charset=utf-8">
+<TITLE>
+Basic4android - Gestures
+</TITLE>
+<link rel="stylesheet" type="text/css" href="images/help.css" />
+
+</HEAD>
+
+<BODY BGCOLOR="white" leftmargin="50">
+<a name="top"/>
+<h1>Gestures</h1>
+<h3>Written by Andrew Graham</h3>
+</h5>A gesture is the sequence of one or more touch events on the screen.<br/>Each successive touch during a gesture is given it's own pointer ID that it maintains during the gesture.<br/>Pointer IDs may be reused by the system during a gesture.<br/><br/>A gesture always starts with an ACTION_DOWN for pointer ID 0. <br/>During a gesture as a new pointer touches the screen an ACTION_POINTER_DOWN occurs for each new pointerID.<br/>During a gesture as a pointer leaves the screen an ACTION_POINTER_UP occurs for each pointerID.<br/>As pointers move during a gesture an ACTION_MOVE occurs for pointerID 0 with data available for all pointers.<br/>A gesture always ends with an ACTION_UP for the last pointer ID in contact with the screen.<br/><br/>The position X and Y data is returned internally in data arrays of length PointerCount which always starts at index 0.<br/>The indices do not necessarily correspond to the pointer IDs.<br/>The pointer IDs in use can be obtained with the GetPointerID method for an index between 0 and PointerCount-1 and used to obtain the data for that pointer.<br/><br/>The Android documentation says the gesture ends "when the final pointer goes up".<br/>This is not true for the authors phone where only two pointers appear to be supported.<br/>On this phone the gesture ends as soon as the first pointer is lifted off the screen even if the second pointer is still in contact with the screeen.<br/>In this case an ACTION_POINTER_UP for the first pointer with XY data available for both pointers by GetX and GetY is generated followed by an ACTION_UP for the second pointer with no data available.<br/><br/>It is suggested that you set the initial position of each pointer ID on ACTION_DOWN or ACTION_POINTER_DOWN using the pointer ID and the X and Y parameters of the event.<br/>Update all pointer ID positions on ACTION_MOVE using GetPointerCount and GetPointerID and set the final position of each pointer ID on ACTION_POINTER_UP or ACTION__UP using the pointer ID and the X and Y parameters of the event.<br/>Assume that the gesture ends on receipt of ACTION_UP.<br/>Doing it this way avoids detecting and dealing with the anomaly noted above it if exists on a particular device.<br/><br/>Owing to the limited resolution of capactive screens it is possible for the touch screen electronics to be unable to differentiate between two pointers close together. This can cause gesture sequences of moves that appear to be different to what actually occurred.<br/>For example if two pointers start diagonally opposite on the screen, move to cross over in the middle of the screen and end on the opposite diagonal this may appear as a sequence where each pointer moves to the middle and then back to its origin.<br/>On the authors phone this "switchover" can occur when the two pointers cross each other on either the vertical or horizontal exes even if well separated on the other axis.<br/>Worse still only one axis value can switch from one pointer ID to another indicating that the pointers are in totally different positions to where they actually are. This makes writing gesture recognition code quite "interesting"!
+<h4>List of types:</h4>
+<a href='#gestures'>Gestures</a><br/>
+<hr/>
+<h3><u><a name='gestures'>Gestures</a></u></h3>
+</h5>This library allows views to support Gestures (multi-touch).<br/>There is a single Gestures object provided by this library.<br/>This is an 'Activity Object', it cannot be declared under Sub Process_Globals.
+<br/>
+
+<h4>Events:</h4>
+None
+<h4>Members:</h4><br/>
+<img src='images/11.png'/>&nbsp;&nbsp;<span style="color: #000000;"><a href='#gestures_action_down'><b>ACTION_DOWN</b></a> </span><span style="color: #0000FF;">As</span><span style="color: #000000;"> </span><span style="color: #008B8B;">Int</span><br/><br/>
+<img src='images/11.png'/>&nbsp;&nbsp;<span style="color: #000000;"><a href='#gestures_action_move'><b>ACTION_MOVE</b></a> </span><span style="color: #0000FF;">As</span><span style="color: #000000;"> </span><span style="color: #008B8B;">Int</span><br/><br/>
+<img src='images/11.png'/>&nbsp;&nbsp;<span style="color: #000000;"><a href='#gestures_action_pointer_down'><b>ACTION_POINTER_DOWN</b></a> </span><span style="color: #0000FF;">As</span><span style="color: #000000;"> </span><span style="color: #008B8B;">Int</span><br/><br/>
+<img src='images/11.png'/>&nbsp;&nbsp;<span style="color: #000000;"><a href='#gestures_action_pointer_up'><b>ACTION_POINTER_UP</b></a> </span><span style="color: #0000FF;">As</span><span style="color: #000000;"> </span><span style="color: #008B8B;">Int</span><br/><br/>
+<img src='images/11.png'/>&nbsp;&nbsp;<span style="color: #000000;"><a href='#gestures_action_up'><b>ACTION_UP</b></a> </span><span style="color: #0000FF;">As</span><span style="color: #000000;"> </span><span style="color: #008B8B;">Int</span><br/><br/>
+<img src='images/15.png'/>&nbsp;&nbsp;<span style="color: #000000;"><a href='#gestures_getpointercount'><b>GetPointerCount</b></a> </span><span style="color: #0000FF;">As</span><span style="color: #000000;"> </span><span style="color: #008B8B;">Int</span><br/><br/>
+<img src='images/15.png'/>&nbsp;&nbsp;<span style="color: #000000;"><a href='#gestures_getpointerid'><b>GetPointerID</b></a> (pointerindex </span><span style="color: #0000FF;">As</span><span style="color: #000000;"> </span><span style="color: #008B8B;">Int</span><span style="color: #000000;">) </span><span style="color: #0000FF;">As</span><span style="color: #000000;"> </span><span style="color: #008B8B;">Int</span><br/><br/>
+<img src='images/15.png'/>&nbsp;&nbsp;<span style="color: #000000;"><a href='#gestures_getx'><b>GetX</b></a> (pointerID </span><span style="color: #0000FF;">As</span><span style="color: #000000;"> </span><span style="color: #008B8B;">Int</span><span style="color: #000000;">) </span><span style="color: #0000FF;">As</span><span style="color: #000000;"> </span><span style="color: #008B8B;">Float</span><br/><br/>
+<img src='images/15.png'/>&nbsp;&nbsp;<span style="color: #000000;"><a href='#gestures_gety'><b>GetY</b></a> (pointerID </span><span style="color: #0000FF;">As</span><span style="color: #000000;"> </span><span style="color: #008B8B;">Int</span><span style="color: #000000;">) </span><span style="color: #0000FF;">As</span><span style="color: #000000;"> </span><span style="color: #008B8B;">Float</span><br/><br/>
+<img src='images/15.png'/>&nbsp;&nbsp;<span style="color: #000000;"><a href='#gestures_setontouchlistener'><b>SetOnTouchListener</b></a> (</span><span style="color: #008B8B;">view</span><span style="color: #000000;"> </span><span style="color: #0000FF;">As</span><span style="color: #000000;"> android.view.View, </span><span style="color: #0000FF;">sub As</span><span style="color: #000000;"> </span><span style="color: #008B8B;">String</span><span style="color: #000000;">)</span><br/><br/>
+<img src='images/19.png'/>&nbsp;&nbsp;<span style="color: #000000;"><a href='#gestures_version'><b>Version</b></a> </span><span style="color: #0000FF;">As</span><span style="color: #000000;"> </span><span style="color: #008B8B;">Double</span><span style="color: #000000;">  [read only]</span><br/><br/>
+
+<h4>Members description:</h4>
+<a name='gestures_action_down'/>
+<h5><img src='images/11.png'/>
+<span style="color: #000000;">ACTION_DOWN </span><span style="color: #0000FF;">As</span><span style="color: #000000;"> </span><span style="color: #008B8B;">Int</span></h5><a name='gestures_action_move'/>
+<h5><img src='images/11.png'/>
+<span style="color: #000000;">ACTION_MOVE </span><span style="color: #0000FF;">As</span><span style="color: #000000;"> </span><span style="color: #008B8B;">Int</span></h5><a name='gestures_action_pointer_down'/>
+<h5><img src='images/11.png'/>
+<span style="color: #000000;">ACTION_POINTER_DOWN </span><span style="color: #0000FF;">As</span><span style="color: #000000;"> </span><span style="color: #008B8B;">Int</span></h5><a name='gestures_action_pointer_up'/>
+<h5><img src='images/11.png'/>
+<span style="color: #000000;">ACTION_POINTER_UP </span><span style="color: #0000FF;">As</span><span style="color: #000000;"> </span><span style="color: #008B8B;">Int</span></h5><a name='gestures_action_up'/>
+<h5><img src='images/11.png'/>
+<span style="color: #000000;">ACTION_UP </span><span style="color: #0000FF;">As</span><span style="color: #000000;"> </span><span style="color: #008B8B;">Int</span></h5><a name='gestures_getpointercount'/>
+<h5><img src='images/15.png'/>
+<span style="color: #000000;">GetPointerCount </span><span style="color: #0000FF;">As</span><span style="color: #000000;"> </span><span style="color: #008B8B;">Int</span></h5>Returns the number of pointers in contact with the screen.<a name='gestures_getpointerid'/>
+<h5><img src='images/15.png'/>
+<span style="color: #000000;">GetPointerID (pointerindex </span><span style="color: #0000FF;">As</span><span style="color: #000000;"> </span><span style="color: #008B8B;">Int</span><span style="color: #000000;">) </span><span style="color: #0000FF;">As</span><span style="color: #000000;"> </span><span style="color: #008B8B;">Int</span></h5>Pointer data is returned internally in arrays of length PointerCount which always start at index 0.<br/>This returns the pointerID whose data is at the specified index in those arrays.<br/>Returns -1 if there is no pointerID at that index.<a name='gestures_getx'/>
+<h5><img src='images/15.png'/>
+<span style="color: #000000;">GetX (pointerID </span><span style="color: #0000FF;">As</span><span style="color: #000000;"> </span><span style="color: #008B8B;">Int</span><span style="color: #000000;">) </span><span style="color: #0000FF;">As</span><span style="color: #000000;"> </span><span style="color: #008B8B;">Float</span></h5>Returns the X position for the specified pointerID or -1 if there is no data for that pointer.<a name='gestures_gety'/>
+<h5><img src='images/15.png'/>
+<span style="color: #000000;">GetY (pointerID </span><span style="color: #0000FF;">As</span><span style="color: #000000;"> </span><span style="color: #008B8B;">Int</span><span style="color: #000000;">) </span><span style="color: #0000FF;">As</span><span style="color: #000000;"> </span><span style="color: #008B8B;">Float</span></h5>Returns the Y position for the specified pointerID or -1 if there is no data for that pointer.<a name='gestures_setontouchlistener'/>
+<h5><img src='images/15.png'/>
+<span style="color: #000000;">SetOnTouchListener (</span><span style="color: #008B8B;">view</span><span style="color: #000000;"> </span><span style="color: #0000FF;">As</span><span style="color: #000000;"> android.view.View, </span><span style="color: #0000FF;">sub As</span><span style="color: #000000;"> </span><span style="color: #008B8B;">String</span><span style="color: #000000;">)</span></h5>Target must be a View of some sort.<br/>Sets the onTouchListener of the view to a Sub that must have a signature of<br/>Sub Whatever(view As Object, pointerID as Int, action As Int, X As Float, Y As Float) As Boolean.<br/>The view parameter is the Android View object that is raising the touch event.<br/>The X and Y parameters are the data for the pointer ID parameter.<br/>This Sub must return True if it wants to consume the event or False otherwise.<a name='gestures_version'/>
+<h5><img src='images/19.png'/>
+<span style="color: #000000;">Version </span><span style="color: #0000FF;">As</span><span style="color: #000000;"> </span><span style="color: #008B8B;">Double</span><span style="color: #000000;">  [read only]</span></h5>Returns the version of the library.
+<hr/>
+<a href="#top">Top</a>
+</body>
+</html>

@@ -1,0 +1,222 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root>
+    <doclet-version-NOT-library-version>1.01</doclet-version-NOT-library-version>
+    <class>
+        <name>thalmy.webviewxtended.xtender</name>
+        <shortname>WebViewXtender</shortname>
+        <owner>process</owner>
+        <method>
+            <name>getAcceptCookie</name>
+            <comment>Get the state of Cookies beeing accepted or not. Returns TRUE if Cookies are accept or FALSE if not.
+Example:&lt;code&gt;
+Dim wvXtender As WebViewXtender
+Dim bolCK as Boolean
+bolCK = wvXtender.getAcceptCookie(webView1)&lt;/code&gt;</comment>
+            <returntype>java.lang.Boolean</returntype>
+            <parameter>
+                <name>webView1</name>
+                <type>android.webkit.WebView</type>
+            </parameter>
+        </method>
+        <method>
+            <name>getProgress</name>
+            <comment>Get the progress for the current page between 0 and 100. May use it with a timer.
+Example:&lt;code&gt;
+Dim wvXtender As WebViewXtender
+Dim intProgr as Int
+wvXtender.getProgress(webView1)
+&lt;/code&gt;</comment>
+            <returntype>int</returntype>
+            <parameter>
+                <name>webView1</name>
+                <type>android.webkit.WebView</type>
+            </parameter>
+        </method>
+        <method>
+            <name>getJavaScriptEnabled</name>
+            <comment>Get the state if JavaScript is enabled in the WebView. Returns TRUE if so.
+Example:&lt;code&gt;
+Dim wvXtender As WebViewXtender
+Dim bolJS As Boolean
+bolJS = wvXtender.getJavaScriptEnabled(webView1)&lt;/code&gt;</comment>
+            <returntype>boolean</returntype>
+            <parameter>
+                <name>webView1</name>
+                <type>android.webkit.WebView</type>
+            </parameter>
+        </method>
+        <method>
+            <name>setLoadsImagesAutomatically</name>
+            <comment>Set the state if images are loaded automatically. Use FALSE if you do not want to load images in the WebView.
+Example:&lt;code&gt;
+Dim wvXtender As WebViewXtender
+wvXtender.setLoadsImagesAutomatically(webView1, false)&lt;/code&gt;</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>webView1</name>
+                <type>android.webkit.WebView</type>
+            </parameter>
+            <parameter>
+                <name>flag</name>
+                <type>boolean</type>
+            </parameter>
+        </method>
+        <method>
+            <name>zoomIn</name>
+            <comment>Perform zoom in in the webview. Return TRUE if zoom in succeeds. FALSE if no zoom changes. 
+Example:&lt;code&gt;
+Dim wvXtender As WebViewXtender
+dim bolZoomIn as Boolean
+bolZoomIn = wvXtender.zoomIn(webView1)
+&lt;/code&gt;</comment>
+            <returntype>boolean</returntype>
+            <parameter>
+                <name>webView1</name>
+                <type>android.webkit.WebView</type>
+            </parameter>
+        </method>
+        <method>
+            <name>setJavaScriptEnabled</name>
+            <comment>Enables or disables JavaScript in the WebView. Use FALSE if you do not want to enable JavaScript or TRUE to enable.
+Example:&lt;code&gt;
+Dim wvXtender As WebViewXtender
+wvXtender.setJavaScriptEnabled(webView1, false)&lt;/code&gt;</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>webView1</name>
+                <type>android.webkit.WebView</type>
+            </parameter>
+            <parameter>
+                <name>flag</name>
+                <type>boolean</type>
+            </parameter>
+        </method>
+        <method>
+            <name>getPluginState</name>
+            <comment>Get the state of the PlugIns. Returns a string with the actual state: OFF, ON or ON_DEMAND.
+Example:&lt;code&gt;
+Dim wvXtender As WebViewXtender
+Dim strPS As String
+strPS = wvXtender.getPluginState(webView1)&lt;/code&gt;</comment>
+            <returntype>java.lang.String</returntype>
+            <parameter>
+                <name>webView1</name>
+                <type>android.webkit.WebView</type>
+            </parameter>
+        </method>
+        <method>
+            <name>pageDown</name>
+            <comment>Scroll the contents of the view down by half the page size. Boolean TRUE = scrolls to the bottom. 
+Example:&lt;code&gt;
+Dim wvXtender As WebViewXtender
+wvXtender.pageDown(webView1, true)
+&lt;/code&gt;</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>webView1</name>
+                <type>android.webkit.WebView</type>
+            </parameter>
+            <parameter>
+                <name>flag</name>
+                <type>boolean</type>
+            </parameter>
+        </method>
+        <method>
+            <name>getTitle</name>
+            <comment>Get the title for the current page. This is the title of the current page.
+Example:&lt;code&gt;
+Dim wvXtender As WebViewXtender
+Dim strCurrTitle as String
+strCurrTitle = wvXtender.getTitle(webView1)
+&lt;/code&gt;</comment>
+            <returntype>java.lang.String</returntype>
+            <parameter>
+                <name>webView1</name>
+                <type>android.webkit.WebView</type>
+            </parameter>
+        </method>
+        <method>
+            <name>setAcceptCookie</name>
+            <comment>Set the state of Cookies beeing accepted or not. Use TRUE if you want accept Cookies in the WebView or FALSE if not.
+Example:&lt;code&gt;
+Dim wvXtender As WebViewXtender
+wvXtender.setAcceptCookie(webView1, false)&lt;/code&gt;</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>webView1</name>
+                <type>android.webkit.WebView</type>
+            </parameter>
+            <parameter>
+                <name>flag</name>
+                <type>boolean</type>
+            </parameter>
+        </method>
+        <method>
+            <name>getLoadsImagesAutomatically</name>
+            <comment>Get the state if images are loaded automatically. Returns TRUE if so.
+Example:&lt;code&gt;
+Dim wvXtender As WebViewXtender
+Dim bolLoadAuto As Boolean
+bolLoadAuto = wvXtender.getLoadsImagesAutomatically(webView1)&lt;/code&gt;</comment>
+            <returntype>boolean</returntype>
+            <parameter>
+                <name>webView1</name>
+                <type>android.webkit.WebView</type>
+            </parameter>
+        </method>
+        <method>
+            <name>pageUp</name>
+            <comment>Scroll the contents of the view up by half the view size. Boolean TRUE = scrolls to the top. 
+Example:&lt;code&gt;
+Dim wvXtender As WebViewXtender
+wvXtender.pageUp(webView1, false)
+&lt;/code&gt;</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>webView1</name>
+                <type>android.webkit.WebView</type>
+            </parameter>
+            <parameter>
+                <name>flag</name>
+                <type>boolean</type>
+            </parameter>
+        </method>
+        <method>
+            <name>zoomOut</name>
+            <comment>Perform zoom out in the webview. Return TRUE if zoom out succeeds. FALSE if no zoom changes. 
+Example:&lt;code&gt;
+Dim wvXtender As WebViewXtender
+dim bolZoomOut as Boolean
+bolZoomOut = wvXtender.zoomOut(webView1)
+&lt;/code&gt;</comment>
+            <returntype>boolean</returntype>
+            <parameter>
+                <name>webView1</name>
+                <type>android.webkit.WebView</type>
+            </parameter>
+        </method>
+        <method>
+            <name>setPluginState</name>
+            <comment>Set the state of PlugIns. Use a string with ON, OFF or ON_DEMAND, depending what you like to have in the WebView.
+Example:&lt;code&gt;
+Dim wvXtender As WebViewXtender
+Dim strPS As String
+strPS = "OFF"
+wvXtender.setPluginState(webView1, strPS)
+You can also write direct the value without a string variable:
+wvXtender.setPluginState(webView1, "ON_DEMAND")
+&lt;/code&gt;</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>webView1</name>
+                <type>android.webkit.WebView</type>
+            </parameter>
+            <parameter>
+                <name>state</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+    </class>
+    <version>1.2</version>
+    <author>Ren\u00e9 Thalmann</author>
+</root>

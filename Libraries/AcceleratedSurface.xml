@@ -1,0 +1,2789 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root>
+    <doclet-version-NOT-library-version>1.02</doclet-version-NOT-library-version>
+    <class>
+        <name>flm.b4a.accelerview.Texture</name>
+        <shortname>AS_Texture</shortname>
+        <owner>process</owner>
+        <method>
+            <name>CreateRadialGradient</name>
+            <comment>Creates a texture with a radial gradient. This texture can be repeated or mirrored.
+X: The x-coordinate of the center of the circle.
+Y: The y-coordinate of the center of the circle.
+Radius: Must be positive. The radius of the circle for this gradient.
+Colors: The colors to be distributed between the center and edge of the circle. There must be at least 2 colors in the array.
+TileMode: one of the TILEMODE constants.</comment>
+            <returntype>flm.b4a.accelerview.Texture</returntype>
+            <parameter>
+                <name>X</name>
+                <type>float</type>
+            </parameter>
+            <parameter>
+                <name>Y</name>
+                <type>float</type>
+            </parameter>
+            <parameter>
+                <name>Radius</name>
+                <type>float</type>
+            </parameter>
+            <parameter>
+                <name>Colors</name>
+                <type>int[]</type>
+            </parameter>
+            <parameter>
+                <name>TileMode</name>
+                <type EnumType="true">android.graphics.Shader.TileMode</type>
+            </parameter>
+        </method>
+        <method>
+            <name>CreateSweepGradient</name>
+            <comment>Creates a texture with a sweep gradient.
+X: The x-coordinate of the center.
+Y: The y-coordinate of the center.
+Colors: The colors to be distributed around the center. There must be at least 2 colors in the array.</comment>
+            <returntype>flm.b4a.accelerview.Texture</returntype>
+            <parameter>
+                <name>X</name>
+                <type>float</type>
+            </parameter>
+            <parameter>
+                <name>Y</name>
+                <type>float</type>
+            </parameter>
+            <parameter>
+                <name>Colors</name>
+                <type>int[]</type>
+            </parameter>
+        </method>
+        <method>
+            <name>CreateLinearGradient</name>
+            <comment>Creates a texture with a linear gradient. This texture can be repeated or mirrored.
+X0: The x-coordinate for the start of the gradient line.
+Y0: The y-coordinate for the start of the gradient line.
+X1: The x-coordinate for the end of the gradient line.
+Y1: The y-coordinate for the end of the gradient line.
+Colors: The colors to be distributed along the gradient line. There must be at least 2 colors in the array.
+TileMode: one of the TILEMODE constants.</comment>
+            <returntype>flm.b4a.accelerview.Texture</returntype>
+            <parameter>
+                <name>X0</name>
+                <type>float</type>
+            </parameter>
+            <parameter>
+                <name>Y0</name>
+                <type>float</type>
+            </parameter>
+            <parameter>
+                <name>X1</name>
+                <type>float</type>
+            </parameter>
+            <parameter>
+                <name>Y1</name>
+                <type>float</type>
+            </parameter>
+            <parameter>
+                <name>Colors</name>
+                <type>int[]</type>
+            </parameter>
+            <parameter>
+                <name>TileMode</name>
+                <type EnumType="true">android.graphics.Shader.TileMode</type>
+            </parameter>
+        </method>
+        <method>
+            <name>Merge</name>
+            <comment>Merges two textures of different types (a bitmap and a radial gradient for example).
+ The returned texture cannot be merged with another texture.
+Tex1,Tex2: the textures to merge. They must be of different types.
+MergeMode: one of the MERGEMODE constants.</comment>
+            <returntype>flm.b4a.accelerview.Texture</returntype>
+            <parameter>
+                <name>Tex1</name>
+                <type>flm.b4a.accelerview.Texture</type>
+            </parameter>
+            <parameter>
+                <name>Tex2</name>
+                <type>flm.b4a.accelerview.Texture</type>
+            </parameter>
+            <parameter>
+                <name>MergeMode</name>
+                <type EnumType="true">android.graphics.PorterDuff.Mode</type>
+            </parameter>
+        </method>
+        <method>
+            <name>Translate</name>
+            <comment>Translates the origin point.</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>OffsetX</name>
+                <type>int</type>
+            </parameter>
+            <parameter>
+                <name>OffsetY</name>
+                <type>int</type>
+            </parameter>
+        </method>
+        <method>
+            <name>CreateWithBitmap</name>
+            <comment>Creates a texture with the given bitmap. This texture can be repeated or mirrored.
+Image: a bitmap containing the texture image.
+ModeX,ModeY: one of the TILEMODE constants for each axis.</comment>
+            <returntype>flm.b4a.accelerview.Texture</returntype>
+            <parameter>
+                <name>Image</name>
+                <type>anywheresoftware.b4a.objects.drawable.CanvasWrapper.BitmapWrapper</type>
+            </parameter>
+            <parameter>
+                <name>ModeX</name>
+                <type EnumType="true">android.graphics.Shader.TileMode</type>
+            </parameter>
+            <parameter>
+                <name>ModeY</name>
+                <type EnumType="true">android.graphics.Shader.TileMode</type>
+            </parameter>
+        </method>
+        <property>
+            <name>IsInitialized</name>
+            <returntype>boolean</returntype>
+            <comment></comment>
+        </property>
+        <field>
+            <name>MERGEMODE_TEX1_ATOP</name>
+            <comment></comment>
+            <returntype EnumType="true">android.graphics.PorterDuff.Mode</returntype>
+        </field>
+        <field>
+            <name>TILEMODE_MIRROR</name>
+            <comment></comment>
+            <returntype EnumType="true">android.graphics.Shader.TileMode</returntype>
+        </field>
+        <field>
+            <name>MERGEMODE_TEX2_IN</name>
+            <comment></comment>
+            <returntype EnumType="true">android.graphics.PorterDuff.Mode</returntype>
+        </field>
+        <field>
+            <name>MERGEMODE_TEX2_OUT</name>
+            <comment></comment>
+            <returntype EnumType="true">android.graphics.PorterDuff.Mode</returntype>
+        </field>
+        <field>
+            <name>TILEMODE_CLAMP</name>
+            <comment></comment>
+            <returntype EnumType="true">android.graphics.Shader.TileMode</returntype>
+        </field>
+        <field>
+            <name>MERGEMODE_XOR</name>
+            <comment></comment>
+            <returntype EnumType="true">android.graphics.PorterDuff.Mode</returntype>
+        </field>
+        <field>
+            <name>MERGEMODE_MULTIPLY</name>
+            <comment></comment>
+            <returntype EnumType="true">android.graphics.PorterDuff.Mode</returntype>
+        </field>
+        <field>
+            <name>MERGEMODE_LIGHTEN</name>
+            <comment></comment>
+            <returntype EnumType="true">android.graphics.PorterDuff.Mode</returntype>
+        </field>
+        <field>
+            <name>MERGEMODE_DARKEN</name>
+            <comment></comment>
+            <returntype EnumType="true">android.graphics.PorterDuff.Mode</returntype>
+        </field>
+        <field>
+            <name>MERGEMODE_TEX1_OUT</name>
+            <comment></comment>
+            <returntype EnumType="true">android.graphics.PorterDuff.Mode</returntype>
+        </field>
+        <field>
+            <name>MERGEMODE_TEX2_OVER</name>
+            <comment></comment>
+            <returntype EnumType="true">android.graphics.PorterDuff.Mode</returntype>
+        </field>
+        <field>
+            <name>MERGEMODE_TEX1_OVER</name>
+            <comment></comment>
+            <returntype EnumType="true">android.graphics.PorterDuff.Mode</returntype>
+        </field>
+        <field>
+            <name>TILEMODE_REPEAT</name>
+            <comment></comment>
+            <returntype EnumType="true">android.graphics.Shader.TileMode</returntype>
+        </field>
+        <field>
+            <name>MERGEMODE_SCREEN</name>
+            <comment></comment>
+            <returntype EnumType="true">android.graphics.PorterDuff.Mode</returntype>
+        </field>
+        <field>
+            <name>MERGEMODE_TEX2_ATOP</name>
+            <comment></comment>
+            <returntype EnumType="true">android.graphics.PorterDuff.Mode</returntype>
+        </field>
+        <field>
+            <name>MERGEMODE_TEX1_IN</name>
+            <comment></comment>
+            <returntype EnumType="true">android.graphics.PorterDuff.Mode</returntype>
+        </field>
+    </class>
+    <class>
+        <name>flm.b4a.accelerview.ImageUtils</name>
+        <shortname>AS_ImageUtils</shortname>
+        <owner>process</owner>
+        <method>
+            <name>ReduceColors</name>
+            <comment>Converts a bitmap from the format ARGB_8888 to the format RGB_565 to save memory.
+ The returned bitmap is mutable.</comment>
+            <returntype>android.graphics.Bitmap</returntype>
+            <parameter>
+                <name>srcBmp</name>
+                <type>anywheresoftware.b4a.objects.drawable.CanvasWrapper.BitmapWrapper</type>
+            </parameter>
+        </method>
+        <method>
+            <name>Crop</name>
+            <comment>Creates a new bitmap by removing the outer parts of another one.
+srcBmp: The source bitmap.
+x,y: Coordinates of the cropping rectangle.
+width,height: Size of the cropping rectangle.</comment>
+            <returntype>android.graphics.Bitmap</returntype>
+            <parameter>
+                <name>srcBmp</name>
+                <type>anywheresoftware.b4a.objects.drawable.CanvasWrapper.BitmapWrapper</type>
+            </parameter>
+            <parameter>
+                <name>x</name>
+                <type>int</type>
+            </parameter>
+            <parameter>
+                <name>y</name>
+                <type>int</type>
+            </parameter>
+            <parameter>
+                <name>width</name>
+                <type>int</type>
+            </parameter>
+            <parameter>
+                <name>height</name>
+                <type>int</type>
+            </parameter>
+        </method>
+        <method>
+            <name>GetImageDimensions</name>
+            <comment>Returns a Map containing the dimensions of the given image (keys = "height" and "width").
+ The image is not loaded in memory.
+ This function does not work with images in the assets folder.</comment>
+            <returntype>anywheresoftware.b4a.objects.collections.Map</returntype>
+            <parameter>
+                <name>Dir</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>FileName</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+        <method>
+            <name>GetDensity</name>
+            <comment>Gets the density of the given bitmap.</comment>
+            <returntype>int</returntype>
+            <parameter>
+                <name>srcBmp</name>
+                <type>anywheresoftware.b4a.objects.drawable.CanvasWrapper.BitmapWrapper</type>
+            </parameter>
+        </method>
+        <method>
+            <name>LoadNinePatchDrawable</name>
+            <comment>Gets a 9-patch drawable from the application resources.</comment>
+            <returntype>android.graphics.drawable.Drawable</returntype>
+            <parameter>
+                <name>ba</name>
+                <type>anywheresoftware.b4a.BA</type>
+            </parameter>
+            <parameter>
+                <name>Name</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+        <method>
+            <name>GetPixels</name>
+            <comment>Returns in Pixels() a copy of the data in the bitmap. Each value is a packed int representing a Color.
+ The stride parameter allows the caller to allow for gaps in the returned pixels array between rows.
+ For normal packed results, just pass width for the stride value.
+Pixels: The array to receive the bitmap's colors
+offset: The first index to write into Pixels()
+stride: The number of entries in Pixels() to skip between rows (must be &gt;= bitmap's width). Can be negative.
+x: The x coordinate of the first pixel to read from the bitmap
+y: The y coordinate of the first pixel to read from the bitmap
+width: The number of pixels to read from each row
+height: The number of rows to read</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>src</name>
+                <type>anywheresoftware.b4a.objects.drawable.CanvasWrapper.BitmapWrapper</type>
+            </parameter>
+            <parameter>
+                <name>Pixels</name>
+                <type>int[]</type>
+            </parameter>
+            <parameter>
+                <name>offset</name>
+                <type>int</type>
+            </parameter>
+            <parameter>
+                <name>stride</name>
+                <type>int</type>
+            </parameter>
+            <parameter>
+                <name>x</name>
+                <type>int</type>
+            </parameter>
+            <parameter>
+                <name>y</name>
+                <type>int</type>
+            </parameter>
+            <parameter>
+                <name>width</name>
+                <type>int</type>
+            </parameter>
+            <parameter>
+                <name>height</name>
+                <type>int</type>
+            </parameter>
+        </method>
+        <method>
+            <name>CreateScaledBitmap</name>
+            <comment>Creates a new bitmap scaled from an existing bitmap.
+ If the specified width and height are the same as the current width and height of the source bitmap, the source bitmap is returned and no new bitmap is created.
+srcBmp: The source bitmap.
+dstWidth: The new bitmap's desired width.
+dstHeight: The new bitmap's desired height.
+filter: True if the source should be filtered.</comment>
+            <returntype>android.graphics.Bitmap</returntype>
+            <parameter>
+                <name>srcBmp</name>
+                <type>anywheresoftware.b4a.objects.drawable.CanvasWrapper.BitmapWrapper</type>
+            </parameter>
+            <parameter>
+                <name>dstWidth</name>
+                <type>int</type>
+            </parameter>
+            <parameter>
+                <name>dstHeight</name>
+                <type>int</type>
+            </parameter>
+            <parameter>
+                <name>filter</name>
+                <type>boolean</type>
+            </parameter>
+        </method>
+        <method>
+            <name>SetDensity</name>
+            <comment>Changes the density of the given bitmap.</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>srcBmp</name>
+                <type>anywheresoftware.b4a.objects.drawable.CanvasWrapper.BitmapWrapper</type>
+            </parameter>
+            <parameter>
+                <name>Density</name>
+                <type>int</type>
+            </parameter>
+        </method>
+        <method>
+            <name>AlterColors</name>
+            <comment>Changes the transparency, hue and saturation of the given bitmap, and returns the result.
+ The bitmap must be mutable.
+Alpha: From -1 to 255. -1 = no change, 0 = transparent, 255 = opaque.
+Hue: From 0 to 360. 0 or 360 = no change.
+Saturation: 0 = gray-scale, 1 = no change.</comment>
+            <returntype>android.graphics.Bitmap</returntype>
+            <parameter>
+                <name>srcBmp</name>
+                <type>anywheresoftware.b4a.objects.drawable.CanvasWrapper.BitmapWrapper</type>
+            </parameter>
+            <parameter>
+                <name>Alpha</name>
+                <type>int</type>
+            </parameter>
+            <parameter>
+                <name>Hue</name>
+                <type>int</type>
+            </parameter>
+            <parameter>
+                <name>Saturation</name>
+                <type>float</type>
+            </parameter>
+        </method>
+        <method>
+            <name>MakeMutable</name>
+            <comment>Returns a mutable bitmap from an immutable one.</comment>
+            <returntype>android.graphics.Bitmap</returntype>
+            <parameter>
+                <name>srcBmp</name>
+                <type>anywheresoftware.b4a.objects.drawable.CanvasWrapper.BitmapWrapper</type>
+            </parameter>
+        </method>
+        <method>
+            <name>LoadScaledBitmap</name>
+            <comment>Loads and rescales a bitmap.
+dstWidth: The new bitmap's desired width or -1 to keep the original width.
+dstHeight: The new bitmap's desired height or -1 to keep the original height.
+Filter: If True, improves the sampling quality.</comment>
+            <returntype>android.graphics.Bitmap</returntype>
+            <parameter>
+                <name>Dir</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>FileName</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>dstWidth</name>
+                <type>int</type>
+            </parameter>
+            <parameter>
+                <name>dstHeight</name>
+                <type>int</type>
+            </parameter>
+            <parameter>
+                <name>Filter</name>
+                <type>boolean</type>
+            </parameter>
+        </method>
+        <method>
+            <name>LoadSystemDrawable</name>
+            <comment>Gets a drawable from the Android system resources.</comment>
+            <returntype>android.graphics.drawable.Drawable</returntype>
+            <parameter>
+                <name>ba</name>
+                <type>anywheresoftware.b4a.BA</type>
+            </parameter>
+            <parameter>
+                <name>Name</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+    </class>
+    <class>
+        <name>flm.b4a.accelerview.ComplexText</name>
+        <shortname>AS_Text</shortname>
+        <owner>process</owner>
+        <method>
+            <name>SetBold</name>
+            <comment>Enables or disables bold text.</comment>
+            <returntype>flm.b4a.accelerview.ComplexText</returntype>
+            <parameter>
+                <name>Enabled</name>
+                <type>boolean</type>
+            </parameter>
+        </method>
+        <method>
+            <name>MeasureStringHeight</name>
+            <comment>Returns the height of the given text.</comment>
+            <returntype>int</returntype>
+            <parameter>
+                <name>Text</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+        <method>
+            <name>ReplaceTypeface</name>
+            <comment>Replaces the typeface (font).</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>NewTypeface</name>
+                <type>anywheresoftware.b4a.keywords.constants.TypefaceWrapper</type>
+            </parameter>
+        </method>
+        <method>
+            <name>SetAlpha</name>
+            <comment>Sets the alpha value of the text color, leaving its R,G,B values unchanged.</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>Alpha</name>
+                <type>int</type>
+            </parameter>
+        </method>
+        <method>
+            <name>SetTexture</name>
+            <comment>Paints the text with the given texture.
+ If this function is called after SetColor, SetColor is ignored.</comment>
+            <returntype>flm.b4a.accelerview.ComplexText</returntype>
+            <parameter>
+                <name>texture</name>
+                <type>flm.b4a.accelerview.Texture</type>
+            </parameter>
+        </method>
+        <method>
+            <name>SetShadow</name>
+            <comment>Adds a shadow layer below the main layer, with the specified offset, blur radius and color.
+ If radius is 0, then the shadow layer is removed.</comment>
+            <returntype>flm.b4a.accelerview.ComplexText</returntype>
+            <parameter>
+                <name>dX</name>
+                <type>float</type>
+            </parameter>
+            <parameter>
+                <name>dY</name>
+                <type>float</type>
+            </parameter>
+            <parameter>
+                <name>Radius</name>
+                <type>float</type>
+            </parameter>
+            <parameter>
+                <name>Color</name>
+                <type>int</type>
+            </parameter>
+        </method>
+        <method>
+            <name>SetUnderline</name>
+            <comment>Enables or disables underline text.
+ This may not work as expected depending on the OS version and the chosen style.</comment>
+            <returntype>flm.b4a.accelerview.ComplexText</returntype>
+            <parameter>
+                <name>Enabled</name>
+                <type>boolean</type>
+            </parameter>
+        </method>
+        <method>
+            <name>SetSkewX</name>
+            <comment>Sets the text's horizontal skew factor.</comment>
+            <returntype>flm.b4a.accelerview.ComplexText</returntype>
+            <parameter>
+                <name>SkewX</name>
+                <type>float</type>
+            </parameter>
+        </method>
+        <method>
+            <name>CreateText</name>
+            <comment>Creates a text object.
+Typeface: Typeface (font) to use.
+Filter: Whether the edges are smoothed out.</comment>
+            <returntype>flm.b4a.accelerview.ComplexText</returntype>
+            <parameter>
+                <name>Typeface</name>
+                <type>anywheresoftware.b4a.keywords.constants.TypefaceWrapper</type>
+            </parameter>
+            <parameter>
+                <name>Filter</name>
+                <type>boolean</type>
+            </parameter>
+        </method>
+        <method>
+            <name>GetAlpha</name>
+            <comment>Returns the alpha value of the text color.</comment>
+            <returntype>int</returntype>
+        </method>
+        <method>
+            <name>MeasureStringWidth</name>
+            <comment>Returns the width of the given text.</comment>
+            <returntype>float</returntype>
+            <parameter>
+                <name>Text</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+        <method>
+            <name>SetStyle</name>
+            <comment>Defines whether the text will be filled or stroked, or both.
+Style: One of the STYLE constants.
+StrokeWidth: The stroke width. Relevant when Style &amp;lt;&amp;gt; STYLE_FILL.</comment>
+            <returntype>flm.b4a.accelerview.ComplexText</returntype>
+            <parameter>
+                <name>style</name>
+                <type EnumType="true">android.graphics.Paint.Style</type>
+            </parameter>
+            <parameter>
+                <name>StrokeWidth</name>
+                <type>int</type>
+            </parameter>
+        </method>
+        <method>
+            <name>SetSize</name>
+            <comment>Sets the text size. This value is automatically scaled so do not scale it yourself.</comment>
+            <returntype>flm.b4a.accelerview.ComplexText</returntype>
+            <parameter>
+                <name>TextSize</name>
+                <type>float</type>
+            </parameter>
+        </method>
+        <method>
+            <name>SetColor</name>
+            <comment>Paints the text with the given color.
+ If this function is called after SetTexture, SetTexture is ignored.</comment>
+            <returntype>flm.b4a.accelerview.ComplexText</returntype>
+            <parameter>
+                <name>Color</name>
+                <type>int</type>
+            </parameter>
+        </method>
+        <method>
+            <name>SetPath</name>
+            <comment>Sets the path along which the text will be drawn.
+ Warning: Nothing will be drawn under Honeycomb or ICS if the hardware acceleration is enabled.
+Path: An instance of the Path class or an instance of the AS_Path class.</comment>
+            <returntype>flm.b4a.accelerview.ComplexText</returntype>
+            <parameter>
+                <name>Path</name>
+                <type>java.lang.Object</type>
+            </parameter>
+        </method>
+        <method>
+            <name>GetSize</name>
+            <comment>Gets the text size.</comment>
+            <returntype>float</returntype>
+        </method>
+        <method>
+            <name>SetScaleX</name>
+            <comment>Sets the text's horizontal scale factor.</comment>
+            <returntype>flm.b4a.accelerview.ComplexText</returntype>
+            <parameter>
+                <name>ScaleX</name>
+                <type>float</type>
+            </parameter>
+        </method>
+        <method>
+            <name>Clone</name>
+            <comment>Clones an existing AS_Text.</comment>
+            <returntype>flm.b4a.accelerview.ComplexText</returntype>
+            <parameter>
+                <name>ObjToCopy</name>
+                <type>flm.b4a.accelerview.ComplexText</type>
+            </parameter>
+        </method>
+        <method>
+            <name>GetColor</name>
+            <comment>Gets the text color.</comment>
+            <returntype>int</returntype>
+        </method>
+        <method>
+            <name>SetLightingColorFilter</name>
+            <comment>Adds a colorfilter that multiplies the RGB channels by one color, and then adds a second color,
+ pinning the result for each component to [0..255].</comment>
+            <returntype>flm.b4a.accelerview.ComplexText</returntype>
+            <parameter>
+                <name>Multiply</name>
+                <type>int</type>
+            </parameter>
+            <parameter>
+                <name>Add</name>
+                <type>int</type>
+            </parameter>
+        </method>
+        <property>
+            <name>Paint</name>
+            <returntype>android.graphics.Paint</returntype>
+            <parameter>
+                <name>paint</name>
+                <type>android.graphics.Paint</type>
+            </parameter>
+            <comment>Gets/sets the internal Paint.</comment>
+        </property>
+        <property>
+            <name>IsInitialized</name>
+            <returntype>boolean</returntype>
+            <comment></comment>
+        </property>
+        <field>
+            <name>STYLE_STROKE</name>
+            <comment></comment>
+            <returntype EnumType="true">android.graphics.Paint.Style</returntype>
+        </field>
+        <field>
+            <name>STYLE_FILL_AND_STROKE</name>
+            <comment></comment>
+            <returntype EnumType="true">android.graphics.Paint.Style</returntype>
+        </field>
+        <field>
+            <name>STYLE_FILL</name>
+            <comment></comment>
+            <returntype EnumType="true">android.graphics.Paint.Style</returntype>
+        </field>
+    </class>
+    <class>
+        <name>flm.b4a.accelerview.ComplexPath</name>
+        <shortname>AS_Path</shortname>
+        <owner>process</owner>
+        <method>
+            <name>Initialize</name>
+            <comment>Initializes the AS_Path object and sets its beginning point to (x,y).</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>x</name>
+                <type>float</type>
+            </parameter>
+            <parameter>
+                <name>y</name>
+                <type>float</type>
+            </parameter>
+        </method>
+        <method>
+            <name>AddPath</name>
+            <comment>Adds a copy of the given path to the current path.</comment>
+            <returntype>flm.b4a.accelerview.ComplexPath</returntype>
+            <parameter>
+                <name>PathToAppend</name>
+                <type>flm.b4a.accelerview.ComplexPath</type>
+            </parameter>
+        </method>
+        <method>
+            <name>ArcTo</name>
+            <comment>Appends the specified arc to the path as a new contour.
+ An automatic LineTo is added to connect the current contour to the start of the arc.
+OvalRect: The bounds of oval used to define the shape and size of the arc.
+StartAngle: Starting angle (in degrees) where the arc begins.
+SweepAngle: Sweep angle (in degrees) measured clockwise.</comment>
+            <returntype>flm.b4a.accelerview.ComplexPath</returntype>
+            <parameter>
+                <name>OvalRect</name>
+                <type>anywheresoftware.b4a.objects.drawable.CanvasWrapper.RectWrapper</type>
+            </parameter>
+            <parameter>
+                <name>StartAngle</name>
+                <type>float</type>
+            </parameter>
+            <parameter>
+                <name>SweepAngle</name>
+                <type>float</type>
+            </parameter>
+        </method>
+        <method>
+            <name>LineTo</name>
+            <comment>Adds a line from the last point to the specified point (x,y).</comment>
+            <returntype>flm.b4a.accelerview.ComplexPath</returntype>
+            <parameter>
+                <name>x</name>
+                <type>float</type>
+            </parameter>
+            <parameter>
+                <name>y</name>
+                <type>float</type>
+            </parameter>
+        </method>
+        <method>
+            <name>rQuadTo</name>
+            <comment>Same as QuadTo, but the coordinates are considered relative to the last point on this contour.</comment>
+            <returntype>flm.b4a.accelerview.ComplexPath</returntype>
+            <parameter>
+                <name>dx1</name>
+                <type>float</type>
+            </parameter>
+            <parameter>
+                <name>dy1</name>
+                <type>float</type>
+            </parameter>
+            <parameter>
+                <name>dx2</name>
+                <type>float</type>
+            </parameter>
+            <parameter>
+                <name>dy2</name>
+                <type>float</type>
+            </parameter>
+        </method>
+        <method>
+            <name>rCubicTo</name>
+            <comment>Same as CubicTo, but the coordinates are considered relative to the current point on this contour.</comment>
+            <returntype>flm.b4a.accelerview.ComplexPath</returntype>
+            <parameter>
+                <name>dx1</name>
+                <type>float</type>
+            </parameter>
+            <parameter>
+                <name>dy1</name>
+                <type>float</type>
+            </parameter>
+            <parameter>
+                <name>dx2</name>
+                <type>float</type>
+            </parameter>
+            <parameter>
+                <name>dy2</name>
+                <type>float</type>
+            </parameter>
+            <parameter>
+                <name>dx3</name>
+                <type>float</type>
+            </parameter>
+            <parameter>
+                <name>dy3</name>
+                <type>float</type>
+            </parameter>
+        </method>
+        <method>
+            <name>MoveTo</name>
+            <comment>Sets the beginning of the next contour to the point (x,y).</comment>
+            <returntype>flm.b4a.accelerview.ComplexPath</returntype>
+            <parameter>
+                <name>x</name>
+                <type>float</type>
+            </parameter>
+            <parameter>
+                <name>y</name>
+                <type>float</type>
+            </parameter>
+        </method>
+        <method>
+            <name>rMoveTo</name>
+            <comment>Sets the beginning of the next contour relative to the last point on the previous contour.</comment>
+            <returntype>flm.b4a.accelerview.ComplexPath</returntype>
+            <parameter>
+                <name>dx</name>
+                <type>float</type>
+            </parameter>
+            <parameter>
+                <name>dy</name>
+                <type>float</type>
+            </parameter>
+        </method>
+        <method>
+            <name>ImportPath</name>
+            <comment>Imports a Path from another library.</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>p</name>
+                <type>android.graphics.Path</type>
+            </parameter>
+        </method>
+        <method>
+            <name>rLineTo</name>
+            <comment>Same as LineTo, but the coordinates are considered relative to the last point on this contour.</comment>
+            <returntype>flm.b4a.accelerview.ComplexPath</returntype>
+            <parameter>
+                <name>dx</name>
+                <type>float</type>
+            </parameter>
+            <parameter>
+                <name>dy</name>
+                <type>float</type>
+            </parameter>
+        </method>
+        <method>
+            <name>QuadTo</name>
+            <comment>Adds a quadratic bezier from the last point, approaching control point (x1,y1), and ending at (x2,y2).</comment>
+            <returntype>flm.b4a.accelerview.ComplexPath</returntype>
+            <parameter>
+                <name>x1</name>
+                <type>float</type>
+            </parameter>
+            <parameter>
+                <name>y1</name>
+                <type>float</type>
+            </parameter>
+            <parameter>
+                <name>x2</name>
+                <type>float</type>
+            </parameter>
+            <parameter>
+                <name>y2</name>
+                <type>float</type>
+            </parameter>
+        </method>
+        <method>
+            <name>ToggleInverseFillType</name>
+            <comment>Toggles the INVERSE state of the fill type.</comment>
+            <returntype>void</returntype>
+        </method>
+        <method>
+            <name>Close</name>
+            <comment>Closes the current contour. If the current point is not equal to the first point of the contour, a line segment is automatically added.</comment>
+            <returntype>void</returntype>
+        </method>
+        <method>
+            <name>ComputeBounds</name>
+            <comment>Computes the bounds of the control points of the path, and writes the answer into rctBounds.</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>rctBounds</name>
+                <type>anywheresoftware.b4a.objects.drawable.CanvasWrapper.RectWrapper</type>
+            </parameter>
+        </method>
+        <method>
+            <name>SetFillType</name>
+            <comment>Sets the path's fill type.
+FT: One of the FILLTYPE constants.</comment>
+            <returntype>flm.b4a.accelerview.ComplexPath</returntype>
+            <parameter>
+                <name>FT</name>
+                <type EnumType="true">android.graphics.Path.FillType</type>
+            </parameter>
+        </method>
+        <method>
+            <name>CubicTo</name>
+            <comment>Adds a cubic bezier from the last point, approaching control points (x1,y1) and (x2,y2), and ending at (x3,y3).</comment>
+            <returntype>flm.b4a.accelerview.ComplexPath</returntype>
+            <parameter>
+                <name>x1</name>
+                <type>float</type>
+            </parameter>
+            <parameter>
+                <name>y1</name>
+                <type>float</type>
+            </parameter>
+            <parameter>
+                <name>x2</name>
+                <type>float</type>
+            </parameter>
+            <parameter>
+                <name>y2</name>
+                <type>float</type>
+            </parameter>
+            <parameter>
+                <name>x3</name>
+                <type>float</type>
+            </parameter>
+            <parameter>
+                <name>y3</name>
+                <type>float</type>
+            </parameter>
+        </method>
+        <method>
+            <name>Reset</name>
+            <comment>Clears any lines and curves from the path, making it empty.</comment>
+            <returntype>void</returntype>
+        </method>
+        <property>
+            <name>IsInitialized</name>
+            <returntype>boolean</returntype>
+            <comment></comment>
+        </property>
+        <field>
+            <name>FILLTYPE_INVERSE_EVENODD</name>
+            <comment></comment>
+            <returntype EnumType="true">android.graphics.Path.FillType</returntype>
+        </field>
+        <field>
+            <name>FILLTYPE_EVENODD</name>
+            <comment></comment>
+            <returntype EnumType="true">android.graphics.Path.FillType</returntype>
+        </field>
+        <field>
+            <name>FILLTYPE_INVERSE_WINDING</name>
+            <comment></comment>
+            <returntype EnumType="true">android.graphics.Path.FillType</returntype>
+        </field>
+        <field>
+            <name>FILLTYPE_WINDING</name>
+            <comment></comment>
+            <returntype EnumType="true">android.graphics.Path.FillType</returntype>
+        </field>
+    </class>
+    <class>
+        <name>flm.b4a.accelerview.ComplexObject</name>
+        <shortname>AS_Object</shortname>
+        <owner>process</owner>
+        <method>
+            <name>CreatePoint</name>
+            <comment>Creates a point object.</comment>
+            <returntype>flm.b4a.accelerview.ComplexObject</returntype>
+        </method>
+        <method>
+            <name>SetTexture</name>
+            <comment>Paints the object with the given texture.
+ If this function is called after SetColor, SetColor is ignored.</comment>
+            <returntype>flm.b4a.accelerview.ComplexObject</returntype>
+            <parameter>
+                <name>texture</name>
+                <type>flm.b4a.accelerview.Texture</type>
+            </parameter>
+        </method>
+        <method>
+            <name>AddToPathEffect</name>
+            <comment>Adds a patheffect to the current patheffect. This only affects drawing with a style set to STROKE or FILL_AND_STROKE.
+Effect: One of the PATHEFFECT constants.
+Value: Value of the effect (for dash effects, it defines the dash size and interval).
+Combine: If True, the two effects are combined. Otherwise they are just superimposed.</comment>
+            <returntype>flm.b4a.accelerview.ComplexObject</returntype>
+            <parameter>
+                <name>Effect</name>
+                <type>int</type>
+            </parameter>
+            <parameter>
+                <name>Value</name>
+                <type>float</type>
+            </parameter>
+            <parameter>
+                <name>Combine</name>
+                <type>boolean</type>
+            </parameter>
+        </method>
+        <method>
+            <name>CreateBitmap2</name>
+            <comment>Creates a bitmap object.
+SrcRect: The subset of the bitmap that will be drawn. If Null then the complete bitmap will be drawn.
+Width,Height: Size of the rectangle that the bitmap will be drawn into.
+Filter: Filtering affects the sampling of bitmaps when they are rescaled. True = best quality.</comment>
+            <returntype>flm.b4a.accelerview.ComplexObject</returntype>
+            <parameter>
+                <name>SrcBmp</name>
+                <type>anywheresoftware.b4a.objects.drawable.CanvasWrapper.BitmapWrapper</type>
+            </parameter>
+            <parameter>
+                <name>SrcRect</name>
+                <type>android.graphics.Rect</type>
+            </parameter>
+            <parameter>
+                <name>Width</name>
+                <type>int</type>
+            </parameter>
+            <parameter>
+                <name>Height</name>
+                <type>int</type>
+            </parameter>
+            <parameter>
+                <name>Filter</name>
+                <type>boolean</type>
+            </parameter>
+        </method>
+        <method>
+            <name>CreateRoundRect</name>
+            <comment>Creates a rectangle object with rounded corners.
+Width,Height: Size of the round-rect to be drawn.
+CornerRadiusX: The x-radius of the oval used to round the corners.
+CornerRadiusY: The y-radius of the oval used to round the corners.
+Filter: Whether the edges are smoothed out.</comment>
+            <returntype>flm.b4a.accelerview.ComplexObject</returntype>
+            <parameter>
+                <name>Width</name>
+                <type>int</type>
+            </parameter>
+            <parameter>
+                <name>Height</name>
+                <type>int</type>
+            </parameter>
+            <parameter>
+                <name>CornerRadiusX</name>
+                <type>float</type>
+            </parameter>
+            <parameter>
+                <name>CornerRadiusY</name>
+                <type>float</type>
+            </parameter>
+            <parameter>
+                <name>Filter</name>
+                <type>boolean</type>
+            </parameter>
+        </method>
+        <method>
+            <name>CreatePath</name>
+            <comment>Creates a path object.
+Path: An instance of the Path class or an instance of the AS_Path class.
+Filter: Whether the edges are smoothed out.</comment>
+            <returntype>flm.b4a.accelerview.ComplexObject</returntype>
+            <parameter>
+                <name>Path</name>
+                <type>java.lang.Object</type>
+            </parameter>
+            <parameter>
+                <name>Filter</name>
+                <type>boolean</type>
+            </parameter>
+        </method>
+        <method>
+            <name>SetXferMode</name>
+            <comment>Adds a transfer-mode in the drawing pipeline that uses the specified Porter-Duff mode.
+ Warning: some modes may have a different result depending on whether the hardware acceleration is enabled or not.
+PDMode: One of the MODE constants or Null.</comment>
+            <returntype>flm.b4a.accelerview.ComplexObject</returntype>
+            <parameter>
+                <name>PDMode</name>
+                <type EnumType="true">android.graphics.PorterDuff.Mode</type>
+            </parameter>
+        </method>
+        <method>
+            <name>CreateRect</name>
+            <comment>Creates a rectangle object.
+Width,Height: Size of the rectangle to be drawn.
+Filter: Whether the edges are smoothed out.</comment>
+            <returntype>flm.b4a.accelerview.ComplexObject</returntype>
+            <parameter>
+                <name>Width</name>
+                <type>int</type>
+            </parameter>
+            <parameter>
+                <name>Height</name>
+                <type>int</type>
+            </parameter>
+            <parameter>
+                <name>Filter</name>
+                <type>boolean</type>
+            </parameter>
+        </method>
+        <method>
+            <name>ChangeBitmap</name>
+            <comment>Replaces the bitmap of a bitmap object.</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>SrcBmp</name>
+                <type>anywheresoftware.b4a.objects.drawable.CanvasWrapper.BitmapWrapper</type>
+            </parameter>
+        </method>
+        <method>
+            <name>ChangeWidthHeight</name>
+            <comment>Changes the width and height of an object (if it has such properties).</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>Width</name>
+                <type>int</type>
+            </parameter>
+            <parameter>
+                <name>Height</name>
+                <type>int</type>
+            </parameter>
+        </method>
+        <method>
+            <name>SetPorterDuffColorFilter</name>
+            <comment>Adds a colorfilter that uses the specified color and Porter-Duff mode.
+ Warning: some modes may have a different result depending on whether the hardware acceleration is enabled or not.
+ If this function is called after SetLightingColorFilter, SetLightingColorFilter is ignored.
+PDMode: One of the MODE constants or Null.</comment>
+            <returntype>flm.b4a.accelerview.ComplexObject</returntype>
+            <parameter>
+                <name>SrcColor</name>
+                <type>int</type>
+            </parameter>
+            <parameter>
+                <name>PDMode</name>
+                <type EnumType="true">android.graphics.PorterDuff.Mode</type>
+            </parameter>
+        </method>
+        <method>
+            <name>GetWidth</name>
+            <comment>Gets the width of an object (if it has such a property).</comment>
+            <returntype>int</returntype>
+        </method>
+        <method>
+            <name>SetPathEffect</name>
+            <comment>Sets a patheffect. This only affects drawing with a style set to STROKE or FILL_AND_STROKE.
+Effect: One of the PATHEFFECT constants.
+Value: Value of the effect (for dash effects, it defines the dash size and interval).</comment>
+            <returntype>flm.b4a.accelerview.ComplexObject</returntype>
+            <parameter>
+                <name>Effect</name>
+                <type>int</type>
+            </parameter>
+            <parameter>
+                <name>Value</name>
+                <type>float</type>
+            </parameter>
+        </method>
+        <method>
+            <name>CreateLine</name>
+            <comment>Creates a line object
+DeltaX,DeltaY: Offsets from the starting position used to calculate the ending position.
+Filter: Whether the edges are smoothed out.</comment>
+            <returntype>flm.b4a.accelerview.ComplexObject</returntype>
+            <parameter>
+                <name>DeltaX</name>
+                <type>float</type>
+            </parameter>
+            <parameter>
+                <name>DeltaY</name>
+                <type>float</type>
+            </parameter>
+            <parameter>
+                <name>Filter</name>
+                <type>boolean</type>
+            </parameter>
+        </method>
+        <method>
+            <name>CreateOval</name>
+            <comment>Creates an oval object.
+Width,Height: Size of the oval to be drawn.
+Filter: Whether the edges are smoothed out.</comment>
+            <returntype>flm.b4a.accelerview.ComplexObject</returntype>
+            <parameter>
+                <name>Width</name>
+                <type>int</type>
+            </parameter>
+            <parameter>
+                <name>Height</name>
+                <type>int</type>
+            </parameter>
+            <parameter>
+                <name>Filter</name>
+                <type>boolean</type>
+            </parameter>
+        </method>
+        <method>
+            <name>SetLightingColorFilter</name>
+            <comment>Adds a colorfilter that multiplies the RGB channels by one color, and then adds a second color,
+ pinning the result for each component to [0..255].
+ If this function is called after SetPorterDuffColorFilter, SetPorterDuffColorFilter is ignored.</comment>
+            <returntype>flm.b4a.accelerview.ComplexObject</returntype>
+            <parameter>
+                <name>Multiply</name>
+                <type>int</type>
+            </parameter>
+            <parameter>
+                <name>Add</name>
+                <type>int</type>
+            </parameter>
+        </method>
+        <method>
+            <name>CreateBitmap</name>
+            <comment>Creates a bitmap object.
+Filter: Filtering affects the sampling of bitmaps when they are rescaled. True = best quality.</comment>
+            <returntype>flm.b4a.accelerview.ComplexObject</returntype>
+            <parameter>
+                <name>SrcBmp</name>
+                <type>anywheresoftware.b4a.objects.drawable.CanvasWrapper.BitmapWrapper</type>
+            </parameter>
+            <parameter>
+                <name>Filter</name>
+                <type>boolean</type>
+            </parameter>
+        </method>
+        <method>
+            <name>ChangeCircleRadius</name>
+            <comment>Changes the radius of a circle object.</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>Radius</name>
+                <type>float</type>
+            </parameter>
+        </method>
+        <method>
+            <name>SetPathEffect2</name>
+            <comment>Stamps the contour of the object with the specified shape. This only applies to drawings with a style set to STROKE or FILL_AND_STROKE.
+Shape: An instance of the Path class or an instance of the AS_Path class.
+Spacing: Spacing between each stamp of shape.
+Style: How to transform the shape at each position as it is stamped. One of the PATHEFFECT_STYLE constants.</comment>
+            <returntype>flm.b4a.accelerview.ComplexObject</returntype>
+            <parameter>
+                <name>Shape</name>
+                <type>java.lang.Object</type>
+            </parameter>
+            <parameter>
+                <name>Spacing</name>
+                <type>float</type>
+            </parameter>
+            <parameter>
+                <name>Style</name>
+                <type EnumType="true">android.graphics.PathDashPathEffect.Style</type>
+            </parameter>
+        </method>
+        <method>
+            <name>SetAlpha</name>
+            <comment>Sets the alpha value of the object color, leaving its R,G,B values unchanged.</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>Alpha</name>
+                <type>int</type>
+            </parameter>
+        </method>
+        <method>
+            <name>CreateCircle</name>
+            <comment>Creates a circle object.
+Radius: The radius of the circle to be drawn.
+Filter: Whether the edges are smoothed out.</comment>
+            <returntype>flm.b4a.accelerview.ComplexObject</returntype>
+            <parameter>
+                <name>Radius</name>
+                <type>float</type>
+            </parameter>
+            <parameter>
+                <name>Filter</name>
+                <type>boolean</type>
+            </parameter>
+        </method>
+        <method>
+            <name>GetAlpha</name>
+            <comment>Returns the alpha value of the object color.</comment>
+            <returntype>int</returntype>
+        </method>
+        <method>
+            <name>SetStyle</name>
+            <comment>Defines whether the object will be filled or stroked, or both.
+Style: One of the STYLE constants.
+StrokeWidth: The stroke width. Relevant when Style &amp;lt;&amp;gt; STYLE_FILL.</comment>
+            <returntype>flm.b4a.accelerview.ComplexObject</returntype>
+            <parameter>
+                <name>style</name>
+                <type EnumType="true">android.graphics.Paint.Style</type>
+            </parameter>
+            <parameter>
+                <name>StrokeWidth</name>
+                <type>int</type>
+            </parameter>
+        </method>
+        <method>
+            <name>CreateArc</name>
+            <comment>Creates an arc object.
+Width,Height: Size of the oval used to define the shape and size of the arc.
+StartAngle: Starting angle (in degrees) where the arc begins.
+SweepAngle: Sweep angle (in degrees) measured clockwise.
+Wedge: Whether the center of the oval closes the arc to draw a wedge.
+Filter: Whether the edges are smoothed out.</comment>
+            <returntype>flm.b4a.accelerview.ComplexObject</returntype>
+            <parameter>
+                <name>Width</name>
+                <type>int</type>
+            </parameter>
+            <parameter>
+                <name>Height</name>
+                <type>int</type>
+            </parameter>
+            <parameter>
+                <name>StartAngle</name>
+                <type>float</type>
+            </parameter>
+            <parameter>
+                <name>SweepAngle</name>
+                <type>float</type>
+            </parameter>
+            <parameter>
+                <name>Wedge</name>
+                <type>boolean</type>
+            </parameter>
+            <parameter>
+                <name>Filter</name>
+                <type>boolean</type>
+            </parameter>
+        </method>
+        <method>
+            <name>SetColor</name>
+            <comment>Paints the object with the given color.
+ If this function is called after SetTexture, SetTexture is ignored.</comment>
+            <returntype>flm.b4a.accelerview.ComplexObject</returntype>
+            <parameter>
+                <name>Color</name>
+                <type>int</type>
+            </parameter>
+        </method>
+        <method>
+            <name>ChangeArcAngles</name>
+            <comment>Changes the angles of an arc object.
+StartAngle: Starting angle (in degrees) where the arc begins.
+SweepAngle: Sweep angle (in degrees) measured clockwise.</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>StartAngle</name>
+                <type>float</type>
+            </parameter>
+            <parameter>
+                <name>SweepAngle</name>
+                <type>float</type>
+            </parameter>
+        </method>
+        <method>
+            <name>Clone</name>
+            <comment>Clones an existing AS_Object.</comment>
+            <returntype>flm.b4a.accelerview.ComplexObject</returntype>
+            <parameter>
+                <name>ObjToCopy</name>
+                <type>flm.b4a.accelerview.ComplexObject</type>
+            </parameter>
+        </method>
+        <method>
+            <name>ChangePath</name>
+            <comment>Changes the path of a path object.</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>Path</name>
+                <type>java.lang.Object</type>
+            </parameter>
+        </method>
+        <method>
+            <name>GetColor</name>
+            <comment>Gets the object color.</comment>
+            <returntype>int</returntype>
+        </method>
+        <method>
+            <name>GetHeight</name>
+            <comment>Gets the height of an object (if it has such a property).</comment>
+            <returntype>int</returntype>
+        </method>
+        <property>
+            <name>Paint</name>
+            <returntype>android.graphics.Paint</returntype>
+            <parameter>
+                <name>paint</name>
+                <type>android.graphics.Paint</type>
+            </parameter>
+            <comment>Gets/sets the internal Paint.</comment>
+        </property>
+        <property>
+            <name>IsInitialized</name>
+            <returntype>boolean</returntype>
+            <comment></comment>
+        </property>
+        <field>
+            <name>PATHEFFECT_ROUNDED</name>
+            <comment></comment>
+            <returntype>int</returntype>
+        </field>
+        <field>
+            <name>MODE_XOR</name>
+            <comment></comment>
+            <returntype EnumType="true">android.graphics.PorterDuff.Mode</returntype>
+        </field>
+        <field>
+            <name>PATHEFFECT_STYLE_TRANSLATE</name>
+            <comment></comment>
+            <returntype EnumType="true">android.graphics.PathDashPathEffect.Style</returntype>
+        </field>
+        <field>
+            <name>MODE_SRC_OUT</name>
+            <comment></comment>
+            <returntype EnumType="true">android.graphics.PorterDuff.Mode</returntype>
+        </field>
+        <field>
+            <name>MODE_CLEAR</name>
+            <comment></comment>
+            <returntype EnumType="true">android.graphics.PorterDuff.Mode</returntype>
+        </field>
+        <field>
+            <name>MODE_SCREEN</name>
+            <comment></comment>
+            <returntype EnumType="true">android.graphics.PorterDuff.Mode</returntype>
+        </field>
+        <field>
+            <name>MODE_SRC_ATOP</name>
+            <comment></comment>
+            <returntype EnumType="true">android.graphics.PorterDuff.Mode</returntype>
+        </field>
+        <field>
+            <name>MODE_DARKEN</name>
+            <comment></comment>
+            <returntype EnumType="true">android.graphics.PorterDuff.Mode</returntype>
+        </field>
+        <field>
+            <name>PATHEFFECT_DASH_REGULAR</name>
+            <comment></comment>
+            <returntype>int</returntype>
+        </field>
+        <field>
+            <name>PATHEFFECT_DASH_SEGMENTED</name>
+            <comment></comment>
+            <returntype>int</returntype>
+        </field>
+        <field>
+            <name>STYLE_FILL</name>
+            <comment></comment>
+            <returntype EnumType="true">android.graphics.Paint.Style</returntype>
+        </field>
+        <field>
+            <name>PATHEFFECT_STYLE_ROTATE</name>
+            <comment></comment>
+            <returntype EnumType="true">android.graphics.PathDashPathEffect.Style</returntype>
+        </field>
+        <field>
+            <name>MODE_DST_ATOP</name>
+            <comment></comment>
+            <returntype EnumType="true">android.graphics.PorterDuff.Mode</returntype>
+        </field>
+        <field>
+            <name>MODE_SRC_OVER</name>
+            <comment></comment>
+            <returntype EnumType="true">android.graphics.PorterDuff.Mode</returntype>
+        </field>
+        <field>
+            <name>PATHEFFECT_STYLE_MORPH</name>
+            <comment></comment>
+            <returntype EnumType="true">android.graphics.PathDashPathEffect.Style</returntype>
+        </field>
+        <field>
+            <name>PATHEFFECT_DISTORTED</name>
+            <comment></comment>
+            <returntype>int</returntype>
+        </field>
+        <field>
+            <name>STYLE_FILL_AND_STROKE</name>
+            <comment></comment>
+            <returntype EnumType="true">android.graphics.Paint.Style</returntype>
+        </field>
+        <field>
+            <name>MODE_DST_OUT</name>
+            <comment></comment>
+            <returntype EnumType="true">android.graphics.PorterDuff.Mode</returntype>
+        </field>
+        <field>
+            <name>MODE_MULTIPLY</name>
+            <comment></comment>
+            <returntype EnumType="true">android.graphics.PorterDuff.Mode</returntype>
+        </field>
+        <field>
+            <name>MODE_LIGHTEN</name>
+            <comment></comment>
+            <returntype EnumType="true">android.graphics.PorterDuff.Mode</returntype>
+        </field>
+        <field>
+            <name>MODE_SRC_IN</name>
+            <comment></comment>
+            <returntype EnumType="true">android.graphics.PorterDuff.Mode</returntype>
+        </field>
+        <field>
+            <name>STYLE_STROKE</name>
+            <comment></comment>
+            <returntype EnumType="true">android.graphics.Paint.Style</returntype>
+        </field>
+        <field>
+            <name>PATHEFFECT_CLEAR</name>
+            <comment></comment>
+            <returntype>int</returntype>
+        </field>
+        <field>
+            <name>MODE_DST_OVER</name>
+            <comment></comment>
+            <returntype EnumType="true">android.graphics.PorterDuff.Mode</returntype>
+        </field>
+        <field>
+            <name>MODE_DST_IN</name>
+            <comment></comment>
+            <returntype EnumType="true">android.graphics.PorterDuff.Mode</returntype>
+        </field>
+        <field>
+            <name>PATHEFFECT_DASH_ALTERNATE</name>
+            <comment></comment>
+            <returntype>int</returntype>
+        </field>
+    </class>
+    <class>
+        <name>flm.b4a.accelerview.AcceleratedSurface</name>
+        <shortname>AcceleratedSurface</shortname>
+        <objectwrapper>flm.b4a.accelerview.AcceleratedView</objectwrapper>
+        <owner>activity</owner>
+        <event>Draw(AC As AS_Canvas)</event>
+        <event>Touch(Action As Int, X As Int, Y As Int, Event As Object)</event>
+        <event>Update(ElapsedTime As Long)</event>
+        <method>
+            <name>Initialize</name>
+            <comment>Initializes the accelerated surface.
+IsHardwareAccelerated: This setting should be set to true to benefit from the hardware acceleration.
+ It is ignored by Android versions prior to Honeycomb (3.0, API 11).</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>ba</name>
+                <type>anywheresoftware.b4a.BA</type>
+            </parameter>
+            <parameter>
+                <name>EventPrefix</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>IsHardwareAccelerated</name>
+                <type>boolean</type>
+            </parameter>
+        </method>
+        <method>
+            <name>ElapsedTimeSinceLastDraw</name>
+            <comment>Gets the elapsed time (in milliseconds) since the last Draw event.
+ Returns always 0 if StartRegularDraw was not called.</comment>
+            <returntype>long</returntype>
+        </method>
+        <method>
+            <name>RequestFocus</name>
+            <comment></comment>
+            <returntype>boolean</returntype>
+        </method>
+        <method>
+            <name>BringToFront</name>
+            <comment></comment>
+            <returntype>void</returntype>
+        </method>
+        <method>
+            <name>StartRegularDraw</name>
+            <comment>Fires automatically the Draw event at regular intervals (in milliseconds).
+ This function will attempt to honor the requested interval, but the actual delay
+ between Draw events may be different, depending on system load and capabilities.</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>ba</name>
+                <type>anywheresoftware.b4a.BA</type>
+            </parameter>
+            <parameter>
+                <name>Interval</name>
+                <type>int</type>
+            </parameter>
+        </method>
+        <method>
+            <name>RemoveView</name>
+            <comment></comment>
+            <returntype>void</returntype>
+        </method>
+        <method>
+            <name>StartRegularUpdateAndDraw</name>
+            <comment>Fires automatically an Update event and a Draw event at regular intervals (in milliseconds).
+ This function will attempt to honor the requested interval, but the actual delay
+ between events may be different, depending on system load and capabilities.</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>ba</name>
+                <type>anywheresoftware.b4a.BA</type>
+            </parameter>
+            <parameter>
+                <name>Interval</name>
+                <type>int</type>
+            </parameter>
+        </method>
+        <method>
+            <name>SetBackgroundImage</name>
+            <comment></comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>arg0</name>
+                <type>android.graphics.Bitmap</type>
+            </parameter>
+        </method>
+        <method>
+            <name>SetLayout</name>
+            <comment></comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>arg0</name>
+                <type>int</type>
+            </parameter>
+            <parameter>
+                <name>arg1</name>
+                <type>int</type>
+            </parameter>
+            <parameter>
+                <name>arg2</name>
+                <type>int</type>
+            </parameter>
+            <parameter>
+                <name>arg3</name>
+                <type>int</type>
+            </parameter>
+        </method>
+        <method>
+            <name>Invalidate</name>
+            <comment></comment>
+            <returntype>void</returntype>
+        </method>
+        <method>
+            <name>Invalidate3</name>
+            <comment></comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>arg0</name>
+                <type>int</type>
+            </parameter>
+            <parameter>
+                <name>arg1</name>
+                <type>int</type>
+            </parameter>
+            <parameter>
+                <name>arg2</name>
+                <type>int</type>
+            </parameter>
+            <parameter>
+                <name>arg3</name>
+                <type>int</type>
+            </parameter>
+        </method>
+        <method>
+            <name>StopRegularDraw</name>
+            <comment>Stops the timer started with StartRegularDraw or StartRegularUpdateAndDraw.</comment>
+            <returntype>void</returntype>
+        </method>
+        <method>
+            <name>Invalidate2</name>
+            <comment></comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>arg0</name>
+                <type>android.graphics.Rect</type>
+            </parameter>
+        </method>
+        <method>
+            <name>SendToBack</name>
+            <comment></comment>
+            <returntype>void</returntype>
+        </method>
+        <method>
+            <name>IsInitialized</name>
+            <comment></comment>
+            <returntype>boolean</returntype>
+        </method>
+        <property>
+            <name>Top</name>
+            <returntype>int</returntype>
+            <parameter>
+                <name>arg0</name>
+                <type>int</type>
+            </parameter>
+            <comment></comment>
+        </property>
+        <property>
+            <name>Enabled</name>
+            <returntype>boolean</returntype>
+            <parameter>
+                <name>arg0</name>
+                <type>boolean</type>
+            </parameter>
+            <comment></comment>
+        </property>
+        <property>
+            <name>Bitmap</name>
+            <returntype>anywheresoftware.b4a.objects.drawable.CanvasWrapper.BitmapWrapper</returntype>
+            <comment>Returns a screenshot of the current contents of the view.</comment>
+        </property>
+        <property>
+            <name>Visible</name>
+            <returntype>boolean</returntype>
+            <parameter>
+                <name>arg0</name>
+                <type>boolean</type>
+            </parameter>
+            <comment></comment>
+        </property>
+        <property>
+            <name>IsHardwareAccelerated</name>
+            <returntype>boolean</returntype>
+            <comment>Gets whether the view is hardware accelerated.
+ If the view is not hardware accelerated under Android 3 or +, check that you set IsHardwareAccelerated
+ to true in Initialize and that you added SetApplicationAttribute(android:hardwareAccelerated, "true")
+ to the manifest.</comment>
+        </property>
+        <property>
+            <name>Background</name>
+            <returntype>android.graphics.drawable.Drawable</returntype>
+            <parameter>
+                <name>arg0</name>
+                <type>android.graphics.drawable.Drawable</type>
+            </parameter>
+            <comment></comment>
+        </property>
+        <property>
+            <name>Height</name>
+            <returntype>int</returntype>
+            <parameter>
+                <name>arg0</name>
+                <type>int</type>
+            </parameter>
+            <comment></comment>
+        </property>
+        <property>
+            <name>Left</name>
+            <returntype>int</returntype>
+            <parameter>
+                <name>arg0</name>
+                <type>int</type>
+            </parameter>
+            <comment></comment>
+        </property>
+        <property>
+            <name>Color</name>
+            <parameter>
+                <name>arg0</name>
+                <type>int</type>
+            </parameter>
+            <comment></comment>
+        </property>
+        <property>
+            <name>Tag</name>
+            <returntype>java.lang.Object</returntype>
+            <parameter>
+                <name>arg0</name>
+                <type>java.lang.Object</type>
+            </parameter>
+            <comment></comment>
+        </property>
+        <property>
+            <name>Width</name>
+            <returntype>int</returntype>
+            <parameter>
+                <name>arg0</name>
+                <type>int</type>
+            </parameter>
+            <comment></comment>
+        </property>
+    </class>
+    <class>
+        <name>flm.b4a.accelerview.AcceleratedCanvas</name>
+        <shortname>AS_Canvas</shortname>
+        <owner>process</owner>
+        <method>
+            <name>ImportMatrix</name>
+            <comment>Imports a Matrix from another library.</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>m</name>
+                <type>android.graphics.Matrix</type>
+            </parameter>
+        </method>
+        <method>
+            <name>DrawOval</name>
+            <comment>Draws an oval shape.
+Rect: The rectangle bounds of the oval to be drawn.
+Filled: Whether the oval will be filled.
+StrokeWidth: The stroke width. Relevant when Filled = False.
+Filter: Whether the edges are smoothed out.</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>Rect</name>
+                <type>anywheresoftware.b4a.objects.drawable.CanvasWrapper.RectWrapper</type>
+            </parameter>
+            <parameter>
+                <name>Color</name>
+                <type>int</type>
+            </parameter>
+            <parameter>
+                <name>Filled</name>
+                <type>boolean</type>
+            </parameter>
+            <parameter>
+                <name>StrokeWidth</name>
+                <type>float</type>
+            </parameter>
+            <parameter>
+                <name>Filter</name>
+                <type>boolean</type>
+            </parameter>
+        </method>
+        <method>
+            <name>DrawColor</name>
+            <comment>Fills the entire canvas with the given color.</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>Color</name>
+                <type>int</type>
+            </parameter>
+        </method>
+        <method>
+            <name>CreateLayer</name>
+            <comment>Redirects all subsequent drawings in a separate layer until you call TransferLayer.
+LayerRect: Rectangular coordinates of the layer.</comment>
+            <returntype>int</returntype>
+            <parameter>
+                <name>LayerRect</name>
+                <type>anywheresoftware.b4a.objects.drawable.CanvasWrapper.RectWrapper</type>
+            </parameter>
+        </method>
+        <method>
+            <name>CameraSetLocation</name>
+            <comment>Sets the location of the camera. The default location is set at 0, 0, -8.
+x: The x location of the camera
+y: The y location of the camera
+z: The z location of the camera
+ minSDK=12</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>x</name>
+                <type>float</type>
+            </parameter>
+            <parameter>
+                <name>y</name>
+                <type>float</type>
+            </parameter>
+            <parameter>
+                <name>z</name>
+                <type>float</type>
+            </parameter>
+        </method>
+        <method>
+            <name>DrawBitmapAt</name>
+            <comment>Draws the given bitmap at the specified position.</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>Bmp</name>
+                <type>anywheresoftware.b4a.objects.drawable.CanvasWrapper.BitmapWrapper</type>
+            </parameter>
+            <parameter>
+                <name>Left</name>
+                <type>int</type>
+            </parameter>
+            <parameter>
+                <name>Top</name>
+                <type>int</type>
+            </parameter>
+        </method>
+        <method>
+            <name>ScaleCanvas</name>
+            <comment>Scales all subsequent drawings by ScaleX, ScaleY.</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>ScaleX</name>
+                <type>float</type>
+            </parameter>
+            <parameter>
+                <name>ScaleY</name>
+                <type>float</type>
+            </parameter>
+        </method>
+        <method>
+            <name>MatrixPostTranslate</name>
+            <comment>Postconcats the internal matrix with the specified translation.</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>dx</name>
+                <type>float</type>
+            </parameter>
+            <parameter>
+                <name>dy</name>
+                <type>float</type>
+            </parameter>
+        </method>
+        <method>
+            <name>MeasureStringWidth</name>
+            <comment>Returns the width of the given text.</comment>
+            <returntype>float</returntype>
+            <parameter>
+                <name>Text</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>Typeface</name>
+                <type>anywheresoftware.b4a.keywords.constants.TypefaceWrapper</type>
+            </parameter>
+            <parameter>
+                <name>TextSize</name>
+                <type>float</type>
+            </parameter>
+        </method>
+        <method>
+            <name>SaveState</name>
+            <comment>Saves the current state of the canvas. Each SaveState should be balanced with a call to RestoreState.
+
+ In this example of rotation, only the rectangle is rotated:
+ AC.SaveState
+ AC.RotateCanvas(45)
+ AC.DrawRect(rctRect, Colors.Red, True, 0, True)
+ AC.RestoreState
+ AC.DrawOval(rctOval, Colors.Blue, True, 0, True)</comment>
+            <returntype>void</returntype>
+        </method>
+        <method>
+            <name>RotateCanvas</name>
+            <comment>Rotates all subsequent drawings around the canvas center by the specified number of degrees.</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>Degrees</name>
+                <type>float</type>
+            </parameter>
+        </method>
+        <method>
+            <name>RemoveClip</name>
+            <comment>Removes the clipping set by ClipPath or ClipRect.</comment>
+            <returntype>void</returntype>
+        </method>
+        <method>
+            <name>DrawText</name>
+            <comment>Draws the text.
+Text: The text to be drawn.
+x,y: The origin point.
+Typeface: Typeface (font) to use.
+TextSize: Size of text. This value is automatically scaled so do not scale it yourself.
+Align: The alignment related to the origin. One of the ALIGN constants.</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>Text</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>x</name>
+                <type>float</type>
+            </parameter>
+            <parameter>
+                <name>y</name>
+                <type>float</type>
+            </parameter>
+            <parameter>
+                <name>Typeface</name>
+                <type>anywheresoftware.b4a.keywords.constants.TypefaceWrapper</type>
+            </parameter>
+            <parameter>
+                <name>TextSize</name>
+                <type>float</type>
+            </parameter>
+            <parameter>
+                <name>Color</name>
+                <type>int</type>
+            </parameter>
+            <parameter>
+                <name>Align</name>
+                <type EnumType="true">android.graphics.Paint.Align</type>
+            </parameter>
+        </method>
+        <method>
+            <name>DrawBitmapWithMatrixAt</name>
+            <comment>Transforms the given bitmap with the internal matrix and draws it at the specified position.
+Filter: Filtering affects the sampling of the bitmap when it is transformed. True = best quality.</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>Bmp</name>
+                <type>anywheresoftware.b4a.objects.drawable.CanvasWrapper.BitmapWrapper</type>
+            </parameter>
+            <parameter>
+                <name>Left</name>
+                <type>int</type>
+            </parameter>
+            <parameter>
+                <name>Top</name>
+                <type>int</type>
+            </parameter>
+            <parameter>
+                <name>Filter</name>
+                <type>boolean</type>
+            </parameter>
+        </method>
+        <method>
+            <name>MatrixSetSkew2</name>
+            <comment>Sets the internal matrix to skew by sx and sy, with a pivot point at (px, py).</comment>
+            <returntype>flm.b4a.accelerview.AcceleratedCanvas</returntype>
+            <parameter>
+                <name>sx</name>
+                <type>float</type>
+            </parameter>
+            <parameter>
+                <name>sy</name>
+                <type>float</type>
+            </parameter>
+            <parameter>
+                <name>px</name>
+                <type>float</type>
+            </parameter>
+            <parameter>
+                <name>py</name>
+                <type>float</type>
+            </parameter>
+        </method>
+        <method>
+            <name>DrawTextObject</name>
+            <comment>Draws an AS_Text object.
+Text: The text to be drawn.
+X,Y: The origin point.
+Align: The alignment related to the origin. One of the ALIGN constants.</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>objText</name>
+                <type>flm.b4a.accelerview.ComplexText</type>
+            </parameter>
+            <parameter>
+                <name>Text</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>X</name>
+                <type>float</type>
+            </parameter>
+            <parameter>
+                <name>Y</name>
+                <type>float</type>
+            </parameter>
+            <parameter>
+                <name>Align</name>
+                <type EnumType="true">android.graphics.Paint.Align</type>
+            </parameter>
+        </method>
+        <method>
+            <name>DrawCircle</name>
+            <comment>Draws a circle.
+x: The x-coordinate of the center of the circle to be drawn.
+y: The y-coordinate of the center of the circle to be drawn.
+Radius: The radius of the circle to be drawn.
+Filled: Whether the circle will be filled.
+StrokeWidth: The stroke width. Relevant when Filled = False.
+Filter: Whether the edges are smoothed out.</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>x</name>
+                <type>float</type>
+            </parameter>
+            <parameter>
+                <name>y</name>
+                <type>float</type>
+            </parameter>
+            <parameter>
+                <name>Radius</name>
+                <type>float</type>
+            </parameter>
+            <parameter>
+                <name>Color</name>
+                <type>int</type>
+            </parameter>
+            <parameter>
+                <name>Filled</name>
+                <type>boolean</type>
+            </parameter>
+            <parameter>
+                <name>StrokeWidth</name>
+                <type>float</type>
+            </parameter>
+            <parameter>
+                <name>Filter</name>
+                <type>boolean</type>
+            </parameter>
+        </method>
+        <method>
+            <name>DrawArc</name>
+            <comment>Draws the specified arc, which will be scaled to fit inside the specified oval.
+OvalRect: The bounds of oval used to define the shape and size of the arc.
+StartAngle: Starting angle (in degrees) where the arc begins.
+SweepAngle: Sweep angle (in degrees) measured clockwise.
+Wedge: Whether the center of the oval closes the arc to draw a wedge.
+Filled: Whether the arc will be filled.
+StrokeWidth: The stroke width. Relevant when Filled = False.
+Filter: Whether the edges are smoothed out.</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>OvalRect</name>
+                <type>anywheresoftware.b4a.objects.drawable.CanvasWrapper.RectWrapper</type>
+            </parameter>
+            <parameter>
+                <name>StartAngle</name>
+                <type>float</type>
+            </parameter>
+            <parameter>
+                <name>SweepAngle</name>
+                <type>float</type>
+            </parameter>
+            <parameter>
+                <name>Wedge</name>
+                <type>boolean</type>
+            </parameter>
+            <parameter>
+                <name>Color</name>
+                <type>int</type>
+            </parameter>
+            <parameter>
+                <name>Filled</name>
+                <type>boolean</type>
+            </parameter>
+            <parameter>
+                <name>StrokeWidth</name>
+                <type>float</type>
+            </parameter>
+            <parameter>
+                <name>Filter</name>
+                <type>boolean</type>
+            </parameter>
+        </method>
+        <method>
+            <name>MatrixPostScale</name>
+            <comment>Postconcats the internal matrix with the specified scale.</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>sx</name>
+                <type>float</type>
+            </parameter>
+            <parameter>
+                <name>sy</name>
+                <type>float</type>
+            </parameter>
+        </method>
+        <method>
+            <name>MeasureStringHeight</name>
+            <comment>Returns the height of the given text.</comment>
+            <returntype>int</returntype>
+            <parameter>
+                <name>Text</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>Typeface</name>
+                <type>anywheresoftware.b4a.keywords.constants.TypefaceWrapper</type>
+            </parameter>
+            <parameter>
+                <name>TextSize</name>
+                <type>float</type>
+            </parameter>
+        </method>
+        <method>
+            <name>ClipPath</name>
+            <comment>Clips the drawing area to the given path. The path may be an instance of the Path class or an instance of the AS_Path class.
+ Warning: This does not work if the hardware acceleration is enabled.</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>Path</name>
+                <type>java.lang.Object</type>
+            </parameter>
+        </method>
+        <method>
+            <name>DrawBitmapMesh</name>
+            <comment>Draws the given bitmap through a mesh.
+ The mesh vertices are evenly distributed across the bitmap. There are MeshWidth+1 vertices across, and MeshHeight+1 vertices down. The Verts array is accessed in row-major order, so that the first MeshWidth+1 vertices are distributed across the top of the bitmap from left to right.
+MeshWidth: The number of columns in the mesh. Nothing is drawn if this is 0.
+MeshHeight: The number of rows in the mesh. Nothing is drawn if this is 0.
+Verts: Array of x,y pairs, specifying where the mesh should be drawn. There must be at least (MeshWidth+1)*(MeshHeight+1)*2+VertOffset values in the array.
+VertOffset: Number of Verts elements to skip before drawing.</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>Bmp</name>
+                <type>anywheresoftware.b4a.objects.drawable.CanvasWrapper.BitmapWrapper</type>
+            </parameter>
+            <parameter>
+                <name>MeshWidth</name>
+                <type>int</type>
+            </parameter>
+            <parameter>
+                <name>MeshHeight</name>
+                <type>int</type>
+            </parameter>
+            <parameter>
+                <name>Verts</name>
+                <type>float[]</type>
+            </parameter>
+            <parameter>
+                <name>VertOffset</name>
+                <type>int</type>
+            </parameter>
+        </method>
+        <method>
+            <name>RotateCanvasAround</name>
+            <comment>Rotates all subsequent drawings around the pivot coordinates by the specified number of degrees.</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>Degrees</name>
+                <type>float</type>
+            </parameter>
+            <parameter>
+                <name>PivotX</name>
+                <type>float</type>
+            </parameter>
+            <parameter>
+                <name>PivotY</name>
+                <type>float</type>
+            </parameter>
+        </method>
+        <method>
+            <name>MatrixSetSinCos</name>
+            <comment>Sets the internal matrix to rotate by the specified sine and cosine values, with a pivot point at (px, py).
+ The pivot point is the coordinate that should remain unchanged by the specified transformation.</comment>
+            <returntype>flm.b4a.accelerview.AcceleratedCanvas</returntype>
+            <parameter>
+                <name>sinValue</name>
+                <type>float</type>
+            </parameter>
+            <parameter>
+                <name>cosValue</name>
+                <type>float</type>
+            </parameter>
+            <parameter>
+                <name>px</name>
+                <type>float</type>
+            </parameter>
+            <parameter>
+                <name>py</name>
+                <type>float</type>
+            </parameter>
+        </method>
+        <method>
+            <name>DrawRect</name>
+            <comment>Draws a rectangle.
+Rect: The coordinates of the rectangle to be drawn.
+Filled: Whether the rectangle will be filled.
+StrokeWidth: The stroke width. Relevant when Filled = False.
+Filter: Whether the edges are smoothed out.</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>Rect</name>
+                <type>anywheresoftware.b4a.objects.drawable.CanvasWrapper.RectWrapper</type>
+            </parameter>
+            <parameter>
+                <name>Color</name>
+                <type>int</type>
+            </parameter>
+            <parameter>
+                <name>Filled</name>
+                <type>boolean</type>
+            </parameter>
+            <parameter>
+                <name>StrokeWidth</name>
+                <type>float</type>
+            </parameter>
+            <parameter>
+                <name>Filter</name>
+                <type>boolean</type>
+            </parameter>
+        </method>
+        <method>
+            <name>TransferLayer</name>
+            <comment>Transfers the layer to the canvas and deletes it.</comment>
+            <returntype>void</returntype>
+        </method>
+        <method>
+            <name>DrawBitmap</name>
+            <comment>Draws the given bitmap.
+SrcRect: The subset of the bitmap that will be drawn. If Null then the complete bitmap will be drawn.
+DestRect: The rectangle that the bitmap will be drawn into.</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>Bmp</name>
+                <type>anywheresoftware.b4a.objects.drawable.CanvasWrapper.BitmapWrapper</type>
+            </parameter>
+            <parameter>
+                <name>SrcRect</name>
+                <type>android.graphics.Rect</type>
+            </parameter>
+            <parameter>
+                <name>DestRect</name>
+                <type>android.graphics.Rect</type>
+            </parameter>
+        </method>
+        <method>
+            <name>CameraSave</name>
+            <comment>Saves the camera state. Each Save should be balanced with a call to Restore.</comment>
+            <returntype>void</returntype>
+        </method>
+        <method>
+            <name>SkewCanvas</name>
+            <comment>Skews all subsequent drawings by SkewX, SkewY.</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>SkewX</name>
+                <type>float</type>
+            </parameter>
+            <parameter>
+                <name>SkewY</name>
+                <type>float</type>
+            </parameter>
+        </method>
+        <method>
+            <name>DrawDrawable</name>
+            <comment>Draws a Drawable into the specified rectangle.</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>drawable</name>
+                <type>android.graphics.drawable.Drawable</type>
+            </parameter>
+            <parameter>
+                <name>DestRect</name>
+                <type>anywheresoftware.b4a.objects.drawable.CanvasWrapper.RectWrapper</type>
+            </parameter>
+        </method>
+        <method>
+            <name>MatrixPostRotate</name>
+            <comment>Postconcats the internal matrix with the specified rotation.</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>degrees</name>
+                <type>float</type>
+            </parameter>
+        </method>
+        <method>
+            <name>DrawRoundRect</name>
+            <comment>Draws a rectangle with rounded corners.
+Rect: The coordinates of the round-rect to be drawn.
+CornerRadius: The radius of the oval used to round the corners.
+Filled: Whether the round-rect will be filled.
+StrokeWidth: The stroke width. Relevant when Filled = False.
+Filter: Whether the edges are smoothed out.</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>Rect</name>
+                <type>anywheresoftware.b4a.objects.drawable.CanvasWrapper.RectWrapper</type>
+            </parameter>
+            <parameter>
+                <name>Color</name>
+                <type>int</type>
+            </parameter>
+            <parameter>
+                <name>CornerRadius</name>
+                <type>float</type>
+            </parameter>
+            <parameter>
+                <name>Filled</name>
+                <type>boolean</type>
+            </parameter>
+            <parameter>
+                <name>StrokeWidth</name>
+                <type>float</type>
+            </parameter>
+            <parameter>
+                <name>Filter</name>
+                <type>boolean</type>
+            </parameter>
+        </method>
+        <method>
+            <name>RestoreState</name>
+            <comment>Restores the canvas state saved with SaveState.
+ Undoes the following functions called after SaveState:
+ RotateCanvas, RotateCanvasAround, ScaleCanvas, SkewCanvas, TranslateCanvas, ClipPath, and ClipRect.
+ The drawings stay unchanged.</comment>
+            <returntype>void</returntype>
+        </method>
+        <method>
+            <name>DrawLine</name>
+            <comment>Draws a line from (x1, y1) to (x2, y2).
+StrokeWidth: Width of the line.
+Filter: Whether the edges are smoothed out.</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>x1</name>
+                <type>float</type>
+            </parameter>
+            <parameter>
+                <name>y1</name>
+                <type>float</type>
+            </parameter>
+            <parameter>
+                <name>x2</name>
+                <type>float</type>
+            </parameter>
+            <parameter>
+                <name>y2</name>
+                <type>float</type>
+            </parameter>
+            <parameter>
+                <name>Color</name>
+                <type>int</type>
+            </parameter>
+            <parameter>
+                <name>StrokeWidth</name>
+                <type>float</type>
+            </parameter>
+            <parameter>
+                <name>Filter</name>
+                <type>boolean</type>
+            </parameter>
+        </method>
+        <method>
+            <name>ImportCamera</name>
+            <comment>Imports a Camera from another library.</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>c</name>
+                <type>android.graphics.Camera</type>
+            </parameter>
+        </method>
+        <method>
+            <name>CameraRotateZ</name>
+            <comment>Applies a rotation transform around the Z axis.
+deg: The angle of rotation around the Z axis, in degrees</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>deg</name>
+                <type>float</type>
+            </parameter>
+        </method>
+        <method>
+            <name>CameraRotateX</name>
+            <comment>Applies a rotation transform around the X axis.
+deg: The angle of rotation around the X axis, in degrees</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>deg</name>
+                <type>float</type>
+            </parameter>
+        </method>
+        <method>
+            <name>CameraRotateY</name>
+            <comment>Applies a rotation transform around the Y axis.
+deg: The angle of rotation around the Y axis, in degrees</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>deg</name>
+                <type>float</type>
+            </parameter>
+        </method>
+        <method>
+            <name>DrawPath</name>
+            <comment>Draws the given path.
+Path: The path to be drawn. It may be an instance of the Path class or an instance of the AS_Path class.
+Filled: Whether the shape bounded by the path will be filled.
+StrokeWidth: The stroke width. Relevant when Filled = False.
+Filter: Whether the edges are smoothed out.</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>Path</name>
+                <type>java.lang.Object</type>
+            </parameter>
+            <parameter>
+                <name>Color</name>
+                <type>int</type>
+            </parameter>
+            <parameter>
+                <name>Filled</name>
+                <type>boolean</type>
+            </parameter>
+            <parameter>
+                <name>StrokeWidth</name>
+                <type>float</type>
+            </parameter>
+            <parameter>
+                <name>Filter</name>
+                <type>boolean</type>
+            </parameter>
+        </method>
+        <method>
+            <name>MatrixSetRotate</name>
+            <comment>Sets the internal matrix to rotate around (0,0) by the specified number of degrees.</comment>
+            <returntype>flm.b4a.accelerview.AcceleratedCanvas</returntype>
+            <parameter>
+                <name>degrees</name>
+                <type>float</type>
+            </parameter>
+        </method>
+        <method>
+            <name>DrawPoint</name>
+            <comment>Draws a point at the specified position and color.</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>x</name>
+                <type>float</type>
+            </parameter>
+            <parameter>
+                <name>y</name>
+                <type>float</type>
+            </parameter>
+            <parameter>
+                <name>Color</name>
+                <type>int</type>
+            </parameter>
+        </method>
+        <method>
+            <name>CameraComputeMatrix</name>
+            <comment>Computes the matrix corresponding to the current transformation and copies it to the internal matrix.</comment>
+            <returntype>void</returntype>
+        </method>
+        <method>
+            <name>MatrixSetRotate2</name>
+            <comment>Sets the internal matrix to rotate by the specified number of degrees, with a pivot point at (px, py).</comment>
+            <returntype>flm.b4a.accelerview.AcceleratedCanvas</returntype>
+            <parameter>
+                <name>degrees</name>
+                <type>float</type>
+            </parameter>
+            <parameter>
+                <name>px</name>
+                <type>float</type>
+            </parameter>
+            <parameter>
+                <name>py</name>
+                <type>float</type>
+            </parameter>
+        </method>
+        <method>
+            <name>DrawObjectAt</name>
+            <comment>Draws an AS_Object.
+X,Y: For circles, X and Y define the position of the centre. For other objects, they define the position of the upper left corner.</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>Obj</name>
+                <type>flm.b4a.accelerview.ComplexObject</type>
+            </parameter>
+            <parameter>
+                <name>X</name>
+                <type>float</type>
+            </parameter>
+            <parameter>
+                <name>Y</name>
+                <type>float</type>
+            </parameter>
+        </method>
+        <method>
+            <name>DrawBitmapObjectWithMatrixAt</name>
+            <comment>Transforms the given bitmap object with the internal matrix and draws it at the specified position.</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>objBmp</name>
+                <type>flm.b4a.accelerview.ComplexObject</type>
+            </parameter>
+            <parameter>
+                <name>Left</name>
+                <type>int</type>
+            </parameter>
+            <parameter>
+                <name>Top</name>
+                <type>int</type>
+            </parameter>
+        </method>
+        <method>
+            <name>MatrixSetTranslate</name>
+            <comment>Sets the internal matrix to translate by (dx, dy).</comment>
+            <returntype>flm.b4a.accelerview.AcceleratedCanvas</returntype>
+            <parameter>
+                <name>dx</name>
+                <type>float</type>
+            </parameter>
+            <parameter>
+                <name>dy</name>
+                <type>float</type>
+            </parameter>
+        </method>
+        <method>
+            <name>DrawTextOnPath</name>
+            <comment>Draws the text along the specified path.
+ Warning: This does not work under Honeycomb or ICS if the hardware acceleration is enabled.
+Text: The text to be drawn.
+x1,y1: The coordinates of the start point.
+x2,y2,x3,y3: The coordinates of the intermediate points.
+x4,y4: The coordinates of the end point.
+Typeface: Typeface (font) to use.
+TextSize: Size of text. This value is automatically scaled so do not scale it yourself.
+Align: The alignment related to the origin. One of the ALIGN constants.</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>Text</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>x1</name>
+                <type>float</type>
+            </parameter>
+            <parameter>
+                <name>y1</name>
+                <type>float</type>
+            </parameter>
+            <parameter>
+                <name>x2</name>
+                <type>float</type>
+            </parameter>
+            <parameter>
+                <name>y2</name>
+                <type>float</type>
+            </parameter>
+            <parameter>
+                <name>x3</name>
+                <type>float</type>
+            </parameter>
+            <parameter>
+                <name>y3</name>
+                <type>float</type>
+            </parameter>
+            <parameter>
+                <name>x4</name>
+                <type>float</type>
+            </parameter>
+            <parameter>
+                <name>y4</name>
+                <type>float</type>
+            </parameter>
+            <parameter>
+                <name>Typeface</name>
+                <type>anywheresoftware.b4a.keywords.constants.TypefaceWrapper</type>
+            </parameter>
+            <parameter>
+                <name>TextSize</name>
+                <type>float</type>
+            </parameter>
+            <parameter>
+                <name>Color</name>
+                <type>int</type>
+            </parameter>
+            <parameter>
+                <name>Align</name>
+                <type EnumType="true">android.graphics.Paint.Align</type>
+            </parameter>
+        </method>
+        <method>
+            <name>TranslateCanvas</name>
+            <comment>Translates all subsequent drawings by dX, dY.</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>dX</name>
+                <type>float</type>
+            </parameter>
+            <parameter>
+                <name>dY</name>
+                <type>float</type>
+            </parameter>
+        </method>
+        <method>
+            <name>ClipRect</name>
+            <comment>Clips the drawing area to the given rectangle.</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>Rect</name>
+                <type>anywheresoftware.b4a.objects.drawable.CanvasWrapper.RectWrapper</type>
+            </parameter>
+        </method>
+        <method>
+            <name>MatrixSetScale</name>
+            <comment>Sets the internal matrix to scale by sx and sy.</comment>
+            <returntype>flm.b4a.accelerview.AcceleratedCanvas</returntype>
+            <parameter>
+                <name>sx</name>
+                <type>float</type>
+            </parameter>
+            <parameter>
+                <name>sy</name>
+                <type>float</type>
+            </parameter>
+        </method>
+        <method>
+            <name>CameraRestore</name>
+            <comment>Restores the saved state, if any.</comment>
+            <returntype>void</returntype>
+        </method>
+        <method>
+            <name>MatrixPostRotate2</name>
+            <comment>Postconcats the internal matrix with the specified rotation.
+px,py: The coordinates of the pivot point.</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>degrees</name>
+                <type>float</type>
+            </parameter>
+            <parameter>
+                <name>px</name>
+                <type>float</type>
+            </parameter>
+            <parameter>
+                <name>py</name>
+                <type>float</type>
+            </parameter>
+        </method>
+        <method>
+            <name>MatrixSetSkew</name>
+            <comment>Sets the internal matrix to skew by sx and sy.</comment>
+            <returntype>flm.b4a.accelerview.AcceleratedCanvas</returntype>
+            <parameter>
+                <name>sx</name>
+                <type>float</type>
+            </parameter>
+            <parameter>
+                <name>sy</name>
+                <type>float</type>
+            </parameter>
+        </method>
+        <method>
+            <name>CameraTranslate</name>
+            <comment>Applies a translation transform on all three axis.
+x: The distance to translate by on the X axis
+y: The distance to translate by on the Y axis
+z: The distance to translate by on the Z axis</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>x</name>
+                <type>float</type>
+            </parameter>
+            <parameter>
+                <name>y</name>
+                <type>float</type>
+            </parameter>
+            <parameter>
+                <name>z</name>
+                <type>float</type>
+            </parameter>
+        </method>
+        <method>
+            <name>MatrixPostSkew</name>
+            <comment>Postconcats the internal matrix with the specified skew.</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>sx</name>
+                <type>float</type>
+            </parameter>
+            <parameter>
+                <name>sy</name>
+                <type>float</type>
+            </parameter>
+        </method>
+        <field>
+            <name>ALIGN_RIGHT</name>
+            <comment></comment>
+            <returntype EnumType="true">android.graphics.Paint.Align</returntype>
+        </field>
+        <field>
+            <name>ALIGN_LEFT</name>
+            <comment></comment>
+            <returntype EnumType="true">android.graphics.Paint.Align</returntype>
+        </field>
+        <field>
+            <name>ALIGN_CENTER</name>
+            <comment></comment>
+            <returntype EnumType="true">android.graphics.Paint.Align</returntype>
+        </field>
+    </class>
+    <version>1.12</version>
+    <author>F. Leneuf-Magaud</author>
+</root>

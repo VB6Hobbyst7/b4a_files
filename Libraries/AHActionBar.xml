@@ -1,0 +1,519 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root>
+    <doclet-version-NOT-library-version>1.02</doclet-version-NOT-library-version>
+    <class>
+        <name>de.amberhome.SimpleActionBar.ActionBarWrapper</name>
+        <shortname>AHActionBar</shortname>
+        <objectwrapper>de.amberhome.SimpleActionBar.ActionBar</objectwrapper>
+        <owner>activity</owner>
+        <event>ItemClicked(ItemID As Int)</event>
+        <method>
+            <name>BringToFront</name>
+            <comment></comment>
+            <returntype>void</returntype>
+        </method>
+        <method>
+            <name>RemoveView</name>
+            <comment></comment>
+            <returntype>void</returntype>
+        </method>
+        <method>
+            <name>RemoveAction</name>
+            <comment>Remove the action with the specified itemID.
+ 
+ ItemId - Id of the action to be removed</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>ItemId</name>
+                <type>int</type>
+            </parameter>
+        </method>
+        <method>
+            <name>AddHomeAction</name>
+            <comment>Add a home action item.
+ 
+ ItemId - Id for the home action item. This should be a unique id.
+ Icon - a bitmap drawable with an icon.</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>ItemId</name>
+                <type>int</type>
+            </parameter>
+            <parameter>
+                <name>Icon</name>
+                <type>android.graphics.drawable.Drawable</type>
+            </parameter>
+        </method>
+        <method>
+            <name>Invalidate3</name>
+            <comment></comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>arg0</name>
+                <type>int</type>
+            </parameter>
+            <parameter>
+                <name>arg1</name>
+                <type>int</type>
+            </parameter>
+            <parameter>
+                <name>arg2</name>
+                <type>int</type>
+            </parameter>
+            <parameter>
+                <name>arg3</name>
+                <type>int</type>
+            </parameter>
+        </method>
+        <method>
+            <name>GetActionID</name>
+            <comment>The ID of the action at the given index.
+ 
+ Index - index of the action item
+
+ Returns -1 if the action item does not exist.</comment>
+            <returntype>int</returntype>
+            <parameter>
+                <name>Index</name>
+                <type>int</type>
+            </parameter>
+        </method>
+        <method>
+            <name>Invalidate2</name>
+            <comment></comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>arg0</name>
+                <type>android.graphics.Rect</type>
+            </parameter>
+        </method>
+        <method>
+            <name>Initialize2</name>
+            <comment>Initializes the object.
+ 
+ EventName - Sets the sub that will handle the event.
+ Background - A backgrounddrawable for the background of the status bar. Should be a StateListDrawable to support item pressed state.</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>ba</name>
+                <type>anywheresoftware.b4a.BA</type>
+            </parameter>
+            <parameter>
+                <name>EventName</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>Background</name>
+                <type>android.graphics.drawable.Drawable</type>
+            </parameter>
+        </method>
+        <method>
+            <name>IsInitialized</name>
+            <comment></comment>
+            <returntype>boolean</returntype>
+        </method>
+        <method>
+            <name>AddAction2</name>
+            <comment>Add an action item at the last position.
+ 
+ ItemId - Id for the action item. This should be a unique id.
+ Icon - Drawable of an Icon
+ HelpText - Text to display for long click event</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>ItemId</name>
+                <type>int</type>
+            </parameter>
+            <parameter>
+                <name>Icon</name>
+                <type>android.graphics.drawable.Drawable</type>
+            </parameter>
+            <parameter>
+                <name>HelpText</name>
+                <type>java.lang.CharSequence</type>
+            </parameter>
+        </method>
+        <method>
+            <name>Initialize</name>
+            <comment>Initializes the object.
+ 
+ EventName - Sets the sub that will handle the event.</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>ba</name>
+                <type>anywheresoftware.b4a.BA</type>
+            </parameter>
+            <parameter>
+                <name>EventName</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+        <method>
+            <name>RemoveActionAt</name>
+            <comment>Remove the action at the specified index.
+ 
+ Index - Position of the item which should be removed.</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>Index</name>
+                <type>int</type>
+            </parameter>
+        </method>
+        <method>
+            <name>SetActionPadding</name>
+            <comment>Change the padding for the icon. Useful to scale the icon.
+ 
+ ItemID - ID of the action for which the padding should be changed
+ Padding - padding value</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>ItemID</name>
+                <type>int</type>
+            </parameter>
+            <parameter>
+                <name>Padding</name>
+                <type>int</type>
+            </parameter>
+        </method>
+        <method>
+            <name>AddActionAt</name>
+            <comment>Add an action item at the specified position.
+ 
+ ItemId - Id for the action item. This should be a unique id.
+ Icon - Drawable of an Icon
+ Index - Position of the new action item</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>ItemId</name>
+                <type>int</type>
+            </parameter>
+            <parameter>
+                <name>Icon</name>
+                <type>android.graphics.drawable.Drawable</type>
+            </parameter>
+            <parameter>
+                <name>Index</name>
+                <type>int</type>
+            </parameter>
+        </method>
+        <method>
+            <name>AddAction</name>
+            <comment>Add an action item at the last position.
+ 
+ ItemId - Id for the action item. This should be a unique id.
+ Icon - Drawable of an Icon</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>ItemId</name>
+                <type>int</type>
+            </parameter>
+            <parameter>
+                <name>Icon</name>
+                <type>android.graphics.drawable.Drawable</type>
+            </parameter>
+        </method>
+        <method>
+            <name>GetActionView</name>
+            <comment>Returns the View that represents the action item. This is not a standard B4A View but you can pass this to the AHQuickAction popup.
+ 
+ ItemID - ID of the action
+ 
+ Returns a reference to an Android Imagebutton. Null, if the action item is not found.</comment>
+            <returntype>android.view.View</returntype>
+            <parameter>
+                <name>ItemID</name>
+                <type>int</type>
+            </parameter>
+        </method>
+        <method>
+            <name>SetActionVisibility</name>
+            <comment>Set the visibility of an action item
+ 
+ ItemID - Id of the action item to make visible or invisible
+ Visible - Flag for status</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>ItemID</name>
+                <type>int</type>
+            </parameter>
+            <parameter>
+                <name>Visible</name>
+                <type>boolean</type>
+            </parameter>
+        </method>
+        <method>
+            <name>AddActionAt2</name>
+            <comment>Add an action item at the specified position.
+ 
+ ItemId - Id for the action item. This should be a unique id.
+ Icon - Drawable of an Icon
+ Index - Position of the new action item
+ HelpText - Text to display for long click event</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>ItemId</name>
+                <type>int</type>
+            </parameter>
+            <parameter>
+                <name>Icon</name>
+                <type>android.graphics.drawable.Drawable</type>
+            </parameter>
+            <parameter>
+                <name>Index</name>
+                <type>int</type>
+            </parameter>
+            <parameter>
+                <name>HelpText</name>
+                <type>java.lang.CharSequence</type>
+            </parameter>
+        </method>
+        <method>
+            <name>Invalidate</name>
+            <comment></comment>
+            <returntype>void</returntype>
+        </method>
+        <method>
+            <name>SetLayout</name>
+            <comment></comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>arg0</name>
+                <type>int</type>
+            </parameter>
+            <parameter>
+                <name>arg1</name>
+                <type>int</type>
+            </parameter>
+            <parameter>
+                <name>arg2</name>
+                <type>int</type>
+            </parameter>
+            <parameter>
+                <name>arg3</name>
+                <type>int</type>
+            </parameter>
+        </method>
+        <method>
+            <name>SetActionIcon</name>
+            <comment>Change the Icon for an action item
+ 
+ ItemID - ID of the Action
+ Icon - New Icon</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>ItemID</name>
+                <type>int</type>
+            </parameter>
+            <parameter>
+                <name>Icon</name>
+                <type>android.graphics.drawable.Drawable</type>
+            </parameter>
+        </method>
+        <method>
+            <name>SendToBack</name>
+            <comment></comment>
+            <returntype>void</returntype>
+        </method>
+        <method>
+            <name>GetActionVisibility</name>
+            <comment>Get the visibility of an action item
+ 
+ ItemID - Id of the action item
+ 
+ Returns if the item is visible or not. Returns false if the item is not found.</comment>
+            <returntype>boolean</returntype>
+            <parameter>
+                <name>ItemID</name>
+                <type>int</type>
+            </parameter>
+        </method>
+        <property>
+            <name>TitleColor</name>
+            <parameter>
+                <name>Color</name>
+                <type>int</type>
+            </parameter>
+            <comment>Set the title and subtitle color</comment>
+        </property>
+        <property>
+            <name>UseLogo</name>
+            <returntype>boolean</returntype>
+            <parameter>
+                <name>flag</name>
+                <type>boolean</type>
+            </parameter>
+            <comment>Set or get property if a logo should be displayed instead of the application icon or home icon.</comment>
+        </property>
+        <property>
+            <name>Top</name>
+            <returntype>int</returntype>
+            <parameter>
+                <name>arg0</name>
+                <type>int</type>
+            </parameter>
+            <comment></comment>
+        </property>
+        <property>
+            <name>Enabled</name>
+            <returntype>boolean</returntype>
+            <parameter>
+                <name>Enabled</name>
+                <type>boolean</type>
+            </parameter>
+            <comment></comment>
+        </property>
+        <property>
+            <name>Visible</name>
+            <returntype>boolean</returntype>
+            <parameter>
+                <name>flag</name>
+                <type>boolean</type>
+            </parameter>
+            <comment>Sets or gets the visible status of the ActionBar.</comment>
+        </property>
+        <property>
+            <name>ProgressBarVisible</name>
+            <returntype>boolean</returntype>
+            <parameter>
+                <name>flag</name>
+                <type>boolean</type>
+            </parameter>
+            <comment>Set or get visibility of progress indicator</comment>
+        </property>
+        <property>
+            <name>Height</name>
+            <returntype>int</returntype>
+            <parameter>
+                <name>arg0</name>
+                <type>int</type>
+            </parameter>
+            <comment></comment>
+        </property>
+        <property>
+            <name>Background</name>
+            <returntype>android.graphics.drawable.Drawable</returntype>
+            <parameter>
+                <name>Background</name>
+                <type>android.graphics.drawable.Drawable</type>
+            </parameter>
+            <comment>Set or get the background drawable.</comment>
+        </property>
+        <property>
+            <name>ShowTitle</name>
+            <returntype>boolean</returntype>
+            <parameter>
+                <name>flag</name>
+                <type>boolean</type>
+            </parameter>
+            <comment>Sets or gets title status</comment>
+        </property>
+        <property>
+            <name>Left</name>
+            <returntype>int</returntype>
+            <parameter>
+                <name>arg0</name>
+                <type>int</type>
+            </parameter>
+            <comment></comment>
+        </property>
+        <property>
+            <name>Title</name>
+            <returntype>java.lang.CharSequence</returntype>
+            <parameter>
+                <name>Title</name>
+                <type>java.lang.CharSequence</type>
+            </parameter>
+            <comment>Set or get the title of the action bar.</comment>
+        </property>
+        <property>
+            <name>ActionWidth</name>
+            <returntype>int</returntype>
+            <parameter>
+                <name>width</name>
+                <type>int</type>
+            </parameter>
+            <comment>Set or get the action item width. The height is always the height of the action bar.
+ The default width is 42dip. You should set this value to the same value as your action bar height to get sqare action items.</comment>
+        </property>
+        <property>
+            <name>Tag</name>
+            <returntype>java.lang.Object</returntype>
+            <parameter>
+                <name>arg0</name>
+                <type>java.lang.Object</type>
+            </parameter>
+            <comment></comment>
+        </property>
+        <property>
+            <name>ShowHome</name>
+            <returntype>boolean</returntype>
+            <parameter>
+                <name>flag</name>
+                <type>boolean</type>
+            </parameter>
+            <comment>Set or get Home item status</comment>
+        </property>
+        <property>
+            <name>HomeAsUp</name>
+            <returntype>boolean</returntype>
+            <parameter>
+                <name>flag</name>
+                <type>boolean</type>
+            </parameter>
+            <comment>Set or get the status if home item should be displayed as "up" item.</comment>
+        </property>
+        <property>
+            <name>SubTitle</name>
+            <returntype>java.lang.CharSequence</returntype>
+            <parameter>
+                <name>Title</name>
+                <type>java.lang.CharSequence</type>
+            </parameter>
+            <comment>Set or get the subtitle. If you pass Null, the subtitle is hidden.</comment>
+        </property>
+        <property>
+            <name>HomeLogo</name>
+            <parameter>
+                <name>Logo</name>
+                <type>android.graphics.drawable.Drawable</type>
+            </parameter>
+            <comment>Set the Home Logo</comment>
+        </property>
+        <property>
+            <name>Width</name>
+            <returntype>int</returntype>
+            <parameter>
+                <name>arg0</name>
+                <type>int</type>
+            </parameter>
+            <comment></comment>
+        </property>
+        <property>
+            <name>ActionCount</name>
+            <returntype>int</returntype>
+            <comment>Gets the current count of actions added to the action bar</comment>
+        </property>
+    </class>
+    <version>1.0</version>
+    <comment>This library provides an ActionBar.
+  
+  The ActionBar was introduced in Android 3.0. This is a complete custom
+  implementation of an ActionBar so it is not really compatible with
+  the Android 3.0+ ActionBar. 
+ 
+  This library is somewhat different to other libraries because it makes use
+  of standard Android resource files. Resource files cannot be published inside
+  a .jar file and so you have to copy them to your Basic4Android project directory.
+  
+  Copy the whole "res" directory structure to the "Objects" directory of your B4A
+  project and VERY IMPORTANT: make them READ ONLY! Otherwise B4A will delete them
+  when compiling. After you make any change to the Objecs/res directory use
+  "Clean project" menu item in B4A to force the compiler to recreate the R.java file.
+  
+  If you forget to make the resource files read only then you will most likely get
+  a ResourceNotFound exception when you try to use the ActiionBar.
+  
+  The object is highly based on an open source project by Johan Nilsson:
+  &lt;link&gt;Android-ActionBar|https://github.com/johannilsson/android-actionbar&lt;/link&gt;</comment>
+    <author>Markus Stipp</author>
+</root>

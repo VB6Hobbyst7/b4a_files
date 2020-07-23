@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <doclet-version-NOT-library-version>1.00</doclet-version-NOT-library-version>
+  <dependsOn>javaobject</dependsOn>
+  <class>
+    <name>b4a.example.bazaarinstallerchecker</name>
+    <shortname>BazaarInstallerChecker</shortname>
+    <owner>process</owner>
+    <method>
+      <name DesignerName="About">_about</name>
+      <comment>Created By MohammadAmin Mohammadi
+All Rights Reserved For Library Creator
+Copy And Share Is Free :)</comment>
+      <returntype>String</returntype>
+    </method>
+    <method>
+      <name DesignerName="Initialize">_initialize</name>
+      <comment>You Should Initialized Befor Use &lt;b&gt;IsInstalledByBazaar&lt;/b&gt; Function!
+&lt;b&gt;Notice: This Library Works On Android API 5 And Above Than It.&lt;/b&gt;</comment>
+      <returntype>String</returntype>
+      <parameter>
+        <name>ba</name>
+        <type>anywheresoftware.b4a.BA</type>
+      </parameter>
+    </method>
+    <method>
+      <name DesignerName="IsInstalledByBazaar">_isinstalledbybazaar</name>
+      <comment>Returns True If Your Packagename Is Installed By Bazaar
+Returns Null If Your Packagename Is Installed By Other Apps</comment>
+      <returntype>boolean</returntype>
+      <parameter>
+        <name>AppPackage</name>
+        <type>String</type>
+      </parameter>
+    </method>
+  </class>
+  <version>1</version>
+</root>

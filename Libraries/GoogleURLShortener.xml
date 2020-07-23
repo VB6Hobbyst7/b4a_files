@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root>
+    <doclet-version-NOT-library-version>1.04</doclet-version-NOT-library-version>
+    <class>
+        <name>cm.jahswant.urlshortener.URLShortenerWrap</name>
+        <shortname>GoogleURLShortener</shortname>
+        <owner>process</owner>
+        <event>finishedLoading(shortUrl As String)</event>
+        <event>startedLoading</event>
+        <permission>android.permission.INTERNET</permission>
+        <permission>android.permission.ACCESS_NETWORK_STATE</permission>
+        <method>
+            <name>Initialize</name>
+            <comment></comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>ba</name>
+                <type>anywheresoftware.b4a.BA</type>
+            </parameter>
+            <parameter>
+                <name>EventName</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+        <method>
+            <name>ShortURL</name>
+            <comment></comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>longUrl</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+    </class>
+    <version>0.09</version>
+    <dependsOn>android-support-v4</dependsOn>
+    <dependsOn>okio-1.6.0</dependsOn>
+    <dependsOn>okhttp-3.0.0-RC1</dependsOn>
+    <dependsOn>Gson-2.2.4</dependsOn>
+</root>

@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <doclet-version-NOT-library-version>1.00</doclet-version-NOT-library-version>
+  <dependsOn>reflection</dependsOn>
+  <dependsOn>rsimageprocessing</dependsOn>
+  <dependsOn>mlfiles</dependsOn>
+  <class>
+    <name>panelshott.example.shotofview</name>
+    <shortname>shotofview</shortname>
+    <owner>process</owner>
+    <method>
+      <name>IsInitialized</name>
+      <comment>Tests whether the object has been initialized.</comment>
+      <returntype>boolean</returntype>
+    </method>
+    <method>
+      <name DesignerName="about">_about</name>
+      <comment>By mamalliii
+</comment>
+      <returntype>String</returntype>
+    </method>
+    <method>
+      <name DesignerName="Initialize">_initialize</name>
+      <comment>Initializes the view and sets the subs that will handle the events
+picname :اسم عکس
+dir: محل ذخیره ی عکس
+quality: کیفیت عکس
+</comment>
+      <returntype>String</returntype>
+      <parameter>
+        <name>ba</name>
+        <type>anywheresoftware.b4a.BA</type>
+      </parameter>
+      <parameter>
+        <name>picname</name>
+        <type>String</type>
+      </parameter>
+      <parameter>
+        <name>dir</name>
+        <type>String</type>
+      </parameter>
+      <parameter>
+        <name>quality</name>
+        <type>int</type>
+      </parameter>
+    </method>
+    <method>
+      <name DesignerName="save">_save</name>
+      <returntype>anywheresoftware.b4a.objects.drawable.CanvasWrapper.BitmapWrapper</returntype>
+      <parameter>
+        <name>mobject</name>
+        <type>anywheresoftware.b4a.objects.ConcreteViewWrapper</type>
+      </parameter>
+    </method>
+  </class>
+  <version>1</version>
+</root>

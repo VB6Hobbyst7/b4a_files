@@ -1,0 +1,242 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <doclet-version-NOT-library-version>2.00</doclet-version-NOT-library-version>
+  <dependsOn>sql</dependsOn>
+  <class>
+    <name>b4a.example.farakhani</name>
+    <shortname>Farakhani</shortname>
+    <owner>process</owner>
+    <method>
+      <name>IsInitialized</name>
+      <comment>Tests whether the object has been initialized.</comment>
+      <returntype>boolean</returntype>
+    </method>
+    <method>
+      <name DesignerName="Class_Globals">_class_globals</name>
+      <returntype>String</returntype>
+    </method>
+    <method>
+      <name DesignerName="FarakhaniImage">_farakhaniimage</name>
+      <comment>Use this item for Select &lt;b&gt;Image&lt;/b&gt; From a tabel and use whith&lt;b&gt;Bitmap&lt;/b&gt;
+&lt;code&gt;Dim sql1 As SQL&lt;/code&gt;
+&lt;code&gt;Dim cur As Cursor&lt;/code&gt;
+&lt;code&gt;Dim Bitmap1 As Bitmap&lt;/code&gt;
+&lt;code&gt;Dim ImageView1 As imageView&lt;/code&gt;
+
+for example:
+&lt;pre&gt;farakhani1.FarakhaniMatn("test.db",sql1,cur,&lt;b&gt;"SELECT * FROM Tabel1 &lt;i&gt;Where id=&lt;/i&gt;"&lt;/b&gt;,"1",ImageColumn,"Bitmap1")&lt;/pre&gt;
+&lt;code&gt;ImageView1.Bitmap = bitmap1&lt;/code&gt;
+You have to use a value for &lt;b&gt;ID&lt;/b&gt;
+you should use a SqlStatement like this :  &lt;b&gt;"SELECT * FROM table1 Where id="&lt;/b&gt;
+This Library Created By &lt;b&gt;Shahab Eskandary&lt;/b&gt;</comment>
+      <returntype>String</returntype>
+      <parameter>
+        <name>DBname</name>
+        <type>String</type>
+      </parameter>
+      <parameter>
+        <name>WhichSQL</name>
+        <type>anywheresoftware.b4a.sql.SQL</type>
+      </parameter>
+      <parameter>
+        <name>WhichCursor</name>
+        <type>anywheresoftware.b4a.sql.SQL.CursorWrapper</type>
+      </parameter>
+      <parameter>
+        <name>SqlStatement</name>
+        <type>String</type>
+      </parameter>
+      <parameter>
+        <name>ID</name>
+        <type>String</type>
+      </parameter>
+      <parameter>
+        <name>Image</name>
+        <type>String</type>
+      </parameter>
+      <parameter>
+        <name>WhichBitmap</name>
+        <type>anywheresoftware.b4a.objects.drawable.CanvasWrapper.BitmapWrapper</type>
+      </parameter>
+    </method>
+    <method>
+      <name DesignerName="FarakhaniMatn">_farakhanimatn</name>
+      <comment>Use this item for Select From a tabel and use whith&lt;b&gt;A Label&lt;/b&gt;
+&lt;code&gt;Dim sql1 As SQL&lt;/code&gt;
+&lt;code&gt;Dim cur As Cursor&lt;/code&gt;
+&lt;code&gt;Dim label1 As Label&lt;/code&gt;
+
+for example:
+&lt;pre&gt;farakhani1.FarakhaniMatn("test.db",sql1,cur,&lt;b&gt;"SELECT * FROM Tabel1 &lt;i&gt;Where id=&lt;/i&gt;"&lt;/b&gt;,"1",label1,"MatnColumn")&lt;/pre&gt;
+You have to use a value for &lt;b&gt;ListViewValue&lt;/b&gt;
+you should use a SqlStatement like this :  &lt;b&gt;"SELECT * FROM table1 Where id="&lt;/b&gt;
+This Library Created By &lt;b&gt;Shahab Eskandary&lt;/b&gt;</comment>
+      <returntype>String</returntype>
+      <parameter>
+        <name>DBName</name>
+        <type>String</type>
+      </parameter>
+      <parameter>
+        <name>WhichSQL</name>
+        <type>anywheresoftware.b4a.sql.SQL</type>
+      </parameter>
+      <parameter>
+        <name>WhichCursor</name>
+        <type>anywheresoftware.b4a.sql.SQL.CursorWrapper</type>
+      </parameter>
+      <parameter>
+        <name>SQLStatement</name>
+        <type>String</type>
+      </parameter>
+      <parameter>
+        <name>ListViewValue</name>
+        <type>String</type>
+      </parameter>
+      <parameter>
+        <name>WhichLabel</name>
+        <type>anywheresoftware.b4a.objects.LabelWrapper</type>
+      </parameter>
+      <parameter>
+        <name>Matn</name>
+        <type>String</type>
+      </parameter>
+    </method>
+    <method>
+      <name DesignerName="SingleLineTitr">_singlelinetitr</name>
+      <comment>Use this item for Select From a tabel and use with &lt;b&gt;SingleLine ListView&lt;/b&gt;.
+&lt;code&gt;Dim sql1 As SQL&lt;/code&gt;
+&lt;code&gt;Dim cur As Cursor&lt;/code&gt;
+&lt;code&gt;Dim ListView1 As ListView&lt;/code&gt;
+
+For example :
+&lt;code&gt;farakhani1.SingleLineTitr("Test.DB",sql1,cur,"SELECT * FROM tabel1",ListView1,"TitrColumn","IdColumn")&lt;/code&gt;
+This Library Created By &lt;b&gt;Shahab Eskandary&lt;/b&gt;</comment>
+      <returntype>String</returntype>
+      <parameter>
+        <name>DBName</name>
+        <type>String</type>
+      </parameter>
+      <parameter>
+        <name>WhichSQL</name>
+        <type>anywheresoftware.b4a.sql.SQL</type>
+      </parameter>
+      <parameter>
+        <name>WhichCursor</name>
+        <type>anywheresoftware.b4a.sql.SQL.CursorWrapper</type>
+      </parameter>
+      <parameter>
+        <name>SQlStatement</name>
+        <type>String</type>
+      </parameter>
+      <parameter>
+        <name>WhichListView</name>
+        <type>anywheresoftware.b4a.objects.ListViewWrapper</type>
+      </parameter>
+      <parameter>
+        <name>Titr</name>
+        <type>String</type>
+      </parameter>
+      <parameter>
+        <name>Id</name>
+        <type>String</type>
+      </parameter>
+    </method>
+    <method>
+      <name DesignerName="TwoLineAndBitmapTitr">_twolineandbitmaptitr</name>
+      <comment>Use this item for Select From a tabel and use whith&lt;b&gt;TwoLineAndBitmap ListView&lt;/b&gt;
+&lt;code&gt;Dim sql1 As SQL&lt;/code&gt;
+&lt;code&gt;Dim cur As Cursor&lt;/code&gt;
+&lt;code&gt;Dim ListView1 As ListView&lt;/code&gt;
+&lt;code&gt;Dim Bitmap1 As Bitmap
+
+for example:
+&lt;code&gt;farakhani1.TwoLineAndBitmapTitr("Test.DB",sql1,cur,"SELECT * FROM table1",ListView1,"titrColumn","SecondTitrColumn","IdColumn","ImageColumn",Bitmap1)&lt;/code&gt;
+This Library Created By &lt;b&gt;Shahab Eskandary&lt;/b&gt;</comment>
+      <returntype>String</returntype>
+      <parameter>
+        <name>DBName</name>
+        <type>String</type>
+      </parameter>
+      <parameter>
+        <name>WhichSQL</name>
+        <type>anywheresoftware.b4a.sql.SQL</type>
+      </parameter>
+      <parameter>
+        <name>WhichCursor</name>
+        <type>anywheresoftware.b4a.sql.SQL.CursorWrapper</type>
+      </parameter>
+      <parameter>
+        <name>SQLStatement</name>
+        <type>String</type>
+      </parameter>
+      <parameter>
+        <name>WhichListView</name>
+        <type>anywheresoftware.b4a.objects.ListViewWrapper</type>
+      </parameter>
+      <parameter>
+        <name>Titr</name>
+        <type>String</type>
+      </parameter>
+      <parameter>
+        <name>SecondTitr</name>
+        <type>String</type>
+      </parameter>
+      <parameter>
+        <name>Id</name>
+        <type>String</type>
+      </parameter>
+      <parameter>
+        <name>Image</name>
+        <type>String</type>
+      </parameter>
+      <parameter>
+        <name>WhichBitmap</name>
+        <type>anywheresoftware.b4a.objects.drawable.CanvasWrapper.BitmapWrapper</type>
+      </parameter>
+    </method>
+    <method>
+      <name DesignerName="TwoLineTitr">_twolinetitr</name>
+      <comment>Use this item for Select From a tabel and use whith&lt;b&gt;TwoLine ListView&lt;/b&gt;
+&lt;code&gt;Dim sql1 As SQL&lt;/code&gt;
+&lt;code&gt;Dim cur As Cursor&lt;/code&gt;
+&lt;code&gt;Dim ListView1 As ListView&lt;/code&gt;
+for example:
+&lt;code&gt;farakhani1.TwoLineTitr("Test.DB",sql1,cur,"SELECT * From tabel1",ListView1,"TitrColumn","SecondTitrColumn","IdColumn")&lt;/code&gt;
+This Library Created By &lt;b&gt;Shahab Eskandary&lt;/b&gt;</comment>
+      <returntype>String</returntype>
+      <parameter>
+        <name>DBName</name>
+        <type>String</type>
+      </parameter>
+      <parameter>
+        <name>WhichSQL</name>
+        <type>anywheresoftware.b4a.sql.SQL</type>
+      </parameter>
+      <parameter>
+        <name>WhichCursor</name>
+        <type>anywheresoftware.b4a.sql.SQL.CursorWrapper</type>
+      </parameter>
+      <parameter>
+        <name>SQLStatement</name>
+        <type>String</type>
+      </parameter>
+      <parameter>
+        <name>WhichListView</name>
+        <type>anywheresoftware.b4a.objects.ListViewWrapper</type>
+      </parameter>
+      <parameter>
+        <name>Titr</name>
+        <type>String</type>
+      </parameter>
+      <parameter>
+        <name>SecondTitr</name>
+        <type>String</type>
+      </parameter>
+      <parameter>
+        <name>Id</name>
+        <type>String</type>
+      </parameter>
+    </method>
+  </class>
+  <version>2</version>
+</root>

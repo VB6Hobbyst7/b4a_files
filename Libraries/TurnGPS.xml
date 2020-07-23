@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root>
+    <doclet-version-NOT-library-version>1.00</doclet-version-NOT-library-version>
+    <class>
+        <name>xtremelyvirtualstudio.xvs.Tracked.TurnGPS</name>
+        <shortname>TurnGPS</shortname>
+        <owner>activity</owner>
+        <permission>android.permission.WRITE_SECURE_SETTINGS</permission>
+        <method>
+            <name>turnGPSOff</name>
+            <comment>Toggles the GPS off. Note that this method actually disables the GPS immediately (unlike most other methods that
+goes to the Settings Screen.).</comment>
+            <returntype>void</returntype>
+        </method>
+        <method>
+            <name>Initialize</name>
+            <comment>Initializes the TurnGPS Library.</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>ba</name>
+                <type>anywheresoftware.b4a.BA</type>
+            </parameter>
+        </method>
+        <method>
+            <name>turnGPSOn</name>
+            <comment>Toggles the GPS on. Note that this method actually activate the GPS immediately (unlike most other methods that
+goes to the Settings Screen.).</comment>
+            <returntype>void</returntype>
+        </method>
+    </class>
+    <version>1.1</version>
+    <author>XverhelstX</author>
+</root>

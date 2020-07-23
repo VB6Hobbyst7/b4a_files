@@ -1,0 +1,235 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root>
+    <doclet-version-NOT-library-version>1.00</doclet-version-NOT-library-version>
+    <class>
+        <name>anywheresoftware.b4a.agraham.jpeg.Jpeg</name>
+        <shortname>Jpeg</shortname>
+        <comment>This is the Jpeg object that can extract portions of large jpeg files without having
+to decode the entire picture into a bitmap so enabling parts of those pictures that
+would be impossible to load in their entirety to be displayed at full resolution.
+
+As a side effect of the jpeg decoding this object also has the ability transform a bitmap
+to and from an array of Ints representing the ARGB values of each pixel of the bitmap assuming
+that the bitmaps are in ARGB_8888 format. BmpConfig can be used to check this.</comment>
+        <owner>activity</owner>
+        <event>Progress(percent As Int) 'The percentage of decoding progress.</event>
+        <method>
+            <name>Initialize</name>
+            <comment>This library incorporates Jpeg decoder code published under the
+GNU General Public License version 2.
+http://www.gnu.org/licenses/old-licenses/gpl-2.0.html
+The JPeg decoder in this library is based on C++ code for a Viewer
+("JViewer") written and published by Bee-Chung Chen.
+http://www.cs.wisc.edu/~beechung/home/coding/index.html.
+Converted to Java by Helmut Dersch - der@fh-furtwangen.de.
+Further modified for use with Basic4Android by Andrew Graham.</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>activityba</name>
+                <type>anywheresoftware.b4a.BA</type>
+            </parameter>
+            <parameter>
+                <name>eventname</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+        <method>
+            <name>PixelsABGRtoARGB</name>
+            <comment>There is a bug in Android that returns the values of an ARBG_8888 bitmap in ABGR order.
+This method swaps the R and B components of each value in the pixel array.
+Use this if you are not manipulating the colour values of each pixel yourself.</comment>
+            <returntype>void</returntype>
+        </method>
+        <method>
+            <name>BmpIsMutable</name>
+            <comment>Returns True if the specified bitmap is a mutable bitmap.</comment>
+            <returntype>boolean</returntype>
+            <parameter>
+                <name>bmp</name>
+                <type>android.graphics.Bitmap</type>
+            </parameter>
+        </method>
+        <method>
+            <name>LoadJpegSizeOnly</name>
+            <comment>Loads only the size of the image from instream setting JpegWidth and JpegHeight.
+The image itself is not loaded.</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>instream</name>
+                <type>java.io.InputStream</type>
+            </parameter>
+        </method>
+        <method>
+            <name>GetBmpPixel</name>
+            <comment>Gets or sets the pixel ARBG value of the specified pixel in the pixel array.</comment>
+            <returntype>int</returntype>
+            <parameter>
+                <name>x</name>
+                <type>int</type>
+            </parameter>
+            <parameter>
+                <name>y</name>
+                <type>int</type>
+            </parameter>
+        </method>
+        <method>
+            <name>GetBmpFromPixels</name>
+            <comment>Returns a new Bitmap created from the data in the pixel array, BmpHeight, BmpWidth and BmpConfig.
+Assume</comment>
+            <returntype>android.graphics.Bitmap</returntype>
+        </method>
+        <method>
+            <name>LoadJpegArea</name>
+            <comment>Loads the specified area of the image from instream setting JpegWidth, JpegHeight
+and allocating the BmpPixels array that contains the pixel data for that area also
+setting BmpConfig, BmpWidth and BmpHeight. Returns a new ARGB_8888 Bitmap created from the pixel data.
+
+This method reads only as far along the file as it needs to to locate the required
+area so the position of the required area in the image affects the processing time
+of this method. Generally the lower down the image the bottom of the required area
+is located then the longer it takes. The size of the required area also has a major
+impact on the time taken as the calculation of each pixes value from the compressed
+data in the file requires a significant amount of processing.</comment>
+            <returntype>android.graphics.Bitmap</returntype>
+            <parameter>
+                <name>instream</name>
+                <type>java.io.InputStream</type>
+            </parameter>
+            <parameter>
+                <name>left</name>
+                <type>int</type>
+            </parameter>
+            <parameter>
+                <name>top</name>
+                <type>int</type>
+            </parameter>
+            <parameter>
+                <name>width</name>
+                <type>int</type>
+            </parameter>
+            <parameter>
+                <name>height</name>
+                <type>int</type>
+            </parameter>
+        </method>
+        <method>
+            <name>SetPixelsFromBmp</name>
+            <comment>Sets the pixel array with the pixel values of the Bitmap provided.
+A new pixel array is allocated to hold the values.
+There is a bug in Android that returns the values of an ARBG_8888 bitmap in ABGR order.
+Use PixelsABGRtoARGB to fix this if you are not manipulating each pixel yourself.</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>bmp</name>
+                <type>android.graphics.Bitmap</type>
+            </parameter>
+        </method>
+        <method>
+            <name>SetBmpPixel</name>
+            <comment></comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>x</name>
+                <type>int</type>
+            </parameter>
+            <parameter>
+                <name>y</name>
+                <type>int</type>
+            </parameter>
+            <parameter>
+                <name>argb</name>
+                <type>int</type>
+            </parameter>
+        </method>
+        <method>
+            <name>LoadJpegSmaller</name>
+            <comment>Loads a scaled version of the image from instream setting JpgWidth and JpegHeight
+The scaling is always an integer fraction of the original size, a denominator of
+2 will give a half size image, 3 a denominator of three a third size image and so on.
+BmpConfig, BmpWidth, BmpHeight and the BmpPixels array are not affected by this method.
+Returns a new ARGB_8888 Bitmap which may be further scaled by Canvas.DrawBitmap if required.</comment>
+            <returntype>android.graphics.Bitmap</returntype>
+            <parameter>
+                <name>instream</name>
+                <type>java.io.InputStream</type>
+            </parameter>
+            <parameter>
+                <name>denominator</name>
+                <type>int</type>
+            </parameter>
+        </method>
+        <property>
+            <name>JpegWidth</name>
+            <returntype>int</returntype>
+            <comment>Returns the width of the original jpeg image loaded by LoadSection or LoadSizeOnly.</comment>
+        </property>
+        <property>
+            <name>BmpPixels</name>
+            <returntype>int[]</returntype>
+            <parameter>
+                <name>pixels</name>
+                <type>int[]</type>
+            </parameter>
+            <comment>Gets or sets an integer array containing the ARGB values of the pixels of a Bitmap.
+If the array is set then BmpcOonfig, BmpWidth and BmpHeight should also be set with appropriate values.</comment>
+        </property>
+        <property>
+            <name>BmpHeight</name>
+            <returntype>int</returntype>
+            <parameter>
+                <name>height</name>
+                <type>int</type>
+            </parameter>
+            <comment>Gets or sets the assumed height of the image contained in the pixel array.</comment>
+        </property>
+        <property>
+            <name>JpegHeight</name>
+            <returntype>int</returntype>
+            <comment>Returns the height of the original jpeg image loaded by LoadSection or LoadSizeOnly.</comment>
+        </property>
+        <property>
+            <name>Version</name>
+            <returntype>double</returntype>
+            <comment>Returns the version number of the library.</comment>
+        </property>
+        <property>
+            <name>BmpWidth</name>
+            <returntype>int</returntype>
+            <parameter>
+                <name>width</name>
+                <type>int</type>
+            </parameter>
+            <comment>Gets or sets the assumed width of the image contained in the pixel array.</comment>
+        </property>
+        <property>
+            <name>BmpConfig</name>
+            <returntype>java.lang.String</returntype>
+            <parameter>
+                <name>config</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <comment>Gets or sets the assumed config of the image contained in the pixel array.
+The usual values of config will be either "RGB_565" or "ARGB_8888"</comment>
+        </property>
+        <property>
+            <name>Progress</name>
+            <returntype>int</returntype>
+            <comment>Returns the percentage of progress during the execution of LoadJpegSection.
+This is the same value passed to the Progress event. That event is thread-safe
+and will always run on the main thread</comment>
+        </property>
+    </class>
+    <version>1.1</version>
+    <comment>This library contains a Jpeg object that can extract portions of large jpeg files
+without having to decode the entire picture into a bitmap. This enables parts of
+those pictures that would be impossible to load in their entirety to be displayed
+at full resolution.
+
+This process can be slow because versions of Android before 2.2 interpreted the
+bytecodes of their programs at runtime. Versions 2.2 of Android and later have
+a Just In Time compiler that compiles the bytecodes to native code. This should
+provide a significant decrease in the processing time of this library. The CPUs used
+by Android devices are quickly increasing in their processing speed which again should
+give a processing speed advantage to the most recent devices.</comment>
+    <author>Andrew Graham</author>
+</root>

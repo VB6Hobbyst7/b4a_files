@@ -1,0 +1,3 @@
+AddPermission(android.permission.GET_ACCOUNTS)
+AddPermission(android.permission.USE_CREDENTIALS)
+AddPermission(android.permission.INTERNET)

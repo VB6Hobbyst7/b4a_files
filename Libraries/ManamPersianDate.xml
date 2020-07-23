@@ -1,0 +1,268 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root>
+    <doclet-version-NOT-library-version>1.02</doclet-version-NOT-library-version>
+    <class>
+        <name>com.b4a.manamsoftware.PersianDate.ManamPersianDate</name>
+        <shortname>ManamPersianDate</shortname>
+        <owner>process</owner>
+        <method>
+            <name>CalculateDaysBetween</name>
+            <comment>عداد روزهای بین دو تاریخ را محاسبه مینماید . لطفاً تاریخ ها را میلادی وارد کنید . برای محاسبه تعداد روزهای بین تاریخ های شمسی از تابع تبدیل تاریخ میلادی به شمسی استفاده کنید
+startDate: تاریخ میلادی وارد شود
+endDate: تاریخ میلادی وارد شود</comment>
+            <returntype>long</returntype>
+            <parameter>
+                <name>startDate</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>endDate</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+        <method>
+            <name>AddDaysToPersianDate</name>
+            <comment>ااضافه نمودن به تاریخ شمسی
+PersianDate: = تاریخ شمسی : مثال    1393/09/22
+days: = تعداد روزهایی که میخواهید به تاریخ شمسی اضافه شود . میتواند عدد منفی نیز باشد</comment>
+            <returntype>java.lang.String</returntype>
+            <parameter>
+                <name>PersianDate</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>days</name>
+                <type>int</type>
+            </parameter>
+        </method>
+        <method>
+            <name>PersianToGregorian</name>
+            <comment>تبدیل تاریخ شمسی به تاریخ میلادی
+year: = سال
+            &lt;code&gt;int عدد صحیح&lt;/code&gt;
+month: = ماه
+            &lt;code&gt;int عدد صحیح&lt;/code&gt;
+day: = روز
+            &lt;code&gt;int عدد صحیح&lt;/code&gt;</comment>
+            <returntype>java.lang.String</returntype>
+            <parameter>
+                <name>year</name>
+                <type>int</type>
+            </parameter>
+            <parameter>
+                <name>month</name>
+                <type>int</type>
+            </parameter>
+            <parameter>
+                <name>day</name>
+                <type>int</type>
+            </parameter>
+        </method>
+        <method>
+            <name>GregorianToPersian</name>
+            <comment>تبدیل تاریخ میلادی به تاریخ شمسی
+year: = سال
+            &lt;code&gt;int عدد صحیح&lt;/code&gt;
+month: = ماه
+            &lt;code&gt;int عدد صحیح&lt;/code&gt;
+day: = روز
+            &lt;code&gt;int عدد صحیح&lt;/code&gt;</comment>
+            <returntype>java.lang.String</returntype>
+            <parameter>
+                <name>year</name>
+                <type>int</type>
+            </parameter>
+            <parameter>
+                <name>month</name>
+                <type>int</type>
+            </parameter>
+            <parameter>
+                <name>day</name>
+                <type>int</type>
+            </parameter>
+        </method>
+        <method>
+            <name>About</name>
+            <comment>درباره:
+ درباره منم پرشین دیت.</comment>
+            <returntype>java.lang.String</returntype>
+        </method>
+        <method>
+            <name>IsLeap</name>
+            <comment></comment>
+            <returntype>boolean</returntype>
+            <parameter>
+                <name>persianYear</name>
+                <type>int</type>
+            </parameter>
+        </method>
+        <method>
+            <name>AddDaysToGregorianDate</name>
+            <comment>اضافه نمودن به تاریخ میلادی
+GregorianDate: = تاریخ میلادی : مثال    2014/01/22
+days: = تعداد روزهایی که میخواهید به تاریخ میلادی اضافه شود . میتواند عدد منفی نیز باشد</comment>
+            <returntype>java.lang.String</returntype>
+            <parameter>
+                <name>GregorianDate</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>days</name>
+                <type>int</type>
+            </parameter>
+        </method>
+        <property>
+            <name>GregorianDate</name>
+            <returntype>java.lang.String</returntype>
+            <comment>getGregorianDate:
+ Returns a string version of Gregorian date</comment>
+        </property>
+        <property>
+            <name>GregorianDayName</name>
+            <returntype>java.lang.String</returntype>
+            <comment></comment>
+        </property>
+        <property>
+            <name>IslamicDayName</name>
+            <returntype>java.lang.String</returntype>
+            <comment></comment>
+        </property>
+        <property>
+            <name>DaysRemain</name>
+            <returntype>int</returntype>
+            <comment></comment>
+        </property>
+        <property>
+            <name>IslamicYear</name>
+            <returntype>int</returntype>
+            <comment></comment>
+        </property>
+        <property>
+            <name>PersianDay</name>
+            <returntype>int</returntype>
+            <comment>getIranianDay:
+ Returns the 'day' part of the Iranian date.</comment>
+        </property>
+        <property>
+            <name>IslamicMonth</name>
+            <returntype>int</returntype>
+            <comment></comment>
+        </property>
+        <property>
+            <name>GregorianMonth</name>
+            <returntype>int</returntype>
+            <comment>getGregorianMonth:
+ Returns the 'month' part of the Gregorian date.</comment>
+        </property>
+        <property>
+            <name>JulianDate</name>
+            <returntype>java.lang.String</returntype>
+            <comment>getJulianDate:
+ Returns a string version of Julian date</comment>
+        </property>
+        <property>
+            <name>JulianYear</name>
+            <returntype>java.lang.String</returntype>
+            <comment>getJulianYear:
+ Returns the 'year' part of the Julian date.</comment>
+        </property>
+        <property>
+            <name>PersianLongDate</name>
+            <returntype>java.lang.String</returntype>
+            <comment></comment>
+        </property>
+        <property>
+            <name>DaysOfYear</name>
+            <returntype>int</returntype>
+            <comment></comment>
+        </property>
+        <property>
+            <name>PersianYear</name>
+            <returntype>int</returntype>
+            <comment>getIranianYear:
+ Returns the 'year' part of the Iranian date.</comment>
+        </property>
+        <property>
+            <name>PersianMonth</name>
+            <returntype>int</returntype>
+            <comment>getIranianMonth:
+ Returns the 'month' part of the Iranian date.</comment>
+        </property>
+        <property>
+            <name>JulianDay</name>
+            <returntype>int</returntype>
+            <comment>getJulianDay()
+ Returns the 'day' part of the Julian date.</comment>
+        </property>
+        <property>
+            <name>JulianMonth</name>
+            <returntype>java.lang.String</returntype>
+            <comment>getJulianMonth:
+ Returns the 'month' part of the Julian date.</comment>
+        </property>
+        <property>
+            <name>PersianMonthName</name>
+            <returntype>java.lang.String</returntype>
+            <comment></comment>
+        </property>
+        <property>
+            <name>PersianShortDate</name>
+            <returntype>java.lang.String</returntype>
+            <comment>getIranianDate:
+ Returns a string version of Iranian date</comment>
+        </property>
+        <property>
+            <name>GregorianMonthNameLatin</name>
+            <returntype>java.lang.String</returntype>
+            <comment></comment>
+        </property>
+        <property>
+            <name>GregorianYear</name>
+            <returntype>java.lang.String</returntype>
+            <comment>getGregorianYear:
+ Returns the 'year' part of the Gregorian date.</comment>
+        </property>
+        <property>
+            <name>IslamicShortDate</name>
+            <returntype>java.lang.String</returntype>
+            <comment></comment>
+        </property>
+        <property>
+            <name>GregorianDay</name>
+            <returntype>int</returntype>
+            <comment>getGregorianDay:
+ Returns the 'day' part of the Gregorian date.</comment>
+        </property>
+        <property>
+            <name>IslamicDay</name>
+            <returntype>int</returntype>
+            <comment></comment>
+        </property>
+        <property>
+            <name>DayOfYear</name>
+            <returntype>int</returntype>
+            <comment></comment>
+        </property>
+        <property>
+            <name>PersianDayName</name>
+            <returntype>java.lang.String</returntype>
+            <comment>getWeekDayStr:
+ Returns the week day name.</comment>
+        </property>
+        <property>
+            <name>IslamicLongDate</name>
+            <returntype>java.lang.String</returntype>
+            <comment></comment>
+        </property>
+        <property>
+            <name>GregorianMonthNameFarsi</name>
+            <returntype>java.lang.String</returntype>
+            <comment></comment>
+        </property>
+        <property>
+            <name>IslamicMonthName</name>
+            <returntype>java.lang.String</returntype>
+            <comment></comment>
+        </property>
+    </class>
+</root>

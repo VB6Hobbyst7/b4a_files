@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root>
+    <doclet-version-NOT-library-version>1.02</doclet-version-NOT-library-version>
+    <class>
+        <name>anywheresoftware.b4a.objects.Servlet.ServletRequestWrapper</name>
+        <shortname>ServletRequest</shortname>
+        <owner>process</owner>
+        <method>
+            <name>GetUploadedFile</name>
+            <comment>Returns the name of the temporary file that was uploaded to Server.TempFolder.</comment>
+            <returntype>java.lang.String</returntype>
+            <parameter>
+                <name>Key</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+        <method>
+            <name>GetHeader</name>
+            <comment>Returns the header value or an empty string if the header does not exist.</comment>
+            <returntype>java.lang.String</returntype>
+            <parameter>
+                <name>Name</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+        <method>
+            <name>GetParameter</name>
+            <comment>Returns the parameter value or an empty string if the parameter does not exist.</comment>
+            <returntype>java.lang.String</returntype>
+            <parameter>
+                <name>Name</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+        <property>
+            <name>Method</name>
+            <returntype>java.lang.String</returntype>
+            <comment>Returns the HTTP method (GET or POST).</comment>
+        </property>
+        <property>
+            <name>RemoteAddress</name>
+            <returntype>java.lang.String</returntype>
+            <comment>Returns the client IP address.</comment>
+        </property>
+        <property>
+            <name>RequestURI</name>
+            <returntype>java.lang.String</returntype>
+            <comment>Returns the request URL without the host and any parameters.</comment>
+        </property>
+    </class>
+    <class>
+        <name>anywheresoftware.b4a.objects.Servlet.ServletResponseWrapper</name>
+        <shortname>ServletResponse</shortname>
+        <owner>process</owner>
+        <method>
+            <name>SendString</name>
+            <comment>Sends the response text.</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>Text</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+        <method>
+            <name>SendRedirect</name>
+            <comment>Redirets the client to a different location.</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>Location</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+        <method>
+            <name>SetContentType</name>
+            <comment>Sets the content type header.</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>Type</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+        <method>
+            <name>SendFile</name>
+            <comment>Sends a file as a response.</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>Dir</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>FileName</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+        <method>
+            <name>SetHeader</name>
+            <comment>Sets the response header.</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>Name</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>Value</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+        <property>
+            <name>Status</name>
+            <parameter>
+                <name>v</name>
+                <type>int</type>
+            </parameter>
+            <comment>Sets the HTTP status code. Default value is 200 (success).</comment>
+        </property>
+    </class>
+    <class>
+        <name>anywheresoftware.b4a.objects.HttpServer</name>
+        <shortname>HttpServer</shortname>
+        <owner>process</owner>
+        <event>HandleRequest (Request As ServletRequest, Response As ServletResponse)</event>
+        <permission>android.permission.INTERNET</permission>
+        <permission>android.permission.WRITE_EXTERNAL_STORAGE</permission>
+        <method>
+            <name>Initialize</name>
+            <comment>Initializes the server.</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>ba</name>
+                <type>anywheresoftware.b4a.BA</type>
+            </parameter>
+            <parameter>
+                <name>EventName</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+        <method>
+            <name>Start</name>
+            <comment>Starts the server. The server will listen to the given port.</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>Port</name>
+                <type>int</type>
+            </parameter>
+        </method>
+        <method>
+            <name>Stop</name>
+            <comment>Stops the server.</comment>
+            <returntype>void</returntype>
+        </method>
+        <field>
+            <name>TempFolder</name>
+            <comment></comment>
+            <returntype>java.lang.String</returntype>
+        </field>
+    </class>
+    <version>1.0</version>
+</root>

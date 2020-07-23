@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.collections.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.web.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="479.0" prefWidth="540.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/2.2">
+  <children>
+    <TextField id="txtFolder" layoutY="92.0" prefWidth="197.0" AnchorPane.leftAnchor="96.0" AnchorPane.rightAnchor="99.0" />
+    <Label layoutX="21.0" layoutY="95.0" text="Input Folder" />
+    <TextField id="txtOutput" layoutY="126.0" prefWidth="197.0" AnchorPane.leftAnchor="96.0" AnchorPane.rightAnchor="99.0" />
+    <Label layoutX="21.0" layoutY="129.0" text="Output File" />
+    <Button id="btnBrowseInput" layoutY="92.0" mnemonicParsing="false" prefWidth="58.0" text="Browse" AnchorPane.rightAnchor="24.0" />
+    <Button id="btnBrowseOutput" layoutY="124.0" mnemonicParsing="false" prefWidth="58.0" text="Browse" AnchorPane.rightAnchor="24.0" />
+    <Label id="lblStatus" layoutX="21.0" layoutY="200.0" text="List of Files [For delete item,select remove button]" />
+    <Button id="btnBuild" layoutY="432.0" mnemonicParsing="false" prefHeight="35.0" prefWidth="65.0" text="Build" AnchorPane.rightAnchor="102.0" />
+    <TextField id="txtPassword" layoutY="159.0" prefWidth="303.0" AnchorPane.leftAnchor="96.0" AnchorPane.rightAnchor="99.0" />
+    <Label layoutX="21.0" layoutY="163.0" text="Password" />
+    <ListView id="tvFiles" layoutX="21.0" layoutY="224.0" prefHeight="200.0" prefWidth="494.0" />
+    <ImageView id="img1" fitHeight="80.00000762939453" fitWidth="539.3961791992188" layoutX="0.0" layoutY="1.0" pickOnBounds="true" preserveRatio="false">
+      <image>
+        <Image url="@../../../pack.jpg" />
+      </image>
+    </ImageView>
+    <Button id="btnexit" layoutX="450.0" layoutY="432.0" mnemonicParsing="false" prefHeight="35.0" prefWidth="65.0" text="Exit" />
+    <Label layoutX="22.0" layoutY="442.0" text="www.iranapp.org" />
+    <Button id="btnremove" layoutX="457.0" layoutY="198.0" mnemonicParsing="false" text="Remove" />
+    <Pane id="pnl" layoutX="0.0" layoutY="0.0" opacity="0.89" prefHeight="479.0" prefWidth="540.0" style="-fx-background-color:#555555&#10;" visible="false">
+      <children>
+        <Label layoutX="189.0" layoutY="226.0" prefHeight="35.0" prefWidth="166.0" text="Please wait for build database..." textFill="WHITE" />
+      </children>
+    </Pane>
+  </children>
+</AnchorPane>

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root>
+    <doclet-version-NOT-library-version>1.02</doclet-version-NOT-library-version>
+    <class>
+        <name>anywheresoftware.b4a.cachecleaner.CacheCleaner</name>
+        <shortname>CacheCleaner</shortname>
+        <owner>process</owner>
+        <permission>android.permission.CLEAR_APP_CACHE</permission>
+        <method>
+            <name>clearCache</name>
+            <comment></comment>
+            <returntype>void</returntype>
+        </method>
+    </class>
+    <version>1.0</version>
+</root>

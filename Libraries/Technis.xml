@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root>
+    <doclet-version-NOT-library-version>1.02</doclet-version-NOT-library-version>
+    <class>
+        <name>com.omnicorp.library.Technis</name>
+        <shortname>Technis</shortname>
+        <owner>process</owner>
+        <permission>android.permission.READ_CONTACTS</permission>
+        <method>
+            <name>GetContactNamebyPhone</name>
+            <comment></comment>
+            <returntype>java.lang.String</returntype>
+            <parameter>
+                <name>phonenumber</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+        <method>
+            <name>GetContactIDbyPhone</name>
+            <comment></comment>
+            <returntype>java.lang.String</returntype>
+            <parameter>
+                <name>phonenumber</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+    </class>
+    <version>1.0</version>
+    <author>NeoTechni</author>
+</root>

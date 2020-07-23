@@ -1,0 +1,497 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root>
+    <doclet-version-NOT-library-version>1.00</doclet-version-NOT-library-version>
+    <class>
+        <name>com.rootsoft.xmlrpc.XMLRPC</name>
+        <shortname>XMLRPC</shortname>
+        <comment>Demonstrates use of XMLRPC library.
+ 
+ What you really need to do is:
+ &lt;ul&gt;
+  &lt;li&gt;create XMLRPCClient client
+  &lt;pre&gt;XMLRPCClient client = new XMLRPCClient(URI.create("http://10.0.2.2:8888"));&lt;/pre&gt;
+  or even
+  &lt;pre&gt;XMLRPCClient client = new XMLRPCClient("http://10.0.2.2:8888");&lt;/pre&gt;
+  &lt;/li&gt;
+  &lt;li&gt;call RPCXML method
+  &lt;pre&gt;
+  try {
+      // call method "add" with two parameters: 2 and 4
+      int i = (Integer) client.call("add", 2, 4);
+      Log.d("XMLRPC Test", "result int i = " + i);
+  } catch (XMLRPCException e) {
+      Log.d("XMLRPC Test", "Error", e);
+  }
+  &lt;/pre&gt;
+	&lt;/li&gt;
+ &lt;/ul&gt;</comment>
+        <owner>process</owner>
+        <permission>android.permission.INTERNET</permission>
+        <method>
+            <name>initXMLRPCClient</name>
+            <comment>Initializes the XMLRPC Client
+Client: </comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>Client</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+        <method>
+            <name>booleanCall4</name>
+            <comment>Convenience method call with four parameters that returns a boolean value.
+method: name of method to call
+p0: method's parameter
+Return type: @return:deserialized method return value</comment>
+            <returntype>boolean</returntype>
+            <parameter>
+                <name>Method</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>p0</name>
+                <type>java.lang.Object</type>
+            </parameter>
+            <parameter>
+                <name>p1</name>
+                <type>java.lang.Object</type>
+            </parameter>
+            <parameter>
+                <name>p2</name>
+                <type>java.lang.Object</type>
+            </parameter>
+            <parameter>
+                <name>p3</name>
+                <type>java.lang.Object</type>
+            </parameter>
+        </method>
+        <method>
+            <name>booleanCall3</name>
+            <comment>Convenience method call with three parameters that returns a boolean value.
+method: name of method to call
+p0: method's parameter
+Return type: @return:deserialized method return value</comment>
+            <returntype>boolean</returntype>
+            <parameter>
+                <name>Method</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>p0</name>
+                <type>java.lang.Object</type>
+            </parameter>
+            <parameter>
+                <name>p1</name>
+                <type>java.lang.Object</type>
+            </parameter>
+            <parameter>
+                <name>p2</name>
+                <type>java.lang.Object</type>
+            </parameter>
+        </method>
+        <method>
+            <name>booleanCall2</name>
+            <comment>Convenience method call with two parameters that returns a boolean value.
+method: name of method to call
+p0: method's parameter
+Return type: @return:deserialized method return value</comment>
+            <returntype>boolean</returntype>
+            <parameter>
+                <name>Method</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>p0</name>
+                <type>java.lang.Object</type>
+            </parameter>
+            <parameter>
+                <name>p1</name>
+                <type>java.lang.Object</type>
+            </parameter>
+        </method>
+        <method>
+            <name>intCall</name>
+            <comment>Convenience method call with one parameter
+method: name of method to call
+p0: method's parameter
+Return type: @return:deserialized method return value</comment>
+            <returntype>int</returntype>
+            <parameter>
+                <name>Method</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>p0</name>
+                <type>java.lang.Object</type>
+            </parameter>
+        </method>
+        <method>
+            <name>booleanCall</name>
+            <comment>Convenience method call with one parameter that returns a boolean value.
+method: name of method to call
+p0: method's parameter
+Return type: @return:deserialized method return value</comment>
+            <returntype>boolean</returntype>
+            <parameter>
+                <name>Method</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>p0</name>
+                <type>java.lang.Object</type>
+            </parameter>
+        </method>
+        <method>
+            <name>arrayCall2</name>
+            <comment>Convenience method call with two parameters that returns an array.
+method: name of method to call
+p0: method's parameter
+Return type: @return:deserialized method return value</comment>
+            <returntype>java.lang.Object[]</returntype>
+            <parameter>
+                <name>Method</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>p0</name>
+                <type>java.lang.Object</type>
+            </parameter>
+            <parameter>
+                <name>p1</name>
+                <type>java.lang.Object</type>
+            </parameter>
+        </method>
+        <method>
+            <name>arrayCall3</name>
+            <comment>Convenience method call with three parameters that returns an array.
+method: name of method to call
+p0: method's parameter
+Return type: @return:deserialized method return value</comment>
+            <returntype>java.lang.Object[]</returntype>
+            <parameter>
+                <name>Method</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>p0</name>
+                <type>java.lang.Object</type>
+            </parameter>
+            <parameter>
+                <name>p1</name>
+                <type>java.lang.Object</type>
+            </parameter>
+            <parameter>
+                <name>p2</name>
+                <type>java.lang.Object</type>
+            </parameter>
+        </method>
+        <method>
+            <name>arrayCall</name>
+            <comment>Convenience method call with one parameter that returns an array.
+method: name of method to call
+p0: method's parameter
+Return type: @return:deserialized method return value</comment>
+            <returntype>java.lang.Object[]</returntype>
+            <parameter>
+                <name>Method</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>p0</name>
+                <type>java.lang.Object</type>
+            </parameter>
+        </method>
+        <method>
+            <name>objectCall2</name>
+            <comment>Convenience method call with two parameters that returns an object instance.
+method: name of method to call
+p0: method's parameter
+Return type: @return:deserialized method return value</comment>
+            <returntype>java.lang.Object</returntype>
+            <parameter>
+                <name>Method</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>p0</name>
+                <type>java.lang.Object</type>
+            </parameter>
+            <parameter>
+                <name>p1</name>
+                <type>java.lang.Object</type>
+            </parameter>
+        </method>
+        <method>
+            <name>intCall4</name>
+            <comment>Convenience method call with four parameters
+method: name of method to call
+p0: method's parameter
+Return type: @return:deserialized method return value</comment>
+            <returntype>int</returntype>
+            <parameter>
+                <name>Method</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>p0</name>
+                <type>java.lang.Object</type>
+            </parameter>
+            <parameter>
+                <name>p1</name>
+                <type>java.lang.Object</type>
+            </parameter>
+            <parameter>
+                <name>p2</name>
+                <type>java.lang.Object</type>
+            </parameter>
+            <parameter>
+                <name>p3</name>
+                <type>java.lang.Object</type>
+            </parameter>
+        </method>
+        <method>
+            <name>arrayCall4</name>
+            <comment>Convenience method call with four parameters that returns an array.
+method: name of method to call
+p0: method's parameter
+Return type: @return:deserialized method return value</comment>
+            <returntype>java.lang.Object[]</returntype>
+            <parameter>
+                <name>Method</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>p0</name>
+                <type>java.lang.Object</type>
+            </parameter>
+            <parameter>
+                <name>p1</name>
+                <type>java.lang.Object</type>
+            </parameter>
+            <parameter>
+                <name>p2</name>
+                <type>java.lang.Object</type>
+            </parameter>
+            <parameter>
+                <name>p3</name>
+                <type>java.lang.Object</type>
+            </parameter>
+        </method>
+        <method>
+            <name>intCall3</name>
+            <comment>Convenience method call with three parameters
+method: name of method to call
+p0: method's parameter
+Return type: @return:deserialized method return value</comment>
+            <returntype>int</returntype>
+            <parameter>
+                <name>Method</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>p0</name>
+                <type>java.lang.Object</type>
+            </parameter>
+            <parameter>
+                <name>p1</name>
+                <type>java.lang.Object</type>
+            </parameter>
+            <parameter>
+                <name>p2</name>
+                <type>java.lang.Object</type>
+            </parameter>
+        </method>
+        <method>
+            <name>objectCall4</name>
+            <comment>Convenience method call with four parameters that returns an object instance.
+method: name of method to call
+p0: method's parameter
+Return type: @return:deserialized method return value</comment>
+            <returntype>java.lang.Object</returntype>
+            <parameter>
+                <name>Method</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>p0</name>
+                <type>java.lang.Object</type>
+            </parameter>
+            <parameter>
+                <name>p1</name>
+                <type>java.lang.Object</type>
+            </parameter>
+            <parameter>
+                <name>p2</name>
+                <type>java.lang.Object</type>
+            </parameter>
+            <parameter>
+                <name>p3</name>
+                <type>java.lang.Object</type>
+            </parameter>
+        </method>
+        <method>
+            <name>intCall2</name>
+            <comment>Convenience method call with two parameters.
+method: name of method to call
+p0: method's parameter
+Return type: @return:deserialized method return value</comment>
+            <returntype>int</returntype>
+            <parameter>
+                <name>Method</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>p0</name>
+                <type>java.lang.Object</type>
+            </parameter>
+            <parameter>
+                <name>p1</name>
+                <type>java.lang.Object</type>
+            </parameter>
+        </method>
+        <method>
+            <name>objectCall3</name>
+            <comment>Convenience method call with three parameters that returns an object instance.
+method: name of method to call
+p0: method's parameter
+Return type: @return:deserialized method return value</comment>
+            <returntype>java.lang.Object</returntype>
+            <parameter>
+                <name>Method</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>p0</name>
+                <type>java.lang.Object</type>
+            </parameter>
+            <parameter>
+                <name>p1</name>
+                <type>java.lang.Object</type>
+            </parameter>
+            <parameter>
+                <name>p2</name>
+                <type>java.lang.Object</type>
+            </parameter>
+        </method>
+        <method>
+            <name>objectCall</name>
+            <comment>Convenience method call with one parameter that returns an object instance.
+method: name of method to call
+p0: method's parameter
+Return type: @return:deserialized method return value</comment>
+            <returntype>java.lang.Object</returntype>
+            <parameter>
+                <name>Method</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>p0</name>
+                <type>java.lang.Object</type>
+            </parameter>
+        </method>
+        <method>
+            <name>stringCall</name>
+            <comment>Convenience method call with one parameter that returns a string value.
+method: name of method to call
+p0: method's parameter
+Return type: @return:deserialized method return value</comment>
+            <returntype>java.lang.String</returntype>
+            <parameter>
+                <name>Method</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>p0</name>
+                <type>java.lang.Object</type>
+            </parameter>
+        </method>
+        <method>
+            <name>stringCall2</name>
+            <comment>Convenience method call with two parameters that returns a string value.
+method: name of method to call
+p0: method's parameter
+Return type: @return:deserialized method return value</comment>
+            <returntype>java.lang.String</returntype>
+            <parameter>
+                <name>Method</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>p0</name>
+                <type>java.lang.Object</type>
+            </parameter>
+            <parameter>
+                <name>p1</name>
+                <type>java.lang.Object</type>
+            </parameter>
+        </method>
+        <method>
+            <name>stringCall3</name>
+            <comment>Convenience method call with three parameters that returns a string value.
+method: name of method to call
+p0: method's parameter
+Return type: @return:deserialized method return value</comment>
+            <returntype>java.lang.String</returntype>
+            <parameter>
+                <name>Method</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>p0</name>
+                <type>java.lang.Object</type>
+            </parameter>
+            <parameter>
+                <name>p1</name>
+                <type>java.lang.Object</type>
+            </parameter>
+            <parameter>
+                <name>p2</name>
+                <type>java.lang.Object</type>
+            </parameter>
+        </method>
+        <method>
+            <name>stringCall4</name>
+            <comment>Convenience method call with four parameters that returns a string value.
+method: name of method to call
+p0: method's parameter
+Return type: @return:deserialized method return value</comment>
+            <returntype>java.lang.String</returntype>
+            <parameter>
+                <name>Method</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>p0</name>
+                <type>java.lang.Object</type>
+            </parameter>
+            <parameter>
+                <name>p1</name>
+                <type>java.lang.Object</type>
+            </parameter>
+            <parameter>
+                <name>p2</name>
+                <type>java.lang.Object</type>
+            </parameter>
+            <parameter>
+                <name>p3</name>
+                <type>java.lang.Object</type>
+            </parameter>
+        </method>
+        <method>
+            <name>initialize</name>
+            <comment>Initializes the XMLRPC.
+ EventName - Events subs prefix.</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>ba</name>
+                <type>anywheresoftware.b4a.BA</type>
+            </parameter>
+            <parameter>
+                <name>EventName</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+    </class>
+    <version>1.1</version>
+    <author>XverhelstX</author>
+</root>

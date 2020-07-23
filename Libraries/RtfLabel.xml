@@ -1,0 +1,1406 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <doclet-version-NOT-library-version>1.00</doclet-version-NOT-library-version>
+  <dependsOn>reflection</dependsOn>
+  <dependsOn>richstring</dependsOn>
+  <dependsOn>stringutils</dependsOn>
+  <class>
+    <name>combib.libs.rtflabel.rtflabel._clsrtflbltextdata</name>
+    <shortname>ClsRtfLblTextData</shortname>
+    <owner>process</owner>
+    <method>
+      <name>Initialize</name>
+      <comment>Initializes the fields to their default value.</comment>
+      <returntype>void</returntype>
+    </method>
+    <field>
+      <name>IsInitialized</name>
+      <comment>Tests whether the object has been initialized.</comment>
+      <returntype>boolean</returntype>
+    </field>
+    <field>
+      <name>Text</name>
+      <returntype>String</returntype>
+    </field>
+    <field>
+      <name>TextHeight</name>
+      <returntype>int</returntype>
+    </field>
+    <field>
+      <name>ScrollMax</name>
+      <returntype>int</returntype>
+    </field>
+    <field>
+      <name>AbsaetzeCount</name>
+      <returntype>int</returntype>
+    </field>
+    <field>
+      <name>ZeilenCount</name>
+      <returntype>int</returntype>
+    </field>
+  </class>
+  <class>
+    <name>combib.libs.rtflabel.rtflabel._clsrtflblimage</name>
+    <shortname>ClsRtfLblImage</shortname>
+    <owner>process</owner>
+    <method>
+      <name>Initialize</name>
+      <comment>Initializes the fields to their default value.</comment>
+      <returntype>void</returntype>
+    </method>
+    <field>
+      <name>IsInitialized</name>
+      <comment>Tests whether the object has been initialized.</comment>
+      <returntype>boolean</returntype>
+    </field>
+    <field>
+      <name>Name</name>
+      <returntype>String</returntype>
+    </field>
+    <field>
+      <name>PosLeft</name>
+      <returntype>int</returntype>
+    </field>
+    <field>
+      <name>PosTop</name>
+      <returntype>int</returntype>
+    </field>
+    <field>
+      <name>Width</name>
+      <returntype>int</returntype>
+    </field>
+    <field>
+      <name>Height</name>
+      <returntype>int</returntype>
+    </field>
+  </class>
+  <class>
+    <name>combib.libs.rtflabel.rtflabel._clsrtflblparagraph</name>
+    <shortname>ClsRtfLblParagraph</shortname>
+    <owner>process</owner>
+    <method>
+      <name>Initialize</name>
+      <comment>Initializes the fields to their default value.</comment>
+      <returntype>void</returntype>
+    </method>
+    <field>
+      <name>IsInitialized</name>
+      <comment>Tests whether the object has been initialized.</comment>
+      <returntype>boolean</returntype>
+    </field>
+    <field>
+      <name>ZeileVon</name>
+      <returntype>int</returntype>
+    </field>
+    <field>
+      <name>ZeileBis</name>
+      <returntype>int</returntype>
+    </field>
+    <field>
+      <name>IndentLevel</name>
+      <returntype>int</returntype>
+    </field>
+    <field>
+      <name>IndentMinWidth</name>
+      <returntype>int</returntype>
+    </field>
+    <field>
+      <name>BulletChars</name>
+      <returntype>String</returntype>
+    </field>
+    <field>
+      <name>CharsFormat</name>
+      <returntype>int</returntype>
+    </field>
+    <field>
+      <name>CharsColor</name>
+      <returntype>int</returntype>
+    </field>
+    <field>
+      <name>OnlyFirstLine</name>
+      <returntype>int</returntype>
+    </field>
+    <field>
+      <name>RightIndentLevel</name>
+      <returntype>int</returntype>
+    </field>
+    <field>
+      <name>WithFrame</name>
+      <returntype>boolean</returntype>
+    </field>
+    <field>
+      <name>FrameID</name>
+      <returntype>int</returntype>
+    </field>
+    <field>
+      <name>DistanceTop</name>
+      <returntype>int</returntype>
+    </field>
+    <field>
+      <name>TextColor</name>
+      <returntype>int</returntype>
+    </field>
+    <field>
+      <name>TextSize</name>
+      <returntype>float</returntype>
+    </field>
+    <field>
+      <name>ZeileHo1</name>
+      <returntype>int</returntype>
+    </field>
+    <field>
+      <name>ZeileHo2</name>
+      <returntype>int</returntype>
+    </field>
+    <field>
+      <name>ZeileKorrY</name>
+      <returntype>int</returntype>
+    </field>
+    <field>
+      <name>Zentriert</name>
+      <returntype>int</returntype>
+    </field>
+    <field>
+      <name>Bilder</name>
+      <returntype>anywheresoftware.b4a.objects.collections.List</returntype>
+    </field>
+    <field>
+      <name>BilderCount</name>
+      <returntype>int</returntype>
+    </field>
+    <field>
+      <name>BilderGesHeight</name>
+      <returntype>int</returntype>
+    </field>
+    <field>
+      <name>BilderGesWidth</name>
+      <returntype>int</returntype>
+    </field>
+  </class>
+  <class>
+    <name>combib.libs.rtflabel.rtflabel._clsrtflblrow</name>
+    <shortname>ClsRtfLblRow</shortname>
+    <owner>process</owner>
+    <method>
+      <name>Initialize</name>
+      <comment>Initializes the fields to their default value.</comment>
+      <returntype>void</returntype>
+    </method>
+    <field>
+      <name>IsInitialized</name>
+      <comment>Tests whether the object has been initialized.</comment>
+      <returntype>boolean</returntype>
+    </field>
+    <field>
+      <name>AbsatzID</name>
+      <returntype>int</returntype>
+    </field>
+    <field>
+      <name>TextPosAb</name>
+      <returntype>int</returntype>
+    </field>
+    <field>
+      <name>TextPosBis</name>
+      <returntype>int</returntype>
+    </field>
+    <field>
+      <name>LblPosX</name>
+      <returntype>int</returntype>
+    </field>
+    <field>
+      <name>LblWidth</name>
+      <returntype>int</returntype>
+    </field>
+    <field>
+      <name>ZeilePosTop</name>
+      <returntype>int</returntype>
+    </field>
+    <field>
+      <name>BeginnFormat</name>
+      <returntype>byte</returntype>
+    </field>
+    <field>
+      <name>TextRtf</name>
+      <returntype>anywheresoftware.b4a.keywords.StringBuilderWrapper</returntype>
+    </field>
+    <field>
+      <name>InList</name>
+      <returntype>boolean</returntype>
+    </field>
+    <field>
+      <name>KorrZentriert</name>
+      <returntype>int</returntype>
+    </field>
+  </class>
+  <class>
+    <name>combib.libs.rtflabel.rtflabel._clsrtflblrowdata</name>
+    <shortname>ClsRtfLblRowData</shortname>
+    <owner>process</owner>
+    <method>
+      <name>Initialize</name>
+      <comment>Initializes the fields to their default value.</comment>
+      <returntype>void</returntype>
+    </method>
+    <field>
+      <name>IsInitialized</name>
+      <comment>Tests whether the object has been initialized.</comment>
+      <returntype>boolean</returntype>
+    </field>
+    <field>
+      <name>AbsatzID</name>
+      <returntype>int</returntype>
+    </field>
+    <field>
+      <name>TextPosAb</name>
+      <returntype>int</returntype>
+    </field>
+    <field>
+      <name>TextPosBis</name>
+      <returntype>int</returntype>
+    </field>
+    <field>
+      <name>LblPosX</name>
+      <returntype>int</returntype>
+    </field>
+    <field>
+      <name>LblWidth</name>
+      <returntype>int</returntype>
+    </field>
+    <field>
+      <name>BeginnFormat</name>
+      <returntype>byte</returntype>
+    </field>
+    <field>
+      <name>TextRtf</name>
+      <returntype>String</returntype>
+    </field>
+    <field>
+      <name>ZeilePosTop</name>
+      <returntype>int</returntype>
+    </field>
+    <field>
+      <name>ZeileHo2</name>
+      <returntype>int</returntype>
+    </field>
+    <field>
+      <name>KorrZentriert</name>
+      <returntype>int</returntype>
+    </field>
+  </class>
+  <class>
+    <name>combib.libs.rtflabel.rtflabel._clsrtflbllink</name>
+    <shortname>ClsRtfLblLink</shortname>
+    <owner>process</owner>
+    <method>
+      <name>Initialize</name>
+      <comment>Initializes the fields to their default value.</comment>
+      <returntype>void</returntype>
+    </method>
+    <field>
+      <name>IsInitialized</name>
+      <comment>Tests whether the object has been initialized.</comment>
+      <returntype>boolean</returntype>
+    </field>
+    <field>
+      <name>EventText</name>
+      <returntype>String</returntype>
+    </field>
+    <field>
+      <name>Left</name>
+      <returntype>int</returntype>
+    </field>
+    <field>
+      <name>Top</name>
+      <returntype>int</returntype>
+    </field>
+    <field>
+      <name>Width</name>
+      <returntype>int</returntype>
+    </field>
+    <field>
+      <name>Height</name>
+      <returntype>int</returntype>
+    </field>
+    <field>
+      <name>Zeile</name>
+      <returntype>int</returntype>
+    </field>
+  </class>
+  <class>
+    <name>combib.libs.rtflabel.rtflabel._clsrtflblframe</name>
+    <shortname>ClsRtfLblFrame</shortname>
+    <owner>process</owner>
+    <method>
+      <name>Initialize</name>
+      <comment>Initializes the fields to their default value.</comment>
+      <returntype>void</returntype>
+    </method>
+    <field>
+      <name>IsInitialized</name>
+      <comment>Tests whether the object has been initialized.</comment>
+      <returntype>boolean</returntype>
+    </field>
+    <field>
+      <name>Left</name>
+      <returntype>int</returntype>
+    </field>
+    <field>
+      <name>Top</name>
+      <returntype>int</returntype>
+    </field>
+    <field>
+      <name>Width</name>
+      <returntype>int</returntype>
+    </field>
+    <field>
+      <name>Height</name>
+      <returntype>int</returntype>
+    </field>
+    <field>
+      <name>Color</name>
+      <returntype>int</returntype>
+    </field>
+    <field>
+      <name>BorderWidth</name>
+      <returntype>int</returntype>
+    </field>
+  </class>
+  <class>
+    <name>combib.libs.rtflabel.rtflabel._clsrtflbltextmark</name>
+    <shortname>ClsRtfLblTextMark</shortname>
+    <owner>process</owner>
+    <method>
+      <name>Initialize</name>
+      <comment>Initializes the fields to their default value.</comment>
+      <returntype>void</returntype>
+    </method>
+    <field>
+      <name>IsInitialized</name>
+      <comment>Tests whether the object has been initialized.</comment>
+      <returntype>boolean</returntype>
+    </field>
+    <field>
+      <name>IstAn</name>
+      <returntype>boolean</returntype>
+    </field>
+    <field>
+      <name>TextPosVon</name>
+      <returntype>int</returntype>
+    </field>
+    <field>
+      <name>TextPosBis</name>
+      <returntype>int</returntype>
+    </field>
+    <field>
+      <name>DownX</name>
+      <returntype>int</returntype>
+    </field>
+    <field>
+      <name>TopIndex</name>
+      <returntype>int</returntype>
+    </field>
+    <field>
+      <name>PressX</name>
+      <returntype>int</returntype>
+    </field>
+    <field>
+      <name>DownZeileA</name>
+      <returntype>int</returntype>
+    </field>
+    <field>
+      <name>PressZeileA</name>
+      <returntype>int</returntype>
+    </field>
+    <field>
+      <name>DownZeileB</name>
+      <returntype>int</returntype>
+    </field>
+    <field>
+      <name>PressZeileB</name>
+      <returntype>int</returntype>
+    </field>
+    <field>
+      <name>Scroll</name>
+      <returntype>int</returntype>
+    </field>
+    <field>
+      <name>ScrollMax</name>
+      <returntype>int</returntype>
+    </field>
+    <field>
+      <name>ScrollPos</name>
+      <returntype>int</returntype>
+    </field>
+    <field>
+      <name>ZeileMin</name>
+      <returntype>int</returntype>
+    </field>
+    <field>
+      <name>ZeileMax</name>
+      <returntype>int</returntype>
+    </field>
+    <field>
+      <name>VonVorZeile</name>
+      <returntype>boolean</returntype>
+    </field>
+    <field>
+      <name>BisVorZeile</name>
+      <returntype>boolean</returntype>
+    </field>
+  </class>
+  <class>
+    <name>combib.libs.rtflabel.rtflabel._clsrtflblmarkpositionvon</name>
+    <shortname>ClsRtfLblMarkPositionVon</shortname>
+    <owner>process</owner>
+    <method>
+      <name>Initialize</name>
+      <comment>Initializes the fields to their default value.</comment>
+      <returntype>void</returntype>
+    </method>
+    <field>
+      <name>IsInitialized</name>
+      <comment>Tests whether the object has been initialized.</comment>
+      <returntype>boolean</returntype>
+    </field>
+    <field>
+      <name>LblVon</name>
+      <returntype>int</returntype>
+    </field>
+    <field>
+      <name>TextPosVon</name>
+      <returntype>int</returntype>
+    </field>
+    <field>
+      <name>VonVorZeile</name>
+      <returntype>boolean</returntype>
+    </field>
+  </class>
+  <class>
+    <name>combib.libs.rtflabel.rtflabel._clsrtflblmarkpositionbis</name>
+    <shortname>ClsRtfLblMarkPositionBis</shortname>
+    <owner>process</owner>
+    <method>
+      <name>Initialize</name>
+      <comment>Initializes the fields to their default value.</comment>
+      <returntype>void</returntype>
+    </method>
+    <field>
+      <name>IsInitialized</name>
+      <comment>Tests whether the object has been initialized.</comment>
+      <returntype>boolean</returntype>
+    </field>
+    <field>
+      <name>LblBis</name>
+      <returntype>int</returntype>
+    </field>
+    <field>
+      <name>TextPosBis</name>
+      <returntype>int</returntype>
+    </field>
+    <field>
+      <name>BisVorZeile</name>
+      <returntype>boolean</returntype>
+    </field>
+  </class>
+  <class>
+    <name>combib.libs.rtflabel.rtflabel._clsrtflbloptions</name>
+    <shortname>ClsRtfLblOptions</shortname>
+    <owner>process</owner>
+    <method>
+      <name>Initialize</name>
+      <comment>Initializes the fields to their default value.</comment>
+      <returntype>void</returntype>
+    </method>
+    <field>
+      <name>IsInitialized</name>
+      <comment>Tests whether the object has been initialized.</comment>
+      <returntype>boolean</returntype>
+    </field>
+    <field>
+      <name>Color</name>
+      <returntype>int</returntype>
+    </field>
+    <field>
+      <name>TextColor</name>
+      <returntype>int</returntype>
+    </field>
+    <field>
+      <name>TextSize</name>
+      <returntype>float</returntype>
+    </field>
+    <field>
+      <name>TextSizeSmall</name>
+      <returntype>float</returntype>
+    </field>
+    <field>
+      <name>TextBorder</name>
+      <returntype>int</returntype>
+    </field>
+    <field>
+      <name>MarkFunction</name>
+      <returntype>boolean</returntype>
+    </field>
+    <field>
+      <name>MarkColor</name>
+      <returntype>int</returntype>
+    </field>
+    <field>
+      <name>LinkFormat</name>
+      <returntype>int</returntype>
+    </field>
+    <field>
+      <name>LinkTextColor</name>
+      <returntype>int</returntype>
+    </field>
+    <field>
+      <name>Enabled</name>
+      <returntype>boolean</returntype>
+    </field>
+    <field>
+      <name>LinkPressedColor</name>
+      <returntype>int</returntype>
+    </field>
+    <field>
+      <name>LinkPressedCornerRadius</name>
+      <returntype>int</returntype>
+    </field>
+    <field>
+      <name>IndentWidth</name>
+      <returntype>int</returntype>
+    </field>
+    <field>
+      <name>IndentWidthString</name>
+      <returntype>String</returntype>
+    </field>
+    <field>
+      <name>TextColors</name>
+      <returntype>int[]</returntype>
+    </field>
+    <field>
+      <name>TextColorsSignUsed</name>
+      <returntype>String[]</returntype>
+    </field>
+    <field>
+      <name>TextColorsSignUsedId</name>
+      <returntype>int[]</returntype>
+    </field>
+    <field>
+      <name>TextColorsSignUsedCount</name>
+      <returntype>int</returntype>
+    </field>
+    <field>
+      <name>BackColors</name>
+      <returntype>int[]</returntype>
+    </field>
+    <field>
+      <name>Images</name>
+      <returntype>anywheresoftware.b4a.objects.collections.Map</returntype>
+    </field>
+    <field>
+      <name>ImagesBorder</name>
+      <returntype>int</returntype>
+    </field>
+    <field>
+      <name>AnzeigeGeloescht</name>
+      <returntype>boolean</returntype>
+    </field>
+    <field>
+      <name>Left</name>
+      <returntype>int</returntype>
+    </field>
+    <field>
+      <name>Top</name>
+      <returntype>int</returntype>
+    </field>
+  </class>
+  <class>
+    <name>combib.libs.rtflabel.rtflabel</name>
+    <shortname>RtfLabel</shortname>
+    <owner>activity</owner>
+    <event>LinkClick(LinkEventText As String)</event>
+    <event>MarkOff()</event>
+    <event>MarkOnAvailable(MarkOn As Boolean)</event>
+    <event>PageUpDownAvailable(PageUp As Boolean, PageDown As Boolean)</event>
+    <event>MarkComplete(MarkText As String)</event>
+    <method>
+      <name>IsInitialized</name>
+      <comment>Tests whether the object has been initialized.</comment>
+      <returntype>boolean</returntype>
+    </method>
+    <method>
+      <name DesignerName="BringToFront">_bringtofront</name>
+      <comment>Changes the Z order of this view and brings it to the front.</comment>
+      <returntype>boolean</returntype>
+    </method>
+    <method>
+      <name DesignerName="Class_Globals">_class_globals</name>
+      <returntype>String</returntype>
+    </method>
+    <method>
+      <name DesignerName="ClearImages">_clearimages</name>
+      <comment>Deletes all with "SetImages" assigned images.
+&lt;code&gt;RtfLabel1.ClearImages&lt;/code&gt;</comment>
+      <returntype>boolean</returntype>
+    </method>
+    <method>
+      <name DesignerName="getAvailableMarkOn" HideFromIDE="true">_getavailablemarkon</name>
+      <comment>Gets the availability of the function "MarkOn".</comment>
+      <returntype>boolean</returntype>
+    </method>
+    <method>
+      <name DesignerName="getAvailablePageDown" HideFromIDE="true">_getavailablepagedown</name>
+      <comment>Gets the availability of the function "PageDown".</comment>
+      <returntype>boolean</returntype>
+    </method>
+    <method>
+      <name DesignerName="getAvailablePageUp" HideFromIDE="true">_getavailablepageup</name>
+      <comment>Gets the availability of the function "PageUp".</comment>
+      <returntype>boolean</returntype>
+    </method>
+    <method>
+      <name DesignerName="getBackGround" HideFromIDE="true">_getbackground</name>
+      <returntype>Object</returntype>
+    </method>
+    <method>
+      <name DesignerName="getEnabled" HideFromIDE="true">_getenabled</name>
+      <returntype>boolean</returntype>
+    </method>
+    <method>
+      <name DesignerName="getHeight" HideFromIDE="true">_getheight</name>
+      <returntype>int</returntype>
+    </method>
+    <method>
+      <name DesignerName="getLeft" HideFromIDE="true">_getleft</name>
+      <returntype>int</returntype>
+    </method>
+    <method>
+      <name DesignerName="getTag" HideFromIDE="true">_gettag</name>
+      <returntype>Object</returntype>
+    </method>
+    <method>
+      <name DesignerName="getTextHeight" HideFromIDE="true">_gettextheight</name>
+      <comment>Gets the total height of the text back.
+&lt;code&gt;Dim TextHeight As Int&lt;/code&gt;
+&lt;code&gt;TextHeight = RtfLabel1.TextHeight&lt;/code&gt;</comment>
+      <returntype>int</returntype>
+    </method>
+    <method>
+      <name DesignerName="getTextPositionTop" HideFromIDE="true">_gettextpositiontop</name>
+      <comment>Gets the data above the text position of the first character of the first fully visible line
+or brings back the line with the position of text in the visible range. 
+&lt;code&gt;Dim Pos As Object&lt;/code&gt;
+&lt;code&gt;Pos = RtfLabel1.TextPositionTop 'save the position&lt;/code&gt;
+&lt;code&gt;RtfLabel1.TextPositionTop = Pos 'brings text passage in the visible range&lt;/code&gt;</comment>
+      <returntype>Object</returntype>
+    </method>
+    <method>
+      <name DesignerName="getTop" HideFromIDE="true">_gettop</name>
+      <returntype>int</returntype>
+    </method>
+    <method>
+      <name DesignerName="getVisible" HideFromIDE="true">_getvisible</name>
+      <returntype>boolean</returntype>
+    </method>
+    <method>
+      <name DesignerName="getWidth" HideFromIDE="true">_getwidth</name>
+      <returntype>int</returntype>
+    </method>
+    <method>
+      <name DesignerName="GoToAnchor">_gotoanchor</name>
+      <comment>Brings the text with the anchor in the visible range.
+&lt;code&gt;RtfLabel1.Text = "... {a/paragraph3}§3 - Here follows the text of paragraph 3 ..."
+&lt;code&gt;If RtfLabel1.GoToAnchor("paragraph3") = False Then Log("Anchor 'paragraph3' not found")&lt;/code&gt; </comment>
+      <returntype>boolean</returntype>
+      <parameter>
+        <name>Anchor</name>
+        <type>String</type>
+      </parameter>
+    </method>
+    <method>
+      <name DesignerName="GoToFirstRow">_gotofirstrow</name>
+      <comment>Scrolls the text to the first row.</comment>
+      <returntype>boolean</returntype>
+    </method>
+    <method>
+      <name DesignerName="GoToLastRow">_gotolastrow</name>
+      <comment>Scrolls the text to the last row.</comment>
+      <returntype>boolean</returntype>
+    </method>
+    <method>
+      <name DesignerName="Initialize">_initialize</name>
+      <comment>Initializes the label and adds it to the activity.
+EventName: Name for the event subroutine - e.g.: RtfLabel1_LinkClick(LinkEvenText As String)
+Parent: Activity or Panel
+Example: &lt;code&gt;RtfLabel1.Initialize(Me, "RtfLabel1", Activity, 0, 0, 100%x, 80%y)&lt;/code&gt;
+Example: &lt;code&gt;RtfLabel1.Initialize(Me, "RtfLabel1", Panel1, 0, 0, 100%x, 100%y)&lt;/code&gt;</comment>
+      <returntype>boolean</returntype>
+      <parameter>
+        <name>ba</name>
+        <type>anywheresoftware.b4a.BA</type>
+      </parameter>
+      <parameter>
+        <name>CallbackModule</name>
+        <type>Object</type>
+      </parameter>
+      <parameter>
+        <name>EventName</name>
+        <type>String</type>
+      </parameter>
+      <parameter>
+        <name>Parent</name>
+        <type>Object</type>
+      </parameter>
+      <parameter>
+        <name>Left</name>
+        <type>int</type>
+      </parameter>
+      <parameter>
+        <name>Top</name>
+        <type>int</type>
+      </parameter>
+      <parameter>
+        <name>Width</name>
+        <type>int</type>
+      </parameter>
+      <parameter>
+        <name>Height</name>
+        <type>int</type>
+      </parameter>
+    </method>
+    <method>
+      <name DesignerName="MarkOff">_markoff</name>
+      <comment>Turns the select mode off.
+&lt;code&gt;RtfLabel1.MarkOff&lt;/code&gt;</comment>
+      <returntype>boolean</returntype>
+    </method>
+    <method>
+      <name DesignerName="MarkOn">_markon</name>
+      <comment>Turns the select mode on - the user can select text. 
+This function is only available when MarkFunction = True.
+&lt;code&gt;RtfLabel1.MarkOn&lt;/code&gt;</comment>
+      <returntype>boolean</returntype>
+    </method>
+    <method>
+      <name DesignerName="PageDown">_pagedown</name>
+      <comment>Scrolls the text down one page.</comment>
+      <returntype>boolean</returntype>
+    </method>
+    <method>
+      <name DesignerName="PageUp">_pageup</name>
+      <comment>Scrolls the text up one page.</comment>
+      <returntype>boolean</returntype>
+    </method>
+    <method>
+      <name DesignerName="RemoveView">_removeview</name>
+      <comment>Removes this view from its parent.</comment>
+      <returntype>boolean</returntype>
+    </method>
+    <method>
+      <name DesignerName="SendToBack">_sendtoback</name>
+      <comment>Changes the Z order of this view and sends it to the back.</comment>
+      <returntype>boolean</returntype>
+    </method>
+    <method>
+      <name DesignerName="setBackGround" HideFromIDE="true">_setbackground</name>
+      <comment>Gets or sets the background drawable.</comment>
+      <returntype>String</returntype>
+      <parameter>
+        <name>Value</name>
+        <type>Object</type>
+      </parameter>
+    </method>
+    <method>
+      <name DesignerName="SetBackgroundImage">_setbackgroundimage</name>
+      <comment>Sets the background image.</comment>
+      <returntype>boolean</returntype>
+      <parameter>
+        <name>Img</name>
+        <type>anywheresoftware.b4a.objects.drawable.CanvasWrapper.BitmapWrapper</type>
+      </parameter>
+    </method>
+    <method>
+      <name DesignerName="setColor" HideFromIDE="true">_setcolor</name>
+      <comment>Sets the background color</comment>
+      <returntype>String</returntype>
+      <parameter>
+        <name>Color</name>
+        <type>int</type>
+      </parameter>
+    </method>
+    <method>
+      <name DesignerName="setEnabled" HideFromIDE="true">_setenabled</name>
+      <returntype>String</returntype>
+      <parameter>
+        <name>Value</name>
+        <type>boolean</type>
+      </parameter>
+    </method>
+    <method>
+      <name DesignerName="SetFrameColors">_setframecolors</name>
+      <comment>Set the background colors for the paragraph formatting with frames - "ColorId" 0-9
+&lt;code&gt;RtfLabel1.SetFrameColors(0, Colors.Green)&lt;/code&gt;
+&lt;code&gt;RtfLabel1.SetFrameColors(1, Colors.Magenta)&lt;/code&gt; 
+Example - Paragraph with Frame {pf/...} - background color is 'Magenta': 
+&lt;code&gt;RtfLabel1.Text = "{pf/IndentLevel:0/RightIndentLevel:0/ColorId:1/BorderWidth:0.3}Here follows the text..." &lt;/code&gt;</comment>
+      <returntype>boolean</returntype>
+      <parameter>
+        <name>ColorId</name>
+        <type>int</type>
+      </parameter>
+      <parameter>
+        <name>Color</name>
+        <type>int</type>
+      </parameter>
+    </method>
+    <method>
+      <name DesignerName="setHeight" HideFromIDE="true">_setheight</name>
+      <comment>Gets or sets the height of the RtfLabel.</comment>
+      <returntype>String</returntype>
+      <parameter>
+        <name>Value</name>
+        <type>int</type>
+      </parameter>
+    </method>
+    <method>
+      <name DesignerName="SetImages">_setimages</name>
+      <comment>Transfers the images to the label, to display in the text. 
+Name must be a unique designation - no spaces, no point - not case-sensitive.
+&lt;code&gt;RtfLabel1.SetImages("ArrowL",LoadBitmap(File.DirAssets, "ArrowLeft.jpg"))&lt;/code&gt;
+&lt;code&gt;RtfLabel1.SetImages("ArrowR",LoadBitmap(File.DirAssets, "ArrowRight.jpg"))&lt;/code&gt;
+&lt;code&gt;RtfLabel1.Text = "{pimage/ArrowL/22/22}This is my arrow! "&lt;/code&gt; </comment>
+      <returntype>boolean</returntype>
+      <parameter>
+        <name>Name</name>
+        <type>String</type>
+      </parameter>
+      <parameter>
+        <name>Image</name>
+        <type>anywheresoftware.b4a.objects.drawable.CanvasWrapper.BitmapWrapper</type>
+      </parameter>
+    </method>
+    <method>
+      <name DesignerName="setImagesBorder" HideFromIDE="true">_setimagesborder</name>
+      <comment>Sets the right and bottom edges between image and continuous text 
+or the distance between two images. 
+&lt;code&gt;RtfLabel1.ImagesBorder = 6dip&lt;/code&gt;</comment>
+      <returntype>String</returntype>
+      <parameter>
+        <name>Value</name>
+        <type>int</type>
+      </parameter>
+    </method>
+    <method>
+      <name DesignerName="setIndentWidth" HideFromIDE="true">_setindentwidth</name>
+      <comment>Sets the string that is used to calculate the indent width per level.
+&lt;code&gt;RtfLabel1.IndentWidth = "xxx"&lt;/code&gt;
+width of the indent = the width of the String "xxx" in the set font size.</comment>
+      <returntype>String</returntype>
+      <parameter>
+        <name>WidthString</name>
+        <type>String</type>
+      </parameter>
+    </method>
+    <method>
+      <name DesignerName="SetLayout">_setlayout</name>
+      <comment>Sets the position and size of the label anew.</comment>
+      <returntype>boolean</returntype>
+      <parameter>
+        <name>Left</name>
+        <type>int</type>
+      </parameter>
+      <parameter>
+        <name>Top</name>
+        <type>int</type>
+      </parameter>
+      <parameter>
+        <name>Width</name>
+        <type>int</type>
+      </parameter>
+      <parameter>
+        <name>Height</name>
+        <type>int</type>
+      </parameter>
+    </method>
+    <method>
+      <name DesignerName="setLeft" HideFromIDE="true">_setleft</name>
+      <comment>Gets or sets the left position of the RtfLabel.</comment>
+      <returntype>String</returntype>
+      <parameter>
+        <name>Value</name>
+        <type>int</type>
+      </parameter>
+    </method>
+    <method>
+      <name DesignerName="setLinkFormat" HideFromIDE="true">_setlinkformat</name>
+      <comment>Sets the formatting applied to all hyperlinks: 
+1 = underlined | 2 = colored | 3 = underlined and colored.</comment>
+      <returntype>String</returntype>
+      <parameter>
+        <name>Format</name>
+        <type>int</type>
+      </parameter>
+    </method>
+    <method>
+      <name DesignerName="setLinkPressedColor" HideFromIDE="true">_setlinkpressedcolor</name>
+      <comment>Sets the color of the hyperlinks for the pressed state.</comment>
+      <returntype>String</returntype>
+      <parameter>
+        <name>Color</name>
+        <type>int</type>
+      </parameter>
+    </method>
+    <method>
+      <name DesignerName="setLinkPressedCornerRadius" HideFromIDE="true">_setlinkpressedcornerradius</name>
+      <comment>Sets the radius for LinkPressedColor with rounded corners (0 = none).</comment>
+      <returntype>String</returntype>
+      <parameter>
+        <name>Radius</name>
+        <type>int</type>
+      </parameter>
+    </method>
+    <method>
+      <name DesignerName="setLinkTextColor" HideFromIDE="true">_setlinktextcolor</name>
+      <comment>Sets the text color for the links (with LinkFormat = 2 or 3).</comment>
+      <returntype>String</returntype>
+      <parameter>
+        <name>Color</name>
+        <type>int</type>
+      </parameter>
+    </method>
+    <method>
+      <name DesignerName="setMarkColor" HideFromIDE="true">_setmarkcolor</name>
+      <comment>Sets the color with which the selected text is highlighted.
+&lt;code&gt;RtfLabel1.MarkColor = Colors.ARGB(255,255, 195, 33)&lt;/code&gt;</comment>
+      <returntype>String</returntype>
+      <parameter>
+        <name>Color</name>
+        <type>int</type>
+      </parameter>
+    </method>
+    <method>
+      <name DesignerName="setMarkFunction" HideFromIDE="true">_setmarkfunction</name>
+      <comment>Determines whether the functionality is provided for marking text in the label.
+MarkFunction = False, accelerates the text display.</comment>
+      <returntype>String</returntype>
+      <parameter>
+        <name>Value</name>
+        <type>boolean</type>
+      </parameter>
+    </method>
+    <method>
+      <name DesignerName="setTag" HideFromIDE="true">_settag</name>
+      <comment>Gets or sets the Tag value. This is a place holder which can be used to store additional data.</comment>
+      <returntype>String</returntype>
+      <parameter>
+        <name>Value</name>
+        <type>Object</type>
+      </parameter>
+    </method>
+    <method>
+      <name DesignerName="setText" HideFromIDE="true">_settext</name>
+      <comment>Sets the Text with formatting characters. 
+&lt;code&gt;RtfLabel1.Text = "{b}This is{b} {i}a{i} {h/MyLink}Hyperlink{h}. "&lt;/code&gt;</comment>
+      <returntype>String</returntype>
+      <parameter>
+        <name>Text</name>
+        <type>String</type>
+      </parameter>
+    </method>
+    <method>
+      <name DesignerName="setTextBorder" HideFromIDE="true">_settextborder</name>
+      <comment>Sets the left and right edges between label and text display. 
+&lt;code&gt;RtfLabel1.TextBorder = 2dip&lt;/code&gt;</comment>
+      <returntype>String</returntype>
+      <parameter>
+        <name>Value</name>
+        <type>int</type>
+      </parameter>
+    </method>
+    <method>
+      <name DesignerName="setTextColor" HideFromIDE="true">_settextcolor</name>
+      <comment>Sets the default text color for the display text. </comment>
+      <returntype>String</returntype>
+      <parameter>
+        <name>Color</name>
+        <type>int</type>
+      </parameter>
+    </method>
+    <method>
+      <name DesignerName="SetTextColors">_settextcolors</name>
+      <comment>Sets the text colors for the formatting characters {ptc...} and {tc0} to {tc9}
+&lt;code&gt;RtfLabel1.SetTextColors(0, Colors.Green)   ' {tc0} = Colors.Green&lt;/code&gt;
+&lt;code&gt;RtfLabel1.SetTextColors(1, Colors.Magenta) ' {tc1} = Colors.Magenta&lt;/code&gt;</comment>
+      <returntype>boolean</returntype>
+      <parameter>
+        <name>ColorId</name>
+        <type>int</type>
+      </parameter>
+      <parameter>
+        <name>Color</name>
+        <type>int</type>
+      </parameter>
+    </method>
+    <method>
+      <name DesignerName="setTextPositionTop" HideFromIDE="true">_settextpositiontop</name>
+      <returntype>String</returntype>
+      <parameter>
+        <name>TextPosition</name>
+        <type>Object</type>
+      </parameter>
+    </method>
+    <method>
+      <name DesignerName="setTextSize" HideFromIDE="true">_settextsize</name>
+      <comment>Sets the default font size for the display text. </comment>
+      <returntype>String</returntype>
+      <parameter>
+        <name>Value</name>
+        <type>float</type>
+      </parameter>
+    </method>
+    <method>
+      <name DesignerName="setTextSizeSmall" HideFromIDE="true">_settextsizesmall</name>
+      <comment>Sets the relative font size for smaller displayed text (Value 0.5 to 0.9)
+Example 1:
+&lt;code&gt;RtfLabel1.TextSize = 20 ' default font size&lt;/code&gt;
+&lt;code&gt;RtfLabel1.TextSizeSmall = 0.8&lt;/code&gt;
+&lt;code&gt;RtfLabel1.Text = "This is {s}small{s} Text!"&lt;/code&gt; 
+Text size small = 20 * 0.8 = 16
+Example 2:
+&lt;code&gt;RtfLabel1.TextSize = 20&lt;/code&gt;
+&lt;code&gt;RtfLabel1.TextSizeSmall = 0.8&lt;/code&gt;
+&lt;code&gt;RtfLabel1.Text = "{pts/1.5}This is {s}small{s} Text!"&lt;/code&gt;
+Text size paragraph = 20 * 1.5 = 30 ({pts/... relative font size for paragraph)
+Text size small = 30 * 0.8 = 24</comment>
+      <returntype>String</returntype>
+      <parameter>
+        <name>Value</name>
+        <type>float</type>
+      </parameter>
+    </method>
+    <method>
+      <name DesignerName="setTop" HideFromIDE="true">_settop</name>
+      <comment>Gets or sets the top position of the RtfLabel.</comment>
+      <returntype>String</returntype>
+      <parameter>
+        <name>Value</name>
+        <type>int</type>
+      </parameter>
+    </method>
+    <method>
+      <name DesignerName="setTypeface" HideFromIDE="true">_settypeface</name>
+      <comment>Sets the text font.
+&lt;code&gt;Dim MyFont As Typeface&lt;/code&gt;
+&lt;code&gt;MyFont = Typeface.LoadFromAssets("times.ttf")&lt;/code&gt;
+&lt;code&gt;RtfLabel1.Typeface = MyFont&lt;/code&gt;</comment>
+      <returntype>String</returntype>
+      <parameter>
+        <name>TF</name>
+        <type>anywheresoftware.b4a.keywords.constants.TypefaceWrapper</type>
+      </parameter>
+    </method>
+    <method>
+      <name DesignerName="setVisible" HideFromIDE="true">_setvisible</name>
+      <comment>Gets or sets the visibility of the RtfLabel</comment>
+      <returntype>String</returntype>
+      <parameter>
+        <name>Value</name>
+        <type>boolean</type>
+      </parameter>
+    </method>
+    <method>
+      <name DesignerName="setWidth" HideFromIDE="true">_setwidth</name>
+      <comment>Gets or sets the width of the RtfLabel.</comment>
+      <returntype>String</returntype>
+      <parameter>
+        <name>Value</name>
+        <type>int</type>
+      </parameter>
+    </method>
+    <method>
+      <name DesignerName="TextClear">_textclear</name>
+      <comment>Clears the text screen and the text.
+The settings remain intact. 
+&lt;code&gt;RtfLabel1.TextClear&lt;/code&gt;</comment>
+      <returntype>boolean</returntype>
+    </method>
+    <method>
+      <name DesignerName="TextShow">_textshow</name>
+      <comment>Displays the text and if successful returns True
+CheckBefore = True, then the text will be checked on formatting errors, 
+before displayed (intended for the development time!).
+&lt;code&gt;RtfLabel1.Text = "This {b}is{b} {i}an{i} Rtf-Text"&lt;/code&gt;
+&lt;code&gt;RtfLabel1.TextShow(False)&lt;/code&gt;</comment>
+      <returntype>boolean</returntype>
+      <parameter>
+        <name>CheckBefore</name>
+        <type>boolean</type>
+      </parameter>
+    </method>
+    <property>
+      <name DesignerName="AvailableMarkOn">_availablemarkon</name>
+      <comment>Gets the availability of the function "MarkOn".</comment>
+      <returntype>boolean</returntype>
+    </property>
+    <property>
+      <name DesignerName="AvailablePageDown">_availablepagedown</name>
+      <comment>Gets the availability of the function "PageDown".</comment>
+      <returntype>boolean</returntype>
+    </property>
+    <property>
+      <name DesignerName="AvailablePageUp">_availablepageup</name>
+      <comment>Gets the availability of the function "PageUp".</comment>
+      <returntype>boolean</returntype>
+    </property>
+    <property>
+      <name DesignerName="BackGround">_background</name>
+      <comment>Gets or sets the background drawable.</comment>
+      <returntype>Object</returntype>
+      <parameter>
+        <name>Value</name>
+        <type>Object</type>
+      </parameter>
+    </property>
+    <property>
+      <name DesignerName="Enabled">_enabled</name>
+      <returntype>boolean</returntype>
+      <parameter>
+        <name>Value</name>
+        <type>boolean</type>
+      </parameter>
+    </property>
+    <property>
+      <name DesignerName="Height">_height</name>
+      <comment>Gets or sets the height of the RtfLabel.</comment>
+      <returntype>int</returntype>
+      <parameter>
+        <name>Value</name>
+        <type>int</type>
+      </parameter>
+    </property>
+    <property>
+      <name DesignerName="Left">_left</name>
+      <comment>Gets or sets the left position of the RtfLabel.</comment>
+      <returntype>int</returntype>
+      <parameter>
+        <name>Value</name>
+        <type>int</type>
+      </parameter>
+    </property>
+    <property>
+      <name DesignerName="Tag">_tag</name>
+      <comment>Gets or sets the Tag value. This is a place holder which can be used to store additional data.</comment>
+      <returntype>Object</returntype>
+      <parameter>
+        <name>Value</name>
+        <type>Object</type>
+      </parameter>
+    </property>
+    <property>
+      <name DesignerName="TextHeight">_textheight</name>
+      <comment>Gets the total height of the text back.
+&lt;code&gt;Dim TextHeight As Int&lt;/code&gt;
+&lt;code&gt;TextHeight = RtfLabel1.TextHeight&lt;/code&gt;</comment>
+      <returntype>int</returntype>
+    </property>
+    <property>
+      <name DesignerName="TextPositionTop">_textpositiontop</name>
+      <comment>Gets the data above the text position of the first character of the first fully visible line
+or brings back the line with the position of text in the visible range. 
+&lt;code&gt;Dim Pos As Object&lt;/code&gt;
+&lt;code&gt;Pos = RtfLabel1.TextPositionTop 'save the position&lt;/code&gt;
+&lt;code&gt;RtfLabel1.TextPositionTop = Pos 'brings text passage in the visible range&lt;/code&gt;</comment>
+      <returntype>Object</returntype>
+      <parameter>
+        <name>Value</name>
+        <type>Object</type>
+      </parameter>
+    </property>
+    <property>
+      <name DesignerName="Top">_top</name>
+      <comment>Gets or sets the top position of the RtfLabel.</comment>
+      <returntype>int</returntype>
+      <parameter>
+        <name>Value</name>
+        <type>int</type>
+      </parameter>
+    </property>
+    <property>
+      <name DesignerName="Visible">_visible</name>
+      <comment>Gets or sets the visibility of the RtfLabel</comment>
+      <returntype>boolean</returntype>
+      <parameter>
+        <name>Value</name>
+        <type>boolean</type>
+      </parameter>
+    </property>
+    <property>
+      <name DesignerName="Width">_width</name>
+      <comment>Gets or sets the width of the RtfLabel.</comment>
+      <returntype>int</returntype>
+      <parameter>
+        <name>Value</name>
+        <type>int</type>
+      </parameter>
+    </property>
+    <property>
+      <name DesignerName="Color">_color</name>
+      <comment>Sets the background color</comment>
+      <returntype>void</returntype>
+      <parameter>
+        <name>Value</name>
+        <type>int</type>
+      </parameter>
+    </property>
+    <property>
+      <name DesignerName="ImagesBorder">_imagesborder</name>
+      <comment>Sets the right and bottom edges between image and continuous text 
+or the distance between two images. 
+&lt;code&gt;RtfLabel1.ImagesBorder = 6dip&lt;/code&gt;</comment>
+      <returntype>void</returntype>
+      <parameter>
+        <name>Value</name>
+        <type>int</type>
+      </parameter>
+    </property>
+    <property>
+      <name DesignerName="IndentWidth">_indentwidth</name>
+      <comment>Sets the string that is used to calculate the indent width per level.
+&lt;code&gt;RtfLabel1.IndentWidth = "xxx"&lt;/code&gt;
+width of the indent = the width of the String "xxx" in the set font size.</comment>
+      <returntype>void</returntype>
+      <parameter>
+        <name>Value</name>
+        <type>String</type>
+      </parameter>
+    </property>
+    <property>
+      <name DesignerName="LinkFormat">_linkformat</name>
+      <comment>Sets the formatting applied to all hyperlinks: 
+1 = underlined | 2 = colored | 3 = underlined and colored.</comment>
+      <returntype>void</returntype>
+      <parameter>
+        <name>Value</name>
+        <type>int</type>
+      </parameter>
+    </property>
+    <property>
+      <name DesignerName="LinkPressedColor">_linkpressedcolor</name>
+      <comment>Sets the color of the hyperlinks for the pressed state.</comment>
+      <returntype>void</returntype>
+      <parameter>
+        <name>Value</name>
+        <type>int</type>
+      </parameter>
+    </property>
+    <property>
+      <name DesignerName="LinkPressedCornerRadius">_linkpressedcornerradius</name>
+      <comment>Sets the radius for LinkPressedColor with rounded corners (0 = none).</comment>
+      <returntype>void</returntype>
+      <parameter>
+        <name>Value</name>
+        <type>int</type>
+      </parameter>
+    </property>
+    <property>
+      <name DesignerName="LinkTextColor">_linktextcolor</name>
+      <comment>Sets the text color for the links (with LinkFormat = 2 or 3).</comment>
+      <returntype>void</returntype>
+      <parameter>
+        <name>Value</name>
+        <type>int</type>
+      </parameter>
+    </property>
+    <property>
+      <name DesignerName="MarkColor">_markcolor</name>
+      <comment>Sets the color with which the selected text is highlighted.
+&lt;code&gt;RtfLabel1.MarkColor = Colors.ARGB(255,255, 195, 33)&lt;/code&gt;</comment>
+      <returntype>void</returntype>
+      <parameter>
+        <name>Value</name>
+        <type>int</type>
+      </parameter>
+    </property>
+    <property>
+      <name DesignerName="MarkFunction">_markfunction</name>
+      <comment>Determines whether the functionality is provided for marking text in the label.
+MarkFunction = False, accelerates the text display.</comment>
+      <returntype>void</returntype>
+      <parameter>
+        <name>Value</name>
+        <type>boolean</type>
+      </parameter>
+    </property>
+    <property>
+      <name DesignerName="Text">_text</name>
+      <comment>Sets the Text with formatting characters. 
+&lt;code&gt;RtfLabel1.Text = "{b}This is{b} {i}a{i} {h/MyLink}Hyperlink{h}. "&lt;/code&gt;</comment>
+      <returntype>void</returntype>
+      <parameter>
+        <name>Value</name>
+        <type>String</type>
+      </parameter>
+    </property>
+    <property>
+      <name DesignerName="TextBorder">_textborder</name>
+      <comment>Sets the left and right edges between label and text display. 
+&lt;code&gt;RtfLabel1.TextBorder = 2dip&lt;/code&gt;</comment>
+      <returntype>void</returntype>
+      <parameter>
+        <name>Value</name>
+        <type>int</type>
+      </parameter>
+    </property>
+    <property>
+      <name DesignerName="TextColor">_textcolor</name>
+      <comment>Sets the default text color for the display text. </comment>
+      <returntype>void</returntype>
+      <parameter>
+        <name>Value</name>
+        <type>int</type>
+      </parameter>
+    </property>
+    <property>
+      <name DesignerName="TextSize">_textsize</name>
+      <comment>Sets the default font size for the display text. </comment>
+      <returntype>void</returntype>
+      <parameter>
+        <name>Value</name>
+        <type>float</type>
+      </parameter>
+    </property>
+    <property>
+      <name DesignerName="TextSizeSmall">_textsizesmall</name>
+      <comment>Sets the relative font size for smaller displayed text (Value 0.5 to 0.9)
+Example 1:
+&lt;code&gt;RtfLabel1.TextSize = 20 ' default font size&lt;/code&gt;
+&lt;code&gt;RtfLabel1.TextSizeSmall = 0.8&lt;/code&gt;
+&lt;code&gt;RtfLabel1.Text = "This is {s}small{s} Text!"&lt;/code&gt; 
+Text size small = 20 * 0.8 = 16
+Example 2:
+&lt;code&gt;RtfLabel1.TextSize = 20&lt;/code&gt;
+&lt;code&gt;RtfLabel1.TextSizeSmall = 0.8&lt;/code&gt;
+&lt;code&gt;RtfLabel1.Text = "{pts/1.5}This is {s}small{s} Text!"&lt;/code&gt;
+Text size paragraph = 20 * 1.5 = 30 ({pts/... relative font size for paragraph)
+Text size small = 30 * 0.8 = 24</comment>
+      <returntype>void</returntype>
+      <parameter>
+        <name>Value</name>
+        <type>float</type>
+      </parameter>
+    </property>
+    <property>
+      <name DesignerName="Typeface">_typeface</name>
+      <comment>Sets the text font.
+&lt;code&gt;Dim MyFont As Typeface&lt;/code&gt;
+&lt;code&gt;MyFont = Typeface.LoadFromAssets("times.ttf")&lt;/code&gt;
+&lt;code&gt;RtfLabel1.Typeface = MyFont&lt;/code&gt;</comment>
+      <returntype>void</returntype>
+      <parameter>
+        <name>Value</name>
+        <type>anywheresoftware.b4a.keywords.constants.TypefaceWrapper</type>
+      </parameter>
+    </property>
+  </class>
+  <version>1.01</version>
+  <author>Peter Baumann</author>
+</root>

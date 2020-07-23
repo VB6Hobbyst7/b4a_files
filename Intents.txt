@@ -1,0 +1,138 @@
+ACTION_ACCESSIBILITY_SETTINGS
+Activity Action: Show settings for accessibility modules.
+** ACTION_ADD_ACCOUNT
+Activity Action: Show add account screen for creating a new account.
+** ACTION_AIRPLANE_MODE_SETTINGS
+Activity Action: Show settings to allow entering/exiting airplane mode.
+** ACTION_APN_SETTINGS
+Activity Action: Show settings to allow configuration of APNs.
+** ACTION_APPLICATION_DETAILS_SETTINGS
+Activity Action: Show screen of details about a particular application.
+** ACTION_APPLICATION_DEVELOPMENT_SETTINGS
+Activity Action: Show settings to allow configuration of application development-related settings.
+** ACTION_APPLICATION_SETTINGS
+Activity Action: Show settings to allow configuration of application-related settings.
+** ACTION_BATTERY_SAVER_SETTINGS
+Activity Action: Show battery saver settings.
+** ACTION_BLUETOOTH_SETTINGS
+Activity Action: Show settings to allow configuration of Bluetooth.
+** ACTION_CAPTIONING_SETTINGS
+Activity Action: Show settings for video captioning.
+** ACTION_CAST_SETTINGS
+Activity Action: Show settings to allow configuration of cast endpoints.
+** ACTION_DATA_ROAMING_SETTINGS
+Activity Action: Show settings for selection of 2G/3G.
+** ACTION_DATE_SETTINGS
+Activity Action: Show settings to allow configuration of date and time.
+** ACTION_DEVICE_INFO_SETTINGS
+Activity Action: Show general device information settings (serial number, software version, phone number, etc.).
+** ACTION_DISPLAY_SETTINGS
+Activity Action: Show settings to allow configuration of display.
+** ACTION_DREAM_SETTINGS
+Activity Action: Show Daydream settings.
+** ACTION_HARD_KEYBOARD_SETTINGS
+Activity Action: Show settings to configure the hardware keyboard.
+** ACTION_HOME_SETTINGS
+Activity Action: Show Home selection settings.
+** ACTION_IGNORE_BACKGROUND_DATA_RESTRICTIONS_SETTINGS
+Activity Action: Show screen for controlling background data restrictions for a particular application.
+** ACTION_IGNORE_BATTERY_OPTIMIZATION_SETTINGS
+Activity Action: Show screen for controlling which apps can ignore battery optimizations.
+** ACTION_INPUT_METHOD_SETTINGS
+Activity Action: Show settings to configure input methods, in particular allowing the user to enable input methods.
+** ACTION_INPUT_METHOD_SUBTYPE_SETTINGS
+Activity Action: Show settings to enable/disable input method subtypes.
+** ACTION_INTERNAL_STORAGE_SETTINGS
+Activity Action: Show settings for internal storage.
+** ACTION_LOCALE_SETTINGS
+Activity Action: Show settings to allow configuration of locale.
+** ACTION_LOCATION_SOURCE_SETTINGS
+Activity Action: Show settings to allow configuration of current location sources.
+** ACTION_MANAGE_ALL_APPLICATIONS_SETTINGS
+Activity Action: Show settings to manage all applications.
+** ACTION_MANAGE_APPLICATIONS_SETTINGS
+Activity Action: Show settings to manage installed applications.
+** ACTION_MANAGE_DEFAULT_APPS_SETTINGS
+Activity Action: Show Default apps settings.
+** ACTION_MANAGE_OVERLAY_PERMISSION
+Activity Action: Show screen for controlling which apps can draw on top of other apps.
+** ACTION_MANAGE_WRITE_SETTINGS
+Activity Action: Show screen for controlling which apps are allowed to write/modify system settings.
+** ACTION_MEMORY_CARD_SETTINGS
+Activity Action: Show settings for memory card storage.
+** ACTION_NETWORK_OPERATOR_SETTINGS
+Activity Action: Show settings for selecting the network operator.
+** ACTION_NFCSHARING_SETTINGS
+Activity Action: Show NFC Sharing settings.
+** ACTION_NFC_PAYMENT_SETTINGS
+Activity Action: Show NFC Tap & Pay settings
+
+This shows UI that allows the user to configure Tap&Pay settings.
+** ACTION_NFC_SETTINGS
+Activity Action: Show NFC settings.
+** ACTION_NOTIFICATION_LISTENER_SETTINGS
+Activity Action: Show Notification listener settings.
+** ACTION_NOTIFICATION_POLICY_ACCESS_SETTINGS
+Activity Action: Show Do Not Disturb access settings.
+** ACTION_PRINT_SETTINGS
+Activity Action: Show the top level print settings.
+** ACTION_PRIVACY_SETTINGS
+Activity Action: Show settings to allow configuration of privacy options.
+** ACTION_QUICK_LAUNCH_SETTINGS
+Activity Action: Show settings to allow configuration of quick launch shortcuts.
+** ACTION_REQUEST_IGNORE_BATTERY_OPTIMIZATIONS
+Activity Action: Ask the user to allow an app to ignore battery optimizations (that is, put them on the whitelist of apps shown by ACTION_IGNORE_BATTERY_OPTIMIZATION_SETTINGS).
+** ACTION_SEARCH_SETTINGS
+Activity Action: Show settings for global search.
+** ACTION_SECURITY_SETTINGS
+Activity Action: Show settings to allow configuration of security and location privacy.
+** ACTION_SETTINGS
+Activity Action: Show system settings.
+** ACTION_SHOW_REGULATORY_INFO
+Activity Action: Show the regulatory information screen for the device.
+** ACTION_SOUND_SETTINGS
+Activity Action: Show settings to allow configuration of sound and volume.
+** ACTION_SYNC_SETTINGS
+Activity Action: Show settings to allow configuration of sync settings.
+** ACTION_USAGE_ACCESS_SETTINGS
+Activity Action: Show settings to control access to usage information.
+** ACTION_USER_DICTIONARY_SETTINGS
+Activity Action: Show settings to manage the user input dictionary.
+** ACTION_VOICE_CONTROL_AIRPLANE_MODE
+Activity Action: Modify Airplane mode settings using a voice command.
+** ACTION_VOICE_CONTROL_BATTERY_SAVER_MODE
+Activity Action: Modify Battery Saver mode setting using a voice command.
+** ACTION_VOICE_CONTROL_DO_NOT_DISTURB_MODE
+Activity Action: Modify do not disturb mode settings.
+** ACTION_VOICE_INPUT_SETTINGS
+Activity Action: Show settings to configure input methods, in particular allowing the user to enable input methods.
+** ACTION_VPN_SETTINGS
+Activity Action: Show settings to allow configuration of VPN.
+** ACTION_VR_LISTENER_SETTINGS
+Activity Action: Show VR listener settings.
+** ACTION_WEBVIEW_SETTINGS
+Activity Action: Allows user to select current webview implementation.
+** ACTION_WIFI_IP_SETTINGS
+Activity Action: Show settings to allow configuration of a static IP address for Wi-Fi.
+** ACTION_WIFI_SETTINGS
+Activity Action: Show settings to allow configuration of Wi-Fi.
+** ACTION_WIRELESS_SETTINGS
+Activity Action: Show settings to allow configuration of wireless controls such as Wi-Fi, Bluetooth and Mobile networks.
+** AUTHORITY
+** EXTRA_ACCOUNT_TYPES
+Activity Extra: Limit available options in launched activity based on the given account types.
+** EXTRA_AIRPLANE_MODE_ENABLED
+Activity Extra: Enable or disable Airplane Mode.
+** EXTRA_AUTHORITIES
+Activity Extra: Limit available options in launched activity based on the given authority.
+** EXTRA_BATTERY_SAVER_MODE_ENABLED
+Activity Extra: Enable or disable Battery saver mode.
+** EXTRA_DO_NOT_DISTURB_MODE_ENABLED
+Activity Extra: Enable or disable Do Not Disturb mode.
+** EXTRA_DO_NOT_DISTURB_MODE_MINUTES
+Activity Extra: How many minutes to enable do not disturb mode for.
+** EXTRA_INPUT_METHOD_ID
+** INTENT_CATEGORY_USAGE_ACCESS_CONFIG
+Activity Category: Show application settings related to usage access.
+** METADATA_USAGE_ACCESS_REASON
+Metadata key: Reason for needing usage access.

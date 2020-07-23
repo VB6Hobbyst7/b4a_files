@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root>
+    <doclet-version-NOT-library-version>1.04</doclet-version-NOT-library-version>
+    <class>
+        <name>anywheresoftware.b4a.objects.wifidirect.WifiManagerWrapper</name>
+        <shortname>WifiManager</shortname>
+        <comment>Allows you to connect two devices over a Wifi Direct connection.
+See this &lt;link&gt;tutorial|http://www.basic4ppc.com/forum/basic4android-getting-started-tutorials/30409-android-wifi-direct-tutorial.html&lt;/link&gt; for more information.</comment>
+        <owner>process</owner>
+        <event>EnabledChanged (Enabled As Boolean)</event>
+        <event>PeersDiscovered (Success As Boolean, Devices As List)</event>
+        <event>ConnectionChanged (Connected As Boolean, GroupOwnerIp As String)</event>
+        <permission>android.permission.ACCESS_WIFI_STATE</permission>
+        <permission>android.permission.CHANGE_WIFI_STATE</permission>
+        <permission>android.permission.CHANGE_NETWORK_STATE</permission>
+        <permission>android.permission.INTERNET</permission>
+        <permission>android.permission.ACCESS_NETWORK_STATE</permission>
+        <method>
+            <name>Connect</name>
+            <comment>Starts a connection process to the given address. The ConnectionChanged event will be raised.</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>MacAddress</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+        <method>
+            <name>Initialize</name>
+            <comment>Initializes the object. The EnabledChanged and ConnectionChanged events will be raised after this call.</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>ba</name>
+                <type>anywheresoftware.b4a.BA</type>
+            </parameter>
+            <parameter>
+                <name>EventName</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+        <method>
+            <name>StopDiscovery</name>
+            <comment>Stops a discovery process.</comment>
+            <returntype>void</returntype>
+        </method>
+        <method>
+            <name>Connect2</name>
+            <comment>Similar to Connect. Setting the GroupOwner to True will ask the system to set the current device as the group owner.</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>MacAddress</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>GroupOwner</name>
+                <type>boolean</type>
+            </parameter>
+        </method>
+        <method>
+            <name>DiscoverPeers</name>
+            <comment>Starts a discovery process. The PeersDiscovered event will be later raised.</comment>
+            <returntype>void</returntype>
+        </method>
+        <method>
+            <name>GetCurrentStatus</name>
+            <comment>Calling this method will call the EnabledChanged and ConnectedChanged events to be raised with the last information.</comment>
+            <returntype>void</returntype>
+        </method>
+        <method>
+            <name>CancelConnections</name>
+            <comment>Cancels a connection process.</comment>
+            <returntype>void</returntype>
+        </method>
+    </class>
+    <class>
+        <name>anywheresoftware.b4a.objects.wifidirect.WifiManagerWrapper.WifiDeviceWrapper</name>
+        <shortname>WifiDevice</shortname>
+        <comment>Represents a discovered wifi device.</comment>
+        <objectwrapper>android.net.wifi.p2p.WifiP2pDevice</objectwrapper>
+        <owner>process</owner>
+        <method>
+            <name>IsInitialized</name>
+            <comment></comment>
+            <returntype>boolean</returntype>
+        </method>
+        <property>
+            <name>Name</name>
+            <returntype>java.lang.String</returntype>
+            <comment>Returns the device name.</comment>
+        </property>
+        <property>
+            <name>MacAddress</name>
+            <returntype>java.lang.String</returntype>
+            <comment>Returns the device MAC address.</comment>
+        </property>
+    </class>
+    <version>1.05</version>
+</root>

@@ -1,0 +1,311 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root>
+    <doclet-version-NOT-library-version>1.02</doclet-version-NOT-library-version>
+    <class>
+        <name>uk.co.martinpearman.b4a.squareup.picasso.RequestBuilder</name>
+        <shortname>RequestBuilder</shortname>
+        <objectwrapper>com.squareup.picasso.RequestBuilder</objectwrapper>
+        <owner>process</owner>
+        <method>
+            <name>IntoTarget</name>
+            <comment>Asynchronously fulfils the request into the specified Target.
+ See also the RequestBuilder Fetch method.</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>Target1</name>
+                <type>com.squareup.picasso.Target</type>
+            </parameter>
+        </method>
+        <method>
+            <name>PlaceholderResource</name>
+            <comment>Set a drawable resource to be used while the requested image is being loaded.</comment>
+            <returntype>uk.co.martinpearman.b4a.squareup.picasso.RequestBuilder</returntype>
+            <parameter>
+                <name>ResourceName</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+        <method>
+            <name>ErrorResource</name>
+            <comment>Set a drawable resource to be used if the requested image could not be loaded.</comment>
+            <returntype>uk.co.martinpearman.b4a.squareup.picasso.RequestBuilder</returntype>
+            <parameter>
+                <name>ResourceName</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+        <method>
+            <name>CenterCrop</name>
+            <comment>Crops an image inside of the bounds specified by Resize(TargetWidth, TargetHeight) rather than distorting the aspect ratio.
+ CenterCrop can only be used after calling Resize.</comment>
+            <returntype>uk.co.martinpearman.b4a.squareup.picasso.RequestBuilder</returntype>
+        </method>
+        <method>
+            <name>NoFade</name>
+            <comment>Disable brief fade in of images loaded from the disk cache or network.</comment>
+            <returntype>uk.co.martinpearman.b4a.squareup.picasso.RequestBuilder</returntype>
+        </method>
+        <method>
+            <name>Transform</name>
+            <comment>Add a custom transformation to be applied to the image.
+ ** The Transformation interface is not currently implemented so this method has no use **</comment>
+            <returntype>uk.co.martinpearman.b4a.squareup.picasso.RequestBuilder</returntype>
+            <parameter>
+                <name>Transformation1</name>
+                <type>com.squareup.picasso.Transformation</type>
+            </parameter>
+        </method>
+        <method>
+            <name>PlaceholderDrawable</name>
+            <comment>Set a Drawable to be used while the requested image is being loaded.</comment>
+            <returntype>uk.co.martinpearman.b4a.squareup.picasso.RequestBuilder</returntype>
+            <parameter>
+                <name>PlaceholderDrawable</name>
+                <type>android.graphics.drawable.Drawable</type>
+            </parameter>
+        </method>
+        <method>
+            <name>IntoImageView</name>
+            <comment>Asynchronously fulfils the request into the specified ImageView.</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>ImageView1</name>
+                <type>android.widget.ImageView</type>
+            </parameter>
+        </method>
+        <method>
+            <name>Rotate</name>
+            <comment>Rotate the image by the specified degrees.</comment>
+            <returntype>uk.co.martinpearman.b4a.squareup.picasso.RequestBuilder</returntype>
+            <parameter>
+                <name>Degrees</name>
+                <type>float</type>
+            </parameter>
+        </method>
+        <method>
+            <name>Rotate2</name>
+            <comment>Rotate the image by the specified degrees around the specified pivot point.</comment>
+            <returntype>uk.co.martinpearman.b4a.squareup.picasso.RequestBuilder</returntype>
+            <parameter>
+                <name>Degrees</name>
+                <type>float</type>
+            </parameter>
+            <parameter>
+                <name>PivotX</name>
+                <type>float</type>
+            </parameter>
+            <parameter>
+                <name>PivotY</name>
+                <type>float</type>
+            </parameter>
+        </method>
+        <method>
+            <name>Scale</name>
+            <comment>Scale the image using the specified factor.</comment>
+            <returntype>uk.co.martinpearman.b4a.squareup.picasso.RequestBuilder</returntype>
+            <parameter>
+                <name>Factor</name>
+                <type>float</type>
+            </parameter>
+        </method>
+        <method>
+            <name>IsInitialized</name>
+            <comment></comment>
+            <returntype>boolean</returntype>
+        </method>
+        <method>
+            <name>ResizeDimen</name>
+            <comment>Resize the image to the specified resource dimensions size.</comment>
+            <returntype>uk.co.martinpearman.b4a.squareup.picasso.RequestBuilder</returntype>
+            <parameter>
+                <name>TargetWidthResourceName</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>TargetHeightResourceName</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+        <method>
+            <name>CenterInside</name>
+            <comment>CenterInside can only be used after calling Resize.</comment>
+            <returntype>uk.co.martinpearman.b4a.squareup.picasso.RequestBuilder</returntype>
+        </method>
+        <method>
+            <name>Fetch</name>
+            <comment>Asynchronously fulfils the request into the specified Target1.</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>Target1</name>
+                <type>com.squareup.picasso.Target</type>
+            </parameter>
+        </method>
+        <method>
+            <name>SkipCache</name>
+            <comment>Indicate that this request should not use the memory cache for attempting to load or save the image.</comment>
+            <returntype>uk.co.martinpearman.b4a.squareup.picasso.RequestBuilder</returntype>
+        </method>
+        <method>
+            <name>Fit</name>
+            <comment>Attempt to resize the image to fit exactly into the target ImageView's bounds.</comment>
+            <returntype>uk.co.martinpearman.b4a.squareup.picasso.RequestBuilder</returntype>
+        </method>
+        <method>
+            <name>Scale2</name>
+            <comment>Scale the image using the specified factors.</comment>
+            <returntype>uk.co.martinpearman.b4a.squareup.picasso.RequestBuilder</returntype>
+            <parameter>
+                <name>FactorX</name>
+                <type>float</type>
+            </parameter>
+            <parameter>
+                <name>FactorY</name>
+                <type>float</type>
+            </parameter>
+        </method>
+        <method>
+            <name>Get</name>
+            <comment>Synchronously fulfill this request.</comment>
+            <returntype>anywheresoftware.b4a.objects.drawable.CanvasWrapper.BitmapWrapper</returntype>
+        </method>
+        <method>
+            <name>Resize</name>
+            <comment>Resize the image to the specified size in pixels.</comment>
+            <returntype>uk.co.martinpearman.b4a.squareup.picasso.RequestBuilder</returntype>
+            <parameter>
+                <name>TargetWidth</name>
+                <type>int</type>
+            </parameter>
+            <parameter>
+                <name>TargetHeight</name>
+                <type>int</type>
+            </parameter>
+        </method>
+        <method>
+            <name>ErrorDrawable</name>
+            <comment>Set a Drawable to be used if the requested image could not be loaded.</comment>
+            <returntype>uk.co.martinpearman.b4a.squareup.picasso.RequestBuilder</returntype>
+            <parameter>
+                <name>ErrorDrawable</name>
+                <type>android.graphics.drawable.Drawable</type>
+            </parameter>
+        </method>
+    </class>
+    <class>
+        <name>uk.co.martinpearman.b4a.squareup.picasso.Picasso</name>
+        <shortname>Picasso</shortname>
+        <objectwrapper>com.squareup.picasso.Picasso</objectwrapper>
+        <owner>process</owner>
+        <permission>android.permission.INTERNET</permission>
+        <method>
+            <name>LoadFile</name>
+            <comment>Start an image request using the specified image file path.</comment>
+            <returntype>uk.co.martinpearman.b4a.squareup.picasso.RequestBuilder</returntype>
+            <parameter>
+                <name>FilePath</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+        <method>
+            <name>Initialize</name>
+            <comment></comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>pBA</name>
+                <type>anywheresoftware.b4a.BA</type>
+            </parameter>
+        </method>
+        <method>
+            <name>CancelRequest</name>
+            <comment>Cancel any existing requests for the specified target ImageView1.</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>ImageView1</name>
+                <type>android.widget.ImageView</type>
+            </parameter>
+        </method>
+        <method>
+            <name>LoadUrl</name>
+            <comment>Start an image request using the specified URL.</comment>
+            <returntype>uk.co.martinpearman.b4a.squareup.picasso.RequestBuilder</returntype>
+            <parameter>
+                <name>Url</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+        <method>
+            <name>IsDebugging</name>
+            <comment>Returns True if debug display, logging, and statistics are enabled.</comment>
+            <returntype>boolean</returntype>
+        </method>
+        <method>
+            <name>CancelRequest2</name>
+            <comment>Cancel any existing requests for the specified Target instance.</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>Target1</name>
+                <type>com.squareup.picasso.Target</type>
+            </parameter>
+        </method>
+        <method>
+            <name>SetDebugging</name>
+            <comment>Set whether debug display, logging, and statistics are enabled.</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>Debugging</name>
+                <type>boolean</type>
+            </parameter>
+        </method>
+        <method>
+            <name>LoadResource</name>
+            <comment>Start an image request using the specified drawable resource.</comment>
+            <returntype>uk.co.martinpearman.b4a.squareup.picasso.RequestBuilder</returntype>
+            <parameter>
+                <name>ResourceName</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+        <method>
+            <name>IsInitialized</name>
+            <comment></comment>
+            <returntype>boolean</returntype>
+        </method>
+    </class>
+    <class>
+        <name>uk.co.martinpearman.b4a.squareup.picasso.DefaultTarget</name>
+        <shortname>DefaultTarget</shortname>
+        <objectwrapper>uk.co.martinpearman.b4a.squareup.picasso.DefaultTargetImpl</objectwrapper>
+        <owner>process</owner>
+        <event>Error(Tag As Object)</event>
+        <event>Success(Bitmap1 As Bitmap, Tag As Object)</event>
+        <method>
+            <name>Initialize</name>
+            <comment></comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>pBA</name>
+                <type>anywheresoftware.b4a.BA</type>
+            </parameter>
+            <parameter>
+                <name>EventName</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>Tag</name>
+                <type>java.lang.Object</type>
+            </parameter>
+        </method>
+        <method>
+            <name>IsInitialized</name>
+            <comment></comment>
+            <returntype>boolean</returntype>
+        </method>
+    </class>
+    <version>1.0</version>
+    <comment>Picasso is an open source library that manages the loading of images in your application.
+ http://square.github.io/picasso/
+ Licensed under the Apache License, version 2.0:
+ http://www.apache.org/licenses/LICENSE-2.0</comment>
+    <author>Martin Pearman</author>
+    <dependsOn>PicassoNative</dependsOn>
+</root>

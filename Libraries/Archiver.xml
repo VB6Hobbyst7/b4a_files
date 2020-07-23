@@ -1,0 +1,597 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root>
+    <doclet-version-NOT-library-version>1.02</doclet-version-NOT-library-version>
+    <class>
+        <name>flm.b4a.archiver.ArchiverForB4A</name>
+        <shortname>Archiver</shortname>
+        <owner>process</owner>
+        <method>
+            <name>UnGzip</name>
+            <comment>Uncompresses the given gzip archive.
+inDir &amp;amp; inArchiveName = location of the gzip archive
+outDir = destination folder</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>ba</name>
+                <type>anywheresoftware.b4a.BA</type>
+            </parameter>
+            <parameter>
+                <name>inDir</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>inArchiveName</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>outDir</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+        <method>
+            <name>ListZipEntries</name>
+            <comment>Lists the entries of the given zip archive.
+Returns a map with all the entries found.
+Map structure: key=filename, value=long array (0=uncompressed size, 1=compressed size, 2=CRC) 
+inDir &amp;amp; inArchiveName = location of the zip archive</comment>
+            <returntype>anywheresoftware.b4a.objects.collections.Map</returntype>
+            <parameter>
+                <name>ba</name>
+                <type>anywheresoftware.b4a.BA</type>
+            </parameter>
+            <parameter>
+                <name>inDir</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>inArchiveName</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+        <method>
+            <name>UnTar</name>
+            <comment>Unpacks the given tar archive.
+Returns the number of files copied into the destination folder.
+inDir &amp;amp; inArchiveName = location of the tar archive
+outDir = destination folder</comment>
+            <returntype>int</returntype>
+            <parameter>
+                <name>ba</name>
+                <type>anywheresoftware.b4a.BA</type>
+            </parameter>
+            <parameter>
+                <name>inDir</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>inArchiveName</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>outDir</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+        <method>
+            <name>TarFiles</name>
+            <comment>Packs the given files into a tar archive.
+Returns the number of files in the tar archive.
+inDir &amp;amp; inFileNames = location of the files to tar
+outDir &amp;amp; outArchiveName = location of the tar archive</comment>
+            <returntype>int</returntype>
+            <parameter>
+                <name>ba</name>
+                <type>anywheresoftware.b4a.BA</type>
+            </parameter>
+            <parameter>
+                <name>inDir</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>inFileNames</name>
+                <type>java.lang.String[]</type>
+            </parameter>
+            <parameter>
+                <name>outDir</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>outArchiveName</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+        <method>
+            <name>AsyncZipFolder</name>
+            <comment>Compresses the given folder and its subfolders into a zip archive (with a thread running in the background).
+inDir = folder to zip
+outDir &amp;amp; outArchiveName = location of the zip archive
+eventName = prefix of the "ZipProgression" and "ZipDone" events. An event is triggered for each processed file, and when the job ends. You can get these events with:
+&lt;I&gt;Sub eventName_ZipProgression(Count As Int, FileName As String)&lt;/I&gt;
+&lt;I&gt;Sub eventName_ZipDone(CompletedWithoutError As Boolean, NbOfFiles As Int)&lt;/I&gt;</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>ba</name>
+                <type>anywheresoftware.b4a.BA</type>
+            </parameter>
+            <parameter>
+                <name>inDir</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>outDir</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>outArchiveName</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>eventName</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+        <method>
+            <name>UnZip</name>
+            <comment>Uncompresses the given zip archive.
+Returns the number of files copied into the destination folder.
+inDir &amp;amp; inArchiveName = location of the zip archive
+outDir = destination folder
+eventName = prefix of the "UnZipProgression" event. An event is triggered for each file unzipped. You can get these events with:
+&lt;I&gt;Sub eventName_UnZipProgression(Count As Int, FileName As String)&lt;/I&gt;</comment>
+            <returntype>int</returntype>
+            <parameter>
+                <name>ba</name>
+                <type>anywheresoftware.b4a.BA</type>
+            </parameter>
+            <parameter>
+                <name>inDir</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>inArchiveName</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>outDir</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>eventName</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+        <method>
+            <name>AsyncGzip</name>
+            <comment>Compresses the given file into a gzip archive (with a thread running in the background).
+inDir &amp;amp; inFileName = location of the file to compress
+outDir = destination folder of the gzip archive
+eventName = prefix of the "GzipDone" event. When the job ends, an event is triggered. You can get it with:
+&lt;I&gt;Sub eventName_GzipDone(CompletedWithoutError As Boolean)&lt;/I&gt;</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>ba</name>
+                <type>anywheresoftware.b4a.BA</type>
+            </parameter>
+            <parameter>
+                <name>inDir</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>inFileName</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>outDir</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>eventName</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+        <method>
+            <name>AsyncUnTarGz</name>
+            <comment>Uncompresses the given tar.gz archive (with a thread running in the background).
+inDir &amp;amp; inArchiveName = location of the tar.gz archive
+outDir = destination folder
+eventName = prefix of the "UnTarGzDone" event. When the job ends, an event is triggered. You can get it with:
+&lt;I&gt;Sub eventName_UnTarGzDone(CompletedWithoutError As Boolean, NbOfFiles As Int)&lt;/I&gt;</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>ba</name>
+                <type>anywheresoftware.b4a.BA</type>
+            </parameter>
+            <parameter>
+                <name>inDir</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>inArchiveName</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>outDir</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>eventName</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+        <method>
+            <name>UnTarGz</name>
+            <comment>Uncompresses the given tar.gz archive.
+Returns the number of files copied into the destination folder.
+inDir &amp;amp; inArchiveName = location of the tar.gz archive
+outDir = destination folder</comment>
+            <returntype>int</returntype>
+            <parameter>
+                <name>ba</name>
+                <type>anywheresoftware.b4a.BA</type>
+            </parameter>
+            <parameter>
+                <name>inDir</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>inArchiveName</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>outDir</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+        <method>
+            <name>UnZipFiles</name>
+            <comment>Extracts the given files from a zip archive.
+Returns the number of files copied into the destination folder.
+inDir &amp;amp; inArchiveName = location of the zip archive
+outDir = destination folder
+outFileNames = names of the files to extract (with their relative path)
+eventName = prefix of the "UnZipProgression" event. An event is triggered for each file unzipped. You can get these events with:
+&lt;I&gt;Sub eventName_UnZipProgression(Count As Int, FileName As String)&lt;/I&gt;</comment>
+            <returntype>int</returntype>
+            <parameter>
+                <name>ba</name>
+                <type>anywheresoftware.b4a.BA</type>
+            </parameter>
+            <parameter>
+                <name>inDir</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>inArchiveName</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>outDir</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>outFileNames</name>
+                <type>java.lang.String[]</type>
+            </parameter>
+            <parameter>
+                <name>eventName</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+        <method>
+            <name>AsyncZipFiles</name>
+            <comment>Compresses the given files into a zip archive (with a thread running in the background).
+inDir &amp;amp; inFileNames = location of the files to zip
+outDir &amp;amp; outArchiveName = location of the zip archive
+eventName = prefix of the "ZipProgression" and "ZipDone" events. An event is triggered for each processed file, and when the job ends. You can get these events with:
+&lt;I&gt;Sub eventName_ZipProgression(Count As Int, FileName As String)&lt;/I&gt;
+&lt;I&gt;Sub eventName_ZipDone(CompletedWithoutError As Boolean, NbOfFiles As Int)&lt;/I&gt;</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>ba</name>
+                <type>anywheresoftware.b4a.BA</type>
+            </parameter>
+            <parameter>
+                <name>inDir</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>inFileNames</name>
+                <type>java.lang.String[]</type>
+            </parameter>
+            <parameter>
+                <name>outDir</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>outArchiveName</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>eventName</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+        <method>
+            <name>TarGzFolder</name>
+            <comment>Compresses the given folder and its subfolders into a tar.gz archive.
+Returns the number of files in the tar.gz archive.
+inDir = folder to compress
+outDir &amp;amp; outArchiveName = location of the tar.gz archive (don't add an extension to the archive name)</comment>
+            <returntype>int</returntype>
+            <parameter>
+                <name>ba</name>
+                <type>anywheresoftware.b4a.BA</type>
+            </parameter>
+            <parameter>
+                <name>inDir</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>outDir</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>outArchiveName</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+        <method>
+            <name>AsyncTarGzFolder</name>
+            <comment>Compresses the given folder and its subfolders into a tar.gz archive (with a thread running in the background).
+inDir = folder to compress
+outDir &amp;amp; outArchiveName = location of the tar.gz archive (don't add an extension to the outFileName)
+eventName = prefix of the "TarGzDone" event. When the job ends, an event is triggered. You can get it with:
+&lt;I&gt;Sub eventName_TarGzDone(CompletedWithoutError As Boolean, NbOfFiles As Int)&lt;/I&gt;</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>ba</name>
+                <type>anywheresoftware.b4a.BA</type>
+            </parameter>
+            <parameter>
+                <name>inDir</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>outDir</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>outArchiveName</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>eventName</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+        <method>
+            <name>Gzip</name>
+            <comment>Compresses the given file into a gzip archive.
+inDir &amp;amp; inFileName = location of the file to compress
+outDir = destination folder of the gzip archive</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>ba</name>
+                <type>anywheresoftware.b4a.BA</type>
+            </parameter>
+            <parameter>
+                <name>inDir</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>inFileName</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>outDir</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+        <method>
+            <name>ZipFolder</name>
+            <comment>Compresses the given folder and its subfolders into a zip archive.
+Returns the number of files in the zip archive.
+inDir = folder to zip
+outDir &amp;amp; outArchiveName = location of the zip archive
+eventName = prefix of the "ZipProgression" event. An event is triggered for each processed file. You can get these events with:
+&lt;I&gt;Sub eventName_ZipProgression(Count As Int, FileName As String)&lt;/I&gt;</comment>
+            <returntype>int</returntype>
+            <parameter>
+                <name>ba</name>
+                <type>anywheresoftware.b4a.BA</type>
+            </parameter>
+            <parameter>
+                <name>inDir</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>outDir</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>outArchiveName</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>eventName</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+        <method>
+            <name>AsyncUnZip</name>
+            <comment>Uncompresses the given zip archive (with a thread running in the background).
+inDir &amp;amp; inArchiveName = location of the zip archive
+outDir = destination folder
+eventName = prefix of the "UnZipProgression" and "UnZipDone" events. An event is triggered for each file unzipped, and when the job ends. You can get these events with:
+&lt;I&gt;Sub eventName_UnZipProgression(Count As Int, FileName As String)&lt;/I&gt;
+&lt;I&gt;Sub eventName_UnZipDone(CompletedWithoutError As Boolean, NbOfFiles As Int)&lt;/I&gt;</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>ba</name>
+                <type>anywheresoftware.b4a.BA</type>
+            </parameter>
+            <parameter>
+                <name>inDir</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>inArchiveName</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>outDir</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>eventName</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+        <method>
+            <name>ZipFiles</name>
+            <comment>Compresses the given files into a zip archive.
+Returns the number of files in the zip archive.
+inDir &amp;amp; inFileNames = location of the files to zip
+outDir &amp;amp; outArchiveName = location of the zip archive
+eventName = prefix of the "ZipProgression" event. An event is triggered for each processed file. You can get these events with:
+&lt;I&gt;Sub eventName_ZipProgression(Count As Int, FileName As String)&lt;/I&gt;</comment>
+            <returntype>int</returntype>
+            <parameter>
+                <name>ba</name>
+                <type>anywheresoftware.b4a.BA</type>
+            </parameter>
+            <parameter>
+                <name>inDir</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>inFileNames</name>
+                <type>java.lang.String[]</type>
+            </parameter>
+            <parameter>
+                <name>outDir</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>outArchiveName</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>eventName</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+        <method>
+            <name>TarFolder</name>
+            <comment>Packs the given folder and its subfolders into a tar archive.
+Returns the number of files in the tar archive.
+inDir = folder to tar
+outDir &amp;amp; outArchiveName = location of the tar archive</comment>
+            <returntype>int</returntype>
+            <parameter>
+                <name>ba</name>
+                <type>anywheresoftware.b4a.BA</type>
+            </parameter>
+            <parameter>
+                <name>inDir</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>outDir</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>outArchiveName</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+        <method>
+            <name>AsyncUnZipFiles</name>
+            <comment>Extracts the given files from a zip archive (with a thread running in the background).
+inDir &amp;amp; inArchiveName = location of the zip archive
+outDir = destination folder
+outFileNames = names of the files to extract (with their relative path)
+eventName = prefix of the "UnZipProgression" and "UnZipDone" events. An event is triggered for each file unzipped, and when the job ends. You can get these events with:
+&lt;I&gt;Sub eventName_UnZipProgression(Count As Int, FileName As String)&lt;/I&gt;
+&lt;I&gt;Sub eventName_UnZipDone(CompletedWithoutError As Boolean, NbOfFiles As Int)&lt;/I&gt;</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>ba</name>
+                <type>anywheresoftware.b4a.BA</type>
+            </parameter>
+            <parameter>
+                <name>inDir</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>inArchiveName</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>outDir</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>outFileNames</name>
+                <type>java.lang.String[]</type>
+            </parameter>
+            <parameter>
+                <name>eventName</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+        <method>
+            <name>NumberOfZipEntries</name>
+            <comment>Returns the number of files in the given zip archive.</comment>
+            <returntype>int</returntype>
+            <parameter>
+                <name>inDir</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>inArchiveName</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+        <method>
+            <name>AsyncUnGzip</name>
+            <comment>Uncompresses the given gzip archive (with a thread running in the background).
+inDir &amp;amp; inArchiveName = location of the gzip archive
+outDir = destination folder
+eventName = prefix of the "UnGzipDone" event. When the job ends, an event is triggered. You can get it with:
+&lt;I&gt;Sub eventName_UnGzipDone(CompletedWithoutError As Boolean)&lt;/I&gt;</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>ba</name>
+                <type>anywheresoftware.b4a.BA</type>
+            </parameter>
+            <parameter>
+                <name>inDir</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>inArchiveName</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>outDir</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>eventName</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+        <property>
+            <name>BufferSize</name>
+            <returntype>int</returntype>
+            <parameter>
+                <name>Size</name>
+                <type>int</type>
+            </parameter>
+            <comment>Gets/sets the buffer size. By default: 2048 bytes.</comment>
+        </property>
+    </class>
+    <version>1.1</version>
+    <author>Fr\u00e9d\u00e9ric Leneuf-Magaud</author>
+</root>

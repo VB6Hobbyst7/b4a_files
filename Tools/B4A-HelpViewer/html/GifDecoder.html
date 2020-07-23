@@ -1,0 +1,62 @@
+<HTML>
+<HEAD>
+<META http-equiv="Content-Type" content="text/html; charset=utf-8">
+<TITLE>
+Basic4android - GifDecoder
+</TITLE>
+<link rel="stylesheet" type="text/css" href="images/help.css" />
+
+</HEAD>
+
+<BODY BGCOLOR="white" leftmargin="50">
+<a name="top"/>
+<h1>GifDecoder</h1>
+
+</h5>The GifDecoder library provides a GifDecoder object that provides the facility to<br/>extract the individual frames and associated delay information from an animated GIF file.<br/><br/>No copyright is asserted on the source or object code of this library. It  may be used for<br/>any purpose, however, refer to the Unisys LZW patent for any additional restrictions.<br/><br/>The decoder was originally written as a component of a bigger application by Kevin Weiner of<br/>FM Software using an LZW decoder adapted from John Cristy's ImageMagick. Performance greatly<br/>improved, some bugs squashed, adapted for use with Basic4ppc and further translated into Java<br/>for use in Basic4android applications by Andrew Graham.
+<h4>List of types:</h4>
+<a href='#gifdecoder'>GifDecoder</a><br/>
+<hr/>
+<h3><u><a name='gifdecoder'>GifDecoder</a></u></h3>
+</h5>Processing larger animated GIFs with many frames can be a slow process on a device.<br/>Also such files may occupy a large amount of memory as each individual frame is saved for<br/>display as a bitmap when the GIF is loaded. Invoking Load will dispose of any existing frame<br/>bitmaps. If it is required to keep any of those bitmaps they should be copied, not assigned,<br/>into another bitmap.<br/>This is an 'Activity Object', it cannot be declared under Sub Process_Globals.
+<br/>
+
+<h4>Events:</h4>
+None
+<h4>Members:</h4><br/>
+<img src='images/15.png'/>&nbsp;&nbsp;<span style="color: #000000;"><a href='#gifdecoder_delay'><b>Delay</b></a> (frame </span><span style="color: #0000FF;">As</span><span style="color: #000000;"> </span><span style="color: #008B8B;">Int</span><span style="color: #000000;">) </span><span style="color: #0000FF;">As</span><span style="color: #000000;"> </span><span style="color: #008B8B;">Int</span><br/><br/>
+<img src='images/15.png'/>&nbsp;&nbsp;<span style="color: #000000;"><a href='#gifdecoder_disposeframes'><b>DisposeFrames</b></a></span><br/><br/>
+<img src='images/15.png'/>&nbsp;&nbsp;<span style="color: #000000;"><a href='#gifdecoder_frame'><b>Frame</b></a> (frame </span><span style="color: #0000FF;">As</span><span style="color: #000000;"> </span><span style="color: #008B8B;">Int</span><span style="color: #000000;">) </span><span style="color: #0000FF;">As</span><span style="color: #000000;"> android.graphics.Bitmap</span><br/><br/>
+<img src='images/19.png'/>&nbsp;&nbsp;<span style="color: #000000;"><a href='#gifdecoder_framecount'><b>FrameCount</b></a> </span><span style="color: #0000FF;">As</span><span style="color: #000000;"> </span><span style="color: #008B8B;">Int</span><span style="color: #000000;">  [read only]</span><br/><br/>
+<img src='images/19.png'/>&nbsp;&nbsp;<span style="color: #000000;"><a href='#gifdecoder_frameheight'><b>FrameHeight</b></a> </span><span style="color: #0000FF;">As</span><span style="color: #000000;"> </span><span style="color: #008B8B;">Int</span><span style="color: #000000;">  [read only]</span><br/><br/>
+<img src='images/19.png'/>&nbsp;&nbsp;<span style="color: #000000;"><a href='#gifdecoder_framewidth'><b>FrameWidth</b></a> </span><span style="color: #0000FF;">As</span><span style="color: #000000;"> </span><span style="color: #008B8B;">Int</span><span style="color: #000000;">  [read only]</span><br/><br/>
+<img src='images/15.png'/>&nbsp;&nbsp;<span style="color: #000000;"><a href='#gifdecoder_load'><b>Load</b></a> (dir </span><span style="color: #0000FF;">As</span><span style="color: #000000;"> </span><span style="color: #008B8B;">String</span><span style="color: #000000;">, gifname </span><span style="color: #0000FF;">As</span><span style="color: #000000;"> </span><span style="color: #008B8B;">String</span><span style="color: #000000;">)</span><br/><br/>
+<img src='images/19.png'/>&nbsp;&nbsp;<span style="color: #000000;"><a href='#gifdecoder_loopcount'><b>LoopCount</b></a> </span><span style="color: #0000FF;">As</span><span style="color: #000000;"> </span><span style="color: #008B8B;">Int</span><span style="color: #000000;">  [read only]</span><br/><br/>
+<img src='images/15.png'/>&nbsp;&nbsp;<span style="color: #000000;"><a href='#gifdecoder_saveframe'><b>SaveFrame</b></a> (frame </span><span style="color: #0000FF;">As</span><span style="color: #000000;"> </span><span style="color: #008B8B;">Int</span><span style="color: #000000;">, dir </span><span style="color: #0000FF;">As</span><span style="color: #000000;"> </span><span style="color: #008B8B;">String</span><span style="color: #000000;">, filename </span><span style="color: #0000FF;">As</span><span style="color: #000000;"> </span><span style="color: #008B8B;">String</span><span style="color: #000000;">, format </span><span style="color: #0000FF;">As</span><span style="color: #000000;"> </span><span style="color: #008B8B;">String</span><span style="color: #000000;">, quality </span><span style="color: #0000FF;">As</span><span style="color: #000000;"> </span><span style="color: #008B8B;">Int</span><span style="color: #000000;">)</span><br/><br/>
+<img src='images/19.png'/>&nbsp;&nbsp;<span style="color: #000000;"><a href='#gifdecoder_version'><b>Version</b></a> </span><span style="color: #0000FF;">As</span><span style="color: #000000;"> </span><span style="color: #008B8B;">Double</span><span style="color: #000000;">  [read only]</span><br/><br/>
+
+<h4>Members description:</h4>
+<a name='gifdecoder_delay'/>
+<h5><img src='images/15.png'/>
+<span style="color: #000000;">Delay (frame </span><span style="color: #0000FF;">As</span><span style="color: #000000;"> </span><span style="color: #008B8B;">Int</span><span style="color: #000000;">) </span><span style="color: #0000FF;">As</span><span style="color: #000000;"> </span><span style="color: #008B8B;">Int</span></h5>Returns the delay time, in milliseconds, for the frame number specified.<br/>This time is the period for which the frame should be displayed before advancing<br/>to the next frame.<a name='gifdecoder_disposeframes'/>
+<h5><img src='images/15.png'/>
+<span style="color: #000000;">DisposeFrames</span></h5>Disposes of all the frame bitmaps of any presently loaded GIF file.<br/>This may be necessary for memory management purposes on a device.<a name='gifdecoder_frame'/>
+<h5><img src='images/15.png'/>
+<span style="color: #000000;">Frame (frame </span><span style="color: #0000FF;">As</span><span style="color: #000000;"> </span><span style="color: #008B8B;">Int</span><span style="color: #000000;">) </span><span style="color: #0000FF;">As</span><span style="color: #000000;"> android.graphics.Bitmap</span></h5>Returns a Bitmap containing the specified frame.<a name='gifdecoder_framecount'/>
+<h5><img src='images/19.png'/>
+<span style="color: #000000;">FrameCount </span><span style="color: #0000FF;">As</span><span style="color: #000000;"> </span><span style="color: #008B8B;">Int</span><span style="color: #000000;">  [read only]</span></h5>Returns the number of frames in the last GIF loaded.<a name='gifdecoder_frameheight'/>
+<h5><img src='images/19.png'/>
+<span style="color: #000000;">FrameHeight </span><span style="color: #0000FF;">As</span><span style="color: #000000;"> </span><span style="color: #008B8B;">Int</span><span style="color: #000000;">  [read only]</span></h5>Returns the height of each frame in the last GIF loaded.<a name='gifdecoder_framewidth'/>
+<h5><img src='images/19.png'/>
+<span style="color: #000000;">FrameWidth </span><span style="color: #0000FF;">As</span><span style="color: #000000;"> </span><span style="color: #008B8B;">Int</span><span style="color: #000000;">  [read only]</span></h5>Returns the width of each frame in the last GIF loaded.<a name='gifdecoder_load'/>
+<h5><img src='images/15.png'/>
+<span style="color: #000000;">Load (dir </span><span style="color: #0000FF;">As</span><span style="color: #000000;"> </span><span style="color: #008B8B;">String</span><span style="color: #000000;">, gifname </span><span style="color: #0000FF;">As</span><span style="color: #000000;"> </span><span style="color: #008B8B;">String</span><span style="color: #000000;">)</span></h5>Loads the GIF from the pathname specified and decodes the individual frames.<a name='gifdecoder_loopcount'/>
+<h5><img src='images/19.png'/>
+<span style="color: #000000;">LoopCount </span><span style="color: #0000FF;">As</span><span style="color: #000000;"> </span><span style="color: #008B8B;">Int</span><span style="color: #000000;">  [read only]</span></h5>Returns the iteration count, if one was specified, in the last GIF loaded otherwise<br/>it returns 1. The iteration count specifies how many times the animation should be displayed.<br/>A count of 0 means repeat indefinitely.<a name='gifdecoder_saveframe'/>
+<h5><img src='images/15.png'/>
+<span style="color: #000000;">SaveFrame (frame </span><span style="color: #0000FF;">As</span><span style="color: #000000;"> </span><span style="color: #008B8B;">Int</span><span style="color: #000000;">, dir </span><span style="color: #0000FF;">As</span><span style="color: #000000;"> </span><span style="color: #008B8B;">String</span><span style="color: #000000;">, filename </span><span style="color: #0000FF;">As</span><span style="color: #000000;"> </span><span style="color: #008B8B;">String</span><span style="color: #000000;">, format </span><span style="color: #0000FF;">As</span><span style="color: #000000;"> </span><span style="color: #008B8B;">String</span><span style="color: #000000;">, quality </span><span style="color: #0000FF;">As</span><span style="color: #000000;"> </span><span style="color: #008B8B;">Int</span><span style="color: #000000;">)</span></h5>Saves a frame to to the file and path specified in the format specified.<br/>Note that a file extension is not automatically added and must be specified<br/>as part of the filename. The file formats are "J" for jpg and "P" for png.<br/>Anything else is saved as jpg. Quality is 0 to 100 and is only relevant for jpgs<br/>0 meaning compress for small size, 100 meaning compress for max quality.<br/>PNG which is lossless, will ignore the quality setting.<a name='gifdecoder_version'/>
+<h5><img src='images/19.png'/>
+<span style="color: #000000;">Version </span><span style="color: #0000FF;">As</span><span style="color: #000000;"> </span><span style="color: #008B8B;">Double</span><span style="color: #000000;">  [read only]</span></h5>Returns the version number of the library.
+<hr/>
+<a href="#top">Top</a>
+</body>
+</html>

@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root>
+    <doclet-version-NOT-library-version>1.02</doclet-version-NOT-library-version>
+    <class>
+        <name>com.rootsoft.rslocationmanager.RSProximityAlert</name>
+        <shortname>RSProximityAlert</shortname>
+        <objectwrapper>android.location.LocationManager</objectwrapper>
+        <owner>process</owner>
+        <permission>android.permission.ACCESS_COARSE_LOCATION</permission>
+        <permission>android.permission.ACCESS_FINE_LOCATION</permission>
+        <method>
+            <name>Initialize</name>
+            <comment>Initializes this RSProximityAlert library</comment>
+            <returntype>void</returntype>
+        </method>
+        <method>
+            <name>RemoveProximityAlert</name>
+            <comment>Removes the Proximity Alert.</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>intent</name>
+                <type>android.app.PendingIntent</type>
+            </parameter>
+        </method>
+        <method>
+            <name>AddProximityAlert</name>
+            <comment>Set a proximity alert for the location given by the position (latitude, longitude) and the given radius.
+ 
+ When the device detects that it has entered or exited the area surrounding the location, 
+ the given PendingIntent will be used to create an Intent to be fired.
+ The fired Intent will have a boolean extra added with key KEY_PROXIMITY_ENTERING. 
+ If the value is true, the device is entering the proximity region; if false, it is exiting.
+ 
+ Returns the pending intent. Save this intent in a map with the Eventid if you want to remove this ProximityAlert later.</comment>
+            <returntype>android.app.PendingIntent</returntype>
+            <parameter>
+                <name>Longitude</name>
+                <type>double</type>
+            </parameter>
+            <parameter>
+                <name>Latitude</name>
+                <type>double</type>
+            </parameter>
+            <parameter>
+                <name>Radius</name>
+                <type>float</type>
+            </parameter>
+            <parameter>
+                <name>Expiration</name>
+                <type>long</type>
+            </parameter>
+            <parameter>
+                <name>EventID</name>
+                <type>long</type>
+            </parameter>
+            <parameter>
+                <name>RequestCode</name>
+                <type>int</type>
+            </parameter>
+        </method>
+        <method>
+            <name>IsInitialized</name>
+            <comment></comment>
+            <returntype>boolean</returntype>
+        </method>
+        <field>
+            <name>PROXIMITY_INTENT_ACTION</name>
+            <comment></comment>
+            <returntype>java.lang.String</returntype>
+        </field>
+        <field>
+            <name>EVENT_ID_INTENT_EXTRA</name>
+            <comment></comment>
+            <returntype>java.lang.String</returntype>
+        </field>
+        <field>
+            <name>KEY_PROXIMITY_ENTERING</name>
+            <comment></comment>
+            <returntype>java.lang.String</returntype>
+        </field>
+    </class>
+    <version>1.0</version>
+    <author>XverhelstX</author>
+</root>

@@ -1,0 +1,221 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root>
+    <doclet-version-NOT-library-version>1.00</doclet-version-NOT-library-version>
+    <class>
+        <name>com.AB.ABSimMetrics.ABSimMetrics</name>
+        <shortname>ABSimMetrics</shortname>
+        <comment>A library to do 'fuzzy' matches. It looks for the similarity between two strings
+ or searches for the best match of a string in a list of strings.
+ 
+ More information on the algorithms can be found at &lt;link&gt;Algorithms|http://staffwww.dcs.shef.ac.uk/people/S.Chapman/simmetrics.html&lt;/link&gt;
+ 
+ Implemented algorithms:
+ 
+ CHAPMAN_MATCHING_SOUNDEX
+ CHAPMAN_MEAN_LENGTH
+ CHAPMAN_ORDERED_NAME_COMPOUND_SIMILARITY
+ JARO
+ JARO_WINKLER
+ LEVENSHTEIN_DISTANCE
+ MONGE_ELKAN
+ NEEDLEMAN_WUNCH
+ QGRAMS_DISTANCE
+ SMITH_WATERMAN
+ SMITH_WATERMAN_GOTOH
+ SMITH_WATERMAN_GOTOH_WINDOWED_AFFINE
+ SOUNDEX
+ TAGLINK
+ TAGLINK_TOKEN</comment>
+        <owner>process</owner>
+        <method>
+            <name>ABGetSimilarity</name>
+            <comment>gives the percentage a string matches with another string using a specific algorithm.
+ 
+ Returns an float (percentage)
+ 
+ Example:&lt;code&gt;
+ 
+ dim perc as float
+ perc = ABGetSimilarity("Albrecht", "Albert", sim.LEVENSHTEIN_DISTANCE)
+ 
+ msgbox (perc, "")
+ &lt;/code&gt;</comment>
+            <returntype>float</returntype>
+            <parameter>
+                <name>string1</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>string2</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>algorithm</name>
+                <type>int</type>
+            </parameter>
+        </method>
+        <method>
+            <name>ABFindBestMatchAll</name>
+            <comment>Finds the best match of a string in a list of strings using all available
+ algorithms.
+ 
+ Returns an ABFoundMatch object
+ 
+ Example:&lt;code&gt;
+ Dim mat as ABFoundMatch
+ Dim mylist(3) as String
+ 
+ mylist(0) = "Alain"
+ mylist(1) = "Aldo"
+ mylist(2) = "Albrecht"
+ 
+ mat = ABFindBestMatchAll(myList, "Albert")
+ 
+ msgbox (mat.FoundString, "")
+ &lt;/code&gt;</comment>
+            <returntype>com.AB.ABSimMetrics.ABSimMetrics.ABFoundMatch</returntype>
+            <parameter>
+                <name>myList</name>
+                <type>java.lang.String[]</type>
+            </parameter>
+            <parameter>
+                <name>SearchTerm</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+        <method>
+            <name>ABFindBestMatch</name>
+            <comment>Finds the best match of a string in a list of strings using a specific algorithm.
+ 
+ Returns an ABFoundMatch object
+ 
+ Example:&lt;code&gt;
+ Dim mat as ABFoundMatch
+ Dim mylist(3) as String
+ 
+ mylist(0) = "Alain"
+ mylist(1) = "Aldo"
+ mylist(2) = "Albrecht"
+ 
+ mat = ABFindBestMatch(myList, "Albert", sim.LEVENSHTEIN_DISTANCE)
+ 
+ msgbox (mat.FoundString, "")
+ &lt;/code&gt;</comment>
+            <returntype>com.AB.ABSimMetrics.ABSimMetrics.ABFoundMatch</returntype>
+            <parameter>
+                <name>myList</name>
+                <type>java.lang.String[]</type>
+            </parameter>
+            <parameter>
+                <name>SearchTerm</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>algorithm</name>
+                <type>int</type>
+            </parameter>
+        </method>
+        <property>
+            <name>JARO</name>
+            <returntype>int</returntype>
+            <comment></comment>
+        </property>
+        <property>
+            <name>SOUNDEX</name>
+            <returntype>int</returntype>
+            <comment></comment>
+        </property>
+        <property>
+            <name>SMITH_WATERMAN</name>
+            <returntype>int</returntype>
+            <comment></comment>
+        </property>
+        <property>
+            <name>JARO_WINKLER</name>
+            <returntype>int</returntype>
+            <comment></comment>
+        </property>
+        <property>
+            <name>NEEDLEMAN_WUNCH</name>
+            <returntype>int</returntype>
+            <comment></comment>
+        </property>
+        <property>
+            <name>QGRAMS_DISTANCE</name>
+            <returntype>int</returntype>
+            <comment></comment>
+        </property>
+        <property>
+            <name>TAGLINK</name>
+            <returntype>int</returntype>
+            <comment></comment>
+        </property>
+        <property>
+            <name>LEVENSHTEIN_DISTANCE</name>
+            <returntype>int</returntype>
+            <comment></comment>
+        </property>
+        <property>
+            <name>SMITH_WATERMAN_GOTOH_WINDOWED_AFFINE</name>
+            <returntype>int</returntype>
+            <comment></comment>
+        </property>
+        <property>
+            <name>CHAPMAN_MATCHING_SOUNDEX</name>
+            <returntype>int</returntype>
+            <comment></comment>
+        </property>
+        <property>
+            <name>CHAPMAN_MEAN_LENGTH</name>
+            <returntype>int</returntype>
+            <comment></comment>
+        </property>
+        <property>
+            <name>TAGLINK_TOKEN</name>
+            <returntype>int</returntype>
+            <comment></comment>
+        </property>
+        <property>
+            <name>SMITH_WATERMAN_GOTOH</name>
+            <returntype>int</returntype>
+            <comment></comment>
+        </property>
+        <property>
+            <name>MONGE_ELKAN</name>
+            <returntype>int</returntype>
+            <comment></comment>
+        </property>
+        <property>
+            <name>CHAPMAN_ORDERED_NAME_COMPOUND_SIMILARITY</name>
+            <returntype>int</returntype>
+            <comment></comment>
+        </property>
+    </class>
+    <class>
+        <name>com.AB.ABSimMetrics.ABSimMetrics.ABFoundMatch</name>
+        <shortname>ABFoundMatch</shortname>
+        <owner>process</owner>
+        <property>
+            <name>Percentage</name>
+            <returntype>float</returntype>
+            <comment></comment>
+        </property>
+        <property>
+            <name>UsedAlgorithmName</name>
+            <returntype>java.lang.String</returntype>
+            <comment></comment>
+        </property>
+        <property>
+            <name>UsedAlgorithm</name>
+            <returntype>int</returntype>
+            <comment></comment>
+        </property>
+        <property>
+            <name>FoundString</name>
+            <returntype>java.lang.String</returntype>
+            <comment></comment>
+        </property>
+    </class>
+    <version>1.0</version>
+    <author>Alain Bailleul</author>
+</root>

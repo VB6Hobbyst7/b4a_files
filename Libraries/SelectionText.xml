@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <doclet-version-NOT-library-version>1.00</doclet-version-NOT-library-version>
+  <dependsOn>richstring</dependsOn>
+  <class>
+    <name>b4a.example.selectiontext</name>
+    <shortname>SelectionText</shortname>
+    <owner>process</owner>
+    <method>
+      <name>IsInitialized</name>
+      <comment>Tests whether the object has been initialized.</comment>
+      <returntype>boolean</returntype>
+    </method>
+    <method>
+      <name DesignerName="asView">_asview</name>
+      <comment>apply selection string on view
+View can Label or Editext</comment>
+      <returntype>String</returntype>
+      <parameter>
+        <name>View</name>
+        <type>anywheresoftware.b4a.objects.ConcreteViewWrapper</type>
+      </parameter>
+    </method>
+    <method>
+      <name DesignerName="Class_Globals">_class_globals</name>
+      <returntype>String</returntype>
+    </method>
+    <method>
+      <name DesignerName="FindString">_findstring</name>
+      <comment>Find string from View and Save it for next step</comment>
+      <returntype>String</returntype>
+      <parameter>
+        <name>Target</name>
+        <type>String</type>
+      </parameter>
+      <parameter>
+        <name>Find</name>
+        <type>String</type>
+      </parameter>
+    </method>
+    <method>
+      <name DesignerName="Initialize">_initialize</name>
+      <comment>Version 1.0.0</comment>
+      <returntype>String</returntype>
+      <parameter>
+        <name>ba</name>
+        <type>anywheresoftware.b4a.BA</type>
+      </parameter>
+    </method>
+    <method>
+      <name DesignerName="SelectTextBackground">_selecttextbackground</name>
+      <comment>change selection text background color</comment>
+      <returntype>String</returntype>
+      <parameter>
+        <name>Color</name>
+        <type>int</type>
+      </parameter>
+    </method>
+    <method>
+      <name DesignerName="SelectTextFontName">_selecttextfontname</name>
+      <comment>change selection string fontname</comment>
+      <returntype>String</returntype>
+      <parameter>
+        <name>FontName</name>
+        <type>String</type>
+      </parameter>
+    </method>
+    <method>
+      <name DesignerName="SelectTextForeColor">_selecttextforecolor</name>
+      <comment>change selection text font color</comment>
+      <returntype>String</returntype>
+      <parameter>
+        <name>Color</name>
+        <type>int</type>
+      </parameter>
+    </method>
+    <method>
+      <name DesignerName="SelectTextScale">_selecttextscale</name>
+      <comment>change selection text font size</comment>
+      <returntype>String</returntype>
+      <parameter>
+        <name>Scale</name>
+        <type>float</type>
+      </parameter>
+    </method>
+    <method>
+      <name DesignerName="SelectTextStrikethrough">_selecttextstrikethrough</name>
+      <comment>set line in middle string</comment>
+      <returntype>String</returntype>
+    </method>
+    <method>
+      <name DesignerName="SelectTextStyle">_selecttextstyle</name>
+      <comment>set style on string
+Style is :
+STYLE_BOLD
+STYLE_BOLD_ITALIC
+STYLE_ITALIC
+STYLE_NORMAL</comment>
+      <returntype>String</returntype>
+      <parameter>
+        <name>Style</name>
+        <type>int</type>
+      </parameter>
+    </method>
+    <method>
+      <name DesignerName="SelectTextSubscript">_selecttextsubscript</name>
+      <comment>move selection string to down</comment>
+      <returntype>String</returntype>
+    </method>
+    <method>
+      <name DesignerName="SelectTextSuperscript">_selecttextsuperscript</name>
+      <comment>move selection string to up</comment>
+      <returntype>String</returntype>
+    </method>
+    <method>
+      <name DesignerName="SelectTextUnderscore">_selecttextunderscore</name>
+      <comment>set line under string</comment>
+      <returntype>String</returntype>
+      <parameter>
+        <name>Style</name>
+        <type>int</type>
+      </parameter>
+    </method>
+    <field>
+      <name DesignerName="STYLE_BOLD">_style_bold</name>
+      <returntype>int</returntype>
+    </field>
+    <field>
+      <name DesignerName="STYLE_BOLD_ITALIC">_style_bold_italic</name>
+      <returntype>int</returntype>
+    </field>
+    <field>
+      <name DesignerName="STYLE_ITALIC">_style_italic</name>
+      <returntype>int</returntype>
+    </field>
+    <field>
+      <name DesignerName="STYLE_NORMAL">_style_normal</name>
+      <returntype>int</returntype>
+    </field>
+  </class>
+  <version>1</version>
+</root>

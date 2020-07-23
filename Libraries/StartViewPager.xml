@@ -1,0 +1,272 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <doclet-version-NOT-library-version>1.00</doclet-version-NOT-library-version>
+  <dependsOn>ahviewpager</dependsOn>
+  <dependsOn>smartstring</dependsOn>
+  <dependsOn>rippleeffect</dependsOn>
+  <dependsOn>android-support-v4</dependsOn>
+  <dependsOn>stringutils</dependsOn>
+  <dependsOn>richstring</dependsOn>
+  <dependsOn>javaobject</dependsOn>
+  <class>
+    <name>b4a.hitexroid.b4a.startviewpager</name>
+    <shortname>StartViewPager</shortname>
+    <owner>activity</owner>
+    <event>Click</event>
+    <event>LongClick</event>
+    <method>
+      <name DesignerName="AddText_And_Pictures">_addtext_and_pictures</name>
+      <comment>
+شما باید به تعداد صفحه ای که ایجاد کرده اید (عنوان,توضیحات و عکس) اضافه کنید
+
+مثلاً در قسمت اینشیالایز عدد 2 را وارد کرده اید
+
+Start.Initialize(Activity,Me,"Start",2)
+
+پس باید 2 عنوان , 2 توضیح و 2 عکس را وارد کنید
+
+برای این کار میتوانید لیستی را جدا تهیه کنید مانند زیر
+
+Dim List1 As List
+List1.Initialize
+List1.AddAll(Array As String("عنوان اول","عنوان دوم"))
+
+و اسم لیست رو مستقیماً بیارید
+
+ Start.AddText_And_Pictures(List1,List2,List3)
+
+و یا اینکه همون اول توی کتابخونه بنویسیدشون
+
+Start.AddText_And_Pictures(Array As String("عنوان اول","عنوان دوم"),Array As String("توضیح اول","توضیح دوم"),Array As String("عکس اول","عکس دوم"))
+
+ برای وارد کردن عکس ها باید اسمشون رو + پسوندشون نوشت برای مثال
+
+ "1.png" , "2.png"
+
+	عکس هایی که وارد میکنید باید رزولوشن 128 در 128 داشته باشند تا هم کیفیت خوبی را ایجاد کنند هم متناسب با رزولوشن دایره باشند
+
+</comment>
+      <returntype>String</returntype>
+      <parameter>
+        <name>Title</name>
+        <type>anywheresoftware.b4a.objects.collections.List</type>
+      </parameter>
+      <parameter>
+        <name>Content</name>
+        <type>anywheresoftware.b4a.objects.collections.List</type>
+      </parameter>
+      <parameter>
+        <name>Pictures</name>
+        <type>anywheresoftware.b4a.objects.collections.List</type>
+      </parameter>
+    </method>
+    <method>
+      <name DesignerName="Build">_build</name>
+      <comment>
+	Start.Build
+
+	در پایان تنظیمات کتابخانه حتما (بیلد) را بگذارید تا تنظیمات اعمال شود و در غیر این صورت با خطا مواجه خواهید شد
+
+	پس ابتدا اینیشیالایز رو انجام میدید بعد وارد کردن متن و عکس و تنظیمات و رنگ و فونت و در آخر (بیلد) رو قرار میدید
+
+
+برای مثال :
+
+Dim Start As StartViewPager
+Start.Initialize(Activity,Me,"Start",3)
+Start.AddText_And_Pictures(Array As String("عنوان اول","عنوان دوم"),Array As String("توضیح اول","توضیح دوم"),Array As String("0.png","1.png"))
+Start.Build
+
+
+
+</comment>
+      <returntype>String</returntype>
+    </method>
+    <method>
+      <name DesignerName="ButtonSetting">_buttonsetting</name>
+      <comment>
+	Start.ButtonSetting("Click Me",Colors.Blue,18,Colors.White,"iran.ttf")
+
+	اول از همه فونت مورد نظرتون رو توی بیسیک وارد کنید
+	اسم فونت باید با پسوند وارد شود مثل
+ iran.ttf
+
+	نکته :
+
+	چنانچه نمیخواهید از فونت خاصی استفاده کنید آن قسمت را خالی بگذارید
+
+	Start.ButtonSetting("Click Me",Colors.Blue,18,Colors.White,"")
+
+</comment>
+      <returntype>String</returntype>
+      <parameter>
+        <name>ButtonText</name>
+        <type>String</type>
+      </parameter>
+      <parameter>
+        <name>ButtonColor</name>
+        <type>int</type>
+      </parameter>
+      <parameter>
+        <name>ButtonTextSize</name>
+        <type>int</type>
+      </parameter>
+      <parameter>
+        <name>ButtonTextColor</name>
+        <type>int</type>
+      </parameter>
+      <parameter>
+        <name>ButtonTextFont</name>
+        <type>String</type>
+      </parameter>
+    </method>
+    <method>
+      <name DesignerName="CircleColors">_circlecolors</name>
+      <comment>
+چنانچه میخواهید دایره ی هر صفحه رنگی متفاوت داشته باشد
+
+به تعداد صفحه ای که در اینیشیالایز ایجاد کردید باید رنگ وارد کنید
+
+نه کمتر و نه بیشتر
+
+Dim Start As StartViewPager
+Start.Initialize(Activity,Me,"Start",3)
+Start.CircleColors(Array As Int(Colors.White,Colors.Gray,Colors.Blue))
+
+</comment>
+      <returntype>String</returntype>
+      <parameter>
+        <name>CircleColor</name>
+        <type>anywheresoftware.b4a.objects.collections.List</type>
+      </parameter>
+    </method>
+    <method>
+      <name DesignerName="IndicatorsColor">_indicatorscolor</name>
+      <returntype>String</returntype>
+      <parameter>
+        <name>ActiveColor</name>
+        <type>int</type>
+      </parameter>
+      <parameter>
+        <name>InActiveColor</name>
+        <type>int</type>
+      </parameter>
+    </method>
+    <method>
+      <name DesignerName="Initialize">_initialize</name>
+      <comment>
+ Activity = Activity or a Panel
+ Module = Me
+ Event = Event For _Click Or _LongClick
+ NumberOfPages = تعداد صفحاتی که نیاز دارید ( نکته : بیشتر از 13 صفحه نمیتوانید اضافه کنید ).ء
+
+For Example :
+
+ Dim Start As StartViewPager
+ Start.Initialize(Activity,Me,"Start",3)
+
+برای زیبا تر شدن و چینش بهتر محتوا ، بهتره برنامه رو تمام صفحه کنیم و از تایتل استفاده نکنیم
+
+ Created By Hitexroid I.N.C
+
+ sadeq.hitex@gmail.com
+
+ساخته شده توسط صادق نامنی
+
+هایتکسروید
+
+</comment>
+      <returntype>String</returntype>
+      <parameter>
+        <name>ba</name>
+        <type>anywheresoftware.b4a.BA</type>
+      </parameter>
+      <parameter>
+        <name>Activity</name>
+        <type>anywheresoftware.b4a.objects.PanelWrapper</type>
+      </parameter>
+      <parameter>
+        <name>Module</name>
+        <type>Object</type>
+      </parameter>
+      <parameter>
+        <name>Event</name>
+        <type>String</type>
+      </parameter>
+      <parameter>
+        <name>NumberOfPages</name>
+        <type>int</type>
+      </parameter>
+    </method>
+    <method>
+      <name DesignerName="PageColors">_pagecolors</name>
+      <comment>
+به صورت پیشفرض سفید هستند
+
+چنانچه میخواهید هر صفحه رنگی متفاوت داشته باشد
+
+به تعداد صفحه ای که در اینیشیالایز ایجاد کردید باید رنگ وارد کنید
+
+نه کمتر و نه بیشتر
+
+Dim Start As StartViewPager
+Start.Initialize(Activity,Me,"Start",3)
+Start.PageColors(Array As Int(Colors.White,Colors.Gray,Colors.Blue))
+
+</comment>
+      <returntype>String</returntype>
+      <parameter>
+        <name>PageColor</name>
+        <type>anywheresoftware.b4a.objects.collections.List</type>
+      </parameter>
+    </method>
+    <method>
+      <name DesignerName="TextSetting">_textsetting</name>
+      <comment>
+Start.TextSetting(Colors.Black,20,"iran.ttf",Colors.DarkGray,17,"arial.ttf")
+
+	اول از همه فونت های مورد نظرتون رو توی بیسیک وارد کنید
+	اسم فونت باید با پسوند وارد شود مثل
+ iran.ttf
+
+	نکته :
+	چنانچه نمیخواهید از فونت خاصی استفاده کنید آن قسمت را خالی بگذارید
+
+	Start.TextSetting(Colors.Black,20,"",Colors.DarkGray,17,"")
+
+
+</comment>
+      <returntype>String</returntype>
+      <parameter>
+        <name>TitleColor</name>
+        <type>int</type>
+      </parameter>
+      <parameter>
+        <name>TitleSize</name>
+        <type>int</type>
+      </parameter>
+      <parameter>
+        <name>TitleFont</name>
+        <type>String</type>
+      </parameter>
+      <parameter>
+        <name>ContentColor</name>
+        <type>int</type>
+      </parameter>
+      <parameter>
+        <name>ContentSize</name>
+        <type>int</type>
+      </parameter>
+      <parameter>
+        <name>ContentFont</name>
+        <type>String</type>
+      </parameter>
+    </method>
+    <field>
+      <name DesignerName="Ripple">_ripple</name>
+      <returntype>boolean</returntype>
+    </field>
+  </class>
+  <version>1.8</version>
+  <author>Hitexroid I.N.C</author>
+</root>

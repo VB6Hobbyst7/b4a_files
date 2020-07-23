@@ -1,0 +1,110 @@
+<HTML>
+<HEAD>
+<META http-equiv="Content-Type" content="text/html; charset=utf-8">
+<TITLE>
+Basic4android - AdMob
+</TITLE>
+<link rel="stylesheet" type="text/css" href="images/help.css" />
+
+</HEAD>
+
+<BODY BGCOLOR="white" leftmargin="50">
+<a name="top"/>
+<h1>AdMob</h1>
+
+</h5>
+<h4>List of types:</h4>
+<a href='#adview'>AdView</a><br/>
+<hr/>
+<h3><u><a name='adview'>AdView</a></u></h3>
+</h5>The AdMob library allows you to add ads served by AdMob to your application.<br/>See the <a href='http://www.basic4ppc.com/forum/basic4android-getting-started-tutorials/7300-admob-tutorial-add-ads-your-application.html'>AdMob Tutorial</a>.<br/>This library requires some additional configuration as described in the tutorial.<br/>By default the view must be set to a size of 320dip x 50dip. Otherwise it will not display.<br/>Tablets support three additional sizes: IAB_BANNER - 468dip x 60dip, IAB_MRECT - 300dip x 250dip and IAB_LEADERBOARD - 728dip x 90dip.<br/>The size of AdView must match the selected size.<br/>This is an 'Activity Object', it cannot be declared under Sub Process_Globals.
+<br/>
+<h4>Permissions:</h4>android.permission.INTERNET<br/>android.permission.ACCESS_NETWORK_STATE<br/>
+<h4>Events:</h4>
+ReceiveAd<br/>FailedToReceiveAd (ErrorCode As String)<br/>AdScreenDismissed<br/>
+<h4>Members:</h4><br/>
+<img src='images/19.png'/>&nbsp;&nbsp;<span style="color: #000000;"><a href='#adview_background'><b>Background</b></a>&nbsp;</span><span style="color: #0000FF;">As</span><span style="color: #000000;">&nbsp;android.graphics.drawable.Drawable</span><br/><br/>
+<img src='images/15.png'/>&nbsp;&nbsp;<span style="color: #000000;"><a href='#adview_bringtofront'><b>BringToFront</b></a></span><br/><br/>
+<img src='images/19.png'/>&nbsp;&nbsp;<span style="color: #000000;"><a href='#adview_color'><b>Color</b></a>&nbsp;</span><span style="color: #0000FF;">As</span><span style="color: #000000;">&nbsp;</span><span style="color: #008B8B;">Int</span><span style="color: #000000;">&nbsp;&nbsp;[write&nbsp;only]</span><br/><br/>
+<img src='images/19.png'/>&nbsp;&nbsp;<span style="color: #000000;"><a href='#adview_enabled'><b>Enabled</b></a>&nbsp;</span><span style="color: #0000FF;">As</span><span style="color: #000000;">&nbsp;</span><span style="color: #008B8B;">Boolean</span><br/><br/>
+<img src='images/19.png'/>&nbsp;&nbsp;<span style="color: #000000;"><a href='#adview_height'><b>Height</b></a>&nbsp;</span><span style="color: #0000FF;">As</span><span style="color: #000000;">&nbsp;</span><span style="color: #008B8B;">Int</span><br/><br/>
+<img src='images/15.png'/>&nbsp;&nbsp;<span style="color: #000000;"><a href='#adview_initialize'><b>Initialize</b></a>&nbsp;(EventName&nbsp;</span><span style="color: #0000FF;">As</span><span style="color: #000000;">&nbsp;</span><span style="color: #008B8B;">String</span><span style="color: #000000;">,&nbsp;PublisherId&nbsp;</span><span style="color: #0000FF;">As</span><span style="color: #000000;">&nbsp;</span><span style="color: #008B8B;">String</span><span style="color: #000000;">)</span><br/><br/>
+<img src='images/15.png'/>&nbsp;&nbsp;<span style="color: #000000;"><a href='#adview_initialize2'><b>Initialize2</b></a>&nbsp;(EventName&nbsp;</span><span style="color: #0000FF;">As</span><span style="color: #000000;">&nbsp;</span><span style="color: #008B8B;">String</span><span style="color: #000000;">,&nbsp;PublisherId&nbsp;</span><span style="color: #0000FF;">As</span><span style="color: #000000;">&nbsp;</span><span style="color: #008B8B;">String</span><span style="color: #000000;">,&nbsp;Size&nbsp;</span><span style="color: #0000FF;">As</span><span style="color: #000000;">&nbsp;</span><span style="color: #008B8B;">Object</span><span style="color: #000000;">)</span><br/><br/>
+<img src='images/15.png'/>&nbsp;&nbsp;<span style="color: #000000;"><a href='#adview_invalidate'><b>Invalidate</b></a></span><br/><br/>
+<img src='images/15.png'/>&nbsp;&nbsp;<span style="color: #000000;"><a href='#adview_invalidate2'><b>Invalidate2</b></a>&nbsp;(arg0&nbsp;</span><span style="color: #0000FF;">As</span><span style="color: #000000;">&nbsp;android.graphics.Rect)</span><br/><br/>
+<img src='images/15.png'/>&nbsp;&nbsp;<span style="color: #000000;"><a href='#adview_invalidate3'><b>Invalidate3</b></a>&nbsp;(arg0&nbsp;</span><span style="color: #0000FF;">As</span><span style="color: #000000;">&nbsp;</span><span style="color: #008B8B;">Int</span><span style="color: #000000;">,&nbsp;arg1&nbsp;</span><span style="color: #0000FF;">As</span><span style="color: #000000;">&nbsp;</span><span style="color: #008B8B;">Int</span><span style="color: #000000;">,&nbsp;arg2&nbsp;</span><span style="color: #0000FF;">As</span><span style="color: #000000;">&nbsp;</span><span style="color: #008B8B;">Int</span><span style="color: #000000;">,&nbsp;arg3&nbsp;</span><span style="color: #0000FF;">As</span><span style="color: #000000;">&nbsp;</span><span style="color: #008B8B;">Int</span><span style="color: #000000;">)</span><br/><br/>
+<img src='images/15.png'/>&nbsp;&nbsp;<span style="color: #000000;"><a href='#adview_isinitialized'><b>IsInitialized</b></a>&nbsp;</span><span style="color: #0000FF;">As</span><span style="color: #000000;">&nbsp;</span><span style="color: #008B8B;">Boolean</span><br/><br/>
+<img src='images/19.png'/>&nbsp;&nbsp;<span style="color: #000000;"><a href='#adview_left'><b>Left</b></a>&nbsp;</span><span style="color: #0000FF;">As</span><span style="color: #000000;">&nbsp;</span><span style="color: #008B8B;">Int</span><br/><br/>
+<img src='images/15.png'/>&nbsp;&nbsp;<span style="color: #000000;"><a href='#adview_loadad'><b>LoadAd</b></a></span><br/><br/>
+<img src='images/15.png'/>&nbsp;&nbsp;<span style="color: #000000;"><a href='#adview_removeview'><b>RemoveView</b></a></span><br/><br/>
+<img src='images/15.png'/>&nbsp;&nbsp;<span style="color: #000000;"><a href='#adview_requestfocus'><b>RequestFocus</b></a>&nbsp;</span><span style="color: #0000FF;">As</span><span style="color: #000000;">&nbsp;</span><span style="color: #008B8B;">Boolean</span><br/><br/>
+<img src='images/15.png'/>&nbsp;&nbsp;<span style="color: #000000;"><a href='#adview_sendtoback'><b>SendToBack</b></a></span><br/><br/>
+<img src='images/15.png'/>&nbsp;&nbsp;<span style="color: #000000;"><a href='#adview_setbackgroundimage'><b>SetBackgroundImage</b></a>&nbsp;(arg0&nbsp;</span><span style="color: #0000FF;">As</span><span style="color: #000000;">&nbsp;android.graphics.Bitmap)</span><br/><br/>
+<img src='images/15.png'/>&nbsp;&nbsp;<span style="color: #000000;"><a href='#adview_setlayout'><b>SetLayout</b></a>&nbsp;(arg0&nbsp;</span><span style="color: #0000FF;">As</span><span style="color: #000000;">&nbsp;</span><span style="color: #008B8B;">Int</span><span style="color: #000000;">,&nbsp;arg1&nbsp;</span><span style="color: #0000FF;">As</span><span style="color: #000000;">&nbsp;</span><span style="color: #008B8B;">Int</span><span style="color: #000000;">,&nbsp;arg2&nbsp;</span><span style="color: #0000FF;">As</span><span style="color: #000000;">&nbsp;</span><span style="color: #008B8B;">Int</span><span style="color: #000000;">,&nbsp;arg3&nbsp;</span><span style="color: #0000FF;">As</span><span style="color: #000000;">&nbsp;</span><span style="color: #008B8B;">Int</span><span style="color: #000000;">)</span><br/><br/>
+<img src='images/11.png'/>&nbsp;&nbsp;<span style="color: #000000;"><a href='#adview_size_banner'><b>SIZE_BANNER</b></a>&nbsp;</span><span style="color: #0000FF;">As</span><span style="color: #000000;">&nbsp;</span><span style="color: #008B8B;">Object</span><br/><br/>
+<img src='images/11.png'/>&nbsp;&nbsp;<span style="color: #000000;"><a href='#adview_size_iab_banner'><b>SIZE_IAB_BANNER</b></a>&nbsp;</span><span style="color: #0000FF;">As</span><span style="color: #000000;">&nbsp;</span><span style="color: #008B8B;">Object</span><br/><br/>
+<img src='images/11.png'/>&nbsp;&nbsp;<span style="color: #000000;"><a href='#adview_size_iab_leaderboard'><b>SIZE_IAB_LEADERBOARD</b></a>&nbsp;</span><span style="color: #0000FF;">As</span><span style="color: #000000;">&nbsp;</span><span style="color: #008B8B;">Object</span><br/><br/>
+<img src='images/11.png'/>&nbsp;&nbsp;<span style="color: #000000;"><a href='#adview_size_iab_mrect'><b>SIZE_IAB_MRECT</b></a>&nbsp;</span><span style="color: #0000FF;">As</span><span style="color: #000000;">&nbsp;</span><span style="color: #008B8B;">Object</span><br/><br/>
+<img src='images/19.png'/>&nbsp;&nbsp;<span style="color: #000000;"><a href='#adview_tag'><b>Tag</b></a>&nbsp;</span><span style="color: #0000FF;">As</span><span style="color: #000000;">&nbsp;</span><span style="color: #008B8B;">Object</span><br/><br/>
+<img src='images/19.png'/>&nbsp;&nbsp;<span style="color: #000000;"><a href='#adview_top'><b>Top</b></a>&nbsp;</span><span style="color: #0000FF;">As</span><span style="color: #000000;">&nbsp;</span><span style="color: #008B8B;">Int</span><br/><br/>
+<img src='images/19.png'/>&nbsp;&nbsp;<span style="color: #000000;"><a href='#adview_visible'><b>Visible</b></a>&nbsp;</span><span style="color: #0000FF;">As</span><span style="color: #000000;">&nbsp;</span><span style="color: #008B8B;">Boolean</span><br/><br/>
+<img src='images/19.png'/>&nbsp;&nbsp;<span style="color: #000000;"><a href='#adview_width'><b>Width</b></a>&nbsp;</span><span style="color: #0000FF;">As</span><span style="color: #000000;">&nbsp;</span><span style="color: #008B8B;">Int</span><br/><br/>
+
+<h4>Members description:</h4>
+<a name='adview_background'/>
+<h5><img src='images/19.png'/>
+<span style="color: #000000;">Background&nbsp;</span><span style="color: #0000FF;">As</span><span style="color: #000000;">&nbsp;android.graphics.drawable.Drawable</span></h5><a name='adview_bringtofront'/>
+<h5><img src='images/15.png'/>
+<span style="color: #000000;">BringToFront</span></h5><a name='adview_color'/>
+<h5><img src='images/19.png'/>
+<span style="color: #000000;">Color&nbsp;</span><span style="color: #0000FF;">As</span><span style="color: #000000;">&nbsp;</span><span style="color: #008B8B;">Int</span><span style="color: #000000;">&nbsp;&nbsp;[write&nbsp;only]</span></h5><a name='adview_enabled'/>
+<h5><img src='images/19.png'/>
+<span style="color: #000000;">Enabled&nbsp;</span><span style="color: #0000FF;">As</span><span style="color: #000000;">&nbsp;</span><span style="color: #008B8B;">Boolean</span></h5><a name='adview_height'/>
+<h5><img src='images/19.png'/>
+<span style="color: #000000;">Height&nbsp;</span><span style="color: #0000FF;">As</span><span style="color: #000000;">&nbsp;</span><span style="color: #008B8B;">Int</span></h5><a name='adview_initialize'/>
+<h5><img src='images/15.png'/>
+<span style="color: #000000;">Initialize&nbsp;(EventName&nbsp;</span><span style="color: #0000FF;">As</span><span style="color: #000000;">&nbsp;</span><span style="color: #008B8B;">String</span><span style="color: #000000;">,&nbsp;PublisherId&nbsp;</span><span style="color: #0000FF;">As</span><span style="color: #000000;">&nbsp;</span><span style="color: #008B8B;">String</span><span style="color: #000000;">)</span></h5>Initializes the AdView using the default 320dip x 50dip size.<br/>EventName - Name of Subs that will handle the events.<br/>PublisherId - The publisher id you received from AdMob.<a name='adview_initialize2'/>
+<h5><img src='images/15.png'/>
+<span style="color: #000000;">Initialize2&nbsp;(EventName&nbsp;</span><span style="color: #0000FF;">As</span><span style="color: #000000;">&nbsp;</span><span style="color: #008B8B;">String</span><span style="color: #000000;">,&nbsp;PublisherId&nbsp;</span><span style="color: #0000FF;">As</span><span style="color: #000000;">&nbsp;</span><span style="color: #008B8B;">String</span><span style="color: #000000;">,&nbsp;Size&nbsp;</span><span style="color: #0000FF;">As</span><span style="color: #000000;">&nbsp;</span><span style="color: #008B8B;">Object</span><span style="color: #000000;">)</span></h5>Initializes the AdView.<br/>EventName - Name of Subs that will handle the events.<br/>PublisherId - The publisher id you received from AdMob.<br/>Size - One of the SIZE constants.<a name='adview_invalidate'/>
+<h5><img src='images/15.png'/>
+<span style="color: #000000;">Invalidate</span></h5><a name='adview_invalidate2'/>
+<h5><img src='images/15.png'/>
+<span style="color: #000000;">Invalidate2&nbsp;(arg0&nbsp;</span><span style="color: #0000FF;">As</span><span style="color: #000000;">&nbsp;android.graphics.Rect)</span></h5><a name='adview_invalidate3'/>
+<h5><img src='images/15.png'/>
+<span style="color: #000000;">Invalidate3&nbsp;(arg0&nbsp;</span><span style="color: #0000FF;">As</span><span style="color: #000000;">&nbsp;</span><span style="color: #008B8B;">Int</span><span style="color: #000000;">,&nbsp;arg1&nbsp;</span><span style="color: #0000FF;">As</span><span style="color: #000000;">&nbsp;</span><span style="color: #008B8B;">Int</span><span style="color: #000000;">,&nbsp;arg2&nbsp;</span><span style="color: #0000FF;">As</span><span style="color: #000000;">&nbsp;</span><span style="color: #008B8B;">Int</span><span style="color: #000000;">,&nbsp;arg3&nbsp;</span><span style="color: #0000FF;">As</span><span style="color: #000000;">&nbsp;</span><span style="color: #008B8B;">Int</span><span style="color: #000000;">)</span></h5><a name='adview_isinitialized'/>
+<h5><img src='images/15.png'/>
+<span style="color: #000000;">IsInitialized&nbsp;</span><span style="color: #0000FF;">As</span><span style="color: #000000;">&nbsp;</span><span style="color: #008B8B;">Boolean</span></h5><a name='adview_left'/>
+<h5><img src='images/19.png'/>
+<span style="color: #000000;">Left&nbsp;</span><span style="color: #0000FF;">As</span><span style="color: #000000;">&nbsp;</span><span style="color: #008B8B;">Int</span></h5><a name='adview_loadad'/>
+<h5><img src='images/15.png'/>
+<span style="color: #000000;">LoadAd</span></h5>Sends a request to AdMob, requesting an ad.<a name='adview_removeview'/>
+<h5><img src='images/15.png'/>
+<span style="color: #000000;">RemoveView</span></h5><a name='adview_requestfocus'/>
+<h5><img src='images/15.png'/>
+<span style="color: #000000;">RequestFocus&nbsp;</span><span style="color: #0000FF;">As</span><span style="color: #000000;">&nbsp;</span><span style="color: #008B8B;">Boolean</span></h5><a name='adview_sendtoback'/>
+<h5><img src='images/15.png'/>
+<span style="color: #000000;">SendToBack</span></h5><a name='adview_setbackgroundimage'/>
+<h5><img src='images/15.png'/>
+<span style="color: #000000;">SetBackgroundImage&nbsp;(arg0&nbsp;</span><span style="color: #0000FF;">As</span><span style="color: #000000;">&nbsp;android.graphics.Bitmap)</span></h5><a name='adview_setlayout'/>
+<h5><img src='images/15.png'/>
+<span style="color: #000000;">SetLayout&nbsp;(arg0&nbsp;</span><span style="color: #0000FF;">As</span><span style="color: #000000;">&nbsp;</span><span style="color: #008B8B;">Int</span><span style="color: #000000;">,&nbsp;arg1&nbsp;</span><span style="color: #0000FF;">As</span><span style="color: #000000;">&nbsp;</span><span style="color: #008B8B;">Int</span><span style="color: #000000;">,&nbsp;arg2&nbsp;</span><span style="color: #0000FF;">As</span><span style="color: #000000;">&nbsp;</span><span style="color: #008B8B;">Int</span><span style="color: #000000;">,&nbsp;arg3&nbsp;</span><span style="color: #0000FF;">As</span><span style="color: #000000;">&nbsp;</span><span style="color: #008B8B;">Int</span><span style="color: #000000;">)</span></h5><a name='adview_size_banner'/>
+<h5><img src='images/11.png'/>
+<span style="color: #000000;">SIZE_BANNER&nbsp;</span><span style="color: #0000FF;">As</span><span style="color: #000000;">&nbsp;</span><span style="color: #008B8B;">Object</span></h5>320dip x 50dip (default size)<a name='adview_size_iab_banner'/>
+<h5><img src='images/11.png'/>
+<span style="color: #000000;">SIZE_IAB_BANNER&nbsp;</span><span style="color: #0000FF;">As</span><span style="color: #000000;">&nbsp;</span><span style="color: #008B8B;">Object</span></h5>468dip x 60dip - tablet only<a name='adview_size_iab_leaderboard'/>
+<h5><img src='images/11.png'/>
+<span style="color: #000000;">SIZE_IAB_LEADERBOARD&nbsp;</span><span style="color: #0000FF;">As</span><span style="color: #000000;">&nbsp;</span><span style="color: #008B8B;">Object</span></h5>728dip x 90dip - tablet only<a name='adview_size_iab_mrect'/>
+<h5><img src='images/11.png'/>
+<span style="color: #000000;">SIZE_IAB_MRECT&nbsp;</span><span style="color: #0000FF;">As</span><span style="color: #000000;">&nbsp;</span><span style="color: #008B8B;">Object</span></h5>300dip x 250dip - tablet only<a name='adview_tag'/>
+<h5><img src='images/19.png'/>
+<span style="color: #000000;">Tag&nbsp;</span><span style="color: #0000FF;">As</span><span style="color: #000000;">&nbsp;</span><span style="color: #008B8B;">Object</span></h5><a name='adview_top'/>
+<h5><img src='images/19.png'/>
+<span style="color: #000000;">Top&nbsp;</span><span style="color: #0000FF;">As</span><span style="color: #000000;">&nbsp;</span><span style="color: #008B8B;">Int</span></h5><a name='adview_visible'/>
+<h5><img src='images/19.png'/>
+<span style="color: #000000;">Visible&nbsp;</span><span style="color: #0000FF;">As</span><span style="color: #000000;">&nbsp;</span><span style="color: #008B8B;">Boolean</span></h5><a name='adview_width'/>
+<h5><img src='images/19.png'/>
+<span style="color: #000000;">Width&nbsp;</span><span style="color: #0000FF;">As</span><span style="color: #000000;">&nbsp;</span><span style="color: #008B8B;">Int</span></h5>
+<hr/>
+<a href="#top">Top</a>
+</body>
+</html>

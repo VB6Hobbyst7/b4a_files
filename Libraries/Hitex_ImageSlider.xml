@@ -1,0 +1,501 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root>
+    <doclet-version-NOT-library-version>1.05</doclet-version-NOT-library-version>
+    <class>
+        <name>ir.hitex.image.slider.Hitex_ImageSlider</name>
+        <shortname>Hitex_ImageSlider</shortname>
+        <objectwrapper>com.glide.slider.library.SliderLayout</objectwrapper>
+        <owner>activity</owner>
+        <event>Click (Tag As Object, Position As Int)</event>
+        <event>ImageLoadStart (Tag As Object, Position As Int)</event>
+        <event>ImageLoadEnd (Tag As Object, Position As Int)</event>
+        <event>PageScrolled (Position As Int, PositionOffset As Float, PositionOffsetPixels As Int)</event>
+        <event>PageSelected (Position As Int)</event>
+        <event>PageScrollStateChanged (State As Int)</event>
+        <permission>android.permission.INTERNET</permission>
+        <method>
+            <name>SetCurrentPosition</name>
+            <comment></comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>Position</name>
+                <type>int</type>
+            </parameter>
+            <parameter>
+                <name>Smooth</name>
+                <type>boolean</type>
+            </parameter>
+        </method>
+        <method>
+            <name>StopAutoCycle</name>
+            <comment>Stops the auto circle</comment>
+            <returntype>void</returntype>
+        </method>
+        <method>
+            <name>DesignerCreateView</name>
+            <comment></comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>base</name>
+                <type>anywheresoftware.b4a.objects.PanelWrapper</type>
+            </parameter>
+            <parameter>
+                <name>labelWrapper</name>
+                <type>anywheresoftware.b4a.objects.LabelWrapper</type>
+            </parameter>
+            <parameter>
+                <name>map</name>
+                <type>anywheresoftware.b4a.objects.collections.Map</type>
+            </parameter>
+        </method>
+        <method>
+            <name>StartAutoCycle2</name>
+            <comment>Starts auto cycle.
+Delay: delay time
+Duration: animation duration time.
+AutoRecover: if recover after user touches the slider.</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>Delay</name>
+                <type>long</type>
+            </parameter>
+            <parameter>
+                <name>Duration</name>
+                <type>long</type>
+            </parameter>
+            <parameter>
+                <name>AutoRecover</name>
+                <type>boolean</type>
+            </parameter>
+        </method>
+        <method>
+            <name>RemoveAllSliders</name>
+            <comment>Removes all the sliders. Notice: It's a not perfect method, a very small bug still exists.</comment>
+            <returntype>void</returntype>
+        </method>
+        <method>
+            <name>AddSlider</name>
+            <comment>Example : &lt;code&gt;
+ HIS.LabelColor = 0x7847D6D6
+ HIS.PresetIndicator = "Center_Bottom"
+ HIS.PresetTransformer = "Accordion"
+ HIS.Duration = 5000
+ HIS.DefaultIndicatorShape = "Oval"
+ HIS.CenterCrop = True
+
+ HIS.PlaceHolder = LoadBitmap(File.DirAssets,"Loading.jpg")
+ HIS.Error = LoadBitmap(File.DirAssets,"Error.jpg")
+
+ For i = 0 To 10
+ HIS.AddSlider("Hello" &amp; i,File.Combine(File.DirAssets, i &amp; ".jpg"), Null)
+ Next
+ &lt;/code&gt;</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>Name</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>ImagePath</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>Tag</name>
+                <type>java.lang.Object</type>
+            </parameter>
+        </method>
+        <method>
+            <name>IsInitialized</name>
+            <comment></comment>
+            <returntype>boolean</returntype>
+        </method>
+        <method>
+            <name>Initialize</name>
+            <comment>Created By Sadeq Nameni
+
+ Example : &lt;code&gt;
+ HIS.LabelColor = 0x7847D6D6
+ HIS.PresetIndicator = "Center_Bottom"
+ HIS.PresetTransformer = "Accordion"
+ HIS.Duration = 5000
+ HIS.DefaultIndicatorShape = "Oval"
+ HIS.CenterCrop = True
+
+ HIS.PlaceHolder = LoadBitmap(File.DirAssets,"Loading.jpg")
+ HIS.Error = LoadBitmap(File.DirAssets,"Error.jpg")
+
+ For i = 0 To 10
+ HIS.AddSlider("Hello" &amp; i,File.Combine(File.DirAssets, i &amp; ".jpg"), Null)
+ Next
+ &lt;/code&gt;</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>ba</name>
+                <type>anywheresoftware.b4a.BA</type>
+            </parameter>
+            <parameter>
+                <name>EventName</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+        <method>
+            <name>SetDefaultIndicatorColor</name>
+            <comment></comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>SelectedColor</name>
+                <type>int</type>
+            </parameter>
+            <parameter>
+                <name>UnselectedColor</name>
+                <type>int</type>
+            </parameter>
+        </method>
+        <method>
+            <name>SetDefaultSelectedIndicatorSize</name>
+            <comment>True : DP
+ False : PX</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>Width</name>
+                <type>float</type>
+            </parameter>
+            <parameter>
+                <name>Height</name>
+                <type>float</type>
+            </parameter>
+            <parameter>
+                <name>DP</name>
+                <type>boolean</type>
+            </parameter>
+        </method>
+        <method>
+            <name>BringToFront</name>
+            <comment></comment>
+            <returntype>void</returntype>
+        </method>
+        <method>
+            <name>ClearDiskCache</name>
+            <comment>Call &lt;b&gt;Glide.ClearDiskCache&lt;/b&gt; on outside the UI thread.
+ (also consider &lt;b&gt;ClearMemory&lt;/b&gt; too to prevent surprises after clearing disk cache)
+ Read &lt;a href="https://github.com/bumptech/glide/wiki/Caching-and-Cache-Invalidation"&gt;Cache invalidation&lt;/a&gt;, because it's not otherwise possible to remove a single file from cache,
+ see &lt;a href="https://github.com/bumptech/glide/issues/94"&gt;#94&lt;/a&gt; for arguments.</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>ba</name>
+                <type>anywheresoftware.b4a.BA</type>
+            </parameter>
+        </method>
+        <method>
+            <name>ClearMemory</name>
+            <comment>Free up memory</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>ba</name>
+                <type>anywheresoftware.b4a.BA</type>
+            </parameter>
+        </method>
+        <method>
+            <name>SendToBack</name>
+            <comment></comment>
+            <returntype>void</returntype>
+        </method>
+        <method>
+            <name>RemoveSliderAt</name>
+            <comment>Removes  the slider at the position. Notice: It's a not perfect method, a very small bug still exists.</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>Position</name>
+                <type>int</type>
+            </parameter>
+        </method>
+        <method>
+            <name>DestroySelfIndicator</name>
+            <comment>clear self means unregister the dataset observer and remove all the child views(indicators).</comment>
+            <returntype>void</returntype>
+        </method>
+        <method>
+            <name>RemoveView</name>
+            <comment></comment>
+            <returntype>void</returntype>
+        </method>
+        <method>
+            <name>MoveNextPosition</name>
+            <comment></comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>Smooth</name>
+                <type>boolean</type>
+            </parameter>
+        </method>
+        <method>
+            <name>StartAutoCycle</name>
+            <comment>Starts auto cycle.</comment>
+            <returntype>void</returntype>
+        </method>
+        <method>
+            <name>MovePrevPosition</name>
+            <comment></comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>Smooth</name>
+                <type>boolean</type>
+            </parameter>
+        </method>
+        <method>
+            <name>Invalidate</name>
+            <comment></comment>
+            <returntype>void</returntype>
+        </method>
+        <method>
+            <name>SetDefaultUnselectedIndicatorSize</name>
+            <comment>True : DP
+ False : PX</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>Width</name>
+                <type>float</type>
+            </parameter>
+            <parameter>
+                <name>Height</name>
+                <type>float</type>
+            </parameter>
+            <parameter>
+                <name>DP</name>
+                <type>boolean</type>
+            </parameter>
+        </method>
+        <method>
+            <name>SetDefaultIndicatorSize</name>
+            <comment>True : DP
+ False : PX</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>Width</name>
+                <type>float</type>
+            </parameter>
+            <parameter>
+                <name>Height</name>
+                <type>float</type>
+            </parameter>
+            <parameter>
+                <name>DP</name>
+                <type>boolean</type>
+            </parameter>
+        </method>
+        <property>
+            <name>Left</name>
+            <returntype>int</returntype>
+            <parameter>
+                <name>arg0</name>
+                <type Pixel="true">int</type>
+            </parameter>
+            <comment></comment>
+        </property>
+        <property>
+            <name>PlaceHolder</name>
+            <parameter>
+                <name>PlaceHolder</name>
+                <type>anywheresoftware.b4a.objects.drawable.CanvasWrapper.BitmapWrapper</type>
+            </parameter>
+            <comment>Just Call &lt;b&gt;before&lt;/b&gt; AddSlider</comment>
+        </property>
+        <property>
+            <name>Parent</name>
+            <returntype>java.lang.Object</returntype>
+            <comment></comment>
+        </property>
+        <property>
+            <name>PresetIndicator</name>
+            <parameter>
+                <name>PresetIndicator</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <comment>&lt;code&gt;"Center_Bottom"&lt;/code&gt;
+ &lt;code&gt;"Right_Bottom"&lt;/code&gt;
+ &lt;code&gt;"Left_Bottom"&lt;/code&gt;
+ &lt;code&gt;"Center_Top"&lt;/code&gt;
+ &lt;code&gt;"Right_Top"&lt;/code&gt;
+ &lt;code&gt;"Left_Top"&lt;/code&gt;</comment>
+        </property>
+        <property>
+            <name>Visible</name>
+            <returntype>boolean</returntype>
+            <parameter>
+                <name>arg0</name>
+                <type>boolean</type>
+            </parameter>
+            <comment></comment>
+        </property>
+        <property>
+            <name>Padding</name>
+            <returntype>int[]</returntype>
+            <parameter>
+                <name>arg0</name>
+                <type>int[]</type>
+            </parameter>
+            <comment></comment>
+        </property>
+        <property>
+            <name>Height</name>
+            <returntype>int</returntype>
+            <parameter>
+                <name>arg0</name>
+                <type Pixel="true">int</type>
+            </parameter>
+            <comment></comment>
+        </property>
+        <property>
+            <name>TextColor</name>
+            <parameter>
+                <name>TextColor</name>
+                <type>int</type>
+            </parameter>
+            <comment>Just Call &lt;b&gt;before&lt;/b&gt; AddSlider</comment>
+        </property>
+        <property>
+            <name>LabelColor</name>
+            <parameter>
+                <name>LabelColor</name>
+                <type>int</type>
+            </parameter>
+            <comment>Just Call &lt;b&gt;before&lt;/b&gt; AddSlider</comment>
+        </property>
+        <property>
+            <name>Width</name>
+            <returntype>int</returntype>
+            <parameter>
+                <name>arg0</name>
+                <type Pixel="true">int</type>
+            </parameter>
+            <comment></comment>
+        </property>
+        <property>
+            <name>Typeface</name>
+            <parameter>
+                <name>Typeface</name>
+                <type>anywheresoftware.b4a.keywords.constants.TypefaceWrapper</type>
+            </parameter>
+            <comment>Just Call &lt;b&gt;before&lt;/b&gt; AddSlider</comment>
+        </property>
+        <property>
+            <name>GetCurrentPosition</name>
+            <returntype>int</returntype>
+            <comment></comment>
+        </property>
+        <property>
+            <name>DefaultIndicatorShape</name>
+            <parameter>
+                <name>Shape</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <comment>&lt;code&gt;"Oval"&lt;/code&gt;
+ &lt;code&gt;"Rectangle"&lt;/code&gt;</comment>
+        </property>
+        <property>
+            <name>Color</name>
+            <parameter>
+                <name>arg0</name>
+                <type>int</type>
+            </parameter>
+            <comment></comment>
+        </property>
+        <property>
+            <name>TextSize</name>
+            <parameter>
+                <name>TextSize</name>
+                <type>float</type>
+            </parameter>
+            <comment>Just Call &lt;b&gt;before&lt;/b&gt; AddSlider</comment>
+        </property>
+        <property>
+            <name>Error</name>
+            <parameter>
+                <name>Error</name>
+                <type>anywheresoftware.b4a.objects.drawable.CanvasWrapper.BitmapWrapper</type>
+            </parameter>
+            <comment>Just Call &lt;b&gt;before&lt;/b&gt; AddSlider</comment>
+        </property>
+        <property>
+            <name>CenterCrop</name>
+            <parameter>
+                <name>CenterCrop</name>
+                <type>boolean</type>
+            </parameter>
+            <comment>Just Call &lt;b&gt;before&lt;/b&gt; AddSlider</comment>
+        </property>
+        <property>
+            <name>Enabled</name>
+            <returntype>boolean</returntype>
+            <parameter>
+                <name>arg0</name>
+                <type>boolean</type>
+            </parameter>
+            <comment></comment>
+        </property>
+        <property>
+            <name>Duration</name>
+            <parameter>
+                <name>Duration</name>
+                <type>int</type>
+            </parameter>
+            <comment></comment>
+        </property>
+        <property>
+            <name>PresetTransformer</name>
+            <parameter>
+                <name>Transformer</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <comment>&lt;code&gt;HIS.PresetTransformer = "Accordion"&lt;/code&gt;
+
+ &lt;code&gt;"Default"&lt;/code&gt;
+ &lt;code&gt;"Accordion"&lt;/code&gt;
+ &lt;code&gt;"Background2Foreground"&lt;/code&gt;
+ &lt;code&gt;"CubeIn"&lt;/code&gt;
+ &lt;code&gt;"DepthPage"&lt;/code&gt;
+ &lt;code&gt;"Fade"&lt;/code&gt;
+ &lt;code&gt;"FlipHorizontal"&lt;/code&gt;
+ &lt;code&gt;"FlipPage"&lt;/code&gt;
+ &lt;code&gt;"Foreground2Background"&lt;/code&gt;
+ &lt;code&gt;"RotateDown"&lt;/code&gt;
+ &lt;code&gt;"RotateUp"&lt;/code&gt;
+ &lt;code&gt;"Stack"&lt;/code&gt;
+ &lt;code&gt;"Tablet"&lt;/code&gt;
+ &lt;code&gt;"ZoomIn"&lt;/code&gt;
+ &lt;code&gt;"ZoomOutSlide"&lt;/code&gt;
+ &lt;code&gt;"ZoomOut"&lt;/code&gt;</comment>
+        </property>
+        <property>
+            <name>Top</name>
+            <returntype>int</returntype>
+            <parameter>
+                <name>arg0</name>
+                <type Pixel="true">int</type>
+            </parameter>
+            <comment></comment>
+        </property>
+        <property>
+            <name>Tag</name>
+            <returntype>java.lang.Object</returntype>
+            <parameter>
+                <name>arg0</name>
+                <type>java.lang.Object</type>
+            </parameter>
+            <comment></comment>
+        </property>
+        <property>
+            <name>IndicatorVisibility</name>
+            <parameter>
+                <name>Visibility</name>
+                <type>boolean</type>
+            </parameter>
+            <comment></comment>
+        </property>
+    </class>
+    <version>1.0</version>
+    <author>Sadeq Nameni (Hitexroid)</author>
+    <dependsOn>nineoldandroids-2.4.0</dependsOn>
+    <dependsOn>glide-4.0.0</dependsOn>
+    <dependsOn>com.android.support:support-v4</dependsOn>
+</root>

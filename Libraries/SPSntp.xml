@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root>
+    <doclet-version-NOT-library-version>1.02</doclet-version-NOT-library-version>
+    <class>
+        <name>anywheresoftware.b4a.specci48.spsntp.SPSntp</name>
+        <shortname>SPSntp</shortname>
+        <owner>activity</owner>
+    </class>
+    <class>
+        <name>anywheresoftware.b4a.specci48.spsntp.SPSntp.SntpTime</name>
+        <shortname>SntpTime</shortname>
+        <owner>activity</owner>
+        <permission>android.permission.INTERNET</permission>
+        <method>
+            <name>getGmtNtpTime</name>
+            <comment>Returns the system time computed from NTP server response (in ticks).
+ If an error occurred during the request, the returned value ist -1.</comment>
+            <returntype>long</returntype>
+            <parameter>
+                <name>ba</name>
+                <type>anywheresoftware.b4a.BA</type>
+            </parameter>
+        </method>
+        <property>
+            <name>RoundTripTime</name>
+            <returntype>long</returntype>
+            <comment>Returns the round trip time of the NTP transaction according to the last
+ getGmtNtpTime call (in ticks).
+ If an error occurred during the last request, the returned value is -1.</comment>
+        </property>
+        <property>
+            <name>NtpTimeReference</name>
+            <returntype>long</returntype>
+            <comment>Returns the reference clock value (value of SystemClock.elapsedRealtime())
+ corresponding to the NTP time according to the last getGmtNtpTime call (in ticks).
+ If an error occurred during the last request, the returned value is -1.</comment>
+        </property>
+        <property>
+            <name>NtpServerName</name>
+            <parameter>
+                <name>ntpServerName</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <comment>Sets the adress of the NTP server used for the time request.
+ If not set, the default server "0.us.pool.ntp.org" is used.</comment>
+        </property>
+    </class>
+    <version>1.02</version>
+</root>

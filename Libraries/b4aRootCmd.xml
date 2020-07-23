@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root>
+    <doclet-version-NOT-library-version>1.02</doclet-version-NOT-library-version>
+    <class>
+        <name>ice.rootcmd.RootCmd</name>
+        <shortname>RootCmd</shortname>
+        <owner>process</owner>
+        <method>
+            <name>execRootCmdSilent</name>
+            <comment></comment>
+            <returntype>int</returntype>
+            <parameter>
+                <name>cmd</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+        <method>
+            <name>execRootCmd</name>
+            <comment></comment>
+            <returntype>java.lang.String</returntype>
+            <parameter>
+                <name>cmd</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+        <method>
+            <name>haveRoot</name>
+            <comment></comment>
+            <returntype>boolean</returntype>
+        </method>
+        <method>
+            <name>InstallApk</name>
+            <comment>install apk in silent mode(need root)</comment>
+            <returntype>java.lang.Boolean</returntype>
+            <parameter>
+                <name>apkAbsolutePath</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+    </class>
+    <version>1.0</version>
+    <author>IceFairy333</author>
+</root>

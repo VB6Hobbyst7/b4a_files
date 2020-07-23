@@ -1,0 +1,409 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root>
+    <doclet-version-NOT-library-version>1.02</doclet-version-NOT-library-version>
+    <class>
+        <name>derez.libs.MatrixOp</name>
+        <shortname>MatrixOp</shortname>
+        <comment>The library provides mathematical operations which involve matrices and scalars.
+ Names used here are :
+ Matrix is equivalent to Array of two dimensions. 
+ The size is defined by number of rows (the first argument of the array) 
+ and number of columns (second argument).
+ Vector is an Array of one dimension. 
+ Scalar is a single number.
+ The library includes:
+    Operations of a Scalar and a Matrix
+    Operations between two matrices
+    Operations on a single matrix
+ There are no limitations on the size of the matrices or vectors.
+ There is no checking for incorrect dimensions of the matrices.
+ If not otherwise defined, all methods return 1 at completion.
+ The Library makes use of BigDecimal numbers to improve accuracy 
+ by minimizing truncation errors.</comment>
+        <owner>process</owner>
+        <method>
+            <name>AddM</name>
+            <comment>Adds two matrices. 
+ Rows and Cols refer to the rows and columns of the three matrices,
+ MatrixC is the result:  MatrixC = MatrixA + MatrixB.</comment>
+            <returntype>double</returntype>
+            <parameter>
+                <name>Rows</name>
+                <type>int</type>
+            </parameter>
+            <parameter>
+                <name>Cols</name>
+                <type>int</type>
+            </parameter>
+            <parameter>
+                <name>MatrixA</name>
+                <type>double[][]</type>
+            </parameter>
+            <parameter>
+                <name>MatrixB</name>
+                <type>double[][]</type>
+            </parameter>
+            <parameter>
+                <name>MatrixC</name>
+                <type>double[][]</type>
+            </parameter>
+        </method>
+        <method>
+            <name>SubM</name>
+            <comment>Adds a Scalar to every element of MatrixA. 
+ Rows and Cols refer to the rows and columns of MatrixA 
+ and MatrixC which is the result :  MatrixC = MatrixA + Scalar.</comment>
+            <returntype>double</returntype>
+            <parameter>
+                <name>Rows</name>
+                <type>int</type>
+            </parameter>
+            <parameter>
+                <name>Cols</name>
+                <type>int</type>
+            </parameter>
+            <parameter>
+                <name>MatrixA</name>
+                <type>double[][]</type>
+            </parameter>
+            <parameter>
+                <name>MatrixB</name>
+                <type>double[][]</type>
+            </parameter>
+            <parameter>
+                <name>MatrixC</name>
+                <type>double[][]</type>
+            </parameter>
+        </method>
+        <method>
+            <name>Transpose</name>
+            <comment>MatrixC is the Transpose of MatrixA which is of 
+ Rows rows and Cols columns.
+ MatrixC dimensions are Cols rows and Rows columns.</comment>
+            <returntype>double</returntype>
+            <parameter>
+                <name>Rows</name>
+                <type>int</type>
+            </parameter>
+            <parameter>
+                <name>Cols</name>
+                <type>int</type>
+            </parameter>
+            <parameter>
+                <name>MatrixA</name>
+                <type>double[][]</type>
+            </parameter>
+            <parameter>
+                <name>MatrixC</name>
+                <type>double[][]</type>
+            </parameter>
+        </method>
+        <method>
+            <name>DivS</name>
+            <comment>Divides every element of MatrixA by a Scalar. 
+ Rows and Cols refer to the rows and columns of MatrixA 
+ and MatrixC which is the result:
+  MatrixC = MatrixA/Scalar .</comment>
+            <returntype>double</returntype>
+            <parameter>
+                <name>Rows</name>
+                <type>int</type>
+            </parameter>
+            <parameter>
+                <name>Cols</name>
+                <type>int</type>
+            </parameter>
+            <parameter>
+                <name>MatrixA</name>
+                <type>double[][]</type>
+            </parameter>
+            <parameter>
+                <name>Scalar</name>
+                <type>double</type>
+            </parameter>
+            <parameter>
+                <name>MatrixC</name>
+                <type>double[][]</type>
+            </parameter>
+        </method>
+        <method>
+            <name>Inverse</name>
+            <comment>MatrixA is a square matrix with dimension Size. 
+ MatrixC is the inverse of MatrixA. 
+ Returns 0 if the determinant is 0 
+ (hence there is no inverse matrix).</comment>
+            <returntype>double</returntype>
+            <parameter>
+                <name>Size</name>
+                <type>int</type>
+            </parameter>
+            <parameter>
+                <name>MatrixA</name>
+                <type>double[][]</type>
+            </parameter>
+            <parameter>
+                <name>MatrixC</name>
+                <type>double[][]</type>
+            </parameter>
+        </method>
+        <method>
+            <name>SolveV</name>
+            <comment>Solves a set of linear equations of the form AX = B, 
+ where A is represented by MatrixA, B is represented by VectorB 
+ and the unknowns vector X is the result VectorX. 
+ Returns 0 if the determinant is 0 (hence there is no solution).
+ Size defines the size of the square MatrixA, 
+ and the length of VectorB and VectorX.</comment>
+            <returntype>double</returntype>
+            <parameter>
+                <name>Size</name>
+                <type>int</type>
+            </parameter>
+            <parameter>
+                <name>MatrixA</name>
+                <type>double[][]</type>
+            </parameter>
+            <parameter>
+                <name>VectorB</name>
+                <type>double[]</type>
+            </parameter>
+            <parameter>
+                <name>VectorX</name>
+                <type>double[]</type>
+            </parameter>
+        </method>
+        <method>
+            <name>Clear</name>
+            <comment>Put zeroes to all elements of MatrixA.
+ This method is the only method that actually changes 
+ the referenced matrix.</comment>
+            <returntype>double</returntype>
+            <parameter>
+                <name>Rows</name>
+                <type>int</type>
+            </parameter>
+            <parameter>
+                <name>Cols</name>
+                <type>int</type>
+            </parameter>
+            <parameter>
+                <name>MatrixA</name>
+                <type>double[][]</type>
+            </parameter>
+        </method>
+        <method>
+            <name>CopyM</name>
+            <comment>Copies MatrixA to MatrixC, 
+ both have to be with the same dimensions Rows and Cols.</comment>
+            <returntype>double</returntype>
+            <parameter>
+                <name>Rows</name>
+                <type>int</type>
+            </parameter>
+            <parameter>
+                <name>Cols</name>
+                <type>int</type>
+            </parameter>
+            <parameter>
+                <name>MatrixA</name>
+                <type>double[][]</type>
+            </parameter>
+            <parameter>
+                <name>MatrixC</name>
+                <type>double[][]</type>
+            </parameter>
+        </method>
+        <method>
+            <name>SolveM</name>
+            <comment>Solves a set of linear  equations of the form AX = B, 
+ where A is represented by MatrixA, B is represented by MatrixB 
+ and the unknown matrix X is the result MatrixX. 
+ Returns 0 if the determinant is 0 (hence there is no solution).
+ Size defines the size of the square MatrixA, 
+ Cols define the number of columns in MatrixB and in MatrixX.</comment>
+            <returntype>double</returntype>
+            <parameter>
+                <name>Size</name>
+                <type>int</type>
+            </parameter>
+            <parameter>
+                <name>MatrixA</name>
+                <type>double[][]</type>
+            </parameter>
+            <parameter>
+                <name>Cols</name>
+                <type>int</type>
+            </parameter>
+            <parameter>
+                <name>MatrixB</name>
+                <type>double[][]</type>
+            </parameter>
+            <parameter>
+                <name>MatrixX</name>
+                <type>double[][]</type>
+            </parameter>
+        </method>
+        <method>
+            <name>Determinant</name>
+            <comment>The Determinant of the square matrix MatrixA with dimension Size 
+ is returned as double by this method.</comment>
+            <returntype>double</returntype>
+            <parameter>
+                <name>Size</name>
+                <type>int</type>
+            </parameter>
+            <parameter>
+                <name>MatrixA</name>
+                <type>double[][]</type>
+            </parameter>
+        </method>
+        <method>
+            <name>DotV</name>
+            <comment>Dot-multiply two vectors 
+ (each element is multiplied by the parallel element of the other vector 
+ and the result is the sum of all multiplied pairs).
+ Length refer to the length of the two vectors which must be the same. 
+ The result is returned by the method.</comment>
+            <returntype>double</returntype>
+            <parameter>
+                <name>Length</name>
+                <type>int</type>
+            </parameter>
+            <parameter>
+                <name>VectorA</name>
+                <type>double[]</type>
+            </parameter>
+            <parameter>
+                <name>VectorB</name>
+                <type>double[]</type>
+            </parameter>
+        </method>
+        <method>
+            <name>MulS</name>
+            <comment>Multiplies every element of MatrixA by a Scalar. 
+ Rows and Cols refer to the rows and columns of MatrixA 
+ and MatrixC which is the result :
+ MatrixC = Scalar * MatrixA.</comment>
+            <returntype>double</returntype>
+            <parameter>
+                <name>Rows</name>
+                <type>int</type>
+            </parameter>
+            <parameter>
+                <name>Cols</name>
+                <type>int</type>
+            </parameter>
+            <parameter>
+                <name>MatrixA</name>
+                <type>double[][]</type>
+            </parameter>
+            <parameter>
+                <name>Scalar</name>
+                <type>double</type>
+            </parameter>
+            <parameter>
+                <name>MatrixC</name>
+                <type>double[][]</type>
+            </parameter>
+        </method>
+        <method>
+            <name>SubS</name>
+            <comment>Subtracts a Scalar from every element of MatrixA. 
+ Rows and Cols refer to the rows and columns of MatrixA 
+ and MatrixC which is the result:  MatrixC = MatrixA - Scalar.</comment>
+            <returntype>double</returntype>
+            <parameter>
+                <name>Rows</name>
+                <type>int</type>
+            </parameter>
+            <parameter>
+                <name>Cols</name>
+                <type>int</type>
+            </parameter>
+            <parameter>
+                <name>MatrixA</name>
+                <type>double[][]</type>
+            </parameter>
+            <parameter>
+                <name>Scalar</name>
+                <type>double</type>
+            </parameter>
+            <parameter>
+                <name>MatrixC</name>
+                <type>double[][]</type>
+            </parameter>
+        </method>
+        <method>
+            <name>SetRound</name>
+            <comment></comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>Roundto</name>
+                <type>int</type>
+            </parameter>
+        </method>
+        <method>
+            <name>MulM</name>
+            <comment>Vector-Multiply two matrices. 
+ Rows and Cols refer to the rows and columns of MatrixA, 
+ MatrixB has to be with Cols rows and Rows columns, 
+ MatrixC is the result and is of dimension Rows by Rows. 
+ MatrixC = MatrixA X MatrixB.</comment>
+            <returntype>double</returntype>
+            <parameter>
+                <name>Rows</name>
+                <type>int</type>
+            </parameter>
+            <parameter>
+                <name>Cols</name>
+                <type>int</type>
+            </parameter>
+            <parameter>
+                <name>MatrixA</name>
+                <type>double[][]</type>
+            </parameter>
+            <parameter>
+                <name>MatrixB</name>
+                <type>double[][]</type>
+            </parameter>
+            <parameter>
+                <name>MatrixC</name>
+                <type>double[][]</type>
+            </parameter>
+        </method>
+        <method>
+            <name>AddS</name>
+            <comment>Adds a Scalar to every element of MatrixA. 
+ Rows and Cols refer to the rows and columns of MatrixA 
+ and MatrixC which is the result :  MatrixC = MatrixA + Scalar.</comment>
+            <returntype>double</returntype>
+            <parameter>
+                <name>Rows</name>
+                <type>int</type>
+            </parameter>
+            <parameter>
+                <name>Cols</name>
+                <type>int</type>
+            </parameter>
+            <parameter>
+                <name>MatrixA</name>
+                <type>double[][]</type>
+            </parameter>
+            <parameter>
+                <name>Scalar</name>
+                <type>double</type>
+            </parameter>
+            <parameter>
+                <name>MatrixC</name>
+                <type>double[][]</type>
+            </parameter>
+        </method>
+        <field>
+            <name>Roundby</name>
+            <comment></comment>
+            <returntype>int</returntype>
+        </field>
+    </class>
+    <version>1.0</version>
+    <author>Derez</author>
+</root>

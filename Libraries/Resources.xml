@@ -1,0 +1,436 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root>
+    <doclet-version-NOT-library-version>1.04</doclet-version-NOT-library-version>
+    <class>
+        <name>uk.co.martinpearman.b4a.util.Locale</name>
+        <shortname>Locale</shortname>
+        <objectwrapper>java.util.Locale</objectwrapper>
+        <owner>process</owner>
+        <method>
+            <name>GetISO3Language</name>
+            <comment>Returns the three-letter ISO 639-2/T language code which corresponds to the language code for this Locale.</comment>
+            <returntype>java.lang.String</returntype>
+        </method>
+        <method>
+            <name>GetDefault</name>
+            <comment>Returns the user's preferred locale.</comment>
+            <returntype>uk.co.martinpearman.b4a.util.Locale</returntype>
+        </method>
+        <method>
+            <name>GetLanguage</name>
+            <comment>Returns the language code for this Locale or an empty string if no language was set.</comment>
+            <returntype>java.lang.String</returntype>
+        </method>
+        <method>
+            <name>GetAvailableLocales</name>
+            <comment>Returns the system's installed locales.</comment>
+            <returntype>uk.co.martinpearman.b4a.util.Locale[]</returntype>
+        </method>
+        <method>
+            <name>Initialize2</name>
+            <comment></comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>Language</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>Country</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+        <method>
+            <name>GetDisplayLanguage</name>
+            <comment>Equivalent to GetDisplayLanguage(Locale.GetDefault).</comment>
+            <returntype>java.lang.String</returntype>
+        </method>
+        <method>
+            <name>Initialize3</name>
+            <comment></comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>Language</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>Country</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>Variant</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+        <method>
+            <name>GetDisplayName</name>
+            <comment>Equivalent to GetDisplayName(Locale.GetDefault).</comment>
+            <returntype>java.lang.String</returntype>
+        </method>
+        <method>
+            <name>IsInitialized</name>
+            <comment></comment>
+            <returntype>boolean</returntype>
+        </method>
+        <method>
+            <name>Initialize</name>
+            <comment></comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>Language</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+        <method>
+            <name>GetVariant</name>
+            <comment>Returns the variant code for this Locale or an empty String if no variant was set.</comment>
+            <returntype>java.lang.String</returntype>
+        </method>
+        <method>
+            <name>SetDefault</name>
+            <comment>Overrides the default locale.
+ This does not affect system configuration, and attempts to override the system-provided default locale may themselves be overridden by actual changes to the system configuration.
+ Code that calls this method is usually incorrect, and should be fixed by passing the appropriate locale to each locale-sensitive method that's called.</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>Locale1</name>
+                <type>java.util.Locale</type>
+            </parameter>
+        </method>
+        <method>
+            <name>GetISO3Country</name>
+            <comment>Returns the three-letter ISO 3166 country code which corresponds to the country code for this Locale.</comment>
+            <returntype>java.lang.String</returntype>
+        </method>
+        <method>
+            <name>GetCountry</name>
+            <comment>Returns the country code for this locale, or an empty string if this locale doesn't correspond to a specific country.</comment>
+            <returntype>java.lang.String</returntype>
+        </method>
+        <method>
+            <name>GetDisplayCountry1</name>
+            <comment>Returns the name of this locale's country, localized to Locale1.</comment>
+            <returntype>java.lang.String</returntype>
+            <parameter>
+                <name>Locale1</name>
+                <type>java.util.Locale</type>
+            </parameter>
+        </method>
+        <method>
+            <name>GetDisplayName2</name>
+            <comment>Returns this locale's language name, country name, and variant, localized to Locale1.</comment>
+            <returntype>java.lang.String</returntype>
+            <parameter>
+                <name>Locale1</name>
+                <type>java.util.Locale</type>
+            </parameter>
+        </method>
+        <method>
+            <name>GetISOCountries</name>
+            <comment>Returns an array of strings containing all the two-letter ISO 3166 country codes that can be used as the country code when constructing a Locale.</comment>
+            <returntype>java.lang.String[]</returntype>
+        </method>
+        <method>
+            <name>GetDisplayLanguage2</name>
+            <comment>Returns the name of this locale's language, localized to Locale1.</comment>
+            <returntype>java.lang.String</returntype>
+            <parameter>
+                <name>Locale1</name>
+                <type>java.util.Locale</type>
+            </parameter>
+        </method>
+        <method>
+            <name>GetISOLanguages</name>
+            <comment>Returns an array of strings containing all the two-letter ISO 639-1 language codes that can be used as the language code when constructing a Locale.</comment>
+            <returntype>java.lang.String[]</returntype>
+        </method>
+        <method>
+            <name>GetDisplayVariant</name>
+            <comment>Returns the full variant name in the default Locale for the variant code of this Locale.</comment>
+            <returntype>java.lang.String</returntype>
+        </method>
+        <method>
+            <name>GetDisplayCountry</name>
+            <comment>Equivalent to GetDisplayCountry(Locale.GetDefault).</comment>
+            <returntype>java.lang.String</returntype>
+        </method>
+        <field>
+            <name>KOREAN</name>
+            <comment>Locale constant for ko.</comment>
+            <returntype>uk.co.martinpearman.b4a.util.Locale</returntype>
+        </field>
+        <field>
+            <name>CHINESE</name>
+            <comment>Locale constant for zh.</comment>
+            <returntype>uk.co.martinpearman.b4a.util.Locale</returntype>
+        </field>
+        <field>
+            <name>CHINA</name>
+            <comment>Locale constant for zh_CN.</comment>
+            <returntype>uk.co.martinpearman.b4a.util.Locale</returntype>
+        </field>
+        <field>
+            <name>JAPAN</name>
+            <comment>Locale constant for ja_JP.</comment>
+            <returntype>uk.co.martinpearman.b4a.util.Locale</returntype>
+        </field>
+        <field>
+            <name>ENGLISH</name>
+            <comment>Locale constant for en.</comment>
+            <returntype>uk.co.martinpearman.b4a.util.Locale</returntype>
+        </field>
+        <field>
+            <name>JAPANESE</name>
+            <comment>Locale constant for ja.</comment>
+            <returntype>uk.co.martinpearman.b4a.util.Locale</returntype>
+        </field>
+    </class>
+    <class>
+        <name>uk.co.martinpearman.b4a.content.res.Resources</name>
+        <shortname>Resources</shortname>
+        <objectwrapper>android.content.res.Resources</objectwrapper>
+        <owner>process</owner>
+        <method>
+            <name>Initialize</name>
+            <comment>Initialize the Resources object.
+ ResourceSource1 - Either RESOURCE_SOURCE_APPLICATION or RESOURCE_SOURCE_SYSTEM.</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>ResourceSource1</name>
+                <type EnumType="true">uk.co.martinpearman.b4a.content.res.Resources.ResourceSource</type>
+            </parameter>
+        </method>
+        <method>
+            <name>GetIdentifier</name>
+            <comment>Returns an integer resource identifier for the given resource name.
+ A fully qualified resource name is of the form "package:type/entry". 
+ The first two components (package and type) are optional if ResourceType and DefaultPackage, respectively, are specified here. 
+ ResourceName - The name of the desired resource.
+ ResourceType - Optional resource type to find, if "type/" is not included in the name.
+ DefaultPackage - Optional default package to find, if "package:" is not included in the name.
+ Returns 0 if no such resource was found. (0 is not a valid resource ID).</comment>
+            <returntype>int</returntype>
+            <parameter>
+                <name>ResourceName</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>ResourceType</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>DefaultPackage</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+        <method>
+            <name>GetDimensionPixelOffset</name>
+            <comment>Retrieve a dimensional for the resource ID for use as an offset in raw pixels.</comment>
+            <returntype>int</returntype>
+            <parameter>
+                <name>ResourceId</name>
+                <type>int</type>
+            </parameter>
+        </method>
+        <method>
+            <name>GetResourceNames</name>
+            <comment>Returns a List containing resource names.
+ ResourceSource1 - Either RESOURCE_SOURCE_APPLICATION or RESOURCE_SOURCE_SYSTEM.
+ ResourceType - The type of resources to return resource names for, eg "string" or "drawable".</comment>
+            <returntype>anywheresoftware.b4a.objects.collections.List</returntype>
+            <parameter>
+                <name>ResourceSource1</name>
+                <type EnumType="true">uk.co.martinpearman.b4a.content.res.Resources.ResourceSource</type>
+            </parameter>
+            <parameter>
+                <name>ResourceType</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+        <method>
+            <name>OpenRawResource</name>
+            <comment>Open a data stream for reading a raw resource.</comment>
+            <returntype>anywheresoftware.b4a.objects.streams.File.InputStreamWrapper</returntype>
+            <parameter>
+                <name>ResourceId</name>
+                <type>int</type>
+            </parameter>
+        </method>
+        <method>
+            <name>GetInteger</name>
+            <comment>Return an integer associated with the resource ID.</comment>
+            <returntype>int</returntype>
+            <parameter>
+                <name>ResourceId</name>
+                <type>int</type>
+            </parameter>
+        </method>
+        <method>
+            <name>GetDrawableForDensity</name>
+            <comment>Return a drawable object associated with the resource ID for the given screen density in DPI.</comment>
+            <returntype>android.graphics.drawable.Drawable</returntype>
+            <parameter>
+                <name>ResourceId</name>
+                <type>int</type>
+            </parameter>
+            <parameter>
+                <name>Density</name>
+                <type>int</type>
+            </parameter>
+        </method>
+        <method>
+            <name>SetDefaultLocale</name>
+            <comment>Set the default Locale used to get resources.</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>Locale1</name>
+                <type>java.util.Locale</type>
+            </parameter>
+        </method>
+        <method>
+            <name>GetBoolean</name>
+            <comment>Return a boolean associated with the resource ID.</comment>
+            <returntype>boolean</returntype>
+            <parameter>
+                <name>ResourceId</name>
+                <type>int</type>
+            </parameter>
+        </method>
+        <method>
+            <name>GetQuantityString</name>
+            <comment>Returns the string necessary for grammatically correct pluralization of the resource ID for the quantity.</comment>
+            <returntype>java.lang.String</returntype>
+            <parameter>
+                <name>ResourceId</name>
+                <type>int</type>
+            </parameter>
+            <parameter>
+                <name>Quantity</name>
+                <type>int</type>
+            </parameter>
+        </method>
+        <method>
+            <name>GetStringArray</name>
+            <comment>Return the string array associated with the resource ID.</comment>
+            <returntype>java.lang.String[]</returntype>
+            <parameter>
+                <name>ResourceId</name>
+                <type>int</type>
+            </parameter>
+        </method>
+        <method>
+            <name>GetDimension</name>
+            <comment>Retrieve a dimensional for the resource ID.</comment>
+            <returntype>float</returntype>
+            <parameter>
+                <name>ResourceId</name>
+                <type>int</type>
+            </parameter>
+        </method>
+        <method>
+            <name>GetResourceEntryName</name>
+            <comment>Return the entry name for the resource identifier.</comment>
+            <returntype>java.lang.String</returntype>
+            <parameter>
+                <name>ResourceId</name>
+                <type>int</type>
+            </parameter>
+        </method>
+        <method>
+            <name>GetString</name>
+            <comment>Return the string value associated with the resource ID.
+ It will be stripped of any styled text information.</comment>
+            <returntype>java.lang.String</returntype>
+            <parameter>
+                <name>ResourceId</name>
+                <type>int</type>
+            </parameter>
+        </method>
+        <method>
+            <name>GetResourceTypeName</name>
+            <comment>Return the type name for the resource identifier.</comment>
+            <returntype>java.lang.String</returntype>
+            <parameter>
+                <name>ResourceId</name>
+                <type>int</type>
+            </parameter>
+        </method>
+        <method>
+            <name>GetIntArray</name>
+            <comment>Return the int array associated with the resource ID.</comment>
+            <returntype>int[]</returntype>
+            <parameter>
+                <name>ResourceId</name>
+                <type>int</type>
+            </parameter>
+        </method>
+        <method>
+            <name>GetResourcePackageName</name>
+            <comment>Return the package name for the resource identifier.</comment>
+            <returntype>java.lang.String</returntype>
+            <parameter>
+                <name>ResourceId</name>
+                <type>int</type>
+            </parameter>
+        </method>
+        <method>
+            <name>GetResourceName</name>
+            <comment>Return the full name for the resource identifier.</comment>
+            <returntype>java.lang.String</returntype>
+            <parameter>
+                <name>ResourceId</name>
+                <type>int</type>
+            </parameter>
+        </method>
+        <method>
+            <name>GetColor</name>
+            <comment>Return a color integer associated with the resource ID.</comment>
+            <returntype>int</returntype>
+            <parameter>
+                <name>ResourceId</name>
+                <type>int</type>
+            </parameter>
+        </method>
+        <method>
+            <name>GetDrawable</name>
+            <comment>Return a drawable object associated with the resource ID.</comment>
+            <returntype>android.graphics.drawable.Drawable</returntype>
+            <parameter>
+                <name>ResourceId</name>
+                <type>int</type>
+            </parameter>
+        </method>
+        <method>
+            <name>GetDimensionPixelSize</name>
+            <comment>Retrieve a dimensional for the resource ID for use as a size in raw pixels.</comment>
+            <returntype>int</returntype>
+            <parameter>
+                <name>ResourceId</name>
+                <type>int</type>
+            </parameter>
+        </method>
+        <method>
+            <name>IsInitialized</name>
+            <comment></comment>
+            <returntype>boolean</returntype>
+        </method>
+        <property>
+            <name>PackageName</name>
+            <returntype>java.lang.String</returntype>
+            <comment>Returns the application package name.</comment>
+        </property>
+        <field>
+            <name>RESOURCE_SOURCE_SYSTEM</name>
+            <comment>Constant field used to reference the system's resources.</comment>
+            <returntype EnumType="true">uk.co.martinpearman.b4a.content.res.Resources.ResourceSource</returntype>
+        </field>
+        <field>
+            <name>RESOURCE_SOURCE_APPLICATION</name>
+            <comment>Constant field used to reference the application's resources.</comment>
+            <returntype EnumType="true">uk.co.martinpearman.b4a.content.res.Resources.ResourceSource</returntype>
+        </field>
+    </class>
+    <version>1.0</version>
+    <comment>Object  for accessing application or system resources.
+ http://developer.android.com/reference/android/content/res/Resources.html</comment>
+    <author>Martin Pearman</author>
+</root>

@@ -1,0 +1,301 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root>
+    <doclet-version-NOT-library-version>1.01</doclet-version-NOT-library-version>
+    <class>
+        <name>anywheresoftware.b4a.agraham.jpegutils.ExifUtils</name>
+        <shortname>ExifData</shortname>
+        <comment>This is an object for reading and writing Exif tags in a JPEG file.
+The base functionality of the object requires Android 2.0. 
+
+The following tags are only supported by Android 2.2 or later.
+TAG_FOCAL_LENGTH, TAG_GPS_DATESTAMP,  TAG_GPS_PROCESSING_METHOD and TAG_GPS_TIMESTAMP.
+
+The following tags are only supported by Android 2.3 or later.
+TAG_GPS_ALTITUDE and TAG_GPS_ALTITUDE_REF.
+
+The following tags are only supported by Android 3.0 or later.
+TAG_APERTURE, TAG_EXPOSURE_TIME and TAG_ISO.</comment>
+        <owner>process</owner>
+        <method>
+            <name>getAttributeInt</name>
+            <comment>Returns the integer value of the specified tag.
+If there is no such tag in the JPEG file or the value cannot be parsed as integer,
+return defaultValue.</comment>
+            <returntype>int</returntype>
+            <parameter>
+                <name>tag</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>defaultValue</name>
+                <type>int</type>
+            </parameter>
+        </method>
+        <method>
+            <name>Initialize</name>
+            <comment>Initialize the ExifData object with a file name.
+This will throw an esception if the Android version is earlier than 2.0.</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>dir</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>filename</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+        <method>
+            <name>hasThumbnail</name>
+            <comment>Returns true if the JPEG file has a thumbnail.</comment>
+            <returntype>boolean</returntype>
+        </method>
+        <method>
+            <name>saveAttributes</name>
+            <comment>Save the tag data into the JPEG file.
+This is expensive because it involves copying all the JPG data from one file
+to another and deleting the old file and renaming the other.
+It's best to use setAttribute(String, String) to set all attributes to write and
+make a single call rather than multiple calls for each attribute.</comment>
+            <returntype>void</returntype>
+        </method>
+        <method>
+            <name>DecodeThumbnail</name>
+            <comment>Decode an immutable bitmap from the specified byte array.
+Returns the decoded bitmap, or null if the image could not be decoded.</comment>
+            <returntype>android.graphics.Bitmap</returntype>
+            <parameter>
+                <name>imagedata</name>
+                <type>byte[]</type>
+            </parameter>
+        </method>
+        <method>
+            <name>getLatLong</name>
+            <comment>Stores the latitude and longitude value in a float array. The first element is the latitude,
+and the second element is the longitude.
+Returns false if the Exif tags are not available.</comment>
+            <returntype>boolean</returntype>
+            <parameter>
+                <name>output</name>
+                <type>float[]</type>
+            </parameter>
+        </method>
+        <method>
+            <name>setAttribute</name>
+            <comment>Set the value of the specified tag.</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>tag</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>value</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+        <method>
+            <name>getAttributeDouble</name>
+            <comment>Returns the double value of the specified rational tag.
+If there is no such tag in the JPEG file or the value cannot be parsed as double,
+return defaultValue.</comment>
+            <returntype>double</returntype>
+            <parameter>
+                <name>tag</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>defaultValue</name>
+                <type>double</type>
+            </parameter>
+        </method>
+        <method>
+            <name>getAttribute</name>
+            <comment>Returns the value of the specified tag or "" if there is no such tag in the JPEG file.</comment>
+            <returntype>java.lang.String</returntype>
+            <parameter>
+                <name>tag</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+        <property>
+            <name>Thumbnail</name>
+            <returntype>byte[]</returntype>
+            <comment>Returns the thumbnail inside the JPEG file, or an empty array if there is no thumbnail.
+The returned data is in JPEG format and can be decoded using decodeByteArray(byte[], int, int)</comment>
+        </property>
+        <property>
+            <name>Version</name>
+            <returntype>double</returntype>
+            <comment>Returns the version number of the library.</comment>
+        </property>
+        <field>
+            <name>ORIENTATION_NORMAL</name>
+            <comment></comment>
+            <returntype>int</returntype>
+        </field>
+        <field>
+            <name>TAG_FOCAL_LENGTH</name>
+            <comment>Attribute is rational.</comment>
+            <returntype>java.lang.String</returntype>
+        </field>
+        <field>
+            <name>TAG_GPS_ALTITUDE_REF</name>
+            <comment>0 if the altitude is above sea level. 1 if the altitude is below sea level.
+Attribute is int.</comment>
+            <returntype>java.lang.String</returntype>
+        </field>
+        <field>
+            <name>WHITEBALANCE_MANUAL</name>
+            <comment>Attribute is string.</comment>
+            <returntype>int</returntype>
+        </field>
+        <field>
+            <name>TAG_ORIENTATION</name>
+            <comment>Attribute is string.</comment>
+            <returntype>java.lang.String</returntype>
+        </field>
+        <field>
+            <name>TAG_EXPOSURE_TIME</name>
+            <comment>Attribute is string.</comment>
+            <returntype>java.lang.String</returntype>
+        </field>
+        <field>
+            <name>TAG_GPS_PROCESSING_METHOD</name>
+            <comment>Name of GPS processing method used for location finding. 
+Attribute is String.</comment>
+            <returntype>java.lang.String</returntype>
+        </field>
+        <field>
+            <name>TAG_IMAGE_LENGTH</name>
+            <comment>Attribute is int.</comment>
+            <returntype>java.lang.String</returntype>
+        </field>
+        <field>
+            <name>TAG_MODEL</name>
+            <comment>Attribute is string.</comment>
+            <returntype>java.lang.String</returntype>
+        </field>
+        <field>
+            <name>TAG_IMAGE_WIDTH</name>
+            <comment>Attribute is int.</comment>
+            <returntype>java.lang.String</returntype>
+        </field>
+        <field>
+            <name>ORIENTATION_ROTATE_180</name>
+            <comment></comment>
+            <returntype>int</returntype>
+        </field>
+        <field>
+            <name>ORIENTATION_FLIP_HORIZONTAL</name>
+            <comment></comment>
+            <returntype>int</returntype>
+        </field>
+        <field>
+            <name>TAG_GPS_ALTITUDE</name>
+            <comment>The altitude (in meters) based on the reference in TAG_GPS_ALTITUDE_REF.
+Attribute is rational.</comment>
+            <returntype>java.lang.String</returntype>
+        </field>
+        <field>
+            <name>ORIENTATION_ROTATE_90</name>
+            <comment></comment>
+            <returntype>int</returntype>
+        </field>
+        <field>
+            <name>TAG_GPS_LATITUDE</name>
+            <comment>Format is "num1/denom1,num2/denom2,num3/denom3".  
+Attribute is string.</comment>
+            <returntype>java.lang.String</returntype>
+        </field>
+        <field>
+            <name>TAG_FLASH</name>
+            <comment>Attribute is int.</comment>
+            <returntype>java.lang.String</returntype>
+        </field>
+        <field>
+            <name>TAG_GPS_LATITUDE_REF</name>
+            <comment>Attribute is string.</comment>
+            <returntype>java.lang.String</returntype>
+        </field>
+        <field>
+            <name>TAG_ISO</name>
+            <comment>Attribute is string.</comment>
+            <returntype>java.lang.String</returntype>
+        </field>
+        <field>
+            <name>ORIENTATION_TRANSPOSE</name>
+            <comment></comment>
+            <returntype>int</returntype>
+        </field>
+        <field>
+            <name>TAG_GPS_LONGITUDE</name>
+            <comment>Format is "num1/denom1,num2/denom2,num3/denom3".  
+Attribute is string.</comment>
+            <returntype>java.lang.String</returntype>
+        </field>
+        <field>
+            <name>ORIENTATION_UNDEFINED</name>
+            <comment></comment>
+            <returntype>int</returntype>
+        </field>
+        <field>
+            <name>TAG_GPS_DATESTAMP</name>
+            <comment>Attribute is string.</comment>
+            <returntype>java.lang.String</returntype>
+        </field>
+        <field>
+            <name>TAG_DATETIME</name>
+            <comment>Attribute is string.</comment>
+            <returntype>java.lang.String</returntype>
+        </field>
+        <field>
+            <name>TAG_APERTURE</name>
+            <comment>Attribute is string.</comment>
+            <returntype>java.lang.String</returntype>
+        </field>
+        <field>
+            <name>ORIENTATION_TRANSVERSE</name>
+            <comment></comment>
+            <returntype>int</returntype>
+        </field>
+        <field>
+            <name>WHITEBALANCE_AUTO</name>
+            <comment>Attribute is string.</comment>
+            <returntype>int</returntype>
+        </field>
+        <field>
+            <name>ORIENTATION_ROTATE_270</name>
+            <comment></comment>
+            <returntype>int</returntype>
+        </field>
+        <field>
+            <name>TAG_WHITE_BALANCE</name>
+            <comment>Attribute is int.</comment>
+            <returntype>java.lang.String</returntype>
+        </field>
+        <field>
+            <name>TAG_MAKE</name>
+            <comment>Attribute is string.</comment>
+            <returntype>java.lang.String</returntype>
+        </field>
+        <field>
+            <name>ORIENTATION_FLIP_VERTICAL</name>
+            <comment></comment>
+            <returntype>int</returntype>
+        </field>
+        <field>
+            <name>TAG_GPS_LONGITUDE_REF</name>
+            <comment></comment>
+            <returntype>java.lang.String</returntype>
+        </field>
+        <field>
+            <name>TAG_GPS_TIMESTAMP</name>
+            <comment>Attribute is string.</comment>
+            <returntype>java.lang.String</returntype>
+        </field>
+    </class>
+    <version>1.0</version>
+    <comment>This library contains an ExifData object for reading and writing Exif tags in a JPEG file.
+Note that this object cannot read a file in File.DirAssets.</comment>
+    <author>Andrew Graham</author>
+</root>

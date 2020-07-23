@@ -1,0 +1,618 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root>
+    <doclet-version-NOT-library-version>1.07</doclet-version-NOT-library-version>
+    <class>
+        <name>b4a.SM.PopupWindow.smPopupWindow</name>
+        <shortname>smPopupWindow</shortname>
+        <comment>This class represents a popup window that can be used to display an arbitrary view. The popup window is a floating container that appears on top of the current activity.</comment>
+        <owner>activity</owner>
+        <method>
+            <name>showAsDropDown</name>
+            <comment>Displays the content view in a popup window anchored to the corner of another view. The window is positioned according to the specified gravity and offset by the specified x and y coordinates.
+ If there is not enough room on screen to show the popup in its entirety, this method tries to find a parent scroll view to scroll. If no parent view can be scrolled, the specified vertical gravity will be ignored and the popup will anchor itself such that it is visible.
+ If the view later scrolls to move anchor to a different location, the popup will be moved correspondingly.
+ xoff: A horizontal offset from the anchor in pixels. yoff: A vertical offset from the anchor in pixels.
+ gravity (API 19+) : Alignment of the popup relative to the anchor.
+ gravity (API 18-) : Not used.</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>ba</name>
+                <type>anywheresoftware.b4a.BA</type>
+            </parameter>
+            <parameter>
+                <name>anchor</name>
+                <type>android.view.View</type>
+            </parameter>
+            <parameter>
+                <name>xoff</name>
+                <type>int</type>
+            </parameter>
+            <parameter>
+                <name>yoff</name>
+                <type>int</type>
+            </parameter>
+            <parameter>
+                <name>gravity</name>
+                <type>int</type>
+            </parameter>
+        </method>
+        <method>
+            <name>isSplitTouchEnabled</name>
+            <comment>Indicates whether the popup window supports splitting touches.</comment>
+            <returntype>boolean</returntype>
+            <parameter>
+                <name>ba</name>
+                <type>anywheresoftware.b4a.BA</type>
+            </parameter>
+        </method>
+        <method>
+            <name>simpleRippleEffect</name>
+            <comment>Auxiliary function (outside PopupWindow class).</comment>
+            <returntype>java.lang.Object</returntype>
+            <parameter>
+                <name>ba</name>
+                <type>anywheresoftware.b4a.BA</type>
+            </parameter>
+            <parameter>
+                <name>DefaultColor</name>
+                <type>int</type>
+            </parameter>
+            <parameter>
+                <name>PressedColor</name>
+                <type>int</type>
+            </parameter>
+        </method>
+        <method>
+            <name>isAboveAnchor</name>
+            <comment>Indicates whether the popup is showing above (the y coordinate of the popup's bottom is less than the y coordinate of the anchor) or below the anchor view (the y coordinate of the popup is greater than y coordinate of the anchor's bottom). The value returned by this method is meaningful only after showAsDropDown(android.view.View) or showAsDropDown(android.view.View, int, int) was invoked.</comment>
+            <returntype>boolean</returntype>
+            <parameter>
+                <name>ba</name>
+                <type>anywheresoftware.b4a.BA</type>
+            </parameter>
+        </method>
+        <method>
+            <name>getExitTransition</name>
+            <comment>(API 24+) Returns the exit transition to be used when the popup window is dismissed.</comment>
+            <returntype>Transition</returntype>
+            <parameter>
+                <name>ba</name>
+                <type>anywheresoftware.b4a.BA</type>
+            </parameter>
+        </method>
+        <method>
+            <name>isClippingEnabled</name>
+            <comment>Indicates whether clipping of the popup window is enabled.</comment>
+            <returntype>boolean</returntype>
+            <parameter>
+                <name>ba</name>
+                <type>anywheresoftware.b4a.BA</type>
+            </parameter>
+        </method>
+        <method>
+            <name>update</name>
+            <comment>Updates the position and the dimension of the popup window. Calling this function also updates the window with the current popup state.
+ Width and height can be set to -1 to update location only.
+ force: true to reposition the window even if the specified position already seems to correspond to the LayoutParams, false to only reposition if needed.</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>ba</name>
+                <type>anywheresoftware.b4a.BA</type>
+            </parameter>
+            <parameter>
+                <name>x</name>
+                <type>int</type>
+            </parameter>
+            <parameter>
+                <name>y</name>
+                <type>int</type>
+            </parameter>
+            <parameter>
+                <name>width</name>
+                <type>int</type>
+            </parameter>
+            <parameter>
+                <name>height</name>
+                <type>int</type>
+            </parameter>
+            <parameter>
+                <name>force</name>
+                <type>boolean</type>
+            </parameter>
+        </method>
+        <method>
+            <name>getWidth</name>
+            <comment>Returns the popup's requested width in pixels or a layout constant such as ViewGroup.LayoutParams.WRAP_CONTENT or ViewGroup.LayoutParams.MATCH_PARENT. The actual size of the popup may depend on other factors such as clipping and window layout.</comment>
+            <returntype>int</returntype>
+            <parameter>
+                <name>ba</name>
+                <type>anywheresoftware.b4a.BA</type>
+            </parameter>
+        </method>
+        <method>
+            <name>Initialize</name>
+            <comment>Create a new non focusable popup window which can display the contentView.
+ The popup does not provide any background. This should be handled by the content view.</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>ba</name>
+                <type>anywheresoftware.b4a.BA</type>
+            </parameter>
+            <parameter>
+                <name>contentView</name>
+                <type>android.view.View</type>
+            </parameter>
+            <parameter>
+                <name>width</name>
+                <type>int</type>
+            </parameter>
+            <parameter>
+                <name>height</name>
+                <type>int</type>
+            </parameter>
+        </method>
+        <method>
+            <name>getElevation</name>
+            <comment>(API 21+) Returns the the elevation for this popup window in pixels.</comment>
+            <returntype>float</returntype>
+            <parameter>
+                <name>ba</name>
+                <type>anywheresoftware.b4a.BA</type>
+            </parameter>
+        </method>
+        <method>
+            <name>setClippingEnabled</name>
+            <comment>Allows the popup window to extend beyond the bounds of the screen. By default the window is clipped to the screen boundaries. Setting this to false will allow windows to be accurately positioned.
+ If the popup is showing, calling this method will take effect only the next time the popup is shown or through a manual call to one of the update() methods.</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>ba</name>
+                <type>anywheresoftware.b4a.BA</type>
+            </parameter>
+            <parameter>
+                <name>enabled</name>
+                <type>boolean</type>
+            </parameter>
+        </method>
+        <method>
+            <name>getEnterTransition</name>
+            <comment>(API 24+) Returns the enter transition to be used when the popup window is shown.</comment>
+            <returntype>Transition</returntype>
+            <parameter>
+                <name>ba</name>
+                <type>anywheresoftware.b4a.BA</type>
+            </parameter>
+        </method>
+        <method>
+            <name>getInputMethodMode</name>
+            <comment>Returns the current value in setInputMethodMode.</comment>
+            <returntype>int</returntype>
+            <parameter>
+                <name>ba</name>
+                <type>anywheresoftware.b4a.BA</type>
+            </parameter>
+        </method>
+        <method>
+            <name>setExitTransition</name>
+            <comment>(API 23+) Sets the exit transition to be used when the popup window is dismissed.</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>ba</name>
+                <type>anywheresoftware.b4a.BA</type>
+            </parameter>
+            <parameter>
+                <name>exitTransition</name>
+                <type>Transition</type>
+            </parameter>
+        </method>
+        <method>
+            <name>getHeight</name>
+            <comment>Returns the popup's requested height. May be a layout constant such as ViewGroup.LayoutParams.WRAP_CONTENT or ViewGroup.LayoutParams.MATCH_PARENT. The actual size of the popup may depend on other factors such as clipping and window layout.</comment>
+            <returntype>int</returntype>
+            <parameter>
+                <name>ba</name>
+                <type>anywheresoftware.b4a.BA</type>
+            </parameter>
+        </method>
+        <method>
+            <name>isShowing</name>
+            <comment>Indicate whether this popup window is showing on screen.</comment>
+            <returntype>boolean</returntype>
+            <parameter>
+                <name>ba</name>
+                <type>anywheresoftware.b4a.BA</type>
+            </parameter>
+        </method>
+        <method>
+            <name>setInputMethodMode</name>
+            <comment>Control how the popup operates with an input method: one of INPUT_METHOD_FROM_FOCUSABLE, INPUT_METHOD_NEEDED, or INPUT_METHOD_NOT_NEEDED.
+ If the popup is showing, calling this method will take effect only the next time the popup is shown or through a manual call to one of the update() methods.</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>ba</name>
+                <type>anywheresoftware.b4a.BA</type>
+            </parameter>
+            <parameter>
+                <name>mode</name>
+                <type>int</type>
+            </parameter>
+        </method>
+        <method>
+            <name>getSoftInputMode</name>
+            <comment>Returns the current value in setSoftInputMode.</comment>
+            <returntype>int</returntype>
+            <parameter>
+                <name>ba</name>
+                <type>anywheresoftware.b4a.BA</type>
+            </parameter>
+        </method>
+        <method>
+            <name>getMaxAvailableHeight</name>
+            <comment>Returns the maximum height that is available for the popup to be completely shown, optionally ignoring any bottom decorations such as the input method. It is recommended that this height be the maximum for the popup's height, otherwise it is possible that the popup will be clipped.
+ yOffset: y offset from the view's bottom edge.
+ ignoreBottomDecorations (API 24+) : if true, the height returned will be all the way to the bottom of the display, ignoring any bottom decorations.
+ ignoreBottomDecorations (API 23-) : not used.</comment>
+            <returntype>int</returntype>
+            <parameter>
+                <name>ba</name>
+                <type>anywheresoftware.b4a.BA</type>
+            </parameter>
+            <parameter>
+                <name>anchor</name>
+                <type>android.view.View</type>
+            </parameter>
+            <parameter>
+                <name>yOffset</name>
+                <type>int</type>
+            </parameter>
+            <parameter>
+                <name>ignoreBottomDecorations</name>
+                <type>boolean</type>
+            </parameter>
+        </method>
+        <method>
+            <name>showAtLocation</name>
+            <comment>Display the content view in a popup window at the specified location. If the popup window cannot fit on screen, it will be clipped. See WindowManager.LayoutParams for more information on how gravity and the x and y parameters are related. Specifying a gravity of Gravity.NO_GRAVITY is similar to specifying Gravity.LEFT | Gravity.TOP.</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>ba</name>
+                <type>anywheresoftware.b4a.BA</type>
+            </parameter>
+            <parameter>
+                <name>parent</name>
+                <type>android.view.View</type>
+            </parameter>
+            <parameter>
+                <name>gravity</name>
+                <type>int</type>
+            </parameter>
+            <parameter>
+                <name>x</name>
+                <type>int</type>
+            </parameter>
+            <parameter>
+                <name>y</name>
+                <type>int</type>
+            </parameter>
+        </method>
+        <method>
+            <name>setTouchable</name>
+            <comment>Changes the touchability of the popup window. When touchable, the window will receive touch events, otherwise touch events will go to the window below it. By default the window is touchable.
+ If the popup is showing, calling this method will take effect only the next time the popup is shown or through a manual call to one of the update() methods.</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>ba</name>
+                <type>anywheresoftware.b4a.BA</type>
+            </parameter>
+            <parameter>
+                <name>touchable</name>
+                <type>boolean</type>
+            </parameter>
+        </method>
+        <method>
+            <name>isOutsideTouchable</name>
+            <comment>Indicates whether the popup window will be informed of touch events outside of its window.</comment>
+            <returntype>boolean</returntype>
+            <parameter>
+                <name>ba</name>
+                <type>anywheresoftware.b4a.BA</type>
+            </parameter>
+        </method>
+        <method>
+            <name>setElevation</name>
+            <comment>(API 21+) Specifies the elevation in pixels for this popup window.</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>ba</name>
+                <type>anywheresoftware.b4a.BA</type>
+            </parameter>
+            <parameter>
+                <name>elevation</name>
+                <type>float</type>
+            </parameter>
+        </method>
+        <method>
+            <name>dismiss</name>
+            <comment>Disposes of the popup window. This method can be invoked only after showAsDropDown(android.view.View) has been executed. Failing that, calling this method will have no effect.</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>ba</name>
+                <type>anywheresoftware.b4a.BA</type>
+            </parameter>
+        </method>
+        <method>
+            <name>setFocusable</name>
+            <comment>Changes the focusability of the popup window. When focusable, the window will grab the focus from the current focused widget if the popup contains a focusable View. By default a popup window is not focusable.
+ If the popup is showing, calling this method will take effect only the next time the popup is shown or through a manual call to one of the update() methods.</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>ba</name>
+                <type>anywheresoftware.b4a.BA</type>
+            </parameter>
+            <parameter>
+                <name>focusable</name>
+                <type>boolean</type>
+            </parameter>
+        </method>
+        <method>
+            <name>setAnimationStyle</name>
+            <comment>Changes the animation style resource for this popup. Set to -1 for the default animation, 0 for no animation, or a resource identifier for an explicit animation.
+ If the popup is showing, calling this method will take effect only the next time the popup is shown or through a manual call to one of the update() methods.</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>ba</name>
+                <type>anywheresoftware.b4a.BA</type>
+            </parameter>
+            <parameter>
+                <name>animationStyle</name>
+                <type>int</type>
+            </parameter>
+        </method>
+        <method>
+            <name>getContentView</name>
+            <comment>Returns the view used as the content of the popup window.</comment>
+            <returntype>android.view.View</returntype>
+            <parameter>
+                <name>ba</name>
+                <type>anywheresoftware.b4a.BA</type>
+            </parameter>
+        </method>
+        <method>
+            <name>setHeight</name>
+            <comment>Sets the popup's requested height. May be a layout constant such as ViewGroup.LayoutParams.WRAP_CONTENT or ViewGroup.LayoutParams.MATCH_PARENT. The actual size of the popup may depend on other factors such as clipping and window layout.
+ If the popup is showing, calling this method will take effect the next time the popup is shown.</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>ba</name>
+                <type>anywheresoftware.b4a.BA</type>
+            </parameter>
+            <parameter>
+                <name>height</name>
+                <type>int</type>
+            </parameter>
+        </method>
+        <method>
+            <name>setSoftInputMode</name>
+            <comment>Sets the operating mode for the soft input area.</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>ba</name>
+                <type>anywheresoftware.b4a.BA</type>
+            </parameter>
+            <parameter>
+                <name>mode</name>
+                <type>int</type>
+            </parameter>
+        </method>
+        <method>
+            <name>setWidth</name>
+            <comment>Sets the popup's requested width. May be a layout constant such as ViewGroup.LayoutParams.WRAP_CONTENT or ViewGroup.LayoutParams.MATCH_PARENT.
+ The actual size of the popup may depend on other factors such as clipping and window layout.
+ If the popup is showing, calling this method will take effect the next time the popup is shown.</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>ba</name>
+                <type>anywheresoftware.b4a.BA</type>
+            </parameter>
+            <parameter>
+                <name>width</name>
+                <type>int</type>
+            </parameter>
+        </method>
+        <method>
+            <name>getAnimationStyle</name>
+            <comment>Returns the animation style to use the popup appears and disappears.</comment>
+            <returntype>int</returntype>
+            <parameter>
+                <name>ba</name>
+                <type>anywheresoftware.b4a.BA</type>
+            </parameter>
+        </method>
+        <method>
+            <name>isAttachedInDecor</name>
+            <comment>(API 22+) Indicates whether the popup window will be attached in the decor frame of its parent window.</comment>
+            <returntype>boolean</returntype>
+            <parameter>
+                <name>ba</name>
+                <type>anywheresoftware.b4a.BA</type>
+            </parameter>
+        </method>
+        <method>
+            <name>getWindowLayoutType</name>
+            <comment>(API 23+) Returns the layout type for this window.</comment>
+            <returntype>int</returntype>
+            <parameter>
+                <name>ba</name>
+                <type>anywheresoftware.b4a.BA</type>
+            </parameter>
+        </method>
+        <method>
+            <name>setBackgroundDrawable</name>
+            <comment>Specifies the background drawable for this popup window. The background can be set to null.</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>ba</name>
+                <type>anywheresoftware.b4a.BA</type>
+            </parameter>
+            <parameter>
+                <name>background</name>
+                <type>Drawable</type>
+            </parameter>
+        </method>
+        <method>
+            <name>setOverlapAnchor</name>
+            <comment>(API 23+) Sets whether the popup window should overlap its anchor view when displayed as a drop-down.
+ If the popup is showing, calling this method will take effect only the next time the popup is shown.</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>ba</name>
+                <type>anywheresoftware.b4a.BA</type>
+            </parameter>
+            <parameter>
+                <name>overlapAnchor</name>
+                <type>boolean</type>
+            </parameter>
+        </method>
+        <method>
+            <name>getOverlapAnchor</name>
+            <comment>(API 23+) Returns whether the popup window should overlap its anchor view when displayed as a drop-down.</comment>
+            <returntype>boolean</returntype>
+            <parameter>
+                <name>ba</name>
+                <type>anywheresoftware.b4a.BA</type>
+            </parameter>
+        </method>
+        <method>
+            <name>setAttachedInDecor</name>
+            <comment>(API 22+) This will attach the popup window to the decor frame of the parent window to avoid overlaping with screen decorations like the navigation bar.
+ Overrides the default behavior of the flag WindowManager.LayoutParams.FLAG_LAYOUT_ATTACHED_IN_DECOR. By default the flag is set on SDK version Build.VERSION_CODES.LOLLIPOP_MR1 or greater and cleared on lesser SDK versions.</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>ba</name>
+                <type>anywheresoftware.b4a.BA</type>
+            </parameter>
+            <parameter>
+                <name>enabled</name>
+                <type>boolean</type>
+            </parameter>
+        </method>
+        <method>
+            <name>setSplitTouchEnabled</name>
+            <comment>Allows the popup window to split touches across other windows that also support split touch. When this flag is false, the first pointer that goes down determines the window to which all subsequent touches go until all pointers go up. When this flag is true, each pointer (not necessarily the first) that goes down determines the window to which all subsequent touches of that pointer will go until that pointer goes up thereby enabling touches with multiple pointers to be split across multiple windows.</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>ba</name>
+                <type>anywheresoftware.b4a.BA</type>
+            </parameter>
+            <parameter>
+                <name>enabled</name>
+                <type>boolean</type>
+            </parameter>
+        </method>
+        <method>
+            <name>setContentView</name>
+            <comment>Changes the popup's content. The content is represented by an instance of View. This method has no effect if called when the popup is showing.</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>ba</name>
+                <type>anywheresoftware.b4a.BA</type>
+            </parameter>
+            <parameter>
+                <name>contentView</name>
+                <type>android.view.View</type>
+            </parameter>
+        </method>
+        <method>
+            <name>setWindowLayoutType</name>
+            <comment>(API 23+) Sets the layout type for this window. See WindowManager.LayoutParams.type for possible values.</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>ba</name>
+                <type>anywheresoftware.b4a.BA</type>
+            </parameter>
+            <parameter>
+                <name>layoutType</name>
+                <type>int</type>
+            </parameter>
+        </method>
+        <method>
+            <name>setEnterTransition</name>
+            <comment>(API 23+) Sets the enter transition to be used when the popup window is shown.</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>ba</name>
+                <type>anywheresoftware.b4a.BA</type>
+            </parameter>
+            <parameter>
+                <name>enterTransition</name>
+                <type>Transition</type>
+            </parameter>
+        </method>
+        <method>
+            <name>setOutsideTouchable</name>
+            <comment>Controls whether the pop-up will be informed of touch events outside of its window. This only makes sense for pop-ups that are touchable but not focusable, which means touches outside of the window will be delivered to the window behind. The default is false.
+ If the popup is showing, calling this method will take effect only the next time the popup is shown or through a manual call to one of the update() methods.</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>ba</name>
+                <type>anywheresoftware.b4a.BA</type>
+            </parameter>
+            <parameter>
+                <name>touchable</name>
+                <type>boolean</type>
+            </parameter>
+        </method>
+        <method>
+            <name>getBackground</name>
+            <comment>Returns the drawable used as the popup window's background.</comment>
+            <returntype>Drawable</returntype>
+            <parameter>
+                <name>ba</name>
+                <type>anywheresoftware.b4a.BA</type>
+            </parameter>
+        </method>
+        <method>
+            <name>isFocusable</name>
+            <comment>Indicate whether the popup window can grab the focus.</comment>
+            <returntype>boolean</returntype>
+            <parameter>
+                <name>ba</name>
+                <type>anywheresoftware.b4a.BA</type>
+            </parameter>
+        </method>
+        <method>
+            <name>isTouchable</name>
+            <comment>Indicates whether the popup window receives touch events.</comment>
+            <returntype>boolean</returntype>
+            <parameter>
+                <name>ba</name>
+                <type>anywheresoftware.b4a.BA</type>
+            </parameter>
+        </method>
+        <property>
+            <name>IgnoreCheekPress</name>
+            <parameter>
+                <name>ba</name>
+                <type>anywheresoftware.b4a.BA</type>
+            </parameter>
+            <comment>Set the flag on popup to ignore cheek press events; by default this flag is set to false which means the popup will not ignore cheek press dispatch events.
+ If the popup is showing, calling this method will take effect only the next time the popup is shown or through a manual call to one of the update() methods.</comment>
+        </property>
+        <field>
+            <name>INPUT_METHOD_NEEDED</name>
+            <comment></comment>
+            <returntype>int</returntype>
+        </field>
+        <field>
+            <name>INPUT_METHOD_FROM_FOCUSABLE</name>
+            <comment></comment>
+            <returntype>int</returntype>
+        </field>
+        <field>
+            <name>INPUT_METHOD_NOT_NEEDED</name>
+            <comment></comment>
+            <returntype>int</returntype>
+        </field>
+    </class>
+    <version>1.0</version>
+</root>

@@ -1,0 +1,284 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root>
+    <doclet-version-NOT-library-version>1.04</doclet-version-NOT-library-version>
+    <class>
+        <name>ariagp.amin.shahedi.AriaGlideWrapper</name>
+        <shortname>AriaGlide</shortname>
+        <owner>process</owner>
+        <event>OnBitmapReady(bitmap as Bitmap,Tag as Object)</event>
+        <permission>android.permission.INTERNET</permission>
+        <method>
+            <name>Load</name>
+            <comment>&lt;h1&gt;&lt;/h1&gt;
+  Accepted Types : 
+ 
+  1 - &lt;b&gt;String&lt;/b&gt;  : 
+       &lt;i&gt;Links :         "http://answercenter.ir/pictures/pic1.jpg" &lt;/i&gt;
+       &lt;i&gt;Addresses       (its better to use AriaFile) &lt;/i&gt;
+       &lt;i&gt;AssetsAddress : "file:///android_asset/pic1.png" &lt;/i&gt;
+  2 - &lt;b&gt;Byte&lt;/b&gt;
+  3 - &lt;b&gt;AriaFile&lt;/b&gt;
+  
+ Glide wrapper for b4a by &lt;b&gt;AminShahedi&lt;/b&gt; - &lt;b&gt;AriaGP&lt;/b&gt;
+ &lt;link&gt;AnswerCenter.ir|http://www.answercenter.ir&lt;/link&gt; - AminShahedi - All rights reserved</comment>
+            <returntype>ariagp.amin.shahedi.TypeRequest</returntype>
+            <parameter>
+                <name>loadResource</name>
+                <type>java.lang.Object</type>
+            </parameter>
+        </method>
+    </class>
+    <class>
+        <name>ariagp.amin.shahedi.BitmapRequestWrapper</name>
+        <owner>process</owner>
+        <method>
+            <name>Placeholder</name>
+            <comment></comment>
+            <returntype>ariagp.amin.shahedi.BitmapRequestWrapper</returntype>
+            <parameter>
+                <name>placeholder</name>
+                <type>android.graphics.Bitmap</type>
+            </parameter>
+        </method>
+        <method>
+            <name>Resize</name>
+            <comment></comment>
+            <returntype>ariagp.amin.shahedi.BitmapRequestWrapper</returntype>
+            <parameter>
+                <name>width</name>
+                <type>int</type>
+            </parameter>
+            <parameter>
+                <name>height</name>
+                <type>int</type>
+            </parameter>
+        </method>
+        <method>
+            <name>IntoImageView</name>
+            <comment></comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>view</name>
+                <type>anywheresoftware.b4a.objects.ImageViewWrapper</type>
+            </parameter>
+        </method>
+        <method>
+            <name>CenterCrop</name>
+            <comment></comment>
+            <returntype>ariagp.amin.shahedi.BitmapRequestWrapper</returntype>
+        </method>
+        <method>
+            <name>IntoTarget</name>
+            <comment></comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>ba</name>
+                <type>anywheresoftware.b4a.BA</type>
+            </parameter>
+            <parameter>
+                <name>EventName</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>tag</name>
+                <type>java.lang.Object</type>
+            </parameter>
+        </method>
+        <method>
+            <name>Error</name>
+            <comment></comment>
+            <returntype>ariagp.amin.shahedi.BitmapRequestWrapper</returntype>
+            <parameter>
+                <name>error</name>
+                <type>android.graphics.Bitmap</type>
+            </parameter>
+        </method>
+        <method>
+            <name>Approximate</name>
+            <comment></comment>
+            <returntype>ariagp.amin.shahedi.BitmapRequestWrapper</returntype>
+        </method>
+        <method>
+            <name>DontTransform</name>
+            <comment></comment>
+            <returntype>ariagp.amin.shahedi.BitmapRequestWrapper</returntype>
+        </method>
+        <method>
+            <name>IntoTarget2</name>
+            <comment></comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>ba</name>
+                <type>anywheresoftware.b4a.BA</type>
+            </parameter>
+            <parameter>
+                <name>width</name>
+                <type>int</type>
+            </parameter>
+            <parameter>
+                <name>height</name>
+                <type>int</type>
+            </parameter>
+            <parameter>
+                <name>EventName</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>tag</name>
+                <type>java.lang.Object</type>
+            </parameter>
+        </method>
+        <method>
+            <name>SkipMemoryCache</name>
+            <comment></comment>
+            <returntype>ariagp.amin.shahedi.BitmapRequestWrapper</returntype>
+            <parameter>
+                <name>skip</name>
+                <type>boolean</type>
+            </parameter>
+        </method>
+        <method>
+            <name>Get</name>
+            <comment>Not works in MainThread
+ width : pass -1 for null
+ height : pass -1 for null</comment>
+            <returntype>anywheresoftware.b4a.objects.drawable.CanvasWrapper.BitmapWrapper</returntype>
+            <parameter>
+                <name>width</name>
+                <type>int</type>
+            </parameter>
+            <parameter>
+                <name>height</name>
+                <type>int</type>
+            </parameter>
+        </method>
+        <method>
+            <name>DiskCacheStrategy</name>
+            <comment>DiskCacheStrategy : 
+ 1 &gt;&gt; ALL
+ 2 &gt;&gt; NONE
+ 3 &gt;&gt; RESULT
+ 4 &gt;&gt; SOURCE</comment>
+            <returntype>ariagp.amin.shahedi.BitmapRequestWrapper</returntype>
+            <parameter>
+                <name>strategy</name>
+                <type>int</type>
+            </parameter>
+        </method>
+        <method>
+            <name>FitCenter</name>
+            <comment></comment>
+            <returntype>ariagp.amin.shahedi.BitmapRequestWrapper</returntype>
+        </method>
+        <method>
+            <name>DontAnimate</name>
+            <comment></comment>
+            <returntype>ariagp.amin.shahedi.BitmapRequestWrapper</returntype>
+        </method>
+    </class>
+    <class>
+        <name>ariagp.amin.shahedi.GifRequestWrapper</name>
+        <owner>process</owner>
+        <method>
+            <name>Placeholder</name>
+            <comment></comment>
+            <returntype>ariagp.amin.shahedi.GifRequestWrapper</returntype>
+            <parameter>
+                <name>placeholder</name>
+                <type>android.graphics.Bitmap</type>
+            </parameter>
+        </method>
+        <method>
+            <name>SkipMemoryCache</name>
+            <comment></comment>
+            <returntype>ariagp.amin.shahedi.GifRequestWrapper</returntype>
+            <parameter>
+                <name>skip</name>
+                <type>boolean</type>
+            </parameter>
+        </method>
+        <method>
+            <name>Resize</name>
+            <comment></comment>
+            <returntype>ariagp.amin.shahedi.GifRequestWrapper</returntype>
+            <parameter>
+                <name>width</name>
+                <type>int</type>
+            </parameter>
+            <parameter>
+                <name>height</name>
+                <type>int</type>
+            </parameter>
+        </method>
+        <method>
+            <name>IntoImageView</name>
+            <comment></comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>view</name>
+                <type>anywheresoftware.b4a.objects.ImageViewWrapper</type>
+            </parameter>
+        </method>
+        <method>
+            <name>CenterCrop</name>
+            <comment></comment>
+            <returntype>ariagp.amin.shahedi.GifRequestWrapper</returntype>
+        </method>
+        <method>
+            <name>Error</name>
+            <comment></comment>
+            <returntype>ariagp.amin.shahedi.GifRequestWrapper</returntype>
+            <parameter>
+                <name>error</name>
+                <type>android.graphics.Bitmap</type>
+            </parameter>
+        </method>
+        <method>
+            <name>DiskCacheStrategy</name>
+            <comment>DiskCacheStrategy : 
+ 1 &gt;&gt; ALL
+ 2 &gt;&gt; NONE
+ 3 &gt;&gt; RESULT
+ 4 &gt;&gt; SOURCE</comment>
+            <returntype>ariagp.amin.shahedi.GifRequestWrapper</returntype>
+            <parameter>
+                <name>strategy</name>
+                <type>int</type>
+            </parameter>
+        </method>
+        <method>
+            <name>FitCenter</name>
+            <comment></comment>
+            <returntype>ariagp.amin.shahedi.GifRequestWrapper</returntype>
+        </method>
+        <method>
+            <name>DontTransform</name>
+            <comment></comment>
+            <returntype>ariagp.amin.shahedi.GifRequestWrapper</returntype>
+        </method>
+        <method>
+            <name>DontAnimate</name>
+            <comment></comment>
+            <returntype>ariagp.amin.shahedi.GifRequestWrapper</returntype>
+        </method>
+    </class>
+    <class>
+        <name>ariagp.amin.shahedi.TypeRequest</name>
+        <owner>process</owner>
+        <method>
+            <name>AsBitmap</name>
+            <comment></comment>
+            <returntype>ariagp.amin.shahedi.BitmapRequestWrapper</returntype>
+        </method>
+        <method>
+            <name>AsGif</name>
+            <comment></comment>
+            <returntype>ariagp.amin.shahedi.GifRequestWrapper</returntype>
+        </method>
+    </class>
+    <version>2.5</version>
+    <dependsOn>glide-3.7.0</dependsOn>
+    <dependsOn>android-support-v4</dependsOn>
+    <dependsOn>glide-3.7.0</dependsOn>
+    <dependsOn>glide-3.7.0</dependsOn>
+</root>

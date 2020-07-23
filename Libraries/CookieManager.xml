@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root>
+    <doclet-version-NOT-library-version>1.02</doclet-version-NOT-library-version>
+    <class>
+        <name>uk.co.martinpearman.b4a.httpcookiemanager.B4ACookieManager</name>
+        <shortname>CookieManager</shortname>
+        <owner>process</owner>
+        <method>
+            <name>GetCookie</name>
+            <comment>Returns the cookie for the given Url in the format: NAME=VALUE [; NAME=VALUE]
+ If no cookie exists for the Url then a null value will be returned.</comment>
+            <returntype>java.lang.String</returntype>
+            <parameter>
+                <name>Url</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+        <method>
+            <name>RemoveSessionCookies</name>
+            <comment>Removes all session cookies stored for your application.</comment>
+            <returntype>void</returntype>
+        </method>
+        <method>
+            <name>HasCookies</name>
+            <comment>Returns True if any cookies are stored for your application.</comment>
+            <returntype>boolean</returntype>
+        </method>
+        <method>
+            <name>RemoveAllCookies</name>
+            <comment>Removes all cookies stored for your application.</comment>
+            <returntype>void</returntype>
+        </method>
+        <method>
+            <name>SetCookie</name>
+            <comment>Sets the cookie for the Url to the Value.</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>Url</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>Value</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+        <method>
+            <name>SetAcceptCookies</name>
+            <comment>Set whether cookies will be accepted for your application.</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>state</name>
+                <type>boolean</type>
+            </parameter>
+        </method>
+        <method>
+            <name>RemoveExpiredCookies</name>
+            <comment>Removes all expired cookies stored for your application.</comment>
+            <returntype>void</returntype>
+        </method>
+        <method>
+            <name>GetAcceptCookies</name>
+            <comment>Returns True if cookies will be accepted by your application.</comment>
+            <returntype>boolean</returntype>
+        </method>
+    </class>
+    <version>1.0</version>
+    <comment>CookieManager is a simple wrapper for the Android &lt;link&gt;CookieManager|http://developer.android.com/reference/android/webkit/CookieManager.html&lt;/link&gt; Class.
+ It enables you to manages the cookies used by your application's WebView instances.</comment>
+    <author>Martin Pearman</author>
+</root>

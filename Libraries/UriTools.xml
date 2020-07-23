@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root>
+    <doclet-version-NOT-library-version>1.02</doclet-version-NOT-library-version>
+    <class>
+        <name>barxdroid.uritools.uriTools</name>
+        <shortname>uriTools</shortname>
+        <owner>process</owner>
+        <method>
+            <name>getPathsFromIntent</name>
+            <comment>Returns a List of the full paths of files from URI returned from an intent as extras
+ 
+ UnInitialized List returned if no URI's found.</comment>
+            <returntype>anywheresoftware.b4a.objects.collections.List</returntype>
+            <parameter>
+                <name>ba</name>
+                <type>anywheresoftware.b4a.BA</type>
+            </parameter>
+            <parameter>
+                <name>contentIntent</name>
+                <type>android.content.Intent</type>
+            </parameter>
+        </method>
+        <method>
+            <name>getRealPathFromURI</name>
+            <comment>Returns the full path of a file as a String from a given URI.</comment>
+            <returntype>java.lang.String</returntype>
+            <parameter>
+                <name>ba</name>
+                <type>anywheresoftware.b4a.BA</type>
+            </parameter>
+            <parameter>
+                <name>contentUri</name>
+                <type>android.net.Uri</type>
+            </parameter>
+        </method>
+    </class>
+    <version>1.0</version>
+    <author>BarxDroid</author>
+</root>

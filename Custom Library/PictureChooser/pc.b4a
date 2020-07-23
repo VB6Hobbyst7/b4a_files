@@ -1,0 +1,88 @@
+﻿Build1=Default,b4a.exampleddd
+File1=f1.bal
+FileGroup1=Default Group
+Group=Default Group
+IconFile=
+Library1=core
+Library10=sql
+Library11=stringutils
+Library2=javaobject
+Library3=phone
+Library4=reflection
+Library5=rsimageprocessing
+Library6=jpegutils
+Library7=runtimepermissions
+Library8=cropimageview
+Library9=contentresolver
+ManifestCode='This code will be applied to the manifest file during compilation.~\n~'You do not need to modify it in most cases.~\n~'See this link for for more information: https://www.b4x.com/forum/showthread.php?p=78136~\n~AddManifestText(~\n~<uses-feature android:name="android.hardware.camera" />~\n~<uses-sdk android:minSdkVersion="5" android:targetSdkVersion="21"/>~\n~<supports-screens android:largeScreens="true" ~\n~    android:normalScreens="true" ~\n~    android:smallScreens="true" ~\n~    android:anyDensity="true"/>)~\n~SetApplicationAttribute(android:icon, "@drawable/icon")~\n~SetApplicationAttribute(android:label, "$LABEL$")~\n~SetApplicationAttribute(android:largeHeap, true)~\n~ AddPermission(android.permission.CAMERA)~\n~ AddPermission(android.hardware.camera)~\n~ AddPermission(android.hardware.camera.autofocus)~\n~ ~\n~ AddManifestText(~\n~<uses-permission~\n~  android:name="android.permission.WRITE_EXTERNAL_STORAGE"~\n~  android:maxSdkVersion="18" />~\n~)~\n~~\n~AddApplicationText(~\n~  <provider~\n~  android:name="android.support.v4.content.FileProvider"~\n~  android:authorities="$PACKAGE$.provider"~\n~  android:exported="false"~\n~  android:grantUriPermissions="true">~\n~  <meta-data~\n~  android:name="android.support.FILE_PROVIDER_PATHS"~\n~  android:resource="@xml/provider_paths"/>~\n~  </provider>~\n~)~\n~CreateResource(xml, provider_paths,~\n~   <external-files-path name="name" path="shared" />~\n~)
+Module1=PictureChooser
+Module2=Starter
+NumberOfFiles=1
+NumberOfLibraries=11
+NumberOfModules=2
+Version=9
+@EndOfDesignText@
+#Region  Project Attributes 
+	#ApplicationLabel: Picture Chooser
+	#VersionCode: 1
+	#VersionName: 
+	'SupportedOrientations possible values: unspecified, landscape or portrait.
+	#SupportedOrientations: unspecified
+	#CanInstallToExternalStorage: False
+	#LibraryAuthor: www.iranapp.org
+	#LibraryName: PictureChooser
+	#LibraryVersion: 1.3
+	#AdditionalRes:../cropimageview
+#End Region
+
+#Region  Activity Attributes 
+	#FullScreen: False
+	#IncludeTitle: True
+#End Region
+
+Sub Process_Globals
+	'These global variables will be declared once when the application starts.
+	'These variables can be accessed from all modules.
+
+End Sub
+
+Sub Globals
+	'These global variables will be redeclared each time the activity is created.
+	'These variables can only be accessed from this module.
+	Dim k As PictureChooser
+	Private ImageView1 As ImageView
+End Sub
+
+Sub Activity_Create(FirstTime As Boolean)
+	
+	Activity.LoadLayout("f1")
+	k.Initialize(Activity,Me,"result2")
+	k.Crop	=	True
+	k.ScaleCrop = True
+	
+End Sub
+
+Sub result2_Result2(Dir As String,Filename As String)
+	ImageView1.Bitmap = LoadBitmap(Dir,Filename)
+	Log(LoadBitmap(Dir,Filename).Width)
+End Sub
+
+Sub Activity_Click
+	k.ChooseFromGallery
+End Sub
+
+Sub Activity_PermissionResult (Permission As String, Result As Boolean)
+	
+End Sub
+Sub result2_Error
+End Sub
+
+Sub Activity_Resume
+
+End Sub
+
+Sub Activity_Pause (UserClosed As Boolean)
+
+End Sub
+
+

@@ -1,0 +1,314 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <doclet-version-NOT-library-version>1.00</doclet-version-NOT-library-version>
+  <class>
+    <name>dominex.slidingpanels.slidingpanels._jumpdata</name>
+    <shortname>JumpData</shortname>
+    <owner>process</owner>
+    <method>
+      <name>Initialize</name>
+      <comment>Initializes the fields to their default value.</comment>
+      <returntype>void</returntype>
+    </method>
+    <field>
+      <name>IsInitialized</name>
+      <comment>Tests whether the object has been initialized.</comment>
+      <returntype>boolean</returntype>
+    </field>
+    <field>
+      <name>Panel</name>
+      <returntype>int</returntype>
+    </field>
+    <field>
+      <name>Delay</name>
+      <returntype>int</returntype>
+    </field>
+    <field>
+      <name>Speed</name>
+      <returntype>int</returntype>
+    </field>
+  </class>
+  <class>
+    <name>dominex.slidingpanels.slidingpanels._movespanel</name>
+    <shortname>MovesPanel</shortname>
+    <owner>process</owner>
+    <method>
+      <name>Initialize</name>
+      <comment>Initializes the fields to their default value.</comment>
+      <returntype>void</returntype>
+    </method>
+    <field>
+      <name>IsInitialized</name>
+      <comment>Tests whether the object has been initialized.</comment>
+      <returntype>boolean</returntype>
+    </field>
+    <field>
+      <name>PanelNumber</name>
+      <returntype>int</returntype>
+    </field>
+    <field>
+      <name>Start</name>
+      <returntype>float</returntype>
+    </field>
+    <field>
+      <name>Destination</name>
+      <returntype>int</returntype>
+    </field>
+    <field>
+      <name>Increase</name>
+      <returntype>float</returntype>
+    </field>
+  </class>
+  <class>
+    <name>dominex.slidingpanels.slidingpanels._touchdata</name>
+    <shortname>TouchData</shortname>
+    <owner>process</owner>
+    <method>
+      <name>Initialize</name>
+      <comment>Initializes the fields to their default value.</comment>
+      <returntype>void</returntype>
+    </method>
+    <field>
+      <name>IsInitialized</name>
+      <comment>Tests whether the object has been initialized.</comment>
+      <returntype>boolean</returntype>
+    </field>
+    <field>
+      <name>X</name>
+      <returntype>int</returntype>
+    </field>
+    <field>
+      <name>Y</name>
+      <returntype>int</returntype>
+    </field>
+    <field>
+      <name>Tag</name>
+      <returntype>Object</returntype>
+    </field>
+  </class>
+  <class>
+    <name>dominex.slidingpanels.slidingpanels</name>
+    <shortname>SlidingPanels</shortname>
+    <owner>activity</owner>
+    <event>Click</event>
+    <event>LongClick</event>
+    <event>Change</event>
+    <method>
+      <name>IsInitialized</name>
+      <comment>Tests whether the object has been initialized.</comment>
+      <returntype>boolean</returntype>
+    </method>
+    <method>
+      <name DesignerName="GetCurrentPanel">_getcurrentpanel</name>
+      <comment>Returns the number of the current Panel.</comment>
+      <returntype>String</returntype>
+    </method>
+    <method>
+      <name DesignerName="GetSlidingInProgress">_getslidinginprogress</name>
+      <comment>Return if the SlidingPaneles is in progress.</comment>
+      <returntype>String</returntype>
+    </method>
+    <method>
+      <name DesignerName="Initialize">_initialize</name>
+      <comment>Initialize the SlidingPanels.
+EventName - name of the event Click and Change.
+Speed - is the sliding speed in milliseconds.
+Horizontal - if it is True means horizontal scrolling, vertical otherwise.
+Parent - where is the Activity create the SlidingPanels.
+Module - must be "Me"
+ActivityTouch - if True use the event Touch the Activity rather than the individual Panels. [Recommended]
+
+If ActivityTouch if True, adds this code in Main Activity:&lt;code&gt;
+Sub Activity_Touch (Action As Int, X As Float, Y As Float)
+	SD.Panels_Touch(Action,X,Y)
+End Sub&lt;/code&gt;</comment>
+      <returntype>String</returntype>
+      <parameter>
+        <name>ba</name>
+        <type>anywheresoftware.b4a.BA</type>
+      </parameter>
+      <parameter>
+        <name>EventName</name>
+        <type>String</type>
+      </parameter>
+      <parameter>
+        <name>Speed</name>
+        <type>int</type>
+      </parameter>
+      <parameter>
+        <name>Parent</name>
+        <type>anywheresoftware.b4a.objects.PanelWrapper</type>
+      </parameter>
+      <parameter>
+        <name>Module</name>
+        <type>Object</type>
+      </parameter>
+      <parameter>
+        <name>ActivityTouch</name>
+        <type>boolean</type>
+      </parameter>
+    </method>
+    <method>
+      <name DesignerName="JumpToPanel">_jumptopanel</name>
+      <comment>Runs the SlidingPanels up to a specific Panel.
+Return False if it is already in the Panel indicated.
+PanelNumber - number of panels to jump to.
+Speed - is the sliding speed in milliseconds.
+Delay - delay before the next jump.</comment>
+      <returntype>boolean</returntype>
+      <parameter>
+        <name>PanelNumber</name>
+        <type>int</type>
+      </parameter>
+      <parameter>
+        <name>Speed</name>
+        <type>int</type>
+      </parameter>
+      <parameter>
+        <name>Delay</name>
+        <type>int</type>
+      </parameter>
+    </method>
+    <method>
+      <name DesignerName="ModeFullScreen">_modefullscreen</name>
+      <comment>Creates the SlidingPanels with Panels full screen.
+The Class must first be initialized.
+NumberOfPanels - is the number of panels to be created, Min 2.
+SlidingInLoop - indicates whether the SlidingPanels is in Loop (True = Loop).</comment>
+      <returntype>String</returntype>
+      <parameter>
+        <name>NumberOfPanels</name>
+        <type>int</type>
+      </parameter>
+      <parameter>
+        <name>SlidingInLoop</name>
+        <type>boolean</type>
+      </parameter>
+    </method>
+    <method>
+      <name DesignerName="ModeLittlePanels">_modelittlepanels</name>
+      <comment>Creates the SlidingPanels with smaller panels of the screen.
+The Class must first be initialized.
+NumberOfPanels - is the number of panels to be created, Min 2.
+Width - width of the panels.
+Height - height of the panels.
+Ypost - vertical central position of the panels.
+Distance - is the distance separating the panels.
+Friction - enable/disable the friction.</comment>
+      <returntype>String</returntype>
+      <parameter>
+        <name>NumberOfPanels</name>
+        <type>int</type>
+      </parameter>
+      <parameter>
+        <name>Width</name>
+        <type>int</type>
+      </parameter>
+      <parameter>
+        <name>Height</name>
+        <type>int</type>
+      </parameter>
+      <parameter>
+        <name>Ypos</name>
+        <type>int</type>
+      </parameter>
+      <parameter>
+        <name>Distance</name>
+        <type>int</type>
+      </parameter>
+      <parameter>
+        <name>Friction</name>
+        <type>boolean</type>
+      </parameter>
+    </method>
+    <method>
+      <name DesignerName="ModeLittlePanelsZoom">_modelittlepanelszoom</name>
+      <comment>Creates the SlidingPanels with smaller panels of the screen with zoom.
+The Class must first be initialized.
+NumberOfPanels - is the number of panels to be created, Min 2.
+Width - width of the panels.
+Height - height of the panels.
+Ypost - vertical central position of the panels.
+Distance - is the distance separating the panels.
+Friction - enable/disable the friction.
+Zoom - set the zoom (150 = 150%).
+ZoomArea - area in which it calculates the zoom.</comment>
+      <returntype>String</returntype>
+      <parameter>
+        <name>NumberOfPanels</name>
+        <type>int</type>
+      </parameter>
+      <parameter>
+        <name>Width</name>
+        <type>int</type>
+      </parameter>
+      <parameter>
+        <name>Height</name>
+        <type>int</type>
+      </parameter>
+      <parameter>
+        <name>Ypos</name>
+        <type>int</type>
+      </parameter>
+      <parameter>
+        <name>Distance</name>
+        <type>int</type>
+      </parameter>
+      <parameter>
+        <name>Friction</name>
+        <type>boolean</type>
+      </parameter>
+      <parameter>
+        <name>Zoom</name>
+        <type>int</type>
+      </parameter>
+      <parameter>
+        <name>ZoomArea</name>
+        <type>int</type>
+      </parameter>
+    </method>
+    <method>
+      <name DesignerName="Panels_Touch">_panels_touch</name>
+      <returntype>String</returntype>
+      <parameter>
+        <name>Action</name>
+        <type>int</type>
+      </parameter>
+      <parameter>
+        <name>X</name>
+        <type>float</type>
+      </parameter>
+      <parameter>
+        <name>Y</name>
+        <type>float</type>
+      </parameter>
+    </method>
+    <method>
+      <name DesignerName="SetSpeedScroll">_setspeedscroll</name>
+      <comment>Sets the speed of sliding.
+Speed - speed in milliseconds.</comment>
+      <returntype>String</returntype>
+      <parameter>
+        <name>Speed</name>
+        <type>int</type>
+      </parameter>
+    </method>
+    <method>
+      <name DesignerName="Start">_start</name>
+      <comment>Start the SlidingPanels showing Panels indicated.
+The Class must first be initialized, and choosing a mode of SlidingPanels.
+PanelNumber - number of panels to start.</comment>
+      <returntype>String</returntype>
+      <parameter>
+        <name>PanelNumber</name>
+        <type>int</type>
+      </parameter>
+    </method>
+    <field>
+      <name DesignerName="Panels">_panels</name>
+      <returntype>anywheresoftware.b4a.objects.PanelWrapper[]</returntype>
+    </field>
+  </class>
+  <version>1.21</version>
+  <author>Giancarlo "Dominex" Fioretti</author>
+</root>

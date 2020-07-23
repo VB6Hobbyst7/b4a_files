@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <doclet-version-NOT-library-version>1.00</doclet-version-NOT-library-version>
+  <class>
+    <name>eu.dgconsulting.dgpickers.cl_dgpickers</name>
+    <shortname>cl_dgpickers</shortname>
+    <owner>activity</owner>
+    <method>
+      <name>IsInitialized</name>
+      <comment>Tests whether the object has been initialized.</comment>
+      <returntype>boolean</returntype>
+    </method>
+    <method>
+      <name DesignerName="Class_Globals">_class_globals</name>
+      <comment>Version: 0.10
+Aurthor: UDG
+Last Modified: 27.04.2014
+Location: Di Gioia Consulting - Lugano (CH)</comment>
+      <returntype>String</returntype>
+    </method>
+    <method>
+      <name DesignerName="getChosenValue" HideFromIDE="true">_getchosenvalue</name>
+      <comment>Returns picked value</comment>
+      <returntype>int</returntype>
+    </method>
+    <method>
+      <name DesignerName="getIsValueSet" HideFromIDE="true">_getisvalueset</name>
+      <comment>Returns True if user choosed a value from picker</comment>
+      <returntype>boolean</returntype>
+    </method>
+    <method>
+      <name DesignerName="getLastPickerType" HideFromIDE="true">_getlastpickertype</name>
+      <comment>Returns last used picker type</comment>
+      <returntype>byte</returntype>
+    </method>
+    <method>
+      <name DesignerName="Initialize">_initialize</name>
+      <comment>Initializes the object. You can add parameters to this method if needed.</comment>
+      <returntype>String</returntype>
+      <parameter>
+        <name>ba</name>
+        <type>anywheresoftware.b4a.BA</type>
+      </parameter>
+      <parameter>
+        <name>CallbackModule</name>
+        <type>Object</type>
+      </parameter>
+      <parameter>
+        <name>EventName</name>
+        <type>String</type>
+      </parameter>
+    </method>
+    <method>
+      <name DesignerName="setAnchorView">_setanchorview</name>
+      <comment>Set the activity view to which the picker has to anchor
+ActivityView - activity view to which anchor the picker
+Side - ActivityView's side to which anchor the picker</comment>
+      <returntype>String</returntype>
+      <parameter>
+        <name>ActivityView</name>
+        <type>anywheresoftware.b4a.objects.ConcreteViewWrapper</type>
+      </parameter>
+      <parameter>
+        <name>Side</name>
+        <type>byte</type>
+      </parameter>
+    </method>
+    <method>
+      <name DesignerName="setIntArray" HideFromIDE="true">_setintarray</name>
+      <comment>Init internal array to manage an array of Integers
+aIntArray - an array containing integer values</comment>
+      <returntype>String</returntype>
+      <parameter>
+        <name>aIntArray</name>
+        <type>int[]</type>
+      </parameter>
+    </method>
+    <method>
+      <name DesignerName="setPickerProperties">_setpickerproperties</name>
+      <comment>Sets properties of current picker
+CallingAct - Activity object whose layout will be superimposed with picker panel
+aPickerType - desidered picker type (must be type compatible with IntArray)
+BkgColor = picker's background color (visible if tile property TPadding &gt;0)</comment>
+      <returntype>String</returntype>
+      <parameter>
+        <name>CallingAct</name>
+        <type>anywheresoftware.b4a.objects.ActivityWrapper</type>
+      </parameter>
+      <parameter>
+        <name>aPickerType</name>
+        <type>byte</type>
+      </parameter>
+      <parameter>
+        <name>BkgColor</name>
+        <type>int</type>
+      </parameter>
+    </method>
+    <method>
+      <name DesignerName="setTileProperties">_settileproperties</name>
+      <comment>Sets properties for each tile on the picker
+Hdim - horizontal dimension expressed in dip units
+Vdim - horizontal dimension expressed in dip units
+TPadding - padding between tiles borders and picker's ones; expressed in dip units.</comment>
+      <returntype>String</returntype>
+      <parameter>
+        <name>Hdim</name>
+        <type>int</type>
+      </parameter>
+      <parameter>
+        <name>Vdim</name>
+        <type>int</type>
+      </parameter>
+      <parameter>
+        <name>TPadding</name>
+        <type>int</type>
+      </parameter>
+    </method>
+    <method>
+      <name DesignerName="setVerbose" HideFromIDE="true">_setverbose</name>
+      <comment>Sets verbosity of logs</comment>
+      <returntype>String</returntype>
+      <parameter>
+        <name>VerboseMode</name>
+        <type>boolean</type>
+      </parameter>
+    </method>
+    <method>
+      <name DesignerName="ShowPicker">_showpicker</name>
+      <comment>Superimposes a picker panel on the calling Activity. </comment>
+      <returntype>String</returntype>
+    </method>
+    <property>
+      <name DesignerName="ChosenValue">_chosenvalue</name>
+      <comment>Returns picked value</comment>
+      <returntype>int</returntype>
+    </property>
+    <property>
+      <name DesignerName="IsValueSet">_isvalueset</name>
+      <comment>Returns True if user choosed a value from picker</comment>
+      <returntype>boolean</returntype>
+    </property>
+    <property>
+      <name DesignerName="LastPickerType">_lastpickertype</name>
+      <comment>Returns last used picker type</comment>
+      <returntype>byte</returntype>
+    </property>
+    <property>
+      <name DesignerName="Verbose">_verbose</name>
+      <comment>Sets verbosity of logs</comment>
+      <returntype>void</returntype>
+      <parameter>
+        <name>Value</name>
+        <type>boolean</type>
+      </parameter>
+    </property>
+    <field>
+      <name DesignerName="pck_DIR_BOTTOM">_pck_dir_bottom</name>
+      <returntype>byte</returntype>
+    </field>
+    <field>
+      <name DesignerName="pck_DIR_TOP">_pck_dir_top</name>
+      <returntype>byte</returntype>
+    </field>
+    <field>
+      <name DesignerName="pck_DIR_RIGHT">_pck_dir_right</name>
+      <returntype>byte</returntype>
+    </field>
+    <field>
+      <name DesignerName="pck_DIR_LEFT">_pck_dir_left</name>
+      <returntype>byte</returntype>
+    </field>
+    <field>
+      <name DesignerName="pck_TYP_NONE">_pck_typ_none</name>
+      <returntype>byte</returntype>
+    </field>
+    <field>
+      <name DesignerName="pck_TYP_COLOR">_pck_typ_color</name>
+      <returntype>byte</returntype>
+    </field>
+    <field>
+      <name DesignerName="pck_TYP_THICK">_pck_typ_thick</name>
+      <returntype>byte</returntype>
+    </field>
+  </class>
+  <version>0.1</version>
+  <author>UDG</author>
+</root>

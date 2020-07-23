@@ -1,0 +1,222 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root>
+    <doclet-version-NOT-library-version>1.05</doclet-version-NOT-library-version>
+    <class>
+        <name>b4a.flm.archiver7z.Archiver7z</name>
+        <shortname>Archiver7z</shortname>
+        <owner>process</owner>
+        <event>7zProgression(Operation As Byte, FileInfo As Archiver7zInfo)</event>
+        <event>7zResult(Result As Byte, ErrorMsg As String)</event>
+        <method>
+            <name>ExtractFrom7z</name>
+            <comment>Extracts all the files from the given 7z archive to the destination path.
+ArchivePath: location of the archive to uncompress.
+DestPath: location where to uncompress the files.
+EventPrefix: prefix of the "7zProgression" and "7zResult" events.</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>ba</name>
+                <type>anywheresoftware.b4a.BA</type>
+            </parameter>
+            <parameter>
+                <name>ArchivePath</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>DestPath</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>EventPrefix</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+        <method>
+            <name>CompressTo7z</name>
+            <comment>Compresses all the specified files to a 7z archive with the LZMA2 compression method.
+Entries: list of the files to compress. Key = path in the archive, Value = path on disk.
+ArchivePath: location of the 7z archive.
+Preset: value between 0 and 6 defining the dictionary size and the compression level.
+0: no compression. 1: dictionary 1Mb, medium compression. 6: dictionary 8 Mb, high compression.
+EventPrefix: prefix of the "7zProgression" and "7zResult" events.</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>ba</name>
+                <type>anywheresoftware.b4a.BA</type>
+            </parameter>
+            <parameter>
+                <name>Entries</name>
+                <type>anywheresoftware.b4a.objects.collections.Map</type>
+            </parameter>
+            <parameter>
+                <name>ArchivePath</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>Preset</name>
+                <type>int</type>
+            </parameter>
+            <parameter>
+                <name>EventPrefix</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+        <method>
+            <name>Decrypt7zWith</name>
+            <comment>Sets the password to be used to decompress an encrypted archive. This password is nullified after the task is done.</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>Password</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+        <method>
+            <name>CancelAll7zTasks</name>
+            <comment>Tries to cancel all compression/extraction tasks in progress.</comment>
+            <returntype>void</returntype>
+        </method>
+        <method>
+            <name>Count7zEntries</name>
+            <comment>Returns the number of entries in the specified 7z archive.</comment>
+            <returntype>int</returntype>
+            <parameter>
+                <name>ArchivePath</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>OnlyFiles</name>
+                <type>boolean</type>
+            </parameter>
+        </method>
+        <method>
+            <name>TotalUncompressedSize</name>
+            <comment>Returns the sum of uncompressed sizes of all files in the specified 7z archive.</comment>
+            <returntype>long</returntype>
+            <parameter>
+                <name>ArchivePath</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+        <method>
+            <name>List7zEntries</name>
+            <comment>Returns a list containing the properties of all files and directories of the specified 7z archive. Each item of this list is an Archiver7zInfo object.
+Note that this function cannot retrieve the compression method. This information is only available during the file extraction.
+Example:&lt;code&gt;
+Dim lstEntries As List = Arc.List7zEntries(ArchiveFolder &amp; "AnalyseurSimul.7z")
+For i = 0 To lstEntries.Size - 1
+	Dim SevenZInfo As Archiver7zInfo = lstEntries.Get(i)
+	If SevenZInfo.IsDirectory Then
+		Log("[" &amp; SevenZInfo.FileName &amp; "]: Directory")
+	Else
+		Log(SevenZInfo.FileName &amp; ": Uncompressed=" &amp; SevenZInfo.UncompressedSize &amp; " / CRC32= " &amp; SevenZInfo.CRC32)
+	End If
+	Log(" Last modification=" &amp; DateTime.Date(SevenZInfo.LastModFileTime) &amp; " " &amp; DateTime.Time(SevenZInfo.LastModFileTime))
+Next&lt;/code&gt;</comment>
+            <returntype>anywheresoftware.b4a.objects.collections.List</returntype>
+            <parameter>
+                <name>ArchivePath</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+        <property>
+            <name>ExecutionMode</name>
+            <returntype>byte</returntype>
+            <parameter>
+                <name>ExecutionMode</name>
+                <type>byte</type>
+            </parameter>
+            <comment>Gets or sets the execution mode of 7z compression/decompression tasks (one of the EXECMODE_ constants).
+SYNCHRONOUS: waits for the end of the task (default mode).
+ASYNCHRONOUS: does not wait for the end of the task. The function returns immediately and the task continues in the background. Check ResultCode to know whether the task has ended.
+In both modes, do not try to handle views from within the events.</comment>
+        </property>
+        <property>
+            <name>ResultCode</name>
+            <returntype>byte</returntype>
+            <comment>Returns a result code (one of the RESULT_ constants) when a task is done, or RESULT_WORKING when the task is still in progress.</comment>
+        </property>
+        <field>
+            <name>RESULT_CANCELLED</name>
+            <comment></comment>
+            <returntype>byte</returntype>
+        </field>
+        <field>
+            <name>RESULT_ERROR</name>
+            <comment></comment>
+            <returntype>byte</returntype>
+        </field>
+        <field>
+            <name>RESULT_SUCCESS</name>
+            <comment></comment>
+            <returntype>byte</returntype>
+        </field>
+        <field>
+            <name>RESULT_WORKING</name>
+            <comment></comment>
+            <returntype>byte</returntype>
+        </field>
+        <field>
+            <name>EXECMODE_SYNCHRONOUS</name>
+            <comment></comment>
+            <returntype>byte</returntype>
+        </field>
+        <field>
+            <name>OPERATION_COMPRESS</name>
+            <comment></comment>
+            <returntype>byte</returntype>
+        </field>
+        <field>
+            <name>EXECMODE_ASYNCHRONOUS</name>
+            <comment></comment>
+            <returntype>byte</returntype>
+        </field>
+        <field>
+            <name>OPERATION_MKDIR</name>
+            <comment></comment>
+            <returntype>byte</returntype>
+        </field>
+        <field>
+            <name>OPERATION_EXTRACT</name>
+            <comment></comment>
+            <returntype>byte</returntype>
+        </field>
+    </class>
+    <class>
+        <name>b4a.flm.archiver7z.Archiver7z.SevenZInfo</name>
+        <shortname>Archiver7zInfo</shortname>
+        <owner>process</owner>
+        <property>
+            <name>LastModFileTime</name>
+            <returntype>long</returntype>
+            <comment>Returns the timestamp of the file.</comment>
+        </property>
+        <property>
+            <name>IsDirectory</name>
+            <returntype>boolean</returntype>
+            <comment></comment>
+        </property>
+        <property>
+            <name>CRC32</name>
+            <returntype>long</returntype>
+            <comment></comment>
+        </property>
+        <property>
+            <name>FileName</name>
+            <returntype>java.lang.String</returntype>
+            <comment></comment>
+        </property>
+        <property>
+            <name>CompressionMethod</name>
+            <returntype>java.lang.String</returntype>
+            <comment>Returns the compression method.
+This information is not available before the file extraction.</comment>
+        </property>
+        <property>
+            <name>UncompressedSize</name>
+            <returntype>long</returntype>
+            <comment>Returns the uncompressed size in bytes.</comment>
+        </property>
+    </class>
+    <version>1.0</version>
+    <author>F. Leneuf-Magaud/Informatix, The Apache Software Foundation</author>
+</root>

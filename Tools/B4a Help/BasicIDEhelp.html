@@ -1,0 +1,650 @@
+﻿<!DOCTYPE HTML PUBLIC '-//W3C//DTD HTML 4.01 Transitional//EN'>
+<html>
+<body>
+<a name="top"></a><br>
+BASICIDE V2.8 HELP CONTENTS<br>
+<br>
+<a href="#device">Device Functions</a><p><br>
+<a href="#activity">Activity Functions</a><p><br>
+<a href="#events">Views and Events</a><p><br>
+<a href="#view">View Functions</a><p><br>
+<a href="#textview">TextView Functions</a><p><br>
+<a href="#edittext">EditText Functions</a><p><br>
+<a href="#check">Check, Radio and Toggle Functions</a><p><br>
+<a href="#timer">Timer Functions</a><p><br>
+<a href="#seekbar">SeekBar Functions</a><p><br>
+<a href="#scrollview">ScrollView Functions</a><p><br>
+<a href="#spinner">Spinner Functions</a><p><br>
+<a href="#listview">ListView Functions</a><p><br>
+<a href="#listandspin">ListView and Spinner Functions</a><p><br>
+<a href="#tabhost">TabHost Functions</a><p><br>
+<a href="#graphics">Graphics Functions</a><p><br>
+<a href="#arrays">Array Functions</a><p><br>
+<a href="#user">User Interaction Functions</a><p><br>
+<a href="#file">File Functions</a><br>
+<a name="device"></a><br>
+DEVICE FUNCTIONS<br>
+<br>
+Get the available width of the window.<br>
+ Depending upon the device orientation this is not necessarily the same as the physical display width.<br>
+WindowWidth<br>
+<br>
+Get the available height of the window.<br>
+ Depending upon the device orientation this is not necessarily the same as the physical display height.<br>
+WindowHeight<br>
+<br>
+Get the scaling value (density) for this device.<br>
+ScreenScale<br>
+<br>
+Get the layout values for this device in a comma separated string "width,height,density",<br>
+GetLayoutValues<br>
+<br>
+<a href="#top">Contents</a><br>
+<a name="activity"></a><br>
+ACTIVITY FUNCTIONS<br>
+<br>
+Returns true if this is the first time the initial code block program has been run.<br>
+This is the equivalent of FirstTime in Activity_Create.<br>
+GetFirstTime<br>
+<br>
+Get a previously saved an array of persistent data that will survive activity destruction.<br>
+GetSavedData(dataarrayname As String)<br>
+<br>
+Save an array of data that will survive activity destruction.<br>
+SetSavedData(dataarrayname As String)<br>
+<br>
+Close the Activity and return to the editor<br>
+Call this at the end of the initial code block for a program that does not support events otherwise the<br>
+program will be left waiting for an event that won't come and the back button will be needed to close it.<br>
+A program that does support events can end by calling AppClose or this.<br>
+ActivityFinish<br>
+<br>
+Set the Background property of the Activity to the GradientDrawable.<br>
+Returns false if less than two colors are in the array otherwise returns true.<br>
+Orientation can be one of the following - <br>
+"TOP_BOTTOM", "TR_BL" (Top-Right To Bottom-Left, "RIGHT_LEFT", "BR_TL" (Bottom-Right To Top-Left)<br>
+"BOTTOM_TOP", "BL_TR" (Bottom-Left To Top-Right), "LEFT_RIGHT", "TL_BR" (Top-Left To Bottom-Right)<br>
+SetActivityBackground(orientation As String, radius As String, colorsarrayname As String)<br>
+<br>
+Logs the provided message to the Logcat output.<br>
+LogCat(message As String)<br>
+<br>
+ Closes the Activity menu. This is added for symmetry with OpenMenu but seems of little practical use.<br>
+CloseMenu<br>
+<br>
+ Opens the Activity menu<br>
+OpenMenu<br>
+<br>
+<a href="#top">Contents</a><br>
+<a name="events"></a><br>
+VIEWS AND EVENTS<br>
+<br>
+On Activity_Create the inital block of code up to the first Sub statement is run. GetFirstTime returns true the first time.<br>
+On Activity_Pause "Sub activity_pause(userclosed)" is called if implemented.<br>
+On Activity_Resume "Sub activity_resume" is called if implemented.<br>
+All MenuItem Click events are vectored to a single BasicLib sub "Sub menu_click(menutext)".<br>
+All Button Click events are vectored to a single BasicLib sub "Sub button_click(sender)".<br>
+All Checkbox CheckedChange events are vectored to a single BasicLib sub "Sub check_change(sender, checked)".<br>
+All EditText TextChanged events are vectored to a single BasicLib sub "Sub edit_change(sender, oldtext, newtext)".<br>
+All EditText EnterPressed events are vectored to a single BasicLib sub "Sub edit_enterpressed(sender)".<br>
+All ListView ItemClick events are vectored to a single BasicLib sub "Sub listview_itemclick(sender, position, value)".<br>
+All RadioButton CheckedChange events are vectored to a single BasicLib sub "Sub radio_change(sender, checked)".<br>
+All SeekBar ValueChanged events are vectored to a single BasicLib sub "Sub seekbar_valuechanged(sender, value, userchanged)".<br>
+All Spinner ItemClick events are vectored to a single BasicLib sub "Sub spinner_itemclick(sender, position, value)".<br>
+All TabHost TabChanged events are vectored to a single BasicLib sub "Sub tabhost_tabchanged(sender)".<br>
+All ToggleButton CheckedChange events are vectored to a single BasicLib sub "Sub toggle_change(sender, checked)".<br>
+Sender will be set to the name of view that caused the event.<br>
+If a view raising events is added then the appropriate event Sub or Subs must be present in the program.<br>
+<br>
+Here are all the event Sub templates to copy and paste if desired.<br>
+<br>
+Sub activity_pause(userclosed) <br>
+End Sub<br>
+<br>
+Sub activity_resume<br>
+End Sub <br>
+<br>
+Sub button_click(who)<br>
+End Sub <br>
+<br>
+Sub check_change(who, checked)<br>
+End Sub <br>
+<br>
+Sub edit_change(who, old, new)<br>
+End Sub<br>
+<br>
+Sub edit_enterpressed(who)<br>
+End Sub<br>
+<br>
+Sub listview_itemclick(who, pos, value)<br>
+End Sub<br>
+<br>
+Sub menu_click(menutext)<br>
+End Sub<br>
+<br>
+Sub radio_change(who, checked)<br>
+End Sub <br>
+<br>
+Sub seekbar_valuechanged(who, pos, value)<br>
+End Sub<br>
+<br>
+Sub spinner_itemclick(who, pos, value)<br>
+End Sub<br>
+<br>
+Sub tabhost_tabchanged(who)<br>
+End Sub <br>
+<br>
+Sub toggle_change(who, checked)<br>
+End Sub <br>
+<br>
+Completely remove the named view from the program.<br>
+RemoveView(name As String)<br>
+<br>
+Add a MenuItem to the Activity.<br>
+The maximum of six menu itemsthat was present in previous versions no longer applies<br>
+AddMenuItem(menutext As String)<br>
+<br>
+Add a Button to the window or a panel.<br>
+AddButton(name As String, left As String, top As String, width As String, height As String, parent As String)<br>
+<br>
+Add a ToggleButton to the window or a panel.<br>
+AddToggleButton(name As String, left As String, top As String, width As String, height As String, parent As String)<br>
+<br>
+Add a CheckBox to the window.<br>
+AddCheckBox(name As String, left As String, top As String, width As String, height As String, parent As String)<br>
+<br>
+Add an EditText to the window or a panel.<br>
+AddEditText(name As String, left As String, top As String, width As String, height As String, parent As String)<br>
+<br>
+Add an ImageView to the window or a panel.<br>
+AddImage(name As String, left As String, top As String, width As String, height As String, parent As String)<br>
+<br>
+Add a Label to the window or a panel.<br>
+AddLabel(name As String, left As String, top As String, width As String, height As String, parent As String)<br>
+<br>
+Add a ListView to the window or a panel.<br>
+AddListView(name As String, left As String, top As String, width As String, height As String, parent As String)<br>
+<br>
+Add a Panel to the window or a panel.<br>
+AddPanel(name As String, left As String, top As String, width As String, height As String, parent As String)<br>
+<br>
+Add a RadioButton to the window or a panel.<br>
+AddRadioButton(name As String, left As String, top As String, width As String, height As String, parent As String)<br>
+<br>
+Add a ScrollView to the window or a panel.<br>
+AddScrollView(name As String, left As String, top As String, width As String, height As String, parent As String)<br>
+<br>
+Add a SeekBar to the window or a panel.<br>
+AddSeekBar(name As String, left As String, top As String, width As String, height As String, parent As String)<br>
+<br>
+Add a Spinner to the window or a panel.<br>
+AddSpinner(name As String, left As String, top As String, width As String, height As String, parent As String)<br>
+<br>
+Add a TabHost to the window or a panel.<br>
+AddTabHost(name As String, left As String, top As String, width As String, height As String, parent As String)<br>
+<br>
+<a href="#top">Contents</a><br>
+<a name="view"></a><br>
+VIEW FUNCTIONS<br>
+<br>
+Get the Enabled property of the named view.<br>
+GetEnabled(name As String)<br>
+<br>
+Get the Visible property of the named view.<br>
+GetVisible(name As String)<br>
+<br>
+Get the Top property of the named view.<br>
+GetTop(name As String)<br>
+<br>
+Get the Left property of the named view.<br>
+GetLeft(name As String)<br>
+<br>
+Get the Width property of the named view.<br>
+GetWidth(name As String)<br>
+<br>
+Get the Height property of the named view.<br>
+GetHeight(name As String)<br>
+<br>
+Set the Enabled property of the named view.<br>
+SetEnabled(name As String, state As String)<br>
+<br>
+Set the Visible property of the named view.<br>
+SetVisible(name As String, visible As String)<br>
+<br>
+Set the Top property of the named view.<br>
+SetTop(name As String, top As String)<br>
+<br>
+Set the Left property of the named view.<br>
+SetLeft(name As String, left As String)<br>
+<br>
+Set the Width property of the named view.<br>
+SetWidth(name As String, width As String)<br>
+<br>
+Set the Height property of the named view.<br>
+SetHeight(name As String, height As String)<br>
+<br>
+Bring the named view to the front of the Z order.<br>
+BringToFront(name As String)<br>
+<br>
+Send the named view to the back of the Z order.<br>
+SendToBack(name As String)<br>
+<br>
+Set the focus to  the named view.<br>
+RequestFocus(name As String)<br>
+<br>
+Set the BackgroundImage of the view to the present bitmap.<br>
+Return true if both view and bitmap are initialised otherwise return false.<br>
+SetBackgroundImage(name As String)<br>
+<br>
+Set the Background property of the named view to a ColorDrawable.<br>
+SetColor(name As String, radius As String, color As String)<br>
+<br>
+Set the Background property of the named view to a GradientDrawable.<br>
+Returns false if less than two colors are in the array or name not found otherwise returns true.<br>
+Orientation can be one of the following - <br>
+"TOP_BOTTOM", "TR_BL" (Top-Right To Bottom-Left, "RIGHT_LEFT", "BR_TL" (Bottom-Right To Top-Left)<br>
+"BOTTOM_TOP", "BL_TR" (Bottom-Left To Top-Right), "LEFT_RIGHT", "TL_BR" (Top-Left To Bottom-Right)<br>
+SetBackground(name As String, orientation As String, radius As String, colorsarrayname As String)<br>
+<br>
+Invalidate the named view<br>
+Invalidate(name As String)<br>
+<br>
+<a href="#top">Contents</a><br>
+<a name="textview"></a><br>
+TEXTVIEW FUNCTIONS<br>
+<br>
+Views containing text support these functions in addition to the View functions.<br>
+<br>
+Set the Gravity property, if any, of the named view.<br>
+NO_GRAVITY = 0; TOP = 48 (0x30) ; BOTTOM = 80 (0x50; LEFT = 3; RIGHT = 5; CENTER = 17 (0x11);<br>
+CENTER_HORIZONTAL = 1; CENTER_VERTICAL = 16 (0x10) ; FILL = 119 (0x77); <br>
+SetGravity(name As String, gravityvalue As String)<br>
+<br>
+Get the Text property, if any, of the named view.<br>
+GetText(name As String)<br>
+<br>
+Set the Text property, if any, of the named view.<br>
+SetText(name As String, text As String)<br>
+<br>
+Set the TextColor property, if any, of the named view.<br>
+SetTextColor(name As String, color As String)<br>
+<br>
+Set the TextSize property, if any, of the named view.<br>
+SetTextSize(name As String, size As String)<br>
+<br>
+There is one Typeface but it can be reinitialised as required.<br>
+Typeface - "Default", "Monospace", "Serif", "Sans_Serif"<br>
+Style - 0 Normal : 1 Bold : 2 Italic : 3 Bold_Italic<br>
+CreateTypeface(face As String, style As String)<br>
+<br>
+Set the Typeface property, if any, of the named view to the current typeface.<br>
+SetTypeface(name As String)<br>
+<br>
+<a href="#top">Contents</a><br>
+<a name="edittext"></a><br>
+EDITTEXT FUNCTIONS<br>
+<br>
+EditText supports these functions in addition to the View and TextView functions.<br>
+<br>
+Gets the selection start position (or the cursor position) of the EditText.<br>
+Returns -1 if there is no selection or cursor.<br>
+GetSelectionStart(name As String)<br>
+<br>
+Force the EditText virtual keyboard action key to display Done by setting this value to True.<br>
+SetForceDoneButton(name As String, forcestate As String)<br>
+<br>
+Set the text that will appear when the EditText is empty.<br>
+SetHint(name As String, hint As String)<br>
+<br>
+Set the color of the text that will appear when the EditText is empty.<br>
+SetHintColor(name As String, hintcolor As String)<br>
+<br>
+Set the value of the EditText InputType property.<br>
+NONE = 0; TEXT = 1; NUMBERS = 2; _PHONE = 3; DECIMAL_NUMBERS = 12290;<br>
+SetInputType(name As String, inputtype As String)<br>
+<br>
+Set the value of the EditText PasswordMode property.<br>
+SetPasswordMode(name As String, state As String)<br>
+<br>
+Sets the selection start position (or the cursor position) of the EditText.<br>
+SetSelectionStart(name As String, selectionstart As String)<br>
+<br>
+Set the value of the EditText SingleLine property.<br>
+SetSingleLine(name As String, state As String)<br>
+<br>
+Set the value of the EditText Wrap property.<br>
+SetWrap(name As String, state As String)<br>
+<br>
+<a href="#top">Contents</a><br>
+<a name="check"></a><br>
+CHECKBOX, RADIOBUTTON AND TOGGLEBUTTON FUNCTIONS<br>
+<br>
+Get the Checked state of a CheckBox, RadioButton or ToggleButton.<br>
+GetChecked(name As String)<br>
+<br>
+Set the Checked state of a CheckBox, RadioButton or ToggleButton.<br>
+SetChecked(name As String, checked As String)<br>
+<br>
+Set the TextOn property of a ToggleButton.<br>
+SetTextOn(name As String, text As String)<br>
+<br>
+Set the TextOff property property of a ToggleButton.<br>
+SetTextOff(name As String, text As String)<br>
+<br>
+<a href="#top">Contents</a><br>
+<a name="timer"></a><br>
+TIMER FUNCTIONS<br>
+<br>
+There is one time and the Timer Tick events are vectored to a BasicLib sub "Sub timer_tick".<br>
+If the Timer is enabled this event Sub must be present in the program.<br>
+<br>
+Enable or disable the timer.<br>
+SetTimerEnabled(enabled As String)<br>
+<br>
+Set the timer interval in milliseconds.<br>
+SetTimerInterval(interval As String)<br>
+<br>
+<a href="#top">Contents</a><br>
+<a name="seekbar"></a><br>
+SEEKBAR FUNCTIONS<br>
+<br>
+Returns the current SeekBar Max value.<br>
+GetMax(seekbarname As String)<br>
+<br>
+Returns the current SeekBar Value.<br>
+GetValue(seekbarname As String)<br>
+<br>
+Sets the current SeekBar Max value.<br>
+SetMax(seekbarname As String, maxvalue As String)<br>
+<br>
+Sets the current SeekBar Value.<br>
+SetValue(seekbarname As String, value As String)<br>
+<br>
+<a href="#top">Contents</a><br>
+<a name="scrollview"></a><br>
+SCROLLVIEW FUNCTIONS<br>
+<br>
+Returns the current ScrollView ScrollPosition.<br>
+GetScrollPosition(scrollviewname As String)<br>
+<br>
+Sets the current ScrollView ScrollPosition.<br>
+SetScrollPosition(scrollviewname As String, value As String)<br>
+<br>
+Scrolls the ScrollView to the top or bottom.<br>
+FullScroll(scrollviewname As String, bottom As String)<br>
+<br>
+Makes the ScrollView Panel accessible as a named Panel View.<br>
+GetPanel(scrollviewname As String, panelname As String)<br>
+<br>
+<a href="#top">Contents</a><br>
+<a name="spinner"></a><br>
+SPINNER FUNCTIONS<br>
+<br>
+Sets the title that will be displayed when the Spinner is opened.<br>
+SetPrompt(name As String, index As String)<br>
+<br>
+Returns the index of the selected item of a Spinner. Returns -1 if no item is selected.<br>
+GetSelectedIndex(name As String)<br>
+<br>
+Selects the item at the specified index of a Spinner. Pass -1 if no item is selected.<br>
+SetSelectedIndex(name As String, index As String)<br>
+<br>
+Returns the the selected item of a Spinner. Returns "" if no item is selected.<br>
+GetSelectedItem(name As String)<br>
+<br>
+<a href="#top">Contents</a><br>
+<a name="listview"></a><br>
+LISTVIEW FUNCTIONS<br>
+<br>
+Sets the background color that will be used while scrolling the ListView.<br>
+SetScrollColor(name As String, color As String)<br>
+<br>
+Sets whether the fast scroll icon will appear when the user scrolls the list. The default Is False.<br>
+SetFastScrollEnabled(name As String, state As String)<br>
+<br>
+Sets the ItemHeight of the SingleLineLayout in a ListView.<br>
+SetItemHeight(name As String, height As String)<br>
+<br>
+Makes the ListView.SingleLineLayout.Label accessible as a Label view.<br>
+The layout functions of the ListView items may be changed using the label functions.<br>
+GetLabel(listviewname As String, labelname As String)<br>
+<br>
+Set the ListView.SingleLineLayout.Background property of the ListView to a ColorDrawable.<br>
+SetLayoutBackgroundColor(name As String, radius As String, color As String)<br>
+<br>
+Set the ListView.SingleLineLayout.Background property of the ListView to a GradientDrawable.<br>
+Returns false if less than two colors are in the array or name not found otherwise returns true.<br>
+Orientation can be one of the following - <br>
+"TOP_BOTTOM", "TR_BL" (Top-Right To Bottom-Left, "RIGHT_LEFT", "BR_TL" (Bottom-Right To Top-Left)<br>
+"BOTTOM_TOP", "BL_TR" (Bottom-Left To Top-Right), "LEFT_RIGHT", "TL_BR" (Top-Left To Bottom-Right)<br>
+SetLayoutBackgroundColorgradient(name As String, orientation As String, radius As String, colorsarrayname As String)<br>
+<br>
+<a href="#top">Contents</a><br>
+<a name="listandspin"></a><br>
+LISTVIEW AND SPINNER FUNCTIONS<br>
+<br>
+Add an item To a ListView or Spinner.<br>
+Add(name As String, item As String)<br>
+<br>
+Add an array of items to a ListView or Spinner.<br>
+AddAll(name As String, itemarrayname As String)<br>
+<br>
+Clears the items from a ListView or Spinner.<br>
+Clear(name As String)<br>
+<br>
+Returns the item at the specified index from a ListView or Spinner.<br>
+GetItem(name As String, index As String)<br>
+<br>
+Removes the item at the specified index from a ListView or Spinner.<br>
+RemoveAt(name As String, index As String)<br>
+<br>
+Returns the number of items in a ListView or Spinner.<br>
+GetSize(name As String, index As String)<br>
+<br>
+<a href="#top">Contents</a><br>
+<a name="tabhost"></a><br>
+TABHOST<br>
+<br>
+Add a Tab and a new associated Panel to a TabHost.<br>
+The panelname may be used to add views To the Tab.<br>
+AddTab(title As String, panelname As String, parenttabhost As String)<br>
+<br>
+Returns the number of tab pages.<br>
+GetTabCount(tabhostname As String)<br>
+<br>
+Returns the index of the current tab page.<br>
+GetCurrentTab(tabhostname As String)<br>
+<br>
+Selects the current tab page.<br>
+SetCurrentTab(tabhostname As String, tabnumber As String)<br>
+<br>
+<a href="#top">Contents</a><br>
+<a name="graphics"></a><br>
+GRAPHICS FUNCTIONS<br>
+<br>
+There is one bitmap but it can be reinitialised to a bitmap from a file.<br>
+BitmapInit(dir As String, fileName As String)<br>
+<br>
+The one bitmap can also be reinitialised to a mutable bitmap.<br>
+BitmapInitMutable(width As String, height As String)<br>
+<br>
+Get the width of the current bitmap.<br>
+BitmapWidth<br>
+<br>
+Get the height of the current bitmap.<br>
+BitmapHeight<br>
+<br>
+There is one canvas but it can be reinitialised on any View.<br>
+CanvasInit(imageviewname As String)<br>
+<br>
+The one canvas can also be reinitialised on a mutable Bitmap if the sole Bitmap object is one.<br>
+CanvasInit2()<br>
+<br>
+Draws the present bitmap<br>
+SrcRect - The subset of the Bitmap that will be drawn.<br>
+DestRect - The rectangle that the Bitmap will be drawn to.<br>
+Returns false if more or less than two points are in the rectangle arrays otherwise returns true.<br>
+DrawBitmap(srcrectarrayname As String, destrectarrayname As String)<br>
+<br>
+Draws the present bitmap rotated.<br>
+SrcRect - The subset of the Bitmap that will be drawn.<br>
+DestRect - The rectangle that the Bitmap will be drawn to.<br>
+Returns false if more or less than two points are in the rectangle arrays otherwise returns true.<br>
+DrawBitmapRotated(srcrectarrayname As String, destrectarrayname As String, degrees As String)<br>
+<br>
+Fills the entire canvas with the given color.<br>
+DrawColor(color As String)<br>
+<br>
+Draws a circle.<br>
+DrawCircle(x As String, y As String, radius As String, color As String, filled As String, strokewidth As String)<br>
+<br>
+Draws a line.<br>
+DrawLine(x1 As String, y1 As String, x2 As String, y2 As String, color As String, strokewidth As String)<br>
+<br>
+Draws a set of connected lines from the points provided in a named array.<br>
+Returns false if less than two points are in the array otherwise returns true.<br>
+DrawPath(pointsarrayname As String, color As String, filled As String, strokewidth As String)<br>
+<br>
+Sets a single pixel to the specified color.<br>
+DrawPoint(x As String, y As String, Color As String)<br>
+<br>
+Draws a rectangle from the points provided in a named array.<br>
+Returns false if more or less than two points are in the array otherwise returns true.<br>
+DrawRect(rectarrayname As String, color As String, filled As String, strokewidth As String)<br>
+<br>
+Draws a rotated rectangle from the points provided in a named array.<br>
+Returns false if more or less than two points are in the array otherwise returns true.<br>
+DrawRectRotated(rectarrayname As String, color As String, filled As String, strokewidth As String, degrees As String)<br>
+<br>
+Draw text. Align is one of the following values: "LEFT", "CENTER", "RIGHT".<br>
+DrawText(text As String, x As String, y As String, textsize As String, color As String, align As String)<br>
+<br>
+Draw text. Align is one of the following values: "LEFT", "CENTER", "RIGHT".<br>
+DrawTextRotated(text As String, x As String, y As String, textsize As String, color As String, align As String, degrees As String)<br>
+<br>
+<a href="#top">Contents</a><br>
+<a name="arrays"></a><br>
+ARRAY FUNCTIONS<br>
+<br>
+Fully or partially fills the specified array with the specified value.<br>
+FillArray(arrayname As String, start As String, len As String, value As String)<br>
+<br>
+Sort the specified array into ascending order in the specified manner. <br>
+SORTCASESENSITIVE is 0, SORTCASEINSENSITIVE is 1, SORTNUMERIC = 2<br>
+Note that for use with BinarySearch SORTCASESENSITIVE should be used otherwise the result may not be accurate<br>
+SortArray(arrayname As String, sorttype As String)<br>
+<br>
+Searches the specified array for the specified value using the binary search algorithm.<br>
+The array must be sorted into ascending order using SORTCASESENSITIVE otherwise the result may not be accurate<br>
+SearchArray(arrayname As String, value As String)<br>
+<br>
+<a href="#top">Contents</a><br>
+<a name="user"></a><br>
+USER INTERACTION FUNCTIONS<br>
+<br>
+Shows a Toast.<br>
+ShowToast(msg As String, longtime As String)<br>
+<br>
+Get the user input from the latest InputBox, InputDate or InputTime modal dialog. <br>
+GetInput<br>
+<br>
+Show a modal dialog box and prompt the user for data.<br>
+Returns a DialogResponse value with the input text available to GetInput.<br>
+InputBox(prompt As String, title As String, Positive As String, Cancel As String, Negative As String)<br>
+<br>
+Show a modal dialog box and prompt the user for a date.<br>
+Returns a DialogResponse value with the input value avalable to GetInput as a ticks value.<br>
+InputDate(prompt As String, title As String, startdateticks As String, Positive As String, Cancel As String, Negative As String)<br>
+<br>
+Show a modal dialog box and prompt the user for a path or file name.<br>
+Returns a DialogResponse value with the input values available to GetInput as a  comma separated string.<br>
+The first part is the file path and the last part is file name. If the user selected a path the file name is an  empty string.<br>
+InputFile(filepath As String, filename As String, filefilter As String, title As String, Positive As String, Cancel As String, Negative As String)<br>
+<br>
+Show a modal dialog box and prompt the user for a time.<br>
+Returns a DialogResponse value with the input value available to GetInput as a ticks value.<br>
+InputTime(prompt As String, title As String, starttimeticks As String, as24hrs As String, Positive As String, Cancel As String, Negative As String)<br>
+<br>
+Show a modal dialog box and prompt the user to select an item.<br>
+selecteditem is the index of the item that will first be selected or -1 if no item should be preselected.<br>
+Returns the index of the selected item or DialogResponse.Cancel if the user pressed on the back key.<br>
+InputListBox(itemarrayname As String, title As String, selecteditem As String )<br>
+<br>
+Show a modal dialog box and prompt the user to select one or more items.<br>
+returns a comma separated list of indices selected that may be separated with StrSplit.<br>
+InputMultiListBox(itemarrayname As String, title As String)<br>
+<br>
+Show a modal dialog box and prompt the user for an integer number.<br>
+If ShowSign is True the sign of the number corresponds to the sign entered by the user.<br>
+Returns a DialogResponse value with the input number available to GetInput.<br>
+If ShowSign is True the sign of the number corresponds to the sign entered by the user.<br>
+InputNumber(showsign As String, digits As String, number As String, title As String, Positive As String, Cancel As String, Negative As String)<br>
+<br>
+Show a modal dialog box and prompt the user to make a selection.<br>
+Returns a DialogResponse<br>
+MessageBox(message As String, title As String, Positive As String, Cancel As String, Negative As String)<br>
+<br>
+Show a non-modal progress dialog.<br>
+ProgressShow(text As String)<br>
+<br>
+Hide a non-modal progress dialog.<br>
+ProgressHide<br>
+<br>
+Allow the message loop to run, lets the progress dialog repaint itself.<br>
+CallDoEvents<br>
+<br>
+<a href="#top">Contents</a><br>
+<a name="file"></a><br>
+FILE OPERATION FUNCTIONS<br>
+<br>
+Reads the entire file and fills a named array with all lines as strings.<br>
+Returns true if successful, false otherwise.<br>
+FileReadList(dir As String, fileName As String, listarrayname As String)<br>
+<br>
+Reads the entire file and returns it as a string.<br>
+Returns an empty string on failure.<br>
+FileReadString(dir As String, fileName As String)<br>
+<br>
+Writes each item in the List As a single line.<br>
+Note that a value containing CRLF will be saved as two lines which will return two items when read with ReadList.<br>
+Returns true if successful, false otherwise.<br>
+FileWriteList(dir As String, filename As String, listarrayname As String)<br>
+<br>
+Writes the given text to a new file.<br>
+Returns true if successful, false otherwise.<br>
+FileWriteString(dir As String, filename As String, text As String)<br>
+<br>
+Deletes the specified file. If the file name is a directory then it must be empty in order to be deleted.<br>
+Returns true if the file was successfully deleted.<br>
+Files in the assets folder cannot be deleted.<br>
+Returns true if successful, false otherwise.<br>
+FileDelete(dir As String, filename As String)<br>
+<br>
+Returns true if the specified FileName exists in the specified Dir.<br>
+Note that the Android file system is case sensitive.<br>
+FileExists(dir As String, filename As String)<br>
+<br>
+Tests whether the specified file is a directory.<br>
+FileIsDirectory(dir As String, filename As String)<br>
+<br>
+Creates the given folder (dir can be a path like "dir1/dir2", creates all folders as needed).<br>
+Returns true if successful, false otherwise.<br>
+FileMakeDir(parentdir As String, dir As String)<br>
+<br>
+Fills an array with a list with all the files and directories which are stored in the specified path.<br>
+Returns true if successful, false otherwise.<br>
+FileListFiles(dir As String, filesarrayname As String)<br>
+<br>
+Returns the root folder of the external storage media.<br>
+FileDirRootExternal<br>
+<br>
+Returns the application default external folder which is based on the package name.<br>
+The folder is created if needed.<br>
+FileDirDefaultExternal<br>
+<br>
+Returns a reference to the files added with the Files Manager. These files are read-only.<br>
+FileDirAssets<br>
+<br>
+<a href="#top">Contents</a><br>
+</body>
+</html>

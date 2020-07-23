@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root>
+    <doclet-version-NOT-library-version>1.05</doclet-version-NOT-library-version>
+    <class>
+        <name>ir.aminrezaei.Preference</name>
+        <shortname>ARPreference</shortname>
+        <owner>process</owner>
+         <method>
+            <name>StartMe</name>
+            <comment></comment>
+            <returntype>android.content.Intent</returntype>
+            <parameter>
+                <name>ba</name>
+                <type>anywheresoftware.b4a.BA</type>
+            </parameter>
+            <parameter>
+                <name>md</name>
+                <type>anywheresoftware.b4a.objects.preferenceactivity.PreferenceScreenWrapper</type>
+            </parameter>
+        </method>
+    </class>
+    <version>0.81</version>
+    <author>Amin Rezaei</author>
+</root>

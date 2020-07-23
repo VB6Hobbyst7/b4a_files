@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root>
+    <doclet-version-NOT-library-version>1.00</doclet-version-NOT-library-version>
+    <class>
+        <name>com.BennyG.Calendar.BGCal</name>
+        <shortname>BGCal</shortname>
+        <owner>process</owner>
+        <permission>android.permission.READ_CALENDAR</permission>
+        <method>
+            <name>readCalendar</name>
+            <comment></comment>
+            <returntype>java.lang.String</returntype>
+            <parameter>
+                <name>ba</name>
+                <type>anywheresoftware.b4a.BA</type>
+            </parameter>
+        </method>
+    </class>
+    <version>1.0</version>
+    <author>Benny G</author>
+</root>

@@ -1,0 +1,555 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <doclet-version-NOT-library-version>1.00</doclet-version-NOT-library-version>
+  <dependsOn>javaobject</dependsOn>
+  <class b4a_type="StaticCode">
+    <name>com.macthomasengineering.mteeval.codegen</name>
+    <shortname>Codegen</shortname>
+    <owner>activity</owner>
+    <objectwrapper>java.lang.Class</objectwrapper>
+    <method>
+      <name DesignerName="CompileCodeBlock">_compilecodeblock</name>
+      <comment>*--------------------------------------------------------- CompileCodeBlock
+*
+</comment>
+      <returntype>int</returntype>
+      <parameter>
+        <name>ba</name>
+        <type>anywheresoftware.b4a.BA</type>
+      </parameter>
+      <parameter>
+        <name>oCodeBlock</name>
+        <type>com.macthomasengineering.mteeval.codeblock</type>
+      </parameter>
+      <parameter>
+        <name>lstBytecode</name>
+        <type>anywheresoftware.b4a.objects.collections.List</type>
+      </parameter>
+    </method>
+    <method>
+      <name DesignerName="DoLoadNumber">_doloadnumber</name>
+      <comment>*------------------------------------------------------------- DoLoadNumber
+*
+</comment>
+      <returntype>String</returntype>
+      <parameter>
+        <name>ba</name>
+        <type>anywheresoftware.b4a.BA</type>
+      </parameter>
+      <parameter>
+        <name>nValue</name>
+        <type>double</type>
+      </parameter>
+    </method>
+    <method>
+      <name DesignerName="Process_Globals">_process_globals</name>
+      <returntype>String</returntype>
+    </method>
+  </class>
+  <class b4a_type="StaticCode">
+    <name>com.macthomasengineering.mteeval.pcode</name>
+    <shortname>PCODE</shortname>
+    <owner>activity</owner>
+    <objectwrapper>java.lang.Class</objectwrapper>
+    <field>
+      <name DesignerName="PUSH">_push</name>
+      <returntype>int</returntype>
+    </field>
+    <field>
+      <name DesignerName="NEG">_neg</name>
+      <returntype>int</returntype>
+    </field>
+    <field>
+      <name DesignerName="ADD">_add</name>
+      <returntype>int</returntype>
+    </field>
+    <field>
+      <name DesignerName="SUBTRACT">_subtract</name>
+      <returntype>int</returntype>
+    </field>
+    <field>
+      <name DesignerName="DIVIDE">_divide</name>
+      <returntype>int</returntype>
+    </field>
+    <field>
+      <name DesignerName="MULTIPLY">_multiply</name>
+      <returntype>int</returntype>
+    </field>
+    <field>
+      <name DesignerName="MODULO">_modulo</name>
+      <returntype>int</returntype>
+    </field>
+    <field>
+      <name DesignerName="LOGICAL_OR">_logical_or</name>
+      <returntype>int</returntype>
+    </field>
+    <field>
+      <name DesignerName="LOGICAL_AND">_logical_and</name>
+      <returntype>int</returntype>
+    </field>
+    <field>
+      <name DesignerName="LOGICAL_NOT">_logical_not</name>
+      <returntype>int</returntype>
+    </field>
+    <field>
+      <name DesignerName="EQUAL">_equal</name>
+      <returntype>int</returntype>
+    </field>
+    <field>
+      <name DesignerName="NOT_EQUAL">_not_equal</name>
+      <returntype>int</returntype>
+    </field>
+    <field>
+      <name DesignerName="LESS_THAN">_less_than</name>
+      <returntype>int</returntype>
+    </field>
+    <field>
+      <name DesignerName="LESS_EQUAL">_less_equal</name>
+      <returntype>int</returntype>
+    </field>
+    <field>
+      <name DesignerName="GREATER_THAN">_greater_than</name>
+      <returntype>int</returntype>
+    </field>
+    <field>
+      <name DesignerName="GREATER_EQUAL">_greater_equal</name>
+      <returntype>int</returntype>
+    </field>
+    <field>
+      <name DesignerName="BIT_AND">_bit_and</name>
+      <returntype>int</returntype>
+    </field>
+    <field>
+      <name DesignerName="BIT_OR">_bit_or</name>
+      <returntype>int</returntype>
+    </field>
+    <field>
+      <name DesignerName="BIT_XOR">_bit_xor</name>
+      <returntype>int</returntype>
+    </field>
+    <field>
+      <name DesignerName="BIT_NOT">_bit_not</name>
+      <returntype>int</returntype>
+    </field>
+    <field>
+      <name DesignerName="BIT_SHIFT_LEFT">_bit_shift_left</name>
+      <returntype>int</returntype>
+    </field>
+    <field>
+      <name DesignerName="BIT_SHIFT_RIGHT">_bit_shift_right</name>
+      <returntype>int</returntype>
+    </field>
+    <field>
+      <name DesignerName="JUMP_ALWAYS">_jump_always</name>
+      <returntype>int</returntype>
+    </field>
+    <field>
+      <name DesignerName="JUMP_FALSE">_jump_false</name>
+      <returntype>int</returntype>
+    </field>
+    <field>
+      <name DesignerName="JUMP_TRUE">_jump_true</name>
+      <returntype>int</returntype>
+    </field>
+    <field>
+      <name DesignerName="LOADCONST">_loadconst</name>
+      <returntype>int</returntype>
+    </field>
+    <field>
+      <name DesignerName="LOADVAR">_loadvar</name>
+      <returntype>int</returntype>
+    </field>
+    <field>
+      <name DesignerName="FUNC_ABS">_func_abs</name>
+      <returntype>int</returntype>
+    </field>
+    <field>
+      <name DesignerName="FUNC_IIF">_func_iif</name>
+      <returntype>int</returntype>
+    </field>
+    <field>
+      <name DesignerName="FUNC_MAX">_func_max</name>
+      <returntype>int</returntype>
+    </field>
+    <field>
+      <name DesignerName="FUNC_MIN">_func_min</name>
+      <returntype>int</returntype>
+    </field>
+    <field>
+      <name DesignerName="FUNC_SQRT">_func_sqrt</name>
+      <returntype>int</returntype>
+    </field>
+    <field>
+      <name DesignerName="FUNC_POWER">_func_power</name>
+      <returntype>int</returntype>
+    </field>
+    <field>
+      <name DesignerName="ENDCODE">_endcode</name>
+      <returntype>int</returntype>
+    </field>
+    <method>
+      <name DesignerName="Process_Globals">_process_globals</name>
+      <returntype>String</returntype>
+    </method>
+  </class>
+  <class b4a_type="StaticCode">
+    <name>com.macthomasengineering.mteeval.run</name>
+    <shortname>Run</shortname>
+    <owner>activity</owner>
+    <objectwrapper>java.lang.Class</objectwrapper>
+    <method>
+      <name DesignerName="Dump">_dump</name>
+      <comment>*-------------------------------------------------------------- Dump
+*
+</comment>
+      <returntype>anywheresoftware.b4a.objects.collections.List</returntype>
+      <parameter>
+        <name>ba</name>
+        <type>anywheresoftware.b4a.BA</type>
+      </parameter>
+      <parameter>
+        <name>oCodeBlock</name>
+        <type>com.macthomasengineering.mteeval.codeblock</type>
+      </parameter>
+      <parameter>
+        <name>Bytecode</name>
+        <type>anywheresoftware.b4a.objects.collections.List</type>
+      </parameter>
+      <parameter>
+        <name>Codelist</name>
+        <type>anywheresoftware.b4a.objects.collections.List</type>
+      </parameter>
+    </method>
+    <method>
+      <name DesignerName="Execute">_execute</name>
+      <comment>*--------------------------------------------------------------- Execute
+*
+</comment>
+      <returntype>double</returntype>
+      <parameter>
+        <name>ba</name>
+        <type>anywheresoftware.b4a.BA</type>
+      </parameter>
+      <parameter>
+        <name>oCodeBlock</name>
+        <type>com.macthomasengineering.mteeval.codeblock</type>
+      </parameter>
+      <parameter>
+        <name>Bytecode</name>
+        <type>anywheresoftware.b4a.objects.collections.List</type>
+      </parameter>
+      <parameter>
+        <name>aArgs</name>
+        <type>Object[]</type>
+      </parameter>
+    </method>
+    <method>
+      <name DesignerName="Process_Globals">_process_globals</name>
+      <returntype>String</returntype>
+    </method>
+  </class>
+  <class>
+    <name>com.macthomasengineering.mteeval.codeblock</name>
+    <shortname>Codeblock</shortname>
+    <owner>process</owner>
+    <method>
+      <name>IsInitialized</name>
+      <comment>Tests whether the object has been initialized.</comment>
+      <returntype>boolean</returntype>
+    </method>
+    <method>
+      <name DesignerName="Class_Globals">_class_globals</name>
+      <returntype>String</returntype>
+    </method>
+    <method>
+      <name DesignerName="Compile">_compile</name>
+      <comment>-------------------------------------------------
+ Compile expression into Codeblock
+
+ Example:  Dim cb as Codeblock
+           error = cb.Compile( "{||3+8}" )
+
+</comment>
+      <returntype>int</returntype>
+      <parameter>
+        <name>sCodeblock</name>
+        <type>String</type>
+      </parameter>
+    </method>
+    <method>
+      <name DesignerName="Decompile">_decompile</name>
+      <comment>-------------------------------------------------
+ Decompile Codeblock
+
+ Example:  Dim cb as CodeBlock
+           Dim Decode as List
+           error = cb.Compile( "{|a,b|3*a+8*b}" )
+           Decode = cb.Decompile
+
+</comment>
+      <returntype>anywheresoftware.b4a.objects.collections.List</returntype>
+    </method>
+    <method>
+      <name DesignerName="Eval">_eval</name>
+      <comment>-------------------------------------------------
+ Evaulate a Codeblock
+
+ Example:  Dim cb as Codeblock
+           error  = cb.Compile( "{||3+8}" )
+           result = cb.Eval
+
+</comment>
+      <returntype>double</returntype>
+    </method>
+    <method>
+      <name DesignerName="Eval2">_eval2</name>
+      <comment>-------------------------------------------------
+ Evaulate a Codeblock with parameters
+
+ Example:  Dim cb as CodeBlock
+           error = cb.Compile( "{|a,b|3*a+8*b}" )
+           result = cb.Eval2( Array( 6, 10 ) )
+
+</comment>
+      <returntype>double</returntype>
+      <parameter>
+        <name>aArgs</name>
+        <type>Object[]</type>
+      </parameter>
+    </method>
+    <method>
+      <name DesignerName="Initialize">_initialize</name>
+      <comment>-------------------------------------------------
+ Initialize Codeblock
+
+
+
+</comment>
+      <returntype>String</returntype>
+      <parameter>
+        <name>ba</name>
+        <type>anywheresoftware.b4a.BA</type>
+      </parameter>
+    </method>
+    <method>
+      <name DesignerName="Version">_version</name>
+      <comment>-------------------------------------------------
+ Version of MteEval library
+
+
+
+</comment>
+      <returntype>String</returntype>
+    </method>
+    <field>
+      <name DesignerName="Text">_text</name>
+      <returntype>String</returntype>
+    </field>
+    <field>
+      <name DesignerName="Error">_error</name>
+      <returntype>int</returntype>
+    </field>
+    <field>
+      <name DesignerName="ErrorDesc">_errordesc</name>
+      <returntype>String</returntype>
+    </field>
+    <field>
+      <name DesignerName="ErrorDetail">_errordetail</name>
+      <returntype>String</returntype>
+    </field>
+    <field>
+      <name DesignerName="ERROR_NONE">_error_none</name>
+      <returntype>int</returntype>
+    </field>
+    <field>
+      <name DesignerName="ERROR_SYNTAX">_error_syntax</name>
+      <returntype>int</returntype>
+    </field>
+    <field>
+      <name DesignerName="ERROR_MISSING_BRACKET">_error_missing_bracket</name>
+      <returntype>int</returntype>
+    </field>
+    <field>
+      <name DesignerName="ERROR_MISSING_PIPE">_error_missing_pipe</name>
+      <returntype>int</returntype>
+    </field>
+    <field>
+      <name DesignerName="ERROR_MISSING_PAREN">_error_missing_paren</name>
+      <returntype>int</returntype>
+    </field>
+    <field>
+      <name DesignerName="ERROR_MISSING_COMMA">_error_missing_comma</name>
+      <returntype>int</returntype>
+    </field>
+    <field>
+      <name DesignerName="ERROR_MISSING_ARG">_error_missing_arg</name>
+      <returntype>int</returntype>
+    </field>
+    <field>
+      <name DesignerName="ERROR_NOT_A_VAR">_error_not_a_var</name>
+      <returntype>int</returntype>
+    </field>
+    <field>
+      <name DesignerName="ERROR_MISSING_PARAM">_error_missing_param</name>
+      <returntype>int</returntype>
+    </field>
+    <field>
+      <name DesignerName="ERROR_MISSING_EXPR">_error_missing_expr</name>
+      <returntype>int</returntype>
+    </field>
+    <field>
+      <name DesignerName="ERROR_RESERVED_WORD">_error_reserved_word</name>
+      <returntype>int</returntype>
+    </field>
+    <field>
+      <name DesignerName="ERROR_TOO_MANY_ARGS">_error_too_many_args</name>
+      <returntype>int</returntype>
+    </field>
+    <field>
+      <name DesignerName="ERROR_UNBALANCED_PARENS">_error_unbalanced_parens</name>
+      <returntype>int</returntype>
+    </field>
+    <field>
+      <name DesignerName="ERROR_PUTBACK">_error_putback</name>
+      <returntype>int</returntype>
+    </field>
+    <field>
+      <name DesignerName="ERROR_UNSUPPORTED_OPER">_error_unsupported_oper</name>
+      <returntype>int</returntype>
+    </field>
+    <field>
+      <name DesignerName="ERROR_NO_CODE">_error_no_code</name>
+      <returntype>int</returntype>
+    </field>
+    <field>
+      <name DesignerName="ERROR_ILLEGAL_CODE">_error_illegal_code</name>
+      <returntype>int</returntype>
+    </field>
+    <field>
+      <name DesignerName="ERROR_INSUFFICIENT_ARGS">_error_insufficient_args</name>
+      <returntype>int</returntype>
+    </field>
+    <field>
+      <name DesignerName="ERROR_STACK_OVERFLOW">_error_stack_overflow</name>
+      <returntype>int</returntype>
+    </field>
+    <field>
+      <name DesignerName="ERROR_DIVIDE_BY_ZERO">_error_divide_by_zero</name>
+      <returntype>int</returntype>
+    </field>
+    <field>
+      <name DesignerName="ERROR_ARG_NOT_NUMBER">_error_arg_not_number</name>
+      <returntype>int</returntype>
+    </field>
+    <field>
+      <name DesignerName="ERROR_OTHER">_error_other</name>
+      <returntype>int</returntype>
+    </field>
+  </class>
+  <class>
+    <name>com.macthomasengineering.mteeval.codegen._mte_token</name>
+    <shortname>MTE_TOKEN</shortname>
+    <owner>process</owner>
+    <method>
+      <name>Initialize</name>
+      <comment>Initializes the fields to their default value.</comment>
+      <returntype>void</returntype>
+    </method>
+    <field>
+      <name>IsInitialized</name>
+      <comment>Tests whether the object has been initialized.</comment>
+      <returntype>boolean</returntype>
+    </field>
+    <field>
+      <name>nType</name>
+      <returntype>int</returntype>
+    </field>
+    <field>
+      <name>sText</name>
+      <returntype>String</returntype>
+    </field>
+  </class>
+  <class>
+    <name>com.macthomasengineering.mteeval.codegen._mte_jump</name>
+    <shortname>MTE_JUMP</shortname>
+    <owner>process</owner>
+    <method>
+      <name>Initialize</name>
+      <comment>Initializes the fields to their default value.</comment>
+      <returntype>void</returntype>
+    </method>
+    <field>
+      <name>IsInitialized</name>
+      <comment>Tests whether the object has been initialized.</comment>
+      <returntype>boolean</returntype>
+    </field>
+    <field>
+      <name>nCodeIndex</name>
+      <returntype>int</returntype>
+    </field>
+    <field>
+      <name>nLabelIndex</name>
+      <returntype>int</returntype>
+    </field>
+  </class>
+  <class>
+    <name>com.macthomasengineering.mteeval.codegen._mte_func_info</name>
+    <shortname>MTE_FUNC_INFO</shortname>
+    <owner>process</owner>
+    <method>
+      <name>Initialize</name>
+      <comment>Initializes the fields to their default value.</comment>
+      <returntype>void</returntype>
+    </method>
+    <field>
+      <name>IsInitialized</name>
+      <comment>Tests whether the object has been initialized.</comment>
+      <returntype>boolean</returntype>
+    </field>
+    <field>
+      <name>nPcode</name>
+      <returntype>int</returntype>
+    </field>
+    <field>
+      <name>nArgCount</name>
+      <returntype>int</returntype>
+    </field>
+  </class>
+  <class>
+    <name>com.macthomasengineering.mteeval.codegen._mte_varient</name>
+    <shortname>MTE_VARIENT</shortname>
+    <owner>process</owner>
+    <method>
+      <name>Initialize</name>
+      <comment>Initializes the fields to their default value.</comment>
+      <returntype>void</returntype>
+    </method>
+    <field>
+      <name>IsInitialized</name>
+      <comment>Tests whether the object has been initialized.</comment>
+      <returntype>boolean</returntype>
+    </field>
+    <field>
+      <name>nType</name>
+      <returntype>int</returntype>
+    </field>
+    <field>
+      <name>vDouble</name>
+      <returntype>double</returntype>
+    </field>
+    <field>
+      <name>vInt</name>
+      <returntype>int</returntype>
+    </field>
+    <field>
+      <name>vBoolean</name>
+      <returntype>boolean</returntype>
+    </field>
+    <field>
+      <name>vString</name>
+      <returntype>String</returntype>
+    </field>
+  </class>
+  <version>1.03</version>
+  <author>MacThomas Engineering</author>
+</root>

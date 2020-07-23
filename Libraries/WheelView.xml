@@ -1,0 +1,367 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root>
+    <doclet-version-NOT-library-version>1.02</doclet-version-NOT-library-version>
+    <class>
+        <name>derez.libs.WheelView</name>
+        <shortname>WheelView</shortname>
+        <comment>WheelView creates a rotating wheel with list of text items.
+ The value that is at the center when the wheel stop can be read
+ by a Tick event sub, using ReadWheel method.
+ ScrollChanged(Position as int) event can be used 
+ to get the scroll position, but it is not required 
+ for the operation of the wheel.
+ The cover bitmap which gives the wheel its shape is attached and 
+ should be put on a panel with the same size and place as the WheelView.</comment>
+        <objectwrapper>android.widget.ScrollView</objectwrapper>
+        <owner>activity</owner>
+        <event>ScrollChanged(Position As Int)</event>
+        <event>Tick</event>
+        <method>
+            <name>BringToFront</name>
+            <comment></comment>
+            <returntype>void</returntype>
+        </method>
+        <method>
+            <name>RequestFocus</name>
+            <comment></comment>
+            <returntype>boolean</returntype>
+        </method>
+        <method>
+            <name>SetToValue</name>
+            <comment>Sets the wheel to value by list index parameter.</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>index</name>
+                <type>int</type>
+            </parameter>
+        </method>
+        <method>
+            <name>RemoveView</name>
+            <comment></comment>
+            <returntype>void</returntype>
+        </method>
+        <method>
+            <name>SetBackgroundImage</name>
+            <comment></comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>arg0</name>
+                <type>android.graphics.Bitmap</type>
+            </parameter>
+        </method>
+        <method>
+            <name>Invalidate3</name>
+            <comment></comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>arg0</name>
+                <type>int</type>
+            </parameter>
+            <parameter>
+                <name>arg1</name>
+                <type>int</type>
+            </parameter>
+            <parameter>
+                <name>arg2</name>
+                <type>int</type>
+            </parameter>
+            <parameter>
+                <name>arg3</name>
+                <type>int</type>
+            </parameter>
+        </method>
+        <method>
+            <name>ReadWheel</name>
+            <comment>Returns the string value which is displayed on the wheel when stopped.	         
+ Should be used inside the Tick event sub.</comment>
+            <returntype>java.lang.String</returntype>
+        </method>
+        <method>
+            <name>UpdateValues</name>
+            <comment>Updates the value by string array
+ The array may be smaller or larger than the original.</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>Values</name>
+                <type>java.lang.String[]</type>
+            </parameter>
+        </method>
+        <method>
+            <name>Invalidate2</name>
+            <comment></comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>arg0</name>
+                <type>android.graphics.Rect</type>
+            </parameter>
+        </method>
+        <method>
+            <name>Initialize2</name>
+            <comment>Initializes the WheelView with the set of values 
+ as defined by the Values array.
+ Set Cyclic True if you want the wheel to be cyclic.
+ Wheelstep defines the height of each digit label.</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>ba</name>
+                <type>anywheresoftware.b4a.BA</type>
+            </parameter>
+            <parameter>
+                <name>Wheelstep</name>
+                <type>int</type>
+            </parameter>
+            <parameter>
+                <name>Values</name>
+                <type>java.lang.String[]</type>
+            </parameter>
+            <parameter>
+                <name>Cyclic</name>
+                <type>boolean</type>
+            </parameter>
+            <parameter>
+                <name>EventName</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+        <method>
+            <name>Initialize1</name>
+            <comment>Initializes the WheelView with the content of a list.
+ Set Cyclic True if you want the wheel to be cyclic.
+ Wheelstep defines the height of each digit label.</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>ba</name>
+                <type>anywheresoftware.b4a.BA</type>
+            </parameter>
+            <parameter>
+                <name>Wheelstep</name>
+                <type>int</type>
+            </parameter>
+            <parameter>
+                <name>list</name>
+                <type>anywheresoftware.b4a.objects.collections.List</type>
+            </parameter>
+            <parameter>
+                <name>Cyclic</name>
+                <type>boolean</type>
+            </parameter>
+            <parameter>
+                <name>EventName</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+        <method>
+            <name>IsInitialized</name>
+            <comment></comment>
+            <returntype>boolean</returntype>
+        </method>
+        <method>
+            <name>Initialize</name>
+            <comment>Initializes the WheelView with the growing numbers 
+ from first to last, with steps of 1.
+ Set Cyclic True if you want the wheel to be cyclic.
+ Wheelstep defines the height of each digit label.</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>ba</name>
+                <type>anywheresoftware.b4a.BA</type>
+            </parameter>
+            <parameter>
+                <name>Wheelstep</name>
+                <type>int</type>
+            </parameter>
+            <parameter>
+                <name>First</name>
+                <type>int</type>
+            </parameter>
+            <parameter>
+                <name>Last</name>
+                <type>int</type>
+            </parameter>
+            <parameter>
+                <name>Cyclic</name>
+                <type>boolean</type>
+            </parameter>
+            <parameter>
+                <name>EventName</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+        <method>
+            <name>Invalidate</name>
+            <comment></comment>
+            <returntype>void</returntype>
+        </method>
+        <method>
+            <name>SetLayout</name>
+            <comment></comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>arg0</name>
+                <type>int</type>
+            </parameter>
+            <parameter>
+                <name>arg1</name>
+                <type>int</type>
+            </parameter>
+            <parameter>
+                <name>arg2</name>
+                <type>int</type>
+            </parameter>
+            <parameter>
+                <name>arg3</name>
+                <type>int</type>
+            </parameter>
+        </method>
+        <method>
+            <name>UpdateList</name>
+            <comment>Updates the value by list. 
+ The list may be smaller or larger than the original.</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>list</name>
+                <type>anywheresoftware.b4a.objects.collections.List</type>
+            </parameter>
+        </method>
+        <method>
+            <name>FullScroll</name>
+            <comment>Scrolls the WheelView to the top or bottom.</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>Bottom</name>
+                <type>boolean</type>
+            </parameter>
+        </method>
+        <method>
+            <name>SendToBack</name>
+            <comment></comment>
+            <returntype>void</returntype>
+        </method>
+        <property>
+            <name>Enabled</name>
+            <returntype>boolean</returntype>
+            <parameter>
+                <name>arg0</name>
+                <type>boolean</type>
+            </parameter>
+            <comment></comment>
+        </property>
+        <property>
+            <name>Top</name>
+            <returntype>int</returntype>
+            <parameter>
+                <name>arg0</name>
+                <type>int</type>
+            </parameter>
+            <comment></comment>
+        </property>
+        <property>
+            <name>ScrollPosition</name>
+            <returntype>int</returntype>
+            <parameter>
+                <name>Scroll</name>
+                <type>int</type>
+            </parameter>
+            <comment>Gets or sets the scroll position.</comment>
+        </property>
+        <property>
+            <name>Visible</name>
+            <returntype>boolean</returntype>
+            <parameter>
+                <name>arg0</name>
+                <type>boolean</type>
+            </parameter>
+            <comment></comment>
+        </property>
+        <property>
+            <name>Gravity</name>
+            <parameter>
+                <name>Gravity</name>
+                <type>int</type>
+            </parameter>
+            <comment>Sets the text alignment on the wheel.</comment>
+        </property>
+        <property>
+            <name>Background</name>
+            <returntype>android.graphics.drawable.Drawable</returntype>
+            <parameter>
+                <name>arg0</name>
+                <type>android.graphics.drawable.Drawable</type>
+            </parameter>
+            <comment></comment>
+        </property>
+        <property>
+            <name>Height</name>
+            <returntype>int</returntype>
+            <parameter>
+                <name>arg0</name>
+                <type>int</type>
+            </parameter>
+            <comment></comment>
+        </property>
+        <property>
+            <name>TextColor</name>
+            <returntype>int</returntype>
+            <parameter>
+                <name>TextColor</name>
+                <type>int</type>
+            </parameter>
+            <comment>Gets or sets the text color of the items on the wheel.</comment>
+        </property>
+        <property>
+            <name>Left</name>
+            <returntype>int</returntype>
+            <parameter>
+                <name>arg0</name>
+                <type>int</type>
+            </parameter>
+            <comment></comment>
+        </property>
+        <property>
+            <name>Color</name>
+            <parameter>
+                <name>Color</name>
+                <type>int</type>
+            </parameter>
+            <comment>Sets the background color of the wheel panel and the items on the wheel.</comment>
+        </property>
+        <property>
+            <name>TextSize</name>
+            <returntype>int</returntype>
+            <parameter>
+                <name>TextSize</name>
+                <type>int</type>
+            </parameter>
+            <comment>Gets or sets the textsize of the items on the wheel.</comment>
+        </property>
+        <property>
+            <name>Delay</name>
+            <parameter>
+                <name>Delay</name>
+                <type>long</type>
+            </parameter>
+            <comment>Sets the time delay in milliseconds,
+  for the wheel to halt with an item in the center.</comment>
+        </property>
+        <property>
+            <name>Tag</name>
+            <returntype>java.lang.Object</returntype>
+            <parameter>
+                <name>arg0</name>
+                <type>java.lang.Object</type>
+            </parameter>
+            <comment></comment>
+        </property>
+        <property>
+            <name>Width</name>
+            <returntype>int</returntype>
+            <parameter>
+                <name>arg0</name>
+                <type>int</type>
+            </parameter>
+            <comment></comment>
+        </property>
+    </class>
+    <version>1.1</version>
+    <author>Derez</author>
+</root>

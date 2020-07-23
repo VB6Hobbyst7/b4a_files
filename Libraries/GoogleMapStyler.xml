@@ -1,0 +1,292 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root>
+    <doclet-version-NOT-library-version>1.05</doclet-version-NOT-library-version>
+    <class>
+        <name>de.donmanfred.GoogleMapStylerWrapper</name>
+        <shortname>GoogleMapStyler</shortname>
+        <owner>process</owner>
+        <method>
+            <name>setAllPoiParkTextColor</name>
+            <comment>Sets color for all resturant park labels.
+color: color to be applied for the label</comment>
+            <returntype>de.donmanfred.GoogleMapStylerWrapper</returntype>
+            <parameter>
+                <name>color</name>
+                <type>int</type>
+            </parameter>
+        </method>
+        <method>
+            <name>setAllPoiTextColor</name>
+            <comment>Sets color for all resturant labels.
+color: color to be applied for the label</comment>
+            <returntype>de.donmanfred.GoogleMapStylerWrapper</returntype>
+            <parameter>
+                <name>color</name>
+                <type>int</type>
+            </parameter>
+        </method>
+        <method>
+            <name>setAllRoadHighwayStrokeColor</name>
+            <comment>Sets stroke color for all highway roads.
+color: color to be applied for the stoke</comment>
+            <returntype>de.donmanfred.GoogleMapStylerWrapper</returntype>
+            <parameter>
+                <name>color</name>
+                <type>int</type>
+            </parameter>
+        </method>
+        <method>
+            <name>setAllRoadTextColor</name>
+            <comment>Sets label color for all roads.
+color: color to be applied for the label</comment>
+            <returntype>de.donmanfred.GoogleMapStylerWrapper</returntype>
+            <parameter>
+                <name>color</name>
+                <type>int</type>
+            </parameter>
+        </method>
+        <method>
+            <name>setAllRoadLocalStrokeColor</name>
+            <comment>Sets stroke color for all local roads.
+color: color to be applied for the stroke</comment>
+            <returntype>de.donmanfred.GoogleMapStylerWrapper</returntype>
+            <parameter>
+                <name>color</name>
+                <type>int</type>
+            </parameter>
+        </method>
+        <method>
+            <name>setAllTransitStationTextColor</name>
+            <comment>Sets label color for all transit stations.
+color: color to be applied for the label</comment>
+            <returntype>de.donmanfred.GoogleMapStylerWrapper</returntype>
+            <parameter>
+                <name>color</name>
+                <type>int</type>
+            </parameter>
+        </method>
+        <method>
+            <name>Initialize</name>
+            <comment></comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>ba</name>
+                <type>anywheresoftware.b4a.BA</type>
+            </parameter>
+            <parameter>
+                <name>EventName</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+        <method>
+            <name>setCustomFeatureLightness</name>
+            <comment>Sets custom feature lightness to be applied
+ for more details visit https://developers.google.com/maps/documentation/javascript/style-reference
+featureType: type of feature to be added
+elementType: element in which property to be applied
+lightness: color to be applied</comment>
+            <returntype>de.donmanfred.GoogleMapStylerWrapper</returntype>
+            <parameter>
+                <name>featureType</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>elementType</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>lightness</name>
+                <type>int</type>
+            </parameter>
+        </method>
+        <method>
+            <name>setAllRoadHighwayBackgroundColor</name>
+            <comment>Sets color for all highway roads.
+color: color to be applied</comment>
+            <returntype>de.donmanfred.GoogleMapStylerWrapper</returntype>
+            <parameter>
+                <name>color</name>
+                <type>int</type>
+            </parameter>
+        </method>
+        <method>
+            <name>setAllRoadLocalBackgroundColor</name>
+            <comment>Sets color for all local roads.
+color: color to be applied</comment>
+            <returntype>de.donmanfred.GoogleMapStylerWrapper</returntype>
+            <parameter>
+                <name>color</name>
+                <type>int</type>
+            </parameter>
+        </method>
+        <method>
+            <name>setAllTransitBackgroundColor</name>
+            <comment>Sets color for all transits.
+color: color to be applied</comment>
+            <returntype>de.donmanfred.GoogleMapStylerWrapper</returntype>
+            <parameter>
+                <name>color</name>
+                <type>int</type>
+            </parameter>
+        </method>
+        <method>
+            <name>setAllRoadArterialStrokeColor</name>
+            <comment>Sets stroke color for all arterial roads.arterial means important route in a system of roads, railway lines, or rivers.
+color: color to be applied for the stroke</comment>
+            <returntype>de.donmanfred.GoogleMapStylerWrapper</returntype>
+            <parameter>
+                <name>color</name>
+                <type>int</type>
+            </parameter>
+        </method>
+        <method>
+            <name>setAllMainTownTextColor</name>
+            <comment>Sets color for all main city labels.
+color: color to be applied for the label</comment>
+            <returntype>de.donmanfred.GoogleMapStylerWrapper</returntype>
+            <parameter>
+                <name>color</name>
+                <type>int</type>
+            </parameter>
+        </method>
+        <method>
+            <name>setAllWaterTextColor</name>
+            <comment>Sets color for labels in water.
+color: color to be applied for the label</comment>
+            <returntype>de.donmanfred.GoogleMapStylerWrapper</returntype>
+            <parameter>
+                <name>color</name>
+                <type>int</type>
+            </parameter>
+        </method>
+        <method>
+            <name>setAllWaterTextStrokeAlpha</name>
+            <comment>Sets stroke alpha for labels in water.
+lightness: alpha to be applied,use -ve values for lesser alpha and +ve values for increased alpha</comment>
+            <returntype>de.donmanfred.GoogleMapStylerWrapper</returntype>
+            <parameter>
+                <name>lightness</name>
+                <type>int</type>
+            </parameter>
+        </method>
+        <method>
+            <name>setMainGeometryColor</name>
+            <comment>Sets background color for all the continentals
+color: background color to be applied</comment>
+            <returntype>de.donmanfred.GoogleMapStylerWrapper</returntype>
+            <parameter>
+                <name>color</name>
+                <type>int</type>
+            </parameter>
+        </method>
+        <method>
+            <name>setAllPlaceTextStrokeAlpha</name>
+            <comment>Sets text stroke to all place labels
+lightness: alpha to be applied,use -ve values for lesser alpha and +ve values for increased alpha</comment>
+            <returntype>de.donmanfred.GoogleMapStylerWrapper</returntype>
+            <parameter>
+                <name>lightness</name>
+                <type>int</type>
+            </parameter>
+        </method>
+        <method>
+            <name>setAllWaterBackgroundColor</name>
+            <comment>Sets color for water.
+color: color to be applied</comment>
+            <returntype>de.donmanfred.GoogleMapStylerWrapper</returntype>
+            <parameter>
+                <name>color</name>
+                <type>int</type>
+            </parameter>
+        </method>
+        <method>
+            <name>setAllRoadHighwayTextColor</name>
+            <comment>Sets color for labels in all highway roads.
+color: color to be applied for the label</comment>
+            <returntype>de.donmanfred.GoogleMapStylerWrapper</returntype>
+            <parameter>
+                <name>color</name>
+                <type>int</type>
+            </parameter>
+        </method>
+        <method>
+            <name>setAllRoadArterialBackgroundColor</name>
+            <comment>Sets color for all arterial roads.arterial means important route in a system of roads, railway lines, or rivers.
+color: color to be applied</comment>
+            <returntype>de.donmanfred.GoogleMapStylerWrapper</returntype>
+            <parameter>
+                <name>color</name>
+                <type>int</type>
+            </parameter>
+        </method>
+        <method>
+            <name>setCustomFeatureColor</name>
+            <comment>Sets custom feature color to be applied
+ for more details visit https://developers.google.com/maps/documentation/javascript/style-reference
+featureType: type of feature to be added
+elementType: element in which property to be applied
+color: color to be applied</comment>
+            <returntype>de.donmanfred.GoogleMapStylerWrapper</returntype>
+            <parameter>
+                <name>featureType</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>elementType</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>color</name>
+                <type>int</type>
+            </parameter>
+        </method>
+        <method>
+            <name>setAllPlaceTextColor</name>
+            <comment>Sets  color for all the place texts excluding water label text,main city text etc.
+color: color to be applied for the label</comment>
+            <returntype>de.donmanfred.GoogleMapStylerWrapper</returntype>
+            <parameter>
+                <name>color</name>
+                <type>int</type>
+            </parameter>
+        </method>
+        <method>
+            <name>setAllRoadBackgroundColor</name>
+            <comment>Sets color for all roads.
+color: color to be applied for the road</comment>
+            <returntype>de.donmanfred.GoogleMapStylerWrapper</returntype>
+            <parameter>
+                <name>color</name>
+                <type>int</type>
+            </parameter>
+        </method>
+        <method>
+            <name>build</name>
+            <comment>Call this method to build the 
+ GoogleMapStyler and to apply 
+ it to the given GoogleMap.
+ 
+ Call this only after you set 
+ all Colors like you wish as it 
+ applies the setting to GoogleMap</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>map</name>
+                <type>com.google.android.gms.maps.GoogleMap</type>
+            </parameter>
+        </method>
+        <method>
+            <name>setAllPoiParkBackgroundColor</name>
+            <comment>Sets background color for all resturant parks.
+color: color to be applied for resturant parks</comment>
+            <returntype>de.donmanfred.GoogleMapStylerWrapper</returntype>
+            <parameter>
+                <name>color</name>
+                <type>int</type>
+            </parameter>
+        </method>
+    </class>
+    <version>1.0</version>
+    <author>DonManfred (wrapper)</author>
+    <dependsOn>com.google.android.gms:play-services-maps</dependsOn>
+</root>

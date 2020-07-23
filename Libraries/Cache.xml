@@ -1,0 +1,520 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root>
+    <doclet-version-NOT-library-version>1.05</doclet-version-NOT-library-version>
+    <class>
+        <name>flm.b4a.cache.Cache</name>
+        <shortname>Cache</shortname>
+        <owner>process</owner>
+        <event>CopyDone(Key As String, Error As Boolean)</event>
+        <event>PutDone(Key As String, Error As Boolean)</event>
+        <event>GetDone(Key As String, Obj As Object)</event>
+        <method>
+            <name>PutBitmapOnDisk_Async</name>
+            <comment>Stores the given bitmap in the disk cache (asynchronously).
+&lt;B&gt;Format&lt;/B&gt;: "JPEG" or "PNG"
+&lt;B&gt;Quality&lt;/B&gt;: quality of JPEG compression (0..100). This setting is ignored for the PNG format.
+&lt;B&gt;eventPrefix&lt;/B&gt; = prefix of the "PutDone" event.
+An event is triggered when the job ends. You can get it with:
+&lt;I&gt;Sub eventPrefix_PutDone(key As String, Error As Boolean)&lt;/I&gt;
+&lt;I&gt;Error&lt;/I&gt; is true if there was an error.</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>ba</name>
+                <type>anywheresoftware.b4a.BA</type>
+            </parameter>
+            <parameter>
+                <name>key</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>bitmap</name>
+                <type>anywheresoftware.b4a.objects.drawable.CanvasWrapper.BitmapWrapper</type>
+            </parameter>
+            <parameter>
+                <name>format</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>quality</name>
+                <type>int</type>
+            </parameter>
+            <parameter>
+                <name>eventPrefix</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+        <method>
+            <name>RemoveBitmapFromMemory</name>
+            <comment>Removes the Bitmap for &lt;I&gt;key&lt;/I&gt; if it exists.</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>key</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+        <method>
+            <name>GetObjectFromDisk_Async</name>
+            <comment>Returns the object for &lt;I&gt;key&lt;/I&gt; from the disk cache (asynchronously).
+&lt;B&gt;eventPrefix&lt;/B&gt; = prefix of the "GetDone" event.
+An event is triggered when the job ends. You can get it with:
+&lt;I&gt;Sub eventPrefix_GetDone(key As String, obj As Object)&lt;/I&gt;
+&lt;I&gt;obj&lt;/I&gt; is null if the key was not found or there was an error.</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>ba</name>
+                <type>anywheresoftware.b4a.BA</type>
+            </parameter>
+            <parameter>
+                <name>key</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>eventPrefix</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+        <method>
+            <name>GetBitmap</name>
+            <comment>Returns the bitmap for &lt;I&gt;key&lt;/I&gt; from one of the caches (the memory cache is looked first).
+Returns null if the key was not found.
+The bitmap source (memory or disk cache) is specified in the unfiltered log.
+&lt;B&gt;updateMemory&lt;/B&gt; = if true, the memory cache is updated if the bitmap was only on disk.</comment>
+            <returntype>android.graphics.Bitmap</returntype>
+            <parameter>
+                <name>key</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>updateMemory</name>
+                <type>boolean</type>
+            </parameter>
+        </method>
+        <method>
+            <name>GetBitmapFromDisk_Async</name>
+            <comment>Returns the bitmap for &lt;I&gt;key&lt;/I&gt; from the disk cache (asynchronously).
+&lt;B&gt;colorReduction&lt;/B&gt; = if True, the number of colors is reduced to save memory. This setting has no effect if some pixels are not opaque.
+&lt;B&gt;eventPrefix&lt;/B&gt; = prefix of the "GetDone" event.
+An event is triggered when the job ends. You can get it with:
+&lt;I&gt;Sub eventPrefix_GetDone(key As String, bmp As Bitmap)&lt;/I&gt;
+&lt;I&gt;bmp&lt;/I&gt; is null if the key was not found or there was an error.</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>ba</name>
+                <type>anywheresoftware.b4a.BA</type>
+            </parameter>
+            <parameter>
+                <name>key</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>colorReduction</name>
+                <type>boolean</type>
+            </parameter>
+            <parameter>
+                <name>eventPrefix</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+        <method>
+            <name>DiskFree</name>
+            <comment>Returns the available space in bytes of the disk cache.</comment>
+            <returntype>long</returntype>
+        </method>
+        <method>
+            <name>IsInMemory</name>
+            <comment>Returns true if the Bitmap for &lt;I&gt;key&lt;/I&gt; is still in the memory cache.</comment>
+            <returntype>boolean</returntype>
+            <parameter>
+                <name>key</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+        <method>
+            <name>IsClosed</name>
+            <comment>Returns true if the disk cache has been closed.</comment>
+            <returntype>boolean</returntype>
+        </method>
+        <method>
+            <name>GetBitmapFromDisk</name>
+            <comment>Returns the bitmap for &lt;I&gt;key&lt;/I&gt; from the disk cache.
+Returns null if the key was not found.
+&lt;B&gt;colorReduction&lt;/B&gt; = if True, the number of colors is reduced to save memory. This setting has no effect if some pixels are not opaque.</comment>
+            <returntype>android.graphics.Bitmap</returntype>
+            <parameter>
+                <name>key</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>colorReduction</name>
+                <type>boolean</type>
+            </parameter>
+        </method>
+        <method>
+            <name>Initialize</name>
+            <comment>Initializes the caches.
+&lt;B&gt;memoryCachePct&lt;/B&gt;: percentage of free memory to use for the memory cache (this cache is only used for bitmaps, the other objects are stored on disk). Cannot exceed 90.
+&lt;B&gt;diskCacheSize&lt;/B&gt;: size in bytes of the cache on disk.
+&lt;B&gt;diskCacheDir&lt;/B&gt;: folder where the cache files are stored.
+ If empty, the default cache folder is used. This folder is specific to the application.
+
+Example: &lt;I&gt;myCache.Initialize(25, 20 * 1024 * 1024, "/mnt/sdcard/myAppCache") &lt;/I&gt; '25% for the memory cache and 20MB for the disk cache</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>ba</name>
+                <type>anywheresoftware.b4a.BA</type>
+            </parameter>
+            <parameter>
+                <name>memoryCachePct</name>
+                <type>byte</type>
+            </parameter>
+            <parameter>
+                <name>diskCacheSize</name>
+                <type>long</type>
+            </parameter>
+            <parameter>
+                <name>diskCacheDir</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+        <method>
+            <name>MemoryMissCount</name>
+            <comment>Returns the number of times &lt;I&gt;GetBitmapFromMemory&lt;/I&gt; returned null (bitmap not found).</comment>
+            <returntype>int</returntype>
+        </method>
+        <method>
+            <name>GetDirectory</name>
+            <comment>Returns the directory where the disk cache stores its data.</comment>
+            <returntype>java.lang.String</returntype>
+        </method>
+        <method>
+            <name>GetStringFromDisk</name>
+            <comment>Gets the string for &lt;I&gt;key&lt;/I&gt; from the disk cache.
+Returns an empty string if the key was not found.</comment>
+            <returntype>java.lang.String</returntype>
+            <parameter>
+                <name>key</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+        <method>
+            <name>GetBitmap_Async</name>
+            <comment>Returns the given bitmap for &lt;I&gt;key&lt;/I&gt; from one of the caches.
+If the bitmap is in memory, it is sent back immediately. Otherwise, it is loaded from disk asynchronously.
+&lt;B&gt;updateMemory&lt;/B&gt; = if true, the memory cache is updated if the bitmap was only found on disk.
+&lt;B&gt;eventPrefix&lt;/B&gt; = prefix of the "GetDone" event.
+An event is triggered when the job ends. You can get it with:
+&lt;I&gt;Sub eventPrefix_GetDone(key As String, bmp As Bitmap)&lt;/I&gt;
+&lt;I&gt;bmp&lt;/I&gt; is null if the key was not found or there was an error.</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>ba</name>
+                <type>anywheresoftware.b4a.BA</type>
+            </parameter>
+            <parameter>
+                <name>key</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>updateMemory</name>
+                <type>boolean</type>
+            </parameter>
+            <parameter>
+                <name>eventPrefix</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+        <method>
+            <name>MemoryEvictionCount</name>
+            <comment>Returns the number of bitmaps that have been evicted from the memory cache.</comment>
+            <returntype>int</returntype>
+        </method>
+        <method>
+            <name>CloseDiskCache</name>
+            <comment>Closes the disk cache. Stored values will remain on the filesystem.</comment>
+            <returntype>void</returntype>
+        </method>
+        <method>
+            <name>ClearDiskCache</name>
+            <comment>Deletes all files in the cache directory including files that weren't created by the cache.</comment>
+            <returntype>void</returntype>
+        </method>
+        <method>
+            <name>BitmapSize</name>
+            <comment>Returns the size in bytes of the given bitmap.</comment>
+            <returntype>long</returntype>
+            <parameter>
+                <name>bitmap</name>
+                <type>anywheresoftware.b4a.objects.drawable.CanvasWrapper.BitmapWrapper</type>
+            </parameter>
+        </method>
+        <method>
+            <name>GetBitmapFromMemory</name>
+            <comment>Returns the Bitmap for &lt;I&gt;key&lt;/I&gt; if it exists in the cache.
+Returns null if not found.</comment>
+            <returntype>android.graphics.Bitmap</returntype>
+            <parameter>
+                <name>key</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+        <method>
+            <name>GetObjectFromDisk</name>
+            <comment>Returns the object for &lt;I&gt;key&lt;/I&gt; from the disk cache.
+Returns null if the key was not found.</comment>
+            <returntype>java.lang.Object</returntype>
+            <parameter>
+                <name>key</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+        <method>
+            <name>IsOnDisk</name>
+            <comment>Returns true if the file for &lt;I&gt;key&lt;/I&gt; is still in the disk cache.</comment>
+            <returntype>boolean</returntype>
+            <parameter>
+                <name>key</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+        <method>
+            <name>MemoryUsed</name>
+            <comment>Returns the sum of the sizes in bytes of the entries in the memory cache.</comment>
+            <returntype>int</returntype>
+        </method>
+        <method>
+            <name>DiskUsed</name>
+            <comment>Returns the sum of the sizes in bytes of the files in the disk cache.</comment>
+            <returntype>long</returntype>
+        </method>
+        <method>
+            <name>PutBitmapInMemory</name>
+            <comment>Caches the given bitmap in memory.
+Returns false if the bitmap is too big for the cache.</comment>
+            <returntype>boolean</returntype>
+            <parameter>
+                <name>key</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>bitmap</name>
+                <type>anywheresoftware.b4a.objects.drawable.CanvasWrapper.BitmapWrapper</type>
+            </parameter>
+        </method>
+        <method>
+            <name>PutBitmapOnDisk</name>
+            <comment>Stores the given bitmap in the disk cache.
+&lt;B&gt;Format&lt;/B&gt;: "JPEG" or "PNG"
+&lt;B&gt;Quality&lt;/B&gt;: quality of JPEG compression (0..100). This setting is ignored for the PNG format.</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>key</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>bitmap</name>
+                <type>anywheresoftware.b4a.objects.drawable.CanvasWrapper.BitmapWrapper</type>
+            </parameter>
+            <parameter>
+                <name>format</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>quality</name>
+                <type>int</type>
+            </parameter>
+        </method>
+        <method>
+            <name>MemoryHitCount</name>
+            <comment>Returns the number of times &lt;I&gt;GetBitmapFromMemory&lt;/I&gt; returned a bitmap that was present in the cache.</comment>
+            <returntype>int</returntype>
+        </method>
+        <method>
+            <name>CloseAndClearDiskCache</name>
+            <comment>Closes the disk cache and deletes all files in the cache directory including files that weren't created by the cache.</comment>
+            <returntype>void</returntype>
+        </method>
+        <method>
+            <name>RemoveFromDisk</name>
+            <comment>Removes the file for &lt;I&gt;key&lt;/I&gt; if it exists in the disk cache.
+Returns true if the file was removed.</comment>
+            <returntype>boolean</returntype>
+            <parameter>
+                <name>key</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+        <method>
+            <name>CopyFileToDisk_Async</name>
+            <comment>Copies a file in the disk cache (asynchronously).
+&lt;B&gt;eventPrefix&lt;/B&gt; = prefix of the "CopyDone" event.
+An event is triggered when the job ends. You can get it with:
+&lt;I&gt;Sub eventPrefix_CopyDone(key As String, Error As Boolean)&lt;/I&gt;
+&lt;I&gt;Error&lt;/I&gt; is true if there was an error.</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>ba</name>
+                <type>anywheresoftware.b4a.BA</type>
+            </parameter>
+            <parameter>
+                <name>key</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>dir</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>filename</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>eventPrefix</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+        <method>
+            <name>DiskJournal</name>
+            <comment>Returns a copy of the journal of the disk cache.
+
+Example:
+&lt;I&gt;Dim l As List
+l = myCache.DiskJournal
+For i = 0 To l.Size - 1
+	Log(l.Get(i))
+Next&lt;/I&gt;</comment>
+            <returntype>anywheresoftware.b4a.objects.collections.List</returntype>
+        </method>
+        <method>
+            <name>MemoryPutCount</name>
+            <comment>Returns the number of times &lt;I&gt;PutBitmapInMemory&lt;/I&gt; was called.</comment>
+            <returntype>int</returntype>
+        </method>
+        <method>
+            <name>MemoryFree</name>
+            <comment>Returns the available space in bytes of the memory cache.</comment>
+            <returntype>int</returntype>
+        </method>
+        <method>
+            <name>PutStringOnDisk</name>
+            <comment>Stores the given string in the disk cache.</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>key</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>value</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+        <method>
+            <name>ClearMemoryCache</name>
+            <comment>Clears the memory cache holding bitmaps.</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>ba</name>
+                <type>anywheresoftware.b4a.BA</type>
+            </parameter>
+        </method>
+        <method>
+            <name>CopyFileToDisk</name>
+            <comment>Copies a file in the disk cache.</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>key</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>dir</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>filename</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+        <method>
+            <name>PutObjectOnDisk</name>
+            <comment>Stores the given object in the disk cache.
+This works only with serializable objects (numbers, booleans, lists, arrays...).</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>key</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>obj</name>
+                <type>java.lang.Object</type>
+            </parameter>
+        </method>
+        <method>
+            <name>PutObjectOnDisk_Async</name>
+            <comment>Stores the given object in the disk cache (asynchronously).
+This works only with serializable objects (numbers, booleans, lists, arrays...).
+&lt;B&gt;eventPrefix&lt;/B&gt; = prefix of the "PutDone" event.
+An event is triggered when the job ends. You can get it with:
+&lt;I&gt;Sub eventPrefix_PutDone(key As String, Error As Boolean)&lt;/I&gt;
+&lt;I&gt;Error&lt;/I&gt; is true if there was an error.</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>ba</name>
+                <type>anywheresoftware.b4a.BA</type>
+            </parameter>
+            <parameter>
+                <name>key</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>obj</name>
+                <type>java.lang.Object</type>
+            </parameter>
+            <parameter>
+                <name>eventPrefix</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+        <method>
+            <name>DiskList</name>
+            <comment>Returns a list of the current contents of the disk cache, unordered.
+Map structure: key=filename, value=object array (0=time of the last modification, 1=size in bytes) 
+
+Example:
+&lt;I&gt;Dim m As Map
+m = myCache.DiskList
+Dim Info(2) As Object
+For i = 0 To m.Size - 1
+	Log(m.GetKeyAt(i))
+	Info = m.GetValueAt(i)
+	Log("   " &amp;amp; DateTime.Date(Info(0)) &amp;amp; " " &amp;amp; DateTime.Time(Info(0)))
+	Log("   " &amp;amp; Info(1) &amp;amp; " bytes")
+Next&lt;/I&gt;</comment>
+            <returntype>anywheresoftware.b4a.objects.collections.Map</returntype>
+        </method>
+        <method>
+            <name>MemoryList</name>
+            <comment>Returns a copy of the current contents of the memory cache, ordered from least recently accessed to most recently accessed.</comment>
+            <returntype>anywheresoftware.b4a.objects.collections.Map</returntype>
+        </method>
+        <property>
+            <name>BufferSize</name>
+            <returntype>int</returntype>
+            <parameter>
+                <name>Size</name>
+                <type>int</type>
+            </parameter>
+            <comment>Gets/sets the buffer size of the disk cache. By default, it is set to the block size of the filesystem.</comment>
+        </property>
+        <property>
+            <name>MaxMemory</name>
+            <returntype>long</returntype>
+            <comment>Gets the maximum amount of memory (in bytes) that may be used by the running program.</comment>
+        </property>
+        <property>
+            <name>FreeMemory</name>
+            <returntype>long</returntype>
+            <comment>Gets an approximation of the amount (in bytes) of free memory available to the running program.</comment>
+        </property>
+    </class>
+    <version>1.38</version>
+    <author>Fr\u00e9d\u00e9ric Leneuf-Magaud</author>
+</root>

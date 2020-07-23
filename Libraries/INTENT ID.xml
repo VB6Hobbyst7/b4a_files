@@ -1,0 +1,933 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <doclet-version-NOT-library-version>1.00</doclet-version-NOT-library-version>
+  <dependsOn>phone</dependsOn>
+  <dependsOn>javaobject</dependsOn>
+  <dependsOn>contentresolver</dependsOn>
+  <dependsOn>sql</dependsOn>
+  <class>
+    <name>b4a.example.intentid</name>
+    <shortname>INTENTID</shortname>
+    <owner>process</owner>
+    <method>
+      <name>IsInitialized</name>
+      <comment>Tests whether the object has been initialized.</comment>
+      <returntype>boolean</returntype>
+    </method>
+    <method>
+      <name DesignerName="Initialize">_initialize</name>
+      <returntype>String</returntype>
+      <parameter>
+        <name>ba</name>
+        <type>anywheresoftware.b4a.BA</type>
+      </parameter>
+    </method>
+    <method>
+      <name DesignerName="Open_Audio">_open_audio</name>
+      <comment>OPEN AUDIO WITH DEFAULT PLAYER
+</comment>
+      <returntype>boolean</returntype>
+      <parameter>
+        <name>folder</name>
+        <type>String</type>
+      </parameter>
+      <parameter>
+        <name>audiofile</name>
+        <type>String</type>
+      </parameter>
+    </method>
+    <method>
+      <name DesignerName="Open_GoogleMaps1">_open_googlemaps1</name>
+      <comment>OPENS THE GOOGLE MAPS APP WITH A PLACE (CAN USE LAT,LONG)
+EG &lt;code&gt;Mexico&lt;/code&gt;
+</comment>
+      <returntype>String</returntype>
+      <parameter>
+        <name>place</name>
+        <type>String</type>
+      </parameter>
+    </method>
+    <method>
+      <name DesignerName="Open_GoogleMaps2">_open_googlemaps2</name>
+      <comment>OPENS THE GOOGLE MAPS APP WITH A DISTANCE PLACE TO PLACE (CAN USE LAT,LONG)
+EG &lt;code&gt;Mexico,EUA&lt;/code&gt;
+</comment>
+      <returntype>String</returntype>
+      <parameter>
+        <name>place1</name>
+        <type>String</type>
+      </parameter>
+      <parameter>
+        <name>place2</name>
+        <type>String</type>
+      </parameter>
+    </method>
+    <method>
+      <name DesignerName="Open_Video">_open_video</name>
+      <comment>OPEN VIDEO WITH DEFAULT PLAYER
+</comment>
+      <returntype>boolean</returntype>
+      <parameter>
+        <name>folder</name>
+        <type>String</type>
+      </parameter>
+      <parameter>
+        <name>videofile</name>
+        <type>String</type>
+      </parameter>
+    </method>
+    <method>
+      <name DesignerName="Open_WebSite">_open_website</name>
+      <comment>Open the default browser with url informed
+</comment>
+      <returntype>String</returntype>
+      <parameter>
+        <name>url</name>
+        <type>String</type>
+      </parameter>
+    </method>
+    <method>
+      <name DesignerName="OpenApp_GooglePlay">_openapp_googleplay</name>
+      <comment>OPENS THE LINK FOR APPLICATION ON GOOGLE PLAY, GENERALLY USED AS RATE APPLICATIONS
+Example &lt;code&gt;com.example.app&lt;/code&gt;
+</comment>
+      <returntype>String</returntype>
+      <parameter>
+        <name>app</name>
+        <type>String</type>
+      </parameter>
+    </method>
+    <method>
+      <name DesignerName="OpenChannel_Youtube">_openchannel_youtube</name>
+      <comment>Open youtube app with a specific channel
+Example &lt;code&gt;Basic4android&lt;/code&gt;
+</comment>
+      <returntype>String</returntype>
+      <parameter>
+        <name>channel</name>
+        <type>String</type>
+      </parameter>
+    </method>
+    <method>
+      <name DesignerName="OpenCompany_GooglePlay">_opencompany_googleplay</name>
+      <comment>OPENS THE COMPANY LINK ON GOOGLE PLAY LISTING ALL APPS
+Example &lt;code&gt;ID DESENVOLVIMENTO&lt;/code&gt;
+</comment>
+      <returntype>String</returntype>
+      <parameter>
+        <name>empresa</name>
+        <type>String</type>
+      </parameter>
+    </method>
+    <method>
+      <name DesignerName="OpenPage_Facebook">_openpage_facebook</name>
+      <comment>OPENS A PAGE ON FACEBOOK
+</comment>
+      <returntype>String</returntype>
+      <parameter>
+        <name>page</name>
+        <type>String</type>
+      </parameter>
+    </method>
+    <method>
+      <name DesignerName="OpenPage_Twitter">_openpage_twitter</name>
+      <comment>OPENS A PAGE OR SPECIFICS PROFILE ON TWITTER
+</comment>
+      <returntype>String</returntype>
+      <parameter>
+        <name>page</name>
+        <type>String</type>
+      </parameter>
+    </method>
+    <method>
+      <name DesignerName="OpenVideo_Youtube">_openvideo_youtube</name>
+      <comment>Open youtube app with a specific video
+Example &lt;code&gt;MmLhGVxN76A&lt;/code&gt;
+</comment>
+      <returntype>String</returntype>
+      <parameter>
+        <name>video</name>
+        <type>String</type>
+      </parameter>
+      <parameter>
+        <name>landscape</name>
+        <type>boolean</type>
+      </parameter>
+      <parameter>
+        <name>autoplay</name>
+        <type>boolean</type>
+      </parameter>
+    </method>
+    <method>
+      <name DesignerName="Search_Youtube">_search_youtube</name>
+      <comment>Open youtube app with the result of search
+Example &lt;code&gt;Funny Videos&lt;/code&gt;
+</comment>
+      <returntype>String</returntype>
+      <parameter>
+        <name>search</name>
+        <type>String</type>
+      </parameter>
+    </method>
+    <method>
+      <name DesignerName="Send_Email">_send_email</name>
+      <comment>SEND EMAIL VIA INTENT
+</comment>
+      <returntype>boolean</returntype>
+      <parameter>
+        <name>Title</name>
+        <type>String</type>
+      </parameter>
+      <parameter>
+        <name>text</name>
+        <type>String</type>
+      </parameter>
+      <parameter>
+        <name>email</name>
+        <type>String</type>
+      </parameter>
+    </method>
+    <method>
+      <name DesignerName="Send_SMS">_send_sms</name>
+      <comment>SEND SMS VIA INTENT
+</comment>
+      <returntype>boolean</returntype>
+      <parameter>
+        <name>number</name>
+        <type>String</type>
+      </parameter>
+      <parameter>
+        <name>text</name>
+        <type>String</type>
+      </parameter>
+    </method>
+    <method>
+      <name DesignerName="Share_Audio">_share_audio</name>
+      <comment>SHARE ANY AUDIO VIA INTENT
+AUDIO FILE MUST BE IN THE FOLDER EXTERNAL &lt;code&gt;File.DirDefaultExternal&lt;/code&gt; OU &lt;code&gt;File.DirRootExternal&lt;/code&gt;
+</comment>
+      <returntype>boolean</returntype>
+      <parameter>
+        <name>folder</name>
+        <type>String</type>
+      </parameter>
+      <parameter>
+        <name>audiofile</name>
+        <type>String</type>
+      </parameter>
+    </method>
+    <method>
+      <name DesignerName="Share_File">_share_file</name>
+      <comment>SHARE ANY FILE VIA INTENT
+THE FILE MUST BE IN THE FOLDER EXTERNAL &lt;code&gt;File.DirDefaultExternal&lt;/code&gt; OU &lt;code&gt;File.DirRootExternal&lt;/code&gt;
+</comment>
+      <returntype>boolean</returntype>
+      <parameter>
+        <name>folder</name>
+        <type>String</type>
+      </parameter>
+      <parameter>
+        <name>filename</name>
+        <type>String</type>
+      </parameter>
+    </method>
+    <method>
+      <name DesignerName="Share_TextandImage">_share_textandimage</name>
+      <comment>SHARE TEXT AND IMAGE VIA INTENT
+</comment>
+      <returntype>boolean</returntype>
+      <parameter>
+        <name>text</name>
+        <type>String</type>
+      </parameter>
+      <parameter>
+        <name>folder</name>
+        <type>String</type>
+      </parameter>
+      <parameter>
+        <name>imagefile</name>
+        <type>String</type>
+      </parameter>
+    </method>
+    <method>
+      <name DesignerName="ShareAudio_DropBox">_shareaudio_dropbox</name>
+      <comment>SHARE IMAGE ON DROPBOX APP
+IMAGE FILE MUST BE IN THE FOLDER EXTERNAL &lt;code&gt;File.DirDefaultExternal&lt;/code&gt; OU &lt;code&gt;File.DirRootExternal&lt;/code&gt;
+</comment>
+      <returntype>boolean</returntype>
+      <parameter>
+        <name>folder</name>
+        <type>String</type>
+      </parameter>
+      <parameter>
+        <name>audiofile</name>
+        <type>String</type>
+      </parameter>
+    </method>
+    <method>
+      <name DesignerName="ShareAudio_GoogleDrive">_shareaudio_googledrive</name>
+      <comment>SHARE AUDIO ON GOOGLE DRIVE APP
+AUDIO FILE MUST BE IN THE FOLDER EXTERNAL &lt;code&gt;File.DirDefaultExternal&lt;/code&gt; OU &lt;code&gt;File.DirRootExternal&lt;/code&gt;
+</comment>
+      <returntype>boolean</returntype>
+      <parameter>
+        <name>folder</name>
+        <type>String</type>
+      </parameter>
+      <parameter>
+        <name>audiofile</name>
+        <type>String</type>
+      </parameter>
+    </method>
+    <method>
+      <name DesignerName="ShareAudio_Hangouts">_shareaudio_hangouts</name>
+      <comment>SHARE AUDIO ON Hangouts APP
+AUDIO FILE MUST BE IN THE FOLDER EXTERNAL &lt;code&gt;File.DirDefaultExternal&lt;/code&gt; OU &lt;code&gt;File.DirRootExternal&lt;/code&gt;
+</comment>
+      <returntype>boolean</returntype>
+      <parameter>
+        <name>folder</name>
+        <type>String</type>
+      </parameter>
+      <parameter>
+        <name>audiofile</name>
+        <type>String</type>
+      </parameter>
+    </method>
+    <method>
+      <name DesignerName="ShareAudio_Line">_shareaudio_line</name>
+      <comment>SHARE AUDIO ON LINE APP
+AUDIO FILE MUST BE IN THE FOLDER EXTERNAL &lt;code&gt;File.DirDefaultExternal&lt;/code&gt; OU &lt;code&gt;File.DirRootExternal&lt;/code&gt;
+</comment>
+      <returntype>boolean</returntype>
+      <parameter>
+        <name>folder</name>
+        <type>String</type>
+      </parameter>
+      <parameter>
+        <name>audiofile</name>
+        <type>String</type>
+      </parameter>
+    </method>
+    <method>
+      <name DesignerName="ShareAudio_Messenger">_shareaudio_messenger</name>
+      <comment>SHARE AUDIO ON MESSENGER APP
+AUDIO FILE MUST BE IN THE FOLDER EXTERNAL &lt;code&gt;File.DirDefaultExternal&lt;/code&gt; OU &lt;code&gt;File.DirRootExternal&lt;/code&gt;
+</comment>
+      <returntype>boolean</returntype>
+      <parameter>
+        <name>folder</name>
+        <type>String</type>
+      </parameter>
+      <parameter>
+        <name>audiofile</name>
+        <type>String</type>
+      </parameter>
+    </method>
+    <method>
+      <name DesignerName="ShareAudio_Skype">_shareaudio_skype</name>
+      <comment>SHARE AUDIO ON Skype APP
+AUDIO FILE MUST BE IN THE FOLDER EXTERNAL &lt;code&gt;File.DirDefaultExternal&lt;/code&gt; OU &lt;code&gt;File.DirRootExternal&lt;/code&gt;
+</comment>
+      <returntype>boolean</returntype>
+      <parameter>
+        <name>folder</name>
+        <type>String</type>
+      </parameter>
+      <parameter>
+        <name>audiofile</name>
+        <type>String</type>
+      </parameter>
+    </method>
+    <method>
+      <name DesignerName="ShareAudio_WhatsApp">_shareaudio_whatsapp</name>
+      <comment>SHARE A AUDIO ON WHATSAPP
+AUDIO FILE MUST BE IN THE FOLDER EXTERNAL &lt;code&gt;File.DirDefaultExternal&lt;/code&gt; OR &lt;code&gt;File.DirRootExternal&lt;/code&gt;
+</comment>
+      <returntype>boolean</returntype>
+      <parameter>
+        <name>folder</name>
+        <type>String</type>
+      </parameter>
+      <parameter>
+        <name>audiofile</name>
+        <type>String</type>
+      </parameter>
+    </method>
+    <method>
+      <name DesignerName="ShareFile_Bluetooth">_sharefile_bluetooth</name>
+      <comment>SHARE FILE ON Bluetooth
+FILE MUST BE IN THE FOLDER EXTERNAL &lt;code&gt;File.DirDefaultExternal&lt;/code&gt; OU &lt;code&gt;File.DirRootExternal&lt;/code&gt;
+</comment>
+      <returntype>boolean</returntype>
+      <parameter>
+        <name>folder</name>
+        <type>String</type>
+      </parameter>
+      <parameter>
+        <name>filename</name>
+        <type>String</type>
+      </parameter>
+    </method>
+    <method>
+      <name DesignerName="ShareFile_DropBox">_sharefile_dropbox</name>
+      <comment>SHARE FILE ON DROPBOX APP
+TEXT FILE MUST BE IN THE FOLDER EXTERNAL &lt;code&gt;File.DirDefaultExternal&lt;/code&gt; OU &lt;code&gt;File.DirRootExternal&lt;/code&gt;
+</comment>
+      <returntype>boolean</returntype>
+      <parameter>
+        <name>folder</name>
+        <type>String</type>
+      </parameter>
+      <parameter>
+        <name>textfile</name>
+        <type>String</type>
+      </parameter>
+    </method>
+    <method>
+      <name DesignerName="ShareFile_GoogleDrive">_sharefile_googledrive</name>
+      <comment>SHARE FILE ON GOOGLE DRIVE APP
+FILE MUST BE IN THE FOLDER EXTERNAL &lt;code&gt;File.DirDefaultExternal&lt;/code&gt; OU &lt;code&gt;File.DirRootExternal&lt;/code&gt;
+</comment>
+      <returntype>boolean</returntype>
+      <parameter>
+        <name>folder</name>
+        <type>String</type>
+      </parameter>
+      <parameter>
+        <name>filename</name>
+        <type>String</type>
+      </parameter>
+    </method>
+    <method>
+      <name DesignerName="ShareFile_Hangouts">_sharefile_hangouts</name>
+      <comment>SHARE FILE ON Hangouts APP
+FILE MUST BE IN THE FOLDER EXTERNAL &lt;code&gt;File.DirDefaultExternal&lt;/code&gt; OU &lt;code&gt;File.DirRootExternal&lt;/code&gt;
+</comment>
+      <returntype>boolean</returntype>
+      <parameter>
+        <name>folder</name>
+        <type>String</type>
+      </parameter>
+      <parameter>
+        <name>filename</name>
+        <type>String</type>
+      </parameter>
+    </method>
+    <method>
+      <name DesignerName="ShareFile_Messenger">_sharefile_messenger</name>
+      <comment>SHARE FILE ON MESSENGER APP
+FILE MUST BE IN THE FOLDER EXTERNAL &lt;code&gt;File.DirDefaultExternal&lt;/code&gt; OU &lt;code&gt;File.DirRootExternal&lt;/code&gt;
+</comment>
+      <returntype>boolean</returntype>
+      <parameter>
+        <name>folder</name>
+        <type>String</type>
+      </parameter>
+      <parameter>
+        <name>filename</name>
+        <type>String</type>
+      </parameter>
+    </method>
+    <method>
+      <name DesignerName="ShareFile_Skype">_sharefile_skype</name>
+      <comment>SHARE FILE ON Skype APP
+FILE MUST BE IN THE FOLDER EXTERNAL &lt;code&gt;File.DirDefaultExternal&lt;/code&gt; OU &lt;code&gt;File.DirRootExternal&lt;/code&gt;
+</comment>
+      <returntype>boolean</returntype>
+      <parameter>
+        <name>folder</name>
+        <type>String</type>
+      </parameter>
+      <parameter>
+        <name>filename</name>
+        <type>String</type>
+      </parameter>
+    </method>
+    <method>
+      <name DesignerName="ShareFile_WiFiDirectSamsung">_sharefile_wifidirectsamsung</name>
+      <comment>SHARE FILE ON WIFIDIRECT APP (Samsung Devices)
+FILE MUST BE IN THE FOLDER EXTERNAL &lt;code&gt;File.DirDefaultExternal&lt;/code&gt; OU &lt;code&gt;File.DirRootExternal&lt;/code&gt;
+</comment>
+      <returntype>boolean</returntype>
+      <parameter>
+        <name>folder</name>
+        <type>String</type>
+      </parameter>
+      <parameter>
+        <name>filename</name>
+        <type>String</type>
+      </parameter>
+    </method>
+    <method>
+      <name DesignerName="ShareImage">_v5</name>
+      <comment>SHARE IMAGE INTENT
+IMAGE FILE MUST BE IN THE FOLDER EXTERNAL &lt;code&gt;File.DirDefaultExternal&lt;/code&gt; OU &lt;code&gt;File.DirRootExternal&lt;/code&gt;
+</comment>
+      <returntype>boolean</returntype>
+      <parameter>
+        <name>folder</name>
+        <type>String</type>
+      </parameter>
+      <parameter>
+        <name>imagefile</name>
+        <type>String</type>
+      </parameter>
+    </method>
+    <method>
+      <name DesignerName="ShareImage_DropBox">_shareimage_dropbox</name>
+      <comment>SHARE IMAGE ON DROPBOX APP
+IMAGE FILE MUST BE IN THE FOLDER EXTERNAL &lt;code&gt;File.DirDefaultExternal&lt;/code&gt; OU &lt;code&gt;File.DirRootExternal&lt;/code&gt;
+</comment>
+      <returntype>boolean</returntype>
+      <parameter>
+        <name>folder</name>
+        <type>String</type>
+      </parameter>
+      <parameter>
+        <name>imagefile</name>
+        <type>String</type>
+      </parameter>
+    </method>
+    <method>
+      <name DesignerName="ShareImage_Facebook">_shareimage_facebook</name>
+      <comment>SHARE IMAGE ON FACEBOOK APP
+IMAGE FILE MUST BE IN THE FOLDER EXTERNAL &lt;code&gt;File.DirDefaultExternal&lt;/code&gt; OU &lt;code&gt;File.DirRootExternal&lt;/code&gt;
+</comment>
+      <returntype>boolean</returntype>
+      <parameter>
+        <name>folder</name>
+        <type>String</type>
+      </parameter>
+      <parameter>
+        <name>imagefile</name>
+        <type>String</type>
+      </parameter>
+    </method>
+    <method>
+      <name DesignerName="ShareImage_GoogleDrive">_shareimage_googledrive</name>
+      <comment>SHARE IMAGE ON GOOGLE DRIVE APP
+IMAGE FILE MUST BE IN THE FOLDER EXTERNAL &lt;code&gt;File.DirDefaultExternal&lt;/code&gt; OU &lt;code&gt;File.DirRootExternal&lt;/code&gt;
+</comment>
+      <returntype>boolean</returntype>
+      <parameter>
+        <name>folder</name>
+        <type>String</type>
+      </parameter>
+      <parameter>
+        <name>imagefile</name>
+        <type>String</type>
+      </parameter>
+    </method>
+    <method>
+      <name DesignerName="ShareImage_GooglePhotos">_shareimage_googlephotos</name>
+      <comment>SHARE IMAGE ON GOOGLE PHOTOS ALBUM APP
+IMAGE FILE MUST BE IN THE FOLDER EXTERNAL &lt;code&gt;File.DirDefaultExternal&lt;/code&gt; OU &lt;code&gt;File.DirRootExternal&lt;/code&gt;
+</comment>
+      <returntype>boolean</returntype>
+      <parameter>
+        <name>folder</name>
+        <type>String</type>
+      </parameter>
+      <parameter>
+        <name>imagefile</name>
+        <type>String</type>
+      </parameter>
+    </method>
+    <method>
+      <name DesignerName="ShareImage_Hangouts">_shareimage_hangouts</name>
+      <comment>SHARE IMAGE ON Hangouts APP
+IMAGE FILE MUST BE IN THE FOLDER EXTERNAL &lt;code&gt;File.DirDefaultExternal&lt;/code&gt; OU &lt;code&gt;File.DirRootExternal&lt;/code&gt;
+</comment>
+      <returntype>boolean</returntype>
+      <parameter>
+        <name>folder</name>
+        <type>String</type>
+      </parameter>
+      <parameter>
+        <name>imagefile</name>
+        <type>String</type>
+      </parameter>
+    </method>
+    <method>
+      <name DesignerName="ShareImage_Line">_shareimage_line</name>
+      <comment>SHARE IMAGE ON LINE APP
+IMAGE FILE MUST BE IN THE FOLDER EXTERNAL &lt;code&gt;File.DirDefaultExternal&lt;/code&gt; OU &lt;code&gt;File.DirRootExternal&lt;/code&gt;
+</comment>
+      <returntype>boolean</returntype>
+      <parameter>
+        <name>folder</name>
+        <type>String</type>
+      </parameter>
+      <parameter>
+        <name>imagefile</name>
+        <type>String</type>
+      </parameter>
+    </method>
+    <method>
+      <name DesignerName="ShareImage_Messenger">_shareimage_messenger</name>
+      <comment>SHARE IMAGE ON MESSENGER APP
+IMAGE FILE MUST BE IN THE FOLDER EXTERNAL &lt;code&gt;File.DirDefaultExternal&lt;/code&gt; OU &lt;code&gt;File.DirRootExternal&lt;/code&gt;
+</comment>
+      <returntype>boolean</returntype>
+      <parameter>
+        <name>folder</name>
+        <type>String</type>
+      </parameter>
+      <parameter>
+        <name>imagefile</name>
+        <type>String</type>
+      </parameter>
+    </method>
+    <method>
+      <name DesignerName="ShareImage_Skype">_shareimage_skype</name>
+      <comment>SHARE IMAGE ON Skype APP
+IMAGE FILE MUST BE IN THE FOLDER EXTERNAL &lt;code&gt;File.DirDefaultExternal&lt;/code&gt; OU &lt;code&gt;File.DirRootExternal&lt;/code&gt;
+</comment>
+      <returntype>boolean</returntype>
+      <parameter>
+        <name>folder</name>
+        <type>String</type>
+      </parameter>
+      <parameter>
+        <name>imagefile</name>
+        <type>String</type>
+      </parameter>
+    </method>
+    <method>
+      <name DesignerName="ShareImage_SnapChat">_shareimage_snapchat</name>
+      <comment>SHARE IMAGE ON SnapChat APP
+IMAGE FILE MUST BE IN THE FOLDER EXTERNAL &lt;code&gt;File.DirDefaultExternal&lt;/code&gt; OU &lt;code&gt;File.DirRootExternal&lt;/code&gt;
+</comment>
+      <returntype>boolean</returntype>
+      <parameter>
+        <name>folder</name>
+        <type>String</type>
+      </parameter>
+      <parameter>
+        <name>imagefile</name>
+        <type>String</type>
+      </parameter>
+    </method>
+    <method>
+      <name DesignerName="ShareImage_WhatsApp">_shareimage_whatsapp</name>
+      <comment>SHARE IMAGE ON WHATSAPP
+</comment>
+      <returntype>boolean</returntype>
+      <parameter>
+        <name>folder</name>
+        <type>String</type>
+      </parameter>
+      <parameter>
+        <name>imagefile</name>
+        <type>String</type>
+      </parameter>
+    </method>
+    <method>
+      <name DesignerName="ShareMultiple_Images">_sharemultiple_images</name>
+      <comment>SHARE MULTIPLE IMAGES
+Example &lt;code&gt;ShareMultiple_Images(Array As String(File.Combine(File.DirRootExternal, "img1.png"), File.Combine(File.DirRootExternal, "img2.jpg")))&lt;/code&gt;
+IMAGES FILES MUST BE IN THE FOLDER EXTERNAL &lt;code&gt;File.DirDefaultExternal&lt;/code&gt; OU &lt;code&gt;File.DirRootExternal&lt;/code&gt;
+</comment>
+      <returntype>boolean</returntype>
+      <parameter>
+        <name>imagefiles</name>
+        <type>anywheresoftware.b4a.objects.collections.List</type>
+      </parameter>
+    </method>
+    <method>
+      <name DesignerName="ShareMultipleFiles_DropBox">_sharemultiplefiles_dropbox</name>
+      <comment>SHARE MULTIPLE FILES ON DROPBOX APP
+Example &lt;code&gt;ShareMultipleFiles_DropBox(Array As String(File.Combine(File.DirRootExternal, "img1.png"), File.Combine(File.DirRootExternal, "img2.jpg")))&lt;/code&gt;
+FILES MUST BE IN THE FOLDER EXTERNAL &lt;code&gt;File.DirDefaultExternal&lt;/code&gt; OU &lt;code&gt;File.DirRootExternal&lt;/code&gt;
+</comment>
+      <returntype>boolean</returntype>
+      <parameter>
+        <name>files</name>
+        <type>anywheresoftware.b4a.objects.collections.List</type>
+      </parameter>
+    </method>
+    <method>
+      <name DesignerName="ShareMultipleFiles_GoogleDrive">_sharemultiplefiles_googledrive</name>
+      <comment>SHARE MULTIPLE FILES ON GOOGLE DRIVE APP
+Example &lt;code&gt;ShareMultipleFiles_GoogleDrive(Array As String(File.Combine(File.DirRootExternal, "img1.png"), File.Combine(File.DirRootExternal, "img2.jpg")))&lt;/code&gt;
+FILES MUST BE IN THE FOLDER EXTERNAL &lt;code&gt;File.DirDefaultExternal&lt;/code&gt; OU &lt;code&gt;File.DirRootExternal&lt;/code&gt;
+</comment>
+      <returntype>boolean</returntype>
+      <parameter>
+        <name>files</name>
+        <type>anywheresoftware.b4a.objects.collections.List</type>
+      </parameter>
+    </method>
+    <method>
+      <name DesignerName="ShareText">_v6</name>
+      <comment>SHARE TEXT VIA INTENT
+</comment>
+      <returntype>boolean</returntype>
+      <parameter>
+        <name>text</name>
+        <type>String</type>
+      </parameter>
+    </method>
+    <method>
+      <name DesignerName="ShareText_DropBox">_sharetext_dropbox</name>
+      <comment>SHARE TEXT ON DROPBOX APP
+TEXT FILE MUST BE IN THE FOLDER EXTERNAL &lt;code&gt;File.DirDefaultExternal&lt;/code&gt; OU &lt;code&gt;File.DirRootExternal&lt;/code&gt;
+</comment>
+      <returntype>boolean</returntype>
+      <parameter>
+        <name>folder</name>
+        <type>String</type>
+      </parameter>
+      <parameter>
+        <name>textfile</name>
+        <type>String</type>
+      </parameter>
+    </method>
+    <method>
+      <name DesignerName="ShareText_GoogleDrive">_sharetext_googledrive</name>
+      <comment>SHARE TEXT ON GOOGLE DRIVE APP
+TEXT FILE MUST BE IN THE FOLDER EXTERNAL &lt;code&gt;File.DirDefaultExternal&lt;/code&gt; OU &lt;code&gt;File.DirRootExternal&lt;/code&gt;
+</comment>
+      <returntype>boolean</returntype>
+      <parameter>
+        <name>folder</name>
+        <type>String</type>
+      </parameter>
+      <parameter>
+        <name>textfile</name>
+        <type>String</type>
+      </parameter>
+    </method>
+    <method>
+      <name DesignerName="ShareText_Hangouts">_sharetext_hangouts</name>
+      <comment>SHARE TEXT ON Hangouts
+</comment>
+      <returntype>boolean</returntype>
+      <parameter>
+        <name>text</name>
+        <type>String</type>
+      </parameter>
+    </method>
+    <method>
+      <name DesignerName="ShareText_Line">_sharetext_line</name>
+      <comment>SHARE TEXT ON LINE APP
+TEXT FILE MUST BE IN THE FOLDER EXTERNAL &lt;code&gt;File.DirDefaultExternal&lt;/code&gt; OU &lt;code&gt;File.DirRootExternal&lt;/code&gt;
+</comment>
+      <returntype>boolean</returntype>
+      <parameter>
+        <name>folder</name>
+        <type>String</type>
+      </parameter>
+      <parameter>
+        <name>textfile</name>
+        <type>String</type>
+      </parameter>
+    </method>
+    <method>
+      <name DesignerName="ShareText_Messenger">_sharetext_messenger</name>
+      <comment>SHARE TEXT ON MESSENGER
+</comment>
+      <returntype>boolean</returntype>
+      <parameter>
+        <name>text</name>
+        <type>String</type>
+      </parameter>
+    </method>
+    <method>
+      <name DesignerName="ShareText_Skype">_sharetext_skype</name>
+      <comment>SHARE TEXT ON Skype
+</comment>
+      <returntype>boolean</returntype>
+      <parameter>
+        <name>text</name>
+        <type>String</type>
+      </parameter>
+    </method>
+    <method>
+      <name DesignerName="ShareText_SnapChat">_sharetext_snapchat</name>
+      <comment>SHARE TEXT ON SnapChat
+</comment>
+      <returntype>boolean</returntype>
+      <parameter>
+        <name>text</name>
+        <type>String</type>
+      </parameter>
+    </method>
+    <method>
+      <name DesignerName="ShareText_Telegram">_sharetext_telegram</name>
+      <comment>SHARE TEXT ON TELEGRAM APP
+</comment>
+      <returntype>boolean</returntype>
+      <parameter>
+        <name>text</name>
+        <type>String</type>
+      </parameter>
+    </method>
+    <method>
+      <name DesignerName="ShareText_Twitter">_sharetext_twitter</name>
+      <comment>SHARE TEXT ON TWITTER APP
+</comment>
+      <returntype>boolean</returntype>
+      <parameter>
+        <name>text</name>
+        <type>String</type>
+      </parameter>
+    </method>
+    <method>
+      <name DesignerName="ShareText_WhatsApp">_sharetext_whatsapp</name>
+      <comment>SHARE TEXT ON WHATSAPP
+</comment>
+      <returntype>boolean</returntype>
+      <parameter>
+        <name>text</name>
+        <type>String</type>
+      </parameter>
+    </method>
+    <method>
+      <name DesignerName="ShareTextandImage_Instagram">_sharetextandimage_instagram</name>
+      <comment>SHARE IMAGE AND TEXT ON INSTAGRAM
+IMAGE FILE MUST BE IN THE FOLDER EXTERNAL &lt;code&gt;File.DirDefaultExternal&lt;/code&gt; OU &lt;code&gt;File.DirRootExternal&lt;/code&gt;
+</comment>
+      <returntype>boolean</returntype>
+      <parameter>
+        <name>folder</name>
+        <type>String</type>
+      </parameter>
+      <parameter>
+        <name>imagefile</name>
+        <type>String</type>
+      </parameter>
+      <parameter>
+        <name>text</name>
+        <type>String</type>
+      </parameter>
+    </method>
+    <method>
+      <name DesignerName="ShareTextandImage_Twitter">_sharetextandimage_twitter</name>
+      <comment>SHARE IMAGE AND TEXT ON TWITTER
+IMAGE FILE MUST BE IN THE FOLDER EXTERNAL &lt;code&gt;File.DirDefaultExternal&lt;/code&gt; OU &lt;code&gt;File.DirRootExternal&lt;/code&gt;
+</comment>
+      <returntype>boolean</returntype>
+      <parameter>
+        <name>folder</name>
+        <type>String</type>
+      </parameter>
+      <parameter>
+        <name>imagefile</name>
+        <type>String</type>
+      </parameter>
+      <parameter>
+        <name>text</name>
+        <type>String</type>
+      </parameter>
+    </method>
+    <method>
+      <name DesignerName="ShareVideo_DropBox">_sharevideo_dropbox</name>
+      <comment>SHARE VIDEO ON DROPBOX APP
+VIDEO FILE MUST BE IN THE FOLDER EXTERNAL &lt;code&gt;File.DirDefaultExternal&lt;/code&gt; OU &lt;code&gt;File.DirRootExternal&lt;/code&gt;
+</comment>
+      <returntype>boolean</returntype>
+      <parameter>
+        <name>folder</name>
+        <type>String</type>
+      </parameter>
+      <parameter>
+        <name>videofile</name>
+        <type>String</type>
+      </parameter>
+    </method>
+    <method>
+      <name DesignerName="ShareVideo_GoogleDrive">_sharevideo_googledrive</name>
+      <comment>SHARE VIDEO ON GOOGLE DRIVE APP
+VIDEO FILE MUST BE IN THE FOLDER EXTERNAL &lt;code&gt;File.DirDefaultExternal&lt;/code&gt; OU &lt;code&gt;File.DirRootExternal&lt;/code&gt;
+</comment>
+      <returntype>boolean</returntype>
+      <parameter>
+        <name>folder</name>
+        <type>String</type>
+      </parameter>
+      <parameter>
+        <name>videofile</name>
+        <type>String</type>
+      </parameter>
+    </method>
+    <method>
+      <name DesignerName="ShareVideo_Hangouts">_sharevideo_hangouts</name>
+      <comment>SHARE VIDEO ON Hangouts APP
+VIDEO FILE MUST BE IN THE FOLDER EXTERNAL &lt;code&gt;File.DirDefaultExternal&lt;/code&gt; OU &lt;code&gt;File.DirRootExternal&lt;/code&gt;
+</comment>
+      <returntype>boolean</returntype>
+      <parameter>
+        <name>folder</name>
+        <type>String</type>
+      </parameter>
+      <parameter>
+        <name>videofile</name>
+        <type>String</type>
+      </parameter>
+    </method>
+    <method>
+      <name DesignerName="ShareVideo_Line">_sharevideo_line</name>
+      <comment>SHARE VIDEO ON LINE APP
+VIDEO FILE MUST BE IN THE FOLDER EXTERNAL &lt;code&gt;File.DirDefaultExternal&lt;/code&gt; OU &lt;code&gt;File.DirRootExternal&lt;/code&gt;
+</comment>
+      <returntype>boolean</returntype>
+      <parameter>
+        <name>folder</name>
+        <type>String</type>
+      </parameter>
+      <parameter>
+        <name>videofile</name>
+        <type>String</type>
+      </parameter>
+    </method>
+    <method>
+      <name DesignerName="ShareVideo_Messenger">_sharevideo_messenger</name>
+      <comment>SHARE VIDEO ON MESSENGER APP
+VIDEO FILE MUST BE IN THE FOLDER EXTERNAL &lt;code&gt;File.DirDefaultExternal&lt;/code&gt; OU &lt;code&gt;File.DirRootExternal&lt;/code&gt;
+</comment>
+      <returntype>boolean</returntype>
+      <parameter>
+        <name>folder</name>
+        <type>String</type>
+      </parameter>
+      <parameter>
+        <name>videofile</name>
+        <type>String</type>
+      </parameter>
+    </method>
+    <method>
+      <name DesignerName="ShareVideo_Skype">_sharevideo_skype</name>
+      <comment>SHARE VIDEO ON Skype APP
+VIDEO FILE MUST BE IN THE FOLDER EXTERNAL &lt;code&gt;File.DirDefaultExternal&lt;/code&gt; OU &lt;code&gt;File.DirRootExternal&lt;/code&gt;
+</comment>
+      <returntype>boolean</returntype>
+      <parameter>
+        <name>folder</name>
+        <type>String</type>
+      </parameter>
+      <parameter>
+        <name>videofile</name>
+        <type>String</type>
+      </parameter>
+    </method>
+    <method>
+      <name DesignerName="ShareVideo_WhatsApp">_sharevideo_whatsapp</name>
+      <comment>SHARE A VIDEO ON WHATSAPP
+VIDEO FILE MUST BE IN THE FOLDER EXTERNAL &lt;code&gt;File.DirDefaultExternal&lt;/code&gt; OR &lt;code&gt;File.DirRootExternal&lt;/code&gt;
+</comment>
+      <returntype>boolean</returntype>
+      <parameter>
+        <name>folder</name>
+        <type>String</type>
+      </parameter>
+      <parameter>
+        <name>videofile</name>
+        <type>String</type>
+      </parameter>
+    </method>
+  </class>
+  <version>1.3</version>
+  <author>Douglas Farias</author>
+</root>

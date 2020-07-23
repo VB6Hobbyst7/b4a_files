@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <doclet-version-NOT-library-version>1.00</doclet-version-NOT-library-version>
+  <dependsOn>reflection</dependsOn>
+  <class>
+    <name>Com.ArminKH.Beta.Justify.justify._textinfo</name>
+    <shortname>TextInfo</shortname>
+    <owner>process</owner>
+    <method>
+      <name>Initialize</name>
+      <comment>Initializes the fields to their default value.</comment>
+      <returntype>void</returntype>
+    </method>
+    <field>
+      <name>IsInitialized</name>
+      <comment>Tests whether the object has been initialized.</comment>
+      <returntype>boolean</returntype>
+    </field>
+    <field>
+      <name>LineCount</name>
+      <returntype>int</returntype>
+    </field>
+    <field>
+      <name>TextByLine</name>
+      <returntype>String[]</returntype>
+    </field>
+  </class>
+  <class>
+    <name>Com.ArminKH.Beta.Justify.justify</name>
+    <shortname>Justify</shortname>
+    <owner>process</owner>
+    <method>
+      <name>IsInitialized</name>
+      <comment>Tests whether the object has been initialized.</comment>
+      <returntype>boolean</returntype>
+    </method>
+    <method>
+      <name DesignerName="Initialize">_initialize</name>
+      <returntype>String</returntype>
+      <parameter>
+        <name>ba</name>
+        <type>anywheresoftware.b4a.BA</type>
+      </parameter>
+    </method>
+    <method>
+      <name DesignerName="JustifyByKashida">_vvv3</name>
+      <comment>This function streches the words for ***PERSIAN*** and arabic language text and return Justified text
+Activity: Enter Activity 
+TargetView: Your view name
+CheckPriority: Observes priority over each letters of the words and selects the most prefreed one to be extend
+Enter True if you want check priority or false to extend first possible letter in each word
+EligibleLineIsLargerThan: Enter a value between 0 to 1 (0% to 100%)
+By using this option if line width / viewwidth is less than EligibleLineIsLargerThan then that line not justified
+JustifyLastLine: Enter false if you don't want to justify last line
+-----------------------------------------------------------------------------------------
+Example:
+Dim JST as Justify
+   JST.Initialize
+   Label1.Text = JST.JustifyByKashida(Activity,Label1,True,0.4,True)</comment>
+      <returntype>String</returntype>
+      <parameter>
+        <name>Activity</name>
+        <type>anywheresoftware.b4a.objects.ActivityWrapper</type>
+      </parameter>
+      <parameter>
+        <name>TargetView</name>
+        <type>anywheresoftware.b4a.objects.ConcreteViewWrapper</type>
+      </parameter>
+      <parameter>
+        <name>CheckPriority</name>
+        <type>boolean</type>
+      </parameter>
+      <parameter>
+        <name>EligibleLineIsLargerThan</name>
+        <type>float</type>
+      </parameter>
+      <parameter>
+        <name>JustifyLastLine</name>
+        <type>boolean</type>
+      </parameter>
+    </method>
+    <method>
+      <name DesignerName="JustifyBySpace">_vvv5</name>
+      <comment>This function distribute additional space between words and return justified text
+Activity: Enter Activity 
+TargetView: Your view name
+EligibleLineIsLargerThan: Enter a value between 0 to 1 (0% to 100%)
+By using this option if (line width / viewwidth) is less than EligibleLineIsLargerThan then that line not justified
+JustifyLastLine: Enter false if you don't want to justify last line
+-----------------------------------------------------------------------------------------
+Example:
+Dim JST as Justify
+   JST.Initialize
+   Label1.Text = JST.JustifyBySpace(Activity,Label1,0.6,False)</comment>
+      <returntype>String</returntype>
+      <parameter>
+        <name>Activity</name>
+        <type>anywheresoftware.b4a.objects.ActivityWrapper</type>
+      </parameter>
+      <parameter>
+        <name>TargetView</name>
+        <type>Object</type>
+      </parameter>
+      <parameter>
+        <name>EligibleLineIsLargerThan</name>
+        <type>float</type>
+      </parameter>
+      <parameter>
+        <name>JustifyLastLine</name>
+        <type>boolean</type>
+      </parameter>
+    </method>
+    <field>
+      <name DesignerName="JustifyTime">_vvvvvv1</name>
+      <returntype>String</returntype>
+    </field>
+    <field>
+      <name DesignerName="JustifyReport">_vvvvvv2</name>
+      <returntype>String</returntype>
+    </field>
+  </class>
+  <version>1</version>
+  <author>ArminKH</author>
+</root>

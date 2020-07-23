@@ -1,0 +1,226 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root>
+    <doclet-version-NOT-library-version>1.07</doclet-version-NOT-library-version>
+    <class>
+        <name>com.brandsum.socketio.SocketIO</name>
+        <shortname>SocketIOClient</shortname>
+        <owner>activity</owner>
+        <event>OnConnecting (message As Object)</event>
+        <event>OnConnectError (message As Object)</event>
+        <event>OnConnectionTimeout (message As Object)</event>
+        <event>OnConnect (message As Object)</event>
+        <event>OnReconnectAttempt (message As Object)</event>
+        <event>OnReconnecting (message As Object)</event>
+        <event>OnReconnect (message As Object)</event>
+        <event>OnReconnectError (message As Object)</event>
+        <event>OnReconnectFailed (message As Object)</event>
+        <event>OnDisconnect (message As String)</event>
+        <permission>android.permission.INTERNET</permission>
+        <method>
+            <name>addEvent</name>
+            <comment>Add event listener
+ 
+ Server Example: socket.emit("notification", somedata)
+ 
+ Example: 
+ Sub Activity_Create(FirstTime As Boolean)
+ 	socket.initialize("eventname")
+ 	socket.connect("http://172.0.0.1:999/")
+ 	socket.addEvent("notification","notify")
+ End Sub
+ 
+ Sub eventname_notify(message As Object)
+ 	Log(message)
+ End Sub
+ 
+ This will add a listener which will call 'eventname_notify' method and
+ will send the object received from server if
+ the server broadcast a 'notification' event</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>event</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>callback</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+        <method>
+            <name>disconnect</name>
+            <comment>Disconnect SocketIO
+ Example: 
+ Sub Activity_Pause (UserClosed As Boolean)
+ 	socket.disconnect()
+ End Sub
+ On successful disconnect it will raise 'OnDisconnect' event</comment>
+            <returntype>void</returntype>
+        </method>
+        <method>
+            <name>removeEvent</name>
+            <comment>Remove event listener
+ 
+ Example: 
+ Sub Activity_Create(FirstTime As Boolean)
+ 	socket.initialize("eventname")
+ 	socket.connect("http://172.0.0.1:999/")
+ 	socket.addEvent("notification","notify")
+ End Sub
+ 
+ Sub ButtonClose_click
+ 	socket.removeEvent("notification","notify")
+ End Sub
+ 
+ This will remove already attached listener</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>event</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>callback</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+        <method>
+            <name>connectWithOptions</name>
+            <comment>Connect SocketIO to the server with options
+ 
+ It accepts 6 parameters
+ String host = server url (Mandatory)
+ Boolean reconnection = Whether to reconnect automatically (Default True)
+ int reconnectionAttempts = Number of reconnection attempts before giving up (Default Infinite)
+ long reconnectionDelay = How long to initially wait before attempting a new reconnection (Default 1000ms)
+ long reconnectionDelayMax = Maximum amount of time to wait between reconnections. Each attempt increases the reconnection delay by 2x (Default 5000ms)
+ long timeout = Connection timeout before a connect_error and connect_timeout events are emitted (Default 30000ms)
+ 
+ Example: 
+ Sub Activity_Create(FirstTime As Boolean)
+ 	socket.initialize("eventname")
+ 	socket.connect("http://172.0.0.1:999/", true, -1,1000,5000,30000)
+ End Sub
+ 
+ 1. 'OnConnecting' event will be raised whenever it tries to connect to the server
+ 2. 'OnConnectError' will be raised if any error occurs when connecting
+ 3. 'OnConnectionTimeout' will be raised if connection does not receive a response from the server after approximately 30 to 60 seconds
+ 4. 'OnConnect' will be raised on successful connection 
+ 5. 'OnDisconnect' will be raised if the disconnection was initiated by the server, you need to reconnect manually
+ 6. 'OnReconnectAttempt' will be raised if it tries to reconnect after connection timeout or if connection disconnected from client side
+ 7. 'OnReconnecting' will be raised on reconnection attempt
+ 8. 'OnReconnect' will be raised on successful connection after connection timeout or if connection disconnected from client side
+ 9. 'OnReconnectError' will be raised if any error occurs when connecting
+ 10. 'OnReconnectFailed' will be raised if any error occurs when connecting</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>host</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>reconnection</name>
+                <type>java.lang.Boolean</type>
+            </parameter>
+            <parameter>
+                <name>reconnectionAttempts</name>
+                <type>int</type>
+            </parameter>
+            <parameter>
+                <name>reconnectionDelay</name>
+                <type>long</type>
+            </parameter>
+            <parameter>
+                <name>reconnectionDelayMax</name>
+                <type>long</type>
+            </parameter>
+            <parameter>
+                <name>timeout</name>
+                <type>long</type>
+            </parameter>
+        </method>
+        <method>
+            <name>initialize</name>
+            <comment>Initialize SocketIO
+ 
+ Example: socket.initialize("eventname")
+ 
+ Note: 'eventname' must be in lowercase</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>ba</name>
+                <type>anywheresoftware.b4a.BA</type>
+            </parameter>
+            <parameter>
+                <name>EventName</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+        <method>
+            <name>emit</name>
+            <comment>Emit used to send data to server
+ 
+ Sending Multiple Data Example:
+ 
+ Dim newjson As JSONGenerator
+ Dim m As Map
+ m.Initialize
+ m.Put("id","5")
+ m.Put("msg","something")
+ newjson.Initialize(m)
+ socket.emit("eventname",newjson.ToString,True)
+ 
+ Sending Single Data Example:
+ socket.emit("event_name","something", false)</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>event</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>Str</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>multi</name>
+                <type>java.lang.Boolean</type>
+            </parameter>
+        </method>
+        <method>
+            <name>connect</name>
+            <comment>Connect SocketIO to the server
+ 
+ It accepts only host name, other parameters will have default value as followings:
+ Boolean reconnection = True
+ int reconnectionAttempts = Infinite
+ reconnectionDelay = 1000 or 1s
+ long reconnectionDelayMax = 5000 or 5s
+ long timeout = 30000 or 30s
+ 
+ Example: 
+ Sub Activity_Create(FirstTime As Boolean)
+ 	socket.initialize("eventname")
+ 	socket.connect("http://172.0.0.1:999/")
+ End Sub
+ 
+ 1. 'OnConnecting' event will be raised whenever it tries to connect to the server
+ 2. 'OnConnectError' will be raised if any error occurs when connecting
+ 3. 'OnConnectionTimeout' will be raised if connection does not receive a response from the server after approximately 30 to 60 seconds
+ 4. 'OnConnect' will be raised on successful connection 
+ 5. 'OnDisconnect' will be raised if the disconnection was initiated by the server, you need to reconnect manually
+ 6. 'OnReconnectAttempt' will be raised if it tries to reconnect after connection timeout or if connection disconnected from client side
+ 7. 'OnReconnecting' will be raised on reconnection attempt
+ 8. 'OnReconnect' will be raised on successful connection after connection timeout or if connection disconnected from client side
+ 9. 'OnReconnectError' will be raised if any error occurs when connecting
+ 10. 'OnReconnectFailed' will be raised if any error occurs when connecting</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>host</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+    </class>
+    <version>1.0</version>
+    <author>Brandsum (wrapper)</author>
+    <dependsOn>engine.io-client-1.0.0</dependsOn>
+    <dependsOn>okhttp-3.8.1</dependsOn>
+    <dependsOn>okio-1.13.0</dependsOn>
+    <dependsOn>socket.io-client-1.0.0</dependsOn>
+</root>

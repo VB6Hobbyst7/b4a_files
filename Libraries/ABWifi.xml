@@ -1,0 +1,254 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root>
+    <doclet-version-NOT-library-version>1.00</doclet-version-NOT-library-version>
+    <class>
+        <name>com.AB.ABWifi.ABWifi</name>
+        <shortname>ABWifi</shortname>
+        <comment>This library allows you to get Wifi information.
+ 
+ Extra added is a location function
+ It uses the Wifi Signal and GSM Triangulation to get the latitude and longitude of the device 
+ without an active GPS.</comment>
+        <owner>process</owner>
+        <event>FoundLocation()</event>
+        <permission>android.permission.ACCESS_WIFI_STATE</permission>
+        <permission>android.permission.CHANGE_WIFI_STATE</permission>
+        <permission>android.permission.INTERNET</permission>
+        <permission>android.permission.ACCESS_FINE_LOCATION</permission>
+        <method>
+            <name>ABLoadWifi</name>
+            <comment>Loads the Wifi information.
+ 
+ Example:&lt;code&gt;
+ 
+ Sub Process_Globals
+    Dim myWifi As ABWifi
+ End Sub
+ 
+ Sub Globals
+ 	 Dim Button1 As Button
+ End Sub
+ 
+ Sub Button1_Click
+    Dim r As Boolean
+    Dim a As Int
+    r = myWifi.ABLoadWifi()
+    If r = True Then
+	    Msgbox (myWifi.ABGetCurrentWifiInfo().SSID, "")
+	    For a = 0 To myWifi.ABNumberOfAvailableWifiNetworks - 1
+		   Msgbox (myWifi.ABGetWifiNetwork(a).SSID &amp; " " &amp; myWifi.ABGetWifiNetwork(a).Level, "")
+	    Next
+    Else
+       Msgbox(myWifi.ABWifiLastError,"") 
+    End If
+ End Sub
+&lt;/code&gt;</comment>
+            <returntype>boolean</returntype>
+            <parameter>
+                <name>ba</name>
+                <type>anywheresoftware.b4a.BA</type>
+            </parameter>
+        </method>
+        <method>
+            <name>ABGetFoundLocation</name>
+            <comment>returns the current ABFoundLocation by using the ABGetLocation() function.
+
+see ABGetLocation() for an example.</comment>
+            <returntype>com.AB.ABWifi.ABWifi.ABFoundLocation</returntype>
+        </method>
+        <method>
+            <name>ABGetLocation</name>
+            <comment>Gets the current location of the device by using the Wifi signal 
+
+Example:&lt;code&gt;
+
+Sub Process_Globals
+    Dim myWifi As ABWifi
+End Sub
+
+Sub Globals
+   Dim Button1 As Button
+End Sub
+
+Sub Button1_Click
+   Dim r As Boolean
+   r = myWifi.ABGetLocation("myWifi")	
+   If r = False Then
+	   Msgbox (myWifi.ABWifiLastError(), "")
+   End If
+End Sub
+
+Sub myWifi_FoundLocation ()
+   Dim ResLocation As ABFoundLocation
+   resLocation = myWifi.ABGetFoundLocation()
+	Msgbox ("" &amp; ResLocation.Latitude &amp; " - " &amp; ResLocation.Longitude, "")
+End Sub    
+&lt;/code&gt;</comment>
+            <returntype>boolean</returntype>
+            <parameter>
+                <name>ba</name>
+                <type>anywheresoftware.b4a.BA</type>
+            </parameter>
+            <parameter>
+                <name>eventName</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+        <method>
+            <name>ABWifiLastError</name>
+            <comment>returns the last error message if any
+
+Example:&lt;code&gt;
+If myWifi.ABWifiLastError &lt;&gt; "" Then
+	Msgbox(myWifi.ABWifiLastError,"")
+Else
+	Msgbox("everything ok", "")
+End If 
+&lt;/code&gt;</comment>
+            <returntype>java.lang.String</returntype>
+        </method>
+        <method>
+            <name>ABNumberOfAvailableWifiNetworks</name>
+            <comment>Returns the number of available Wifi Networks</comment>
+            <returntype>java.lang.Integer</returntype>
+        </method>
+        <method>
+            <name>ABGetCurrentWifiInfo</name>
+            <comment>Returns the current connected ABWifiInfo after using the ABLoadWifi() function.
+
+ See ABLoadWifi() for an example.</comment>
+            <returntype>com.AB.ABWifi.ABWifi.ABWifiInfo</returntype>
+        </method>
+        <method>
+            <name>GetLastKnownLocation</name>
+            <comment>Gets the last know location</comment>
+            <returntype>boolean</returntype>
+            <parameter>
+                <name>ba</name>
+                <type>anywheresoftware.b4a.BA</type>
+            </parameter>
+            <parameter>
+                <name>eventName</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+        <method>
+            <name>ABGetWifiNetwork</name>
+            <comment>Returns an ABWifiInfo object that are found by using the ABLoadWifi() function.
+ 
+ See ABLoadWifi() for an example.</comment>
+            <returntype>com.AB.ABWifi.ABWifi.ABWifiInfo</returntype>
+            <parameter>
+                <name>index</name>
+                <type>java.lang.Integer</type>
+            </parameter>
+        </method>
+    </class>
+    <class>
+        <name>com.AB.ABWifi.ABWifi.ABWifiInfo</name>
+        <shortname>ABWifiInfo</shortname>
+        <comment>Returns an ABWifiInfo Object.
+ 
+ Properties: 
+ (Some properties are only filled for the connected Wifi, see ABGetCurrentWifiInfo())  
+ 
+ BSSID (String)
+ MacAddress (String)
+ NetworkId (Integer)
+ Rssi (Integer)
+ SSID (String)
+ HiddenSSID (Boolean)
+ FullString (String)
+ Level (Integer)
+ IsConnected (Boolean)
+ Frequency (Integer)
+ Capabilities (String)
+ LinkSpeed (Integer)
+ State (String)</comment>
+        <owner>process</owner>
+        <field>
+            <name>IsConnected</name>
+            <comment></comment>
+            <returntype>java.lang.Boolean</returntype>
+        </field>
+        <field>
+            <name>HiddenSSID</name>
+            <comment></comment>
+            <returntype>java.lang.Boolean</returntype>
+        </field>
+        <field>
+            <name>Rssi</name>
+            <comment></comment>
+            <returntype>java.lang.Integer</returntype>
+        </field>
+        <field>
+            <name>MacAddress</name>
+            <comment></comment>
+            <returntype>java.lang.String</returntype>
+        </field>
+        <field>
+            <name>NetworkId</name>
+            <comment></comment>
+            <returntype>java.lang.Integer</returntype>
+        </field>
+        <field>
+            <name>FullString</name>
+            <comment></comment>
+            <returntype>java.lang.String</returntype>
+        </field>
+        <field>
+            <name>State</name>
+            <comment></comment>
+            <returntype>java.lang.String</returntype>
+        </field>
+        <field>
+            <name>SSID</name>
+            <comment></comment>
+            <returntype>java.lang.String</returntype>
+        </field>
+        <field>
+            <name>LinkSpeed</name>
+            <comment></comment>
+            <returntype>java.lang.Integer</returntype>
+        </field>
+        <field>
+            <name>Level</name>
+            <comment></comment>
+            <returntype>java.lang.Integer</returntype>
+        </field>
+        <field>
+            <name>Frequency</name>
+            <comment></comment>
+            <returntype>java.lang.Integer</returntype>
+        </field>
+        <field>
+            <name>Capabilities</name>
+            <comment></comment>
+            <returntype>java.lang.String</returntype>
+        </field>
+        <field>
+            <name>BSSID</name>
+            <comment></comment>
+            <returntype>java.lang.String</returntype>
+        </field>
+    </class>
+    <class>
+        <name>com.AB.ABWifi.ABWifi.ABFoundLocation</name>
+        <shortname>ABFoundLocation</shortname>
+        <comment>returns an ABFoundLocation object. This contains the Latitude and Longitude
+found by using the Wifi signal and GSM Triangulation.</comment>
+        <owner>process</owner>
+        <field>
+            <name>Latitude</name>
+            <comment></comment>
+            <returntype>double</returntype>
+        </field>
+        <field>
+            <name>Longitude</name>
+            <comment></comment>
+            <returntype>double</returntype>
+        </field>
+    </class>
+    <version>1.2</version>
+    <author>Alain Bailleul</author>
+</root>

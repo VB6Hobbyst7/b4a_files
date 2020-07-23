@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root>
+    <doclet-version-NOT-library-version>1.02</doclet-version-NOT-library-version>
+    <class>
+        <name>uk.co.martinpearman.b4a.fileobserver.B4AFileObserverWrapper</name>
+        <shortname>FileObserver</shortname>
+        <objectwrapper>uk.co.martinpearman.b4a.fileobserver.B4AFileObserver</objectwrapper>
+        <owner>process</owner>
+        <event>OnEvent (EventType As Int, Path As String)</event>
+        <method>
+            <name>Initialize</name>
+            <comment>Initialize the FileObserver with an EventName and Path.
+Equivalent to Initialize2(EventName, Path, FileObserver.ALL_EVENTS).</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>pBA</name>
+                <type>anywheresoftware.b4a.BA</type>
+            </parameter>
+            <parameter>
+                <name>EventName</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>Path</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+        <method>
+            <name>EventTypeToString</name>
+            <comment>Returns the String identifier of an EventType.</comment>
+            <returntype>java.lang.String</returntype>
+            <parameter>
+                <name>EventType</name>
+                <type>int</type>
+            </parameter>
+        </method>
+        <method>
+            <name>StopWatching</name>
+            <comment>Stop watching for events.</comment>
+            <returntype>void</returntype>
+        </method>
+        <method>
+            <name>StartWatching</name>
+            <comment>Start watching for events.</comment>
+            <returntype>void</returntype>
+        </method>
+        <method>
+            <name>Initialize2</name>
+            <comment>Initialize the FileObserver with an EventName, Path and EventMask.</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>pBA</name>
+                <type>anywheresoftware.b4a.BA</type>
+            </parameter>
+            <parameter>
+                <name>EventName</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>Path</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>EventMask</name>
+                <type>int</type>
+            </parameter>
+        </method>
+        <method>
+            <name>IsInitialized</name>
+            <comment></comment>
+            <returntype>boolean</returntype>
+        </method>
+        <field>
+            <name>MOVE_SELF</name>
+            <comment>EventType: The monitored file or directory was moved; monitoring continues.</comment>
+            <returntype>int</returntype>
+        </field>
+        <field>
+            <name>OPEN</name>
+            <comment>EventType: A file or directory was opened.</comment>
+            <returntype>int</returntype>
+        </field>
+        <field>
+            <name>MODIFY</name>
+            <comment>EventType: Data was written to a file .</comment>
+            <returntype>int</returntype>
+        </field>
+        <field>
+            <name>ATTRIB</name>
+            <comment>EventType: Metadata (permissions, owner, timestamp) was changed explicitly .</comment>
+            <returntype>int</returntype>
+        </field>
+        <field>
+            <name>CREATE</name>
+            <comment>EventType: A new file or subdirectory was created under the monitored directory.</comment>
+            <returntype>int</returntype>
+        </field>
+        <field>
+            <name>ACCESS</name>
+            <comment>EventType: Data was read from a file .</comment>
+            <returntype>int</returntype>
+        </field>
+        <field>
+            <name>CLOSE_NOWRITE</name>
+            <comment>EventType: Someone had a file or directory open read-only, and closed it.</comment>
+            <returntype>int</returntype>
+        </field>
+        <field>
+            <name>DELETE</name>
+            <comment>EventType: A file was deleted from the monitored directory.</comment>
+            <returntype>int</returntype>
+        </field>
+        <field>
+            <name>DELETE_SELF</name>
+            <comment>EventType: The monitored file or directory was deleted; monitoring effectively stops.</comment>
+            <returntype>int</returntype>
+        </field>
+        <field>
+            <name>MOVED_TO</name>
+            <comment>EventType: A file or subdirectory was moved to the monitored directory.</comment>
+            <returntype>int</returntype>
+        </field>
+        <field>
+            <name>CLOSE_WRITE</name>
+            <comment>EventType: Someone had a file or directory open for writing, and closed it .</comment>
+            <returntype>int</returntype>
+        </field>
+        <field>
+            <name>MOVED_FROM</name>
+            <comment>EventType: A file or subdirectory was moved from the monitored directory.</comment>
+            <returntype>int</returntype>
+        </field>
+        <field>
+            <name>ALL_EVENTS</name>
+            <comment>EventMask: All valid EventTypes, combined .</comment>
+            <returntype>int</returntype>
+        </field>
+    </class>
+    <version>1.0</version>
+    <author>Martin Pearman</author>
+</root>

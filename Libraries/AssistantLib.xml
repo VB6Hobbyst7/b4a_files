@@ -1,0 +1,977 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <doclet-version-NOT-library-version>1.00</doclet-version-NOT-library-version>
+  <dependsOn>phone</dependsOn>
+  <dependsOn>arialib</dependsOn>
+  <dependsOn>persiandate</dependsOn>
+  <dependsOn>manampersiandate</dependsOn>
+  <dependsOn>abextdrawing</dependsOn>
+  <dependsOn>webviewextras</dependsOn>
+  <dependsOn>sql</dependsOn>
+  <dependsOn>stringutils</dependsOn>
+  <dependsOn>assistantlib</dependsOn>
+  <dependsOn includesSingletonModules="true">httputils2</dependsOn>
+  <dependsOn>javaobject</dependsOn>
+  <dependsOn>http</dependsOn>
+  <class>
+    <name>b4a.example.assistantlib</name>
+    <shortname>AssistantLib</shortname>
+    <owner>activity</owner>
+    <permission>android.permission.INTERNET</permission>
+    <event>Element (Source as string)</event>
+    <method>
+      <name DesignerName="About">_about</name>
+      <returntype>String</returntype>
+    </method>
+    <method>
+      <name DesignerName="ChangeDate">_changedate</name>
+      <comment>Example :
+
+Sub Globals
+Dim shayan As AssistantLib
+End Sub
+
+Sub Button1_Click
+EditText1.Text = shayan.ChangeDate(2015,5,10)
+End Sub
+</comment>
+      <returntype>String</returntype>
+      <parameter>
+        <name>year</name>
+        <type>int</type>
+      </parameter>
+      <parameter>
+        <name>month</name>
+        <type>int</type>
+      </parameter>
+      <parameter>
+        <name>day</name>
+        <type>int</type>
+      </parameter>
+    </method>
+    <method>
+      <name DesignerName="Connection">_connection</name>
+      <comment>Example :
+
+Sub Globals
+Dim shayan As AssistantLib
+End Sub
+
+Sub Button1_Click
+If shayan.Connection = True Then
+Msgbox("Connected" , "Internet")
+Else
+Msgbox("Not Connected" , "Internet")
+End If
+End Sub
+</comment>
+      <returntype>boolean</returntype>
+    </method>
+    <method>
+      <name DesignerName="flood_BeeTalk">_flood_beetalk</name>
+      <comment>Example :
+
+Sub Globals
+Dim shayan As AssistantLib
+End Sub
+
+Sub Button1_Click
+shayan.flood_BeeTalk("")
+End Sub
+</comment>
+      <returntype>anywheresoftware.b4a.objects.IntentWrapper</returntype>
+      <parameter>
+        <name>text</name>
+        <type>String</type>
+      </parameter>
+    </method>
+    <method>
+      <name DesignerName="flood_Line">_flood_line</name>
+      <comment>Example :
+
+Sub Globals
+Dim shayan As AssistantLib
+End Sub
+
+Sub Button1_Click
+shayan.flood_Line("")
+End Sub
+</comment>
+      <returntype>anywheresoftware.b4a.objects.IntentWrapper</returntype>
+      <parameter>
+        <name>text</name>
+        <type>String</type>
+      </parameter>
+    </method>
+    <method>
+      <name DesignerName="flood_Skype">_flood_skype</name>
+      <comment>Example :
+
+Sub Globals
+Dim shayan As AssistantLib
+End Sub
+
+Sub Button1_Click
+shayan.flood_Skype("")
+End Sub
+</comment>
+      <returntype>anywheresoftware.b4a.objects.IntentWrapper</returntype>
+      <parameter>
+        <name>text</name>
+        <type>String</type>
+      </parameter>
+    </method>
+    <method>
+      <name DesignerName="flood_Telegram">_flood_telegram</name>
+      <comment>Example :
+
+Sub Globals
+Dim shayan As AssistantLib
+End Sub
+
+Sub Button1_Click
+shayan.flood_Telegram("")
+End Sub
+</comment>
+      <returntype>anywheresoftware.b4a.objects.IntentWrapper</returntype>
+      <parameter>
+        <name>text</name>
+        <type>String</type>
+      </parameter>
+    </method>
+    <method>
+      <name DesignerName="flood_Viber">_flood_viber</name>
+      <comment>Example :
+
+Sub Globals
+Dim shayan As AssistantLib
+End Sub
+
+Sub Button1_Click
+shayan.flood_Viber("")
+End Sub
+</comment>
+      <returntype>anywheresoftware.b4a.objects.IntentWrapper</returntype>
+      <parameter>
+        <name>text</name>
+        <type>String</type>
+      </parameter>
+    </method>
+    <method>
+      <name DesignerName="flood_WhatsApp">_flood_whatsapp</name>
+      <comment>Example :
+
+Sub Globals
+Dim shayan As AssistantLib
+End Sub
+
+Sub Button1_Click
+shayan.flood_WhatsApp("")
+End Sub
+</comment>
+      <returntype>anywheresoftware.b4a.objects.IntentWrapper</returntype>
+      <parameter>
+        <name>text</name>
+        <type>String</type>
+      </parameter>
+    </method>
+    <method>
+      <name DesignerName="Get_Date">_get_date</name>
+      <comment>Example :
+
+Sub Globals
+Dim shayan As AssistantLib
+Dim Timer1 As Timer
+End Sub
+
+Sub Activity_Create(FirstTime As Boolean)
+Timer1.Initialize("Timer1" , 1000)
+End Sub
+
+Sub Timer1_Tick
+Label1.Text = shayan.Get_Date
+End Sub
+</comment>
+      <returntype>String</returntype>
+    </method>
+    <method>
+      <name DesignerName="GetSource">_getsource</name>
+      <returntype>String</returntype>
+    </method>
+    <method>
+      <name DesignerName="GPS_Connection">_gps_connection</name>
+      <comment>Example :
+
+Sub Globals
+Dim shayan As AssistantLib
+End Sub
+
+Sub Button1_Click
+If shayan.GPS_Connection = True Then
+Msgbox("Connected" , "Gps")
+Else
+Msgbox("Not Connected" , "Gps")
+End If
+End Sub
+</comment>
+      <returntype>boolean</returntype>
+    </method>
+    <method>
+      <name DesignerName="Initialize">_initialize</name>
+      <returntype>String</returntype>
+      <parameter>
+        <name>ba</name>
+        <type>anywheresoftware.b4a.BA</type>
+      </parameter>
+      <parameter>
+        <name>Activity</name>
+        <type>Object</type>
+      </parameter>
+      <parameter>
+        <name>WebView</name>
+        <type>anywheresoftware.b4a.objects.WebViewWrapper</type>
+      </parameter>
+      <parameter>
+        <name>EventName</name>
+        <type>String</type>
+      </parameter>
+    </method>
+    <method>
+      <name DesignerName="Install">_install</name>
+      <comment>Example :
+
+Sub Globals
+Dim shayan As AssistantLib
+End Sub
+
+Sub Button1_Click
+If shayan.Install("ir.pars.telegram") Then
+Msgbox("Installed" , "")
+Else
+Msgbox("not Installed" , "")
+End If
+End Sub
+</comment>
+      <returntype>boolean</returntype>
+      <parameter>
+        <name>Package_Name</name>
+        <type>String</type>
+      </parameter>
+    </method>
+    <method>
+      <name DesignerName="loadSym">_loadsym</name>
+      <comment>Dim shayan As AssistantLib
+End Sub
+
+Sub Button1_Click
+EditText1.Text = shayan.loadSym(EditText1.Text)
+End Sub
+</comment>
+      <returntype>String</returntype>
+      <parameter>
+        <name>Text</name>
+        <type>String</type>
+      </parameter>
+    </method>
+    <method>
+      <name DesignerName="loadSym_1">_loadsym_1</name>
+      <comment>Example :
+
+Sub Globals
+Dim shayan As AssistantLib
+End Sub
+
+Sub Button1_Click
+EditText1.Text = shayan.loadSym_1(EditText1.Text)
+End Sub
+</comment>
+      <returntype>String</returntype>
+      <parameter>
+        <name>Text</name>
+        <type>String</type>
+      </parameter>
+    </method>
+  </class>
+  <class>
+    <name>b4a.example.assistantlib_color</name>
+    <shortname>AssistantLib_Color</shortname>
+    <owner>activity</owner>
+    <method>
+      <name DesignerName="About">_about</name>
+      <returntype>String</returntype>
+    </method>
+    <method>
+      <name DesignerName="Disable_SeekBar">_disable_seekbar</name>
+      <returntype>String</returntype>
+    </method>
+    <method>
+      <name DesignerName="Enable_SeekBar">_enable_seekbar</name>
+      <returntype>String</returntype>
+    </method>
+    <method>
+      <name DesignerName="Initialize">_initialize</name>
+      <comment>Initializes the object. You can add parameters to this method if needed.
+</comment>
+      <returntype>Object</returntype>
+      <parameter>
+        <name>ba</name>
+        <type>anywheresoftware.b4a.BA</type>
+      </parameter>
+      <parameter>
+        <name>myActivity</name>
+        <type>anywheresoftware.b4a.objects.ActivityWrapper</type>
+      </parameter>
+      <parameter>
+        <name>Module</name>
+        <type>Object</type>
+      </parameter>
+      <parameter>
+        <name>EventName</name>
+        <type>String</type>
+      </parameter>
+      <parameter>
+        <name>myLeft</name>
+        <type>int</type>
+      </parameter>
+      <parameter>
+        <name>myTop</name>
+        <type>int</type>
+      </parameter>
+      <parameter>
+        <name>myWidth</name>
+        <type>int</type>
+      </parameter>
+      <parameter>
+        <name>myHeight</name>
+        <type>int</type>
+      </parameter>
+      <parameter>
+        <name>myStrokewidth</name>
+        <type>double</type>
+      </parameter>
+      <parameter>
+        <name>myStrokecolor</name>
+        <type>int</type>
+      </parameter>
+      <parameter>
+        <name>myBtncolor</name>
+        <type>int</type>
+      </parameter>
+      <parameter>
+        <name>myTextvisible</name>
+        <type>boolean</type>
+      </parameter>
+      <parameter>
+        <name>myMax</name>
+        <type>int</type>
+      </parameter>
+      <parameter>
+        <name>initValue</name>
+        <type>int</type>
+      </parameter>
+    </method>
+    <method>
+      <name DesignerName="Return_Value">_return_value</name>
+      <returntype>String</returntype>
+    </method>
+    <method>
+      <name DesignerName="Set_Value">_set_value</name>
+      <returntype>String</returntype>
+      <parameter>
+        <name>Value</name>
+        <type>int</type>
+      </parameter>
+    </method>
+    <method>
+      <name DesignerName="Setting_Text">_setting_text</name>
+      <returntype>String</returntype>
+      <parameter>
+        <name>Font_Color</name>
+        <type>int</type>
+      </parameter>
+      <parameter>
+        <name>Font_Size</name>
+        <type>int</type>
+      </parameter>
+      <parameter>
+        <name>Text</name>
+        <type>anywheresoftware.b4a.keywords.constants.TypefaceWrapper</type>
+      </parameter>
+    </method>
+    <field>
+      <name DesignerName="Max_Value">_max_value</name>
+      <returntype>int</returntype>
+    </field>
+    <field>
+      <name DesignerName="Def_Value">_def_value</name>
+      <returntype>int</returntype>
+    </field>
+  </class>
+  <class>
+    <name>b4a.example.assistantlib_like</name>
+    <shortname>AssistantLib_Like</shortname>
+    <owner>activity</owner>
+    <permission>android.permission.INTERNET</permission>
+    <method>
+      <name DesignerName="Delete_Like">_delete_like</name>
+      <returntype>String</returntype>
+      <parameter>
+        <name>ListView</name>
+        <type>anywheresoftware.b4a.objects.ListViewWrapper</type>
+      </parameter>
+      <parameter>
+        <name>DBname</name>
+        <type>String</type>
+      </parameter>
+      <parameter>
+        <name>SQL</name>
+        <type>anywheresoftware.b4a.sql.SQL</type>
+      </parameter>
+      <parameter>
+        <name>Tblname</name>
+        <type>String</type>
+      </parameter>
+      <parameter>
+        <name>Id</name>
+        <type>String</type>
+      </parameter>
+      <parameter>
+        <name>Value</name>
+        <type>int</type>
+      </parameter>
+      <parameter>
+        <name>Position</name>
+        <type>int</type>
+      </parameter>
+      <parameter>
+        <name>Fave</name>
+        <type>String</type>
+      </parameter>
+    </method>
+    <method>
+      <name DesignerName="Like_List">_like_list</name>
+      <returntype>String</returntype>
+      <parameter>
+        <name>DBname</name>
+        <type>String</type>
+      </parameter>
+      <parameter>
+        <name>SQL</name>
+        <type>anywheresoftware.b4a.sql.SQL</type>
+      </parameter>
+      <parameter>
+        <name>Cur</name>
+        <type>anywheresoftware.b4a.sql.SQL.CursorWrapper</type>
+      </parameter>
+      <parameter>
+        <name>Tblname</name>
+        <type>String</type>
+      </parameter>
+      <parameter>
+        <name>ListView</name>
+        <type>anywheresoftware.b4a.objects.ListViewWrapper</type>
+      </parameter>
+      <parameter>
+        <name>Titr</name>
+        <type>String</type>
+      </parameter>
+      <parameter>
+        <name>Id</name>
+        <type>String</type>
+      </parameter>
+      <parameter>
+        <name>Fave</name>
+        <type>String</type>
+      </parameter>
+    </method>
+    <method>
+      <name DesignerName="List">_list</name>
+      <returntype>String</returntype>
+      <parameter>
+        <name>DBname</name>
+        <type>String</type>
+      </parameter>
+      <parameter>
+        <name>SQL</name>
+        <type>anywheresoftware.b4a.sql.SQL</type>
+      </parameter>
+      <parameter>
+        <name>Cur</name>
+        <type>anywheresoftware.b4a.sql.SQL.CursorWrapper</type>
+      </parameter>
+      <parameter>
+        <name>Tblname</name>
+        <type>String</type>
+      </parameter>
+      <parameter>
+        <name>ListView</name>
+        <type>anywheresoftware.b4a.objects.ListViewWrapper</type>
+      </parameter>
+      <parameter>
+        <name>Titr</name>
+        <type>String</type>
+      </parameter>
+      <parameter>
+        <name>Id</name>
+        <type>String</type>
+      </parameter>
+      <parameter>
+        <name>Fave</name>
+        <type>String</type>
+      </parameter>
+    </method>
+    <method>
+      <name DesignerName="Reading">_reading</name>
+      <returntype>String</returntype>
+      <parameter>
+        <name>DBname</name>
+        <type>String</type>
+      </parameter>
+      <parameter>
+        <name>SQL</name>
+        <type>anywheresoftware.b4a.sql.SQL</type>
+      </parameter>
+      <parameter>
+        <name>Cur</name>
+        <type>anywheresoftware.b4a.sql.SQL.CursorWrapper</type>
+      </parameter>
+      <parameter>
+        <name>Tblname</name>
+        <type>String</type>
+      </parameter>
+      <parameter>
+        <name>Matn</name>
+        <type>String</type>
+      </parameter>
+      <parameter>
+        <name>Id</name>
+        <type>String</type>
+      </parameter>
+      <parameter>
+        <name>Id2</name>
+        <type>String</type>
+      </parameter>
+      <parameter>
+        <name>Label</name>
+        <type>anywheresoftware.b4a.objects.LabelWrapper</type>
+      </parameter>
+      <parameter>
+        <name>ScrollView</name>
+        <type>anywheresoftware.b4a.objects.ScrollViewWrapper</type>
+      </parameter>
+      <parameter>
+        <name>Su</name>
+        <type>anywheresoftware.b4a.objects.StringUtils</type>
+      </parameter>
+      <parameter>
+        <name>Font</name>
+        <type>String</type>
+      </parameter>
+      <parameter>
+        <name>Color</name>
+        <type>int</type>
+      </parameter>
+      <parameter>
+        <name>Size</name>
+        <type>String</type>
+      </parameter>
+      <parameter>
+        <name>Listname</name>
+        <type>anywheresoftware.b4a.objects.collections.List</type>
+      </parameter>
+      <parameter>
+        <name>OneFont</name>
+        <type>String</type>
+      </parameter>
+      <parameter>
+        <name>C1</name>
+        <type>int</type>
+      </parameter>
+      <parameter>
+        <name>C2</name>
+        <type>int</type>
+      </parameter>
+      <parameter>
+        <name>C3</name>
+        <type>int</type>
+      </parameter>
+    </method>
+    <method>
+      <name DesignerName="Remote_List">_remote_list</name>
+      <returntype>String</returntype>
+      <parameter>
+        <name>DBname</name>
+        <type>String</type>
+      </parameter>
+      <parameter>
+        <name>SQL</name>
+        <type>anywheresoftware.b4a.sql.SQL</type>
+      </parameter>
+      <parameter>
+        <name>Cur</name>
+        <type>anywheresoftware.b4a.sql.SQL.CursorWrapper</type>
+      </parameter>
+      <parameter>
+        <name>Tblname</name>
+        <type>String</type>
+      </parameter>
+      <parameter>
+        <name>Id</name>
+        <type>String</type>
+      </parameter>
+      <parameter>
+        <name>Value</name>
+        <type>int</type>
+      </parameter>
+      <parameter>
+        <name>Fave</name>
+        <type>String</type>
+      </parameter>
+    </method>
+    <method>
+      <name DesignerName="Search">_search</name>
+      <returntype>String</returntype>
+      <parameter>
+        <name>DBname</name>
+        <type>String</type>
+      </parameter>
+      <parameter>
+        <name>SQL</name>
+        <type>anywheresoftware.b4a.sql.SQL</type>
+      </parameter>
+      <parameter>
+        <name>Cur</name>
+        <type>anywheresoftware.b4a.sql.SQL.CursorWrapper</type>
+      </parameter>
+      <parameter>
+        <name>Tblname</name>
+        <type>String</type>
+      </parameter>
+      <parameter>
+        <name>ListView</name>
+        <type>anywheresoftware.b4a.objects.ListViewWrapper</type>
+      </parameter>
+      <parameter>
+        <name>Titr</name>
+        <type>String</type>
+      </parameter>
+      <parameter>
+        <name>ID</name>
+        <type>String</type>
+      </parameter>
+      <parameter>
+        <name>TXTsearch</name>
+        <type>String</type>
+      </parameter>
+    </method>
+    <method>
+      <name DesignerName="Setting">_setting</name>
+      <returntype>String</returntype>
+      <parameter>
+        <name>Rb1</name>
+        <type>anywheresoftware.b4a.objects.CompoundButtonWrapper.RadioButtonWrapper</type>
+      </parameter>
+      <parameter>
+        <name>Rb2</name>
+        <type>anywheresoftware.b4a.objects.CompoundButtonWrapper.RadioButtonWrapper</type>
+      </parameter>
+      <parameter>
+        <name>Rb3</name>
+        <type>anywheresoftware.b4a.objects.CompoundButtonWrapper.RadioButtonWrapper</type>
+      </parameter>
+      <parameter>
+        <name>Sp</name>
+        <type>anywheresoftware.b4a.objects.SpinnerWrapper</type>
+      </parameter>
+      <parameter>
+        <name>SB</name>
+        <type>anywheresoftware.b4a.objects.SeekBarWrapper</type>
+      </parameter>
+      <parameter>
+        <name>Listname</name>
+        <type>anywheresoftware.b4a.objects.collections.List</type>
+      </parameter>
+      <parameter>
+        <name>Font</name>
+        <type>String</type>
+      </parameter>
+      <parameter>
+        <name>Color</name>
+        <type>int</type>
+      </parameter>
+      <parameter>
+        <name>Size</name>
+        <type>String</type>
+      </parameter>
+      <parameter>
+        <name>FontName</name>
+        <type>String</type>
+      </parameter>
+    </method>
+    <field>
+      <name DesignerName="Like">_like</name>
+      <returntype>String</returntype>
+    </field>
+    <field>
+      <name DesignerName="Liked">_liked</name>
+      <returntype>String</returntype>
+    </field>
+  </class>
+  <class>
+    <name>b4a.example.assistantlib_market</name>
+    <shortname>AssistantLib_Market</shortname>
+    <owner>process</owner>
+    <method>
+      <name DesignerName="About">_about</name>
+      <returntype>String</returntype>
+    </method>
+    <method>
+      <name DesignerName="Commenting_Bazaar">_commenting_bazaar</name>
+      <comment>Example :
+
+Sub Globals
+Dim shayan As AssistantLib
+End Sub
+
+Sub Button1_Click
+shayan.Commenting_Bazaar("نام پکیج برنامه")
+End Sub
+</comment>
+      <returntype>String</returntype>
+      <parameter>
+        <name>Package_Name</name>
+        <type>String</type>
+      </parameter>
+    </method>
+    <method>
+      <name DesignerName="Commenting_Cando">_commenting_cando</name>
+      <comment>Example :
+
+Sub Globals
+Dim shayan As AssistantLib
+End Sub
+
+Sub Button1_Click
+shayan.Commenting_Cando("نام پکیج برنامه")
+End Sub
+</comment>
+      <returntype>String</returntype>
+      <parameter>
+        <name>Package_Name</name>
+        <type>String</type>
+      </parameter>
+    </method>
+    <method>
+      <name DesignerName="Commenting_Myket">_commenting_myket</name>
+      <comment>Example :
+
+Sub Globals
+Dim shayan As AssistantLib
+End Sub
+
+Sub Button1_Click
+shayan.Commenting_Myket("نام پکیج برنامه")
+End Sub
+</comment>
+      <returntype>String</returntype>
+      <parameter>
+        <name>Package_Name</name>
+        <type>String</type>
+      </parameter>
+    </method>
+    <method>
+      <name DesignerName="Commenting_ParsHub">_commenting_parshub</name>
+      <comment>Example :
+
+Sub Globals
+Dim shayan As AssistantLib
+End Sub
+
+Sub Button1_Click
+shayan.Commenting_ParsHub("نام پکیج برنامه")
+End Sub
+</comment>
+      <returntype>String</returntype>
+      <parameter>
+        <name>Package_Name</name>
+        <type>String</type>
+      </parameter>
+    </method>
+    <method>
+      <name DesignerName="Developer_Bazaar">_developer_bazaar</name>
+      <comment>Example :
+
+Sub Globals
+Dim shayan As AssistantLib
+End Sub
+
+Sub Button1_Click
+shayan.Developer_Bazaar("نام پکیج برنامه")
+End Sub
+</comment>
+      <returntype>String</returntype>
+      <parameter>
+        <name>Package_Name</name>
+        <type>String</type>
+      </parameter>
+    </method>
+    <method>
+      <name DesignerName="Developer_Cando">_developer_cando</name>
+      <comment>Example :
+
+Sub Globals
+Dim shayan As AssistantLib
+End Sub
+
+Sub Button1_Click
+shayan.Developer_Cando("نام پکیج برنامه")
+End Sub
+</comment>
+      <returntype>String</returntype>
+      <parameter>
+        <name>Package_Name</name>
+        <type>String</type>
+      </parameter>
+    </method>
+    <method>
+      <name DesignerName="Developer_Myket">_developer_myket</name>
+      <comment>Example :
+
+Sub Globals
+Dim shayan As AssistantLib
+End Sub
+
+Sub Button1_Click
+shayan.Developer_Myket("نام پکیج برنامه")
+End Sub
+</comment>
+      <returntype>String</returntype>
+      <parameter>
+        <name>Package_Name</name>
+        <type>String</type>
+      </parameter>
+    </method>
+    <method>
+      <name DesignerName="Developer_ParsHub">_developer_parshub</name>
+      <comment>Example :
+
+Sub Globals
+Dim shayan As AssistantLib
+End Sub
+
+Sub Button1_Click
+shayan.Developer_ParsHub("نام پکیج برنامه")
+End Sub
+</comment>
+      <returntype>String</returntype>
+      <parameter>
+        <name>Package_Name</name>
+        <type>String</type>
+      </parameter>
+    </method>
+    <method>
+      <name DesignerName="Page_Bazaar">_page_bazaar</name>
+      <comment>Example :
+
+Sub Globals
+Dim shayan As AssistantLib
+End Sub
+
+Sub Button1_Click
+shayan.Page_Bazaar("نام پکیج برنامه")
+End Sub
+</comment>
+      <returntype>String</returntype>
+      <parameter>
+        <name>Package_Name</name>
+        <type>String</type>
+      </parameter>
+    </method>
+    <method>
+      <name DesignerName="Page_Cando">_page_cando</name>
+      <comment>Example :
+
+Sub Globals
+Dim shayan As AssistantLib
+End Sub
+
+Sub Button1_Click
+shayan.Page_Cando("نام پکیج برنامه")
+End Sub
+</comment>
+      <returntype>String</returntype>
+      <parameter>
+        <name>Package_Name</name>
+        <type>String</type>
+      </parameter>
+    </method>
+    <method>
+      <name DesignerName="Page_Myket">_page_myket</name>
+      <comment>Example :
+
+Sub Globals
+Dim shayan As AssistantLib
+End Sub
+
+Sub Button1_Click
+shayan.Page_Myket("نام پکیج برنامه")
+End Sub
+</comment>
+      <returntype>String</returntype>
+      <parameter>
+        <name>Package_Name</name>
+        <type>String</type>
+      </parameter>
+    </method>
+    <method>
+      <name DesignerName="Page_ParsHub">_page_parshub</name>
+      <comment>Example :
+
+Sub Globals
+Dim shayan As AssistantLib
+End Sub
+
+Sub Button1_Click
+shayan.Page_ParsHub("نام پکیج برنامه")
+End Sub
+</comment>
+      <returntype>String</returntype>
+      <parameter>
+        <name>Package_Name</name>
+        <type>String</type>
+      </parameter>
+    </method>
+  </class>
+  <class>
+    <name>b4a.example.assistantlib_add</name>
+    <shortname>AssistantLib_Add</shortname>
+    <owner>process</owner>
+    <method>
+      <name>IsInitialized</name>
+      <comment>Tests whether the object has been initialized.</comment>
+      <returntype>boolean</returntype>
+    </method>
+    <method>
+      <name DesignerName="Class_Globals">_class_globals</name>
+      <comment>Class module
+</comment>
+      <returntype>String</returntype>
+    </method>
+    <method>
+      <name DesignerName="Initialize">_initialize</name>
+      <comment>Initializes the object. You can add parameters to this method if needed.
+</comment>
+      <returntype>String</returntype>
+      <parameter>
+        <name>ba</name>
+        <type>anywheresoftware.b4a.BA</type>
+      </parameter>
+    </method>
+    <method>
+      <name DesignerName="shy">_shy</name>
+      <returntype>String</returntype>
+    </method>
+  </class>
+  <version>2.2</version>
+  <author>shayan abaad</author>
+</root>

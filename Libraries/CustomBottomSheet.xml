@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <doclet-version-NOT-library-version>1.00</doclet-version-NOT-library-version>
+  <dependsOn>reflection</dependsOn>
+  <class>
+    <name>njdude.custombottomsheet.custombottomsheet</name>
+    <shortname>CustomBottomSheet</shortname>
+    <owner>activity</owner>
+    <event>AnimationComplete(State As Boolean)</event>
+    <method>
+      <name>IsInitialized</name>
+      <comment>Tests whether the object has been initialized.</comment>
+      <returntype>boolean</returntype>
+    </method>
+    <method>
+      <name DesignerName="CloseBottomSheet">_v5</name>
+      <comment>Close the CustomBottomSheet.
+</comment>
+      <returntype>String</returntype>
+    </method>
+    <method>
+      <name DesignerName="Initialize">_initialize</name>
+      <comment>Initializes the CustomBottomSheet library.
+Parent: Activity (Required).
+Callback: Me (Required).
+EventName: Prefix to be used on the event responses.
+LayoutContainer: The panel containing the layout.
+</comment>
+      <returntype>String</returntype>
+      <parameter>
+        <name>ba</name>
+        <type>anywheresoftware.b4a.BA</type>
+      </parameter>
+      <parameter>
+        <name>Parent</name>
+        <type>anywheresoftware.b4a.objects.ActivityWrapper</type>
+      </parameter>
+      <parameter>
+        <name>Callback</name>
+        <type>Object</type>
+      </parameter>
+      <parameter>
+        <name>EventName</name>
+        <type>String</type>
+      </parameter>
+      <parameter>
+        <name>LayoutContainer</name>
+        <type>anywheresoftware.b4a.objects.PanelWrapper</type>
+      </parameter>
+    </method>
+    <method>
+      <name DesignerName="IsOpen">_v6</name>
+      <comment>Returns the state of the CustomBottomSheet.
+True = Open, False = Closed.
+</comment>
+      <returntype>boolean</returntype>
+    </method>
+    <method>
+      <name DesignerName="OpenBottomSheet">_v7</name>
+      <comment>Open the CustomBottomSheet.
+</comment>
+      <returntype>String</returntype>
+    </method>
+  </class>
+  <version>1</version>
+  <author>NJDude</author>
+</root>

@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root>
+    <doclet-version-NOT-library-version>1.02</doclet-version-NOT-library-version>
+    <class>
+        <name>net.garstangs.ezcamera.EZcamera</name>
+        <shortname>EZcamera</shortname>
+        <owner>activity</owner>
+        <event>PictureTaken (FileSaved As Boolean)</event>
+        <permission>android.permission.CAMERA</permission>
+        <method>
+            <name>Initialize</name>
+            <comment>Initializes the camera.
+ EventName - Event subs prefix.</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>ba</name>
+                <type>anywheresoftware.b4a.BA</type>
+            </parameter>
+            <parameter>
+                <name>EventName</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+        <method>
+            <name>TakePicture</name>
+            <comment>Takes a picture. When the picture is ready, the PictureTaken event will be raised.
+ Directory and FileName is the folder and name to request to give the picture.</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>Directory</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>FileName</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+        <method>
+            <name>GetImageDimensions</name>
+            <comment>Returns a B4A Rect of the image file's Dimensions.</comment>
+            <returntype>anywheresoftware.b4a.objects.drawable.CanvasWrapper.RectWrapper</returntype>
+            <parameter>
+                <name>Directory</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>FileName</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+    </class>
+    <version>1.0</version>
+    <author>Roger Garstang</author>
+</root>

@@ -1,0 +1,733 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <doclet-version-NOT-library-version>1.00</doclet-version-NOT-library-version>
+  <dependsOn includesSingletonModules="true">httputils2</dependsOn>
+  <dependsOn>json</dependsOn>
+  <dependsOn>audio</dependsOn>
+  <dependsOn>videoviewextras</dependsOn>
+  <dependsOn>phone</dependsOn>
+  <dependsOn>reflection</dependsOn>
+  <dependsOn>http</dependsOn>
+  <dependsOn>stringutils</dependsOn>
+  <class b4a_type="StaticCode">
+    <name>ir.quicklearn.aparat.aparat_function</name>
+    <shortname>Aparat_Function</shortname>
+    <owner>activity</owner>
+    <objectwrapper>java.lang.Class</objectwrapper>
+    <method>
+      <name DesignerName="CheckConnection">_v5</name>
+      <comment>Check Internet Connection
+</comment>
+      <returntype>boolean</returntype>
+      <parameter>
+        <name>ba</name>
+        <type>anywheresoftware.b4a.BA</type>
+      </parameter>
+    </method>
+    <method>
+      <name DesignerName="ConvertSecToTimeString">_v6</name>
+      <comment>For Example : 70s = 1:10
+</comment>
+      <returntype>String</returntype>
+      <parameter>
+        <name>ba</name>
+        <type>anywheresoftware.b4a.BA</type>
+      </parameter>
+      <parameter>
+        <name>totalsec</name>
+        <type>int</type>
+      </parameter>
+    </method>
+    <method>
+      <name DesignerName="Process_Globals">_process_globals</name>
+      <returntype>String</returntype>
+    </method>
+    <method>
+      <name DesignerName="StartPlayer">_v7</name>
+      <comment>Internal Aparat Player
+Orintation =&gt; -1 = unspecified | 0 = portrait | 1 = landscape
+</comment>
+      <returntype>String</returntype>
+      <parameter>
+        <name>ba</name>
+        <type>anywheresoftware.b4a.BA</type>
+      </parameter>
+      <parameter>
+        <name>VideoUrl</name>
+        <type>String</type>
+      </parameter>
+      <parameter>
+        <name>PlayOrintation</name>
+        <type>int</type>
+      </parameter>
+      <parameter>
+        <name>ReturnOrintation</name>
+        <type>int</type>
+      </parameter>
+    </method>
+  </class>
+  <class b4a_type="Activity">
+    <name>ir.quicklearn.aparat.aparat_player</name>
+    <shortname>Aparat_Player</shortname>
+    <owner>process</owner>
+    <objectwrapper>java.lang.Class</objectwrapper>
+    <field>
+      <name DesignerName="videoUrl">_v0</name>
+      <returntype>String</returntype>
+    </field>
+    <field>
+      <name DesignerName="oriset">_vv1</name>
+      <returntype>int</returntype>
+    </field>
+    <field>
+      <name DesignerName="returnoriSet">_vv2</name>
+      <returntype>int</returntype>
+    </field>
+    <method>
+      <name>process_globals</name>
+      <returntype>void</returntype>
+    </method>
+  </class>
+  <class>
+    <name>ir.quicklearn.aparat.aparat_commentbyvideo</name>
+    <shortname>Aparat_CommentByVideo</shortname>
+    <owner>process</owner>
+    <event>CommentByVideo(position as int , success as boolean)</event>
+    <method>
+      <name>IsInitialized</name>
+      <comment>Tests whether the object has been initialized.</comment>
+      <returntype>boolean</returntype>
+    </method>
+    <method>
+      <name DesignerName="Class_Globals">_class_globals</name>
+      <returntype>String</returntype>
+    </method>
+    <method>
+      <name DesignerName="Initialize">_initialize</name>
+      <comment>Powered by aparat Developed by quicklearn.ir
+استفاده از این کتابخانه به صورت کپی شرعا حرام و پیگرد قانونی خواهد داشت
+خرید این کتابخانه فقط از وب سایت کوئیک لرن قانونی میباشد
+و در صورت مشاهده هر گونه فروش غیر قانونی به شدت برخورد خواهد شد
+</comment>
+      <returntype>String</returntype>
+      <parameter>
+        <name>ba</name>
+        <type>anywheresoftware.b4a.BA</type>
+      </parameter>
+      <parameter>
+        <name>callBack</name>
+        <type>Object</type>
+      </parameter>
+      <parameter>
+        <name>EventName</name>
+        <type>String</type>
+      </parameter>
+      <parameter>
+        <name>Uid</name>
+        <type>String</type>
+      </parameter>
+    </method>
+    <method>
+      <name DesignerName="Initialize2">_vv4</name>
+      <returntype>String</returntype>
+      <parameter>
+        <name>callBack</name>
+        <type>Object</type>
+      </parameter>
+      <parameter>
+        <name>EventName</name>
+        <type>String</type>
+      </parameter>
+      <parameter>
+        <name>NextUrl</name>
+        <type>String</type>
+      </parameter>
+    </method>
+    <field>
+      <name DesignerName="Error">_vvv2</name>
+      <returntype>String</returntype>
+    </field>
+    <field>
+      <name DesignerName="NumberOfrecord">_vvv3</name>
+      <returntype>int</returntype>
+    </field>
+    <field>
+      <name DesignerName="pagingForward">_vvv4</name>
+      <returntype>String</returntype>
+    </field>
+    <field>
+      <name DesignerName="sdate">_vvv5</name>
+      <returntype>String</returntype>
+    </field>
+    <field>
+      <name DesignerName="profilePhoto">_vvv6</name>
+      <returntype>String</returntype>
+    </field>
+    <field>
+      <name DesignerName="sdate_timediff">_sdate_timediff</name>
+      <returntype>String</returntype>
+    </field>
+    <field>
+      <name DesignerName="name">_vvv7</name>
+      <returntype>String</returntype>
+    </field>
+    <field>
+      <name DesignerName="body">_vvv0</name>
+      <returntype>String</returntype>
+    </field>
+    <field>
+      <name DesignerName="reply">_vvvv1</name>
+      <returntype>String</returntype>
+    </field>
+    <field>
+      <name DesignerName="username">_vvvv2</name>
+      <returntype>String</returntype>
+    </field>
+  </class>
+  <class>
+    <name>ir.quicklearn.aparat.aparat_getdownloadlink</name>
+    <shortname>Aparat_GetDownloadlink</shortname>
+    <owner>process</owner>
+    <event>GetDownloadLink(success as boolean,links as list)</event>
+    <method>
+      <name>IsInitialized</name>
+      <comment>Tests whether the object has been initialized.</comment>
+      <returntype>boolean</returntype>
+    </method>
+    <method>
+      <name DesignerName="Class_Globals">_class_globals</name>
+      <returntype>String</returntype>
+    </method>
+    <method>
+      <name DesignerName="Initialize">_initialize</name>
+      <comment>Powered by aparat Developed by quicklearn.ir
+استفاده از این کتابخانه به صورت کپی شرعا حرام و پیگرد قانونی خواهد داشت
+خرید این کتابخانه فقط از وب سایت کوئیک لرن قانونی میباشد
+و در صورت مشاهده هر گونه فروش غیر قانونی به شدت برخورد خواهد شد
+</comment>
+      <returntype>String</returntype>
+      <parameter>
+        <name>ba</name>
+        <type>anywheresoftware.b4a.BA</type>
+      </parameter>
+      <parameter>
+        <name>callBack</name>
+        <type>Object</type>
+      </parameter>
+      <parameter>
+        <name>EventName</name>
+        <type>String</type>
+      </parameter>
+      <parameter>
+        <name>VideoUid</name>
+        <type>String</type>
+      </parameter>
+    </method>
+    <field>
+      <name DesignerName="Error">_vvv2</name>
+      <returntype>String</returntype>
+    </field>
+  </class>
+  <class>
+    <name>ir.quicklearn.aparat.aparat_video</name>
+    <shortname>Aparat_Video</shortname>
+    <owner>process</owner>
+    <event>Video(success as boolean)</event>
+    <method>
+      <name>IsInitialized</name>
+      <comment>Tests whether the object has been initialized.</comment>
+      <returntype>boolean</returntype>
+    </method>
+    <method>
+      <name DesignerName="Class_Globals">_class_globals</name>
+      <returntype>String</returntype>
+    </method>
+    <method>
+      <name DesignerName="Initialize">_initialize</name>
+      <comment>Powered by aparat Developed by quicklearn.ir
+استفاده از این کتابخانه به صورت کپی شرعا حرام و پیگرد قانونی خواهد داشت
+خرید این کتابخانه فقط از وب سایت کوئیک لرن قانونی میباشد
+و در صورت مشاهده هر گونه فروش غیر قانونی به شدت برخورد خواهد شد
+</comment>
+      <returntype>String</returntype>
+      <parameter>
+        <name>ba</name>
+        <type>anywheresoftware.b4a.BA</type>
+      </parameter>
+      <parameter>
+        <name>callBack</name>
+        <type>Object</type>
+      </parameter>
+      <parameter>
+        <name>EventName</name>
+        <type>String</type>
+      </parameter>
+      <parameter>
+        <name>VideoUid</name>
+        <type>String</type>
+      </parameter>
+    </method>
+    <field>
+      <name DesignerName="Error">_vvv2</name>
+      <returntype>String</returntype>
+    </field>
+    <field>
+      <name DesignerName="big_poster">_big_poster</name>
+      <returntype>String</returntype>
+    </field>
+    <field>
+      <name DesignerName="description">_vvvvv1</name>
+      <returntype>String</returntype>
+    </field>
+    <field>
+      <name DesignerName="sender_name">_sender_name</name>
+      <returntype>String</returntype>
+    </field>
+    <field>
+      <name DesignerName="title">_vvvvv2</name>
+      <returntype>String</returntype>
+    </field>
+    <field>
+      <name DesignerName="duration">_vvvvv3</name>
+      <returntype>String</returntype>
+    </field>
+    <field>
+      <name DesignerName="uid">_vvvvv4</name>
+      <returntype>String</returntype>
+    </field>
+    <field>
+      <name DesignerName="sdate">_vvv5</name>
+      <returntype>String</returntype>
+    </field>
+    <field>
+      <name DesignerName="sdate_timediff">_sdate_timediff</name>
+      <returntype>String</returntype>
+    </field>
+    <field>
+      <name DesignerName="cat_name">_cat_name</name>
+      <returntype>String</returntype>
+    </field>
+    <field>
+      <name DesignerName="size">_vvvvv5</name>
+      <returntype>String</returntype>
+    </field>
+    <field>
+      <name DesignerName="visit_cnt">_visit_cnt</name>
+      <returntype>String</returntype>
+    </field>
+    <field>
+      <name DesignerName="small_poster">_small_poster</name>
+      <returntype>String</returntype>
+    </field>
+    <field>
+      <name DesignerName="tags">_vvvvv6</name>
+      <returntype>String</returntype>
+    </field>
+  </class>
+  <class>
+    <name>ir.quicklearn.aparat.aparat_videobyprofilecat</name>
+    <shortname>Aparat_VideoByProfileCat</shortname>
+    <owner>process</owner>
+    <event>VideoByProfileCat(position as int , success as boolean)</event>
+    <method>
+      <name>IsInitialized</name>
+      <comment>Tests whether the object has been initialized.</comment>
+      <returntype>boolean</returntype>
+    </method>
+    <method>
+      <name DesignerName="Class_Globals">_class_globals</name>
+      <returntype>String</returntype>
+    </method>
+    <method>
+      <name DesignerName="Initialize">_initialize</name>
+      <comment>Powered by aparat Developed by quicklearn.ir
+استفاده از این کتابخانه به صورت کپی شرعا حرام و پیگرد قانونی خواهد داشت
+خرید این کتابخانه فقط از وب سایت کوئیک لرن قانونی میباشد
+و در صورت مشاهده هر گونه فروش غیر قانونی به شدت برخورد خواهد شد
+</comment>
+      <returntype>String</returntype>
+      <parameter>
+        <name>ba</name>
+        <type>anywheresoftware.b4a.BA</type>
+      </parameter>
+      <parameter>
+        <name>callBack</name>
+        <type>Object</type>
+      </parameter>
+      <parameter>
+        <name>EventName</name>
+        <type>String</type>
+      </parameter>
+      <parameter>
+        <name>UserName</name>
+        <type>String</type>
+      </parameter>
+      <parameter>
+        <name>CatID</name>
+        <type>int</type>
+      </parameter>
+    </method>
+    <method>
+      <name DesignerName="Initialize2">_vv4</name>
+      <returntype>String</returntype>
+      <parameter>
+        <name>callBack</name>
+        <type>Object</type>
+      </parameter>
+      <parameter>
+        <name>EventName</name>
+        <type>String</type>
+      </parameter>
+      <parameter>
+        <name>NextUrl</name>
+        <type>String</type>
+      </parameter>
+    </method>
+    <field>
+      <name DesignerName="Error">_vvv2</name>
+      <returntype>String</returntype>
+    </field>
+    <field>
+      <name DesignerName="NumberOfrecord">_vvv3</name>
+      <returntype>int</returntype>
+    </field>
+    <field>
+      <name DesignerName="pagingForward">_vvv4</name>
+      <returntype>String</returntype>
+    </field>
+    <field>
+      <name DesignerName="big_poster">_big_poster</name>
+      <returntype>String</returntype>
+    </field>
+    <field>
+      <name DesignerName="sdate">_vvv5</name>
+      <returntype>String</returntype>
+    </field>
+    <field>
+      <name DesignerName="sdate_timediff">_sdate_timediff</name>
+      <returntype>String</returntype>
+    </field>
+    <field>
+      <name DesignerName="title">_vvvvv2</name>
+      <returntype>String</returntype>
+    </field>
+    <field>
+      <name DesignerName="video_date_status">_video_date_status</name>
+      <returntype>String</returntype>
+    </field>
+    <field>
+      <name DesignerName="duration">_vvvvv3</name>
+      <returntype>String</returntype>
+    </field>
+    <field>
+      <name DesignerName="uid">_vvvvv4</name>
+      <returntype>String</returntype>
+    </field>
+    <field>
+      <name DesignerName="visit_cnt">_visit_cnt</name>
+      <returntype>String</returntype>
+    </field>
+    <field>
+      <name DesignerName="small_poster">_small_poster</name>
+      <returntype>String</returntype>
+    </field>
+  </class>
+  <class>
+    <name>ir.quicklearn.aparat.aparat_videobyuser</name>
+    <shortname>Aparat_VideoByUser</shortname>
+    <owner>process</owner>
+    <event>VideoByUser(position as int , success as boolean)</event>
+    <method>
+      <name>IsInitialized</name>
+      <comment>Tests whether the object has been initialized.</comment>
+      <returntype>boolean</returntype>
+    </method>
+    <method>
+      <name DesignerName="Class_Globals">_class_globals</name>
+      <returntype>String</returntype>
+    </method>
+    <method>
+      <name DesignerName="Initialize">_initialize</name>
+      <comment>Powered by aparat Developed by quicklearn.ir
+استفاده از این کتابخانه به صورت کپی شرعا حرام و پیگرد قانونی خواهد داشت
+خرید این کتابخانه فقط از وب سایت کوئیک لرن قانونی میباشد
+و در صورت مشاهده هر گونه فروش غیر قانونی به شدت برخورد خواهد شد
+</comment>
+      <returntype>String</returntype>
+      <parameter>
+        <name>ba</name>
+        <type>anywheresoftware.b4a.BA</type>
+      </parameter>
+      <parameter>
+        <name>callBack</name>
+        <type>Object</type>
+      </parameter>
+      <parameter>
+        <name>EventName</name>
+        <type>String</type>
+      </parameter>
+      <parameter>
+        <name>UserName</name>
+        <type>String</type>
+      </parameter>
+    </method>
+    <method>
+      <name DesignerName="Initialize2">_vv4</name>
+      <returntype>String</returntype>
+      <parameter>
+        <name>callBack</name>
+        <type>Object</type>
+      </parameter>
+      <parameter>
+        <name>EventName</name>
+        <type>String</type>
+      </parameter>
+      <parameter>
+        <name>NextUrl</name>
+        <type>String</type>
+      </parameter>
+    </method>
+    <field>
+      <name DesignerName="Error">_vvv2</name>
+      <returntype>String</returntype>
+    </field>
+    <field>
+      <name DesignerName="NumberOfrecord">_vvv3</name>
+      <returntype>int</returntype>
+    </field>
+    <field>
+      <name DesignerName="pagingForward">_vvv4</name>
+      <returntype>String</returntype>
+    </field>
+    <field>
+      <name DesignerName="big_poster">_big_poster</name>
+      <returntype>String</returntype>
+    </field>
+    <field>
+      <name DesignerName="sdate">_vvv5</name>
+      <returntype>String</returntype>
+    </field>
+    <field>
+      <name DesignerName="sdate_timediff">_sdate_timediff</name>
+      <returntype>String</returntype>
+    </field>
+    <field>
+      <name DesignerName="title">_vvvvv2</name>
+      <returntype>String</returntype>
+    </field>
+    <field>
+      <name DesignerName="video_date_status">_video_date_status</name>
+      <returntype>String</returntype>
+    </field>
+    <field>
+      <name DesignerName="duration">_vvvvv3</name>
+      <returntype>String</returntype>
+    </field>
+    <field>
+      <name DesignerName="uid">_vvvvv4</name>
+      <returntype>String</returntype>
+    </field>
+    <field>
+      <name DesignerName="visit_cnt">_visit_cnt</name>
+      <returntype>String</returntype>
+    </field>
+    <field>
+      <name DesignerName="small_poster">_small_poster</name>
+      <returntype>String</returntype>
+    </field>
+  </class>
+  <class>
+    <name>ir.quicklearn.aparat.commentbyvideo</name>
+    <shortname>commentByVideo</shortname>
+    <owner>process</owner>
+    <event>CommentByVideo(position as int , success as boolean)</event>
+    <method>
+      <name>IsInitialized</name>
+      <comment>Tests whether the object has been initialized.</comment>
+      <returntype>boolean</returntype>
+    </method>
+    <method>
+      <name DesignerName="Class_Globals">_class_globals</name>
+      <returntype>String</returntype>
+    </method>
+    <method>
+      <name DesignerName="Initialize">_initialize</name>
+      <comment>Powered by aparat Developed by quicklearn.ir
+استفاده از این کتابخانه به صورت کپی شرعا حرام و پیگرد قانونی خواهد داشت
+خرید این کتابخانه فقط از وب سایت کوئیک لرن قانونی میباشد
+و در صورت مشاهده هر گونه فروش غیر قانونی به شدت برخورد خواهد شد
+</comment>
+      <returntype>String</returntype>
+      <parameter>
+        <name>ba</name>
+        <type>anywheresoftware.b4a.BA</type>
+      </parameter>
+      <parameter>
+        <name>callBack</name>
+        <type>Object</type>
+      </parameter>
+      <parameter>
+        <name>EventName</name>
+        <type>String</type>
+      </parameter>
+      <parameter>
+        <name>Uid</name>
+        <type>String</type>
+      </parameter>
+    </method>
+    <method>
+      <name DesignerName="Initialize2">_vv4</name>
+      <returntype>String</returntype>
+      <parameter>
+        <name>callBack</name>
+        <type>Object</type>
+      </parameter>
+      <parameter>
+        <name>EventName</name>
+        <type>String</type>
+      </parameter>
+      <parameter>
+        <name>NextUrl</name>
+        <type>String</type>
+      </parameter>
+    </method>
+    <field>
+      <name DesignerName="Error">_vvv2</name>
+      <returntype>String</returntype>
+    </field>
+    <field>
+      <name DesignerName="NumberOfrecord">_vvv3</name>
+      <returntype>int</returntype>
+    </field>
+    <field>
+      <name DesignerName="pagingForward">_vvv4</name>
+      <returntype>String</returntype>
+    </field>
+    <field>
+      <name DesignerName="sdate">_vvv5</name>
+      <returntype>String</returntype>
+    </field>
+    <field>
+      <name DesignerName="profilePhoto">_vvv6</name>
+      <returntype>String</returntype>
+    </field>
+    <field>
+      <name DesignerName="sdate_timediff">_sdate_timediff</name>
+      <returntype>String</returntype>
+    </field>
+    <field>
+      <name DesignerName="name">_vvv7</name>
+      <returntype>String</returntype>
+    </field>
+    <field>
+      <name DesignerName="body">_vvv0</name>
+      <returntype>String</returntype>
+    </field>
+    <field>
+      <name DesignerName="reply">_vvvv1</name>
+      <returntype>String</returntype>
+    </field>
+    <field>
+      <name DesignerName="username">_vvvv2</name>
+      <returntype>String</returntype>
+    </field>
+  </class>
+  <class>
+    <name>ir.quicklearn.aparat.video</name>
+    <shortname>Video</shortname>
+    <owner>process</owner>
+    <event>Video(success as boolean)</event>
+    <method>
+      <name>IsInitialized</name>
+      <comment>Tests whether the object has been initialized.</comment>
+      <returntype>boolean</returntype>
+    </method>
+    <method>
+      <name DesignerName="Class_Globals">_class_globals</name>
+      <returntype>String</returntype>
+    </method>
+    <method>
+      <name DesignerName="Initialize">_initialize</name>
+      <comment>Powered by aparat Developed by quicklearn.ir
+استفاده از این کتابخانه به صوت کپی شرعا حرام و پیگرد قانونی خواهد داشت
+خرید این کتابخانه فقط از وب سایت کوئیک لرن قانونی میباشد
+و در صورت مشاهده هر گونه فروش غیر قانونی به شدت برخورد خواهد شد
+</comment>
+      <returntype>String</returntype>
+      <parameter>
+        <name>ba</name>
+        <type>anywheresoftware.b4a.BA</type>
+      </parameter>
+      <parameter>
+        <name>callBack</name>
+        <type>Object</type>
+      </parameter>
+      <parameter>
+        <name>EventName</name>
+        <type>String</type>
+      </parameter>
+      <parameter>
+        <name>VideoUid</name>
+        <type>String</type>
+      </parameter>
+    </method>
+    <field>
+      <name DesignerName="Error">_vvv2</name>
+      <returntype>String</returntype>
+    </field>
+    <field>
+      <name DesignerName="big_poster">_big_poster</name>
+      <returntype>String</returntype>
+    </field>
+    <field>
+      <name DesignerName="description">_vvvvv1</name>
+      <returntype>String</returntype>
+    </field>
+    <field>
+      <name DesignerName="sender_name">_sender_name</name>
+      <returntype>String</returntype>
+    </field>
+    <field>
+      <name DesignerName="title">_vvvvv2</name>
+      <returntype>String</returntype>
+    </field>
+    <field>
+      <name DesignerName="duration">_vvvvv3</name>
+      <returntype>String</returntype>
+    </field>
+    <field>
+      <name DesignerName="uid">_vvvvv4</name>
+      <returntype>String</returntype>
+    </field>
+    <field>
+      <name DesignerName="sdate">_vvv5</name>
+      <returntype>String</returntype>
+    </field>
+    <field>
+      <name DesignerName="sdate_timediff">_sdate_timediff</name>
+      <returntype>String</returntype>
+    </field>
+    <field>
+      <name DesignerName="cat_name">_cat_name</name>
+      <returntype>String</returntype>
+    </field>
+    <field>
+      <name DesignerName="size">_vvvvv5</name>
+      <returntype>String</returntype>
+    </field>
+    <field>
+      <name DesignerName="visit_cnt">_visit_cnt</name>
+      <returntype>String</returntype>
+    </field>
+    <field>
+      <name DesignerName="small_poster">_small_poster</name>
+      <returntype>String</returntype>
+    </field>
+    <field>
+      <name DesignerName="tags">_vvvvv6</name>
+      <returntype>String</returntype>
+    </field>
+  </class>
+  <version>3.01</version>
+  <author>Mohammad rasoul Boroomand</author>
+</root>

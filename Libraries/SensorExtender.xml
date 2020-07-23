@@ -1,0 +1,287 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root>
+    <doclet-version-NOT-library-version>1.01</doclet-version-NOT-library-version>
+    <class>
+        <name>anywheresoftware.b4a.sample.SensorExtender</name>
+        <shortname>SensorExtender</shortname>
+        <comment>The SensorExtender Library offers, the same functionality as The PhoneSensors object 
+ found in the phone Library, while also offering extended features.</comment>
+        <owner>process</owner>
+        <event>SensorChanged (Values() As Float)</event>
+        <method>
+            <name>Initialize</name>
+            <comment>Initializes the object and sets the sensor type (one of the TYPE_ constants).</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>SensorType</name>
+                <type>int</type>
+            </parameter>
+        </method>
+        <method>
+            <name>StartListening</name>
+            <comment>Starts listening for sensor events.
+Returns True if the sensor is supported.
+Usually you will want to start listening in Sub Activity_Resume and stop listening in Sub Activity_Pause.
+"_accuracychanged (Accuracy as Int)" added for more filtering options.</comment>
+            <returntype>boolean</returntype>
+            <parameter>
+                <name>ba</name>
+                <type>anywheresoftware.b4a.BA</type>
+            </parameter>
+            <parameter>
+                <name>EventName</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+        <method>
+            <name>RemapCoordinateSystem</name>
+            <comment>Rotates the supplied rotation matrix so it is expressed in a different coordinate system.
+ inR 		the rotation matrix to be transformed. 
+        	Usually it is the matrix returned by getRotationMatrix.
+ Axis_1 	defines on which world axis and direction the X axis of the device is mapped.
+ Axis_2 	defines on which world axis and direction the Y axis of the device is mapped.
+ outR 		the transformed rotation matrix. inR and outR can be the same array, 
+ 			but it is not recommended for performance reason.
+ Returns true on success. false if the input parameters are incorrect, 
+ for instance if Axis_1 and Axis_2 define the same axis.
+ Or if inR and outR don't have the same length.</comment>
+            <returntype>boolean</returntype>
+            <parameter>
+                <name>inR</name>
+                <type>float[]</type>
+            </parameter>
+            <parameter>
+                <name>Axis_1</name>
+                <type>int</type>
+            </parameter>
+            <parameter>
+                <name>Axis_2</name>
+                <type>int</type>
+            </parameter>
+            <parameter>
+                <name>outR</name>
+                <type>float[]</type>
+            </parameter>
+        </method>
+        <method>
+            <name>StopListening</name>
+            <comment>Stops listening for events.</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>ba</name>
+                <type>anywheresoftware.b4a.BA</type>
+            </parameter>
+        </method>
+        <method>
+            <name>HighPassFilter</name>
+            <comment>a crude high-pass filter to eliminate gravity 
+ this method should directly follow the LowPassFilter method
+ Latest_Values will be as per those sent to LowPassFilter
+ Returned_Values are the values returned by LowPassFilter</comment>
+            <returntype>float[]</returntype>
+            <parameter>
+                <name>Latest_Values</name>
+                <type>float[]</type>
+            </parameter>
+            <parameter>
+                <name>Returned_Values</name>
+                <type>float[]</type>
+            </parameter>
+        </method>
+        <method>
+            <name>LowPassFilter</name>
+            <comment>an adequate low-pass filter to isolate gravity 
+ Returned_Values should be the result of calling this method previously
+ however, Latest_Values can be sent for Returned_Values if first time. 
+ Filtering_Factor requires trial and error see FILTERING_FACTOR_Recommended
+ try anything from 0.1 to 0.4</comment>
+            <returntype>float[]</returntype>
+            <parameter>
+                <name>Latest_Values</name>
+                <type>float[]</type>
+            </parameter>
+            <parameter>
+                <name>Returned_Values</name>
+                <type>float[]</type>
+            </parameter>
+            <parameter>
+                <name>Filtering_Factor</name>
+                <type>float</type>
+            </parameter>
+        </method>
+        <method>
+            <name>GetType</name>
+            <comment>Returns the int corresponding to this sensor's type.
+Returns -1 if this sensor is not supported.</comment>
+            <returntype>float</returntype>
+        </method>
+        <method>
+            <name>GetRotationMatrix</name>
+            <comment>Computes the inclination matrix I as well as the rotation matrix R transforming a vector 
+ from the device coordinate system to the world's coordinate system which is defined as a 
+ direct orthonormal basis, where:
+ Returns true on success, false on failure (for instance, if the device is in free fall). 
+ On failure the output matrices are not modified.</comment>
+            <returntype>boolean</returntype>
+            <parameter>
+                <name>R</name>
+                <type>float[]</type>
+            </parameter>
+            <parameter>
+                <name>I</name>
+                <type>float[]</type>
+            </parameter>
+            <parameter>
+                <name>Magnetic_Field_values</name>
+                <type>float[]</type>
+            </parameter>
+            <parameter>
+                <name>Accelerometer_values</name>
+                <type>float[]</type>
+            </parameter>
+        </method>
+        <method>
+            <name>Initialize2</name>
+            <comment>Initializes the object and sets the sensor type and sensor events rate.
+SensorType - One of the TYPE_ constants.
+SensorDelay - A value between 0 (fastest rate) to 3 (slowest rate). This is only a hint to the system.</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>SensorType</name>
+                <type>int</type>
+            </parameter>
+            <parameter>
+                <name>SensorDelay</name>
+                <type>int</type>
+            </parameter>
+        </method>
+        <method>
+            <name>GetOrientation</name>
+            <comment>Computes the device Orientation angles in radians from 
+ the Rotation matrix R returned by GetRotationMatrix</comment>
+            <returntype>float[]</returntype>
+            <parameter>
+                <name>Rotation_Matrix</name>
+                <type>float[]</type>
+            </parameter>
+        </method>
+        <property>
+            <name>MaxValue</name>
+            <returntype>float</returntype>
+            <comment>Returns the maximum value for this sensor.
+Returns -1 if this sensor is not supported.</comment>
+        </property>
+        <field>
+            <name>TYPE_GYROSCOPE</name>
+            <comment>Three values - Angular velocity measured in Radians / Second around each of the three axis.</comment>
+            <returntype>int</returntype>
+        </field>
+        <field>
+            <name>TYPE_PROXIMITY</name>
+            <comment>Single value - Proximity measured in centimeters. Most devices will return only two possible values representing "near" and "far".
+"far" should match MaxRange and "near" should be a value smaller than MaxRange.</comment>
+            <returntype>int</returntype>
+        </field>
+        <field>
+            <name>AXIS_Z</name>
+            <comment>See RemapCoordinateSystem</comment>
+            <returntype>int</returntype>
+        </field>
+        <field>
+            <name>TYPE_TEMPERATURE</name>
+            <comment>Single value - Ambient temperature.</comment>
+            <returntype>int</returntype>
+        </field>
+        <field>
+            <name>SENSOR_STATUS_UNRELIABLE</name>
+            <comment>The values returned by this sensor cannot be trusted,
+ calibration is needed or the environment doesn't allow readings</comment>
+            <returntype>int</returntype>
+        </field>
+        <field>
+            <name>AXIS_Y</name>
+            <comment>See RemapCoordinateSystem</comment>
+            <returntype>int</returntype>
+        </field>
+        <field>
+            <name>SENSOR_STATUS_ACCURACY_HIGH</name>
+            <comment>This sensor is reporting data with maximum accuracy</comment>
+            <returntype>int</returntype>
+        </field>
+        <field>
+            <name>AXIS_X</name>
+            <comment>See RemapCoordinateSystem</comment>
+            <returntype>int</returntype>
+        </field>
+        <field>
+            <name>TYPE_MAGNETIC_FIELD</name>
+            <comment>Three values - Ambient magnetic field measured in micro-Tesla for the X, Y and Z axis.</comment>
+            <returntype>int</returntype>
+        </field>
+        <field>
+            <name>TYPE_LIGHT</name>
+            <comment>Single value - Ambient light level measured in SI lux units.</comment>
+            <returntype>int</returntype>
+        </field>
+        <field>
+            <name>AXIS_MINUS_X</name>
+            <comment>See RemapCoordinateSystem</comment>
+            <returntype>int</returntype>
+        </field>
+        <field>
+            <name>TYPE_ORIENTATION</name>
+            <comment>Three values - Orientation measured in degrees for azimuth, pitch and roll.</comment>
+            <returntype>int</returntype>
+        </field>
+        <field>
+            <name>STANDARD_GRAVITY</name>
+            <comment>Standard gravity (g) on Earth. This value is equivalent to 1G
+ Constant Value: 9.80665</comment>
+            <returntype>float</returntype>
+        </field>
+        <field>
+            <name>AXIS_MINUS_Y</name>
+            <comment>See RemapCoordinateSystem</comment>
+            <returntype>int</returntype>
+        </field>
+        <field>
+            <name>AXIS_MINUS_Z</name>
+            <comment>See RemapCoordinateSystem</comment>
+            <returntype>int</returntype>
+        </field>
+        <field>
+            <name>SENSOR_STATUS_ACCURACY_MEDIUM</name>
+            <comment>his sensor is reporting data with an average level of accuracy, 
+ calibration with the environment may improve the readings</comment>
+            <returntype>int</returntype>
+        </field>
+        <field>
+            <name>SENSOR_STATUS_ACCURACY_LOW</name>
+            <comment>This sensor is reporting data with low accuracy, 
+ calibration with the environment is needed</comment>
+            <returntype>int</returntype>
+        </field>
+        <field>
+            <name>TYPE_ROTATION_VECTOR</name>
+            <comment>Single value - Rotation Vector.</comment>
+            <returntype>int</returntype>
+        </field>
+        <field>
+            <name>TYPE_ACCELEROMETER</name>
+            <comment>Three values - Acceleration measured in Meters / Second ^ 2 for each axis (X, Y and Z).</comment>
+            <returntype>int</returntype>
+        </field>
+        <field>
+            <name>FILTERING_FACTOR_Recommended</name>
+            <comment>See LowPassFilter</comment>
+            <returntype>float</returntype>
+        </field>
+        <field>
+            <name>TYPE_PRESSURE</name>
+            <comment>Single value - Atmospheric pressure.</comment>
+            <returntype>int</returntype>
+        </field>
+    </class>
+    <version>0.01</version>
+    <author>Mike</author>
+</root>

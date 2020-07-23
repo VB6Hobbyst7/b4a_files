@@ -1,0 +1,483 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root>
+    <doclet-version-NOT-library-version>1.03</doclet-version-NOT-library-version>
+    <class>
+        <name>it.giuseppe.salvi.PhotoFlowActivity</name>
+        <shortname>PhotoFlow</shortname>
+        <objectwrapper>it.giuseppe.salvi.coverflow.PhotoFlow</objectwrapper>
+        <owner>activity</owner>
+        <event>ItemClick (Position As Int, Value As Object)</event>
+        <event>ItemLongClick (Position As Int, Value As Object)</event>
+        <event>ItemSelected(Position As Int, Value As Object)</event>
+        <permission>android.permission.WRITE_EXTERNAL_STORAGE</permission>
+        <method>
+            <name>BringToFront</name>
+            <comment></comment>
+            <returntype>void</returntype>
+        </method>
+        <method>
+            <name>RequestFocus</name>
+            <comment></comment>
+            <returntype>boolean</returntype>
+        </method>
+        <method>
+            <name>RemoveView</name>
+            <comment></comment>
+            <returntype>void</returntype>
+        </method>
+        <method>
+            <name>SetBackgroundImage</name>
+            <comment></comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>arg0</name>
+                <type>android.graphics.Bitmap</type>
+            </parameter>
+        </method>
+        <method>
+            <name>AddImageAt</name>
+            <comment>Add an image to the desired position in the PhotoFlow from sdcard or AssetsDir
+ 
+ Example:
+ 
+ PhotoFlow.AddImage(1,File.DirRootExternal,"a.jpg")</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>index</name>
+                <type>int</type>
+            </parameter>
+            <parameter>
+                <name>Dir</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>FileName</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+        <method>
+            <name>GetImageListFromAssets</name>
+            <comment>Get entire list of images stored in assets folder
+ 
+ Examples:
+ Dim lv as ListView
+ Dim l as list
+ l.Initialize 
+ lv.Initialize("lv")
+ 
+ Sub Menu_Click
+ Activity.AddView(lv,0,0,100%x,100%y)
+ l = Coverflow.GetImageListFromAssets("Here the Images path u've in assets")
+ For n = 0 To l.Size-1
+ 		lv.AddSingleLine(l.Get(n))
+ next
+ End Sub</comment>
+            <returntype>java.util.List</returntype>
+            <parameter>
+                <name>path</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+        <method>
+            <name>Invalidate3</name>
+            <comment></comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>arg0</name>
+                <type>int</type>
+            </parameter>
+            <parameter>
+                <name>arg1</name>
+                <type>int</type>
+            </parameter>
+            <parameter>
+                <name>arg2</name>
+                <type>int</type>
+            </parameter>
+            <parameter>
+                <name>arg3</name>
+                <type>int</type>
+            </parameter>
+        </method>
+        <method>
+            <name>Invalidate2</name>
+            <comment></comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>arg0</name>
+                <type>android.graphics.Rect</type>
+            </parameter>
+        </method>
+        <method>
+            <name>InitializeCoverflow</name>
+            <comment>Initialize the PhotoFlow</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>ICOS_BA</name>
+                <type>anywheresoftware.b4a.BA</type>
+            </parameter>
+            <parameter>
+                <name>EventName</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+        <method>
+            <name>IsInitialized</name>
+            <comment></comment>
+            <returntype>boolean</returntype>
+        </method>
+        <method>
+            <name>ClearCache</name>
+            <comment>Delete entire disk and memory cache created before</comment>
+            <returntype>void</returntype>
+        </method>
+        <method>
+            <name>PopulatePhotoFlowFromAssets</name>
+            <comment>Populate CoverFlow from assets not from sdcard</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>path</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+        <method>
+            <name>GetItem</name>
+            <comment>Returns Item
+ 
+ Example:
+ 
+ i.Bitmap=LoadBitmap("",PhotoFlow.GetItem(Position))</comment>
+            <returntype>java.lang.String</returntype>
+            <parameter>
+                <name>position</name>
+                <type>int</type>
+            </parameter>
+        </method>
+        <method>
+            <name>Invalidate</name>
+            <comment></comment>
+            <returntype>void</returntype>
+        </method>
+        <method>
+            <name>SetLayout</name>
+            <comment></comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>arg0</name>
+                <type Pixel="true">int</type>
+            </parameter>
+            <parameter>
+                <name>arg1</name>
+                <type Pixel="true">int</type>
+            </parameter>
+            <parameter>
+                <name>arg2</name>
+                <type Pixel="true">int</type>
+            </parameter>
+            <parameter>
+                <name>arg3</name>
+                <type Pixel="true">int</type>
+            </parameter>
+        </method>
+        <method>
+            <name>PopulatePhotoFlow</name>
+            <comment>Populate PhotoFlow from sdcard not from assets</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>dir</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>path</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+        <method>
+            <name>AddImage</name>
+            <comment>Add an image at the end of the PhotoFlow from sdcard or AssetsDir
+ 
+ Example:
+ 
+ PhotoFlow.AddImage(File.DirRootExternal,"a.jpg")</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>Dir</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>FileName</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+        <method>
+            <name>InitializeCarousel</name>
+            <comment>Initialize the Carousel</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>ICOS_BA</name>
+                <type>anywheresoftware.b4a.BA</type>
+            </parameter>
+            <parameter>
+                <name>EventName</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+        <method>
+            <name>SendToBack</name>
+            <comment></comment>
+            <returntype>void</returntype>
+        </method>
+        <property>
+            <name>ShowText</name>
+            <returntype>boolean</returntype>
+            <parameter>
+                <name>show</name>
+                <type>boolean</type>
+            </parameter>
+            <comment>Get or Sets the visibility of the text - by default is hide</comment>
+        </property>
+        <property>
+            <name>Enabled</name>
+            <returntype>boolean</returntype>
+            <parameter>
+                <name>arg0</name>
+                <type>boolean</type>
+            </parameter>
+            <comment></comment>
+        </property>
+        <property>
+            <name>Visible</name>
+            <returntype>boolean</returntype>
+            <parameter>
+                <name>arg0</name>
+                <type>boolean</type>
+            </parameter>
+            <comment></comment>
+        </property>
+        <property>
+            <name>ItemHeight</name>
+            <returntype>int</returntype>
+            <parameter>
+                <name>itemHeight</name>
+                <type>int</type>
+            </parameter>
+            <comment>Get or Set ItemHeight</comment>
+        </property>
+        <property>
+            <name>Background</name>
+            <returntype>android.graphics.drawable.Drawable</returntype>
+            <parameter>
+                <name>arg0</name>
+                <type>android.graphics.drawable.Drawable</type>
+            </parameter>
+            <comment></comment>
+        </property>
+        <property>
+            <name>TextColor</name>
+            <returntype>int</returntype>
+            <parameter>
+                <name>color</name>
+                <type>int</type>
+            </parameter>
+            <comment>Get or Sets Text Color - by default is White</comment>
+        </property>
+        <property>
+            <name>TextSize</name>
+            <returntype>int</returntype>
+            <parameter>
+                <name>size</name>
+                <type>int</type>
+            </parameter>
+            <comment>Get or Sets Text size</comment>
+        </property>
+        <property>
+            <name>Tag</name>
+            <returntype>java.lang.Object</returntype>
+            <parameter>
+                <name>arg0</name>
+                <type>java.lang.Object</type>
+            </parameter>
+            <comment></comment>
+        </property>
+        <property>
+            <name>FadingEdgeLength</name>
+            <parameter>
+                <name>fading</name>
+                <type>int</type>
+            </parameter>
+            <comment>Set the size of the faded edge used to indicate that more content in this view is available.</comment>
+        </property>
+        <property>
+            <name>Width</name>
+            <returntype>int</returntype>
+            <parameter>
+                <name>arg0</name>
+                <type Pixel="true">int</type>
+            </parameter>
+            <comment></comment>
+        </property>
+        <property>
+            <name>Version</name>
+            <returntype>java.lang.String</returntype>
+            <comment>Return Author and Version of this library</comment>
+        </property>
+        <property>
+            <name>CreateCache</name>
+            <parameter>
+                <name>cache</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <comment>Sets the name of your own cache
+ 
+ Examples:
+ 
+ PhotoFlow.CreateCache = "Your cache Name Here")
+ 
+ It'll create a cache in "Android/data/Your cache name/cache/.thumbs" in to SdCard</comment>
+        </property>
+        <property>
+            <name>Top</name>
+            <returntype>int</returntype>
+            <parameter>
+                <name>arg0</name>
+                <type Pixel="true">int</type>
+            </parameter>
+            <comment></comment>
+        </property>
+        <property>
+            <name>Height</name>
+            <returntype>int</returntype>
+            <parameter>
+                <name>arg0</name>
+                <type Pixel="true">int</type>
+            </parameter>
+            <comment></comment>
+        </property>
+        <property>
+            <name>Spacing</name>
+            <parameter>
+                <name>spacing</name>
+                <type>int</type>
+            </parameter>
+            <comment>Sets the spacing between items in a Gallery</comment>
+        </property>
+        <property>
+            <name>Left</name>
+            <returntype>int</returntype>
+            <parameter>
+                <name>arg0</name>
+                <type Pixel="true">int</type>
+            </parameter>
+            <comment></comment>
+        </property>
+        <property>
+            <name>Color</name>
+            <parameter>
+                <name>arg0</name>
+                <type>int</type>
+            </parameter>
+            <comment></comment>
+        </property>
+        <property>
+            <name>AnimationDuration</name>
+            <parameter>
+                <name>duration</name>
+                <type>int</type>
+            </parameter>
+            <comment>Sets how long the transition animation should run when a child view changes position.</comment>
+        </property>
+        <property>
+            <name>Length</name>
+            <returntype>int</returntype>
+            <comment>Returns lenght</comment>
+        </property>
+        <property>
+            <name>Reverse</name>
+            <parameter>
+                <name>reverse</name>
+                <type>boolean</type>
+            </parameter>
+            <comment>Set reverse</comment>
+        </property>
+        <property>
+            <name>ItemWidth</name>
+            <returntype>int</returntype>
+            <parameter>
+                <name>itemWidth</name>
+                <type>int</type>
+            </parameter>
+            <comment>Get or Sets ItemWidth</comment>
+        </property>
+        <property>
+            <name>Carousel</name>
+            <parameter>
+                <name>carousel</name>
+                <type>boolean</type>
+            </parameter>
+            <comment>Set as Carousel</comment>
+        </property>
+        <property>
+            <name>Selection</name>
+            <parameter>
+                <name>position</name>
+                <type>int</type>
+            </parameter>
+            <comment>Jump directly to a specific item in the adapter data.</comment>
+        </property>
+    </class>
+    <class>
+        <name>it.giuseppe.salvi.coverflow.PhotoFlow.LayoutParams</name>
+        <owner>process</owner>
+        <method>
+            <name>resolveLayoutDirection</name>
+            <comment></comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>arg0</name>
+                <type>int</type>
+            </parameter>
+        </method>
+        <field>
+            <name>MATCH_PARENT</name>
+            <comment></comment>
+            <returntype>int</returntype>
+        </field>
+        <field>
+            <name>WRAP_CONTENT</name>
+            <comment></comment>
+            <returntype>int</returntype>
+        </field>
+        <field>
+            <name>height</name>
+            <comment></comment>
+            <returntype>int</returntype>
+        </field>
+        <field>
+            <name>FILL_PARENT</name>
+            <comment></comment>
+            <returntype>int</returntype>
+        </field>
+        <field>
+            <name>t</name>
+            <comment></comment>
+            <returntype>int</returntype>
+        </field>
+        <field>
+            <name>width</name>
+            <comment></comment>
+            <returntype>int</returntype>
+        </field>
+        <field>
+            <name>layoutAnimationParameters</name>
+            <comment></comment>
+            <returntype>android.view.animation.LayoutAnimationController.AnimationParameters</returntype>
+        </field>
+        <field>
+            <name>l</name>
+            <comment></comment>
+            <returntype>int</returntype>
+        </field>
+    </class>
+    <version>2.0</version>
+    <author>Giuseppe Salvi</author>
+</root>

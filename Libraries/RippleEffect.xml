@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root>
+    <doclet-version-NOT-library-version>1.06</doclet-version-NOT-library-version>
+    <class>
+        <name>anywheresoftware.b4a.object.RippleViewWrapper</name>
+        <shortname>RippleView</shortname>
+        <objectwrapper>com.andexert.library.RippleView</objectwrapper>
+        <owner>activity</owner>
+        <method>
+            <name>Initialize</name>
+            <comment>Adds a ripple effect to the view.
+ Color - Ripple color.
+ DurationMs - Animation duration in milliseconds.
+ Centered - Whether to start the effect from the touch position or from the center.</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>ba</name>
+                <type>anywheresoftware.b4a.BA</type>
+            </parameter>
+            <parameter>
+                <name>View</name>
+                <type>android.view.View</type>
+            </parameter>
+            <parameter>
+                <name>Color</name>
+                <type>int</type>
+            </parameter>
+            <parameter>
+                <name>DurationMs</name>
+                <type>int</type>
+            </parameter>
+            <parameter>
+                <name>Centered</name>
+                <type>boolean</type>
+            </parameter>
+        </method>
+        <method>
+            <name>IsInitialized</name>
+            <comment></comment>
+            <returntype>boolean</returntype>
+        </method>
+    </class>
+    <version>1.2</version>
+</root>

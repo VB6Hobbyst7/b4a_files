@@ -1,0 +1,69 @@
+<HTML>
+<HEAD>
+<META http-equiv="Content-Type" content="text/html; charset=utf-8">
+<TITLE>
+Basic4android - XmlSax
+</TITLE>
+<link rel="stylesheet" type="text/css" href="images/help.css" />
+
+</HEAD>
+
+<BODY BGCOLOR="white" leftmargin="50">
+<a name="top"/>
+<h1>XmlSax</h1>
+
+</h5>This library provides an XML Sax Parser.<br/>See this <a href='http://www.basic4ppc.com/forum/basic4android-getting-started-tutorials/6866-xml-parsing-xmlsax-library.html'>tutorial</a> for a working example.
+<h4>List of types:</h4>
+<a href='#attributes'>Attributes</a><br/><a href='#saxparser'>SaxParser</a><br/>
+<hr/>
+<h3><u><a name='attributes'>Attributes</a></u></h3>
+</h5>This object is passed in StartElement event.
+<br/>
+
+<h4>Events:</h4>
+None
+<h4>Members:</h4><br/>
+<img src='images/15.png'/>&nbsp;&nbsp;<span style="color: #000000;"><a href='#attributes_getname'><b>GetName</b></a> (Index </span><span style="color: #0000FF;">As</span><span style="color: #000000;"> </span><span style="color: #008B8B;">Int</span><span style="color: #000000;">) </span><span style="color: #0000FF;">As</span><span style="color: #000000;"> </span><span style="color: #008B8B;">String</span><br/><br/>
+<img src='images/15.png'/>&nbsp;&nbsp;<span style="color: #000000;"><a href='#attributes_getvalue'><b>GetValue</b></a> (Index </span><span style="color: #0000FF;">As</span><span style="color: #000000;"> </span><span style="color: #008B8B;">Int</span><span style="color: #000000;">) </span><span style="color: #0000FF;">As</span><span style="color: #000000;"> </span><span style="color: #008B8B;">String</span><br/><br/>
+<img src='images/15.png'/>&nbsp;&nbsp;<span style="color: #000000;"><a href='#attributes_getvalue2'><b>GetValue2</b></a> (Uri </span><span style="color: #0000FF;">As</span><span style="color: #000000;"> </span><span style="color: #008B8B;">String</span><span style="color: #000000;">, Name </span><span style="color: #0000FF;">As</span><span style="color: #000000;"> </span><span style="color: #008B8B;">String</span><span style="color: #000000;">) </span><span style="color: #0000FF;">As</span><span style="color: #000000;"> </span><span style="color: #008B8B;">String</span><br/><br/>
+<img src='images/15.png'/>&nbsp;&nbsp;<span style="color: #000000;"><a href='#attributes_isinitialized'><b>IsInitialized</b></a> </span><span style="color: #0000FF;">As</span><span style="color: #000000;"> </span><span style="color: #008B8B;">Boolean</span><br/><br/>
+<img src='images/19.png'/>&nbsp;&nbsp;<span style="color: #000000;"><a href='#attributes_size'><b>Size</b></a> </span><span style="color: #0000FF;">As</span><span style="color: #000000;"> </span><span style="color: #008B8B;">Int</span><span style="color: #000000;">  [read only]</span><br/><br/>
+
+<h4>Members description:</h4>
+<a name='attributes_getname'/>
+<h5><img src='images/15.png'/>
+<span style="color: #000000;">GetName (Index </span><span style="color: #0000FF;">As</span><span style="color: #000000;"> </span><span style="color: #008B8B;">Int</span><span style="color: #000000;">) </span><span style="color: #0000FF;">As</span><span style="color: #000000;"> </span><span style="color: #008B8B;">String</span></h5>Returns the name of the attribute at the specified index.<br/>Note that the order of elements can change.<a name='attributes_getvalue'/>
+<h5><img src='images/15.png'/>
+<span style="color: #000000;">GetValue (Index </span><span style="color: #0000FF;">As</span><span style="color: #000000;"> </span><span style="color: #008B8B;">Int</span><span style="color: #000000;">) </span><span style="color: #0000FF;">As</span><span style="color: #000000;"> </span><span style="color: #008B8B;">String</span></h5>Returns the value of the attribute at the specified index.<br/>Note that the order of elements can change.<a name='attributes_getvalue2'/>
+<h5><img src='images/15.png'/>
+<span style="color: #000000;">GetValue2 (Uri </span><span style="color: #0000FF;">As</span><span style="color: #000000;"> </span><span style="color: #008B8B;">String</span><span style="color: #000000;">, Name </span><span style="color: #0000FF;">As</span><span style="color: #000000;"> </span><span style="color: #008B8B;">String</span><span style="color: #000000;">) </span><span style="color: #0000FF;">As</span><span style="color: #000000;"> </span><span style="color: #008B8B;">String</span></h5>Returns the value of the attribute with the following Uri and Name.<br/>Pass an empty string as the Uri if namespaces are not used.<br/>Returns an empty string if no such attribute was found.<a name='attributes_isinitialized'/>
+<h5><img src='images/15.png'/>
+<span style="color: #000000;">IsInitialized </span><span style="color: #0000FF;">As</span><span style="color: #000000;"> </span><span style="color: #008B8B;">Boolean</span></h5><a name='attributes_size'/>
+<h5><img src='images/19.png'/>
+<span style="color: #000000;">Size </span><span style="color: #0000FF;">As</span><span style="color: #000000;"> </span><span style="color: #008B8B;">Int</span><span style="color: #000000;">  [read only]</span></h5>Returns the number of attributes in this element.<hr/>
+<h3><u><a name='saxparser'>SaxParser</a></u></h3>
+</h5>A parser that sequentially reads a stream and raises events at the beginning and end of each element.<br/>The StartElement includes the following parameters:<br/>Uri - Namespace Uri, or empty string if there is no namespace.<br/>Name - The element name.<br/>Attributes - An Attributes object holding the element's attributes.<br/><br/>The EndElement includes the following parameters:<br/>Uri - Namespace Uri, or empty string if there is no namespace.<br/>Name - The element name.<br/>Text - The element text (if such exists).
+<br/>
+
+<h4>Events:</h4>
+StartElement (Uri As String, Name As String, Attributes As Attributes)<br/>EndElement (Uri As String, Name As String, Text As StringBuilder)<br/>
+<h4>Members:</h4><br/>
+<img src='images/15.png'/>&nbsp;&nbsp;<span style="color: #000000;"><a href='#saxparser_initialize'><b>Initialize</b></a></span><br/><br/>
+<img src='images/11.png'/>&nbsp;&nbsp;<span style="color: #000000;"><a href='#saxparser_parents'><b>Parents</b></a> </span><span style="color: #0000FF;">As</span><span style="color: #000000;"> </span><span style="color: #008B8B;">List</span><br/><br/>
+<img src='images/15.png'/>&nbsp;&nbsp;<span style="color: #000000;"><a href='#saxparser_parse'><b>Parse</b></a> (</span><span style="color: #008B8B;">InputStream</span><span style="color: #000000;"> </span><span style="color: #0000FF;">As</span><span style="color: #000000;"> java.io.InputStream, EventName </span><span style="color: #0000FF;">As</span><span style="color: #000000;"> </span><span style="color: #008B8B;">String</span><span style="color: #000000;">)</span><br/><br/>
+<img src='images/15.png'/>&nbsp;&nbsp;<span style="color: #000000;"><a href='#saxparser_parse2'><b>Parse2</b></a> (</span><span style="color: #008B8B;">TextReader</span><span style="color: #000000;"> </span><span style="color: #0000FF;">As</span><span style="color: #000000;"> java.io.Reader, EventName </span><span style="color: #0000FF;">As</span><span style="color: #000000;"> </span><span style="color: #008B8B;">String</span><span style="color: #000000;">)</span><br/><br/>
+
+<h4>Members description:</h4>
+<a name='saxparser_initialize'/>
+<h5><img src='images/15.png'/>
+<span style="color: #000000;">Initialize</span></h5>Initializes the object.<br/>Usually this object should be a process global object.<a name='saxparser_parents'/>
+<h5><img src='images/11.png'/>
+<span style="color: #000000;">Parents </span><span style="color: #0000FF;">As</span><span style="color: #000000;"> </span><span style="color: #008B8B;">List</span></h5>A list that holds the names of the parents elements.<br/>During parsing you can use this list to recognize the current element.<a name='saxparser_parse'/>
+<h5><img src='images/15.png'/>
+<span style="color: #000000;">Parse (</span><span style="color: #008B8B;">InputStream</span><span style="color: #000000;"> </span><span style="color: #0000FF;">As</span><span style="color: #000000;"> java.io.InputStream, EventName </span><span style="color: #0000FF;">As</span><span style="color: #000000;"> </span><span style="color: #008B8B;">String</span><span style="color: #000000;">)</span></h5>Parses the given InputStream.<br/>EventName - The events subs name prefix.<a name='saxparser_parse2'/>
+<h5><img src='images/15.png'/>
+<span style="color: #000000;">Parse2 (</span><span style="color: #008B8B;">TextReader</span><span style="color: #000000;"> </span><span style="color: #0000FF;">As</span><span style="color: #000000;"> java.io.Reader, EventName </span><span style="color: #0000FF;">As</span><span style="color: #000000;"> </span><span style="color: #008B8B;">String</span><span style="color: #000000;">)</span></h5>Parses the given TextReader.<br/>EventName - The events subs name prefix.
+<hr/>
+<a href="#top">Top</a>
+</body>
+</html>

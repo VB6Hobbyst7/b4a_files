@@ -1,0 +1,47 @@
+<HTML>
+<HEAD>
+<META http-equiv="Content-Type" content="text/html; charset=utf-8">
+<TITLE>
+Basic4android - Camera
+</TITLE>
+<link rel="stylesheet" type="text/css" href="images/help.css" />
+
+</HEAD>
+
+<BODY BGCOLOR="white" leftmargin="50">
+<a name="top"/>
+<h1>Camera</h1>
+
+</h5>
+<h4>List of types:</h4>
+<a href='#camera'>Camera</a><br/>
+<hr/>
+<h3><u><a name='camera'>Camera</a></u></h3>
+</h5>The camera object allows you to use the device back facing camera to take pictures and show preview images.<br/>Currently the camera orientation is always landscape. Usually you will want to force the application to also be in landscape mode (Project - Supported Orientations).<br/>Only one process can access the camera at any time. Therefore it is highly recommended to initialize the camera object in Activity_Resume and release it in Activity_Pause.<br/>A working example with explanations is available <a href='http://www.basic4ppc.com/forum/basic4android-getting-started-tutorials/6891-take-pictures-internal-camera.html'>here</a>.<br/>This is an 'Activity Object', it cannot be declared under Sub Process_Globals.
+<br/>
+<h4>Permissions:</h4>android.permission.CAMERA<br/>
+<h4>Events:</h4>
+Ready (Success As Boolean)<br/>PictureTaken (Data() As Byte)<br/>
+<h4>Members:</h4><br/>
+<img src='images/15.png'/>&nbsp;&nbsp;<span style="color: #000000;"><a href='#camera_initialize'><b>Initialize</b></a> (</span><span style="color: #008B8B;">Panel</span><span style="color: #000000;"> </span><span style="color: #0000FF;">As</span><span style="color: #000000;"> android.view.ViewGroup, EventName </span><span style="color: #0000FF;">As</span><span style="color: #000000;"> </span><span style="color: #008B8B;">String</span><span style="color: #000000;">)</span><br/><br/>
+<img src='images/15.png'/>&nbsp;&nbsp;<span style="color: #000000;"><a href='#camera_release'><b>Release</b></a></span><br/><br/>
+<img src='images/15.png'/>&nbsp;&nbsp;<span style="color: #000000;"><a href='#camera_startpreview'><b>StartPreview</b></a></span><br/><br/>
+<img src='images/15.png'/>&nbsp;&nbsp;<span style="color: #000000;"><a href='#camera_stoppreview'><b>StopPreview</b></a></span><br/><br/>
+<img src='images/15.png'/>&nbsp;&nbsp;<span style="color: #000000;"><a href='#camera_takepicture'><b>TakePicture</b></a></span><br/><br/>
+
+<h4>Members description:</h4>
+<a name='camera_initialize'/>
+<h5><img src='images/15.png'/>
+<span style="color: #000000;">Initialize (</span><span style="color: #008B8B;">Panel</span><span style="color: #000000;"> </span><span style="color: #0000FF;">As</span><span style="color: #000000;"> android.view.ViewGroup, EventName </span><span style="color: #0000FF;">As</span><span style="color: #000000;"> </span><span style="color: #008B8B;">String</span><span style="color: #000000;">)</span></h5>Initializes the camera.<br/>Panel - The preview images will be displayed on the panel.<br/>EventName - Events subs prefix.<br/>The Ready event will be raised when the camera has finished opening.<a name='camera_release'/>
+<h5><img src='images/15.png'/>
+<span style="color: #000000;">Release</span></h5>Releases the camera object and allows other processes to access the camera.<a name='camera_startpreview'/>
+<h5><img src='images/15.png'/>
+<span style="color: #000000;">StartPreview</span></h5>Starts displaying the preview images.<a name='camera_stoppreview'/>
+<h5><img src='images/15.png'/>
+<span style="color: #000000;">StopPreview</span></h5>Stops displaying the preview images.<a name='camera_takepicture'/>
+<h5><img src='images/15.png'/>
+<span style="color: #000000;">TakePicture</span></h5>Takes a picture. When the picture is ready, the PictureTaken event will be raised.<br/>You should not call TakePicture while another picture is currently taken.<br/>The preview images are stopped after calling this method. You can call StartPreview to restart the preview images.
+<hr/>
+<a href="#top">Top</a>
+</body>
+</html>

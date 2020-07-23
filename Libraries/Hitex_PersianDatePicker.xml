@@ -1,0 +1,292 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root>
+    <doclet-version-NOT-library-version>1.05</doclet-version-NOT-library-version>
+    <class>
+        <name>wir.hitexroid.persian.datepicker.Hitex_PersianCalendar</name>
+        <shortname>Hitex_PersianCalendar</shortname>
+        <owner>activity</owner>
+        <method>
+            <name>AddPersianDate</name>
+            <comment></comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>field</name>
+                <type>int</type>
+            </parameter>
+            <parameter>
+                <name>amount</name>
+                <type>int</type>
+            </parameter>
+        </method>
+        <method>
+            <name>Parse</name>
+            <comment></comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>DateString</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+        <method>
+            <name>Get</name>
+            <comment></comment>
+            <returntype>int</returntype>
+            <parameter>
+                <name>i</name>
+                <type>int</type>
+            </parameter>
+        </method>
+        <method>
+            <name>IsPersianLeapYear</name>
+            <comment></comment>
+            <returntype>boolean</returntype>
+        </method>
+        <method>
+            <name>setPersianDate</name>
+            <comment>set the persian date it converts PersianDate to the Julian and assigned
+ equivalent milliseconds to the instance</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>PersianYear</name>
+                <type>int</type>
+            </parameter>
+            <parameter>
+                <name>PersianMonth</name>
+                <type>int</type>
+            </parameter>
+            <parameter>
+                <name>PersianDay</name>
+                <type>int</type>
+            </parameter>
+        </method>
+        <property>
+            <name>PersianDay</name>
+            <returntype>int</returntype>
+            <comment></comment>
+        </property>
+        <property>
+            <name>PersianYear</name>
+            <returntype>int</returntype>
+            <comment></comment>
+        </property>
+        <property>
+            <name>WeekYear</name>
+            <returntype>int</returntype>
+            <comment></comment>
+        </property>
+        <property>
+            <name>Delimiter</name>
+            <returntype>java.lang.String</returntype>
+            <parameter>
+                <name>Delimiter</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <comment></comment>
+        </property>
+        <property>
+            <name>PersianLongDate</name>
+            <returntype>java.lang.String</returntype>
+            <comment></comment>
+        </property>
+        <property>
+            <name>PersianMonthName</name>
+            <returntype>java.lang.String</returntype>
+            <comment></comment>
+        </property>
+        <property>
+            <name>TimeInMillis</name>
+            <parameter>
+                <name>Millis</name>
+                <type>long</type>
+            </parameter>
+            <comment></comment>
+        </property>
+        <property>
+            <name>PersianShortDateTime</name>
+            <returntype>java.lang.String</returntype>
+            <comment></comment>
+        </property>
+        <property>
+            <name>PersianLongDateAndTime</name>
+            <returntype>java.lang.String</returntype>
+            <comment></comment>
+        </property>
+        <property>
+            <name>PersianWeekDayName</name>
+            <returntype>java.lang.String</returntype>
+            <comment></comment>
+        </property>
+        <property>
+            <name>PersianMonth</name>
+            <returntype>int</returntype>
+            <comment></comment>
+        </property>
+        <property>
+            <name>FirstDayOfWeek</name>
+            <returntype>int</returntype>
+            <comment></comment>
+        </property>
+    </class>
+    <class>
+        <name>wir.hitexroid.persian.datepicker.Hitex_PersianDatePicker</name>
+        <shortname>Hitex_PersianDatePicker</shortname>
+        <objectwrapper>ir.hamsaa.persiandatepicker.PersianDatePickerDialog</objectwrapper>
+        <owner>activity</owner>
+        <event>onDateSelected (Calendar As Hitex_PersianCalendar)</event>
+        <event>onDisimised</event>
+        <method>
+            <name>IsInitialized</name>
+            <comment></comment>
+            <returntype>boolean</returntype>
+        </method>
+        <method>
+            <name>Initialize</name>
+            <comment>Created by Sadeq Nameni (Hitexroid)
+ '
+ &lt;b&gt;Don't forget to add theme in manifest&lt;/b&gt;
+ '
+ &lt;code&gt;
+ SetApplicationAttribute(android:theme, "@style/MyAppTheme")
+ CreateResource(values, themes.xml,
+ &lt;resources&gt;
+ &lt;style name="MyAppTheme" parent="Theme.AppCompat.Light"&gt;
+ &lt;item name="colorPrimary"&gt;#FF407BF5&lt;/item&gt;
+ &lt;item name="colorPrimaryDark"&gt;#FF2761DB&lt;/item&gt;
+ &lt;item name="colorAccent"&gt;#FF407BF5&lt;/item&gt;
+ &lt;item name="windowActionBar"&gt;false&lt;/item&gt;
+ &lt;item name="windowNoTitle"&gt;true&lt;/item&gt;
+ &lt;/style&gt;
+ &lt;/resources&gt;
+ )
+ &lt;/code&gt;
+ '
+ Example : &lt;code&gt;
+ Picker.Initialize("Picker") _
+ .setTypeFace(Typeface.LoadFromAssets("iransans_light.ttf")) _
+ .TodayButton("Today") _
+ .TodayButtonVisible(True) _
+ .MinYear(1300) _
+ .MaxYear(1400) _
+ .setActionTextColor(0xFF1F2DC9) _
+ .Show
+ &lt;/code&gt;
+ '
+ '
+ Events Example : &lt;code&gt;
+ Sub Picker_onDateSelected (Calendar As Hitex_PersianCalendar)
+ '	Calendar.Delimiter = "."
+ '	Calendar.Delimiter = "/"
+ '
+ Log(Calendar.PersianShortDateTime)
+ '	Log(Calendar.FirstDayOfWeek)
+ '	Log(Calendar.PersianDay)
+ '	Log(Calendar.PersianMonth)
+ Log(Calendar.PersianLongDateAndTime)
+ Log(Calendar.PersianWeekDayName)
+ End Sub
+ '
+ Sub Picker_onDisimised
+ Log("Disimised")
+ End Sub
+ &lt;/code&gt;</comment>
+            <returntype>wir.hitexroid.persian.datepicker.Hi_PersianDatePickerProperties</returntype>
+            <parameter>
+                <name>ba</name>
+                <type>anywheresoftware.b4a.BA</type>
+            </parameter>
+            <parameter>
+                <name>EventName</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+    </class>
+    <class>
+        <name>wir.hitexroid.persian.datepicker.Hi_PersianDatePickerProperties</name>
+        <owner>activity</owner>
+        <method>
+            <name>NegativeButton</name>
+            <comment></comment>
+            <returntype>wir.hitexroid.persian.datepicker.Hi_PersianDatePickerProperties</returntype>
+            <parameter>
+                <name>Negative</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+        <method>
+            <name>PositiveButton</name>
+            <comment></comment>
+            <returntype>wir.hitexroid.persian.datepicker.Hi_PersianDatePickerProperties</returntype>
+            <parameter>
+                <name>Positive</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+        <method>
+            <name>setTypeFace</name>
+            <comment></comment>
+            <returntype>wir.hitexroid.persian.datepicker.Hi_PersianDatePickerProperties</returntype>
+            <parameter>
+                <name>Typeface</name>
+                <type>anywheresoftware.b4a.keywords.constants.TypefaceWrapper</type>
+            </parameter>
+        </method>
+        <method>
+            <name>TodayButton</name>
+            <comment></comment>
+            <returntype>wir.hitexroid.persian.datepicker.Hi_PersianDatePickerProperties</returntype>
+            <parameter>
+                <name>Today</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+        <method>
+            <name>Show</name>
+            <comment></comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>ba</name>
+                <type>anywheresoftware.b4a.BA</type>
+            </parameter>
+        </method>
+        <method>
+            <name>MaxYear</name>
+            <comment></comment>
+            <returntype>wir.hitexroid.persian.datepicker.Hi_PersianDatePickerProperties</returntype>
+            <parameter>
+                <name>MaxYear</name>
+                <type>int</type>
+            </parameter>
+        </method>
+        <method>
+            <name>MinYear</name>
+            <comment></comment>
+            <returntype>wir.hitexroid.persian.datepicker.Hi_PersianDatePickerProperties</returntype>
+            <parameter>
+                <name>MinYear</name>
+                <type>int</type>
+            </parameter>
+        </method>
+        <method>
+            <name>TodayButtonVisible</name>
+            <comment></comment>
+            <returntype>wir.hitexroid.persian.datepicker.Hi_PersianDatePickerProperties</returntype>
+            <parameter>
+                <name>Visible</name>
+                <type>boolean</type>
+            </parameter>
+        </method>
+        <method>
+            <name>setActionTextColor</name>
+            <comment></comment>
+            <returntype>wir.hitexroid.persian.datepicker.Hi_PersianDatePickerProperties</returntype>
+            <parameter>
+                <name>ActionTextColor</name>
+                <type>int</type>
+            </parameter>
+        </method>
+    </class>
+    <version>1.0</version>
+    <author>Sadeq Nameni (Hitexroid)</author>
+    <dependsOn>com.android.support:support-v4</dependsOn>
+    <dependsOn>com.android.support:appcompat-v7</dependsOn>
+</root>

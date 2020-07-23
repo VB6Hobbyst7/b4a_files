@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root>
+    <doclet-version-NOT-library-version>1.04</doclet-version-NOT-library-version>
+    <class>
+        <name>de.donmanfred.RoundImageWrapper</name>
+        <shortname>RoundImage</shortname>
+        <owner>process</owner>
+        <method>
+            <name>CreateBitmap</name>
+            <comment></comment>
+            <returntype>android.graphics.Bitmap</returntype>
+            <parameter>
+                <name>ba</name>
+                <type>anywheresoftware.b4a.BA</type>
+            </parameter>
+            <parameter>
+                <name>bmp</name>
+                <type>android.graphics.Bitmap</type>
+            </parameter>
+        </method>
+        <method>
+            <name>CreateDrawable</name>
+            <comment></comment>
+            <returntype>android.graphics.drawable.Drawable</returntype>
+            <parameter>
+                <name>ba</name>
+                <type>anywheresoftware.b4a.BA</type>
+            </parameter>
+            <parameter>
+                <name>d</name>
+                <type>android.graphics.drawable.Drawable</type>
+            </parameter>
+        </method>
+    </class>
+    <version>1.0</version>
+</root>

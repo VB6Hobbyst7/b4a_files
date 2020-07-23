@@ -1,0 +1,1465 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root>
+    <doclet-version-NOT-library-version>1.07</doclet-version-NOT-library-version>
+    <class>
+        <name>com.aghajari.fragments.Amir_Fragment</name>
+        <shortname>Amir_Fragment</shortname>
+        <objectwrapper>android.support.v4.app.Fragment</objectwrapper>
+        <owner>process</owner>
+        <event>onAttach</event>
+        <event>onCreate (SavedInstanceState As Object)</event>
+        <event>onCreateView (Parent As Panel)</event>
+        <event>onCreateLayout (View As Object,Layout As String)</event>
+        <event>onGetView (View As Object,Inflater As Object,Container As Object,SavedInstanceState As Object) As Object</event>
+        <event>onActivityCreated (SavedInstanceState As Object)</event>
+        <event>onViewCreated (Parent As Panel)</event>
+        <event>onLayoutCreated (View As Object,Layout As String)</event>
+        <event>onStart</event>
+        <event>onResume</event>
+        <event>onPause</event>
+        <event>onStop</event>
+        <event>onDestroyView</event>
+        <event>onDestroy</event>
+        <event>onDetach</event>
+        <event>onCreateAnimation (Transit As int, Enter As Boolean,NextAnim As int) As Object</event>
+        <event>onHiddenChanged (Hidden As Boolean)</event>
+        <event>onConfigurationChanged (NewConfiguration As Object)</event>
+        <event>onViewStateRestored (SavedInstanceState As Object)</event>
+        <event>onActivityResult(RequestCode As Int,ResultCode As Int,Data As Intent)</event>
+        <event>onLowMemory</event>
+        <event>onSaveInstanceState (OutStateBundle As Object)</event>
+        <method>
+            <name>setTargetFragment</name>
+            <comment>Optional target for this fragment.  This may be used, for example,
+ if this fragment is being started by another, and when done wants to
+ give a result back to the first.  The target set here is retained
+ across instances via FragmentManager.putFragment().</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>fragment</name>
+                <type>android.support.v4.app.Fragment</type>
+            </parameter>
+            <parameter>
+                <name>requestCode</name>
+                <type>int</type>
+            </parameter>
+        </method>
+        <method>
+            <name>IsInitialized</name>
+            <comment></comment>
+            <returntype>boolean</returntype>
+        </method>
+        <method>
+            <name>ShouldShowRequestPermissionRationale</name>
+            <comment>Gets whether you should show UI with rationale for requesting a permission.
+ You should do this only if you do not have the permission and the context in
+ which the permission is requested does not clearly communicate to the user
+ what would be the benefit from granting this permission.
+ 
+ For example, if you write a camera app, requesting the camera permission
+ would be expected by the user and no rationale for why it is requested is
+ needed. If however, the app needs location for tagging photos then a non-tech
+ savvy user may wonder how location is related to taking photos. In this case
+ you may choose to show UI with rationale of requesting this permission.</comment>
+            <returntype>boolean</returntype>
+            <parameter>
+                <name>permission</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+        <method>
+            <name>Initialize</name>
+            <comment>Initialize fragment.
+ LayoutName : inflate fragment with layout or pass null for make view
+ 
+ &lt;b&gt; Exetends Activity to FragmentActivity Or AppCompatActivity : &lt;/b&gt; &lt;code&gt;
+ #Extends : android.support.v4.app.FragmentActivity &lt;/code&gt;
+ 
+ &lt;b&gt;Fragment Lifecycle :&lt;/b&gt;
+ Fragment Start :
+ onAttach -&gt; onCreate -&gt; onCreateView -&gt; onActivityCreated -&gt; onStart -&gt; onResume
+ Fragment End :
+ onPause -&gt; onStop -&gt; onDestroyView -&gt; onDestroy -&gt; onDetach</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>ba</name>
+                <type>anywheresoftware.b4a.BA</type>
+            </parameter>
+            <parameter>
+                <name>EventName</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>LayoutName</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+        <property>
+            <name>RetainInstance</name>
+            <returntype>boolean</returntype>
+            <parameter>
+                <name>retain</name>
+                <type>boolean</type>
+            </parameter>
+            <comment>Control whether a fragment instance is retained across Activity
+ re-creation (such as from a configuration change).  This can only
+ be used with fragments not in the back stack.  If set, the fragment
+ lifecycle will be slightly different when an activity is recreated:
+ onDestroy() will not be called (but onDetach() still
+ will be, because the fragment is being detached from its current activity).
+ onCreate(Bundle) will not be called since the fragment
+ is not being re-created.
+ onAttach(Activity) and onActivityCreated(Bundle) will still be called.</comment>
+        </property>
+        <property>
+            <name>SharedElementReturnTransition</name>
+            <returntype>java.lang.Object</returntype>
+            <parameter>
+                <name>transition</name>
+                <type>java.lang.Object</type>
+            </parameter>
+            <comment>Return the Transition that will be used for shared elements transferred back during a
+ pop of the back stack. This Transition acts in the leaving Fragment.
+ Typical Transitions will affect size and location, such as
+ android.transition.ChangeBounds. A null value will cause transferred shared elements 
+ to blink to the final position.
+ If no value is set, the default will be to use the same value as
+ setSharedElementEnterTransition(Object).</comment>
+        </property>
+        <property>
+            <name>TagName</name>
+            <returntype>java.lang.String</returntype>
+            <comment>Get the tag name of the fragment, if specified.</comment>
+        </property>
+        <property>
+            <name>Activity</name>
+            <returntype>android.support.v4.app.FragmentActivity</returntype>
+            <comment>Return the FragmentActivity this fragment is currently associated with.
+ May return null if the fragment is associated with a Context instead.</comment>
+        </property>
+        <property>
+            <name>IsInLayout</name>
+            <returntype>boolean</returntype>
+            <comment>Return true if the layout is included as part of an activity view
+ hierarchy via the &amp;lt;fragment&amp;gt; tag.  This will always be true when
+ fragments are created through the &amp;lt;fragment&amp;gt; tag, except
+ in the case where an old fragment is restored from a previous state and
+ it does not appear in the layout of the current state.</comment>
+        </property>
+        <property>
+            <name>EnterSharedElementCallback</name>
+            <parameter>
+                <name>callback</name>
+                <type>android.support.v4.app.SharedElementCallback</type>
+            </parameter>
+            <comment>When custom transitions are used with Fragments, the enter transition callback
+ is called when this Fragment is attached or detached when not popping the back stack.</comment>
+        </property>
+        <property>
+            <name>Fragment</name>
+            <returntype>android.support.v4.app.Fragment</returntype>
+            <comment></comment>
+        </property>
+        <property>
+            <name>ExitTransition</name>
+            <returntype>java.lang.Object</returntype>
+            <parameter>
+                <name>transition</name>
+                <type>java.lang.Object</type>
+            </parameter>
+            <comment>Returns the Transition that will be used to move Views out of the scene when the
+ fragment is removed, hidden, or detached when not popping the back stack.
+ The exiting Views will be those that are regular Views or ViewGroups that
+ have ViewGroup isTransitionGroup return true. Typical Transitions will extend
+ android.transition.Visibility as exiting is governed by changing visibility
+ from View VISIBLE to View INVISIBLE. If transition is null, the views will
+ remain unaffected.</comment>
+        </property>
+        <property>
+            <name>IsDetached</name>
+            <returntype>boolean</returntype>
+            <comment>Return true if the fragment has been explicitly detached from the UI.
+ That is FragmentTransaction.detach(Fragment) has been used on it.</comment>
+        </property>
+        <property>
+            <name>IsRemoving</name>
+            <returntype>boolean</returntype>
+            <comment>Return true if this fragment is currently being removed from its
+ activity.  This is not whether its activity is finishing, but
+ rather whether it is in the process of being removed from its activity.</comment>
+        </property>
+        <property>
+            <name>ChildFragmentManager</name>
+            <returntype>com.aghajari.fragments.Amir_FragmentManager</returntype>
+            <comment>Return a private FragmentManager for placing and managing Fragments
+ inside of this Fragment.</comment>
+        </property>
+        <property>
+            <name>UserVisibleHint</name>
+            <returntype>boolean</returntype>
+            <parameter>
+                <name>isVisibleToUser</name>
+                <type>boolean</type>
+            </parameter>
+            <comment>Set a hint to the system about whether this fragment's UI is currently visible
+ to the user. This hint defaults to true and is persistent across fragment instance
+ state save and restore.
+
+ An app may set this to false to indicate that the fragment's UI is
+ scrolled out of visibility or is otherwise not directly visible to the user.
+ This may be used by the system to prioritize operations such as fragment lifecycle updates
+ or loader ordering behavior.
+
+ isVisibleToUser : true if this fragment's UI is currently visible to the user (default),
+                        false if it is not.</comment>
+        </property>
+        <property>
+            <name>ReturnTransition</name>
+            <returntype>java.lang.Object</returntype>
+            <parameter>
+                <name>transition</name>
+                <type>java.lang.Object</type>
+            </parameter>
+            <comment>Returns the Transition that will be used to move Views out of the scene when the Fragment is
+ preparing to be removed, hidden, or detached because of popping the back stack. The exiting
+ Views will be those that are regular Views or ViewGroups that have
+ ViewGroup#isTransitionGroup return true. Typical Transitions will extend
+ android.transition.Visibility as entering is governed by changing visibility from
+ View VISIBLE to View INVISIBLE. If &lt;b&gt;transition&lt;/b&gt; is null,
+ entering Views will remain unaffected.</comment>
+        </property>
+        <property>
+            <name>AllowEnterTransitionOverlap</name>
+            <returntype>boolean</returntype>
+            <parameter>
+                <name>allow</name>
+                <type>boolean</type>
+            </parameter>
+            <comment>Returns whether the the exit transition and enter transition overlap or not.
+ When true, the enter transition will start as soon as possible. When false, the
+ enter transition will wait until the exit transition completes before starting.</comment>
+        </property>
+        <property>
+            <name>InitialSavedState</name>
+            <parameter>
+                <name>state</name>
+                <type>android.support.v4.app.Fragment.SavedState</type>
+            </parameter>
+            <comment>Set the initial saved state that this Fragment should restore itself
+ from when first being constructed, as returned by
+ FragmentManager.saveFragmentInstanceState.
+
+ state : The state the fragment should be restored from.</comment>
+        </property>
+        <property>
+            <name>IsMenuVisible</name>
+            <returntype>boolean</returntype>
+            <comment></comment>
+        </property>
+        <property>
+            <name>IsHidden</name>
+            <returntype>boolean</returntype>
+            <comment>Return true if the fragment has been hidden.  By default fragments
+ are shown.  You can find out about changes to this state with
+ onHiddenChanged.  Note that the hidden state is orthogonal
+ to other states -- that is, to be visible to the user, a fragment
+ must be both started and not hidden.</comment>
+        </property>
+        <property>
+            <name>ParentFragment</name>
+            <returntype>com.aghajari.fragments.Amir_Fragment</returntype>
+            <comment>Returns the parent Fragment containing this Fragment.  If this Fragment
+ is attached directly to an Activity, returns null.</comment>
+        </property>
+        <property>
+            <name>IsResumed</name>
+            <returntype>boolean</returntype>
+            <comment>Return true if the fragment is in the resumed state.  This is true
+ for the duration of onResume() and onPause() as well.</comment>
+        </property>
+        <property>
+            <name>HasOptionsMenu</name>
+            <returntype>boolean</returntype>
+            <parameter>
+                <name>hasMenu</name>
+                <type>boolean</type>
+            </parameter>
+            <comment>Report that this fragment would like to participate in populating
+ the options menu by receiving a call to onCreateOptionsMenu
+ and related methods.</comment>
+        </property>
+        <property>
+            <name>SharedElementEnterTransition</name>
+            <returntype>java.lang.Object</returntype>
+            <parameter>
+                <name>transition</name>
+                <type>java.lang.Object</type>
+            </parameter>
+            <comment>Returns the Transition that will be used for shared elements transferred into the content
+ Scene. Typical Transitions will affect size and location, such as
+ android.transition.ChangeBounds. A null value will cause transferred shared elements to 
+ blink to the final position.</comment>
+        </property>
+        <property>
+            <name>TargetFragment</name>
+            <returntype>com.aghajari.fragments.Amir_Fragment</returntype>
+            <comment>Return the target fragment set by setTargetFragment.</comment>
+        </property>
+        <property>
+            <name>EnterTransition</name>
+            <returntype>java.lang.Object</returntype>
+            <parameter>
+                <name>transition</name>
+                <type>java.lang.Object</type>
+            </parameter>
+            <comment>Returns the Transition that will be used to move Views into the initial scene. The entering
+ Views will be those that are regular Views or ViewGroups that have
+ ViewGroup#isTransitionGroup return true. Typical Transitions will extend
+ android.transition.Visibility as entering is governed by changing visibility from
+ View INVISIBLE to View VISIBLE.</comment>
+        </property>
+        <property>
+            <name>Arguments</name>
+            <returntype>android.os.Bundle</returntype>
+            <parameter>
+                <name>args</name>
+                <type>android.os.Bundle</type>
+            </parameter>
+            <comment>Return the arguments supplied when the fragment was instantiated,
+ if any.</comment>
+        </property>
+        <property>
+            <name>ExitSharedElementCallback</name>
+            <parameter>
+                <name>callback</name>
+                <type>android.support.v4.app.SharedElementCallback</type>
+            </parameter>
+            <comment>When custom transitions are used with Fragments, the exit transition callback
+ is called when this Fragment is attached or detached when popping the back stack.</comment>
+        </property>
+        <property>
+            <name>Host</name>
+            <returntype>java.lang.Object</returntype>
+            <comment>Return the host object of this fragment. May return null if the fragment
+ isn't currently being hosted.</comment>
+        </property>
+        <property>
+            <name>View</name>
+            <returntype>android.view.View</returntype>
+            <comment>Get the root view for the fragment's layout, if provided.
+ 
+ Return The fragment's root view, or null if it has no layout.</comment>
+        </property>
+        <property>
+            <name>About</name>
+            <returntype>java.lang.String</returntype>
+            <comment>&lt;b&gt;Amir_Fragment © Amir Hossein Aghajari&lt;/b&gt;
+ TelegramID : @KingAmir272</comment>
+        </property>
+        <property>
+            <name>FragmentManager</name>
+            <returntype>com.aghajari.fragments.Amir_FragmentManager</returntype>
+            <comment>Return the FragmentManager for interacting with fragments associated
+ with this fragment's activity.  Note that this will be non-null slightly
+ before getActivity(), during the time from when the fragment is
+ placed in a FragmentTransaction until it is committed and
+ attached to its activity.
+
+ If this Fragment is a child of another Fragment, the FragmentManager
+ returned here will be the parent's getChildFragmentManager().</comment>
+        </property>
+        <property>
+            <name>IsAdded</name>
+            <returntype>boolean</returntype>
+            <comment>Return true if the fragment is currently added to its activity.</comment>
+        </property>
+        <property>
+            <name>LoaderManager</name>
+            <returntype>android.support.v4.app.LoaderManager</returntype>
+            <comment>Return the LoaderManager for this fragment, creating it if needed.</comment>
+        </property>
+        <property>
+            <name>AllowReturnTransitionOverlap</name>
+            <returntype>boolean</returntype>
+            <parameter>
+                <name>allow</name>
+                <type>boolean</type>
+            </parameter>
+            <comment>Returns whether the the return transition and reenter transition overlap or not.
+ When true, the reenter transition will start as soon as possible. When false, the
+ reenter transition will wait until the return transition completes before starting.</comment>
+        </property>
+        <property>
+            <name>ReenterTransition</name>
+            <returntype>java.lang.Object</returntype>
+            <parameter>
+                <name>transition</name>
+                <type>java.lang.Object</type>
+            </parameter>
+            <comment>Returns the Transition that will be used to move Views in to the scene when returning due
+ to popping a back stack. The entering Views will be those that are regular Views
+ or ViewGroups that have ViewGroup#isTransitionGroup return true. Typical Transitions
+ will extend android.transition.Visibility as exiting is governed by changing
+ visibility from View VISIBLE to View INVISIBLE. If transition is null,
+ the views will remain unaffected. If nothing is set, the default will be to use the same
+ transition as setExitTransition(Object).</comment>
+        </property>
+        <property>
+            <name>TargetRequestCode</name>
+            <returntype>int</returntype>
+            <comment>Return the target request code set by setTargetFragment.</comment>
+        </property>
+        <property>
+            <name>Id</name>
+            <returntype>int</returntype>
+            <comment>Return the identifier this fragment is known by.  This is either
+ the android:id value supplied in a layout or the container view ID
+ supplied when adding the fragment.</comment>
+        </property>
+        <property>
+            <name>MenuVisibility</name>
+            <parameter>
+                <name>menuVisible</name>
+                <type>boolean</type>
+            </parameter>
+            <comment>Set a hint for whether this fragment's menu should be visible.  This
+ is useful if you know that a fragment has been placed in your view
+ hierarchy so that the user can not currently seen it, so any menu items
+ it has should also not be shown.</comment>
+        </property>
+        <property>
+            <name>IsVisible</name>
+            <returntype>boolean</returntype>
+            <comment>Return true if the fragment is currently visible to the user.  This means
+ it: (1) has been added, (2) has its view attached to the window, and 
+ (3) is not hidden.</comment>
+        </property>
+        <field>
+            <name>Tag</name>
+            <comment></comment>
+            <returntype>java.lang.Object</returntype>
+        </field>
+    </class>
+    <class>
+        <name>com.aghajari.fragments.Amir_FragmentManager</name>
+        <shortname>Amir_FragmentManager</shortname>
+        <objectwrapper>android.support.v4.app.FragmentManager</objectwrapper>
+        <owner>activity</owner>
+        <method>
+            <name>GetFragment</name>
+            <comment>Retrieve the current Fragment instance for a reference previously
+ placed with PutFragment(Bundle, String, Fragment).
+
+ &lt;b&gt;bundle :&lt;/b&gt; The bundle from which to retrieve the fragment reference.
+ &lt;b&gt;key :&lt;/b&gt; The name of the entry in the bundle.
+ Returns the current Fragment instance that is associated with
+ the given reference.</comment>
+            <returntype>com.aghajari.fragments.Amir_Fragment</returntype>
+            <parameter>
+                <name>bundle</name>
+                <type>android.os.Bundle</type>
+            </parameter>
+            <parameter>
+                <name>key</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+        <method>
+            <name>RemoveOnBackStackChangedListener</name>
+            <comment>Remove a listener that was previously added with AddOnBackStackChangedListener.</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>Listener</name>
+                <type>android.support.v4.app.FragmentManager.OnBackStackChangedListener</type>
+            </parameter>
+        </method>
+        <method>
+            <name>IsInitialized</name>
+            <comment></comment>
+            <returntype>boolean</returntype>
+        </method>
+        <method>
+            <name>PopBackStackImmediate2</name>
+            <comment>Like PopBackStack2(String, int), but performs the operation immediately
+ inside of the call.  This is like calling ExecutePendingTransactions()
+ afterwards.
+ Returns true if there was something popped, else false.</comment>
+            <returntype>boolean</returntype>
+            <parameter>
+                <name>name</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>flags</name>
+                <type>int</type>
+            </parameter>
+        </method>
+        <method>
+            <name>Initialize</name>
+            <comment></comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>ba</name>
+                <type>anywheresoftware.b4a.BA</type>
+            </parameter>
+        </method>
+        <method>
+            <name>PopBackStackImmediate3</name>
+            <comment>Like PopBackStack3(int, int), but performs the operation immediately
+ inside of the call. This is like calling ExecutePendingTransactions()
+ afterwards.
+ Returns true if there was something popped, else false.</comment>
+            <returntype>boolean</returntype>
+            <parameter>
+                <name>id</name>
+                <type>int</type>
+            </parameter>
+            <parameter>
+                <name>flags</name>
+                <type>int</type>
+            </parameter>
+        </method>
+        <method>
+            <name>BeginTransaction</name>
+            <comment>Start a series of edit operations on the Fragments associated with
+ this FragmentManager.
+ 
+ Note: A fragment transaction can only be created/committed prior
+ to an activity saving its state.  If you try to commit a transaction
+ after FragmentActivity.onSaveInstanceState()
+ and prior to a following FragmentActivity.onStart
+ or FragmentActivity.onResume(), you will get an error.
+ This is because the framework takes care of saving your current fragments
+ in the state, and if changes are made after the state is saved then they
+ will be lost.</comment>
+            <returntype>com.aghajari.fragments.Amir_FragmentTransaction</returntype>
+        </method>
+        <method>
+            <name>SaveFragmentInstanceState</name>
+            <comment>Save the current instance state of the given Fragment. This can be
+ used later when creating a new instance of the Fragment and adding
+ it to the fragment manager, to have it create itself to match the
+ current state returned here.  Note that there are limits on how
+ this can be used:
+
+ -The Fragment must currently be attached to the FragmentManager.
+ -A new Fragment created using this saved state must be the same class
+ type as the Fragment it was created from.
+ -The saved state can not contain dependencies on other fragments --
+ that is it can't use PutFragment(Bundle, String, Fragment) to
+ store a fragment reference because that reference may not be valid when
+ this saved state is later used.  Likewise the Fragment's target and
+ result code are not included in this state.
+ 
+
+ &lt;b&gt;Fragment :&lt;/b&gt; The Fragment whose state is to be saved.
+ Return The generated state.  This will be null if there was no
+ interesting state created by the fragment.</comment>
+            <returntype>android.support.v4.app.Fragment.SavedState</returntype>
+            <parameter>
+                <name>Fragment</name>
+                <type>com.aghajari.fragments.Fragment</type>
+            </parameter>
+        </method>
+        <method>
+            <name>PutFragment</name>
+            <comment>Put a reference to a fragment in a Bundle.  This Bundle can be
+ persisted as saved state, and when later restoring
+ getFragment(Bundle, String) will return the current
+ instance of the same fragment.
+
+ &lt;b&gt;bundle :&lt;/b&gt; The bundle in which to put the fragment reference.
+ &lt;b&gt;key :&lt;/b&gt; The name of the entry in the bundle.
+ &lt;b&gt;fragment :&lt;/b&gt; The Fragment whose reference is to be stored.</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>bundle</name>
+                <type>android.os.Bundle</type>
+            </parameter>
+            <parameter>
+                <name>key</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>fragment</name>
+                <type>com.aghajari.fragments.Fragment</type>
+            </parameter>
+        </method>
+        <method>
+            <name>PopBackStack</name>
+            <comment>Pop the top state off the back stack.  Returns true if there was one
+ to pop, else false.  This function is asynchronous -- it enqueues the
+ request to pop, but the action will not be performed until the application
+ returns to its event loop.</comment>
+            <returntype>void</returntype>
+        </method>
+        <method>
+            <name>ExecutePendingTransactions</name>
+            <comment>After a FragmentTransaction is committed with
+ FragmentTransaction.commit(), it
+ is scheduled to be executed asynchronously on the process's main thread.
+ If you want to immediately executing any such pending operations, you
+ can call this function (only from the main thread) to do so.  Note that
+ all callbacks and other related behavior will be done from within this
+ call, so be careful about where this is called from.
+
+ If you are committing a single transaction that does not modify the
+ fragment back stack, strongly consider using
+ FragmentTransaction.commitNow() instead. This can help avoid
+ unwanted side effects when other code in your app has pending committed
+ transactions that expect different timing.
+
+ Returns true if there were any pending transactions to be
+ executed.</comment>
+            <returntype>boolean</returntype>
+        </method>
+        <method>
+            <name>PopBackStack3</name>
+            <comment>Pop all back stack states up to the one with the given identifier.
+ This function is asynchronous -- it enqueues the
+ request to pop, but the action will not be performed until the application
+ returns to its event loop.
+ 
+ &lt;b&gt;id : &lt;/b&gt; Identifier of the stated to be popped. If no identifier exists,
+ false is returned.
+ The identifier is the number returned by FragmentTransaction.commit().  
+ The POP_BACK_STACK_INCLUSIVE flag can be used to control whether
+ the named state itself is popped.
+ &lt;b&gt;flags : &lt;/b&gt; Either 0 or POP_BACK_STACK_INCLUSIVE.</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>id</name>
+                <type>int</type>
+            </parameter>
+            <parameter>
+                <name>flags</name>
+                <type>int</type>
+            </parameter>
+        </method>
+        <method>
+            <name>PopBackStack2</name>
+            <comment>Pop the last fragment transition from the manager's fragment
+ back stack.  If there is nothing to pop, false is returned.
+ This function is asynchronous -- it enqueues the
+ request to pop, but the action will not be performed until the application
+ returns to its event loop.
+ 
+ &lt;b&gt;name :&lt;/b&gt; If non-null, this is the name of a previous back state
+ to look for; if found, all states up to that state will be popped.  The
+ POP_BACK_STACK_INCLUSIVE flag can be used to control whether
+ the named state itself is popped. If null, only the top state is popped.
+ &lt;b&gt;flags :&lt;/b&gt; Either 0 or POP_BACK_STACK_INCLUSIVE.</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>name</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>flags</name>
+                <type>int</type>
+            </parameter>
+        </method>
+        <method>
+            <name>FindFragmentById</name>
+            <comment>Finds a fragment that was identified by the given id either when inflated
+ from XML or as the container ID when added in a transaction.  This first
+ searches through fragments that are currently added to the manager's
+ activity; if no such fragment is found, then all fragments currently
+ on the back stack associated with this ID are searched.
+ 
+ return The fragment if found or null otherwise.</comment>
+            <returntype>com.aghajari.fragments.Amir_Fragment</returntype>
+            <parameter>
+                <name>id</name>
+                <type>int</type>
+            </parameter>
+        </method>
+        <method>
+            <name>PopBackStackImmediate</name>
+            <comment>Like PopBackStack(), but performs the operation immediately
+ inside of the call.  This is like calling ExecutePendingTransactions()
+ afterwards.
+ Returns true if there was something popped, else false.</comment>
+            <returntype>boolean</returntype>
+        </method>
+        <method>
+            <name>FindFragmentByTag</name>
+            <comment>Finds a fragment that was identified by the given tag either when inflated
+ from XML or as supplied when added in a transaction.  This first
+ searches through fragments that are currently added to the manager's
+ activity; if no such fragment is found, then all fragments currently
+ on the back stack are searched.
+ 
+ return The fragment if found or null otherwise.</comment>
+            <returntype>com.aghajari.fragments.Amir_Fragment</returntype>
+            <parameter>
+                <name>tag</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+        <method>
+            <name>Initialize2</name>
+            <comment></comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>FragmentManager</name>
+                <type>android.support.v4.app.FragmentManager</type>
+            </parameter>
+        </method>
+        <method>
+            <name>AddOnBackStackChangedListener</name>
+            <comment>Add a new listener for changes to the fragment back stack.
+ 
+ &lt;b&gt; Event : &lt;/b&gt;&lt;code&gt;
+ EventName_onBackStackChanged&lt;/code&gt;</comment>
+            <returntype>android.support.v4.app.FragmentManager.OnBackStackChangedListener</returntype>
+            <parameter>
+                <name>ba</name>
+                <type>anywheresoftware.b4a.BA</type>
+            </parameter>
+            <parameter>
+                <name>EventName</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+        <method>
+            <name>GetBackStackEntryAt</name>
+            <comment>Return the BackStackEntry at index &lt;var&gt;index&lt;/var&gt; in the back stack;
+ entries start index 0 being the bottom of the stack.</comment>
+            <returntype>com.aghajari.fragments.Amir_FragmentManager.BackStackEntryData</returntype>
+            <parameter>
+                <name>index</name>
+                <type>int</type>
+            </parameter>
+        </method>
+        <property>
+            <name>BackStackEntryCount</name>
+            <returntype>int</returntype>
+            <comment>Return the number of entries currently in the back stack.</comment>
+        </property>
+        <property>
+            <name>VisibleFragments</name>
+            <returntype>java.util.List</returntype>
+            <comment></comment>
+        </property>
+        <property>
+            <name>LastVisibleFragment</name>
+            <returntype>com.aghajari.fragments.Amir_Fragment</returntype>
+            <comment></comment>
+        </property>
+        <property>
+            <name>Fragments</name>
+            <returntype>java.util.List</returntype>
+            <comment>Get a list of all fragments that have been added to the fragment manager.
+
+ Return The list of all fragments or null if none.</comment>
+        </property>
+        <property>
+            <name>IsDestroyed</name>
+            <returntype>boolean</returntype>
+            <comment>Returns true if the final Activity.onDestroy()
+ call has been made on the FragmentManager's Activity, so this instance is now dead.</comment>
+        </property>
+        <property>
+            <name>FirstVisibleFragment</name>
+            <returntype>com.aghajari.fragments.Amir_Fragment</returntype>
+            <comment></comment>
+        </property>
+        <property>
+            <name>VisibleFragmentsCount</name>
+            <returntype>int</returntype>
+            <comment></comment>
+        </property>
+        <field>
+            <name>POP_BACK_STACK_INCLUSIVE</name>
+            <comment>Flag for popBackStack(String, int)
+ and popBackStack(int, int): If set, and the name or ID of
+ a back stack entry has been supplied, then all matching entries will
+ be consumed until one that doesn't match is found or the bottom of
+ the stack is reached.  Otherwise, all entries up to but not including that entry
+ will be removed.</comment>
+            <returntype>int</returntype>
+        </field>
+    </class>
+    <class>
+        <name>com.aghajari.fragments.Amir_FragmentManager.BackStackEntryData</name>
+        <objectwrapper>android.support.v4.app.FragmentManager.BackStackEntry</objectwrapper>
+        <owner>process</owner>
+        <property>
+            <name>BreadCrumbShortTitle</name>
+            <returntype>java.lang.CharSequence</returntype>
+            <comment>Return the short bread crumb title for the entry, or null if it
+ does not have one.</comment>
+        </property>
+        <property>
+            <name>Id</name>
+            <returntype>int</returntype>
+            <comment>Return the unique identifier for the entry.  This is the only
+ representation of the entry that will persist across activity
+ instances.</comment>
+        </property>
+        <property>
+            <name>BreadCrumbTitle</name>
+            <returntype>java.lang.CharSequence</returntype>
+            <comment>Return the full bread crumb title for the entry, or null if it
+ does not have one.</comment>
+        </property>
+        <property>
+            <name>Name</name>
+            <returntype>java.lang.String</returntype>
+            <comment>Get the name that was supplied to
+ FragmentTransaction.addToBackStack(String) when creating this entry.</comment>
+        </property>
+    </class>
+    <class>
+        <name>com.aghajari.fragments.Amir_FragmentPagerAdapter</name>
+        <shortname>Amir_FragmentPagerAdapter</shortname>
+        <objectwrapper>android.support.v4.view.PagerAdapter</objectwrapper>
+        <owner>activity</owner>
+        <event>GetItem (Position As Int) As Amir_Fragment</event>
+        <event>GetCount As Int</event>
+        <event>GetPageTitle (Position As Int) As String 'CharSequence</event>
+        <method>
+            <name>GetFragment</name>
+            <comment></comment>
+            <returntype>com.aghajari.fragments.Amir_Fragment</returntype>
+            <parameter>
+                <name>position</name>
+                <type>int</type>
+            </parameter>
+        </method>
+        <method>
+            <name>IntoViewPager</name>
+            <comment></comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>ViewPager</name>
+                <type>android.support.v4.view.ViewPager</type>
+            </parameter>
+            <parameter>
+                <name>RemoveLastAdapter</name>
+                <type>boolean</type>
+            </parameter>
+        </method>
+        <method>
+            <name>DestroyDrawingCache</name>
+            <comment></comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>ViewPager</name>
+                <type>android.support.v4.view.ViewPager</type>
+            </parameter>
+        </method>
+        <method>
+            <name>FinishUpdate</name>
+            <comment></comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>container</name>
+                <type>android.view.ViewGroup</type>
+            </parameter>
+        </method>
+        <method>
+            <name>IsInitialized</name>
+            <comment></comment>
+            <returntype>boolean</returntype>
+        </method>
+        <method>
+            <name>Initialize</name>
+            <comment></comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>FragmentManager</name>
+                <type>com.aghajari.fragments.Amir_FragmentManager</type>
+            </parameter>
+            <parameter>
+                <name>AsStatePagerAdapter</name>
+                <type>boolean</type>
+            </parameter>
+            <parameter>
+                <name>ba</name>
+                <type>anywheresoftware.b4a.BA</type>
+            </parameter>
+            <parameter>
+                <name>EventName</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+        <method>
+            <name>InstantiateItem</name>
+            <comment></comment>
+            <returntype>java.lang.Object</returntype>
+            <parameter>
+                <name>container</name>
+                <type>android.view.ViewGroup</type>
+            </parameter>
+            <parameter>
+                <name>position</name>
+                <type>int</type>
+            </parameter>
+        </method>
+        <method>
+            <name>IsStatePagerAdapter</name>
+            <comment></comment>
+            <returntype>boolean</returntype>
+        </method>
+        <method>
+            <name>GetFragmentPosition</name>
+            <comment></comment>
+            <returntype>int</returntype>
+            <parameter>
+                <name>fragment</name>
+                <type>java.lang.Object</type>
+            </parameter>
+        </method>
+        <method>
+            <name>GetPageTitle</name>
+            <comment></comment>
+            <returntype>java.lang.CharSequence</returntype>
+            <parameter>
+                <name>position</name>
+                <type>int</type>
+            </parameter>
+        </method>
+        <method>
+            <name>SetPrimaryItem</name>
+            <comment></comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>container</name>
+                <type>android.view.ViewGroup</type>
+            </parameter>
+            <parameter>
+                <name>position</name>
+                <type>int</type>
+            </parameter>
+            <parameter>
+                <name>object</name>
+                <type>java.lang.Object</type>
+            </parameter>
+        </method>
+        <method>
+            <name>NotifyNullSize</name>
+            <comment></comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>ViewPager</name>
+                <type>android.support.v4.view.ViewPager</type>
+            </parameter>
+        </method>
+        <method>
+            <name>DestroyItem</name>
+            <comment></comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>container</name>
+                <type>android.view.ViewGroup</type>
+            </parameter>
+            <parameter>
+                <name>position</name>
+                <type>int</type>
+            </parameter>
+            <parameter>
+                <name>object</name>
+                <type>java.lang.Object</type>
+            </parameter>
+        </method>
+        <method>
+            <name>RemoveFragments</name>
+            <comment></comment>
+            <returntype>void</returntype>
+        </method>
+        <method>
+            <name>NotifyDataSetChanged</name>
+            <comment></comment>
+            <returntype>void</returntype>
+        </method>
+        <property>
+            <name>Adapter</name>
+            <returntype>android.support.v4.view.PagerAdapter</returntype>
+            <comment></comment>
+        </property>
+        <field>
+            <name>POSITION_NONE</name>
+            <comment></comment>
+            <returntype>int</returntype>
+        </field>
+    </class>
+    <class>
+        <name>com.aghajari.fragments.Amir_FragmentTransaction</name>
+        <shortname>Amir_FragmentTransaction</shortname>
+        <objectwrapper>android.support.v4.app.FragmentTransaction</objectwrapper>
+        <owner>activity</owner>
+        <method>
+            <name>Add</name>
+            <comment>Add a fragment to the activity state.  This fragment may optionally
+ also have its view (if  Fragment.onCreateView
+ returns non-null) into a container view of the activity.
+ 
+ &lt;b&gt;containerViewId :&lt;/b&gt; Optional identifier of the container this fragment is
+ to be placed in.  If 0, it will not be placed in a container.
+ &lt;b&gt;fragment :&lt;/b&gt; The fragment to be added.  This fragment must not already
+ be added to the activity.
+ &lt;b&gt;tag :&lt;/b&gt; Optional tag name for the fragment, to later retrieve the
+ fragment with FragmentManager.findFragmentByTag(String).</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>containerViewId</name>
+                <type>int</type>
+            </parameter>
+            <parameter>
+                <name>fragment</name>
+                <type>com.aghajari.fragments.Fragment</type>
+            </parameter>
+            <parameter>
+                <name>tag</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+        <method>
+            <name>Hide</name>
+            <comment>Hides an existing fragment.  This is only relevant for fragments whose
+ views have been added to a container, as this will cause the view to
+ be hidden.
+ 
+ fragment : The fragment to be hidden.</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>fragment</name>
+                <type>com.aghajari.fragments.Fragment</type>
+            </parameter>
+        </method>
+        <method>
+            <name>CustomAnimations</name>
+            <comment>Set specific animation resources to run for the fragments that are
+ entering and exiting in this transaction.</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>enter</name>
+                <type>int</type>
+            </parameter>
+            <parameter>
+                <name>exit</name>
+                <type>int</type>
+            </parameter>
+        </method>
+        <method>
+            <name>AddToBackStack</name>
+            <comment>Add this transaction to the back stack.  This means that the transaction
+ will be remembered after it is committed, and will reverse its operation
+ when later popped off the stack.
+
+ name: An optional name for this back stack state, or null.</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>name</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+        <method>
+            <name>CustomAnimations4</name>
+            <comment></comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>enter</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>exit</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>popenter</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>popexit</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+        <method>
+            <name>Remove</name>
+            <comment>Remove an existing fragment.  If it was added to a container, its view
+ is also removed from that container.
+fragment: The fragment to be removed.</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>fragment</name>
+                <type>com.aghajari.fragments.Fragment</type>
+            </parameter>
+        </method>
+        <method>
+            <name>IsInitialized</name>
+            <comment></comment>
+            <returntype>boolean</returntype>
+        </method>
+        <method>
+            <name>CustomAnimations2</name>
+            <comment></comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>enter</name>
+                <type>int</type>
+            </parameter>
+            <parameter>
+                <name>exit</name>
+                <type>int</type>
+            </parameter>
+            <parameter>
+                <name>popenter</name>
+                <type>int</type>
+            </parameter>
+            <parameter>
+                <name>popexit</name>
+                <type>int</type>
+            </parameter>
+        </method>
+        <method>
+            <name>Initialize</name>
+            <comment></comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>ba</name>
+                <type>anywheresoftware.b4a.BA</type>
+            </parameter>
+        </method>
+        <method>
+            <name>CustomAnimations3</name>
+            <comment>Set specific animation resources to run for the fragments that are
+ entering and exiting in this transaction.</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>enter</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>exit</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+        <method>
+            <name>Replace4</name>
+            <comment></comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>view</name>
+                <type>android.view.View</type>
+            </parameter>
+            <parameter>
+                <name>fragment</name>
+                <type>com.aghajari.fragments.Fragment</type>
+            </parameter>
+            <parameter>
+                <name>tag</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+        <method>
+            <name>CommitAllowingStateLoss</name>
+            <comment>Like commit but allows the commit to be executed after an
+ activity's state is saved.  This is dangerous because the commit can
+ be lost if the activity needs to later be restored from its state, so
+ this should only be used for cases where it is okay for the UI state
+ to change unexpectedly on the user.</comment>
+            <returntype>int</returntype>
+        </method>
+        <method>
+            <name>DisallowAddToBackStack</name>
+            <comment>Disallow calls to addToBackStack(String). Any future calls to
+ addToBackStack will throw IllegalStateException. If addToBackStack
+ has already been called, this method will throw IllegalStateException.</comment>
+            <returntype>void</returntype>
+        </method>
+        <method>
+            <name>Replace</name>
+            <comment>Calls replace2(int, Fragment, String) with a null tag.</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>containerViewId</name>
+                <type>int</type>
+            </parameter>
+            <parameter>
+                <name>fragment</name>
+                <type>com.aghajari.fragments.Fragment</type>
+            </parameter>
+        </method>
+        <method>
+            <name>AddSharedElement</name>
+            <comment></comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>View</name>
+                <type>android.view.View</type>
+            </parameter>
+            <parameter>
+                <name>Transition</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+        <method>
+            <name>Attach</name>
+            <comment>Re-attach a fragment after it had previously been deatched from
+ the UI with detach(Fragment).  This
+ causes its view hierarchy to be re-created, attached to the UI,
+ and displayed.
+
+ fragment : The fragment to be attached.</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>fragment</name>
+                <type>com.aghajari.fragments.Fragment</type>
+            </parameter>
+        </method>
+        <method>
+            <name>GenerateViewId</name>
+            <comment></comment>
+            <returntype>int</returntype>
+            <parameter>
+                <name>view</name>
+                <type>android.view.View</type>
+            </parameter>
+        </method>
+        <method>
+            <name>Replace2</name>
+            <comment>Replace an existing fragment that was added to a container.  This is
+ essentially the same as calling remove(Fragment) for all
+ currently added fragments that were added with the same containerViewId
+ and then add(int, Fragment, String) with the same arguments
+ given here.
+ 
+ &lt;b&gt;containerViewId :&lt;/b&gt; Identifier of the container whose fragment(s) are
+ to be replaced.
+ &lt;b&gt;fragment :&lt;/b&gt; The new fragment to place in the container.
+ &lt;b&gt;tag :&lt;/b&gt; Optional tag name for the fragment, to later retrieve the
+ fragment with FragmentManager.findFragmentByTag(String).</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>containerViewId</name>
+                <type>int</type>
+            </parameter>
+            <parameter>
+                <name>fragment</name>
+                <type>com.aghajari.fragments.Fragment</type>
+            </parameter>
+            <parameter>
+                <name>tag</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+        <method>
+            <name>GetViewId</name>
+            <comment></comment>
+            <returntype>int</returntype>
+            <parameter>
+                <name>view</name>
+                <type>android.view.View</type>
+            </parameter>
+        </method>
+        <method>
+            <name>Replace3</name>
+            <comment>replace to view :
+ &lt;b&gt; Example : &lt;/b&gt;&lt;code&gt;
+ Dim Parent As Panel
+ 
+ Sub Activity_Create (FirstTime As Boolean)
+ Parent.Initialize("")
+ ...
+ 
+ 'Generate View Id
+ Dim FT As Amir_FragmentTransaction
+ FT.Initialize
+ FT.GenerateViewId(Parent)
+ End Sub
+ 
+ Sub Activity_Click
+ 'Replace Fragment
+ Dim FT As Amir_FragmentTransaction
+ FT.Initialize
+ FT.Replace3(Parent,YOURFRAGMENT)
+ FT.Commit
+ End Sub&lt;/code&gt;</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>view</name>
+                <type>android.view.View</type>
+            </parameter>
+            <parameter>
+                <name>fragment</name>
+                <type>com.aghajari.fragments.Fragment</type>
+            </parameter>
+        </method>
+        <method>
+            <name>Commit</name>
+            <comment>Schedules a commit of this transaction.  The commit does
+ not happen immediately; it will be scheduled as work on the main thread
+ to be done the next time that thread is ready.
+
+ A transaction can only be committed with this method
+ prior to its containing activity saving its state.  If the commit is
+ attempted after that point, an exception will be thrown.  This is
+ because the state after the commit can be lost if the activity needs to
+ be restored from its state.  See commitAllowingStateLoss() for
+ situations where it may be okay to lose the commit.
+ 
+ Returns the identifier of this transaction's back stack entry,
+ if addToBackStack(String) had been called.  Otherwise, returns
+ a negative number.</comment>
+            <returntype>int</returntype>
+        </method>
+        <method>
+            <name>Initialize2</name>
+            <comment></comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>FragmentTransaction</name>
+                <type>android.support.v4.app.FragmentTransaction</type>
+            </parameter>
+        </method>
+        <method>
+            <name>Show</name>
+            <comment>Shows a previously hidden fragment.  This is only relevant for fragments whose
+ views have been added to a container, as this will cause the view to
+ be shown.
+ 
+ fragment : The fragment to be shown.</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>fragment</name>
+                <type>com.aghajari.fragments.Fragment</type>
+            </parameter>
+        </method>
+        <method>
+            <name>Detach</name>
+            <comment>Detach the given fragment from the UI.  This is the same state as
+ when it is put on the back stack: the fragment is removed from
+ the UI, however its state is still being actively managed by the
+ fragment manager.  When going into this state its view hierarchy
+ is destroyed.
+
+ fragment : The fragment to be detached.</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>fragment</name>
+                <type>com.aghajari.fragments.Fragment</type>
+            </parameter>
+        </method>
+        <property>
+            <name>IsEmpty</name>
+            <returntype>boolean</returntype>
+            <comment>return true if this transaction contains no operations, false otherwise.</comment>
+        </property>
+        <property>
+            <name>IsAddToBackStackAllowed</name>
+            <returntype>boolean</returntype>
+            <comment>Returns true if this FragmentTransaction is allowed to be added to the back
+ stack. If this method would return false, addToBackStack(String)
+ will throw IllegalStateException.
+
+ return True if addToBackStack(String) is permitted on this transaction.</comment>
+        </property>
+        <property>
+            <name>BreadCrumbTitle2</name>
+            <parameter>
+                <name>text</name>
+                <type>java.lang.CharSequence</type>
+            </parameter>
+            <comment>Like setBreadCrumbTitle(int) but taking a raw string; this
+ method is &lt;em&gt;not&lt;/em&gt; recommended, as the string can not be changed
+ later if the locale changes.</comment>
+        </property>
+        <property>
+            <name>BreadCrumbShortTitle</name>
+            <parameter>
+                <name>res</name>
+                <type>int</type>
+            </parameter>
+            <comment>Set the short title to show as a bread crumb when this transaction
+ is on the back stack, as used by FragmentBreadCrumbs.
+
+ res: A string resource containing the title.</comment>
+        </property>
+        <property>
+            <name>Transition</name>
+            <parameter>
+                <name>transit</name>
+                <type>int</type>
+            </parameter>
+            <comment>Select a standard transition animation for this transaction.  May be
+ one of TRANSIT_NONE, TRANSIT_FRAGMENT_OPEN, or TRANSIT_FRAGMENT_CLOSE</comment>
+        </property>
+        <property>
+            <name>BreadCrumbShortTitle2</name>
+            <parameter>
+                <name>text</name>
+                <type>java.lang.CharSequence</type>
+            </parameter>
+            <comment>Like setBreadCrumbShortTitle(int) but taking a raw string; this
+ method is not recommended, as the string can not be changed
+ later if the locale changes.</comment>
+        </property>
+        <property>
+            <name>TransitionStyle</name>
+            <parameter>
+                <name>styleRes</name>
+                <type>int</type>
+            </parameter>
+            <comment>Set a custom style resource that will be used for resolving transit
+ animations.</comment>
+        </property>
+        <property>
+            <name>BreadCrumbTitle</name>
+            <parameter>
+                <name>res</name>
+                <type>int</type>
+            </parameter>
+            <comment>Set the full title to show as a bread crumb when this transaction
+ is on the back stack, as used by FragmentBreadCrumbs.
+
+ res : A string resource containing the title.</comment>
+        </property>
+        <field>
+            <name>TRANSIT_FRAGMENT_FADE</name>
+            <comment>Fragment should simply fade in or out; that is, no strong navigation associated
+ with it except that it is appearing or disappearing for some reason.</comment>
+            <returntype>int</returntype>
+        </field>
+        <field>
+            <name>TRANSIT_ENTER_MASK</name>
+            <comment>Bit mask that is set for all enter transitions.</comment>
+            <returntype>int</returntype>
+        </field>
+        <field>
+            <name>TRANSIT_EXIT_MASK</name>
+            <comment>Bit mask that is set for all exit transitions.</comment>
+            <returntype>int</returntype>
+        </field>
+        <field>
+            <name>TRANSIT_FRAGMENT_CLOSE</name>
+            <comment>Fragment is being removed from the stack</comment>
+            <returntype>int</returntype>
+        </field>
+        <field>
+            <name>NO_ID</name>
+            <comment></comment>
+            <returntype>int</returntype>
+        </field>
+        <field>
+            <name>TRANSIT_UNSET</name>
+            <comment>Not set up for a transition.</comment>
+            <returntype>int</returntype>
+        </field>
+        <field>
+            <name>TRANSIT_NONE</name>
+            <comment>No animation for transition.</comment>
+            <returntype>int</returntype>
+        </field>
+        <field>
+            <name>TRANSIT_FRAGMENT_OPEN</name>
+            <comment>Fragment is being added onto the stack</comment>
+            <returntype>int</returntype>
+        </field>
+    </class>
+    <version>1.1</version>
+    <author>AmirHosseinAghajari</author>
+    <dependsOn>com.android.support:support-v4</dependsOn>
+</root>

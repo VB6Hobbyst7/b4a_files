@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root>
+    <doclet-version-NOT-library-version>1.02</doclet-version-NOT-library-version>
+    <class>
+        <name>uk.co.martinpearman.b4a.androidresources.AndroidResources</name>
+        <shortname>AndroidResources</shortname>
+        <owner>process</owner>
+        <method>
+            <name>GetApplicationStrings</name>
+            <comment>Get one or more application resource Strings.
+Pass a Map to this method where each Map key is an application String resource name.
+The method will return the same Map object where the Map values are the application resource Strings defined by the Map keys.
+If an application resource String is not found the Map value will not be changed.</comment>
+            <returntype>anywheresoftware.b4a.objects.collections.Map</returntype>
+            <parameter>
+                <name>ResourceNames</name>
+                <type>anywheresoftware.b4a.objects.collections.Map</type>
+            </parameter>
+        </method>
+        <method>
+            <name>GetApplicationDrawables</name>
+            <comment>Get one or more application resource Drawables.
+Pass a Map to this method where each Map key is an application Drawable resource name.
+The method will return the same Map object where the Map values are the application resource Drawables defined by the Map keys.
+If an application resource Drawable is not found the Map value will not be changed.</comment>
+            <returntype>anywheresoftware.b4a.objects.collections.Map</returntype>
+            <parameter>
+                <name>ResourceNames</name>
+                <type>anywheresoftware.b4a.objects.collections.Map</type>
+            </parameter>
+        </method>
+        <method>
+            <name>GetAndroidDrawables</name>
+            <comment>Get one or more android resource Drawables.
+Pass a Map to this method where each Map key is an android Drawable resource name.
+The method will return the same Map object where the Map values are the android resource Drawables defined by the Map keys.
+If an android resource Drawable is not found the Map value will not be changed.</comment>
+            <returntype>anywheresoftware.b4a.objects.collections.Map</returntype>
+            <parameter>
+                <name>ResourceNames</name>
+                <type>anywheresoftware.b4a.objects.collections.Map</type>
+            </parameter>
+        </method>
+        <method>
+            <name>GetApplicationString</name>
+            <comment>Get a application resource String by ResourceName.
+Returns Null if the String is not found.</comment>
+            <returntype>java.lang.String</returntype>
+            <parameter>
+                <name>ResourceName</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+        <method>
+            <name>GetAndroidStrings</name>
+            <comment>Get one or more android resource Strings.
+Pass a Map to this method where each Map key is an android String resource name.
+The method will return the same Map object where the Map values are the android resource Strings defined by the Map keys.
+If an android String is not found the Map value will not be changed.</comment>
+            <returntype>anywheresoftware.b4a.objects.collections.Map</returntype>
+            <parameter>
+                <name>ResourceNames</name>
+                <type>anywheresoftware.b4a.objects.collections.Map</type>
+            </parameter>
+        </method>
+        <method>
+            <name>GetAndroidString</name>
+            <comment>Get an android resource string by ResourceName.
+Returns Null if the String is not found.</comment>
+            <returntype>java.lang.String</returntype>
+            <parameter>
+                <name>ResourceName</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+        <method>
+            <name>GetApplicationDrawable</name>
+            <comment>Get a application resource Drawable by ResourceName.
+Returns Null if the Drawable is not found.</comment>
+            <returntype>android.graphics.drawable.Drawable</returntype>
+            <parameter>
+                <name>ResourceName</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+        <method>
+            <name>GetAndroidStringNames</name>
+            <comment>Get a List of all available android String resource names.</comment>
+            <returntype>anywheresoftware.b4a.objects.collections.List</returntype>
+        </method>
+        <method>
+            <name>GetAndroidDrawableNames</name>
+            <comment>Get a List of all available android Drawable resource names.</comment>
+            <returntype>anywheresoftware.b4a.objects.collections.List</returntype>
+        </method>
+        <method>
+            <name>GetAndroidDrawable</name>
+            <comment>Get an android resource drawable by ResourceName.
+Returns Null if the Drawable is not found.</comment>
+            <returntype>android.graphics.drawable.Drawable</returntype>
+            <parameter>
+                <name>ResourceName</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+    </class>
+    <version>1.4</version>
+    <author>Martin Pearman</author>
+</root>

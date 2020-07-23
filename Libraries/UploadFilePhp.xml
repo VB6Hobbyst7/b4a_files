@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root>
+    <doclet-version-NOT-library-version>1.04</doclet-version-NOT-library-version>
+    <class>
+        <name>com.spinter.uploadfilephp.UploadFilePhp</name>
+        <shortname>UploadFilePhp</shortname>
+        <owner>process</owner>
+        <event>statusUpload (value As String)</event>
+        <event>sendFile (value As String)</event>
+        <event>statusVISIBLE (onoff As Boolean,value As String)</event>
+        <permission>android.permission.INTERNET</permission>
+        <method>
+            <name>Initialize</name>
+            <comment>Initialize this Object
+  IMPORTANT:this should be declared in Sub Process_Globals.
+  EventName - The Prefix that will be used for statusUpload event.
+  Up.Initialize("Up")</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>pBA</name>
+                <type>anywheresoftware.b4a.BA</type>
+            </parameter>
+            <parameter>
+                <name>eventName</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+        <method>
+            <name>doFileUpload</name>
+            <comment>Dim ProgressBar as ProgressBar1 
+ Dim Label1 as Label or Dim EditText1 As EditText is possible Label and EditText
+  Sample:
+  doFileUpload(ProgressBar1,Label1,"/sdcard/test.jpg","http://www.test.net")
+  or null ProgressBar1
+  doFileUpload(Null,Null,"/sdcard/test.jpg","http://www.test.net")</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>pBA</name>
+                <type>anywheresoftware.b4a.BA</type>
+            </parameter>
+            <parameter>
+                <name>Progress_Bar</name>
+                <type>android.widget.ProgressBar</type>
+            </parameter>
+            <parameter>
+                <name>Label</name>
+                <type>android.widget.TextView</type>
+            </parameter>
+            <parameter>
+                <name>Name_File</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>Link</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+        <method>
+            <name>Abaut</name>
+            <comment>Return: Abaut</comment>
+            <returntype>java.lang.String</returntype>
+        </method>
+        <method>
+            <name>UploadKill</name>
+            <comment>Connection Kill.
+   Sample Use For App connection on.
+
+   Sub Activity_KeyPress (KeyCode As Int) As Boolean 
+   If KeyCode=KeyCodes.KEYCODE_BACK Then
+   Up.UploadKill
+   End If
+   End Sub</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>ba</name>
+                <type>anywheresoftware.b4a.BA</type>
+            </parameter>
+        </method>
+        <field>
+            <name>B4A_log</name>
+            <comment>Sample for Deplov for read B4A Log
+  Dim Up As UploadFilePhp
+  Up.Initialize("Up")
+  Up.B4Alog=True</comment>
+            <returntype>boolean</returntype>
+        </field>
+    </class>
+    <version>1.0</version>
+    <author>Spinter</author>
+</root>

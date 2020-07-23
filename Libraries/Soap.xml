@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <doclet-version-NOT-library-version>1.00</doclet-version-NOT-library-version>
+  <dependsOn includesSingletonModules="true">httputils2</dependsOn>
+  <dependsOn>http</dependsOn>
+  <dependsOn>stringutils</dependsOn>
+  <class>
+    <name>b4a.example.soap</name>
+    <shortname>Soap</shortname>
+    <owner>process</owner>
+    <method>
+      <name>IsInitialized</name>
+      <comment>Tests whether the object has been initialized.</comment>
+      <returntype>boolean</returntype>
+    </method>
+    <method>
+      <name DesignerName="AddField">_addfield</name>
+      <returntype>String</returntype>
+      <parameter>
+        <name>FieldName</name>
+        <type>String</type>
+      </parameter>
+      <parameter>
+        <name>FieldType</name>
+        <type>String</type>
+      </parameter>
+      <parameter>
+        <name>FieldValue</name>
+        <type>String</type>
+      </parameter>
+    </method>
+    <method>
+      <name DesignerName="Initialize">_initialize</name>
+      <returntype>String</returntype>
+      <parameter>
+        <name>ba</name>
+        <type>anywheresoftware.b4a.BA</type>
+      </parameter>
+      <parameter>
+        <name>Url</name>
+        <type>String</type>
+      </parameter>
+      <parameter>
+        <name>MethodName</name>
+        <type>String</type>
+      </parameter>
+      <parameter>
+        <name>Module</name>
+        <type>Object</type>
+      </parameter>
+      <parameter>
+        <name>EventName</name>
+        <type>String</type>
+      </parameter>
+    </method>
+    <method>
+      <name DesignerName="SendRequest">_sendrequest</name>
+      <returntype>String</returntype>
+    </method>
+    <field>
+      <name DesignerName="TYPE_STRING">_type_string</name>
+      <returntype>String</returntype>
+    </field>
+    <field>
+      <name DesignerName="TYPE_INTEGER">_type_integer</name>
+      <returntype>String</returntype>
+    </field>
+    <field>
+      <name DesignerName="TYPE_FLOAT">_type_float</name>
+      <returntype>String</returntype>
+    </field>
+    <field>
+      <name DesignerName="TYPE_DATE">_type_date</name>
+      <returntype>String</returntype>
+    </field>
+    <field>
+      <name DesignerName="TYPE_DOUBLE">_type_double</name>
+      <returntype>String</returntype>
+    </field>
+    <field>
+      <name DesignerName="TYPE_BINARY">_type_binary</name>
+      <returntype>String</returntype>
+    </field>
+  </class>
+  <version>1</version>
+</root>

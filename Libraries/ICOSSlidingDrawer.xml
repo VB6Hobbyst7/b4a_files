@@ -1,0 +1,461 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root>
+    <doclet-version-NOT-library-version>1.01</doclet-version-NOT-library-version>
+    <class>
+        <name>it.giuseppe.salvi.icos.library.ICOSSlidingDrawer</name>
+        <shortname>ICOSSlidingDrawer</shortname>
+        <objectwrapper>android.widget.SlidingDrawer</objectwrapper>
+        <owner>activity</owner>
+        <event>OnDrawerOpened</event>
+        <event>OnDrawerClosed</event>
+        <event>OnScrollStarted</event>
+        <event>OnScrollEnded</event>
+        <method>
+            <name>RotatateHandle</name>
+            <comment>Auto-rotate the Handle.</comment>
+            <returntype>void</returntype>
+        </method>
+        <method>
+            <name>RequestFocus</name>
+            <comment></comment>
+            <returntype>boolean</returntype>
+        </method>
+        <method>
+            <name>BringToFront</name>
+            <comment>Change the z order of the child so it's on top of all other children.</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>view</name>
+                <type>android.view.View</type>
+            </parameter>
+        </method>
+        <method>
+            <name>IsOpened</name>
+            <comment>Indicates whether the drawer is currently fully opened.</comment>
+            <returntype>boolean</returntype>
+        </method>
+        <method>
+            <name>RemoveView</name>
+            <comment></comment>
+            <returntype>void</returntype>
+        </method>
+        <method>
+            <name>SetBackgroundImage</name>
+            <comment></comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>arg0</name>
+                <type>android.graphics.Bitmap</type>
+            </parameter>
+        </method>
+        <method>
+            <name>Lock</name>
+            <comment>Locks the SlidingDrawer so that touch events are ignores.</comment>
+            <returntype>void</returntype>
+        </method>
+        <method>
+            <name>RemoveLayout</name>
+            <comment>Removes the entire layout you previously loaded.</comment>
+            <returntype>void</returntype>
+        </method>
+        <method>
+            <name>UnLock</name>
+            <comment>Unlocks the SlidingDrawer so that touch events are processed.</comment>
+            <returntype>void</returntype>
+        </method>
+        <method>
+            <name>Invalidate3</name>
+            <comment></comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>arg0</name>
+                <type>int</type>
+            </parameter>
+            <parameter>
+                <name>arg1</name>
+                <type>int</type>
+            </parameter>
+            <parameter>
+                <name>arg2</name>
+                <type>int</type>
+            </parameter>
+            <parameter>
+                <name>arg3</name>
+                <type>int</type>
+            </parameter>
+        </method>
+        <method>
+            <name>AnimateOpen</name>
+            <comment>Opens the drawer with an animation.</comment>
+            <returntype>void</returntype>
+        </method>
+        <method>
+            <name>ReplaceView</name>
+            <comment>Replace a view with any other, to the same position
+ 
+ Example:
+ Dim sd As ICOSSlidingDrawer
+ Dim btn As Button
+ 
+ btn.Initialize("btn")
+ 
+ sd.ReplaceView(img1,btn)  it will Replace the btn to the same position of img.</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>oldView</name>
+                <type>android.view.View</type>
+            </parameter>
+            <parameter>
+                <name>newView</name>
+                <type>android.view.View</type>
+            </parameter>
+        </method>
+        <method>
+            <name>Invalidate2</name>
+            <comment></comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>arg0</name>
+                <type>android.graphics.Rect</type>
+            </parameter>
+        </method>
+        <method>
+            <name>AnimateToggle</name>
+            <comment>Toggles the drawer open and close with an animation.</comment>
+            <returntype>void</returntype>
+        </method>
+        <method>
+            <name>ShowView</name>
+            <comment>Show a child view previously hidden.</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>view</name>
+                <type>android.view.View</type>
+            </parameter>
+        </method>
+        <method>
+            <name>IsInitialized</name>
+            <comment></comment>
+            <returntype>boolean</returntype>
+        </method>
+        <method>
+            <name>SlidingClose</name>
+            <comment>Close the drawer immediately.</comment>
+            <returntype>void</returntype>
+        </method>
+        <method>
+            <name>SlidingOpen</name>
+            <comment>Opens the drawer immediately.</comment>
+            <returntype>void</returntype>
+        </method>
+        <method>
+            <name>Initialize</name>
+            <comment>Intitialize the Object
+ 
+ example:
+ 
+ Dim sd As ICOSSlidingDrawer
+ Initialize("sd",sd.SlideFromBottom)</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>ba</name>
+                <type>anywheresoftware.b4a.BA</type>
+            </parameter>
+            <parameter>
+                <name>EventName</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>Orientation</name>
+                <type>int</type>
+            </parameter>
+        </method>
+        <method>
+            <name>AnimateClose</name>
+            <comment>Closes the drawer with an animation.</comment>
+            <returntype>void</returntype>
+        </method>
+        <method>
+            <name>HideView</name>
+            <comment>Hide a child view that you want to use later.</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>view</name>
+                <type>android.view.View</type>
+            </parameter>
+        </method>
+        <method>
+            <name>IsMoving</name>
+            <comment>Indicates whether the drawer is scrolling or flinging.</comment>
+            <returntype>boolean</returntype>
+        </method>
+        <method>
+            <name>SetLayout</name>
+            <comment></comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>arg0</name>
+                <type>int</type>
+            </parameter>
+            <parameter>
+                <name>arg1</name>
+                <type>int</type>
+            </parameter>
+            <parameter>
+                <name>arg2</name>
+                <type>int</type>
+            </parameter>
+            <parameter>
+                <name>arg3</name>
+                <type>int</type>
+            </parameter>
+        </method>
+        <method>
+            <name>Invalidate</name>
+            <comment></comment>
+            <returntype>void</returntype>
+        </method>
+        <method>
+            <name>RemoveViewAt</name>
+            <comment>Removes the view at the specified position in the group.</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>index</name>
+                <type>int</type>
+            </parameter>
+        </method>
+        <method>
+            <name>RotatateHandleBack</name>
+            <comment>Auto-rotate back the Handle.</comment>
+            <returntype>void</returntype>
+        </method>
+        <method>
+            <name>AddView</name>
+            <comment>Adds a child view with the specified [ left, top, width, height ].</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>view</name>
+                <type>android.view.View</type>
+            </parameter>
+            <parameter>
+                <name>left</name>
+                <type>int</type>
+            </parameter>
+            <parameter>
+                <name>top</name>
+                <type>int</type>
+            </parameter>
+            <parameter>
+                <name>width</name>
+                <type>int</type>
+            </parameter>
+            <parameter>
+                <name>height</name>
+                <type>int</type>
+            </parameter>
+        </method>
+        <method>
+            <name>SlidingToggle</name>
+            <comment>Toggles the drawer open and close.</comment>
+            <returntype>void</returntype>
+        </method>
+        <method>
+            <name>LoadLayout</name>
+            <comment>Load the layout file created with the visual designer in SlidingDrawer.</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>Layout</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>ba</name>
+                <type>anywheresoftware.b4a.BA</type>
+            </parameter>
+        </method>
+        <method>
+            <name>SendToBack</name>
+            <comment>Change the z order of the child so it's on back of all other children</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>view</name>
+                <type>android.view.View</type>
+            </parameter>
+        </method>
+        <property>
+            <name>Enabled</name>
+            <returntype>boolean</returntype>
+            <parameter>
+                <name>arg0</name>
+                <type>boolean</type>
+            </parameter>
+            <comment></comment>
+        </property>
+        <property>
+            <name>Top</name>
+            <returntype>int</returntype>
+            <parameter>
+                <name>arg0</name>
+                <type>int</type>
+            </parameter>
+            <comment></comment>
+        </property>
+        <property>
+            <name>Visible</name>
+            <returntype>boolean</returntype>
+            <parameter>
+                <name>arg0</name>
+                <type>boolean</type>
+            </parameter>
+            <comment></comment>
+        </property>
+        <property>
+            <name>ChangeHandleImageFromRes</name>
+            <parameter>
+                <name>arrow</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <comment>Change the Image Handle to a given resource.</comment>
+        </property>
+        <property>
+            <name>BackgroundDrawable</name>
+            <parameter>
+                <name>drawable</name>
+                <type>android.graphics.drawable.Drawable</type>
+            </parameter>
+            <comment>Set the background to a given Drawable, or remove the background.</comment>
+        </property>
+        <property>
+            <name>Background</name>
+            <returntype>android.graphics.drawable.Drawable</returntype>
+            <parameter>
+                <name>arg0</name>
+                <type>android.graphics.drawable.Drawable</type>
+            </parameter>
+            <comment></comment>
+        </property>
+        <property>
+            <name>Height</name>
+            <returntype>int</returntype>
+            <parameter>
+                <name>arg0</name>
+                <type>int</type>
+            </parameter>
+            <comment></comment>
+        </property>
+        <property>
+            <name>BackgroundColor</name>
+            <parameter>
+                <name>color</name>
+                <type>int</type>
+            </parameter>
+            <comment>Sets the background color for this view.</comment>
+        </property>
+        <property>
+            <name>Left</name>
+            <returntype>int</returntype>
+            <parameter>
+                <name>arg0</name>
+                <type>int</type>
+            </parameter>
+            <comment></comment>
+        </property>
+        <property>
+            <name>BackgroundResource</name>
+            <parameter>
+                <name>resid</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <comment>Set the background to a given resource.</comment>
+        </property>
+        <property>
+            <name>Color</name>
+            <parameter>
+                <name>arg0</name>
+                <type>int</type>
+            </parameter>
+            <comment></comment>
+        </property>
+        <property>
+            <name>ChildCount</name>
+            <returntype>int</returntype>
+            <comment>Returns the number of children in the group.</comment>
+        </property>
+        <property>
+            <name>BackgroundImage</name>
+            <parameter>
+                <name>bitmap</name>
+                <type>android.graphics.Bitmap</type>
+            </parameter>
+            <comment>Set the background to a given bitmap.</comment>
+        </property>
+        <property>
+            <name>Tag</name>
+            <returntype>java.lang.Object</returntype>
+            <parameter>
+                <name>arg0</name>
+                <type>java.lang.Object</type>
+            </parameter>
+            <comment></comment>
+        </property>
+        <property>
+            <name>StartAnimationFromRes</name>
+            <parameter>
+                <name>anim</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <comment>Sets the animation from resource to play for this view.</comment>
+        </property>
+        <property>
+            <name>ChangeHandleImage</name>
+            <parameter>
+                <name>arrow</name>
+                <type>android.graphics.Bitmap</type>
+            </parameter>
+            <comment>Change the Image Handle to a given Bitmap.</comment>
+        </property>
+        <property>
+            <name>Width</name>
+            <returntype>int</returntype>
+            <parameter>
+                <name>arg0</name>
+                <type>int</type>
+            </parameter>
+            <comment></comment>
+        </property>
+        <property>
+            <name>StartAnimation</name>
+            <parameter>
+                <name>anim</name>
+                <type>android.view.animation.Animation</type>
+            </parameter>
+            <comment>Sets the animation to play for this view.</comment>
+        </property>
+        <property>
+            <name>Version</name>
+            <returntype>double</returntype>
+            <comment>Return the version of this library</comment>
+        </property>
+        <field>
+            <name>SlideFromLeft</name>
+            <comment></comment>
+            <returntype>int</returntype>
+        </field>
+        <field>
+            <name>SlideFromBottom</name>
+            <comment></comment>
+            <returntype>int</returntype>
+        </field>
+        <field>
+            <name>SlideFromRight</name>
+            <comment></comment>
+            <returntype>int</returntype>
+        </field>
+        <field>
+            <name>SlideFromTop</name>
+            <comment></comment>
+            <returntype>int</returntype>
+        </field>
+    </class>
+    <version>1.4</version>
+    <author>Giuseppe Salvi</author>
+</root>

@@ -1,0 +1,145 @@
+﻿Version=2.2
+AppType=JavaFX
+IconFile=
+NumberOfModules=1
+Module1=KeyValueStore
+Build1=Default,b4j.example
+NumberOfFiles=3
+File1=1.fxml
+File2=pack.jpg
+File3=pack.jpg
+NumberOfLibraries=5
+Library1=jcore
+Library2=jfx
+Library3=jmsgboxes
+Library4=jrandomaccessfile
+Library5=jsql
+@EndOfDesignText@
+#Region  Project Attributes 
+	#MainFormWidth: 540
+	#MainFormHeight: 480 
+	#AdditionalJar: sqlite-jdbc-3.7.2
+	#AdditionalJar: bcprov-jdk15on-150
+#End Region
+
+Sub Process_Globals
+	Private fx As JFX
+	Private MainForm As Form
+	Private txtFolder As TextField
+	Private txtOutput As TextField
+	Private btnBrowseInput As Button
+	Private btnBrowseOutput As Button
+	Private lblStatus As Label
+	Private tvFiles As ListView
+	Private btnBuild As Button
+	Private txtPassword As TextField
+	Private settingsFile As String = "settings.txt"
+	Private btnListFiles As Button
+	Private dc As DirectoryChooser
+	Private fc As FileChooser
+	Private msg As Msgboxes
+	Dim img1 As ImageView
+	Dim pnl As Pane
+End Sub
+
+Sub AppStart (Form1 As Form, Args() As String)
+	MainForm = Form1
+	MainForm.RootPane.LoadLayout("1")
+	MainForm.Show
+	MainForm.Title = "Secured Assets"
+	If File.Exists(File.DirApp, settingsFile) Then
+		Dim m As Map = File.ReadMap(File.DirApp, settingsFile)
+		txtFolder.Text = m.Get("input")
+		txtOutput.Text = m.Get("output")
+		txtPassword.Text = m.Get("password")
+		ListFiles
+	End If
+	Dim im As Image
+	im.Initialize(File.DirAssets,"pack.jpg")
+	img1.SetImage(im)
+	lblStatus.Text = ""
+ 
+	dc.Initialize
+	fc.Initialize
+End Sub
+
+Sub btnListFiles_Action
+	ListFiles
+End Sub
+
+Sub ListFiles
+    tvFiles.Items.Clear
+	If File.IsDirectory("", txtFolder.Text) = False Then Return
+	For Each f As String In File.ListFiles(txtFolder.Text)
+		If File.IsDirectory(txtFolder.Text, f) = True Then Continue
+		tvFiles.Items.Add(f)
+	Next
+End Sub
+
+Sub MainForm_Closed
+	Dim m As Map
+	m.Initialize
+	m.Put("input", txtFolder.Text)
+	m.Put("output", txtOutput.Text)
+	m.Put("password", txtPassword.Text)
+	File.WriteMap(File.DirApp, settingsFile, m)
+End Sub
+
+Sub btnexit_Action
+ExitApplication2(0)
+End Sub
+
+Sub btnBuild_Action
+
+	If txtOutput.Text = "" Then
+		msg.Show("Output file is missing.", "")
+		Return
+	Else If txtPassword.Text = "" Then
+		msg.Show("Password is missing.", "")
+	End If
+	File.Delete("", txtOutput.Text)
+	Dim kvs As KeyValueStore
+	kvs.Initialize("", txtOutput.Text)
+	For i = 0 To tvFiles.Items.Size - 1
+			kvs.PutEncryptedInputStream(tvFiles.Items.Get(i), File.OpenInput(txtFolder.Text,tvFiles.Items.Get(i)), _
+				txtPassword.Text)
+	Next
+	kvs.Close
+	tvFiles.Items.Clear
+	txtFolder.Text = ""
+	txtOutput.Text = ""
+	txtPassword.Text = ""
+	msg.Show("Database created successfully","Build")
+End Sub
+
+Sub btnBrowseOutput_Action
+	Dim outputFile As String = fc.ShowSave(MainForm)
+	txtOutput.Text = outputFile
+End Sub
+
+Sub btnBrowseInput_Action
+	Dim folder As String = dc.Show(MainForm)
+	If folder <> "" Then
+		txtFolder.Text = folder
+		ListFiles
+	End If
+End Sub
+
+Sub mnuUnselectAll_Action
+'	For Each ci As CheckboxTreeItem In tvFiles.Root.Children
+'		ci.Checked = False
+'	Next
+End Sub
+Sub mnuSelectAll_Action
+'	For Each ci As CheckboxTreeItem In tvFiles.Root.Children
+'		ci.Checked = True
+'	Next
+End Sub
+
+Sub btnremove_Action
+If tvFiles.SelectedIndex > -1 Then
+ If msg.Show2("Are you sure to remove '" & tvFiles.SelectedItem & "' file from list?","alert","Yes","No","") = -1 Then
+  tvFiles.Items.RemoveAt(tvFiles.SelectedIndex)
+ End If
+End If
+End Sub

@@ -1,0 +1,1434 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root>
+    <doclet-version-NOT-library-version>1.04</doclet-version-NOT-library-version>
+    <class>
+        <name>anywheresoftware.b4a.ariagplib.ARIAlib</name>
+        <shortname>AriaLib</shortname>
+        <owner>process</owner>
+        <method>
+            <name>ShareFile</name>
+            <comment>Share kardan FILE
+
+ 
+ mesal:
+ &lt;code&gt;
+ Dim Aria As AriaLib
+ StartActivity(Aria.ShareFile(File.DirRootExternal,"1.mp4","video/mp4","Share Video With:"))
+ &lt;/code&gt;</comment>
+            <returntype>android.content.Intent</returntype>
+            <parameter>
+                <name>Dir</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>FileName</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>MIMEtype</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>Subject</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+        <method>
+            <name>ShareApplication</name>
+            <comment>Share kardane yek barname 
+
+mesal :
+&lt;code&gt;
+Dim a As AriaLib
+StartActivity(a.ShareApplication("ariagp.dastan","aaa"))
+&lt;/code&gt;</comment>
+            <returntype>android.content.Intent</returntype>
+            <parameter>
+                <name>PackageName</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>Subject</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+        <method>
+            <name>OpenLineProfile</name>
+            <comment>Baz kardan Profile morede nazar dar barname LINE
+ 
+  mesal:
+ &lt;code&gt;
+ Dim Aria As AriaLib
+ Aria.OpenLineProfile("aminshahedi")
+ &lt;/code&gt;</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>ID</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+        <method>
+            <name>ShareFileToAPP</name>
+            <comment>Share kardan FILE dar ye barname KHas
+
+ &lt;code&gt;
+ Dim Aria As AriaLib
+ Aria.ShareFileToAPP(File.DirRootExternal,"1.mp4","video/mp4",Aria.PACKAGE_WHATSAPP)
+ &lt;/code&gt;
+ ya :
+ &lt;code&gt;
+ Aria.ShareFileToAPP(File.DirRootExternal,"1.mp4","video/mp4",PACKAGE_BARNAME_MOREDE_NAZAR)
+ &lt;/code&gt;</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>Dir</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>FileName</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>MIMEtype</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>PackageName</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+        <method>
+            <name>isAppInstalled</name>
+            <comment>Test kardane nasb budane yek barname dar gushi
+ 
+ mesal
+ &lt;code&gt;
+ Dim Aria As AriaLib
+If Aria.isAppInstalled("ariagp.daru") Then
+' barname nasb Ast
+Else
+' barname nasb Nist
+End If 
+&lt;/code&gt;</comment>
+            <returntype>boolean</returntype>
+            <parameter>
+                <name>PackageName</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+        <method>
+            <name>ClipboardHasText</name>
+            <comment>Test kardane budane matn dar Clipboard</comment>
+            <returntype>boolean</returntype>
+        </method>
+        <method>
+            <name>SharePicToAPP</name>
+            <comment>Share kardan AX dar ye barname KHas
+
+ &lt;code&gt;
+ Dim Aria As AriaLib
+ Aria.SharePicToAPP(File.DirRootExternal,"1.jpg",Aria.PACKAGE_WHATSAPP)
+ &lt;/code&gt;
+ ya
+ &lt;code&gt;
+ Aria.SharePicToAPP(File.DirRootExternal,"1.jpg",PACKAGE_BARNAME_MOREDE_NAZAR)
+ &lt;/code&gt;</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>Dir</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>FileName</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>PackageName</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+        <method>
+            <name>ShareText</name>
+            <comment>Be Eshterak Gozarie matn
+ 
+ mesal:
+ &lt;code&gt;
+ Dim Aria As AriaLib
+ StartActivity( Aria.ShareText("TEXT","share with : "))
+ &lt;/code&gt;</comment>
+            <returntype>android.content.Intent</returntype>
+            <parameter>
+                <name>Text</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>Subject</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+        <method>
+            <name>SharePicFromDB</name>
+            <comment>Share kardan AX az Database
+ 
+ mesal:
+ &lt;code&gt;
+Dim Aria As AriaLib
+StartActivity(Aria.SharePicFromDB(cur.GetBlob("pic"),"ax1.jpg","Share With :"))
+ &lt;/code&gt;</comment>
+            <returntype>android.content.Intent</returntype>
+            <parameter>
+                <name>data</name>
+                <type>byte[]</type>
+            </parameter>
+            <parameter>
+                <name>fileName</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>Subject</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+        <method>
+            <name>ShareBitmap</name>
+            <comment>Share kardan yek Bitmap
+
+mesal:
+&lt;code&gt;
+Dim AL As AriaLib
+StartActivity( AL.ShareBitmap(ImageView1.Bitmap,"Share") )
+&lt;/code&gt;
+ * Emkane dadane error dar bazi dastgah ha, behtare axo zakhire karde va ba method SharePic un ro be eshterak bezarid</comment>
+            <returntype>android.content.Intent</returntype>
+            <parameter>
+                <name>bmp</name>
+                <type>android.graphics.Bitmap</type>
+            </parameter>
+            <parameter>
+                <name>Subject</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+        <method>
+            <name>OpenInstaProfile</name>
+            <comment>Baz kardan Profile morede nazar dar barname instagram
+ 
+ mesal:
+ &lt;code&gt;
+ Dim Aria As AriaLib
+ Aria.OpenInstaProfile("aminshahedi")
+ &lt;/code&gt;</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>Username</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+        <method>
+            <name>AddMediaToGallery</name>
+            <comment>Ezafe kardane yek media (ax,file,music,...) be gallery va musicplayer va ...
+ 
+ mesal :
+ &lt;code&gt;
+ File.Copy(File.DirAssets,"1.jpg",File.DirRootExternal,"1.jpg")
+Dim Aria As AriaLib
+Aria.AddMediaToGallery(File.DirRootExternal,"1.jpg")
+&lt;/code&gt;</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>Dir</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>FileName</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+        <method>
+            <name>SharePic</name>
+            <comment>Share kardan AX
+ 
+ mesal:
+ &lt;code&gt;
+ Dim Aria As AriaLib
+ StartActivity(Aria.SharePic(File.DirRootExternal,"1.jpg","Share Pic With:"))
+ &lt;/code&gt;</comment>
+            <returntype>android.content.Intent</returntype>
+            <parameter>
+                <name>Dir</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>FileName</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>Subject</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+        <method>
+            <name>TestInterntConnection</name>
+            <comment>check kardane internet 
+ true= vasl
+ false= qat
+ dar surate estefade azin kod , dastrastie zir ra be manifest editor ezafe konid
+ &lt;code&gt;
+   Addpermission("android.permission.ACCESS_NETWORK_STATE")
+   &lt;/code&gt;
+    
+   mesal :
+   &lt;code&gt;
+   Dim Aria As AriaLib
+If Aria.TestInterntConnection=True Then
+'internet vasl ast
+Else
+'internet ghat ast 
+End If  &lt;/code&gt;</comment>
+            <returntype>boolean</returntype>
+        </method>
+        <method>
+            <name>ShareBitmapToApp</name>
+            <comment>Share kardan yek Bitmap dar ye barname khas
+
+mesal:
+&lt;code&gt;
+Dim a As AriaLib
+StartActivity( a.ShareBitmap(ImageView1.Bitmap,"Share") )
+&lt;/code&gt;
+ * Emkane dadane error dar bazi dastgah ha, behtare axo zakhire karde va ba method SharePic un ro be eshterak bezarid</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>bmp</name>
+                <type>android.graphics.Bitmap</type>
+            </parameter>
+            <parameter>
+                <name>PackageName</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+        <method>
+            <name>SharePicFromDBtoAPP</name>
+            <comment>Share kardan AX dar ye barname KHas
+ (addess ba File.Combine dade shavad)
+ &lt;code&gt;
+ Dim Aria As AriaLib
+ Aria.SharePicFromDBtoAPP(cur.GetBlob("pic"),"ax1.jpg",Aria.PACKAGE_TELEGRAM)
+ &lt;/code&gt;</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>data</name>
+                <type>byte[]</type>
+            </parameter>
+            <parameter>
+                <name>fileName</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>PackageName</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+        <method>
+            <name>ShareTextToAPP</name>
+            <comment>Share kardan MATN dar yek barname KHas
+ 
+ mesal:
+ &lt;code&gt;
+ Dim Aria As AriaLib
+ Aria.ShareTextToAPP("TEXT",Aria.PACKAGE_WHATSAPP)
+ &lt;/code&gt;
+ ya
+ &lt;code&gt;
+ Aria.ShareTextToAPP("TEXT",PACKAGE_BARNAME_MOREDE_NAZAR)
+ &lt;/code&gt;</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>Text</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>PackageName</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+        <property>
+            <name>ClipboadText</name>
+            <returntype>java.lang.String</returntype>
+            <parameter>
+                <name>Value</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <comment>Gereftan va ya jaigozarie yek matn az Clipboard
+ (Get or Set) 
+
+mesal : 
+
+gereftane matn :
+&lt;code&gt;
+ Dim Aria As AriaLib
+label1.text = Aria.ClipboadText
+&lt;/code&gt;
+
+jaygozarie matn
+&lt;code&gt;
+Dim Aria As AriaLib
+Aria.ClipboadText = "AminShahedi"
+&lt;/code&gt;</comment>
+        </property>
+        <field>
+            <name>PACKAGE_WHATSAPP</name>
+            <comment></comment>
+            <returntype>java.lang.String</returntype>
+        </field>
+        <field>
+            <name>PACKAGE_LINE</name>
+            <comment></comment>
+            <returntype>java.lang.String</returntype>
+        </field>
+        <field>
+            <name>PACKAGE_SKYPE</name>
+            <comment></comment>
+            <returntype>java.lang.String</returntype>
+        </field>
+        <field>
+            <name>PACKAGE_BEETALK</name>
+            <comment></comment>
+            <returntype>java.lang.String</returntype>
+        </field>
+        <field>
+            <name>PACKAGE_TELEGRAM</name>
+            <comment></comment>
+            <returntype>java.lang.String</returntype>
+        </field>
+        <field>
+            <name>PACKAGE_VIBER</name>
+            <comment></comment>
+            <returntype>java.lang.String</returntype>
+        </field>
+    </class>
+    <class>
+        <name>anywheresoftware.b4a.ariagplib.AriaMarkets</name>
+        <shortname>AriaMarkets</shortname>
+        <owner>process</owner>
+        <method>
+            <name>Cafebazaar_SafheBarname</name>
+            <comment>Baz kardane Safhe yek bazar barname dar Cafebazaar</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>PackageName</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+        <method>
+            <name>Cando_SafheNazarDehi</name>
+            <comment>Baz kardane Safhe nazar dehi yek barname dar Cando</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>PackageName</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+        <method>
+            <name>IranApps_SafheBarname</name>
+            <comment>Baz kardane Safhe yek barname dar IranApps</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>PackageName</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+        <method>
+            <name>IranApps_SafheJosteJu</name>
+            <comment>Baz kardane Safhe Justejue barnameha dar IranApps</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>Ebarat</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+        <method>
+            <name>Cafebazaar_SafheToseDahande</name>
+            <comment>Baz kardane Safhe Tose'e dahande barname dar Cafebazaar</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>DeveloperId</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+        <method>
+            <name>Cando_SafheNazar</name>
+            <comment>Baz kardane Safhe nazarate yek barname dar Cando</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>PackageName</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+        <method>
+            <name>IranApps_SafheDasteBandi</name>
+            <comment>Baz kardane Safhe Daste bandie barnameha dar IranApps</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>Ebarat</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+        <method>
+            <name>Myket_SafheToseDahande</name>
+            <comment>Baz kardane Safhe Tose e dahande dar Myket
+ 
+ PackageName = package yeki az barname hae tose dahande</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>PackageName</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+        <method>
+            <name>ParsHub_SafheErtebatBaToseDahande</name>
+            <comment>Baz kardane Safhe ertebat ba tosedahande dar ParsHub
+ 
+ PackageName = package yeki az barname hae tose dahande</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>PackageName</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+        <method>
+            <name>Myket_SafheBarnameVaDownload</name>
+            <comment>Baz kardane Safhe barname dar Myket va shorue download be surate khodkar</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>PackageName</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+        <method>
+            <name>ParsHub_SafheToseDahande</name>
+            <comment>Baz kardane Safhe Tose dahande dar ParsHub</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>DeveloperID</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+        <method>
+            <name>AllMarkets_SafheBarname</name>
+            <comment></comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>PackageName</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+        <method>
+            <name>Cafebazaar_SafheBarname1</name>
+            <comment></comment>
+            <returntype>android.content.Intent</returntype>
+            <parameter>
+                <name>PackageName</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+        <method>
+            <name>IranApps_SafheToseDahande</name>
+            <comment>Baz kardane Safhe Tosedahande yek barname dar IranApps 
+ 
+ DeveloperID = PackageName yeki az barnamehae yek tosedahande</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>DeveloperID</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+        <method>
+            <name>Myket_SafheBarname</name>
+            <comment>Baz kardane Safhe barname dar Myket</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>PackageName</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+        <method>
+            <name>Cafebazaar_SafheNazar</name>
+            <comment>Baz kardane Safhe nazarate yek bazar barname dar Cafebazaar</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>PackageName</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+        <method>
+            <name>IranApps_SafheNazarDehi</name>
+            <comment>Baz kardane Safhe Nazar dehi yek barname dar IranApps
+ 
+ meqdar hae mojaze emtiaz : 1 , 2 , 3 , 4 , 5</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>PackageName</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>Emtiaz</name>
+                <type>int</type>
+            </parameter>
+        </method>
+        <method>
+            <name>ParsHub_SafheNazarDehi</name>
+            <comment>Baz kardane Safhe nazar dehi be barname dar ParsHub</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>PackageName</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+        <method>
+            <name>Cando_SafheBarname</name>
+            <comment>Baz kardane Safhe yek barname dar Cando</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>PackageName</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+        <method>
+            <name>Myket_SafheNazarDehi</name>
+            <comment>Baz kardane Safhe Nazar dehi barname dar Myket</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>PackageName</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+        <method>
+            <name>Cando_SafheToseDahande</name>
+            <comment>Baz kardane Safhe Tose'e dahande barname dar Cando</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>DeveloperId</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+        <method>
+            <name>ParsHub_SafheBarname</name>
+            <comment>Baz kardane Safhe barname dar ParsHub</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>PackageName</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+    </class>
+    <class>
+        <name>anywheresoftware.b4a.ariagplib.AriaMultipleShare</name>
+        <shortname>AriaMultipleSharing</shortname>
+        <owner>process</owner>
+        <method>
+            <name>AddFile</name>
+            <comment></comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>Dir</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>FileName</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+        <method>
+            <name>StartSharing</name>
+            <comment></comment>
+            <returntype>void</returntype>
+        </method>
+        <method>
+            <name>StartSharingToApp</name>
+            <comment></comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>PackageName</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+        <method>
+            <name>initialize</name>
+            <comment>Share kardane Chand File hamzaman ba intent , mesal : 
+ &lt;code&gt;
+ Dim AMS As AriaMultipleSharing
+AMS.initialize("image/*")
+
+'add kardane file ha be tedade na mahdud
+AMS.AddFile(File.DirRootExternal,"1.jpg")
+AMS.AddFile(File.DirRootExternal,"2.jpg")
+AMS.AddFile(File.DirRootExternal,"10.jpg")
+AMS.AddFile(File.DirRootExternal,"test.jpg")
+
+AMS.StartSharing&lt;/code&gt;</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>MimeType</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+    </class>
+    <class>
+        <name>anywheresoftware.b4a.ariagplib.AriaPersian</name>
+        <shortname>AriaPersian</shortname>
+        <owner>process</owner>
+        <method>
+            <name>PersianDate</name>
+            <comment>Gereftane tarikhe Shamsi 
+
+Baraye gereftane tarikhe Konuni kafie hame meqdar haro 0 gharar bedin 
+
+mesal : 
+
+&lt;code&gt;
+ Dim AP As AriaPersian
+Msgbox( AP.PersianDate(0,0,0,"/") ,"")
+&lt;/code&gt;</comment>
+            <returntype>java.lang.String</returntype>
+            <parameter>
+                <name>Sal</name>
+                <type>int</type>
+            </parameter>
+            <parameter>
+                <name>Mah</name>
+                <type>int</type>
+            </parameter>
+            <parameter>
+                <name>Ruz</name>
+                <type>int</type>
+            </parameter>
+            <parameter>
+                <name>JodaKonande</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+        <property>
+            <name>PersianDay</name>
+            <returntype>int</returntype>
+            <comment></comment>
+        </property>
+        <property>
+            <name>PersianYear</name>
+            <returntype>int</returntype>
+            <comment></comment>
+        </property>
+        <property>
+            <name>PersianWeekDay</name>
+            <returntype>java.lang.String</returntype>
+            <comment></comment>
+        </property>
+        <property>
+            <name>PersianMonth</name>
+            <returntype>int</returntype>
+            <comment></comment>
+        </property>
+    </class>
+    <class>
+        <name>anywheresoftware.b4a.ariagplib.Main</name>
+        <owner>process</owner>
+        <method>
+            <name>setIranianDate</name>
+            <comment></comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>year</name>
+                <type>int</type>
+            </parameter>
+            <parameter>
+                <name>month</name>
+                <type>int</type>
+            </parameter>
+            <parameter>
+                <name>day</name>
+                <type>int</type>
+            </parameter>
+        </method>
+        <method>
+            <name>setJulianDate</name>
+            <comment></comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>year</name>
+                <type>int</type>
+            </parameter>
+            <parameter>
+                <name>month</name>
+                <type>int</type>
+            </parameter>
+            <parameter>
+                <name>day</name>
+                <type>int</type>
+            </parameter>
+        </method>
+        <method>
+            <name>setGregorianDate</name>
+            <comment></comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>year</name>
+                <type>int</type>
+            </parameter>
+            <parameter>
+                <name>month</name>
+                <type>int</type>
+            </parameter>
+            <parameter>
+                <name>day</name>
+                <type>int</type>
+            </parameter>
+        </method>
+        <method>
+            <name>toString</name>
+            <comment></comment>
+            <returntype>java.lang.String</returntype>
+        </method>
+        <method>
+            <name>nextDay</name>
+            <comment></comment>
+            <returntype>void</returntype>
+        </method>
+        <method>
+            <name>previousDay</name>
+            <comment></comment>
+            <returntype>void</returntype>
+        </method>
+        <property>
+            <name>JulianDate</name>
+            <returntype>java.lang.String</returntype>
+            <comment></comment>
+        </property>
+        <property>
+            <name>DayOfWeek</name>
+            <returntype>int</returntype>
+            <comment></comment>
+        </property>
+        <property>
+            <name>JulianMonth</name>
+            <returntype>int</returntype>
+            <comment></comment>
+        </property>
+        <property>
+            <name>GregorianDay</name>
+            <returntype>int</returntype>
+            <comment></comment>
+        </property>
+        <property>
+            <name>JulianDay</name>
+            <returntype>int</returntype>
+            <comment></comment>
+        </property>
+        <property>
+            <name>IranianDate</name>
+            <returntype>java.lang.String</returntype>
+            <comment></comment>
+        </property>
+        <property>
+            <name>WeekDayStr</name>
+            <returntype>java.lang.String</returntype>
+            <comment></comment>
+        </property>
+        <property>
+            <name>IranianMonth</name>
+            <returntype>int</returntype>
+            <comment></comment>
+        </property>
+        <property>
+            <name>IranianYear</name>
+            <returntype>int</returntype>
+            <comment></comment>
+        </property>
+        <property>
+            <name>GregorianDate</name>
+            <returntype>java.lang.String</returntype>
+            <comment></comment>
+        </property>
+        <property>
+            <name>GregorianYear</name>
+            <returntype>int</returntype>
+            <comment></comment>
+        </property>
+        <property>
+            <name>IranianDay</name>
+            <returntype>int</returntype>
+            <comment></comment>
+        </property>
+        <property>
+            <name>JulianYear</name>
+            <returntype>int</returntype>
+            <comment></comment>
+        </property>
+        <property>
+            <name>GregorianMonth</name>
+            <returntype>int</returntype>
+            <comment></comment>
+        </property>
+    </class>
+    <class>
+        <name>aria.photoshop.ConvolutionMatrix</name>
+        <owner>process</owner>
+        <method>
+            <name>computeConvolution3x3</name>
+            <comment></comment>
+            <returntype>android.graphics.Bitmap</returntype>
+            <parameter>
+                <name>src</name>
+                <type>android.graphics.Bitmap</type>
+            </parameter>
+            <parameter>
+                <name>matrix</name>
+                <type>aria.photoshop.ConvolutionMatrix</type>
+            </parameter>
+        </method>
+        <method>
+            <name>applyConfig</name>
+            <comment></comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>config</name>
+                <type>double[][]</type>
+            </parameter>
+        </method>
+        <property>
+            <name>All</name>
+            <parameter>
+                <name>value</name>
+                <type>double</type>
+            </parameter>
+            <comment></comment>
+        </property>
+        <field>
+            <name>Matrix</name>
+            <comment></comment>
+            <returntype>double[][]</returntype>
+        </field>
+        <field>
+            <name>SIZE</name>
+            <comment></comment>
+            <returntype>int</returntype>
+        </field>
+        <field>
+            <name>Factor</name>
+            <comment></comment>
+            <returntype>double</returntype>
+        </field>
+        <field>
+            <name>Offset</name>
+            <comment></comment>
+            <returntype>double</returntype>
+        </field>
+    </class>
+    <class>
+        <name>aria.photoshop.Photoshop</name>
+        <shortname>AriaPhotoshp</shortname>
+        <owner>process</owner>
+        <event>BlurEnd (BluredImage As Bitmap)</event>
+        <method>
+            <name>DecreaseColorDepth</name>
+            <comment></comment>
+            <returntype>android.graphics.Bitmap</returntype>
+            <parameter>
+                <name>paramBitmap</name>
+                <type>android.graphics.Bitmap</type>
+            </parameter>
+            <parameter>
+                <name>paramInt</name>
+                <type>int</type>
+            </parameter>
+        </method>
+        <method>
+            <name>ShadingFilter</name>
+            <comment></comment>
+            <returntype>android.graphics.Bitmap</returntype>
+            <parameter>
+                <name>source</name>
+                <type>android.graphics.Bitmap</type>
+            </parameter>
+            <parameter>
+                <name>shadingColor</name>
+                <type>int</type>
+            </parameter>
+        </method>
+        <method>
+            <name>Highlight</name>
+            <comment></comment>
+            <returntype>android.graphics.Bitmap</returntype>
+            <parameter>
+                <name>paramBitmap</name>
+                <type>android.graphics.Bitmap</type>
+            </parameter>
+        </method>
+        <method>
+            <name>Rotate</name>
+            <comment></comment>
+            <returntype>android.graphics.Bitmap</returntype>
+            <parameter>
+                <name>paramBitmap</name>
+                <type>android.graphics.Bitmap</type>
+            </parameter>
+            <parameter>
+                <name>paramFloat</name>
+                <type>float</type>
+            </parameter>
+        </method>
+        <method>
+            <name>Snow</name>
+            <comment></comment>
+            <returntype>android.graphics.Bitmap</returntype>
+            <parameter>
+                <name>source</name>
+                <type>android.graphics.Bitmap</type>
+            </parameter>
+        </method>
+        <method>
+            <name>Brightness</name>
+            <comment></comment>
+            <returntype>android.graphics.Bitmap</returntype>
+            <parameter>
+                <name>src</name>
+                <type>android.graphics.Bitmap</type>
+            </parameter>
+            <parameter>
+                <name>value</name>
+                <type>int</type>
+            </parameter>
+        </method>
+        <method>
+            <name>Noise</name>
+            <comment></comment>
+            <returntype>android.graphics.Bitmap</returntype>
+            <parameter>
+                <name>source</name>
+                <type>android.graphics.Bitmap</type>
+            </parameter>
+        </method>
+        <method>
+            <name>Initialize</name>
+            <comment></comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>paramBA</name>
+                <type>anywheresoftware.b4a.BA</type>
+            </parameter>
+            <parameter>
+                <name>Event</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+        <method>
+            <name>RoundCorner</name>
+            <comment></comment>
+            <returntype>android.graphics.Bitmap</returntype>
+            <parameter>
+                <name>src</name>
+                <type>android.graphics.Bitmap</type>
+            </parameter>
+            <parameter>
+                <name>round</name>
+                <type>float</type>
+            </parameter>
+        </method>
+        <method>
+            <name>ReplaceColor</name>
+            <comment></comment>
+            <returntype>android.graphics.Bitmap</returntype>
+            <parameter>
+                <name>src</name>
+                <type>android.graphics.Bitmap</type>
+            </parameter>
+            <parameter>
+                <name>fromColor</name>
+                <type>int</type>
+            </parameter>
+            <parameter>
+                <name>targetColor</name>
+                <type>int</type>
+            </parameter>
+        </method>
+        <method>
+            <name>GetCircleBitmap</name>
+            <comment>Taghir dadane Shekle yek Bitmap be dayere
+ 
+ mesal : 
+ &lt;code&gt;
+ ImageView1.Bitmap= a.GetCircleBitmap( LoadBitmap(File.DirAssets,"1.png") )
+ &lt;/code&gt;</comment>
+            <returntype>android.graphics.Bitmap</returntype>
+            <parameter>
+                <name>bm</name>
+                <type>android.graphics.Bitmap</type>
+            </parameter>
+        </method>
+        <method>
+            <name>Blur</name>
+            <comment></comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>ba</name>
+                <type>anywheresoftware.b4a.BA</type>
+            </parameter>
+            <parameter>
+                <name>sentBitmap</name>
+                <type>android.graphics.Bitmap</type>
+            </parameter>
+            <parameter>
+                <name>Radius</name>
+                <type>int</type>
+            </parameter>
+        </method>
+        <method>
+            <name>Smooth</name>
+            <comment></comment>
+            <returntype>android.graphics.Bitmap</returntype>
+            <parameter>
+                <name>src</name>
+                <type>android.graphics.Bitmap</type>
+            </parameter>
+            <parameter>
+                <name>value</name>
+                <type>double</type>
+            </parameter>
+        </method>
+        <method>
+            <name>Emboss</name>
+            <comment></comment>
+            <returntype>android.graphics.Bitmap</returntype>
+            <parameter>
+                <name>src</name>
+                <type>android.graphics.Bitmap</type>
+            </parameter>
+        </method>
+        <method>
+            <name>Sharpen</name>
+            <comment></comment>
+            <returntype>android.graphics.Bitmap</returntype>
+            <parameter>
+                <name>src</name>
+                <type>android.graphics.Bitmap</type>
+            </parameter>
+            <parameter>
+                <name>weight</name>
+                <type>double</type>
+            </parameter>
+        </method>
+        <method>
+            <name>writeBitmapToFile</name>
+            <comment></comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>paramBitmap</name>
+                <type>android.graphics.Bitmap</type>
+            </parameter>
+            <parameter>
+                <name>Dir</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>FileName</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>quality</name>
+                <type>int</type>
+            </parameter>
+        </method>
+        <method>
+            <name>GreyScale</name>
+            <comment></comment>
+            <returntype>android.graphics.Bitmap</returntype>
+            <parameter>
+                <name>paramBitmap</name>
+                <type>android.graphics.Bitmap</type>
+            </parameter>
+        </method>
+        <method>
+            <name>TintColor</name>
+            <comment></comment>
+            <returntype>android.graphics.Bitmap</returntype>
+            <parameter>
+                <name>src</name>
+                <type>android.graphics.Bitmap</type>
+            </parameter>
+            <parameter>
+                <name>degree</name>
+                <type>int</type>
+            </parameter>
+        </method>
+        <method>
+            <name>HueFilter</name>
+            <comment></comment>
+            <returntype>android.graphics.Bitmap</returntype>
+            <parameter>
+                <name>source</name>
+                <type>android.graphics.Bitmap</type>
+            </parameter>
+            <parameter>
+                <name>level</name>
+                <type>int</type>
+            </parameter>
+        </method>
+        <method>
+            <name>Invert</name>
+            <comment></comment>
+            <returntype>android.graphics.Bitmap</returntype>
+            <parameter>
+                <name>paramBitmap</name>
+                <type>android.graphics.Bitmap</type>
+            </parameter>
+        </method>
+        <method>
+            <name>SaturationFilter</name>
+            <comment></comment>
+            <returntype>android.graphics.Bitmap</returntype>
+            <parameter>
+                <name>source</name>
+                <type>android.graphics.Bitmap</type>
+            </parameter>
+            <parameter>
+                <name>level</name>
+                <type>int</type>
+            </parameter>
+        </method>
+        <method>
+            <name>Blend</name>
+            <comment></comment>
+            <returntype>android.graphics.Bitmap</returntype>
+            <parameter>
+                <name>bottomImage</name>
+                <type>android.graphics.Bitmap</type>
+            </parameter>
+            <parameter>
+                <name>topImage</name>
+                <type>android.graphics.Bitmap</type>
+            </parameter>
+            <parameter>
+                <name>left</name>
+                <type>float</type>
+            </parameter>
+            <parameter>
+                <name>top</name>
+                <type>float</type>
+            </parameter>
+        </method>
+        <method>
+            <name>GammaCorrection</name>
+            <comment></comment>
+            <returntype>android.graphics.Bitmap</returntype>
+            <parameter>
+                <name>paramBitmap</name>
+                <type>android.graphics.Bitmap</type>
+            </parameter>
+            <parameter>
+                <name>paramDouble1</name>
+                <type>double</type>
+            </parameter>
+            <parameter>
+                <name>paramDouble2</name>
+                <type>double</type>
+            </parameter>
+            <parameter>
+                <name>paramDouble3</name>
+                <type>double</type>
+            </parameter>
+        </method>
+        <method>
+            <name>SepiaToning</name>
+            <comment></comment>
+            <returntype>android.graphics.Bitmap</returntype>
+            <parameter>
+                <name>paramBitmap</name>
+                <type>android.graphics.Bitmap</type>
+            </parameter>
+            <parameter>
+                <name>paramInt</name>
+                <type>int</type>
+            </parameter>
+            <parameter>
+                <name>paramDouble1</name>
+                <type>double</type>
+            </parameter>
+            <parameter>
+                <name>paramDouble2</name>
+                <type>double</type>
+            </parameter>
+            <parameter>
+                <name>paramDouble3</name>
+                <type>double</type>
+            </parameter>
+        </method>
+        <method>
+            <name>BlackFilter</name>
+            <comment></comment>
+            <returntype>android.graphics.Bitmap</returntype>
+            <parameter>
+                <name>source</name>
+                <type>android.graphics.Bitmap</type>
+            </parameter>
+        </method>
+        <method>
+            <name>Flip</name>
+            <comment></comment>
+            <returntype>android.graphics.Bitmap</returntype>
+            <parameter>
+                <name>src</name>
+                <type>android.graphics.Bitmap</type>
+            </parameter>
+        </method>
+        <method>
+            <name>Contrast</name>
+            <comment></comment>
+            <returntype>android.graphics.Bitmap</returntype>
+            <parameter>
+                <name>paramBitmap</name>
+                <type>android.graphics.Bitmap</type>
+            </parameter>
+            <parameter>
+                <name>paramDouble</name>
+                <type>double</type>
+            </parameter>
+        </method>
+        <method>
+            <name>ColorDodgeBlend</name>
+            <comment></comment>
+            <returntype>android.graphics.Bitmap</returntype>
+            <parameter>
+                <name>source</name>
+                <type>android.graphics.Bitmap</type>
+            </parameter>
+            <parameter>
+                <name>layer</name>
+                <type>android.graphics.Bitmap</type>
+            </parameter>
+        </method>
+        <method>
+            <name>ColorFilter</name>
+            <comment></comment>
+            <returntype>android.graphics.Bitmap</returntype>
+            <parameter>
+                <name>paramBitmap</name>
+                <type>android.graphics.Bitmap</type>
+            </parameter>
+            <parameter>
+                <name>paramDouble1</name>
+                <type>double</type>
+            </parameter>
+            <parameter>
+                <name>paramDouble2</name>
+                <type>double</type>
+            </parameter>
+            <parameter>
+                <name>paramDouble3</name>
+                <type>double</type>
+            </parameter>
+        </method>
+        <method>
+            <name>ColorBoost</name>
+            <comment></comment>
+            <returntype>android.graphics.Bitmap</returntype>
+            <parameter>
+                <name>src</name>
+                <type>android.graphics.Bitmap</type>
+            </parameter>
+            <parameter>
+                <name>type</name>
+                <type>int</type>
+            </parameter>
+            <parameter>
+                <name>percent</name>
+                <type>float</type>
+            </parameter>
+        </method>
+        <method>
+            <name>MeanRemoval</name>
+            <comment></comment>
+            <returntype>android.graphics.Bitmap</returntype>
+            <parameter>
+                <name>src</name>
+                <type>android.graphics.Bitmap</type>
+            </parameter>
+        </method>
+        <method>
+            <name>Watermark</name>
+            <comment></comment>
+            <returntype>android.graphics.Bitmap</returntype>
+            <parameter>
+                <name>src</name>
+                <type>android.graphics.Bitmap</type>
+            </parameter>
+            <parameter>
+                <name>watermark</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>x</name>
+                <type>float</type>
+            </parameter>
+            <parameter>
+                <name>y</name>
+                <type>float</type>
+            </parameter>
+            <parameter>
+                <name>color</name>
+                <type>int</type>
+            </parameter>
+            <parameter>
+                <name>alpha</name>
+                <type>int</type>
+            </parameter>
+            <parameter>
+                <name>size</name>
+                <type>int</type>
+            </parameter>
+            <parameter>
+                <name>underline</name>
+                <type>boolean</type>
+            </parameter>
+        </method>
+        <method>
+            <name>Mirror</name>
+            <comment></comment>
+            <returntype>android.graphics.Bitmap</returntype>
+            <parameter>
+                <name>src</name>
+                <type>android.graphics.Bitmap</type>
+            </parameter>
+        </method>
+        <method>
+            <name>Engrave</name>
+            <comment></comment>
+            <returntype>android.graphics.Bitmap</returntype>
+            <parameter>
+                <name>src</name>
+                <type>android.graphics.Bitmap</type>
+            </parameter>
+        </method>
+    </class>
+    <class>
+        <name>aria.photoshop.blur.Blurr</name>
+        <owner>process</owner>
+        <method>
+            <name>fastblur</name>
+            <comment></comment>
+            <returntype>android.graphics.Bitmap</returntype>
+            <parameter>
+                <name>context</name>
+                <type>android.content.Context</type>
+            </parameter>
+            <parameter>
+                <name>sentBitmap</name>
+                <type>android.graphics.Bitmap</type>
+            </parameter>
+            <parameter>
+                <name>radius</name>
+                <type>int</type>
+            </parameter>
+        </method>
+    </class>
+    <version>6.0</version>
+    <author>AminShahedi-AriaGP</author>
+</root>

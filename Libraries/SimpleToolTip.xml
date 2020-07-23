@@ -1,0 +1,298 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root>
+    <doclet-version-NOT-library-version>1.05</doclet-version-NOT-library-version>
+    <class>
+        <name>de.donmanfred.SimpleTooltipBuilder</name>
+        <shortname>SimpleTooltipBuilder</shortname>
+        <owner>process</owner>
+        <method>
+            <name>arrowColor</name>
+            <comment></comment>
+            <returntype>de.donmanfred.SimpleTooltipBuilder</returntype>
+            <parameter>
+                <name>arrowColor</name>
+                <type>int</type>
+            </parameter>
+        </method>
+        <method>
+            <name>show</name>
+            <comment></comment>
+            <returntype>void</returntype>
+        </method>
+        <method>
+            <name>anchorView</name>
+            <comment>&lt;div class="pt"&gt;Define para qual &lt;tt&gt;View&lt;/tt&gt; o tooltip deve apontar.
+ Importante ter certeza que esta &lt;tt&gt;View&lt;/tt&gt; já esteja pronta e exibida
+ na tela.&lt;/div&gt;
+anchorView: &lt;div class="pt"&gt;&lt;tt&gt;View&lt;/tt&gt; para qual o tooltip deve
+          apontar&lt;/div&gt;
+Return type: @return:this</comment>
+            <returntype>de.donmanfred.SimpleTooltipBuilder</returntype>
+            <parameter>
+                <name>anchorView</name>
+                <type>android.view.View</type>
+            </parameter>
+        </method>
+        <method>
+            <name>arrowHeight</name>
+            <comment>&lt;div class="pt"&gt;Altura da seta indicativa. Esse valor é automaticamente
+ definido em Largura ou Altura conforme a &lt;tt&gt;Gravity&lt;/tt&gt; configurada.
+ Este valor sobrescreve &lt;tt&gt;R.dimen.simpletooltip_arrow_height&lt;/tt&gt;&lt;/div&gt;
+ &lt;div class="en"&gt;Height of the arrow. This value is automatically set in
+ the Width or Height as the &lt;tt&gt;Gravity&lt;/tt&gt;.&lt;/div&gt;
+arrowHeight: &lt;div class="pt"&gt;Altura em pixels.&lt;/div&gt; &lt;div class="en"&gt;Height
+          in pixels.&lt;/div&gt;
+Return type: @return:this</comment>
+            <returntype>de.donmanfred.SimpleTooltipBuilder</returntype>
+            <parameter>
+                <name>arrowHeight</name>
+                <type>float</type>
+            </parameter>
+        </method>
+        <method>
+            <name>Initialize</name>
+            <comment></comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>ba</name>
+                <type>anywheresoftware.b4a.BA</type>
+            </parameter>
+            <parameter>
+                <name>EventName</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+        <method>
+            <name>arrowWidth</name>
+            <comment>&lt;div class="pt"&gt;Largura da seta indicativa. Esse valor é automaticamente
+ definido em Largura ou Altura conforme a &lt;tt&gt;Gravity&lt;/tt&gt; configurada.
+ Este valor sobrescreve &lt;tt&gt;R.dimen.simpletooltip_arrow_width&lt;/tt&gt;&lt;/div&gt;
+ &lt;div class="en"&gt;Width of the arrow. This value is automatically set in
+ the Width or Height as the &lt;tt&gt;Gravity&lt;/tt&gt;.&lt;/div&gt;
+arrowWidth: &lt;div class="pt"&gt;Largura em pixels.&lt;/div&gt; &lt;div class="en"&gt;Width
+          in pixels.&lt;/div&gt;
+Return type: @return:this</comment>
+            <returntype>de.donmanfred.SimpleTooltipBuilder</returntype>
+            <parameter>
+                <name>arrowWidth</name>
+                <type>float</type>
+            </parameter>
+        </method>
+        <method>
+            <name>arrowDrawable</name>
+            <comment></comment>
+            <returntype>de.donmanfred.SimpleTooltipBuilder</returntype>
+            <parameter>
+                <name>arrowDrawable</name>
+                <type>android.graphics.drawable.Drawable</type>
+            </parameter>
+        </method>
+        <method>
+            <name>isShowing</name>
+            <comment>&lt;div class="pt"&gt;Indica se o tooltip está sendo exibido na tela.&lt;/div&gt; &lt;div
+ class=en"&gt;Indicate whether this tooltip is showing on screen.&lt;/div&gt;
+Return type: @return:&lt;div class="pt"&gt;&lt;tt&gt;true&lt;/tt&gt; se o tooltip estiver sendo exibido,
+         &lt;tt&gt;false&lt;/tt&gt; caso contrário&lt;/div&gt; &lt;div class="en"&gt;&lt;tt&gt;true&lt;/tt&gt;
+         if the popup is showing, &lt;tt&gt;false&lt;/tt&gt; otherwise&lt;/div&gt;</comment>
+            <returntype>boolean</returntype>
+        </method>
+        <method>
+            <name>gravityEnd</name>
+            <comment></comment>
+            <returntype>de.donmanfred.SimpleTooltipBuilder</returntype>
+        </method>
+        <method>
+            <name>gravityStart</name>
+            <comment></comment>
+            <returntype>de.donmanfred.SimpleTooltipBuilder</returntype>
+        </method>
+        <method>
+            <name>gravityTop</name>
+            <comment></comment>
+            <returntype>de.donmanfred.SimpleTooltipBuilder</returntype>
+        </method>
+        <method>
+            <name>animationPadding</name>
+            <comment></comment>
+            <returntype>de.donmanfred.SimpleTooltipBuilder</returntype>
+            <parameter>
+                <name>animationPadding</name>
+                <type>int</type>
+            </parameter>
+        </method>
+        <method>
+            <name>text</name>
+            <comment>&lt;div class="pt"&gt;Define o texto que sera exibido no &lt;tt&gt;TextView&lt;/tt&gt;
+ dentro do tooltip.&lt;/div&gt;
+text: &lt;div class="pt"&gt;texto que sera exibido.&lt;/div&gt;
+Return type: @return:this</comment>
+            <returntype>de.donmanfred.SimpleTooltipBuilder</returntype>
+            <parameter>
+                <name>text</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+        <method>
+            <name>dismissOnOutsideTouch</name>
+            <comment>&lt;div class="pt"&gt;Define se o tooltip será fechado quando receber um
+ clique fora de sua área. Padrão é &lt;tt&gt;true&lt;/tt&gt;.&lt;/div&gt;
+dismissOnOutsideTouch: &lt;div class="pt"&gt;&lt;tt&gt;true&lt;/tt&gt; para fechar quando receber o click
+          fora, &lt;tt&gt;false&lt;/tt&gt; caso contrário.&lt;/div&gt;
+Return type: @return:this</comment>
+            <returntype>de.donmanfred.SimpleTooltipBuilder</returntype>
+            <parameter>
+                <name>dismissOnOutsideTouch</name>
+                <type>boolean</type>
+            </parameter>
+        </method>
+        <method>
+            <name>modal</name>
+            <comment>&lt;div class="pt"&gt;Define se a tela fiacrá bloqueada enquanto o tooltip
+ estiver aberto. Esse parâmetro deve ser combinado com
+ &lt;tt&gt;Builder#dismissOnInsideTouch(boolean)&lt;/tt&gt; e
+ &lt;tt&gt;Builder#dismissOnOutsideTouch(boolean)&lt;/tt&gt;. Padrão é
+ &lt;tt&gt;false&lt;/tt&gt;.&lt;/div&gt;
+modal: &lt;div class="pt"&gt;&lt;tt&gt;true&lt;/tt&gt; para bloquear a tela,
+          &lt;tt&gt;false&lt;/tt&gt; caso contrário.&lt;/div&gt;
+Return type: @return:this</comment>
+            <returntype>de.donmanfred.SimpleTooltipBuilder</returntype>
+            <parameter>
+                <name>modal</name>
+                <type>boolean</type>
+            </parameter>
+        </method>
+        <method>
+            <name>transparentOverlay</name>
+            <comment>&lt;div class="pt"&gt;Define se o fundo da tela será escurecido ou
+ transparente enquanto o tooltip estiver aberto. Padrão é &lt;tt&gt;true&lt;/tt&gt;
+ .&lt;/div&gt;
+transparentOverlay: &lt;div class="pt"&gt;&lt;tt&gt;true&lt;/tt&gt; para o fundo transparente,
+          &lt;tt&gt;false&lt;/tt&gt; para escurecido.&lt;/div&gt;
+Return type: @return:this</comment>
+            <returntype>de.donmanfred.SimpleTooltipBuilder</returntype>
+            <parameter>
+                <name>transparentOverlay</name>
+                <type>boolean</type>
+            </parameter>
+        </method>
+        <method>
+            <name>dismissOnInsideTouch</name>
+            <comment>&lt;div class="pt"&gt;Define se o tooltip será fechado quando receber um
+ clique dentro de sua área. Padrão é &lt;tt&gt;true&lt;/tt&gt;.&lt;/div&gt;
+dismissOnInsideTouch: &lt;div class="pt"&gt;&lt;tt&gt;true&lt;/tt&gt; para fechar quando receber o click
+          dentro, &lt;tt&gt;false&lt;/tt&gt; caso contrário.&lt;/div&gt;
+Return type: @return:this</comment>
+            <returntype>de.donmanfred.SimpleTooltipBuilder</returntype>
+            <parameter>
+                <name>dismissOnInsideTouch</name>
+                <type>boolean</type>
+            </parameter>
+        </method>
+        <method>
+            <name>padding</name>
+            <comment></comment>
+            <returntype>de.donmanfred.SimpleTooltipBuilder</returntype>
+            <parameter>
+                <name>padding</name>
+                <type>int</type>
+            </parameter>
+        </method>
+        <method>
+            <name>margin</name>
+            <comment></comment>
+            <returntype>de.donmanfred.SimpleTooltipBuilder</returntype>
+            <parameter>
+                <name>margin</name>
+                <type>int</type>
+            </parameter>
+        </method>
+        <method>
+            <name>backgroundColor</name>
+            <comment></comment>
+            <returntype>de.donmanfred.SimpleTooltipBuilder</returntype>
+            <parameter>
+                <name>backgroundColor</name>
+                <type>int</type>
+            </parameter>
+        </method>
+        <method>
+            <name>dismiss</name>
+            <comment></comment>
+            <returntype>void</returntype>
+        </method>
+        <method>
+            <name>showArrow</name>
+            <comment>&lt;div class="pt"&gt;Indica se deve ser gerada a seta indicativa. Padrão é
+ &lt;tt&gt;true&lt;/tt&gt;.&lt;/div&gt; &lt;div class="en"&gt;Indicates whether to be generated
+ indicative arrow. Default is &lt;tt&gt;true&lt;/tt&gt;.&lt;/div&gt;
+showArrow: &lt;div class="pt"&gt;&lt;tt&gt;true&lt;/tt&gt; para exibir a seta, &lt;tt&gt;false&lt;/tt&gt;
+          caso contrário.&lt;/div&gt; &lt;div class="en"&gt;&lt;tt&gt;true&lt;/tt&gt; to show
+          arrow, &lt;tt&gt;false&lt;/tt&gt; otherwise.&lt;/div&gt;
+Return type: @return:this</comment>
+            <returntype>de.donmanfred.SimpleTooltipBuilder</returntype>
+            <parameter>
+                <name>showArrow</name>
+                <type>boolean</type>
+            </parameter>
+        </method>
+        <method>
+            <name>gravityBottom</name>
+            <comment></comment>
+            <returntype>de.donmanfred.SimpleTooltipBuilder</returntype>
+        </method>
+        <method>
+            <name>textColor</name>
+            <comment></comment>
+            <returntype>de.donmanfred.SimpleTooltipBuilder</returntype>
+            <parameter>
+                <name>textColor</name>
+                <type>int</type>
+            </parameter>
+        </method>
+        <method>
+            <name>contentView</name>
+            <comment>&lt;div class="pt"&gt;Define um novo conteúdo customizado para o
+ tooltip.&lt;/div&gt;
+textView: &lt;div class="pt"&gt;novo conteúdo para o tooltip.&lt;/div&gt;
+Return type: @return:this</comment>
+            <returntype>de.donmanfred.SimpleTooltipBuilder</returntype>
+            <parameter>
+                <name>textView</name>
+                <type>android.widget.TextView</type>
+            </parameter>
+        </method>
+        <method>
+            <name>animationDuration</name>
+            <comment></comment>
+            <returntype>de.donmanfred.SimpleTooltipBuilder</returntype>
+            <parameter>
+                <name>animationDuration</name>
+                <type>long</type>
+            </parameter>
+        </method>
+        <method>
+            <name>build</name>
+            <comment></comment>
+            <returntype>void</returntype>
+        </method>
+        <method>
+            <name>animated</name>
+            <comment>&lt;div class="pt"&gt;Define se o tooltip será animado enquanto estiver
+ aberto. Disponível a partir do Android API 11. Padrão é &lt;tt&gt;false&lt;/tt&gt;
+ .&lt;/div&gt;
+animated: &lt;div class="pt"&gt;&lt;tt&gt;true&lt;/tt&gt; para tooltip animado,
+          &lt;tt&gt;false&lt;/tt&gt; caso contrário.&lt;/div&gt;
+Return type: @return:this</comment>
+            <returntype>de.donmanfred.SimpleTooltipBuilder</returntype>
+            <parameter>
+                <name>animated</name>
+                <type>boolean</type>
+            </parameter>
+        </method>
+        <designerProperty>key:Checked, displayname:Checked, defaultvalue:False, fieldtype:Boolean</designerProperty>
+    </class>
+    <version>1.51</version>
+    <author>DonManfred (wrapper)</author>
+    <dependsOn>android-support-v4</dependsOn>
+    <dependsOn>SimpleToolTip.aar</dependsOn>
+</root>

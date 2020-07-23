@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root>
+    <doclet-version-NOT-library-version>1.02</doclet-version-NOT-library-version>
+    <class>
+        <name>ibe.libs.visualizer.voiceRecording</name>
+        <shortname>VoiceRecording</shortname>
+        <owner>process</owner>
+        <event>readByte(buffer() As Byte)</event>
+        <permission>android.permission.RECORD_AUDIO</permission>
+        <method>
+            <name>toggleRecording2</name>
+            <comment></comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>dir</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>file</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+        <method>
+            <name>isRecording</name>
+            <comment></comment>
+            <returntype>boolean</returntype>
+        </method>
+        <method>
+            <name>stopFileRecord</name>
+            <comment></comment>
+            <returntype>void</returntype>
+        </method>
+        <method>
+            <name>toggleRecording</name>
+            <comment></comment>
+            <returntype>void</returntype>
+        </method>
+        <method>
+            <name>releaseRecorder</name>
+            <comment></comment>
+            <returntype>void</returntype>
+        </method>
+        <method>
+            <name>Initialize</name>
+            <comment></comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>ba</name>
+                <type>anywheresoftware.b4a.BA</type>
+            </parameter>
+            <parameter>
+                <name>EventName</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+        <method>
+            <name>stopRecording</name>
+            <comment></comment>
+            <returntype>void</returntype>
+        </method>
+        <property>
+            <name>DecibelValue</name>
+            <returntype>int</returntype>
+            <comment></comment>
+        </property>
+    </class>
+    <class>
+        <name>ibe.libs.visualizer.RecordingSampler</name>
+        <owner>process</owner>
+        <method>
+            <name>isRecording</name>
+            <comment>getter isRecording
+Return type: @return:true:recording, false:not recording</comment>
+            <returntype>boolean</returntype>
+        </method>
+        <method>
+            <name>startRecording</name>
+            <comment>start AudioRecord.read</comment>
+            <returntype>void</returntype>
+        </method>
+        <method>
+            <name>release</name>
+            <comment>release member object</comment>
+            <returntype>void</returntype>
+        </method>
+        <method>
+            <name>stopSaveRecord</name>
+            <comment></comment>
+            <returntype>void</returntype>
+        </method>
+        <method>
+            <name>stopRecording</name>
+            <comment>stop AudioRecord.read</comment>
+            <returntype>void</returntype>
+        </method>
+        <property>
+            <name>VolumeListener</name>
+            <parameter>
+                <name>volumeListener</name>
+                <type>ibe.libs.visualizer.RecordingSampler.CalculateVolumeListener</type>
+            </parameter>
+            <comment>setter of CalculateVolumeListener</comment>
+        </property>
+        <property>
+            <name>SamplingInterval</name>
+            <parameter>
+                <name>samplingInterval</name>
+                <type>int</type>
+            </parameter>
+            <comment>setter of samplingInterval</comment>
+        </property>
+        <property>
+            <name>DecibelValue</name>
+            <returntype>int</returntype>
+            <comment></comment>
+        </property>
+    </class>
+    <version>1.0</version>
+</root>

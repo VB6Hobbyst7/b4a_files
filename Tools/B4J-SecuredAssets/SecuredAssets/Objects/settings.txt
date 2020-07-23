@@ -1,0 +1,4 @@
+#Wed Oct 22 10:45:25 IRST 2014
+output=C\:\\a.db
+input=C\:\\Users\\Public\\Pictures\\Sample Pictures
+password=1111

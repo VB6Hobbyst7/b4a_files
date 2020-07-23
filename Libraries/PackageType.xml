@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root>
+    <doclet-version-NOT-library-version>1.02</doclet-version-NOT-library-version>
+    <class>
+        <name>com.javatechig.regemail.R</name>
+        <owner>process</owner>
+    </class>
+    <class>
+        <name>com.javatechig.regemail.R.array</name>
+        <owner>process</owner>
+        <field>
+            <name>acounts_list</name>
+            <comment></comment>
+            <returntype>int</returntype>
+        </field>
+    </class>
+    <class>
+        <name>com.javatechig.regemail.R.attr</name>
+        <owner>process</owner>
+    </class>
+    <class>
+        <name>com.javatechig.regemail.R.color</name>
+        <owner>process</owner>
+        <field>
+            <name>lovely_row_bg1</name>
+            <comment></comment>
+            <returntype>int</returntype>
+        </field>
+        <field>
+            <name>blue</name>
+            <comment></comment>
+            <returntype>int</returntype>
+        </field>
+        <field>
+            <name>white</name>
+            <comment></comment>
+            <returntype>int</returntype>
+        </field>
+        <field>
+            <name>lovely_row_bg2</name>
+            <comment></comment>
+            <returntype>int</returntype>
+        </field>
+        <field>
+            <name>toast_bg_transparent</name>
+            <comment></comment>
+            <returntype>int</returntype>
+        </field>
+    </class>
+    <class>
+        <name>com.javatechig.regemail.R.dimen</name>
+        <owner>process</owner>
+        <field>
+            <name>activity_vertical_margin</name>
+            <comment></comment>
+            <returntype>int</returntype>
+        </field>
+        <field>
+            <name>activity_horizontal_margin</name>
+            <comment>Default screen margins, per the Android Design guidelines. 
+
+         Customize dimensions originally defined in res/values/dimens.xml (such as
+         screen margins) for sw720dp devices (e.g. 10" tablets) in landscape here.</comment>
+            <returntype>int</returntype>
+        </field>
+    </class>
+    <class>
+        <name>com.javatechig.regemail.R.drawable</name>
+        <owner>process</owner>
+        <field>
+            <name>ic_launcher</name>
+            <comment></comment>
+            <returntype>int</returntype>
+        </field>
+    </class>
+    <class>
+        <name>com.javatechig.regemail.R.id</name>
+        <owner>process</owner>
+        <field>
+            <name>value</name>
+            <comment></comment>
+            <returntype>int</returntype>
+        </field>
+        <field>
+            <name>listView1</name>
+            <comment></comment>
+            <returntype>int</returntype>
+        </field>
+        <field>
+            <name>key</name>
+            <comment></comment>
+            <returntype>int</returntype>
+        </field>
+    </class>
+    <class>
+        <name>com.javatechig.regemail.R.layout</name>
+        <owner>process</owner>
+        <field>
+            <name>lovely_view_layout</name>
+            <comment></comment>
+            <returntype>int</returntype>
+        </field>
+        <field>
+            <name>activity_main</name>
+            <comment></comment>
+            <returntype>int</returntype>
+        </field>
+    </class>
+    <class>
+        <name>com.javatechig.regemail.R.string</name>
+        <owner>process</owner>
+        <field>
+            <name>app_name</name>
+            <comment></comment>
+            <returntype>int</returntype>
+        </field>
+    </class>
+    <class>
+        <name>com.javatechig.regemail.R.style</name>
+        <owner>process</owner>
+        <field>
+            <name>AppBaseTheme</name>
+            <comment>Base application theme, dependent on API level. This theme is replaced
+        by AppBaseTheme from res/values-vXX/styles.xml on newer devices.
+
+
+            Theme customizations available in newer API levels can go in
+            res/values-vXX/styles.xml, while customizations related to
+            backward-compatibility can go here.
+
+
+        Base application theme for API 11+. This theme completely replaces
+        AppBaseTheme from res/values/styles.xml on API 11+ devices.
+
+ API 11 theme customizations can go here. 
+
+        Base application theme for API 14+. This theme completely replaces
+        AppBaseTheme from BOTH res/values/styles.xml and
+        res/values-v11/styles.xml on API 14+ devices.
+
+ API 14 theme customizations can go here.</comment>
+            <returntype>int</returntype>
+        </field>
+        <field>
+            <name>AppTheme</name>
+            <comment>Application theme. 
+ All customizations that are NOT specific to a particular API-level can go here.</comment>
+            <returntype>int</returntype>
+        </field>
+    </class>
+    <class>
+        <name>com.javatechig.regemail.BuildConfig</name>
+        <owner>process</owner>
+        <field>
+            <name>DEBUG</name>
+            <comment></comment>
+            <returntype>boolean</returntype>
+        </field>
+    </class>
+    <class>
+        <name>anywheresoftware.b4a.student.PackageType</name>
+        <shortname>PackageType</shortname>
+        <owner>process</owner>
+        <method>
+            <name>IsSystemApp</name>
+            <comment>detect package type
+ Return :
+ True if app is system
+ False if app is non-system</comment>
+            <returntype>java.lang.Boolean</returntype>
+            <parameter>
+                <name>b4a</name>
+                <type>anywheresoftware.b4a.BA</type>
+            </parameter>
+            <parameter>
+                <name>PackageName</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+    </class>
+    <version>1.0</version>
+</root>

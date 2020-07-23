@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root>
+    <doclet-version-NOT-library-version>1.02</doclet-version-NOT-library-version>
+    <class>
+        <name>com.madelephantstudios.MESShareLibrary.MESShareLibrary</name>
+        <shortname>MESShareLibrary</shortname>
+        <owner>activity</owner>
+        <method>
+            <name>sharebinary</name>
+            <comment></comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>ba</name>
+                <type>anywheresoftware.b4a.BA</type>
+            </parameter>
+            <parameter>
+                <name>p_path</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>p_type</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>p_msg</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>p_textval</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>p_title</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+    </class>
+    <version>1.2</version>
+    <author>SSG</author>
+</root>

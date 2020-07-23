@@ -1,0 +1,594 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root>
+    <doclet-version-NOT-library-version>1.02</doclet-version-NOT-library-version>
+    <class>
+        <name>anywheresoftware.b4a.objects.JackcessDatabase</name>
+        <shortname>JackcessDatabase</shortname>
+        <comment>The JackcessDatabase object represents an Access database. 
+Once opened the tables in the database may be passed to the Initialize method of a JackcessTable object.</comment>
+        <owner>process</owner>
+        <method>
+            <name>GetTableNames</name>
+            <comment>returns a String array containing the names of all the user tables in the database.</comment>
+            <returntype>java.lang.String[]</returntype>
+        </method>
+        <method>
+            <name>Open</name>
+            <comment>Opens the specified Access database.</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>filename</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+        <method>
+            <name>Flush</name>
+            <comment>Flushes any current changes to the database file (and any linked databases) to disk.</comment>
+            <returntype>void</returntype>
+        </method>
+        <method>
+            <name>Close</name>
+            <comment>Closes the presently opened Access database.</comment>
+            <returntype>void</returntype>
+        </method>
+        <method>
+            <name>IsOpen</name>
+            <comment>Returns True if a database is open.</comment>
+            <returntype>boolean</returntype>
+        </method>
+        <method>
+            <name>GetSystemTableNames</name>
+            <comment>Returns a String array containing the names of all the system tables in the database.</comment>
+            <returntype>java.lang.String[]</returntype>
+        </method>
+        <method>
+            <name>Details</name>
+            <comment>Returns a multiline String containing potentially useful details of the Database.</comment>
+            <returntype>java.lang.String</returntype>
+        </method>
+        <method>
+            <name>GetSystemTable</name>
+            <comment>Returns a reference to any available table in this access database, including system tables.
+Warning, this method is not designed for common use, only for the occassional time when access to
+a system table is necessary.</comment>
+            <returntype>com.healthmarketscience.jackcess.Table</returntype>
+            <parameter>
+                <name>systemtablename</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+        <method>
+            <name>GetFileFormat</name>
+            <comment>Returns the file format of this database as one of MSISAM, V1997, V2000, V2003, V2007 or V2010.</comment>
+            <returntype>java.lang.String</returntype>
+        </method>
+        <method>
+            <name>DateFromTicks</name>
+            <comment>Helper method to turn a ticks value into the Java Date type required for a database date field.</comment>
+            <returntype>java.util.Date</returntype>
+            <parameter>
+                <name>ticks</name>
+                <type>long</type>
+            </parameter>
+        </method>
+        <method>
+            <name>DateToTicks</name>
+            <comment>Helper method to turn the Java Date type returned from a database date field into a ticks value.</comment>
+            <returntype>long</returntype>
+            <parameter>
+                <name>date</name>
+                <type>java.util.Date</type>
+            </parameter>
+        </method>
+        <method>
+            <name>GetTable</name>
+            <comment>Returns a Table for the database for use in Table.Initialize.</comment>
+            <returntype>com.healthmarketscience.jackcess.Table</returntype>
+            <parameter>
+                <name>table</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+        <property>
+            <name>Version</name>
+            <returntype>double</returntype>
+            <comment>Returns the version of the library.</comment>
+        </property>
+    </class>
+    <class>
+        <name>anywheresoftware.b4a.objects.JackcessDatabase.JackcessTable</name>
+        <shortname>JackcessTable</shortname>
+        <comment>The JackcessTable object represent a table within the open database.</comment>
+        <owner>process</owner>
+        <method>
+            <name>Initialize</name>
+            <comment>Initialises this object with a database table provided by JackcessDatabase,GetTable.</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>table</name>
+                <type>com.healthmarketscience.jackcess.Table</type>
+            </parameter>
+        </method>
+        <method>
+            <name>GetColumnNames</name>
+            <comment>Returns the names of each of the columns in the table as a String array.</comment>
+            <returntype>java.lang.String[]</returntype>
+        </method>
+        <method>
+            <name>GetRowCount</name>
+            <comment>Returns the number of rows in the table.</comment>
+            <returntype>int</returntype>
+        </method>
+        <method>
+            <name>DeleteCurrentRow</name>
+            <comment>Delete the current row (retrieved by a call to GetNextRow).</comment>
+            <returntype>void</returntype>
+        </method>
+        <method>
+            <name>GetIndexNames</name>
+            <comment>Returns the names of each of the indexes in the table as a String array.</comment>
+            <returntype>java.lang.String[]</returntype>
+        </method>
+        <method>
+            <name>Details</name>
+            <comment>Returns a string containing potentially useful details of the Table.</comment>
+            <returntype>java.lang.String</returntype>
+        </method>
+        <method>
+            <name>Display</name>
+            <comment>Returns a string representation of the entire table in tab-delimited format.</comment>
+            <returntype>java.lang.String</returntype>
+        </method>
+        <method>
+            <name>AddRows</name>
+            <comment>Add multiple rows to this table, only writing to disk after all rows have been written,
+and every time a data page is filled. This is much more efficient than calling addRow multiple times. 
+Note, if this table has an auto-number column, the values written will be put back into the given row arrays.
+Any Date values should be passed as ticks to the Jackcess.DateFromTicks helper method
+and the returned Date object used here.</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>values</name>
+                <type>java.util.List</type>
+            </parameter>
+        </method>
+        <method>
+            <name>UpdateCurrentRow</name>
+            <comment>Update the current row with the provided values.
+Any Date values should be passed as ticks to the Jackcess.DateFromTicks helper method
+and the returned Date object used here.
+
+Note the after invoking this method GetColumnValue will return the old values not the new ones.
+This is unlike the behaviour of Cursor.UpdateCurrentRow and Cursor.SetCurrentRowValue after which
+the new values ARE available. The reason for this is that Cursor rereads the current row to update
+its stored values but a Table cannot do this as it lacks the necessary method.</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>values</name>
+                <type>java.lang.Object[]</type>
+            </parameter>
+        </method>
+        <method>
+            <name>GetIndex</name>
+            <comment>Returns an Index for the table for use in JackcessIndex.Initialize.</comment>
+            <returntype>com.healthmarketscience.jackcess.Index</returntype>
+            <parameter>
+                <name>indexname</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+        <method>
+            <name>GetColumnDataTypes</name>
+            <comment>Returns the Access data type of each of the columns in the table as a String array.</comment>
+            <returntype>java.lang.String[]</returntype>
+        </method>
+        <method>
+            <name>GetNextRow</name>
+            <comment>Reads the next row into an internal Map containing a set of Column name (String) and value (Object) pairs.
+The values of individual columns in the row may be obtained by GetColumnValue or GetColumnValueAndDate</comment>
+            <returntype>void</returntype>
+        </method>
+        <method>
+            <name>GetColumnJavaTypes</name>
+            <comment>Returns the Java data type of each of the columns in the table as a String array.
+Note that the Date type needs special treatment when read from the database.
+There are two helper methods, DateToTicks and DatefromTicks in JackcessDatabase to amp
+database Date type values to and from ticks for use in Basic4android.
+Access types map to Java types as follows.
+
+	BINARY: Byte[] of max length 255 bytes
+	BOOLEAN: Boolean
+	BYTE: Byte
+	COMPLEX_TYPE: Integer - an autonumber field which is the key for a secondary table which holds the data
+	DOUBLE: Double
+	FLOAT: Float
+	GUID: String with the pattern {xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx}
+	INT: Short
+	LONG: Integer
+	MEMO: String of max length 8388607 chars
+	MONEY: BigDecimal with at most 4 decimal places.
+	NUMERIC: BigDecimal 
+	OLE: Byte[] of max length 16777215 bytes.
+	SHORT_DATE_TIME: Date - basic4android does not directly support this type
+	TEXT: String of max length 255 chars</comment>
+            <returntype>java.lang.String[]</returntype>
+        </method>
+        <method>
+            <name>GetTable</name>
+            <comment>Returns the internal wrapped Table object.</comment>
+            <returntype>com.healthmarketscience.jackcess.Table</returntype>
+        </method>
+        <method>
+            <name>Reset</name>
+            <comment>After calling this method, GetNextRow will return the first row in the table,</comment>
+            <returntype>void</returntype>
+        </method>
+        <method>
+            <name>AddRow</name>
+            <comment>Adds a single row to this table and writes it to disk.
+The values are expected to be given in the order that the Columns are listed by getColumns() method.
+values are the row values for a single row. The given row array will be modified if this table contains
+an auto-number column, otherwise it will not be modified. 
+Any Date values should be passed as ticks to the Jackcess.DateFromTicks helper method
+and the returned Date object used here.</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>values</name>
+                <type>java.lang.Object[]</type>
+            </parameter>
+        </method>
+        <method>
+            <name>GetColumnValue</name>
+            <comment>Most Access data types map to types directly supported by Basic4android and can be returned as is.
+Only dates need special treatment to turn them into ticks for the Basic4android DateTime object.
+Rather than put a check for a Date in every call to this method it is incumbent on the programmer
+to pass the Date object to the JackcessDatabase.DateToTicks helper method.</comment>
+            <returntype>java.lang.Object</returntype>
+            <parameter>
+                <name>columnname</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+    </class>
+    <class>
+        <name>anywheresoftware.b4a.objects.JackcessDatabase.JackcessIndex</name>
+        <shortname>JackcessIndex</shortname>
+        <owner>process</owner>
+        <method>
+            <name>GetColumnNames</name>
+            <comment>Returns the names of each of the columns in the index as a String array.</comment>
+            <returntype>java.lang.String[]</returntype>
+        </method>
+        <method>
+            <name>Initialize</name>
+            <comment>Initialises this object with a database index provided by JackcessTable.GetIndex.</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>index</name>
+                <type>com.healthmarketscience.jackcess.Index</type>
+            </parameter>
+        </method>
+        <method>
+            <name>IsForeignKey</name>
+            <comment>Returns true if the index is a foreign key.
+i.e. it is a field in the table that is a primary key in another table</comment>
+            <returntype>boolean</returntype>
+        </method>
+        <method>
+            <name>IsUnique</name>
+            <comment>Returns True if the index entries must be unique values.
+Some notes about uniqueness: 
+Access does not seem to consider multiple null entries invalid for a unique index.
+Text indexes collapse case, and Access seems to compare only the index entry bytes,
+therefore two strings which differ only in case will violate the unique constraint.</comment>
+            <returntype>boolean</returntype>
+        </method>
+        <method>
+            <name>Details</name>
+            <comment>Returns a string containing potentially useful details of the Index.</comment>
+            <returntype>java.lang.String</returntype>
+        </method>
+        <method>
+            <name>IsPrimaryKey</name>
+            <comment>Returns True if the index is a primary key.
+i.e.  it is a field whose values uniquely identify each record in that table</comment>
+            <returntype>boolean</returntype>
+        </method>
+        <method>
+            <name>GetIndex</name>
+            <comment>Returns the internal wrapped Index object.</comment>
+            <returntype>com.healthmarketscience.jackcess.Index</returntype>
+        </method>
+    </class>
+    <class>
+        <name>anywheresoftware.b4a.objects.JackcessDatabase.JackcessIndexCursor</name>
+        <shortname>JackcessIndexCursor</shortname>
+        <comment>An index cursor provides efficient navigation of a table using a predefined index column or columns.</comment>
+        <owner>process</owner>
+        <method>
+            <name>Initialize</name>
+            <comment>Initialises this object with a table provided by JackcessDatabase.GetTable or JackcessTable.GetTable
+and a database index provided by JackcessTable.GetIndex or JackcessIndex.GetIndex.</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>table</name>
+                <type>com.healthmarketscience.jackcess.Table</type>
+            </parameter>
+            <parameter>
+                <name>index</name>
+                <type>com.healthmarketscience.jackcess.Index</type>
+            </parameter>
+        </method>
+        <method>
+            <name>FindClosestRowByEntry</name>
+            <comment>Moves to the first row (as defined by the cursor) where the index entries are &gt;= the given values.
+If an exception is thrown, the cursor is restored to its previous state. 
+
+entryValues is an array with the column values for the index's columns.</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>entryvalues</name>
+                <type>java.lang.Object[]</type>
+            </parameter>
+        </method>
+        <method>
+            <name>DeleteCurrentRow</name>
+            <comment>Delete the current row. Throws IllegalStateException if the current row is not valid
+(at beginning or end of table), or already deleted</comment>
+            <returntype>void</returntype>
+        </method>
+        <method>
+            <name>GetPreviousRow</name>
+            <comment>Reads the previous row into an internal Map containing a set of Column name (String) and value (Object) pairs.
+The values of individual columns in the row may be obtained by GetColumnValue or GetColumnValueAndDate</comment>
+            <returntype>void</returntype>
+        </method>
+        <method>
+            <name>UpdateCurrentRow</name>
+            <comment>Update the current row with the provided values.
+Any Date values should be passed as ticks to the Jackcess.DateFromTicks helper method
+and the returned Date object used here.</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>values</name>
+                <type>java.lang.Object[]</type>
+            </parameter>
+        </method>
+        <method>
+            <name>FindFirstRowByEntry</name>
+            <comment>Moves to the first row (as defined by the cursor) where the index entries match the given values.
+If a match is not found (or an exception is thrown), the cursor is restored to its previous state.
+Warning, this method always starts searching from the beginning of the Table (you cannot use it to find successive matches).
+If the entry is found the row is read into an internal Map containing a set of Column name (String) and value (Object) pairs.
+The values of individual columns in the row may be obtained by GetColumnValue or GetColumnValueAndDate
+entryValues is an array with the column values for the index's columns.</comment>
+            <returntype>boolean</returntype>
+            <parameter>
+                <name>entryvalues</name>
+                <type>java.lang.Object[]</type>
+            </parameter>
+        </method>
+        <method>
+            <name>FindFirstRow</name>
+            <comment>Moves to the first row (as defined by the cursor) where the given column has the given value.
+If a match is not found (or an exception is thrown), the cursor is restored to its previous state.
+Warning, this method always starts searching from the beginning of the Table (you cannot use it to find successive matches).</comment>
+            <returntype>boolean</returntype>
+            <parameter>
+                <name>column</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>value</name>
+                <type>java.lang.Object</type>
+            </parameter>
+        </method>
+        <method>
+            <name>FindNextRow</name>
+            <comment>Moves to the next row (as defined by the cursor) where the given column has the given value.
+If a match is not found (or an exception is thrown), the cursor is restored to its previous state.</comment>
+            <returntype>boolean</returntype>
+            <parameter>
+                <name>column</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>value</name>
+                <type>java.lang.Object</type>
+            </parameter>
+        </method>
+        <method>
+            <name>IsBeforeFirst</name>
+            <comment>Returns true if the cursor is currently positioned before the first row, false otherwise.</comment>
+            <returntype>boolean</returntype>
+        </method>
+        <method>
+            <name>GetCursor</name>
+            <comment>Returns the internal wrapped Cursor object.</comment>
+            <returntype>com.healthmarketscience.jackcess.Cursor</returntype>
+        </method>
+        <method>
+            <name>IsAfterLast</name>
+            <comment>Returns true if the cursor is currently positioned after the last row, false otherwise</comment>
+            <returntype>boolean</returntype>
+        </method>
+        <method>
+            <name>SetCurrentRowValue</name>
+            <comment>Updates a single value in the current row.
+Any Date values should be passed as ticks to the Jackcess.DateFromTicks helper method
+and the returned Date object used here.</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>column</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>value</name>
+                <type>java.lang.Object</type>
+            </parameter>
+        </method>
+        <method>
+            <name>GetNextRow</name>
+            <comment>Reads the next row into an internal Map containing a set of Column name (String) and value (Object) pairs.
+The values of individual columns in the row may be obtained by GetColumnValue or GetColumnValueAndDate</comment>
+            <returntype>void</returntype>
+        </method>
+        <method>
+            <name>Reset</name>
+            <comment>After calling this method, GetNextRow will return the first row in the table,</comment>
+            <returntype>void</returntype>
+        </method>
+        <method>
+            <name>GetColumnValue</name>
+            <comment>Most Access data types map to types directly supported by Basic4android and can be returned as is.
+Only dates need special treatment to turn them into ticks for the Basic4android DateTime object.
+Rather than put a check for a Date in every call to this method it is incumbent on the programmer
+to pass the Date object to the JackcessDatabase.DateToTicks helper method.</comment>
+            <returntype>java.lang.Object</returntype>
+            <parameter>
+                <name>columnname</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+    </class>
+    <class>
+        <name>anywheresoftware.b4a.objects.JackcessDatabase.JackcessCursor</name>
+        <shortname>JackcessCursor</shortname>
+        <comment>A cursor provides navigation of a table.</comment>
+        <owner>process</owner>
+        <method>
+            <name>Initialize</name>
+            <comment>Initialises this object with a table provided by JackcessDatabase.GetTable or JackcessTable.GetTable.</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>table</name>
+                <type>com.healthmarketscience.jackcess.Table</type>
+            </parameter>
+        </method>
+        <method>
+            <name>DeleteCurrentRow</name>
+            <comment>Delete the current row. Throws IllegalStateException if the current row is not valid
+(at beginning or end of table), or already deleted</comment>
+            <returntype>void</returntype>
+        </method>
+        <method>
+            <name>GetPreviousRow</name>
+            <comment>Reads the previous row into an internal Map containing a set of Column name (String) and value (Object) pairs.
+The values of individual columns in the row may be obtained by GetColumnValue or GetColumnValueAndDate</comment>
+            <returntype>void</returntype>
+        </method>
+        <method>
+            <name>UpdateCurrentRow</name>
+            <comment>Update the current row with the provided values.
+Any Date values should be passed as ticks to the Jackcess.DateFromTicks helper method
+and the returned Date object used here.</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>values</name>
+                <type>java.lang.Object[]</type>
+            </parameter>
+        </method>
+        <method>
+            <name>FindFirstRow</name>
+            <comment>Moves to the first row (as defined by the cursor) where the given column has the given value.
+If a match is not found (or an exception is thrown), the cursor is restored to its previous state.
+Warning, this method always starts searching from the beginning of the Table (you cannot use it to find successive matches).</comment>
+            <returntype>boolean</returntype>
+            <parameter>
+                <name>column</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>value</name>
+                <type>java.lang.Object</type>
+            </parameter>
+        </method>
+        <method>
+            <name>FindNextRow</name>
+            <comment>Moves to the next row (as defined by the cursor) where the given column has the given value.
+If a match is not found (or an exception is thrown), the cursor is restored to its previous state.</comment>
+            <returntype>boolean</returntype>
+            <parameter>
+                <name>column</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>value</name>
+                <type>java.lang.Object</type>
+            </parameter>
+        </method>
+        <method>
+            <name>IsBeforeFirst</name>
+            <comment>Returns true if the cursor is currently positioned before the first row, false otherwise.</comment>
+            <returntype>boolean</returntype>
+        </method>
+        <method>
+            <name>GetCursor</name>
+            <comment>Returns the internal wrapped Cursor object.</comment>
+            <returntype>com.healthmarketscience.jackcess.Cursor</returntype>
+        </method>
+        <method>
+            <name>IsAfterLast</name>
+            <comment>Returns true if the cursor is currently positioned after the last row, false otherwise</comment>
+            <returntype>boolean</returntype>
+        </method>
+        <method>
+            <name>SetCurrentRowValue</name>
+            <comment>Updates a single value in the current row.
+Any Date values should be passed as ticks to the Jackcess.DateFromTicks helper method
+and the returned Date object used here.</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>column</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>value</name>
+                <type>java.lang.Object</type>
+            </parameter>
+        </method>
+        <method>
+            <name>GetNextRow</name>
+            <comment>Reads the next row into an internal Map containing a set of Column name (String) and value (Object) pairs.
+The values of individual columns in the row may be obtained by GetColumnValue or GetColumnValueAndDate</comment>
+            <returntype>void</returntype>
+        </method>
+        <method>
+            <name>GetColumnValue</name>
+            <comment>Most Access data types map to types directly supported by Basic4android and can be returned as is.
+Only dates need special treatment to turn them into ticks for the Basic4android DateTime object.
+Rather than put a check for a Date in every call to this method it is incumbent on the programmer
+to pass the Date object to the JackcessDatabase.DateToTicks helper method.</comment>
+            <returntype>java.lang.Object</returntype>
+            <parameter>
+                <name>columnname</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+        <method>
+            <name>Reset</name>
+            <comment>After calling this method, GetNextRow will return the first row in the table,</comment>
+            <returntype>void</returntype>
+        </method>
+    </class>
+    <version>1.0</version>
+    <comment>This library is based on Jackcess, a pure Java library for reading from and writing to MS Access databases.
+Presently Access database versions 2000-2010 are supported and Access 97 read-only.
+It will obviously help to have some knowledge of MS Access in order to understand it.
+Jackcess does not support SQL queries so all database manipulations are done procedurally.
+
+Documentation for Jackcess is rather limited but the Javadocs for Jackcess can be found here.
+&lt;link&gt;http://jackcess.sourceforge.net/apidocs/index.html|http://jackcess.sourceforge.net/apidocs/index.html&lt;/link&gt;
+
+This library depends on commons-lang-2.6.jar and jackcess-1.2.10.jar. It also requires several files to be present
+in a myproject\res\raw folder. Those files may be copied from the demo in the archive and must be made read-only.
+
+Jackcess and therefore also this library is licensed under the GNU Lesser General Public License.
+&lt;link&gt;http://www.gnu.org/licenses/lgpl.html|http://www.gnu.org/licenses/lgpl.html&lt;/link&gt;
+Copies of both the General Public License and Lesser General Public License are in the provided archive.
+
+Copyright 2013 Anywhere Software</comment>
+    <author>Andrew Graham</author>
+    <dependsOn>jackcess-1.2.10</dependsOn>
+    <dependsOn>commons-lang-2.6</dependsOn>
+</root>

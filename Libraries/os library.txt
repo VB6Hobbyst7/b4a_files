@@ -1,0 +1,31 @@
+This 'giant' library has around 60+ commands.
+ Everything is explained in the library itself.
+ 
+What does it cover:
+ 
+- Memory size of directories
+ - Tons of hardware strings (e.g model, device, host, ...)
+ - A unique, very easy countdown timer with 2 events (easier than timer 
+
+CPU information
+ - Running services, tasks, sending signals
+ - Rebooting (and wiping data)
+ - and a lot more!
+
+ 
+ 
+Code:
+
+Dim OS As OperatingSystem
+OS.Initialize("OS")
+OS.CountDownTimer(1000)
+
+Sub OS_ontick (ms as long)       
+toastmessageshow(ms,false)end sub
+
+Sub OS_onfinish (OS As String)    
+Msgbox(OS,"OS Library") 'get the secret message in here ;)
+
+End Sub
+
+ 

@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root>
+    <doclet-version-NOT-library-version>1.05</doclet-version-NOT-library-version>
+    <class>
+        <name>anywheresoftware.b4a.objects.IdentityWrapper</name>
+        <shortname>IdentityClient</shortname>
+        <owner>activity</owner>
+        <event>Signin (Success As Boolean, User As IdentityUser)</event>
+        <permission>android.permission.INTERNET</permission>
+        <method>
+            <name>Initialize</name>
+            <comment></comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>ba</name>
+                <type>anywheresoftware.b4a.BA</type>
+            </parameter>
+            <parameter>
+                <name>EventName</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+        <method>
+            <name>StartSignin</name>
+            <comment>Starts the signing process.</comment>
+            <returntype>void</returntype>
+        </method>
+    </class>
+    <class>
+        <name>anywheresoftware.b4a.objects.IdentityWrapper.IdentityUser</name>
+        <shortname>IdentityUser</shortname>
+        <objectwrapper>com.google.identitytoolkit.GitkitUser</objectwrapper>
+        <owner>process</owner>
+        <method>
+            <name>IsInitialized</name>
+            <comment></comment>
+            <returntype>boolean</returntype>
+        </method>
+        <property>
+            <name>Email</name>
+            <returntype>java.lang.String</returntype>
+            <comment></comment>
+        </property>
+        <property>
+            <name>PhotoUrl</name>
+            <returntype>java.lang.String</returntype>
+            <comment></comment>
+        </property>
+        <property>
+            <name>DisplayName</name>
+            <returntype>java.lang.String</returntype>
+            <comment></comment>
+        </property>
+    </class>
+    <version>1.0</version>
+    <dependsOn>identity-native</dependsOn>
+    <dependsOn>google-play-services</dependsOn>
+</root>

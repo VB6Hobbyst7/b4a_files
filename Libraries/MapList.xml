@@ -1,0 +1,442 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <doclet-version-NOT-library-version>1.00</doclet-version-NOT-library-version>
+  <class>
+    <name>ScB.MisterBates.MapList.maplist</name>
+    <shortname>MapList</shortname>
+    <comment>MapList - combines elements of a Map and a List.
+Key differences:
+1) All methods that add items into a MapList require both a Key and a Value (Key/Value pairs). Like a Map, Keys can link to only one MapList entry.
+2) The order of Items added is maintained in an internal Key List and defaults to the order added, unless any of AddAllAt, AddAllAt2, InsertAt, Sort or SortCaseInsensitive is used.
+3) Duplicate Keys will overwrite the previous item Value and move the Key to the end of the Key List (unless using AddAllAt, AddAllAt2 or InsertAt to insert Keys/Values at a specific location in the Key List).
+4) Maps and Lists differ in how they handle out of bounds Index values ... with MapList out of bounds Indexes will throw an exception, while unmatched Keys return null.
+
+The following methods are not implemented for the following reasons:
+   Add - Use Put instead
+   Get - Get what? Use GetKeyAt/GetValueAt instead
+   Initialize2 - Arrays can't be used with MapList, convert to a Map first
+   Keys, Values - Don't know how to return an IterableList
+   Sort, SortcaseInsensitive - Replaced with SortKeys/SortKeysCaseInsensitive, SortedKeys/SortedKeysCaseInsensitive and SortedValues/SortedValuesCaseInsensitive
+   SortType - MapList doesn't understand User-Defined Types
+   SortTypeCaseInsensitive - MapList doesn't understand User-Defined Types
+
+Date     Vers Description
+======== ==== =================================================================================================================================
+20170615 1.00 Initial version
+20170615 1.01 Added InsertBefore and InsertAfter methods; Fixed bug in Set
+20170616 1.02 Added Keys and Values methods (returning list objects usable in For ... Each loops)
+20170617 1.03 Added IndexOfKey method
+
+</comment>
+    <owner>process</owner>
+    <method>
+      <name DesignerName="IsInitialized">_vvv5</name>
+      <returntype>boolean</returntype>
+    </method>
+    <method>
+      <name DesignerName="AddAll">_v5</name>
+      <comment>Adds all items in the specified MapList to the end of the MapList, overwriting any items where the Key already exists.
+Note: You cannot add an array directly.
+Example:
+MapList.AddAll(myMapList)
+</comment>
+      <returntype>String</returntype>
+      <parameter>
+        <name>aMapList</name>
+        <type>ScB.MisterBates.MapList.maplist</type>
+      </parameter>
+    </method>
+    <method>
+      <name DesignerName="AddAll2">_v6</name>
+      <comment>Adds all items in the specified Map To the end of the MapList, overwriting any items where the Key already exists.
+Note: You cannot add an array directly.
+Example:
+MapList.AddAll(myMap)
+</comment>
+      <returntype>String</returntype>
+      <parameter>
+        <name>aMap</name>
+        <type>anywheresoftware.b4a.objects.collections.Map</type>
+      </parameter>
+    </method>
+    <method>
+      <name DesignerName="AddAllAt">_v7</name>
+      <comment>Adds all items in the specified MapList to the MapList starting at the specified Index, overwriting any items where the Key already exists.
+</comment>
+      <returntype>String</returntype>
+      <parameter>
+        <name>Index</name>
+        <type>int</type>
+      </parameter>
+      <parameter>
+        <name>aMapList</name>
+        <type>ScB.MisterBates.MapList.maplist</type>
+      </parameter>
+    </method>
+    <method>
+      <name DesignerName="AddAllAt2">_v0</name>
+      <comment>Adds all items in the specified Map to the MapList starting at the specified Index, overwriting any items where the Key already exists.
+</comment>
+      <returntype>String</returntype>
+      <parameter>
+        <name>Index</name>
+        <type>int</type>
+      </parameter>
+      <parameter>
+        <name>aMap</name>
+        <type>anywheresoftware.b4a.objects.collections.Map</type>
+      </parameter>
+    </method>
+    <method>
+      <name DesignerName="Class_Globals">_class_globals</name>
+      <returntype>String</returntype>
+    </method>
+    <method>
+      <name DesignerName="Clear">_vv1</name>
+      <comment>Clears all items from the MapList
+</comment>
+      <returntype>String</returntype>
+    </method>
+    <method>
+      <name DesignerName="ContainsKey">_vv2</name>
+      <comment>Tests whether there is an item with the given Key.
+Example:
+If MapList.ContainsKey("some key") Then ...
+</comment>
+      <returntype>boolean</returntype>
+      <parameter>
+        <name>Key</name>
+        <type>Object</type>
+      </parameter>
+    </method>
+    <method>
+      <name DesignerName="Get">_vv3</name>
+      <comment>Returns the Value of the item with the given Key.
+</comment>
+      <returntype>Object</returntype>
+      <parameter>
+        <name>Key</name>
+        <type>Object</type>
+      </parameter>
+    </method>
+    <method>
+      <name DesignerName="GetDefault">_vv4</name>
+      <comment>Returns the Value of the item with the given key.
+If no such item exists the specified Default Value is returned.
+</comment>
+      <returntype>Object</returntype>
+      <parameter>
+        <name>Key</name>
+        <type>Object</type>
+      </parameter>
+      <parameter>
+        <name>Default</name>
+        <type>Object</type>
+      </parameter>
+    </method>
+    <method>
+      <name DesignerName="GetKeyAt">_vv5</name>
+      <comment>Returns the Key of the item at the given Index.
+Throws an out of bounds exception if Index is out of range.
+GetKeyAt And GetValueAt should be used To iterate over all the items.
+Example:
+For i = 0 To MapList.Size - 1
+  Log("Key: " &amp; MapList.GetKeyAt(i))
+  Log("Value: " &amp; MapList.GetValueAt(i))
+Next
+</comment>
+      <returntype>Object</returntype>
+      <parameter>
+        <name>Index</name>
+        <type>int</type>
+      </parameter>
+    </method>
+    <method>
+      <name DesignerName="getSize" HideFromIDE="true">_getvvvvv3</name>
+      <comment>Returns the number of items stored in the MapList.
+</comment>
+      <returntype>int</returntype>
+    </method>
+    <method>
+      <name DesignerName="GetValueAt">_vv7</name>
+      <comment>Returns the Value of the item at the given Index.
+Throws an out of bounds exception if Index is out of range.
+GetKeyAt And GetValueAt should be used To iterate over all the items.
+Example:
+For i = 0 To MapList.Size - 1
+  Log("Key: " &amp; MapList.GetKeyAt(i))
+  Log("Value: " &amp; MapList.GetValueAt(i))
+Next
+</comment>
+      <returntype>Object</returntype>
+      <parameter>
+        <name>Index</name>
+        <type>int</type>
+      </parameter>
+    </method>
+    <method>
+      <name DesignerName="IndexOf">_vv0</name>
+      <comment>Returns the Index of the specified item Value, Or -1 if it was not found.
+Warning: Lookup by Value (rather than by Key or Index) may be VERY slow depending on the size of the MapList - Maplist does not maintain a Value lookup table.
+</comment>
+      <returntype>int</returntype>
+      <parameter>
+        <name>Value</name>
+        <type>Object</type>
+      </parameter>
+    </method>
+    <method>
+      <name DesignerName="IndexOfKey">_vvv1</name>
+      <comment>Returns the Index of the specified Key, Or -1 if it was not found.
+</comment>
+      <returntype>int</returntype>
+      <parameter>
+        <name>Key</name>
+        <type>Object</type>
+      </parameter>
+    </method>
+    <method>
+      <name DesignerName="Initialize">_initialize</name>
+      <comment>Initializes the object.
+Example:
+Dim MapList1 As MapList
+MapList1.Initialize
+</comment>
+      <returntype>String</returntype>
+      <parameter>
+        <name>ba</name>
+        <type>anywheresoftware.b4a.BA</type>
+      </parameter>
+    </method>
+    <method>
+      <name DesignerName="InsertAfter">_vvv2</name>
+      <comment>Inserts the specified Key/Value after the item with the specified Key, overwriting any previous item Value.
+If the specified Key does not exist, throws an exception
+Returns the previous item with the inserted key or Null If there was no such item.
+</comment>
+      <returntype>Object</returntype>
+      <parameter>
+        <name>AfterKey</name>
+        <type>Object</type>
+      </parameter>
+      <parameter>
+        <name>Key</name>
+        <type>Object</type>
+      </parameter>
+      <parameter>
+        <name>Value</name>
+        <type>Object</type>
+      </parameter>
+    </method>
+    <method>
+      <name DesignerName="InsertAt">_vvv3</name>
+      <comment>Inserts the Key/Value at the specified Index, before the current item at that Index.
+As a result all items with Index equal to or larger than the specified Index are shifted.
+If the Key already exists in the MapList, the previous Value will be overwritten.
+Returns the previous item with this Key or Null If there was no such item.
+</comment>
+      <returntype>Object</returntype>
+      <parameter>
+        <name>Index</name>
+        <type>int</type>
+      </parameter>
+      <parameter>
+        <name>Key</name>
+        <type>Object</type>
+      </parameter>
+      <parameter>
+        <name>Value</name>
+        <type>Object</type>
+      </parameter>
+    </method>
+    <method>
+      <name DesignerName="InsertBefore">_vvv4</name>
+      <comment>Inserts the specified Key/Value before the item with the specified Key, overwriting any previous item Value.
+If the specified Key does not exist, throws an exception
+Returns the previous item with the inserted key or Null If there was no such item.
+</comment>
+      <returntype>Object</returntype>
+      <parameter>
+        <name>BeforeKey</name>
+        <type>Object</type>
+      </parameter>
+      <parameter>
+        <name>Key</name>
+        <type>Object</type>
+      </parameter>
+      <parameter>
+        <name>Value</name>
+        <type>Object</type>
+      </parameter>
+    </method>
+    <method>
+      <name DesignerName="Keys">_vvv6</name>
+      <comment>Returns an object which can be used to iterate over all the Keys using a For .. Each block.
+Returned Keys are in the order in which they were added (unless any of AddAllAt, AddAllAt2, InsertAt, Sort or SortCaseInsensitive have been used).
+Warning: MapList returns a copy of the Key list. Building the copy can be VERY slow depending on the number of items - it is quicker to iterate using GetKeyAt.
+Example:
+For Each k As String In MapList.Keys
+  Log(k)
+Next
+</comment>
+      <returntype>anywheresoftware.b4a.objects.collections.List</returntype>
+    </method>
+    <method>
+      <name DesignerName="KeyValueLog">_vvv7</name>
+      <comment>Writes Key/Value pairs to the Log (for degugging)
+</comment>
+      <returntype>String</returntype>
+    </method>
+    <method>
+      <name DesignerName="Put">_vvv0</name>
+      <comment>Puts a Key/Value pair into the MapList, overwriting the previous item with this Key (if Key already exists).
+Key is added to the end  of the MapList (or moved to the end if Key already exists), to maintain order added.
+Returns the previous item with this Key or Null If there was no such item.
+Note that If you are using strings as Keys then the Keys are case sensitive.
+Example:
+MapList.Put("Key", "Value")
+</comment>
+      <returntype>Object</returntype>
+      <parameter>
+        <name>Key</name>
+        <type>Object</type>
+      </parameter>
+      <parameter>
+        <name>Value</name>
+        <type>Object</type>
+      </parameter>
+    </method>
+    <method>
+      <name DesignerName="Remove">_vvvv1</name>
+      <comment>Removes the item with the given Key, if the Key exists.
+Returns the item removed or Null if no matching item was found.
+</comment>
+      <returntype>Object</returntype>
+      <parameter>
+        <name>Key</name>
+        <type>Object</type>
+      </parameter>
+    </method>
+    <method>
+      <name DesignerName="RemoveAt">_vvvv2</name>
+      <comment>Removes the item at the specified Index.
+Returns the item removed or Null If there was no such item.
+</comment>
+      <returntype>Object</returntype>
+      <parameter>
+        <name>Index</name>
+        <type>int</type>
+      </parameter>
+    </method>
+    <method>
+      <name DesignerName="Set">_vvvv3</name>
+      <comment>Replaces the current item at the specified Index with the new item, removing the current item.
+If the Key already exists in the MapList, the previous Value will be overwritten AND the current item removed.
+Returns the previous item with this Key or Null If there was no such item.
+</comment>
+      <returntype>Object</returntype>
+      <parameter>
+        <name>Index</name>
+        <type>int</type>
+      </parameter>
+      <parameter>
+        <name>Key</name>
+        <type>Object</type>
+      </parameter>
+      <parameter>
+        <name>Value</name>
+        <type>Object</type>
+      </parameter>
+    </method>
+    <method>
+      <name DesignerName="SortedKeys">_vvvv4</name>
+      <comment>Returns a sorted list of the MapList Keys without losing the order in which the items were added.
+The Keys must all be numbers or strings.
+Warning: Maplist returns a sorted copy of the Key list - this may be VERY slow depending on the size of the MapList.
+</comment>
+      <returntype>anywheresoftware.b4a.objects.collections.List</returntype>
+      <parameter>
+        <name>Ascending</name>
+        <type>boolean</type>
+      </parameter>
+    </method>
+    <method>
+      <name DesignerName="SortedKeysCaseInsensitive">_vvvv5</name>
+      <comment>Returns a Lexicographically sorted list of the MapList Keys ignoring the characters case, without losing the order in which the items were added.
+The Keys must all be numbers or strings.
+Warning: Maplist returns a sorted copy of the Key list - this may be VERY slow depending on the size of the MapList.
+</comment>
+      <returntype>anywheresoftware.b4a.objects.collections.List</returntype>
+      <parameter>
+        <name>Ascending</name>
+        <type>boolean</type>
+      </parameter>
+    </method>
+    <method>
+      <name DesignerName="SortedValues">_vvvv6</name>
+      <comment>Returns a sorted list of the MapList Values without losing the order in which the items were added.
+The Values must all be numbers or strings.
+Warning: Maplist returns a sorted copy of the Values - this may be VERY slow depending on the size of the MapList.
+</comment>
+      <returntype>anywheresoftware.b4a.objects.collections.List</returntype>
+      <parameter>
+        <name>Ascending</name>
+        <type>boolean</type>
+      </parameter>
+    </method>
+    <method>
+      <name DesignerName="SortedValuesCaseInsensitive">_vvvv7</name>
+      <comment>Returns a Lexicographically sorted list of the MapList Values ignoring the characters case, without losing the order in which the Items were added.
+The Values must all be numbers or strings.
+Warning: Maplist returns a sorted copy of the Values - this may be VERY slow depending on the size of the MapList.
+</comment>
+      <returntype>anywheresoftware.b4a.objects.collections.List</returntype>
+      <parameter>
+        <name>Ascending</name>
+        <type>boolean</type>
+      </parameter>
+    </method>
+    <method>
+      <name DesignerName="SortKeys">_vvvv0</name>
+      <comment>Sorts the MapList by Key, losing the order in which the items were added
+The Keys must all be numbers or strings.
+</comment>
+      <returntype>String</returntype>
+      <parameter>
+        <name>Ascending</name>
+        <type>boolean</type>
+      </parameter>
+    </method>
+    <method>
+      <name DesignerName="SortKeysCaseInsensitive">_vvvvv1</name>
+      <comment>Lexicographically sorts the MapList by Key ignoring the characters case, losing the order in which the items were added.
+The Keys must all be numbers or strings.
+</comment>
+      <returntype>String</returntype>
+      <parameter>
+        <name>Ascending</name>
+        <type>boolean</type>
+      </parameter>
+    </method>
+    <method>
+      <name DesignerName="Values">_vvvvv2</name>
+      <comment>Returns an object which can be used to iterate over all the Values using a For .. Each block.
+Returned Values are in the order in which they were added (unless any of AddAllAt, AddAllAt2, InsertAt, Sort or SortCaseInsensitive have been used).
+Warning: MapList returns a copy of the Values. Building the copy can be VERY slow depending on the number of items - it is quicker to iterate using GetValueAt.
+Example:
+For Each v As Int In MapList.Values
+  Log(v)
+Next
+</comment>
+      <returntype>anywheresoftware.b4a.objects.collections.List</returntype>
+    </method>
+    <property>
+      <name DesignerName="Size">_vvvvv3</name>
+      <comment>Returns the number of items stored in the MapList.
+</comment>
+      <returntype>int</returntype>
+    </property>
+  </class>
+  <version>1.03</version>
+  <author>MisterBates</author>
+</root>

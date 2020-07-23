@@ -1,0 +1,220 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <doclet-version-NOT-library-version>1.00</doclet-version-NOT-library-version>
+  <dependsOn>reflection</dependsOn>
+  <dependsOn>stringutils</dependsOn>
+  <dependsOn>webviewextras</dependsOn>
+  <class>
+    <name>njdude.custom.progressdialog.customprogressdialog</name>
+    <shortname>CustomProgressDialog</shortname>
+    <owner>activity</owner>
+    <method>
+      <name>IsInitialized</name>
+      <comment>Tests whether the object has been initialized.</comment>
+      <returntype>boolean</returntype>
+    </method>
+    <method>
+      <name DesignerName="Hide">_hide</name>
+      <comment>Hide the custom progress dialog</comment>
+      <returntype>String</returntype>
+    </method>
+    <method>
+      <name DesignerName="Initialize">_initialize</name>
+      <comment>Activity: Activity (Required)
+Width: Custom progress dialog width (in dip or %)
+Left: Left custom progress dialog position (Enter -1 to center horizontally)
+Top: Top custom progress dialog position (Enter -1 to center vertically)
+BackgroundImage: Custom progress dialog backgrond image
+BackgroundImageNinePatch: Custom progress dialog backgrond image
+BackgroundColor: Custom progress dialog backgrond color
+AnimationColor: Color of the animation
+Animation: DEFAULT, LASER, BOUNCE, DOMINO or PROGRESS
+RoundCorners: True = Round corners, False = Flat corners</comment>
+      <returntype>String</returntype>
+      <parameter>
+        <name>ba</name>
+        <type>anywheresoftware.b4a.BA</type>
+      </parameter>
+      <parameter>
+        <name>Activity</name>
+        <type>anywheresoftware.b4a.objects.ActivityWrapper</type>
+      </parameter>
+      <parameter>
+        <name>Width</name>
+        <type>int</type>
+      </parameter>
+      <parameter>
+        <name>Left</name>
+        <type>double</type>
+      </parameter>
+      <parameter>
+        <name>Top</name>
+        <type>double</type>
+      </parameter>
+      <parameter>
+        <name>BackgroundImage</name>
+        <type>String</type>
+      </parameter>
+      <parameter>
+        <name>BackgroundImageNinePatch</name>
+        <type>String</type>
+      </parameter>
+      <parameter>
+        <name>BackgroundColor</name>
+        <type>int</type>
+      </parameter>
+      <parameter>
+        <name>AnimationColor</name>
+        <type>int</type>
+      </parameter>
+      <parameter>
+        <name>Animation</name>
+        <type>String</type>
+      </parameter>
+      <parameter>
+        <name>RoundCorners</name>
+        <type>boolean</type>
+      </parameter>
+    </method>
+    <method>
+      <name DesignerName="setSetMax" HideFromIDE="true">_setsetmax</name>
+      <comment>Set the max value - progress bar</comment>
+      <returntype>String</returntype>
+      <parameter>
+        <name>Value</name>
+        <type>int</type>
+      </parameter>
+    </method>
+    <method>
+      <name DesignerName="Show">_show</name>
+      <comment>Show the custom progress dialog</comment>
+      <returntype>String</returntype>
+      <parameter>
+        <name>ProgressDialogPrompt</name>
+        <type>String</type>
+      </parameter>
+      <parameter>
+        <name>TextColor</name>
+        <type>int</type>
+      </parameter>
+    </method>
+    <method>
+      <name DesignerName="ShowPageLoad">_showpageload</name>
+      <comment>Show the custom progress dialog - web page</comment>
+      <returntype>String</returntype>
+      <parameter>
+        <name>WebViewName</name>
+        <type>anywheresoftware.b4a.objects.WebViewWrapper</type>
+      </parameter>
+      <parameter>
+        <name>TextColor</name>
+        <type>int</type>
+      </parameter>
+    </method>
+    <method>
+      <name DesignerName="ShowProgress">_showprogress</name>
+      <comment>Show the custom progress dialog - progress bar</comment>
+      <returntype>String</returntype>
+      <parameter>
+        <name>ProgressDialogPrompt</name>
+        <type>String</type>
+      </parameter>
+      <parameter>
+        <name>TextColor</name>
+        <type>int</type>
+      </parameter>
+      <parameter>
+        <name>Value</name>
+        <type>int</type>
+      </parameter>
+    </method>
+    <method>
+      <name DesignerName="ShowSimple">_showsimple</name>
+      <comment>Show a simple progress dialog</comment>
+      <returntype>String</returntype>
+    </method>
+    <method>
+      <name DesignerName="ShowSimplePageLoad">_showsimplepageload</name>
+      <comment>Show a simple progress dialog</comment>
+      <returntype>String</returntype>
+      <parameter>
+        <name>WebViewName</name>
+        <type>anywheresoftware.b4a.objects.WebViewWrapper</type>
+      </parameter>
+      <parameter>
+        <name>TextColor</name>
+        <type>int</type>
+      </parameter>
+    </method>
+    <method>
+      <name DesignerName="ShowSimpleWithValue">_showsimplewithvalue</name>
+      <comment>Show a simple progress dialog</comment>
+      <returntype>String</returntype>
+      <parameter>
+        <name>Value</name>
+        <type>int</type>
+      </parameter>
+      <parameter>
+        <name>TextColor</name>
+        <type>int</type>
+      </parameter>
+    </method>
+    <property>
+      <name DesignerName="SetMax">_setmax</name>
+      <comment>Set the max value - progress bar</comment>
+      <returntype>void</returntype>
+      <parameter>
+        <name>Value</name>
+        <type>int</type>
+      </parameter>
+    </property>
+    <field>
+      <name DesignerName="IsShow">_isshow</name>
+      <returntype>boolean</returntype>
+    </field>
+    <field>
+      <name DesignerName="HoloGraphs">_holographs</name>
+      <returntype>anywheresoftware.b4a.objects.drawable.CanvasWrapper.BitmapWrapper[]</returntype>
+    </field>
+  </class>
+  <class>
+    <name>njdude.custom.progressdialog.jarfileloader</name>
+    <shortname>JarFileLoader</shortname>
+    <owner>process</owner>
+    <method>
+      <name>IsInitialized</name>
+      <comment>Tests whether the object has been initialized.</comment>
+      <returntype>boolean</returntype>
+    </method>
+    <method>
+      <name DesignerName="Initialize">_initialize</name>
+      <returntype>String</returntype>
+      <parameter>
+        <name>ba</name>
+        <type>anywheresoftware.b4a.BA</type>
+      </parameter>
+      <parameter>
+        <name>FromAssetsFile</name>
+        <type>boolean</type>
+      </parameter>
+    </method>
+    <method>
+      <name DesignerName="LoadBitmapFromJar">_loadbitmapfromjar</name>
+      <returntype>anywheresoftware.b4a.objects.drawable.CanvasWrapper.BitmapWrapper</returntype>
+      <parameter>
+        <name>FileName</name>
+        <type>String</type>
+      </parameter>
+    </method>
+    <method>
+      <name DesignerName="LoadFileFileFromJar">_loadfilefilefromjar</name>
+      <returntype>anywheresoftware.b4a.objects.streams.File.InputStreamWrapper</returntype>
+      <parameter>
+        <name>FileName</name>
+        <type>String</type>
+      </parameter>
+    </method>
+  </class>
+  <version>2.2</version>
+  <author>NJDude</author>
+</root>

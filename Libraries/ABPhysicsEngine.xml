@@ -1,0 +1,1131 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root>
+    <doclet-version-NOT-library-version>1.00</doclet-version-NOT-library-version>
+    <class>
+        <name>com.AB.ABPhysicsEngine.ABPhysicsEngine</name>
+        <shortname>ABPhysicsEngine</shortname>
+        <comment>A physics engine for Basic4Android. 
+ 
+ Features:
+ - collision detection (Circle-Circle, Rect-Rect, Circle-Rect and Rect-Circle) 
+   between groups and within groups
+ - particles with elasticity, friction, traction, sprite animation, etc...
+ - Joints with stiffness that connects particles
+ - groups of particles and joints
+ - self-buildable forces (like gravity, push, ...) on the engine and particles
+ - vector functions
+ - ...
+ 
+ Please give credit to me if you use this library in your software as it took a lot
+ of research to get the physics right, but still very simple to use.</comment>
+        <owner>process</owner>
+        <event>Error (Number as int, Message as String)</event>
+        <method>
+            <name>AddGroup</name>
+            <comment>Add a group to the egnine</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>group</name>
+                <type>com.AB.ABPhysicsEngine.ABPhysicsEngine.ABGroup</type>
+            </parameter>
+        </method>
+        <method>
+            <name>Initialize</name>
+            <comment>Initializes the engine. You must call this method prior to adding any 
+ particles or joints.
+dt: The delta time value for the engine. This parameter can be used --
+ in conjunction with speed at which &lt;code&gt;ABPhysicsEngine.Step()&lt;/code&gt; is called -- 
+ to change the speed of the simulation. Typical values are 1/3 or 1/4. Lower 
+ values result in slower, but more accurate simulations, and higher ones 
+ result in faster, less accurate ones. Note that this only applies to the 
+ forces added to particles. If you do not add any forces, the &lt;code&gt;dt&lt;/code&gt; 
+ value won't matter.</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>dt</name>
+                <type>double</type>
+            </parameter>
+        </method>
+        <method>
+            <name>Step</name>
+            <comment>Update all groups in the engine. Must be used in your timer loop</comment>
+            <returntype>void</returntype>
+        </method>
+        <method>
+            <name>GetGlobalForces</name>
+            <comment>Returns all global forces</comment>
+            <returntype>java.util.List</returntype>
+        </method>
+        <method>
+            <name>RemoveGroup</name>
+            <comment>Removes a group from the engine</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>group</name>
+                <type>com.AB.ABPhysicsEngine.ABPhysicsEngine.ABGroup</type>
+            </parameter>
+        </method>
+        <method>
+            <name>AddGlobalForce</name>
+            <comment>Add a force to the engine. It will have impact on all groups</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>force</name>
+                <type>com.AB.ABPhysicsEngine.ABPhysicsEngine.ABForce</type>
+            </parameter>
+        </method>
+        <method>
+            <name>GetGroupByName</name>
+            <comment>Get a group by name</comment>
+            <returntype>com.AB.ABPhysicsEngine.ABPhysicsEngine.ABGroup</returntype>
+            <parameter>
+                <name>name</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+        <method>
+            <name>GetGroups</name>
+            <comment>returns all the groups in the engine</comment>
+            <returntype>java.util.List</returntype>
+        </method>
+        <method>
+            <name>RemoveGlobalForce</name>
+            <comment>Remove a force from the engine</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>force</name>
+                <type>com.AB.ABPhysicsEngine.ABPhysicsEngine.ABForce</type>
+            </parameter>
+        </method>
+        <method>
+            <name>GetGlobalForceByName</name>
+            <comment>Returns a force from the engine by name</comment>
+            <returntype>com.AB.ABPhysicsEngine.ABPhysicsEngine.ABForce</returntype>
+            <parameter>
+                <name>name</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+        <method>
+            <name>AddListOfGroups</name>
+            <comment>Add a list of groups to the engine</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>list</name>
+                <type>java.util.List</type>
+            </parameter>
+        </method>
+        <property>
+            <name>JointCycles</name>
+            <returntype>int</returntype>
+            <parameter>
+                <name>numCycles</name>
+                <type>int</type>
+            </parameter>
+            <comment>Determines the number of times in a single &lt;code&gt;APEngine.step()&lt;/code&gt; cycle that 
+ the joints have their positions corrected. Increasing this number can result in
+ stiffer, more stable configurations of joints, especially when they are in large
+ complex arrangements. The trade off is that the higher you set this number the more 
+ performance will suffer.
+
+ &lt;p&gt;
+ This setting differs from the &lt;code&gt;jointCollisionCycles&lt;/code&gt; property in that it
+ only resolves joints during a &lt;code&gt;ABPhysicsEngine.Step()&lt;/code&gt;. The default value
+ is 0. Because this property doesn't correct for collisions, you should only use it when
+ the collisions of an arrangement of particles and joints are not an issue. If you 
+ do set this value higher than the default of 0, then  &lt;code&gt;jointCollisionCycles&lt;/code&gt;
+ should at least be 1, in order to check collisions one time during the 
+ &lt;code&gt;ABPhysicsEngine.Step()&lt;/code&gt; cycle.
+ &lt;/p&gt;</comment>
+        </property>
+        <property>
+            <name>JointCollisionCycles</name>
+            <returntype>int</returntype>
+            <parameter>
+                <name>numCycles</name>
+                <type>int</type>
+            </parameter>
+            <comment>Determines the number of times in a single &lt;code&gt;ABPhysicsEngine.Step()&lt;/code&gt; cycle that
+ the joints have their positions corrected and particles in collision have their
+ positions corrected. This can greatly increase stability and prevent breakthroughs,
+ especially with large complex arrangements of joints and particles. The larger
+ this number, the more stable the simulation, at an expense of performance.
+
+ &lt;p&gt; 
+ This setting differs from the &lt;code&gt;jointCycles&lt;/code&gt; property in that it
+ resolves both joints and collisions during a &lt;code&gt;ABPhysicsEngine.Step()&lt;/code&gt;,
+ as opposed to just the joints. The default value is 1.
+ &lt;/p&gt;</comment>
+        </property>
+        <property>
+            <name>Damping</name>
+            <returntype>double</returntype>
+            <parameter>
+                <name>d</name>
+                <type>double</type>
+            </parameter>
+            <comment>The global damping. Values should be between 0 and 1. Higher numbers result
+ in less damping. A value of 1 is no damping. A value of 0 won't allow any
+ particles to move. The default is 1.
+ 
+ &lt;p&gt;
+ Damping will slow down your simulation and make it more stable. If you find
+ that your sim is "blowing up', try applying more damping. 
+ &lt;/p&gt;</comment>
+        </property>
+    </class>
+    <class>
+        <name>com.AB.ABPhysicsEngine.ABPhysicsEngine.ABGroup</name>
+        <shortname>ABGroup</shortname>
+        <comment>A group contains Particles and joints that act as one big particle.</comment>
+        <owner>process</owner>
+        <method>
+            <name>Initialize</name>
+            <comment></comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>name</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>collideInternal</name>
+                <type>boolean</type>
+            </parameter>
+        </method>
+        <method>
+            <name>GetParticleByName</name>
+            <comment>Get a particle from the froup by name</comment>
+            <returntype>com.AB.ABPhysicsEngine.ABPhysicsEngine.ABParticle</returntype>
+            <parameter>
+                <name>name</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+        <method>
+            <name>GetParticles</name>
+            <comment>returns all particles in the group</comment>
+            <returntype>java.util.List</returntype>
+        </method>
+        <method>
+            <name>GetJointByName</name>
+            <comment>returns a joint from the group by name</comment>
+            <returntype>com.AB.ABPhysicsEngine.ABPhysicsEngine.ABJoint</returntype>
+            <parameter>
+                <name>name</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+        <method>
+            <name>RemoveParticle</name>
+            <comment>remove a particle from the group</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>obj</name>
+                <type>com.AB.ABPhysicsEngine.ABPhysicsEngine.ABParticle</type>
+            </parameter>
+        </method>
+        <method>
+            <name>AddCollidable</name>
+            <comment>Adds an Group instance to be checked for collision against this one.</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>group</name>
+                <type>com.AB.ABPhysicsEngine.ABPhysicsEngine.ABGroup</type>
+            </parameter>
+        </method>
+        <method>
+            <name>AddJoint</name>
+            <comment>Add a joint to the group</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>obj</name>
+                <type>com.AB.ABPhysicsEngine.ABPhysicsEngine.ABJoint</type>
+            </parameter>
+        </method>
+        <method>
+            <name>RemoveCollidable</name>
+            <comment>Removes a Group from the collidable list of this Group.</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>group</name>
+                <type>com.AB.ABPhysicsEngine.ABPhysicsEngine.ABGroup</type>
+            </parameter>
+        </method>
+        <method>
+            <name>GetGroupHits</name>
+            <comment></comment>
+            <returntype>java.util.List</returntype>
+        </method>
+        <method>
+            <name>AddArrayOfGroupsToCollisionList</name>
+            <comment></comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>array</name>
+                <type>com.AB.ABPhysicsEngine.ABPhysicsEngine.ABGroup[]</type>
+            </parameter>
+        </method>
+        <method>
+            <name>GetJoints</name>
+            <comment>returns all joints in the group</comment>
+            <returntype>java.util.List</returntype>
+        </method>
+        <method>
+            <name>AddArrayOfJoints</name>
+            <comment>Add an array of joints to the group</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>array</name>
+                <type>com.AB.ABPhysicsEngine.ABPhysicsEngine.ABJoint[]</type>
+            </parameter>
+        </method>
+        <method>
+            <name>AddParticle</name>
+            <comment>Add a particle to the group</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>obj</name>
+                <type>com.AB.ABPhysicsEngine.ABPhysicsEngine.ABParticle</type>
+            </parameter>
+        </method>
+        <method>
+            <name>RemoveJoint</name>
+            <comment>Remove a joint from the group</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>obj</name>
+                <type>com.AB.ABPhysicsEngine.ABPhysicsEngine.ABJoint</type>
+            </parameter>
+        </method>
+        <method>
+            <name>AddArrayOfParticles</name>
+            <comment>Add an array of particles to the group</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>array</name>
+                <type>com.AB.ABPhysicsEngine.ABPhysicsEngine.ABParticle[]</type>
+            </parameter>
+        </method>
+        <property>
+            <name>CollideInternal</name>
+            <returntype>boolean</returntype>
+            <parameter>
+                <name>b</name>
+                <type>boolean</type>
+            </parameter>
+            <comment>Determines if the members of this Group are checked for collision with one 
+ another.</comment>
+        </property>
+        <property>
+            <name>CollisionList</name>
+            <returntype>java.util.List</returntype>
+            <comment>Returns the array of every Group assigned to collide with this Group instance.</comment>
+        </property>
+        <field>
+            <name>Name</name>
+            <comment></comment>
+            <returntype>java.lang.String</returntype>
+        </field>
+    </class>
+    <class>
+        <name>com.AB.ABPhysicsEngine.ABPhysicsEngine.ABForce</name>
+        <shortname>ABForce</shortname>
+        <comment>For making forces like gravity, pushing, etc...</comment>
+        <owner>process</owner>
+        <method>
+            <name>getValue</name>
+            <comment></comment>
+            <returntype>com.AB.ABPhysicsEngine.ABPhysicsEngine.ABVector</returntype>
+            <parameter>
+                <name>invmass</name>
+                <type>double</type>
+            </parameter>
+        </method>
+        <method>
+            <name>Initialize</name>
+            <comment></comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>useMass</name>
+                <type>boolean</type>
+            </parameter>
+            <parameter>
+                <name>vx</name>
+                <type>double</type>
+            </parameter>
+            <parameter>
+                <name>vy</name>
+                <type>double</type>
+            </parameter>
+            <parameter>
+                <name>counter</name>
+                <type>int</type>
+            </parameter>
+            <parameter>
+                <name>name</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+        <property>
+            <name>vy</name>
+            <parameter>
+                <name>y</name>
+                <type>double</type>
+            </parameter>
+            <comment></comment>
+        </property>
+        <property>
+            <name>vx</name>
+            <parameter>
+                <name>x</name>
+                <type>double</type>
+            </parameter>
+            <comment></comment>
+        </property>
+        <property>
+            <name>UseMass</name>
+            <parameter>
+                <name>b</name>
+                <type>boolean</type>
+            </parameter>
+            <comment>if the force uses mass, the mass of the particle is taken into account when calculating the force.
+ Some forces do not use mass, like gravity</comment>
+        </property>
+        <field>
+            <name>Name</name>
+            <comment></comment>
+            <returntype>java.lang.String</returntype>
+        </field>
+    </class>
+    <class>
+        <name>com.AB.ABPhysicsEngine.ABPhysicsEngine.ABParticle</name>
+        <shortname>ABParticle</shortname>
+        <comment>A particle is the basic element of what things are made of. They are put
+ together in a group and are joint with each other with joints.</comment>
+        <owner>process</owner>
+        <method>
+            <name>Initialize</name>
+            <comment></comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>type</name>
+                <type>int</type>
+            </parameter>
+            <parameter>
+                <name>centerX</name>
+                <type>double</type>
+            </parameter>
+            <parameter>
+                <name>centerY</name>
+                <type>double</type>
+            </parameter>
+            <parameter>
+                <name>width</name>
+                <type>double</type>
+            </parameter>
+            <parameter>
+                <name>height</name>
+                <type>double</type>
+            </parameter>
+            <parameter>
+                <name>radius</name>
+                <type>double</type>
+            </parameter>
+            <parameter>
+                <name>collidable</name>
+                <type>boolean</type>
+            </parameter>
+            <parameter>
+                <name>seeCollisionAsHit</name>
+                <type>boolean</type>
+            </parameter>
+            <parameter>
+                <name>rotation</name>
+                <type>double</type>
+            </parameter>
+            <parameter>
+                <name>name</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+        <method>
+            <name>PauseAnimation</name>
+            <comment>Pause an animation</comment>
+            <returntype>void</returntype>
+        </method>
+        <method>
+            <name>GetForceByName</name>
+            <comment></comment>
+            <returntype>com.AB.ABPhysicsEngine.ABPhysicsEngine.ABForce</returntype>
+            <parameter>
+                <name>name</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+        <method>
+            <name>GetForces</name>
+            <comment></comment>
+            <returntype>java.util.List</returntype>
+        </method>
+        <method>
+            <name>StopAnimation</name>
+            <comment>Stop an animation</comment>
+            <returntype>void</returntype>
+        </method>
+        <method>
+            <name>ResumeAnimation</name>
+            <comment>Resume an Animation</comment>
+            <returntype>void</returntype>
+        </method>
+        <method>
+            <name>AddForce</name>
+            <comment></comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>force</name>
+                <type>com.AB.ABPhysicsEngine.ABPhysicsEngine.ABForce</type>
+            </parameter>
+        </method>
+        <method>
+            <name>addAnimation</name>
+            <comment>Add an animation. This is a bitmap containing all the frames of an animation. 
+ All frames need to be of the same width.
+ 
+ State:
+ STATE_STILL
+ STATE_MOVE
+ 
+ Direction:
+ DIRECTION_UP
+ DIRECTION_DOWN
+ DIRECTION_LEFT
+ DIRECTION_RIGHT
+ 
+ Action:	
+ ACTION_Y
+ ACTION_B
+ ACTION_X
+ ACTION_A;
+ ACTION_NONE;
+ 
+ AnimationBehaviour:
+ ANIMATIONBEHAVIOUR_ONCE
+ ANIMATIONBEHAVIOUR_CONTINIOUS</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>bm</name>
+                <type>android.graphics.Bitmap</type>
+            </parameter>
+            <parameter>
+                <name>State</name>
+                <type>int</type>
+            </parameter>
+            <parameter>
+                <name>Direction</name>
+                <type>int</type>
+            </parameter>
+            <parameter>
+                <name>Action</name>
+                <type>int</type>
+            </parameter>
+            <parameter>
+                <name>NumOfFrames</name>
+                <type>int</type>
+            </parameter>
+            <parameter>
+                <name>Delay</name>
+                <type>int</type>
+            </parameter>
+            <parameter>
+                <name>AnimationBehaviour</name>
+                <type>int</type>
+            </parameter>
+        </method>
+        <method>
+            <name>StartAnimation</name>
+            <comment>Start an animation
+ 
+ State:
+ STATE_STILL
+ STATE_MOVE
+ 
+ Direction:
+ DIRECTION_UP
+ DIRECTION_DOWN
+ DIRECTION_LEFT
+ DIRECTION_RIGHT
+ 
+ Action:	
+ ACTION_Y
+ ACTION_B
+ ACTION_X
+ ACTION_A;
+ ACTION_NONE;</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>State</name>
+                <type>int</type>
+            </parameter>
+            <parameter>
+                <name>Direction</name>
+                <type>int</type>
+            </parameter>
+            <parameter>
+                <name>Action</name>
+                <type>int</type>
+            </parameter>
+        </method>
+        <method>
+            <name>GetHits</name>
+            <comment></comment>
+            <returntype>java.util.List</returntype>
+        </method>
+        <method>
+            <name>RemoveForce</name>
+            <comment></comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>force</name>
+                <type>com.AB.ABPhysicsEngine.ABPhysicsEngine.ABForce</type>
+            </parameter>
+        </method>
+        <method>
+            <name>GiveCurrentAnimBitmap</name>
+            <comment></comment>
+            <returntype>android.graphics.Bitmap</returntype>
+        </method>
+        <property>
+            <name>CenterX</name>
+            <returntype>double</returntype>
+            <parameter>
+                <name>centerX</name>
+                <type>double</type>
+            </parameter>
+            <comment></comment>
+        </property>
+        <property>
+            <name>isFixed</name>
+            <returntype>boolean</returntype>
+            <parameter>
+                <name>isFixed</name>
+                <type>boolean</type>
+            </parameter>
+            <comment>If a particle is fixed, no force will interact with it</comment>
+        </property>
+        <property>
+            <name>isAnimated</name>
+            <returntype>boolean</returntype>
+            <comment></comment>
+        </property>
+        <property>
+            <name>CenterY</name>
+            <returntype>double</returntype>
+            <parameter>
+                <name>centerY</name>
+                <type>double</type>
+            </parameter>
+            <comment></comment>
+        </property>
+        <property>
+            <name>Velocity</name>
+            <returntype>com.AB.ABPhysicsEngine.ABPhysicsEngine.ABVector</returntype>
+            <parameter>
+                <name>velocity</name>
+                <type>com.AB.ABPhysicsEngine.ABPhysicsEngine.ABVector</type>
+            </parameter>
+            <comment>The speed of the particle. Better use a force to move an object
+ as this will be more natural.</comment>
+        </property>
+        <property>
+            <name>Height</name>
+            <returntype>double</returntype>
+            <parameter>
+                <name>h</name>
+                <type>double</type>
+            </parameter>
+            <comment></comment>
+        </property>
+        <property>
+            <name>Angle</name>
+            <returntype>double</returntype>
+            <parameter>
+                <name>a</name>
+                <type>double</type>
+            </parameter>
+            <comment></comment>
+        </property>
+        <property>
+            <name>InvMass</name>
+            <returntype>double</returntype>
+            <comment></comment>
+        </property>
+        <property>
+            <name>isVisible</name>
+            <returntype>boolean</returntype>
+            <parameter>
+                <name>isVisible</name>
+                <type>boolean</type>
+            </parameter>
+            <comment></comment>
+        </property>
+        <property>
+            <name>Radius</name>
+            <returntype>double</returntype>
+            <parameter>
+                <name>r</name>
+                <type>double</type>
+            </parameter>
+            <comment></comment>
+        </property>
+        <property>
+            <name>Radian</name>
+            <returntype>double</returntype>
+            <parameter>
+                <name>t</name>
+                <type>double</type>
+            </parameter>
+            <comment>The rotation of the Particle in radians. For drawing methods you may 
+ want to use the &lt;code&gt;angle&lt;/code&gt; property which gives the rotation in
+ degrees from 0 to 360.
+ 
+ &lt;p&gt;
+ Note that while the Particle can be rotated, it does not have angular
+ velocity. In otherwords, during collisions, the rotation is not altered, 
+ and the energy of the rotation is not applied to other colliding particles.
+ &lt;/p&gt;</comment>
+        </property>
+        <property>
+            <name>Friction</name>
+            <returntype>double</returntype>
+            <parameter>
+                <name>friction</name>
+                <type>double</type>
+            </parameter>
+            <comment>The friction of a particle. 0 = like ice, 1 = sticky like glue</comment>
+        </property>
+        <property>
+            <name>isSolid</name>
+            <returntype>boolean</returntype>
+            <parameter>
+                <name>Solid</name>
+                <type>boolean</type>
+            </parameter>
+            <comment></comment>
+        </property>
+        <property>
+            <name>Mass</name>
+            <returntype>double</returntype>
+            <parameter>
+                <name>mass</name>
+                <type>double</type>
+            </parameter>
+            <comment>The mass of a particle. Must always be greater than 0</comment>
+        </property>
+        <property>
+            <name>Traction</name>
+            <returntype>double</returntype>
+            <parameter>
+                <name>traction</name>
+                <type>double</type>
+            </parameter>
+            <comment>The traction of a particle. Can override the friction of another particle</comment>
+        </property>
+        <property>
+            <name>AutoRotate</name>
+            <returntype>boolean</returntype>
+            <parameter>
+                <name>b</name>
+                <type>boolean</type>
+            </parameter>
+            <comment></comment>
+        </property>
+        <property>
+            <name>Width</name>
+            <returntype>double</returntype>
+            <parameter>
+                <name>w</name>
+                <type>double</type>
+            </parameter>
+            <comment></comment>
+        </property>
+        <property>
+            <name>Elasticity</name>
+            <returntype>double</returntype>
+            <parameter>
+                <name>elasticity</name>
+                <type>double</type>
+            </parameter>
+            <comment>The elasticity of a particle. 0 = not elastic, 1 = very elastic</comment>
+        </property>
+        <field>
+            <name>Type</name>
+            <comment></comment>
+            <returntype>int</returntype>
+        </field>
+        <field>
+            <name>ANIM_ACTION_B</name>
+            <comment></comment>
+            <returntype>int</returntype>
+        </field>
+        <field>
+            <name>ANIM_ACTION_A</name>
+            <comment></comment>
+            <returntype>int</returntype>
+        </field>
+        <field>
+            <name>CIRCLE</name>
+            <comment></comment>
+            <returntype>int</returntype>
+        </field>
+        <field>
+            <name>ANIM_ACTION_NONE</name>
+            <comment></comment>
+            <returntype>int</returntype>
+        </field>
+        <field>
+            <name>ANIM_STATE_STILL</name>
+            <comment></comment>
+            <returntype>int</returntype>
+        </field>
+        <field>
+            <name>AnimDirection</name>
+            <comment></comment>
+            <returntype>int</returntype>
+        </field>
+        <field>
+            <name>AnimAction</name>
+            <comment></comment>
+            <returntype>int</returntype>
+        </field>
+        <field>
+            <name>Name</name>
+            <comment></comment>
+            <returntype>java.lang.String</returntype>
+        </field>
+        <field>
+            <name>RECTANGLE</name>
+            <comment></comment>
+            <returntype>int</returntype>
+        </field>
+        <field>
+            <name>ANIM_DIRECTION_DOWN</name>
+            <comment></comment>
+            <returntype>int</returntype>
+        </field>
+        <field>
+            <name>ANIM_DIRECTION_LEFT</name>
+            <comment></comment>
+            <returntype>int</returntype>
+        </field>
+        <field>
+            <name>ANIM_BEHAVIOUR_CONTINIOUS</name>
+            <comment></comment>
+            <returntype>int</returntype>
+        </field>
+        <field>
+            <name>ANIM_DIRECTION_UP</name>
+            <comment></comment>
+            <returntype>int</returntype>
+        </field>
+        <field>
+            <name>ANIM_DIRECTION_RIGHT</name>
+            <comment></comment>
+            <returntype>int</returntype>
+        </field>
+        <field>
+            <name>ANIM_BEHAVIOUR_ONCE</name>
+            <comment></comment>
+            <returntype>int</returntype>
+        </field>
+        <field>
+            <name>AnimState</name>
+            <comment></comment>
+            <returntype>int</returntype>
+        </field>
+        <field>
+            <name>ANIM_ACTION_X</name>
+            <comment></comment>
+            <returntype>int</returntype>
+        </field>
+        <field>
+            <name>ANIM_ACTION_Y</name>
+            <comment></comment>
+            <returntype>int</returntype>
+        </field>
+        <field>
+            <name>ANIM_STATE_MOVE</name>
+            <comment></comment>
+            <returntype>int</returntype>
+        </field>
+    </class>
+    <class>
+        <name>com.AB.ABPhysicsEngine.ABPhysicsEngine.ABJoint</name>
+        <shortname>ABJoint</shortname>
+        <comment>A joint is connection between two particles.</comment>
+        <owner>process</owner>
+        <method>
+            <name>Initialize</name>
+            <comment></comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>part1</name>
+                <type>com.AB.ABPhysicsEngine.ABPhysicsEngine.ABParticle</type>
+            </parameter>
+            <parameter>
+                <name>part2</name>
+                <type>com.AB.ABPhysicsEngine.ABPhysicsEngine.ABParticle</type>
+            </parameter>
+            <parameter>
+                <name>name</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>stiffness</name>
+                <type>double</type>
+            </parameter>
+        </method>
+        <method>
+            <name>isConnectedTo</name>
+            <comment></comment>
+            <returntype>boolean</returntype>
+            <parameter>
+                <name>p</name>
+                <type>com.AB.ABPhysicsEngine.ABPhysicsEngine.ABParticle</type>
+            </parameter>
+        </method>
+        <property>
+            <name>Angle</name>
+            <returntype>double</returntype>
+            <comment></comment>
+        </property>
+        <property>
+            <name>Radian</name>
+            <returntype>double</returntype>
+            <comment></comment>
+        </property>
+        <property>
+            <name>CurrLength</name>
+            <returntype>double</returntype>
+            <comment></comment>
+        </property>
+        <property>
+            <name>RestLength</name>
+            <returntype>double</returntype>
+            <parameter>
+                <name>r</name>
+                <type>double</type>
+            </parameter>
+            <comment></comment>
+        </property>
+        <property>
+            <name>Center</name>
+            <returntype>com.AB.ABPhysicsEngine.ABPhysicsEngine.ABVector</returntype>
+            <comment></comment>
+        </property>
+        <property>
+            <name>Stiffness</name>
+            <returntype>double</returntype>
+            <parameter>
+                <name>stiffness</name>
+                <type>double</type>
+            </parameter>
+            <comment>The stifness of the joint. 0 = very loose, 1 = very stiff</comment>
+        </property>
+        <property>
+            <name>Fixed</name>
+            <returntype>boolean</returntype>
+            <comment></comment>
+        </property>
+        <field>
+            <name>Name</name>
+            <comment></comment>
+            <returntype>java.lang.String</returntype>
+        </field>
+        <field>
+            <name>Part2</name>
+            <comment></comment>
+            <returntype>com.AB.ABPhysicsEngine.ABPhysicsEngine.ABParticle</returntype>
+        </field>
+        <field>
+            <name>Part1</name>
+            <comment></comment>
+            <returntype>com.AB.ABPhysicsEngine.ABPhysicsEngine.ABParticle</returntype>
+        </field>
+    </class>
+    <class>
+        <name>com.AB.ABPhysicsEngine.ABPhysicsEngine.ABVector</name>
+        <shortname>ABVector</shortname>
+        <comment>A vector is a point into the coordination system.</comment>
+        <owner>process</owner>
+        <method>
+            <name>Initialize</name>
+            <comment></comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>px</name>
+                <type>double</type>
+            </parameter>
+            <parameter>
+                <name>py</name>
+                <type>double</type>
+            </parameter>
+        </method>
+        <method>
+            <name>minusEquals</name>
+            <comment></comment>
+            <returntype>com.AB.ABPhysicsEngine.ABPhysicsEngine.ABVector</returntype>
+            <parameter>
+                <name>v</name>
+                <type>com.AB.ABPhysicsEngine.ABPhysicsEngine.ABVector</type>
+            </parameter>
+        </method>
+        <method>
+            <name>plus</name>
+            <comment></comment>
+            <returntype>com.AB.ABPhysicsEngine.ABPhysicsEngine.ABVector</returntype>
+            <parameter>
+                <name>v</name>
+                <type>com.AB.ABPhysicsEngine.ABPhysicsEngine.ABVector</type>
+            </parameter>
+        </method>
+        <method>
+            <name>mult</name>
+            <comment></comment>
+            <returntype>com.AB.ABPhysicsEngine.ABPhysicsEngine.ABVector</returntype>
+            <parameter>
+                <name>s</name>
+                <type>double</type>
+            </parameter>
+        </method>
+        <method>
+            <name>divEquals</name>
+            <comment></comment>
+            <returntype>com.AB.ABPhysicsEngine.ABPhysicsEngine.ABVector</returntype>
+            <parameter>
+                <name>s</name>
+                <type>double</type>
+            </parameter>
+        </method>
+        <method>
+            <name>minus</name>
+            <comment></comment>
+            <returntype>com.AB.ABPhysicsEngine.ABPhysicsEngine.ABVector</returntype>
+            <parameter>
+                <name>v</name>
+                <type>com.AB.ABPhysicsEngine.ABPhysicsEngine.ABVector</type>
+            </parameter>
+        </method>
+        <method>
+            <name>distanceSigned</name>
+            <comment></comment>
+            <returntype>double</returntype>
+            <parameter>
+                <name>v</name>
+                <type>com.AB.ABPhysicsEngine.ABPhysicsEngine.ABVector</type>
+            </parameter>
+        </method>
+        <method>
+            <name>magnitude</name>
+            <comment></comment>
+            <returntype>double</returntype>
+        </method>
+        <method>
+            <name>dot</name>
+            <comment></comment>
+            <returntype>double</returntype>
+            <parameter>
+                <name>v</name>
+                <type>com.AB.ABPhysicsEngine.ABPhysicsEngine.ABVector</type>
+            </parameter>
+        </method>
+        <method>
+            <name>setTo</name>
+            <comment></comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>px</name>
+                <type>double</type>
+            </parameter>
+            <parameter>
+                <name>py</name>
+                <type>double</type>
+            </parameter>
+        </method>
+        <method>
+            <name>normalize</name>
+            <comment></comment>
+            <returntype>com.AB.ABPhysicsEngine.ABPhysicsEngine.ABVector</returntype>
+        </method>
+        <method>
+            <name>distance</name>
+            <comment></comment>
+            <returntype>double</returntype>
+            <parameter>
+                <name>v</name>
+                <type>com.AB.ABPhysicsEngine.ABPhysicsEngine.ABVector</type>
+            </parameter>
+        </method>
+        <method>
+            <name>times</name>
+            <comment></comment>
+            <returntype>com.AB.ABPhysicsEngine.ABPhysicsEngine.ABVector</returntype>
+            <parameter>
+                <name>v</name>
+                <type>com.AB.ABPhysicsEngine.ABPhysicsEngine.ABVector</type>
+            </parameter>
+        </method>
+        <method>
+            <name>plusEquals</name>
+            <comment></comment>
+            <returntype>com.AB.ABPhysicsEngine.ABPhysicsEngine.ABVector</returntype>
+            <parameter>
+                <name>v</name>
+                <type>com.AB.ABPhysicsEngine.ABPhysicsEngine.ABVector</type>
+            </parameter>
+        </method>
+        <method>
+            <name>multEquals</name>
+            <comment></comment>
+            <returntype>com.AB.ABPhysicsEngine.ABPhysicsEngine.ABVector</returntype>
+            <parameter>
+                <name>s</name>
+                <type>double</type>
+            </parameter>
+        </method>
+        <method>
+            <name>toString</name>
+            <comment></comment>
+            <returntype>java.lang.String</returntype>
+        </method>
+        <method>
+            <name>copy</name>
+            <comment></comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>v</name>
+                <type>com.AB.ABPhysicsEngine.ABPhysicsEngine.ABVector</type>
+            </parameter>
+        </method>
+        <method>
+            <name>cross</name>
+            <comment></comment>
+            <returntype>double</returntype>
+            <parameter>
+                <name>v</name>
+                <type>com.AB.ABPhysicsEngine.ABPhysicsEngine.ABVector</type>
+            </parameter>
+        </method>
+        <field>
+            <name>y</name>
+            <comment></comment>
+            <returntype>double</returntype>
+        </field>
+        <field>
+            <name>x</name>
+            <comment></comment>
+            <returntype>double</returntype>
+        </field>
+    </class>
+    <version>0.11</version>
+    <author>Alain Bailleul</author>
+</root>

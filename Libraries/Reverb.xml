@@ -1,0 +1,209 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root>
+    <doclet-version-NOT-library-version>1.01</doclet-version-NOT-library-version>
+    <class>
+        <name>com.gtr.echoing.ReverbLib</name>
+        <shortname>ReverbLib</shortname>
+        <owner>process</owner>
+        <permission>android.permission.MODIFY_AUDIO_SETTINGS</permission>
+        <method>
+            <name>Initialize</name>
+            <comment>Checks whether the Reverb is available and Initializes the object,
+ only for all output and not for specific media players.
+ For backwards compatibility, the library will not throw an exception 
+ on failure to initialize the Equalizer, but will return true or false 
+ and set the IsInitialized flag appropriately if it fails for any reason.
+ check either of these before running the other methods as if the equalizer
+ is not initialized, you will get a runtime error.
+ &lt;code&gt;Dim RV As ReverbLib
+ RV.Initialize
+ End if
+ &lt;/code&gt;</comment>
+            <returntype>boolean</returntype>
+        </method>
+        <method>
+            <name>IsAvailable</name>
+            <comment>Returns the availability of the ReverbLib object, it must be available for
+ the devices API level (9 or later)</comment>
+            <returntype>boolean</returntype>
+        </method>
+        <method>
+            <name>SetReflectionsLevel</name>
+            <comment>Sets the volume level of the early reflections.
+reflectionsLevel: reflection level in millibels. The valid range is [-9000, 1000].</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>reflectionsLevel</name>
+                <type>short</type>
+            </parameter>
+        </method>
+        <method>
+            <name>GetRoomLevel</name>
+            <comment></comment>
+            <returntype>short</returntype>
+        </method>
+        <method>
+            <name>SetDensity</name>
+            <comment>Controls the modal density of the late reverberation decay.
+density: density specified using a permille scale. The valid range is [0, 1000].
+ A value of 1000 o/oo indicates a natural sounding reverberation. Values below this level
+ produce a more colored effect.</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>density</name>
+                <type>short</type>
+            </parameter>
+        </method>
+        <method>
+            <name>SetRoomLevel</name>
+            <comment>Sets the master volume level of the environmental reverb effect.
+room: room level in millibels. The valid range is [-9000, 0].</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>room</name>
+                <type>short</type>
+            </parameter>
+        </method>
+        <method>
+            <name>GetProperties</name>
+            <comment></comment>
+            <returntype>java.lang.String</returntype>
+        </method>
+        <method>
+            <name>SetProperties</name>
+            <comment></comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>settingsStr</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+        <method>
+            <name>Release</name>
+            <comment>Releases the native AudioEffect resources. 
+ It is a good practice to release the effect engine when not 
+ in use as control can be returned to other 
+ applications or the native resources released.</comment>
+            <returntype>void</returntype>
+        </method>
+        <method>
+            <name>SetReverbLevel</name>
+            <comment>Sets the time between the first reflection and the reverberation.
+reverbDelay: reverb delay in milliseconds. The valid range is [-9000, 2000].</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>reverbLevel</name>
+                <type>short</type>
+            </parameter>
+        </method>
+        <method>
+            <name>SetReflectionsDelay</name>
+            <comment>Sets the delay time for the early reflections.
+reflectionsDelay: reflections delay in milliseconds. The valid range is [0, 300].</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>reflectionsDelay</name>
+                <type>int</type>
+            </parameter>
+        </method>
+        <method>
+            <name>SetDecayTime</name>
+            <comment>Sets the time taken for the level of reverberation to decay by 60 dB.
+decayTime: decay time in milliseconds. The valid range is [100, 20000].</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>decayTime</name>
+                <type>short</type>
+            </parameter>
+        </method>
+        <method>
+            <name>SetReverbDelay</name>
+            <comment>Sets the time between the first reflection and the reverberation.
+reverbDelay: reverb delay in milliseconds. The valid range is [0, 100].</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>reverbDelay</name>
+                <type>int</type>
+            </parameter>
+        </method>
+        <method>
+            <name>SetDiffusion</name>
+            <comment>Sets the echo density in the late reverberation decay.
+diffusion: diffusion specified using a permille scale. The diffusion valid range is
+ [0, 1000]. A value of 1000 o/oo indicates a smooth reverberation decay.
+ Values below this level give a more &lt;i&gt;grainy&lt;/i&gt; character.</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>diffusion</name>
+                <type>short</type>
+            </parameter>
+        </method>
+        <method>
+            <name>Enable</name>
+            <comment>Enables or disables the Audio effect engine.</comment>
+            <returntype>int</returntype>
+            <parameter>
+                <name>enable</name>
+                <type>boolean</type>
+            </parameter>
+        </method>
+        <method>
+            <name>GetID</name>
+            <comment>Get the Enviromental Reverb ID</comment>
+            <returntype>int</returntype>
+        </method>
+        <method>
+            <name>GetEnabled</name>
+            <comment>Gets the Enabled status of the Audio effect engine.</comment>
+            <returntype>boolean</returntype>
+        </method>
+        <method>
+            <name>SetDecayHFRatio</name>
+            <comment>Sets the ratio of high frequency decay time (at 5 kHz) relative to the decay time at low
+ frequencies.
+decayHFRatio: high frequency decay ratio using a permille scale. The valid range is
+ [100, 2000]. A ratio of 1000 indicates that all frequencies decay at the same rate.</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>decayHFRatio</name>
+                <type>short</type>
+            </parameter>
+        </method>
+        <method>
+            <name>GetDecayHFRatio</name>
+            <comment>Gets the ratio of high frequency decay time (at 5 kHz) relative to low frequencies.
+Return type: @return:the decay HF ration. See {@link #setDecayHFRatio(short)} for units.</comment>
+            <returntype>short</returntype>
+        </method>
+        <method>
+            <name>SetRoomHFLevel</name>
+            <comment>Sets the volume level at 5 kHz relative to the volume level at low frequencies of the
+roomHF: high frequency attenuation level in millibels. The valid range is [-9000, 0].</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>roomHF</name>
+                <type>short</type>
+            </parameter>
+        </method>
+        <method>
+            <name>HasControl</name>
+            <comment>Checks if this AudioEffect object is controlling the effect engine</comment>
+            <returntype>boolean</returntype>
+        </method>
+        <method>
+            <name>IsInitialized</name>
+            <comment>Returns the status of the ReverbLib object, it must be available for
+ the devices API level and initialized
+ &lt;code&gt;
+ Dim RV As EQlib
+ RV.Initialize
+ If RV.IsInitialized Then
+      RV.Enable(True)
+ End if
+ &lt;/code&gt;</comment>
+            <returntype>boolean</returntype>
+        </method>
+    </class>
+    <version>1.4</version>
+    <author>GTR</author>
+</root>

@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root>
+    <doclet-version-NOT-library-version>1.04</doclet-version-NOT-library-version>
+    <class>
+        <name>chandresane.com.lib.hide.BigHide</name>
+        <shortname>BigHide</shortname>
+        <owner>process</owner>
+        <method>
+            <name>HideIcon</name>
+            <comment>Icone Barnamto Be Sabke Zir Hide Kon
+ To Main Ejrash Kon
+ Age bade ejraye in az app beri birun nabandi dg nemituni be Activity Mainet bargardi
+ vali Activity haye dg ro mituni ejra koni
+ age goftam beri buirun main ro nabandi un to posht dar hale ejra mimune
+ pas behrtare ke az sharesh khalas shi :D
+ omidvaram fahmide bashi
+ Ex :
+     Dim hadi As Hide
+     Dim r As Reflector
+     hadi.HideIcon(r.GetActivity,r.GetActivity)
+c: 
+a: </comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>pkg</name>
+                <type>android.content.Context</type>
+            </parameter>
+            <parameter>
+                <name>a</name>
+                <type>android.app.Activity</type>
+            </parameter>
+        </method>
+        <method>
+            <name>ShowIcon</name>
+            <comment>Icone Barnamato Be Sabke Zir Show Kon
+ Ex :
+     Dim hadi As Hide
+     Dim r As Reflector
+     hadi.ShowIcon(r.GetContext, "chandresane.com.MyApp")
+c: 
+pkgName: : esme packeshete</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>pkg</name>
+                <type>android.content.Context</type>
+            </parameter>
+            <parameter>
+                <name>pkgName</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+        <method>
+            <name>About</name>
+            <comment>About Me
+Return type: @return:</comment>
+            <returntype>java.lang.String</returntype>
+        </method>
+    </class>
+    <version>1.1</version>
+</root>

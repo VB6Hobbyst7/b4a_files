@@ -1,0 +1,42 @@
+// OnStop script
+
+
+// ROUTE
+//-------------------------
+
+$busybox route del default gateway $myIp  
+if "$defaultRoute" = "" then
+   $LogD no default route to delete
+else
+   $busybox route add default gateway $defaultRoute
+fi
+
+// INTERFACE
+//--------------------------
+
+// reset interface ip (delete default gateway)
+$busybox ifconfig $myInterface down
+$busybox ifconfig $myInterface 0.0.0.0 up
+
+//$busybox ifconfig $myInterface down
+
+// reset IPTABLES     
+//-------------------------  
+
+//$iptables        -D INPUT  -p icmp -j LOG --log-uid --log-level debug --log-prefix "MYPREROUTING " --log-ip-options
+//$iptables        -D OUTPUT -p icmp -j LOG --log-uid --log-level debug --log-prefix "MYPREROUTING " --log-ip-options
+//$iptables -t nat -D INPUT  -p icmp -j LOG --log-uid --log-level debug --log-prefix "MYPREROUTING " --log-ip-options
+//$iptables -t nat -D OUTPUT -p icmp -j LOG --log-uid --log-level debug --log-prefix "MYPREROUTING " --log-ip-options
+//$iptables -t nat -D TETHER -p icmp -j LOG --log-uid --log-level debug --log-prefix "MYPREROUTING " --log-ip-options
+
+$LogI delete redirect output to tether 
+$iptables -t nat -D OUTPUT -j TETHER
+
+$iptables -t nat -F TETHER
+$iptables -t nat -F
+$iptables -t filter -F
+$iptables -F
+
+
+$LogI delete chain TETHER
+$iptables -t nat --delete-chain TETHER

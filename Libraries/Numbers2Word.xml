@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root>
+    <doclet-version-NOT-library-version>1.04</doclet-version-NOT-library-version>
+    <class>
+        <name>anywheresoftware.b4a.Num2Word.Num2Word</name>
+        <shortname>Number2Words</shortname>
+        <owner>process</owner>
+        <method>
+            <name>EnglishNumberToWords</name>
+            <comment></comment>
+            <returntype>java.lang.String</returntype>
+            <parameter>
+                <name>number</name>
+                <type>long</type>
+            </parameter>
+        </method>
+    </class>
+</root>

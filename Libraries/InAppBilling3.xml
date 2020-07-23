@@ -1,0 +1,201 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root>
+    <doclet-version-NOT-library-version>1.07</doclet-version-NOT-library-version>
+    <class>
+        <name>anywheresoftware.b4a.objects.SkDetails</name>
+        <shortname>SkuDetails</shortname>
+        <comment>Represents an in-app product's listing details.</comment>
+        <owner>process</owner>
+        <method>
+            <name>toString</name>
+            <comment></comment>
+            <returntype>java.lang.String</returntype>
+        </method>
+        <property>
+            <name>Type</name>
+            <returntype>java.lang.String</returntype>
+            <comment></comment>
+        </property>
+        <property>
+            <name>Description</name>
+            <returntype>java.lang.String</returntype>
+            <comment></comment>
+        </property>
+        <property>
+            <name>Price</name>
+            <returntype>java.lang.String</returntype>
+            <comment></comment>
+        </property>
+        <property>
+            <name>ItemType</name>
+            <returntype>java.lang.String</returntype>
+            <comment></comment>
+        </property>
+        <property>
+            <name>Title</name>
+            <returntype>java.lang.String</returntype>
+            <comment></comment>
+        </property>
+        <property>
+            <name>Sku</name>
+            <returntype>java.lang.String</returntype>
+            <comment></comment>
+        </property>
+    </class>
+    <class>
+        <name>anywheresoftware.b4a.inappbilling3.BillingManager3</name>
+        <shortname>BillingManager3</shortname>
+        <owner>process</owner>
+        <event>BillingSupported (Supported As Boolean, Message As String)</event>
+        <event>PurchaseCompleted (Success As Boolean, Product As Purchase)</event>
+        <event>OwnedProducts (Success As Boolean, Purchases As Map)</event>
+        <event>ProductConsumed (Success As Boolean, Product As Purchase)</event>
+        <event>InventoryCompleted (Success As Boolean, Products As List)</event>
+        <permission>com.android.vending.BILLING</permission>
+        <method>
+            <name>GetInventoryInformation</name>
+            <comment>Requests information about the store products. The InventoryCompleted event will be raised in the current module.
+SKUs - List or array with the products ids. Each item should be a string.</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>ba</name>
+                <type>anywheresoftware.b4a.BA</type>
+            </parameter>
+            <parameter>
+                <name>SKUs</name>
+                <type>anywheresoftware.b4a.objects.collections.List</type>
+            </parameter>
+        </method>
+        <method>
+            <name>GetOwnedProducts</name>
+            <comment>Requests the current products purchased by the user.
+The OwnedProducts event will be raised with the result.</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>ba</name>
+                <type>anywheresoftware.b4a.BA</type>
+            </parameter>
+        </method>
+        <method>
+            <name>RequestPayment</name>
+            <comment>Makes a payment request.
+ProductId - The product id.
+ProductType - "inapp" for regular products or "subs" for subscriptions.
+DeveloperPayload - A string that will be tied to this purchase.</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>ba</name>
+                <type>anywheresoftware.b4a.BA</type>
+            </parameter>
+            <parameter>
+                <name>ProductId</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>ProductType</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>DeveloperPayload</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+        <method>
+            <name>Initialize</name>
+            <comment>Initializes the object.
+EventName - Sets the subs that will handle the events.
+PublicKey - Application public key from the developer console.</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>ba</name>
+                <type>anywheresoftware.b4a.BA</type>
+            </parameter>
+            <parameter>
+                <name>EventName</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>PublicKey</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+        <method>
+            <name>ConsumeProduct</name>
+            <comment>Consumes the given Purchase. The ProductConsumed event will be raised.</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>ba</name>
+                <type>anywheresoftware.b4a.BA</type>
+            </parameter>
+            <parameter>
+                <name>Product</name>
+                <type>anywheresoftware.b4a.inappbilling3.BillingManager3.Prchase</type>
+            </parameter>
+        </method>
+        <property>
+            <name>SubscriptionsSupported</name>
+            <returntype>boolean</returntype>
+            <comment>Tests whether subscriptions are supported.</comment>
+        </property>
+        <property>
+            <name>DebugLogging</name>
+            <parameter>
+                <name>v</name>
+                <type>boolean</type>
+            </parameter>
+            <comment>Set to true to enable debug logging.</comment>
+        </property>
+    </class>
+    <class>
+        <name>anywheresoftware.b4a.inappbilling3.BillingManager3.Prchase</name>
+        <shortname>Purchase</shortname>
+        <comment>Represents an in-app billing purchase.</comment>
+        <owner>process</owner>
+        <method>
+            <name>toString</name>
+            <comment></comment>
+            <returntype>java.lang.String</returntype>
+        </method>
+        <property>
+            <name>PurchaseTime</name>
+            <returntype>long</returntype>
+            <comment></comment>
+        </property>
+        <property>
+            <name>ItemType</name>
+            <returntype>java.lang.String</returntype>
+            <comment>Returns the item type: inapp or subs (for subscriptions).</comment>
+        </property>
+        <property>
+            <name>DeveloperPayload</name>
+            <returntype>java.lang.String</returntype>
+            <comment></comment>
+        </property>
+        <property>
+            <name>ProductId</name>
+            <returntype>java.lang.String</returntype>
+            <comment></comment>
+        </property>
+        <property>
+            <name>PurchaseState</name>
+            <returntype>int</returntype>
+            <comment>Returns the purchase state (one of the STATE constants).</comment>
+        </property>
+        <field>
+            <name>STATE_REFUNDED</name>
+            <comment></comment>
+            <returntype>int</returntype>
+        </field>
+        <field>
+            <name>STATE_PURCHASED</name>
+            <comment></comment>
+            <returntype>int</returntype>
+        </field>
+        <field>
+            <name>STATE_CANCELED</name>
+            <comment></comment>
+            <returntype>int</returntype>
+        </field>
+    </class>
+    <version>1.32</version>
+</root>

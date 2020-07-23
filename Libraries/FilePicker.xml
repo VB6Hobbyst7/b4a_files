@@ -1,0 +1,218 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root>
+    <doclet-version-NOT-library-version>1.05</doclet-version-NOT-library-version>
+    <class>
+        <name>de.donmanfred.DialogPropertiesWrapper</name>
+        <shortname>DialogProperties</shortname>
+        <objectwrapper>com.github.angads25.filepicker.model.DialogProperties</objectwrapper>
+        <owner>process</owner>
+        <method>
+            <name>IsInitialized</name>
+            <comment></comment>
+            <returntype>boolean</returntype>
+        </method>
+        <method>
+            <name>Initialize</name>
+            <comment>Selection Mode defines whether a single of 
+ multiple Files/Directories have to be selected.
+  SINGLE_MODE and MULTI_MODE are the two selection modes, 
+  See DialogConfigs for more info. 
+  Set to Single Mode by default.
+  
+  Selection Type defines that whether a File/Directory or both of these has
+  has to be selected.
+
+  FILE_SELECT ,DIR_SELECT, FILE_AND_DIR_SELECT are the three selection modes,
+  See DialogConfigs for more info. Set to FILE_SELECT by default.
+  
+  root = The Parent/Root Directory. List of Files are  populated from here. 
+  Can be set to any readable directory. /sdcard is the default location.
+
+  extensions = An Array of String containing extensions, Files with only that will be shown.
+  Others will be ignored. Set to null by default.
+  Eg. String ext={"jpg","jpeg","png","gif"};</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>ba</name>
+                <type>anywheresoftware.b4a.BA</type>
+            </parameter>
+            <parameter>
+                <name>EventName</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>root</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>selectionMode</name>
+                <type>int</type>
+            </parameter>
+            <parameter>
+                <name>selectionType</name>
+                <type>int</type>
+            </parameter>
+            <parameter>
+                <name>extensions</name>
+                <type>java.lang.String[]</type>
+            </parameter>
+        </method>
+    </class>
+    <class>
+        <name>de.donmanfred.FileListItemWrapper</name>
+        <shortname>FileListItem</shortname>
+        <objectwrapper>com.github.angads25.filepicker.model.FileListItem</objectwrapper>
+        <owner>process</owner>
+        <method>
+            <name>compareTo</name>
+            <comment></comment>
+            <returntype>int</returntype>
+            <parameter>
+                <name>fileListItem</name>
+                <type>com.github.angads25.filepicker.model.FileListItem</type>
+            </parameter>
+        </method>
+        <method>
+            <name>IsInitialized</name>
+            <comment></comment>
+            <returntype>boolean</returntype>
+        </method>
+        <method>
+            <name>Initialize</name>
+            <comment></comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>ba</name>
+                <type>anywheresoftware.b4a.BA</type>
+            </parameter>
+            <parameter>
+                <name>EventName</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+        <method>
+            <name>isDirectory</name>
+            <comment></comment>
+            <returntype>boolean</returntype>
+        </method>
+        <method>
+            <name>isMarked</name>
+            <comment></comment>
+            <returntype>boolean</returntype>
+        </method>
+        <property>
+            <name>Filename</name>
+            <returntype>java.lang.String</returntype>
+            <parameter>
+                <name>filename</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <comment></comment>
+        </property>
+        <property>
+            <name>Time</name>
+            <returntype>long</returntype>
+            <parameter>
+                <name>time</name>
+                <type>long</type>
+            </parameter>
+            <comment></comment>
+        </property>
+        <property>
+            <name>Marked</name>
+            <parameter>
+                <name>marked</name>
+                <type>boolean</type>
+            </parameter>
+            <comment></comment>
+        </property>
+        <property>
+            <name>Location</name>
+            <returntype>java.lang.String</returntype>
+            <parameter>
+                <name>location</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <comment></comment>
+        </property>
+        <property>
+            <name>Directory</name>
+            <parameter>
+                <name>directory</name>
+                <type>boolean</type>
+            </parameter>
+            <comment></comment>
+        </property>
+    </class>
+    <class>
+        <name>de.donmanfred.FilePickerDialogWrapper</name>
+        <shortname>FilePickerDialog</shortname>
+        <objectwrapper>com.github.angads25.filepicker.view.FilePickerDialog</objectwrapper>
+        <owner>activity</owner>
+        <event>_onSelectedFilePaths(selected[] As String)</event>
+        <method>
+            <name>cancel</name>
+            <comment></comment>
+            <returntype>void</returntype>
+        </method>
+        <method>
+            <name>show</name>
+            <comment></comment>
+            <returntype>void</returntype>
+        </method>
+        <method>
+            <name>dismiss</name>
+            <comment></comment>
+            <returntype>void</returntype>
+        </method>
+        <method>
+            <name>IsInitialized</name>
+            <comment></comment>
+            <returntype>boolean</returntype>
+        </method>
+        <method>
+            <name>Initialize</name>
+            <comment></comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>ba</name>
+                <type>anywheresoftware.b4a.BA</type>
+            </parameter>
+            <parameter>
+                <name>EventName</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+        <method>
+            <name>closeOptionsMenu</name>
+            <comment></comment>
+            <returntype>void</returntype>
+        </method>
+        <method>
+            <name>openContextMenu</name>
+            <comment></comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>view</name>
+                <type>android.view.View</type>
+            </parameter>
+        </method>
+        <method>
+            <name>openOptionsMenu</name>
+            <comment></comment>
+            <returntype>void</returntype>
+        </method>
+        <property>
+            <name>Properties</name>
+            <returntype>com.github.angads25.filepicker.model.DialogProperties</returntype>
+            <parameter>
+                <name>properties</name>
+                <type>com.github.angads25.filepicker.model.DialogProperties</type>
+            </parameter>
+            <comment></comment>
+        </property>
+    </class>
+    <version>1.01</version>
+    <author>DonManfred (wrapper)</author>
+    <dependsOn>filepicker-1.0.1.aar</dependsOn>
+</root>

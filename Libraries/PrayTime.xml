@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root>
+    <doclet-version-NOT-library-version>1.02</doclet-version-NOT-library-version>
+    <class>
+        <name>me.PrayTime</name>
+        <shortname>PrayTime</shortname>
+        <owner>process</owner>
+        <method>
+            <name>PrayTimeMethod</name>
+            <comment>
+latitude=عرض: جغرافيايي
+longitude=طول: جغرافيايي
+timezone=منطقه: ي زماني
+namaz=: 0=نماز صبح  
+         1=طلوع خورشيد
+         2=نماز ظهر
+         3=نماز عصر
+         4=غروب خورشيد
+         5=نماز مغرب
+         6=نماز عشا
+noezaman=نوع: زمان (24 يا 12 ) ساعته 
+        0=12ساعته
+        1=24ساعته
+        2= Time12NS
+        3=Floating
+noemohasebe=نوع: متد محاسبه 
+        0=Jafari :Ithna Ashari
+        1=Tehran :Institute of Geophysics, University of Tehran
+        2=Custom
+        3=Karachi
+        4=ISNA : Islamic Society of North America (ISNA)
+        5=MWL
+        6=Makkah
+        7=Egypt
+noeJuristicMethods=نوع: محاسبه شرعي
+        0=Shafii
+        1=Hanafi
+noeMFHL=: تنظيم روش براي عرض هاي جغرافيايي بالاتر
+        0=None
+        1=MidNight
+        2=OneSeventh
+        3=AngleBased
+data2=تاریخ: 
+data2="2016/04/19": </comment>
+            <returntype>java.lang.String</returntype>
+            <parameter>
+                <name>latitude</name>
+                <type>double</type>
+            </parameter>
+            <parameter>
+                <name>longitude</name>
+                <type>double</type>
+            </parameter>
+            <parameter>
+                <name>timezone</name>
+                <type>double</type>
+            </parameter>
+            <parameter>
+                <name>namaz</name>
+                <type>int</type>
+            </parameter>
+            <parameter>
+                <name>noezaman</name>
+                <type>int</type>
+            </parameter>
+            <parameter>
+                <name>noemohasebe</name>
+                <type>int</type>
+            </parameter>
+            <parameter>
+                <name>noeJuristicMethods</name>
+                <type>int</type>
+            </parameter>
+            <parameter>
+                <name>noeMFHL</name>
+                <type>int</type>
+            </parameter>
+            <parameter>
+                <name>data2</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+        <method>
+            <name>main</name>
+            <comment></comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>args</name>
+                <type>java.lang.String[]</type>
+            </parameter>
+        </method>
+    </class>
+    <version>2.0</version>
+</root>

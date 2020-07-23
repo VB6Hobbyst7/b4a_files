@@ -1,0 +1,1555 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root>
+    <doclet-version-NOT-library-version>1.02</doclet-version-NOT-library-version>
+    <class>
+        <name>com.rootsoft.imageprocessing.RSImageProcessing</name>
+        <shortname>RSImageProcessing</shortname>
+        <owner>process</owner>
+        <method>
+            <name>extractBitmap</name>
+            <comment>Returns an immutable bitmap from the specified subset of the source bitmap. 
+ The new bitmap may be the same object as source, or a copy may have been made. 
+ It is initialized with the same density as the original bitmap.
+source: 
+x: 
+y: 
+width: 
+height: 
+Return type: @return:</comment>
+            <returntype>android.graphics.Bitmap</returntype>
+            <parameter>
+                <name>source</name>
+                <type>android.graphics.Bitmap</type>
+            </parameter>
+            <parameter>
+                <name>x</name>
+                <type>int</type>
+            </parameter>
+            <parameter>
+                <name>y</name>
+                <type>int</type>
+            </parameter>
+            <parameter>
+                <name>width</name>
+                <type>int</type>
+            </parameter>
+            <parameter>
+                <name>height</name>
+                <type>int</type>
+            </parameter>
+        </method>
+        <method>
+            <name>Initialize</name>
+            <comment>Initializes the RSSImageProcessing Library.
+ EventName - Events subs prefix.</comment>
+            <returntype>void</returntype>
+        </method>
+        <method>
+            <name>eraseColor</name>
+            <comment>Fills the bitmap's pixels with the specified Color.
+bitmap: the source bitmap. (must be mutable!)
+c: colours</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>bitmap</name>
+                <type>android.graphics.Bitmap</type>
+            </parameter>
+            <parameter>
+                <name>c</name>
+                <type>int</type>
+            </parameter>
+        </method>
+        <method>
+            <name>createScaledBitmap</name>
+            <comment>Creates a new bitmap, scaled from an existing bitmap.
+ src	The source bitmap.
+ dstWidth	The new bitmap's desired width.
+ dstHeight	The new bitmap's desired height.
+ filter	true if the source should be filtered.
+Return type: @return:the bitmap</comment>
+            <returntype>android.graphics.Bitmap</returntype>
+            <parameter>
+                <name>src</name>
+                <type>android.graphics.Bitmap</type>
+            </parameter>
+            <parameter>
+                <name>dstWidth</name>
+                <type>int</type>
+            </parameter>
+            <parameter>
+                <name>dstHeight</name>
+                <type>int</type>
+            </parameter>
+            <parameter>
+                <name>filter</name>
+                <type>boolean</type>
+            </parameter>
+        </method>
+        <method>
+            <name>rotate</name>
+            <comment></comment>
+            <returntype>android.graphics.Bitmap</returntype>
+            <parameter>
+                <name>src</name>
+                <type>android.graphics.Bitmap</type>
+            </parameter>
+            <parameter>
+                <name>degree</name>
+                <type>float</type>
+            </parameter>
+        </method>
+        <method>
+            <name>isMutable</name>
+            <comment>Returns true if the bitmap is marked as mutable (i.e. can be drawn into)
+bitmap: 
+Return type: @return:</comment>
+            <returntype>boolean</returntype>
+            <parameter>
+                <name>bitmap</name>
+                <type>android.graphics.Bitmap</type>
+            </parameter>
+        </method>
+        <method>
+            <name>translateBitmap</name>
+            <comment>Translate the bitmap.
+bitmap: 
+degrees: 
+Return type: @return:</comment>
+            <returntype>android.graphics.Bitmap</returntype>
+            <parameter>
+                <name>bitmap</name>
+                <type>android.graphics.Bitmap</type>
+            </parameter>
+            <parameter>
+                <name>dx</name>
+                <type>float</type>
+            </parameter>
+            <parameter>
+                <name>dy</name>
+                <type>float</type>
+            </parameter>
+        </method>
+        <method>
+            <name>getPixel</name>
+            <comment>Returns the Color at the specified location. 
+ Throws an exception if x or y are out of bounds (negative or &gt;= to the width or height respectively).
+bitmap: 
+x: The x coordinate (0...width-1) of the pixel to return
+y: The y coordinate (0...height-1) of the pixel to return
+Return type: @return:The argb Color at the specified coordinate</comment>
+            <returntype>int</returntype>
+            <parameter>
+                <name>bitmap</name>
+                <type>android.graphics.Bitmap</type>
+            </parameter>
+            <parameter>
+                <name>x</name>
+                <type>int</type>
+            </parameter>
+            <parameter>
+                <name>y</name>
+                <type>int</type>
+            </parameter>
+        </method>
+        <method>
+            <name>extractBitmap2</name>
+            <comment>Returns an immutable bitmap from the specified subset of the source bitmap. 
+ The new bitmap may be the same object as source, or a copy may have been made. 
+ It is initialized with the same density as the original bitmap.
+source: 
+x: 
+y: 
+width: 
+height: 
+Return type: @return:</comment>
+            <returntype>android.graphics.Bitmap</returntype>
+            <parameter>
+                <name>source</name>
+                <type>android.graphics.Bitmap</type>
+            </parameter>
+            <parameter>
+                <name>x</name>
+                <type>int</type>
+            </parameter>
+            <parameter>
+                <name>y</name>
+                <type>int</type>
+            </parameter>
+            <parameter>
+                <name>width</name>
+                <type>int</type>
+            </parameter>
+            <parameter>
+                <name>height</name>
+                <type>int</type>
+            </parameter>
+        </method>
+        <method>
+            <name>isRecycled</name>
+            <comment>Returns true if this bitmap has been recycled. If so, then it is an error to try to access its pixels, and the bitmap will not draw.
+bitmap: 
+Return type: @return:true if the bitmap has been recycled</comment>
+            <returntype>boolean</returntype>
+            <parameter>
+                <name>bitmap</name>
+                <type>android.graphics.Bitmap</type>
+            </parameter>
+        </method>
+        <method>
+            <name>compress</name>
+            <comment>Write a compressed version of the bitmap to the specified outputstream.
+ 
+ format	The format of the compressed image
+ quality	Hint to the compressor, 0-100. 0 meaning compress for small size, 100 meaning compress for max quality. Some formats, like PNG which is lossless, will ignore the quality setting
+ stream	The outputstream to write the compressed data.</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>bitmap</name>
+                <type>android.graphics.Bitmap</type>
+            </parameter>
+            <parameter>
+                <name>format</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>quality</name>
+                <type>int</type>
+            </parameter>
+            <parameter>
+                <name>stream</name>
+                <type>java.io.OutputStream</type>
+            </parameter>
+        </method>
+        <method>
+            <name>writeBitmapToFile</name>
+            <comment>Writes a bitmap to a file</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>src</name>
+                <type>android.graphics.Bitmap</type>
+            </parameter>
+            <parameter>
+                <name>dir</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>fileName</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>quality</name>
+                <type>int</type>
+            </parameter>
+        </method>
+        <method>
+            <name>recycle</name>
+            <comment>Free the native object associated with this bitmap, and clear the reference to the pixel data. 
+ This will not free the pixel data synchronously; it simply allows it to be garbage collected if 
+ there are no other references. The bitmap is marked as "dead", meaning it will throw an exception if 
+ getPixels() or setPixels() is called, and will draw nothing. This operation cannot be reversed, 
+ so it should only be called if you are sure there are no further uses for the bitmap. 
+ This is an advanced call, and normally need not be called, since the normal GC process will free 
+ up this memory when there are no more references to this bitmap.
+bitmap: </comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>bitmap</name>
+                <type>android.graphics.Bitmap</type>
+            </parameter>
+        </method>
+        <method>
+            <name>rotateBitmap</name>
+            <comment>Rotates the bitmap.
+bitmap: 
+degrees: 
+Return type: @return:</comment>
+            <returntype>android.graphics.Bitmap</returntype>
+            <parameter>
+                <name>bitmap</name>
+                <type>android.graphics.Bitmap</type>
+            </parameter>
+            <parameter>
+                <name>degrees</name>
+                <type>float</type>
+            </parameter>
+        </method>
+        <method>
+            <name>extractAlpha</name>
+            <comment>Returns a new bitmap that captures the alpha values of the original.
+bitmap: </comment>
+            <returntype>android.graphics.Bitmap</returntype>
+            <parameter>
+                <name>bitmap</name>
+                <type>android.graphics.Bitmap</type>
+            </parameter>
+        </method>
+        <method>
+            <name>getDestination</name>
+            <comment>Gets the new destination width or height keeping the aspect ratio of the image.
+src: - bitmap
+destination: -Source width or height
+Return type: @return:</comment>
+            <returntype>int</returntype>
+            <parameter>
+                <name>src</name>
+                <type>android.graphics.Bitmap</type>
+            </parameter>
+            <parameter>
+                <name>destination</name>
+                <type>double</type>
+            </parameter>
+        </method>
+        <method>
+            <name>setHorizontalScrollBarEnabled</name>
+            <comment></comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>hsv</name>
+                <type>android.widget.HorizontalScrollView</type>
+            </parameter>
+            <parameter>
+                <name>enabled</name>
+                <type>boolean</type>
+            </parameter>
+        </method>
+        <method>
+            <name>hasAlpha</name>
+            <comment>Returns true if the bitmap's config supports per-pixel alpha, and if the pixels may contain non-opaque alpha values. 
+ For some configs, this is always false (e.g. RGB_565), since they do not support per-pixel alpha. 
+ However, for configs that do, the bitmap may be flagged to be known that all of its pixels are opaque. 
+ In this case hasAlpha() will also return false. If a config such as ARGB_8888 is not so flagged, it will return true by default.
+bitmap: 
+Return type: @return:</comment>
+            <returntype>boolean</returntype>
+            <parameter>
+                <name>bitmap</name>
+                <type>android.graphics.Bitmap</type>
+            </parameter>
+        </method>
+        <method>
+            <name>skewBitmap</name>
+            <comment>Skews the bitmap.
+bitmap: 
+kx: 
+ky: 
+Return type: @return:</comment>
+            <returntype>android.graphics.Bitmap</returntype>
+            <parameter>
+                <name>bitmap</name>
+                <type>android.graphics.Bitmap</type>
+            </parameter>
+            <parameter>
+                <name>kx</name>
+                <type>float</type>
+            </parameter>
+            <parameter>
+                <name>ky</name>
+                <type>float</type>
+            </parameter>
+        </method>
+        <method>
+            <name>scaleBitmap</name>
+            <comment>Scales the bitmap.
+bitmap: 
+degrees: 
+Return type: @return:</comment>
+            <returntype>android.graphics.Bitmap</returntype>
+            <parameter>
+                <name>bitmap</name>
+                <type>android.graphics.Bitmap</type>
+            </parameter>
+            <parameter>
+                <name>sx</name>
+                <type>float</type>
+            </parameter>
+            <parameter>
+                <name>sy</name>
+                <type>float</type>
+            </parameter>
+        </method>
+        <field>
+            <name>PNG</name>
+            <comment></comment>
+            <returntype>java.lang.String</returntype>
+        </field>
+        <field>
+            <name>JPEG</name>
+            <comment></comment>
+            <returntype>java.lang.String</returntype>
+        </field>
+    </class>
+    <class>
+        <name>com.rootsoft.imageprocessing.RSImageFilters</name>
+        <shortname>RSImageFilters</shortname>
+        <owner>process</owner>
+        <method>
+            <name>FindEdge3</name>
+            <comment>Find Edge</comment>
+            <returntype>android.graphics.Bitmap</returntype>
+            <parameter>
+                <name>src</name>
+                <type>android.graphics.Bitmap</type>
+            </parameter>
+            <parameter>
+                <name>Factor</name>
+                <type>int</type>
+            </parameter>
+            <parameter>
+                <name>Offset</name>
+                <type>int</type>
+            </parameter>
+        </method>
+        <method>
+            <name>FindEdge2</name>
+            <comment>Find Edge</comment>
+            <returntype>android.graphics.Bitmap</returntype>
+            <parameter>
+                <name>src</name>
+                <type>android.graphics.Bitmap</type>
+            </parameter>
+            <parameter>
+                <name>Factor</name>
+                <type>int</type>
+            </parameter>
+            <parameter>
+                <name>Offset</name>
+                <type>int</type>
+            </parameter>
+        </method>
+        <method>
+            <name>SaturationFilter</name>
+            <comment>Filters the saturation of a bitmap.
+ By converting RGB to HSV, we can adjust pixel color in different way.
+ 
+ Filter</comment>
+            <returntype>android.graphics.Bitmap</returntype>
+            <parameter>
+                <name>source</name>
+                <type>android.graphics.Bitmap</type>
+            </parameter>
+            <parameter>
+                <name>level</name>
+                <type>int</type>
+            </parameter>
+        </method>
+        <method>
+            <name>Wedding</name>
+            <comment>Wedding
+src: 
+Factor: 16
+Offset: 0
+Return type: @return:Filter</comment>
+            <returntype>android.graphics.Bitmap</returntype>
+            <parameter>
+                <name>src</name>
+                <type>android.graphics.Bitmap</type>
+            </parameter>
+            <parameter>
+                <name>Factor</name>
+                <type>int</type>
+            </parameter>
+            <parameter>
+                <name>Offset</name>
+                <type>int</type>
+            </parameter>
+        </method>
+        <method>
+            <name>GaussianFilter2</name>
+            <comment>Gaussian filter.</comment>
+            <returntype>android.graphics.Bitmap</returntype>
+            <parameter>
+                <name>src</name>
+                <type>android.graphics.Bitmap</type>
+            </parameter>
+            <parameter>
+                <name>Factor</name>
+                <type>int</type>
+            </parameter>
+            <parameter>
+                <name>Offset</name>
+                <type>int</type>
+            </parameter>
+        </method>
+        <method>
+            <name>MeanRemoval</name>
+            <comment>Mean Removal Effect makes uses of Convolution Matrix.
+ The applied matrix is:
+ [ -1 | -1 | -1 ]
+ [ -1 | 9 | -1 ]
+ [ -1 | -1 | -1 ]
+ 
+ Filter</comment>
+            <returntype>android.graphics.Bitmap</returntype>
+            <parameter>
+                <name>src</name>
+                <type>android.graphics.Bitmap</type>
+            </parameter>
+        </method>
+        <method>
+            <name>HueFilter</name>
+            <comment>Filters the Hue of a bitmap.
+ By converting RGB to HSV, we can adjust pixel color in different way.
+ 
+ Filter</comment>
+            <returntype>android.graphics.Bitmap</returntype>
+            <parameter>
+                <name>source</name>
+                <type>android.graphics.Bitmap</type>
+            </parameter>
+            <parameter>
+                <name>level</name>
+                <type>int</type>
+            </parameter>
+        </method>
+        <method>
+            <name>BlackFilter</name>
+            <comment>Base on randomizing image pixels, another filter is created, named “Black Filter“, or enhance the noise of darkness.
+ The algorithm is to generate a threshold number (0-255), if all R,G,B values of a pixel are less than the threshold,
+ then set the pixel to black.
+ 
+ Filter</comment>
+            <returntype>android.graphics.Bitmap</returntype>
+            <parameter>
+                <name>source</name>
+                <type>android.graphics.Bitmap</type>
+            </parameter>
+        </method>
+        <method>
+            <name>ColorFilter</name>
+            <comment>Filter the color on the bitmap, in which to display image by only one channel or 
+ combine the increase on every channel.
+ 
+ Filter</comment>
+            <returntype>android.graphics.Bitmap</returntype>
+            <parameter>
+                <name>src</name>
+                <type>android.graphics.Bitmap</type>
+            </parameter>
+            <parameter>
+                <name>red</name>
+                <type>double</type>
+            </parameter>
+            <parameter>
+                <name>green</name>
+                <type>double</type>
+            </parameter>
+            <parameter>
+                <name>blue</name>
+                <type>double</type>
+            </parameter>
+        </method>
+        <method>
+            <name>EdgeEnhancement3</name>
+            <comment>Edge Enhancement</comment>
+            <returntype>android.graphics.Bitmap</returntype>
+            <parameter>
+                <name>src</name>
+                <type>android.graphics.Bitmap</type>
+            </parameter>
+            <parameter>
+                <name>Factor</name>
+                <type>int</type>
+            </parameter>
+            <parameter>
+                <name>Offset</name>
+                <type>int</type>
+            </parameter>
+        </method>
+        <method>
+            <name>EdgeEnhancement2</name>
+            <comment>Edge Enhancement</comment>
+            <returntype>android.graphics.Bitmap</returntype>
+            <parameter>
+                <name>src</name>
+                <type>android.graphics.Bitmap</type>
+            </parameter>
+            <parameter>
+                <name>Factor</name>
+                <type>int</type>
+            </parameter>
+            <parameter>
+                <name>Offset</name>
+                <type>int</type>
+            </parameter>
+        </method>
+        <method>
+            <name>ShadingFilter</name>
+            <comment>Shading Filter is a technique that use AND operator for the current pixel color and a desired-shading color.
+ 
+ Filter</comment>
+            <returntype>android.graphics.Bitmap</returntype>
+            <parameter>
+                <name>source</name>
+                <type>android.graphics.Bitmap</type>
+            </parameter>
+            <parameter>
+                <name>shadingColor</name>
+                <type>int</type>
+            </parameter>
+        </method>
+        <method>
+            <name>GaussianFilter</name>
+            <comment>Gaussian filter.</comment>
+            <returntype>android.graphics.Bitmap</returntype>
+            <parameter>
+                <name>src</name>
+                <type>android.graphics.Bitmap</type>
+            </parameter>
+            <parameter>
+                <name>Factor</name>
+                <type>int</type>
+            </parameter>
+            <parameter>
+                <name>Offset</name>
+                <type>int</type>
+            </parameter>
+        </method>
+        <method>
+            <name>FindEdge</name>
+            <comment>Find Edge</comment>
+            <returntype>android.graphics.Bitmap</returntype>
+            <parameter>
+                <name>src</name>
+                <type>android.graphics.Bitmap</type>
+            </parameter>
+            <parameter>
+                <name>Factor</name>
+                <type>int</type>
+            </parameter>
+            <parameter>
+                <name>Offset</name>
+                <type>int</type>
+            </parameter>
+        </method>
+        <method>
+            <name>EdgeEnhancement</name>
+            <comment>Edge Enhancement</comment>
+            <returntype>android.graphics.Bitmap</returntype>
+            <parameter>
+                <name>src</name>
+                <type>android.graphics.Bitmap</type>
+            </parameter>
+            <parameter>
+                <name>Factor</name>
+                <type>int</type>
+            </parameter>
+            <parameter>
+                <name>Offset</name>
+                <type>int</type>
+            </parameter>
+        </method>
+    </class>
+    <class>
+        <name>com.rootsoft.imageprocessing.RSImageEffects</name>
+        <shortname>RSImageEffects</shortname>
+        <owner>process</owner>
+        <method>
+            <name>ColorBoost</name>
+            <comment>Color boost technique is basically based on color filtering, which is to increase the
+ intensity of a single color channel.
+ 
+ Effect</comment>
+            <returntype>android.graphics.Bitmap</returntype>
+            <parameter>
+                <name>src</name>
+                <type>android.graphics.Bitmap</type>
+            </parameter>
+            <parameter>
+                <name>type</name>
+                <type>int</type>
+            </parameter>
+            <parameter>
+                <name>percent</name>
+                <type>float</type>
+            </parameter>
+        </method>
+        <method>
+            <name>GreyScale</name>
+            <comment>Greyscales a bitmap	 
+ The intensity is calculated by common formula: 30% of Red + 59% of Green + 11 % of Blue
+ 
+ Effects</comment>
+            <returntype>android.graphics.Bitmap</returntype>
+            <parameter>
+                <name>src</name>
+                <type>android.graphics.Bitmap</type>
+            </parameter>
+        </method>
+        <method>
+            <name>Paintify</name>
+            <comment>Makes a paint like effect on a picture.
+ 128 (or 64/32)
+ 8
+ 1
+ 
+ Effect</comment>
+            <returntype>android.graphics.Bitmap</returntype>
+            <parameter>
+                <name>src</name>
+                <type>android.graphics.Bitmap</type>
+            </parameter>
+            <parameter>
+                <name>bitOffset</name>
+                <type>int</type>
+            </parameter>
+            <parameter>
+                <name>Factor</name>
+                <type>int</type>
+            </parameter>
+            <parameter>
+                <name>Offset</name>
+                <type>int</type>
+            </parameter>
+        </method>
+        <method>
+            <name>Sharpen2</name>
+            <comment>Sharpening effect make uses of Convolution Matrix
+ The applied matrix is:
+ [  0 | -2 |  0 ]
+ [ -2 | 11 | -2 ]
+ [  0 | -2 |  0 ]
+ 
+ Filter
+ Weight : 3</comment>
+            <returntype>android.graphics.Bitmap</returntype>
+            <parameter>
+                <name>src</name>
+                <type>android.graphics.Bitmap</type>
+            </parameter>
+            <parameter>
+                <name>weight</name>
+                <type>double</type>
+            </parameter>
+        </method>
+        <method>
+            <name>RoundCorner</name>
+            <comment>Create a bitmap with round corners.
+ Effect</comment>
+            <returntype>android.graphics.Bitmap</returntype>
+            <parameter>
+                <name>src</name>
+                <type>android.graphics.Bitmap</type>
+            </parameter>
+            <parameter>
+                <name>round</name>
+                <type>float</type>
+            </parameter>
+        </method>
+        <method>
+            <name>Paintify2</name>
+            <comment>Makes a paint like effect on a picture.
+ 128 (or 64/32)
+ 8
+ 1
+ 
+ Effect</comment>
+            <returntype>android.graphics.Bitmap</returntype>
+            <parameter>
+                <name>src</name>
+                <type>android.graphics.Bitmap</type>
+            </parameter>
+            <parameter>
+                <name>bitOffset</name>
+                <type>int</type>
+            </parameter>
+            <parameter>
+                <name>Factor</name>
+                <type>int</type>
+            </parameter>
+            <parameter>
+                <name>Offset</name>
+                <type>int</type>
+            </parameter>
+        </method>
+        <method>
+            <name>Rotate</name>
+            <comment>Rotates a bitmaps
+ 
+ Effects</comment>
+            <returntype>android.graphics.Bitmap</returntype>
+            <parameter>
+                <name>src</name>
+                <type>android.graphics.Bitmap</type>
+            </parameter>
+            <parameter>
+                <name>degree</name>
+                <type>float</type>
+            </parameter>
+        </method>
+        <method>
+            <name>Contrast</name>
+            <comment>Contrast is the difference in luminance and/or colour that makes an object (or its representation in an image or display) distinguishable. 
+ In visual perception of the real world, contrast is determined by the difference in the colour and 
+ brightness of the object and other objects within the same field of view. 
+ 
+ Effects</comment>
+            <returntype>android.graphics.Bitmap</returntype>
+            <parameter>
+                <name>src</name>
+                <type>android.graphics.Bitmap</type>
+            </parameter>
+            <parameter>
+                <name>value</name>
+                <type>double</type>
+            </parameter>
+        </method>
+        <method>
+            <name>Highlight</name>
+            <comment>Highlights a bitmap. 
+ 
+ Effects</comment>
+            <returntype>android.graphics.Bitmap</returntype>
+            <parameter>
+                <name>src</name>
+                <type>android.graphics.Bitmap</type>
+            </parameter>
+        </method>
+        <method>
+            <name>Invert</name>
+            <comment>Inverts a bitmap.
+ Every image pixel holds information of  four channels: Alpha, Red, Green, Blue.
+ However, Alpha doesn’t reflect the image color as display. So the value is kept, and take inversion for other three 
+ channels by formula: 0xFF – CurrentValue.</comment>
+            <returntype>android.graphics.Bitmap</returntype>
+            <parameter>
+                <name>src</name>
+                <type>android.graphics.Bitmap</type>
+            </parameter>
+        </method>
+        <method>
+            <name>Flip</name>
+            <comment>Flips a bitmap vertically.
+ 
+ Effect</comment>
+            <returntype>android.graphics.Bitmap</returntype>
+            <parameter>
+                <name>src</name>
+                <type>android.graphics.Bitmap</type>
+            </parameter>
+        </method>
+        <method>
+            <name>Blur</name>
+            <comment>Does a Gaussian Blur to the image. - Filter
+ It uses the concepts of Convolution Filtering to apply in image processing.</comment>
+            <returntype>android.graphics.Bitmap</returntype>
+            <parameter>
+                <name>src</name>
+                <type>android.graphics.Bitmap</type>
+            </parameter>
+            <parameter>
+                <name>Factor</name>
+                <type>int</type>
+            </parameter>
+            <parameter>
+                <name>Offset</name>
+                <type>int</type>
+            </parameter>
+        </method>
+        <method>
+            <name>Brightness</name>
+            <comment>The concept of brightness is rather simple, increasing/decreasing value of each R, G, B channel  together.
+ + By increasing: image results brighter.
+ + By decreasing: image results darker.
+ 
+ Effects</comment>
+            <returntype>android.graphics.Bitmap</returntype>
+            <parameter>
+                <name>src</name>
+                <type>android.graphics.Bitmap</type>
+            </parameter>
+            <parameter>
+                <name>value</name>
+                <type>int</type>
+            </parameter>
+        </method>
+        <method>
+            <name>Snow</name>
+            <comment>Adds a snow-like effect to the bitmap.
+ Opposite of Black Filter
+ Sets all pixels having R,G,B values to the max (0xFF) when they’re greater than threshold, 
+ then we have the Snow Effect.
+ 
+ Effect</comment>
+            <returntype>android.graphics.Bitmap</returntype>
+            <parameter>
+                <name>source</name>
+                <type>android.graphics.Bitmap</type>
+            </parameter>
+        </method>
+        <method>
+            <name>Smooth</name>
+            <comment>Smoothens a bitmap.
+ The factor is 13 and offset 1.
+ 
+ Filter</comment>
+            <returntype>android.graphics.Bitmap</returntype>
+            <parameter>
+                <name>src</name>
+                <type>android.graphics.Bitmap</type>
+            </parameter>
+            <parameter>
+                <name>value</name>
+                <type>double</type>
+            </parameter>
+        </method>
+        <method>
+            <name>Emboss</name>
+            <comment>Embosses your bitmap to make it look sketchy like.
+ 
+ Filter</comment>
+            <returntype>android.graphics.Bitmap</returntype>
+            <parameter>
+                <name>src</name>
+                <type>android.graphics.Bitmap</type>
+            </parameter>
+        </method>
+        <method>
+            <name>Mirror</name>
+            <comment>Flips a bitmap horizontally.
+ 
+ Effect</comment>
+            <returntype>android.graphics.Bitmap</returntype>
+            <parameter>
+                <name>src</name>
+                <type>android.graphics.Bitmap</type>
+            </parameter>
+        </method>
+        <method>
+            <name>ReplaceColor</name>
+            <comment>Replaces pixels from one color to the other.
+ 
+ Effect</comment>
+            <returntype>android.graphics.Bitmap</returntype>
+            <parameter>
+                <name>src</name>
+                <type>android.graphics.Bitmap</type>
+            </parameter>
+            <parameter>
+                <name>fromColor</name>
+                <type>int</type>
+            </parameter>
+            <parameter>
+                <name>targetColor</name>
+                <type>int</type>
+            </parameter>
+        </method>
+        <method>
+            <name>Watermark</name>
+            <comment>Gives your image a watermark, choose the location of the text, etc, etc
+ Effect</comment>
+            <returntype>android.graphics.Bitmap</returntype>
+            <parameter>
+                <name>src</name>
+                <type>android.graphics.Bitmap</type>
+            </parameter>
+            <parameter>
+                <name>watermark</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>x</name>
+                <type>float</type>
+            </parameter>
+            <parameter>
+                <name>y</name>
+                <type>float</type>
+            </parameter>
+            <parameter>
+                <name>color</name>
+                <type>int</type>
+            </parameter>
+            <parameter>
+                <name>alpha</name>
+                <type>int</type>
+            </parameter>
+            <parameter>
+                <name>size</name>
+                <type>int</type>
+            </parameter>
+            <parameter>
+                <name>underline</name>
+                <type>boolean</type>
+            </parameter>
+        </method>
+        <method>
+            <name>SepiaToning</name>
+            <comment>Sepia-toning effect is used very commonly in photography.
+ It is the process of changing the intensity on every pixel color of a gray-scale image, or so-called black-and-white.
+ 
+ Effects</comment>
+            <returntype>android.graphics.Bitmap</returntype>
+            <parameter>
+                <name>src</name>
+                <type>android.graphics.Bitmap</type>
+            </parameter>
+            <parameter>
+                <name>depth</name>
+                <type>int</type>
+            </parameter>
+            <parameter>
+                <name>red</name>
+                <type>double</type>
+            </parameter>
+            <parameter>
+                <name>green</name>
+                <type>double</type>
+            </parameter>
+            <parameter>
+                <name>blue</name>
+                <type>double</type>
+            </parameter>
+        </method>
+        <method>
+            <name>Sharpen</name>
+            <comment>Sharpening effect make uses of Convolution Matrix
+ The applied matrix is:
+ [  0 | -2 |  0 ]
+ [ -2 | 11 | -2 ]
+ [  0 | -2 |  0 ]
+ 
+ Filter
+ Weight : 3</comment>
+            <returntype>android.graphics.Bitmap</returntype>
+            <parameter>
+                <name>src</name>
+                <type>android.graphics.Bitmap</type>
+            </parameter>
+            <parameter>
+                <name>weight</name>
+                <type>double</type>
+            </parameter>
+        </method>
+        <method>
+            <name>Posterize</name>
+            <comment>Decreasing color depth involves converting to standard values.
+ For example: if I want to offset 32, then each image color channel will apply the range: 0, 31, 63 …
+ 
+ Effects</comment>
+            <returntype>android.graphics.Bitmap</returntype>
+            <parameter>
+                <name>src</name>
+                <type>android.graphics.Bitmap</type>
+            </parameter>
+            <parameter>
+                <name>bitOffset</name>
+                <type>int</type>
+            </parameter>
+        </method>
+        <method>
+            <name>TintColor</name>
+            <comment>Gives a nice tint color to a bitmap.
+degree: Use the constants for the degree.
+ 
+ Effect</comment>
+            <returntype>android.graphics.Bitmap</returntype>
+            <parameter>
+                <name>src</name>
+                <type>android.graphics.Bitmap</type>
+            </parameter>
+            <parameter>
+                <name>degree</name>
+                <type>int</type>
+            </parameter>
+        </method>
+        <method>
+            <name>Noise</name>
+            <comment>Gives a noise or flea effect to the bitmap
+ 
+ Effect</comment>
+            <returntype>android.graphics.Bitmap</returntype>
+            <parameter>
+                <name>source</name>
+                <type>android.graphics.Bitmap</type>
+            </parameter>
+        </method>
+        <method>
+            <name>Sketchify</name>
+            <comment>Sketchify a photo.
+src: 
+Factor: 16
+Offset: 0
+Return type: @return:Effect</comment>
+            <returntype>android.graphics.Bitmap</returntype>
+            <parameter>
+                <name>src</name>
+                <type>android.graphics.Bitmap</type>
+            </parameter>
+            <parameter>
+                <name>Factor</name>
+                <type>int</type>
+            </parameter>
+            <parameter>
+                <name>Offset</name>
+                <type>int</type>
+            </parameter>
+        </method>
+        <method>
+            <name>Reflection</name>
+            <comment>Makes a mirror/reflection like
+ReflectionGap: gap space between original and reflected
+ 
+ Effect</comment>
+            <returntype>android.graphics.Bitmap</returntype>
+            <parameter>
+                <name>originalImage</name>
+                <type>android.graphics.Bitmap</type>
+            </parameter>
+            <parameter>
+                <name>ReflectionGap</name>
+                <type>int</type>
+            </parameter>
+        </method>
+        <method>
+            <name>GammaCorrection</name>
+            <comment>Gamma correction or gamma encoding is one among the common image processing method
+ Gamma correction, gamma nonlinearity, gamma encoding, or often simply gamma, 
+ is the name of a nonlinear operation used to code and decode luminance or tristimulus values in video or 
+ still image systems.
+ 
+ Effect</comment>
+            <returntype>android.graphics.Bitmap</returntype>
+            <parameter>
+                <name>src</name>
+                <type>android.graphics.Bitmap</type>
+            </parameter>
+            <parameter>
+                <name>red</name>
+                <type>double</type>
+            </parameter>
+            <parameter>
+                <name>green</name>
+                <type>double</type>
+            </parameter>
+            <parameter>
+                <name>blue</name>
+                <type>double</type>
+            </parameter>
+        </method>
+        <method>
+            <name>Engrave</name>
+            <comment>Engraves your bitmap.
+ 
+ Filter</comment>
+            <returntype>android.graphics.Bitmap</returntype>
+            <parameter>
+                <name>src</name>
+                <type>android.graphics.Bitmap</type>
+            </parameter>
+        </method>
+        <field>
+            <name>HALF_CIRCLE_DEGREE</name>
+            <comment></comment>
+            <returntype>double</returntype>
+        </field>
+        <field>
+            <name>RANGE</name>
+            <comment></comment>
+            <returntype>double</returntype>
+        </field>
+        <field>
+            <name>PI</name>
+            <comment></comment>
+            <returntype>double</returntype>
+        </field>
+        <field>
+            <name>FULL_CIRCLE_DEGREE</name>
+            <comment></comment>
+            <returntype>double</returntype>
+        </field>
+    </class>
+    <class>
+        <name>com.rootsoft.imageprocessing.RSImageBlend</name>
+        <shortname>RSImageBlend</shortname>
+        <owner>process</owner>
+        <method>
+            <name>LinearDodgeBlend</name>
+            <comment>Blends 2 bitmaps to one and adds addition blend.</comment>
+            <returntype>android.graphics.Bitmap</returntype>
+            <parameter>
+                <name>source</name>
+                <type>android.graphics.Bitmap</type>
+            </parameter>
+            <parameter>
+                <name>layer</name>
+                <type>android.graphics.Bitmap</type>
+            </parameter>
+        </method>
+        <method>
+            <name>LinearLightBlend</name>
+            <comment>Blends 2 bitmaps to one and adds substraction blend.</comment>
+            <returntype>android.graphics.Bitmap</returntype>
+            <parameter>
+                <name>source</name>
+                <type>android.graphics.Bitmap</type>
+            </parameter>
+            <parameter>
+                <name>layer</name>
+                <type>android.graphics.Bitmap</type>
+            </parameter>
+        </method>
+        <method>
+            <name>VividLightBlend</name>
+            <comment>Blends 2 bitmaps to one and adds substraction blend.</comment>
+            <returntype>android.graphics.Bitmap</returntype>
+            <parameter>
+                <name>source</name>
+                <type>android.graphics.Bitmap</type>
+            </parameter>
+            <parameter>
+                <name>layer</name>
+                <type>android.graphics.Bitmap</type>
+            </parameter>
+        </method>
+        <method>
+            <name>AddBlend</name>
+            <comment>Blends 2 bitmaps to one and adds addition blend.</comment>
+            <returntype>android.graphics.Bitmap</returntype>
+            <parameter>
+                <name>source</name>
+                <type>android.graphics.Bitmap</type>
+            </parameter>
+            <parameter>
+                <name>layer</name>
+                <type>android.graphics.Bitmap</type>
+            </parameter>
+        </method>
+        <method>
+            <name>LightenBlend</name>
+            <comment>Blends 2 bitmaps to one and adds lighten blend.</comment>
+            <returntype>android.graphics.Bitmap</returntype>
+            <parameter>
+                <name>source</name>
+                <type>android.graphics.Bitmap</type>
+            </parameter>
+            <parameter>
+                <name>layer</name>
+                <type>android.graphics.Bitmap</type>
+            </parameter>
+        </method>
+        <method>
+            <name>Blend</name>
+            <comment>Blends 2 bitmaps together with help of a canvas. - Blending
+ Draws them both to a canvas and saves them as a bitmap.</comment>
+            <returntype>android.graphics.Bitmap</returntype>
+            <parameter>
+                <name>bottomImage</name>
+                <type>android.graphics.Bitmap</type>
+            </parameter>
+            <parameter>
+                <name>topImage</name>
+                <type>android.graphics.Bitmap</type>
+            </parameter>
+            <parameter>
+                <name>left</name>
+                <type>float</type>
+            </parameter>
+            <parameter>
+                <name>top</name>
+                <type>float</type>
+            </parameter>
+        </method>
+        <method>
+            <name>SubstractBlend</name>
+            <comment>Blends 2 bitmaps to one and adds substraction blend.</comment>
+            <returntype>android.graphics.Bitmap</returntype>
+            <parameter>
+                <name>source</name>
+                <type>android.graphics.Bitmap</type>
+            </parameter>
+            <parameter>
+                <name>layer</name>
+                <type>android.graphics.Bitmap</type>
+            </parameter>
+        </method>
+        <method>
+            <name>OverlayBlend</name>
+            <comment>Blends 2 bitmaps to one and adds substraction blend.</comment>
+            <returntype>android.graphics.Bitmap</returntype>
+            <parameter>
+                <name>source</name>
+                <type>android.graphics.Bitmap</type>
+            </parameter>
+            <parameter>
+                <name>layer</name>
+                <type>android.graphics.Bitmap</type>
+            </parameter>
+        </method>
+        <method>
+            <name>PhoenixBlend</name>
+            <comment>Blends 2 bitmaps to one and adds substraction blend.</comment>
+            <returntype>android.graphics.Bitmap</returntype>
+            <parameter>
+                <name>source</name>
+                <type>android.graphics.Bitmap</type>
+            </parameter>
+            <parameter>
+                <name>layer</name>
+                <type>android.graphics.Bitmap</type>
+            </parameter>
+        </method>
+        <method>
+            <name>LinearBurnBlend</name>
+            <comment>Blends 2 bitmaps to one and adds substraction blend.</comment>
+            <returntype>android.graphics.Bitmap</returntype>
+            <parameter>
+                <name>source</name>
+                <type>android.graphics.Bitmap</type>
+            </parameter>
+            <parameter>
+                <name>layer</name>
+                <type>android.graphics.Bitmap</type>
+            </parameter>
+        </method>
+        <method>
+            <name>PinLightBlend</name>
+            <comment>Blends 2 bitmaps to one and adds substraction blend.</comment>
+            <returntype>android.graphics.Bitmap</returntype>
+            <parameter>
+                <name>source</name>
+                <type>android.graphics.Bitmap</type>
+            </parameter>
+            <parameter>
+                <name>layer</name>
+                <type>android.graphics.Bitmap</type>
+            </parameter>
+        </method>
+        <method>
+            <name>ExclusionBlend</name>
+            <comment>Blends 2 bitmaps to one and adds substraction blend.</comment>
+            <returntype>android.graphics.Bitmap</returntype>
+            <parameter>
+                <name>source</name>
+                <type>android.graphics.Bitmap</type>
+            </parameter>
+            <parameter>
+                <name>layer</name>
+                <type>android.graphics.Bitmap</type>
+            </parameter>
+        </method>
+        <method>
+            <name>DifferenceBlend</name>
+            <comment>Blends 2 bitmaps to one and adds substraction blend.</comment>
+            <returntype>android.graphics.Bitmap</returntype>
+            <parameter>
+                <name>source</name>
+                <type>android.graphics.Bitmap</type>
+            </parameter>
+            <parameter>
+                <name>layer</name>
+                <type>android.graphics.Bitmap</type>
+            </parameter>
+        </method>
+        <method>
+            <name>SoftlightBlend</name>
+            <comment>Blends 2 bitmaps to one and adds substraction blend.</comment>
+            <returntype>android.graphics.Bitmap</returntype>
+            <parameter>
+                <name>source</name>
+                <type>android.graphics.Bitmap</type>
+            </parameter>
+            <parameter>
+                <name>layer</name>
+                <type>android.graphics.Bitmap</type>
+            </parameter>
+        </method>
+        <method>
+            <name>ScreenBlend</name>
+            <comment>Blends 2 bitmaps to one and adds substraction blend.</comment>
+            <returntype>android.graphics.Bitmap</returntype>
+            <parameter>
+                <name>source</name>
+                <type>android.graphics.Bitmap</type>
+            </parameter>
+            <parameter>
+                <name>layer</name>
+                <type>android.graphics.Bitmap</type>
+            </parameter>
+        </method>
+        <method>
+            <name>DarkenBlend</name>
+            <comment>Blends 2 bitmaps to one and adds darken blend.</comment>
+            <returntype>android.graphics.Bitmap</returntype>
+            <parameter>
+                <name>source</name>
+                <type>android.graphics.Bitmap</type>
+            </parameter>
+            <parameter>
+                <name>layer</name>
+                <type>android.graphics.Bitmap</type>
+            </parameter>
+        </method>
+        <method>
+            <name>NegationBlend</name>
+            <comment>Blends 2 bitmaps to one and adds substraction blend.</comment>
+            <returntype>android.graphics.Bitmap</returntype>
+            <parameter>
+                <name>source</name>
+                <type>android.graphics.Bitmap</type>
+            </parameter>
+            <parameter>
+                <name>layer</name>
+                <type>android.graphics.Bitmap</type>
+            </parameter>
+        </method>
+        <method>
+            <name>MultiplyBlend</name>
+            <comment>Blends 2 bitmaps to one and adds darken blend.</comment>
+            <returntype>android.graphics.Bitmap</returntype>
+            <parameter>
+                <name>source</name>
+                <type>android.graphics.Bitmap</type>
+            </parameter>
+            <parameter>
+                <name>layer</name>
+                <type>android.graphics.Bitmap</type>
+            </parameter>
+        </method>
+        <method>
+            <name>ReflectBlend</name>
+            <comment>Blends 2 bitmaps to one and adds substraction blend.</comment>
+            <returntype>android.graphics.Bitmap</returntype>
+            <parameter>
+                <name>source</name>
+                <type>android.graphics.Bitmap</type>
+            </parameter>
+            <parameter>
+                <name>layer</name>
+                <type>android.graphics.Bitmap</type>
+            </parameter>
+        </method>
+        <method>
+            <name>HardlightBlend</name>
+            <comment>Blends 2 bitmaps to one and adds substraction blend.</comment>
+            <returntype>android.graphics.Bitmap</returntype>
+            <parameter>
+                <name>source</name>
+                <type>android.graphics.Bitmap</type>
+            </parameter>
+            <parameter>
+                <name>layer</name>
+                <type>android.graphics.Bitmap</type>
+            </parameter>
+        </method>
+        <method>
+            <name>HardMixBlend</name>
+            <comment>Blends 2 bitmaps to one and adds substraction blend.</comment>
+            <returntype>android.graphics.Bitmap</returntype>
+            <parameter>
+                <name>source</name>
+                <type>android.graphics.Bitmap</type>
+            </parameter>
+            <parameter>
+                <name>layer</name>
+                <type>android.graphics.Bitmap</type>
+            </parameter>
+        </method>
+        <method>
+            <name>AverageBlend</name>
+            <comment>Blends 2 bitmaps to one and adds average blend.</comment>
+            <returntype>android.graphics.Bitmap</returntype>
+            <parameter>
+                <name>source</name>
+                <type>android.graphics.Bitmap</type>
+            </parameter>
+            <parameter>
+                <name>layer</name>
+                <type>android.graphics.Bitmap</type>
+            </parameter>
+        </method>
+        <method>
+            <name>ColorBurnBlend</name>
+            <comment>Blends 2 bitmaps to one and adds substraction blend.</comment>
+            <returntype>android.graphics.Bitmap</returntype>
+            <parameter>
+                <name>source</name>
+                <type>android.graphics.Bitmap</type>
+            </parameter>
+            <parameter>
+                <name>layer</name>
+                <type>android.graphics.Bitmap</type>
+            </parameter>
+        </method>
+        <method>
+            <name>ColorDodgeBlend</name>
+            <comment>Blends 2 bitmaps to one and adds the color dodge blend mode to it.</comment>
+            <returntype>android.graphics.Bitmap</returntype>
+            <parameter>
+                <name>source</name>
+                <type>android.graphics.Bitmap</type>
+            </parameter>
+            <parameter>
+                <name>layer</name>
+                <type>android.graphics.Bitmap</type>
+            </parameter>
+        </method>
+        <method>
+            <name>GlowBlend</name>
+            <comment>Blends 2 bitmaps to one and adds substraction blend.</comment>
+            <returntype>android.graphics.Bitmap</returntype>
+            <parameter>
+                <name>source</name>
+                <type>android.graphics.Bitmap</type>
+            </parameter>
+            <parameter>
+                <name>layer</name>
+                <type>android.graphics.Bitmap</type>
+            </parameter>
+        </method>
+    </class>
+    <class>
+        <name>com.rootsoft.imageprocessing.ConvolutionMatrix</name>
+        <owner>process</owner>
+        <method>
+            <name>computeConvolution3x3</name>
+            <comment></comment>
+            <returntype>android.graphics.Bitmap</returntype>
+            <parameter>
+                <name>src</name>
+                <type>android.graphics.Bitmap</type>
+            </parameter>
+            <parameter>
+                <name>matrix</name>
+                <type>com.rootsoft.imageprocessing.ConvolutionMatrix</type>
+            </parameter>
+        </method>
+        <method>
+            <name>applyConfig</name>
+            <comment></comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>config</name>
+                <type>double[][]</type>
+            </parameter>
+        </method>
+        <property>
+            <name>All</name>
+            <parameter>
+                <name>value</name>
+                <type>double</type>
+            </parameter>
+            <comment></comment>
+        </property>
+        <field>
+            <name>Factor</name>
+            <comment></comment>
+            <returntype>double</returntype>
+        </field>
+        <field>
+            <name>Offset</name>
+            <comment></comment>
+            <returntype>double</returntype>
+        </field>
+        <field>
+            <name>Matrix</name>
+            <comment></comment>
+            <returntype>double[][]</returntype>
+        </field>
+        <field>
+            <name>SIZE</name>
+            <comment></comment>
+            <returntype>int</returntype>
+        </field>
+    </class>
+    <version>1.0</version>
+    <author>XverhelstX</author>
+</root>

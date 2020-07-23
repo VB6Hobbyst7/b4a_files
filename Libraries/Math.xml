@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root>
+    <doclet-version-NOT-library-version>1.02</doclet-version-NOT-library-version>
+    <class>
+        <name>anywheresoftware.b4a.mymath.R</name>
+        <owner>process</owner>
+    </class>
+    <class>
+        <name>anywheresoftware.b4a.mymath.R.attr</name>
+        <owner>process</owner>
+    </class>
+    <class>
+        <name>anywheresoftware.b4a.mymath.R.drawable</name>
+        <owner>process</owner>
+        <field>
+            <name>ic_launcher</name>
+            <comment></comment>
+            <returntype>int</returntype>
+        </field>
+        <field>
+            <name>ic_action_search</name>
+            <comment></comment>
+            <returntype>int</returntype>
+        </field>
+    </class>
+    <class>
+        <name>anywheresoftware.b4a.mymath.R.string</name>
+        <owner>process</owner>
+        <field>
+            <name>app_name</name>
+            <comment></comment>
+            <returntype>int</returntype>
+        </field>
+    </class>
+    <class>
+        <name>anywheresoftware.b4a.mymath.R.style</name>
+        <owner>process</owner>
+        <field>
+            <name>AppBaseTheme</name>
+            <comment>Base application theme, dependent on API level. This theme is replaced
+        by AppBaseTheme from res/values-vXX/styles.xml on newer devices.
+
+
+            Theme customizations available in newer API levels can go in
+            res/values-vXX/styles.xml, while customizations related to
+            backward-compatibility can go here.</comment>
+            <returntype>int</returntype>
+        </field>
+        <field>
+            <name>AppTheme</name>
+            <comment>Application theme. 
+ All customizations that are NOT specific to a particular API-level can go here.</comment>
+            <returntype>int</returntype>
+        </field>
+    </class>
+    <class>
+        <name>anywheresoftware.b4a.mymath.BuildConfig</name>
+        <owner>process</owner>
+        <field>
+            <name>DEBUG</name>
+            <comment></comment>
+            <returntype>boolean</returntype>
+        </field>
+    </class>
+    <class>
+        <name>anywheresoftware.b4a.libraries.Libraries</name>
+        <shortname>MyMath</shortname>
+        <owner>process</owner>
+        <permission>android.permission.CAMERA</permission>
+        <method>
+            <name>Plus</name>
+            <comment>This Method Plus two number
+ &lt;code&gt;
+ Log(Plus(2,3))
+ &lt;/code&gt;</comment>
+            <returntype>int</returntype>
+            <parameter>
+                <name>num1</name>
+                <type>int</type>
+            </parameter>
+            <parameter>
+                <name>num2</name>
+                <type>int</type>
+            </parameter>
+        </method>
+        <method>
+            <name>TurnOnFlashLight</name>
+            <comment></comment>
+            <returntype>java.lang.Boolean</returntype>
+            <parameter>
+                <name>ba</name>
+                <type>anywheresoftware.b4a.BA</type>
+            </parameter>
+        </method>
+    </class>
+    <version>1.0</version>
+</root>

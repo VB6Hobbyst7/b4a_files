@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <doclet-version-NOT-library-version>1.00</doclet-version-NOT-library-version>
+  <dependsOn>ahdashboard</dependsOn>
+  <class>
+    <name>njdude.sliding.dashboard.slidingdashboard</name>
+    <shortname>SlidingDashboard</shortname>
+    <owner>activity</owner>
+    <method>
+      <name>IsInitialized</name>
+      <comment>Tests whether the object has been initialized.</comment>
+      <returntype>boolean</returntype>
+    </method>
+    <method>
+      <name DesignerName="AddTile">_addtile</name>
+      <returntype>String</returntype>
+      <parameter>
+        <name>TilePicture</name>
+        <type>anywheresoftware.b4a.objects.drawable.CanvasWrapper.BitmapWrapper</type>
+      </parameter>
+      <parameter>
+        <name>TileWidth</name>
+        <type>int</type>
+      </parameter>
+      <parameter>
+        <name>TileHeight</name>
+        <type>int</type>
+      </parameter>
+      <parameter>
+        <name>Index</name>
+        <type>int</type>
+      </parameter>
+    </method>
+    <method>
+      <name DesignerName="Close">_close</name>
+      <returntype>String</returntype>
+    </method>
+    <method>
+      <name DesignerName="Initialize">_initialize</name>
+      <comment>Activity = Activity (mandatory)
+Module = Me (mandatory)
+EventName = Event that will handle the selections
+DashboardBackgroundColor = Dashboard background color
+DashboardBackgroundImage = Dashboard background image
+DashboardWidth = Dashboard width
+DashboardHeight = Dashboard height
+DashboardPosition = Where the dashboard should be positioned: L = Left, R = Right, T = Top, B = Bottom</comment>
+      <returntype>String</returntype>
+      <parameter>
+        <name>ba</name>
+        <type>anywheresoftware.b4a.BA</type>
+      </parameter>
+      <parameter>
+        <name>Activity</name>
+        <type>anywheresoftware.b4a.objects.ActivityWrapper</type>
+      </parameter>
+      <parameter>
+        <name>Module</name>
+        <type>Object</type>
+      </parameter>
+      <parameter>
+        <name>EventName</name>
+        <type>String</type>
+      </parameter>
+      <parameter>
+        <name>DashboardBackgroundColor</name>
+        <type>int</type>
+      </parameter>
+      <parameter>
+        <name>DashboardBackgroundPicture</name>
+        <type>String</type>
+      </parameter>
+      <parameter>
+        <name>DashboardWidth</name>
+        <type>int</type>
+      </parameter>
+      <parameter>
+        <name>DashboardHeight</name>
+        <type>int</type>
+      </parameter>
+      <parameter>
+        <name>DashboardPosition</name>
+        <type>String</type>
+      </parameter>
+    </method>
+    <field>
+      <name DesignerName="IsOpen">_isopen</name>
+      <returntype>boolean</returntype>
+    </field>
+  </class>
+  <version>1</version>
+  <author>NJDude</author>
+</root>

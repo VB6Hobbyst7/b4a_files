@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root>
+    <doclet-version-NOT-library-version>1.04</doclet-version-NOT-library-version>
+    <class>
+        <name>PNBroadcastReceiver.PNBrodcastReceiver</name>
+        <shortname>PNBroadcastReceiver</shortname>
+        <owner>process</owner>
+        <event>OnReceive(Action As String,keys() As String,Data As Object)</event>
+        <method>
+            <name>SetPriority</name>
+            <comment>*این مورد اختیاری می باشد*
+ یک عدد از 1 تا 999 وارد کنید
+ می توانید یک اولویت برای اکشن های اضافه شده تعیین کنید که کدام اکشن زودتر دریافت شود ، این کار را قبل از رجیستر و بعد از اضافه کردن اکشن انجام دهید
+ مثال:
+ &lt;code&gt;	br.AddAction("android.net.conn.CONNECTIVITY_CHANGE")
+	br.SetPriority(1)
+	br.AddAction("android.intent.action.BATTERY_CHANGED")
+	br.SetPriority(2)
+	br.RegisterReceiver&lt;/code&gt;</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>Priority</name>
+                <type>int</type>
+            </parameter>
+        </method>
+        <method>
+            <name>Initialize</name>
+            <comment></comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>b</name>
+                <type>anywheresoftware.b4a.BA</type>
+            </parameter>
+            <parameter>
+                <name>EventName</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+        <method>
+            <name>RegisterReceiver</name>
+            <comment></comment>
+            <returntype>void</returntype>
+        </method>
+        <method>
+            <name>sendBroadcast</name>
+            <comment>اگر برنامه ای درون خودش برادکست اختصاصی ای ایجاد کرده باشد ، می توانید با این متد آن برادکست رسیور را با استفاده از اکشن اختصاصی خودش صدا بزنید</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>Action</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+        <method>
+            <name>AddAction</name>
+            <comment></comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>Action</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+        <method>
+            <name>UnRegisterReceiver</name>
+            <comment></comment>
+            <returntype>void</returntype>
+        </method>
+        <field>
+            <name>about</name>
+            <comment></comment>
+            <returntype>java.lang.String</returntype>
+        </field>
+        <field>
+            <name>version</name>
+            <comment></comment>
+            <returntype>java.lang.Double</returntype>
+        </field>
+    </class>
+    <version>1.0</version>
+    <author>pejman nikravan</author>
+</root>

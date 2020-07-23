@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root>
+    <doclet-version-NOT-library-version>1.02</doclet-version-NOT-library-version>
+    <class>
+        <name>de.joehil.b4a.jhwifi.JHwifi</name>
+        <shortname>JhWifi</shortname>
+        <owner>process</owner>
+        <permission>android.permission.CHANGE_WIFI_STATE</permission>
+        <permission>android.permission.ACCESS_WIFI_STATE</permission>
+        <permission>android.permission.UPDATE_DEVICE_STATS</permission>
+        <permission>android.permission.MODIFY_PHONE_STATE</permission>
+        <permission>android.permission.WRITE_SETTINGS</permission>
+        <method>
+            <name>Initialize</name>
+            <comment>Initialize the wifi object.</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>ba</name>
+                <type>anywheresoftware.b4a.BA</type>
+            </parameter>
+        </method>
+        <method>
+            <name>enableNetwork</name>
+            <comment>Enable Network. Disable others, if disable equals true. Returns true if ok and false if not ok.</comment>
+            <returntype>boolean</returntype>
+            <parameter>
+                <name>netid</name>
+                <type>int</type>
+            </parameter>
+            <parameter>
+                <name>disable</name>
+                <type>boolean</type>
+            </parameter>
+        </method>
+        <method>
+            <name>findConfiguredNetwork</name>
+            <comment>Find NetworkId belonging to BSSID or SSID</comment>
+            <returntype>int</returntype>
+            <parameter>
+                <name>SSID</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+        <method>
+            <name>startscan</name>
+            <comment>Starts a wifi scan. Returns true if ok and false if not ok.</comment>
+            <returntype>boolean</returntype>
+        </method>
+        <property>
+            <name>Wifi_Static_Gateway</name>
+            <returntype>java.lang.String</returntype>
+            <parameter>
+                <name>policy</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <comment>Get Wifi Static Gateway</comment>
+        </property>
+        <property>
+            <name>Enabled</name>
+            <returntype>boolean</returntype>
+            <parameter>
+                <name>state</name>
+                <type>boolean</type>
+            </parameter>
+            <comment>Gets true or false whether wifi is enabled.</comment>
+        </property>
+        <property>
+            <name>Wifi_Static_DNS2</name>
+            <returntype>java.lang.String</returntype>
+            <parameter>
+                <name>policy</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <comment>Get Wifi Static DNS2</comment>
+        </property>
+        <property>
+            <name>Wifi_Use_Static_IP</name>
+            <returntype>int</returntype>
+            <parameter>
+                <name>policy</name>
+                <type>int</type>
+            </parameter>
+            <comment>Get Wifi Use Static IP</comment>
+        </property>
+        <property>
+            <name>Wifi_Static_IP</name>
+            <returntype>java.lang.String</returntype>
+            <parameter>
+                <name>policy</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <comment>Get Wifi Static IP</comment>
+        </property>
+        <property>
+            <name>Wifi_Static_Netmask</name>
+            <returntype>java.lang.String</returntype>
+            <parameter>
+                <name>policy</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <comment>Get Wifi Static Netmask</comment>
+        </property>
+        <property>
+            <name>Wifi_Sleep_Policy</name>
+            <returntype>int</returntype>
+            <parameter>
+                <name>policy</name>
+                <type>int</type>
+            </parameter>
+            <comment>Get Wifi Sleep Policy</comment>
+        </property>
+        <property>
+            <name>Wifi_Static_DNS1</name>
+            <returntype>java.lang.String</returntype>
+            <parameter>
+                <name>policy</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <comment>Get Wifi Static DNS1</comment>
+        </property>
+        <property>
+            <name>StrongestKnownNetwork</name>
+            <returntype>int</returntype>
+            <comment>Find strongest known Network and return NetworkId.</comment>
+        </property>
+        <field>
+            <name>WIFI_SLEEP_POLICY_NEVER_WHILE_PLUGGED</name>
+            <comment></comment>
+            <returntype>int</returntype>
+        </field>
+        <field>
+            <name>WIFI_SLEEP_POLICY_NEVER</name>
+            <comment></comment>
+            <returntype>int</returntype>
+        </field>
+        <field>
+            <name>WIFI_SLEEP_POLICY_DEFAULT</name>
+            <comment></comment>
+            <returntype>int</returntype>
+        </field>
+    </class>
+    <version>1.2</version>
+    <author>Joerg Hillebrand</author>
+</root>

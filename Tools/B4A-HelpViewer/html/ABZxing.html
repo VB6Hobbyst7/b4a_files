@@ -1,0 +1,35 @@
+<HTML>
+<HEAD>
+<META http-equiv="Content-Type" content="text/html; charset=utf-8">
+<TITLE>
+Basic4android - ABZxing
+</TITLE>
+<link rel="stylesheet" type="text/css" href="images/help.css" />
+
+</HEAD>
+
+<BODY BGCOLOR="white" leftmargin="50">
+<a name="top"/>
+<h1>ABZxing</h1>
+<h3>Written by Alain Bailleul</h3>
+</h5>
+<h4>List of types:</h4>
+<a href='#abzxing'>ABZxing</a><br/>
+<hr/>
+<h3><u><a name='abzxing'>ABZxing</a></u></h3>
+</h5>This library allows you to use the Zxing barcode scanner. If the scanner is not<br/> installed, the library will prompt the user to download it from the Android Market<br/>This is an 'Activity Object', it cannot be declared under Sub Process_Globals.
+<br/>
+
+<h4>Events:</h4>
+BarcodeFound (barCode as String, formatName as string)<br/>Canceled()<br/>
+<h4>Members:</h4><br/>
+<img src='images/15.png'/>&nbsp;&nbsp;<span style="color: #000000;"><a href='#abzxing_abgetbarcode'><b>ABGetBarcode</b></a> (eventName </span><span style="color: #0000FF;">As</span><span style="color: #000000;"> </span><span style="color: #008B8B;">String</span><span style="color: #000000;">, mode </span><span style="color: #0000FF;">As</span><span style="color: #000000;"> </span><span style="color: #008B8B;">String</span><span style="color: #000000;">)</span><br/><br/>
+
+<h4>Members description:</h4>
+<a name='abzxing_abgetbarcode'/>
+<h5><img src='images/15.png'/>
+<span style="color: #000000;">ABGetBarcode (eventName </span><span style="color: #0000FF;">As</span><span style="color: #000000;"> </span><span style="color: #008B8B;">String</span><span style="color: #000000;">, mode </span><span style="color: #0000FF;">As</span><span style="color: #000000;"> </span><span style="color: #008B8B;">String</span><span style="color: #000000;">)</span></h5>Starts the barcode scanner. The barcode is returned in the BarcodeFound event or the Canceled event<br/>eventName (String): name of the ABBarcode object<br/>mode (String):<br/>"" for everything<br/>"QR_CODE_TYPES" for QR codes<br/>"PRODUCT_CODE_TYPES" for UPC_A,UPC_E,EAN_8,EAN_13<br/>"ONE_D_CODE_TYPES" for UPC_A,UPC_E,EAN_8,EAN_13,CODE_39,CODE_93,CODE_128 <br/>Example:<span class='pre'><span style="color: #000000;"><br/></span><span style="color: #0000FF;">Sub </span><span style="color: #000000;">Button1_Click<br/>   myABBarcode.ABBarcodeGet(</span><span style="color: #800000;">"</span><span style="color: #800000;">myABBarcode</span><span style="color: #800000;">"</span><span style="color: #000000;">, </span><span style="color: #800000;">"</span><span style="color: #800000;">QR_CODE_TYPES</span><span style="color: #800000;">"</span><span style="color: #000000;">)<br/></span><span style="color: #0000FF;">End Sub</span><span style="color: #000000;"><br/><br/></span><span style="color: #0000FF;">Sub </span><span style="color: #000000;">myABBarcode_BarcodeFound(barCode </span><span style="color: #0000FF;">as</span><span style="color: #000000;"> </span><span style="color: #008B8B;">String</span><span style="color: #000000;">, formatName </span><span style="color: #0000FF;">as</span><span style="color: #000000;"> </span><span style="color: #008B8B;">String</span><span style="color: #000000;">)<br/>   msgbox(barCode, </span><span style="color: #800000;">""</span><span style="color: #000000;">)<br/></span><span style="color: #0000FF;">End Sub</span><span style="color: #000000;"><br/><br/></span><span style="color: #0000FF;">Sub </span><span style="color: #000000;">myABBarcode_Canceled<br/>   msgbox(</span><span style="color: #800000;">"</span><span style="color: #800000;">Canceled</span><span style="color: #800000;">"</span><span style="color: #000000;">,</span><span style="color: #800000;">""</span><span style="color: #000000;">)<br/></span><span style="color: #0000FF;">End Sub</span><span style="color: #000000;"><br/></span></span>
+<hr/>
+<a href="#top">Top</a>
+</body>
+</html>

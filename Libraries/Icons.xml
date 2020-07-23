@@ -1,0 +1,1416 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <doclet-version-NOT-library-version>1.00</doclet-version-NOT-library-version>
+  <dependsOn>androidresources</dependsOn>
+  <class>
+    <name>b4a.example.icon</name>
+    <shortname>Icon</shortname>
+    <owner>process</owner>
+    <method>
+      <name>IsInitialized</name>
+      <comment>Tests whether the object has been initialized.</comment>
+      <returntype>boolean</returntype>
+    </method>
+    <method>
+      <name DesignerName="getalert_dark_frame" HideFromIDE="true">_getalert_dark_frame</name>
+      <returntype>anywheresoftware.b4a.objects.drawable.BitmapDrawable</returntype>
+    </method>
+    <method>
+      <name DesignerName="getalert_light_frame" HideFromIDE="true">_getalert_light_frame</name>
+      <returntype>anywheresoftware.b4a.objects.drawable.BitmapDrawable</returntype>
+    </method>
+    <method>
+      <name DesignerName="getarrow_down_float" HideFromIDE="true">_getarrow_down_float</name>
+      <returntype>anywheresoftware.b4a.objects.drawable.BitmapDrawable</returntype>
+    </method>
+    <method>
+      <name DesignerName="getarrow_up_float" HideFromIDE="true">_getarrow_up_float</name>
+      <returntype>anywheresoftware.b4a.objects.drawable.BitmapDrawable</returntype>
+    </method>
+    <method>
+      <name DesignerName="getbottom_bar" HideFromIDE="true">_getbottom_bar</name>
+      <returntype>anywheresoftware.b4a.objects.drawable.BitmapDrawable</returntype>
+    </method>
+    <method>
+      <name DesignerName="getbtn_default" HideFromIDE="true">_getbtn_default</name>
+      <returntype>anywheresoftware.b4a.objects.drawable.BitmapDrawable</returntype>
+    </method>
+    <method>
+      <name DesignerName="getbtn_default_small" HideFromIDE="true">_getbtn_default_small</name>
+      <returntype>anywheresoftware.b4a.objects.drawable.BitmapDrawable</returntype>
+    </method>
+    <method>
+      <name DesignerName="getbtn_dialog" HideFromIDE="true">_getbtn_dialog</name>
+      <returntype>anywheresoftware.b4a.objects.drawable.BitmapDrawable</returntype>
+    </method>
+    <method>
+      <name DesignerName="getbtn_dropdown" HideFromIDE="true">_getbtn_dropdown</name>
+      <returntype>anywheresoftware.b4a.objects.drawable.BitmapDrawable</returntype>
+    </method>
+    <method>
+      <name DesignerName="getbtn_minus" HideFromIDE="true">_getbtn_minus</name>
+      <returntype>anywheresoftware.b4a.objects.drawable.BitmapDrawable</returntype>
+    </method>
+    <method>
+      <name DesignerName="getbtn_plus" HideFromIDE="true">_getbtn_plus</name>
+      <returntype>anywheresoftware.b4a.objects.drawable.BitmapDrawable</returntype>
+    </method>
+    <method>
+      <name DesignerName="getbtn_radio" HideFromIDE="true">_getbtn_radio</name>
+      <returntype>anywheresoftware.b4a.objects.drawable.BitmapDrawable</returntype>
+    </method>
+    <method>
+      <name DesignerName="getbtn_star" HideFromIDE="true">_getbtn_star</name>
+      <returntype>anywheresoftware.b4a.objects.drawable.BitmapDrawable</returntype>
+    </method>
+    <method>
+      <name DesignerName="getbtn_star_big_off" HideFromIDE="true">_getbtn_star_big_off</name>
+      <returntype>anywheresoftware.b4a.objects.drawable.BitmapDrawable</returntype>
+    </method>
+    <method>
+      <name DesignerName="getbtn_star_big_on" HideFromIDE="true">_getbtn_star_big_on</name>
+      <returntype>anywheresoftware.b4a.objects.drawable.BitmapDrawable</returntype>
+    </method>
+    <method>
+      <name DesignerName="getbutton_onoff_indicator_off" HideFromIDE="true">_getbutton_onoff_indicator_off</name>
+      <returntype>anywheresoftware.b4a.objects.drawable.BitmapDrawable</returntype>
+    </method>
+    <method>
+      <name DesignerName="getbutton_onoff_indicator_on" HideFromIDE="true">_getbutton_onoff_indicator_on</name>
+      <returntype>anywheresoftware.b4a.objects.drawable.BitmapDrawable</returntype>
+    </method>
+    <method>
+      <name DesignerName="getcheckbox_off_background" HideFromIDE="true">_getcheckbox_off_background</name>
+      <returntype>anywheresoftware.b4a.objects.drawable.BitmapDrawable</returntype>
+    </method>
+    <method>
+      <name DesignerName="getcheckbox_on_background" HideFromIDE="true">_getcheckbox_on_background</name>
+      <returntype>anywheresoftware.b4a.objects.drawable.BitmapDrawable</returntype>
+    </method>
+    <method>
+      <name DesignerName="getdark_header" HideFromIDE="true">_getdark_header</name>
+      <returntype>anywheresoftware.b4a.objects.drawable.BitmapDrawable</returntype>
+    </method>
+    <method>
+      <name DesignerName="getdialog_frame" HideFromIDE="true">_getdialog_frame</name>
+      <returntype>anywheresoftware.b4a.objects.drawable.BitmapDrawable</returntype>
+    </method>
+    <method>
+      <name DesignerName="getdialog_holo_dark_frame" HideFromIDE="true">_getdialog_holo_dark_frame</name>
+      <returntype>anywheresoftware.b4a.objects.drawable.BitmapDrawable</returntype>
+    </method>
+    <method>
+      <name DesignerName="getdialog_holo_light_frame" HideFromIDE="true">_getdialog_holo_light_frame</name>
+      <returntype>anywheresoftware.b4a.objects.drawable.BitmapDrawable</returntype>
+    </method>
+    <method>
+      <name DesignerName="getdivider_horizontal_bright" HideFromIDE="true">_getdivider_horizontal_bright</name>
+      <returntype>anywheresoftware.b4a.objects.drawable.BitmapDrawable</returntype>
+    </method>
+    <method>
+      <name DesignerName="getdivider_horizontal_dark" HideFromIDE="true">_getdivider_horizontal_dark</name>
+      <returntype>anywheresoftware.b4a.objects.drawable.BitmapDrawable</returntype>
+    </method>
+    <method>
+      <name DesignerName="getdivider_horizontal_dim_dark" HideFromIDE="true">_getdivider_horizontal_dim_dark</name>
+      <returntype>anywheresoftware.b4a.objects.drawable.BitmapDrawable</returntype>
+    </method>
+    <method>
+      <name DesignerName="getdivider_horizontal_textfield" HideFromIDE="true">_getdivider_horizontal_textfield</name>
+      <returntype>anywheresoftware.b4a.objects.drawable.BitmapDrawable</returntype>
+    </method>
+    <method>
+      <name DesignerName="getedit_text" HideFromIDE="true">_getedit_text</name>
+      <returntype>anywheresoftware.b4a.objects.drawable.BitmapDrawable</returntype>
+    </method>
+    <method>
+      <name DesignerName="geteditbox_background" HideFromIDE="true">_geteditbox_background</name>
+      <returntype>anywheresoftware.b4a.objects.drawable.BitmapDrawable</returntype>
+    </method>
+    <method>
+      <name DesignerName="geteditbox_background_normal" HideFromIDE="true">_geteditbox_background_normal</name>
+      <returntype>anywheresoftware.b4a.objects.drawable.BitmapDrawable</returntype>
+    </method>
+    <method>
+      <name DesignerName="geteditbox_dropdown_dark_frame" HideFromIDE="true">_geteditbox_dropdown_dark_frame</name>
+      <returntype>anywheresoftware.b4a.objects.drawable.BitmapDrawable</returntype>
+    </method>
+    <method>
+      <name DesignerName="geteditbox_dropdown_light_frame" HideFromIDE="true">_geteditbox_dropdown_light_frame</name>
+      <returntype>anywheresoftware.b4a.objects.drawable.BitmapDrawable</returntype>
+    </method>
+    <method>
+      <name DesignerName="getgallery_thumb" HideFromIDE="true">_getgallery_thumb</name>
+      <returntype>anywheresoftware.b4a.objects.drawable.BitmapDrawable</returntype>
+    </method>
+    <method>
+      <name DesignerName="getic_btn_speak_now" HideFromIDE="true">_getic_btn_speak_now</name>
+      <returntype>anywheresoftware.b4a.objects.drawable.BitmapDrawable</returntype>
+    </method>
+    <method>
+      <name DesignerName="getic_delete" HideFromIDE="true">_getic_delete</name>
+      <returntype>anywheresoftware.b4a.objects.drawable.BitmapDrawable</returntype>
+    </method>
+    <method>
+      <name DesignerName="getic_dialog_alert" HideFromIDE="true">_getic_dialog_alert</name>
+      <returntype>anywheresoftware.b4a.objects.drawable.BitmapDrawable</returntype>
+    </method>
+    <method>
+      <name DesignerName="getic_dialog_dialer" HideFromIDE="true">_getic_dialog_dialer</name>
+      <returntype>anywheresoftware.b4a.objects.drawable.BitmapDrawable</returntype>
+    </method>
+    <method>
+      <name DesignerName="getic_dialog_email" HideFromIDE="true">_getic_dialog_email</name>
+      <returntype>anywheresoftware.b4a.objects.drawable.BitmapDrawable</returntype>
+    </method>
+    <method>
+      <name DesignerName="getic_dialog_info" HideFromIDE="true">_getic_dialog_info</name>
+      <returntype>anywheresoftware.b4a.objects.drawable.BitmapDrawable</returntype>
+    </method>
+    <method>
+      <name DesignerName="getic_dialog_map" HideFromIDE="true">_getic_dialog_map</name>
+      <returntype>anywheresoftware.b4a.objects.drawable.BitmapDrawable</returntype>
+    </method>
+    <method>
+      <name DesignerName="getic_input_add" HideFromIDE="true">_getic_input_add</name>
+      <returntype>anywheresoftware.b4a.objects.drawable.BitmapDrawable</returntype>
+    </method>
+    <method>
+      <name DesignerName="getic_input_delete" HideFromIDE="true">_getic_input_delete</name>
+      <returntype>anywheresoftware.b4a.objects.drawable.BitmapDrawable</returntype>
+    </method>
+    <method>
+      <name DesignerName="getic_input_get" HideFromIDE="true">_getic_input_get</name>
+      <returntype>anywheresoftware.b4a.objects.drawable.BitmapDrawable</returntype>
+    </method>
+    <method>
+      <name DesignerName="getic_lock_idle_alarm" HideFromIDE="true">_getic_lock_idle_alarm</name>
+      <returntype>anywheresoftware.b4a.objects.drawable.BitmapDrawable</returntype>
+    </method>
+    <method>
+      <name DesignerName="getic_lock_idle_charging" HideFromIDE="true">_getic_lock_idle_charging</name>
+      <returntype>anywheresoftware.b4a.objects.drawable.BitmapDrawable</returntype>
+    </method>
+    <method>
+      <name DesignerName="getic_lock_idle_lock" HideFromIDE="true">_getic_lock_idle_lock</name>
+      <returntype>anywheresoftware.b4a.objects.drawable.BitmapDrawable</returntype>
+    </method>
+    <method>
+      <name DesignerName="getic_lock_idle_low_battery" HideFromIDE="true">_getic_lock_idle_low_battery</name>
+      <returntype>anywheresoftware.b4a.objects.drawable.BitmapDrawable</returntype>
+    </method>
+    <method>
+      <name DesignerName="getic_lock_lock" HideFromIDE="true">_getic_lock_lock</name>
+      <returntype>anywheresoftware.b4a.objects.drawable.BitmapDrawable</returntype>
+    </method>
+    <method>
+      <name DesignerName="getic_lock_power_off" HideFromIDE="true">_getic_lock_power_off</name>
+      <returntype>anywheresoftware.b4a.objects.drawable.BitmapDrawable</returntype>
+    </method>
+    <method>
+      <name DesignerName="getic_lock_silent_mode" HideFromIDE="true">_getic_lock_silent_mode</name>
+      <returntype>anywheresoftware.b4a.objects.drawable.BitmapDrawable</returntype>
+    </method>
+    <method>
+      <name DesignerName="getic_lock_silent_mode_off" HideFromIDE="true">_getic_lock_silent_mode_off</name>
+      <returntype>anywheresoftware.b4a.objects.drawable.BitmapDrawable</returntype>
+    </method>
+    <method>
+      <name DesignerName="getic_media_ff" HideFromIDE="true">_getic_media_ff</name>
+      <returntype>anywheresoftware.b4a.objects.drawable.BitmapDrawable</returntype>
+    </method>
+    <method>
+      <name DesignerName="getic_media_next" HideFromIDE="true">_getic_media_next</name>
+      <returntype>anywheresoftware.b4a.objects.drawable.BitmapDrawable</returntype>
+    </method>
+    <method>
+      <name DesignerName="getic_media_pause" HideFromIDE="true">_getic_media_pause</name>
+      <returntype>anywheresoftware.b4a.objects.drawable.BitmapDrawable</returntype>
+    </method>
+    <method>
+      <name DesignerName="getic_media_play" HideFromIDE="true">_getic_media_play</name>
+      <returntype>anywheresoftware.b4a.objects.drawable.BitmapDrawable</returntype>
+    </method>
+    <method>
+      <name DesignerName="getic_media_previous" HideFromIDE="true">_getic_media_previous</name>
+      <returntype>anywheresoftware.b4a.objects.drawable.BitmapDrawable</returntype>
+    </method>
+    <method>
+      <name DesignerName="getic_media_rew" HideFromIDE="true">_getic_media_rew</name>
+      <returntype>anywheresoftware.b4a.objects.drawable.BitmapDrawable</returntype>
+    </method>
+    <method>
+      <name DesignerName="getic_menu_add" HideFromIDE="true">_getic_menu_add</name>
+      <returntype>Object</returntype>
+    </method>
+    <method>
+      <name DesignerName="getic_menu_agenda" HideFromIDE="true">_getic_menu_agenda</name>
+      <returntype>anywheresoftware.b4a.objects.drawable.BitmapDrawable</returntype>
+    </method>
+    <method>
+      <name DesignerName="getic_menu_always_landscape_portrait" HideFromIDE="true">_getic_menu_always_landscape_portrait</name>
+      <returntype>anywheresoftware.b4a.objects.drawable.BitmapDrawable</returntype>
+    </method>
+    <method>
+      <name DesignerName="getic_menu_call" HideFromIDE="true">_getic_menu_call</name>
+      <returntype>anywheresoftware.b4a.objects.drawable.BitmapDrawable</returntype>
+    </method>
+    <method>
+      <name DesignerName="getic_menu_camera" HideFromIDE="true">_getic_menu_camera</name>
+      <returntype>anywheresoftware.b4a.objects.drawable.BitmapDrawable</returntype>
+    </method>
+    <method>
+      <name DesignerName="getic_menu_close_clear_cancel" HideFromIDE="true">_getic_menu_close_clear_cancel</name>
+      <returntype>anywheresoftware.b4a.objects.drawable.BitmapDrawable</returntype>
+    </method>
+    <method>
+      <name DesignerName="getic_menu_compass" HideFromIDE="true">_getic_menu_compass</name>
+      <returntype>anywheresoftware.b4a.objects.drawable.BitmapDrawable</returntype>
+    </method>
+    <method>
+      <name DesignerName="getic_menu_crop" HideFromIDE="true">_getic_menu_crop</name>
+      <returntype>anywheresoftware.b4a.objects.drawable.BitmapDrawable</returntype>
+    </method>
+    <method>
+      <name DesignerName="getic_menu_day" HideFromIDE="true">_getic_menu_day</name>
+      <returntype>anywheresoftware.b4a.objects.drawable.BitmapDrawable</returntype>
+    </method>
+    <method>
+      <name DesignerName="getic_menu_delete" HideFromIDE="true">_getic_menu_delete</name>
+      <returntype>anywheresoftware.b4a.objects.drawable.BitmapDrawable</returntype>
+    </method>
+    <method>
+      <name DesignerName="getic_menu_directions" HideFromIDE="true">_getic_menu_directions</name>
+      <returntype>anywheresoftware.b4a.objects.drawable.BitmapDrawable</returntype>
+    </method>
+    <method>
+      <name DesignerName="getic_menu_edit" HideFromIDE="true">_getic_menu_edit</name>
+      <returntype>anywheresoftware.b4a.objects.drawable.BitmapDrawable</returntype>
+    </method>
+    <method>
+      <name DesignerName="getic_menu_gallery" HideFromIDE="true">_getic_menu_gallery</name>
+      <returntype>anywheresoftware.b4a.objects.drawable.BitmapDrawable</returntype>
+    </method>
+    <method>
+      <name DesignerName="getic_menu_help" HideFromIDE="true">_getic_menu_help</name>
+      <returntype>anywheresoftware.b4a.objects.drawable.BitmapDrawable</returntype>
+    </method>
+    <method>
+      <name DesignerName="getic_menu_info_details" HideFromIDE="true">_getic_menu_info_details</name>
+      <returntype>anywheresoftware.b4a.objects.drawable.BitmapDrawable</returntype>
+    </method>
+    <method>
+      <name DesignerName="getic_menu_manage" HideFromIDE="true">_getic_menu_manage</name>
+      <returntype>anywheresoftware.b4a.objects.drawable.BitmapDrawable</returntype>
+    </method>
+    <method>
+      <name DesignerName="getic_menu_mapmode" HideFromIDE="true">_getic_menu_mapmode</name>
+      <returntype>anywheresoftware.b4a.objects.drawable.BitmapDrawable</returntype>
+    </method>
+    <method>
+      <name DesignerName="getic_menu_month" HideFromIDE="true">_getic_menu_month</name>
+      <returntype>anywheresoftware.b4a.objects.drawable.BitmapDrawable</returntype>
+    </method>
+    <method>
+      <name DesignerName="getic_menu_more" HideFromIDE="true">_getic_menu_more</name>
+      <returntype>anywheresoftware.b4a.objects.drawable.BitmapDrawable</returntype>
+    </method>
+    <method>
+      <name DesignerName="getic_menu_my_calendar" HideFromIDE="true">_getic_menu_my_calendar</name>
+      <returntype>anywheresoftware.b4a.objects.drawable.BitmapDrawable</returntype>
+    </method>
+    <method>
+      <name DesignerName="getic_menu_mylocation" HideFromIDE="true">_getic_menu_mylocation</name>
+      <returntype>anywheresoftware.b4a.objects.drawable.BitmapDrawable</returntype>
+    </method>
+    <method>
+      <name DesignerName="getic_menu_myplaces" HideFromIDE="true">_getic_menu_myplaces</name>
+      <returntype>anywheresoftware.b4a.objects.drawable.BitmapDrawable</returntype>
+    </method>
+    <method>
+      <name DesignerName="getic_menu_preferences" HideFromIDE="true">_getic_menu_preferences</name>
+      <returntype>anywheresoftware.b4a.objects.drawable.BitmapDrawable</returntype>
+    </method>
+    <method>
+      <name DesignerName="getic_menu_recent_history" HideFromIDE="true">_getic_menu_recent_history</name>
+      <returntype>anywheresoftware.b4a.objects.drawable.BitmapDrawable</returntype>
+    </method>
+    <method>
+      <name DesignerName="getic_menu_report_image" HideFromIDE="true">_getic_menu_report_image</name>
+      <returntype>anywheresoftware.b4a.objects.drawable.BitmapDrawable</returntype>
+    </method>
+    <method>
+      <name DesignerName="getic_menu_revert" HideFromIDE="true">_getic_menu_revert</name>
+      <returntype>anywheresoftware.b4a.objects.drawable.BitmapDrawable</returntype>
+    </method>
+    <method>
+      <name DesignerName="getic_menu_rotate" HideFromIDE="true">_getic_menu_rotate</name>
+      <returntype>anywheresoftware.b4a.objects.drawable.BitmapDrawable</returntype>
+    </method>
+    <method>
+      <name DesignerName="getic_menu_save" HideFromIDE="true">_getic_menu_save</name>
+      <returntype>anywheresoftware.b4a.objects.drawable.BitmapDrawable</returntype>
+    </method>
+    <method>
+      <name DesignerName="getic_menu_search" HideFromIDE="true">_getic_menu_search</name>
+      <returntype>anywheresoftware.b4a.objects.drawable.BitmapDrawable</returntype>
+    </method>
+    <method>
+      <name DesignerName="getic_menu_send" HideFromIDE="true">_getic_menu_send</name>
+      <returntype>anywheresoftware.b4a.objects.drawable.BitmapDrawable</returntype>
+    </method>
+    <method>
+      <name DesignerName="getic_menu_set_as" HideFromIDE="true">_getic_menu_set_as</name>
+      <returntype>anywheresoftware.b4a.objects.drawable.BitmapDrawable</returntype>
+    </method>
+    <method>
+      <name DesignerName="getic_menu_share" HideFromIDE="true">_getic_menu_share</name>
+      <returntype>anywheresoftware.b4a.objects.drawable.BitmapDrawable</returntype>
+    </method>
+    <method>
+      <name DesignerName="getic_menu_slideshow" HideFromIDE="true">_getic_menu_slideshow</name>
+      <returntype>anywheresoftware.b4a.objects.drawable.BitmapDrawable</returntype>
+    </method>
+    <method>
+      <name DesignerName="getic_menu_sort_alphabetically" HideFromIDE="true">_getic_menu_sort_alphabetically</name>
+      <returntype>anywheresoftware.b4a.objects.drawable.BitmapDrawable</returntype>
+    </method>
+    <method>
+      <name DesignerName="getic_menu_sort_by_size" HideFromIDE="true">_getic_menu_sort_by_size</name>
+      <returntype>anywheresoftware.b4a.objects.drawable.BitmapDrawable</returntype>
+    </method>
+    <method>
+      <name DesignerName="getic_menu_today" HideFromIDE="true">_getic_menu_today</name>
+      <returntype>anywheresoftware.b4a.objects.drawable.BitmapDrawable</returntype>
+    </method>
+    <method>
+      <name DesignerName="getic_menu_upload" HideFromIDE="true">_getic_menu_upload</name>
+      <returntype>anywheresoftware.b4a.objects.drawable.BitmapDrawable</returntype>
+    </method>
+    <method>
+      <name DesignerName="getic_menu_upload_you_tube" HideFromIDE="true">_getic_menu_upload_you_tube</name>
+      <returntype>anywheresoftware.b4a.objects.drawable.BitmapDrawable</returntype>
+    </method>
+    <method>
+      <name DesignerName="getic_menu_view" HideFromIDE="true">_getic_menu_view</name>
+      <returntype>anywheresoftware.b4a.objects.drawable.BitmapDrawable</returntype>
+    </method>
+    <method>
+      <name DesignerName="getic_menu_week" HideFromIDE="true">_getic_menu_week</name>
+      <returntype>anywheresoftware.b4a.objects.drawable.BitmapDrawable</returntype>
+    </method>
+    <method>
+      <name DesignerName="getic_menu_zoom" HideFromIDE="true">_getic_menu_zoom</name>
+      <returntype>anywheresoftware.b4a.objects.drawable.BitmapDrawable</returntype>
+    </method>
+    <method>
+      <name DesignerName="getic_notification_clear_all" HideFromIDE="true">_getic_notification_clear_all</name>
+      <returntype>anywheresoftware.b4a.objects.drawable.BitmapDrawable</returntype>
+    </method>
+    <method>
+      <name DesignerName="getic_notification_overlay" HideFromIDE="true">_getic_notification_overlay</name>
+      <returntype>anywheresoftware.b4a.objects.drawable.BitmapDrawable</returntype>
+    </method>
+    <method>
+      <name DesignerName="getic_partial_secure" HideFromIDE="true">_getic_partial_secure</name>
+      <returntype>anywheresoftware.b4a.objects.drawable.BitmapDrawable</returntype>
+    </method>
+    <method>
+      <name DesignerName="getic_popup_disk_full" HideFromIDE="true">_getic_popup_disk_full</name>
+      <returntype>anywheresoftware.b4a.objects.drawable.BitmapDrawable</returntype>
+    </method>
+    <method>
+      <name DesignerName="getic_popup_reminder" HideFromIDE="true">_getic_popup_reminder</name>
+      <returntype>anywheresoftware.b4a.objects.drawable.BitmapDrawable</returntype>
+    </method>
+    <method>
+      <name DesignerName="getic_popup_sync" HideFromIDE="true">_getic_popup_sync</name>
+      <returntype>anywheresoftware.b4a.objects.drawable.BitmapDrawable</returntype>
+    </method>
+    <method>
+      <name DesignerName="getic_search_category_default" HideFromIDE="true">_getic_search_category_default</name>
+      <returntype>anywheresoftware.b4a.objects.drawable.BitmapDrawable</returntype>
+    </method>
+    <method>
+      <name DesignerName="getic_secure" HideFromIDE="true">_getic_secure</name>
+      <returntype>anywheresoftware.b4a.objects.drawable.BitmapDrawable</returntype>
+    </method>
+    <method>
+      <name DesignerName="getlist_selector_background" HideFromIDE="true">_getlist_selector_background</name>
+      <returntype>anywheresoftware.b4a.objects.drawable.BitmapDrawable</returntype>
+    </method>
+    <method>
+      <name DesignerName="getmenu_frame" HideFromIDE="true">_getmenu_frame</name>
+      <returntype>anywheresoftware.b4a.objects.drawable.BitmapDrawable</returntype>
+    </method>
+    <method>
+      <name DesignerName="getmenu_full_frame" HideFromIDE="true">_getmenu_full_frame</name>
+      <returntype>anywheresoftware.b4a.objects.drawable.BitmapDrawable</returntype>
+    </method>
+    <method>
+      <name DesignerName="getmenuitem_background" HideFromIDE="true">_getmenuitem_background</name>
+      <returntype>anywheresoftware.b4a.objects.drawable.BitmapDrawable</returntype>
+    </method>
+    <method>
+      <name DesignerName="getpicture_frame" HideFromIDE="true">_getpicture_frame</name>
+      <returntype>anywheresoftware.b4a.objects.drawable.BitmapDrawable</returntype>
+    </method>
+    <method>
+      <name DesignerName="getpresence_audio_away" HideFromIDE="true">_getpresence_audio_away</name>
+      <returntype>anywheresoftware.b4a.objects.drawable.BitmapDrawable</returntype>
+    </method>
+    <method>
+      <name DesignerName="getpresence_audio_busy" HideFromIDE="true">_getpresence_audio_busy</name>
+      <returntype>anywheresoftware.b4a.objects.drawable.BitmapDrawable</returntype>
+    </method>
+    <method>
+      <name DesignerName="getpresence_audio_online" HideFromIDE="true">_getpresence_audio_online</name>
+      <returntype>anywheresoftware.b4a.objects.drawable.BitmapDrawable</returntype>
+    </method>
+    <method>
+      <name DesignerName="getpresence_away" HideFromIDE="true">_getpresence_away</name>
+      <returntype>anywheresoftware.b4a.objects.drawable.BitmapDrawable</returntype>
+    </method>
+    <method>
+      <name DesignerName="getpresence_busy" HideFromIDE="true">_getpresence_busy</name>
+      <returntype>anywheresoftware.b4a.objects.drawable.BitmapDrawable</returntype>
+    </method>
+    <method>
+      <name DesignerName="getpresence_invisible" HideFromIDE="true">_getpresence_invisible</name>
+      <returntype>anywheresoftware.b4a.objects.drawable.BitmapDrawable</returntype>
+    </method>
+    <method>
+      <name DesignerName="getpresence_offline" HideFromIDE="true">_getpresence_offline</name>
+      <returntype>anywheresoftware.b4a.objects.drawable.BitmapDrawable</returntype>
+    </method>
+    <method>
+      <name DesignerName="getpresence_online" HideFromIDE="true">_getpresence_online</name>
+      <returntype>anywheresoftware.b4a.objects.drawable.BitmapDrawable</returntype>
+    </method>
+    <method>
+      <name DesignerName="getpresence_video_away" HideFromIDE="true">_getpresence_video_away</name>
+      <returntype>anywheresoftware.b4a.objects.drawable.BitmapDrawable</returntype>
+    </method>
+    <method>
+      <name DesignerName="getpresence_video_busy" HideFromIDE="true">_getpresence_video_busy</name>
+      <returntype>anywheresoftware.b4a.objects.drawable.BitmapDrawable</returntype>
+    </method>
+    <method>
+      <name DesignerName="getpresence_video_online" HideFromIDE="true">_getpresence_video_online</name>
+      <returntype>anywheresoftware.b4a.objects.drawable.BitmapDrawable</returntype>
+    </method>
+    <method>
+      <name DesignerName="getprogress_horizontal" HideFromIDE="true">_getprogress_horizontal</name>
+      <returntype>anywheresoftware.b4a.objects.drawable.BitmapDrawable</returntype>
+    </method>
+    <method>
+      <name DesignerName="getprogress_indeterminate_horizontal" HideFromIDE="true">_getprogress_indeterminate_horizontal</name>
+      <returntype>anywheresoftware.b4a.objects.drawable.BitmapDrawable</returntype>
+    </method>
+    <method>
+      <name DesignerName="getradiobutton_off_background" HideFromIDE="true">_getradiobutton_off_background</name>
+      <returntype>anywheresoftware.b4a.objects.drawable.BitmapDrawable</returntype>
+    </method>
+    <method>
+      <name DesignerName="getradiobutton_on_background" HideFromIDE="true">_getradiobutton_on_background</name>
+      <returntype>anywheresoftware.b4a.objects.drawable.BitmapDrawable</returntype>
+    </method>
+    <method>
+      <name DesignerName="getscreen_background_dark" HideFromIDE="true">_getscreen_background_dark</name>
+      <returntype>anywheresoftware.b4a.objects.drawable.BitmapDrawable</returntype>
+    </method>
+    <method>
+      <name DesignerName="getscreen_background_dark_transparent" HideFromIDE="true">_getscreen_background_dark_transparent</name>
+      <returntype>anywheresoftware.b4a.objects.drawable.BitmapDrawable</returntype>
+    </method>
+    <method>
+      <name DesignerName="getscreen_background_light" HideFromIDE="true">_getscreen_background_light</name>
+      <returntype>anywheresoftware.b4a.objects.drawable.BitmapDrawable</returntype>
+    </method>
+    <method>
+      <name DesignerName="getscreen_background_light_transparent" HideFromIDE="true">_getscreen_background_light_transparent</name>
+      <returntype>anywheresoftware.b4a.objects.drawable.BitmapDrawable</returntype>
+    </method>
+    <method>
+      <name DesignerName="getspinner_background" HideFromIDE="true">_getspinner_background</name>
+      <returntype>anywheresoftware.b4a.objects.drawable.BitmapDrawable</returntype>
+    </method>
+    <method>
+      <name DesignerName="getspinner_dropdown_background" HideFromIDE="true">_getspinner_dropdown_background</name>
+      <returntype>anywheresoftware.b4a.objects.drawable.BitmapDrawable</returntype>
+    </method>
+    <method>
+      <name DesignerName="getstar_big_off" HideFromIDE="true">_getstar_big_off</name>
+      <returntype>anywheresoftware.b4a.objects.drawable.BitmapDrawable</returntype>
+    </method>
+    <method>
+      <name DesignerName="getstar_big_on" HideFromIDE="true">_getstar_big_on</name>
+      <returntype>anywheresoftware.b4a.objects.drawable.BitmapDrawable</returntype>
+    </method>
+    <method>
+      <name DesignerName="getstar_off" HideFromIDE="true">_getstar_off</name>
+      <returntype>anywheresoftware.b4a.objects.drawable.BitmapDrawable</returntype>
+    </method>
+    <method>
+      <name DesignerName="getstar_on" HideFromIDE="true">_getstar_on</name>
+      <returntype>anywheresoftware.b4a.objects.drawable.BitmapDrawable</returntype>
+    </method>
+    <method>
+      <name DesignerName="getstat_notify_call_mute" HideFromIDE="true">_getstat_notify_call_mute</name>
+      <returntype>anywheresoftware.b4a.objects.drawable.BitmapDrawable</returntype>
+    </method>
+    <method>
+      <name DesignerName="getstat_notify_chat" HideFromIDE="true">_getstat_notify_chat</name>
+      <returntype>anywheresoftware.b4a.objects.drawable.BitmapDrawable</returntype>
+    </method>
+    <method>
+      <name DesignerName="getstat_notify_error" HideFromIDE="true">_getstat_notify_error</name>
+      <returntype>anywheresoftware.b4a.objects.drawable.BitmapDrawable</returntype>
+    </method>
+    <method>
+      <name DesignerName="getstat_notify_missed_call" HideFromIDE="true">_getstat_notify_missed_call</name>
+      <returntype>anywheresoftware.b4a.objects.drawable.BitmapDrawable</returntype>
+    </method>
+    <method>
+      <name DesignerName="getstat_notify_more" HideFromIDE="true">_getstat_notify_more</name>
+      <returntype>anywheresoftware.b4a.objects.drawable.BitmapDrawable</returntype>
+    </method>
+    <method>
+      <name DesignerName="getstat_notify_sdcard" HideFromIDE="true">_getstat_notify_sdcard</name>
+      <returntype>anywheresoftware.b4a.objects.drawable.BitmapDrawable</returntype>
+    </method>
+    <method>
+      <name DesignerName="getstat_notify_sdcard_prepare" HideFromIDE="true">_getstat_notify_sdcard_prepare</name>
+      <returntype>anywheresoftware.b4a.objects.drawable.BitmapDrawable</returntype>
+    </method>
+    <method>
+      <name DesignerName="getstat_notify_sdcard_usb" HideFromIDE="true">_getstat_notify_sdcard_usb</name>
+      <returntype>anywheresoftware.b4a.objects.drawable.BitmapDrawable</returntype>
+    </method>
+    <method>
+      <name DesignerName="getstat_notify_sync" HideFromIDE="true">_getstat_notify_sync</name>
+      <returntype>anywheresoftware.b4a.objects.drawable.BitmapDrawable</returntype>
+    </method>
+    <method>
+      <name DesignerName="getstat_notify_sync_noanim" HideFromIDE="true">_getstat_notify_sync_noanim</name>
+      <returntype>anywheresoftware.b4a.objects.drawable.BitmapDrawable</returntype>
+    </method>
+    <method>
+      <name DesignerName="getstat_notify_voicemail" HideFromIDE="true">_getstat_notify_voicemail</name>
+      <returntype>anywheresoftware.b4a.objects.drawable.BitmapDrawable</returntype>
+    </method>
+    <method>
+      <name DesignerName="getstat_sys_data_bluetooth" HideFromIDE="true">_getstat_sys_data_bluetooth</name>
+      <returntype>anywheresoftware.b4a.objects.drawable.BitmapDrawable</returntype>
+    </method>
+    <method>
+      <name DesignerName="getstat_sys_download" HideFromIDE="true">_getstat_sys_download</name>
+      <returntype>anywheresoftware.b4a.objects.drawable.BitmapDrawable</returntype>
+    </method>
+    <method>
+      <name DesignerName="getstat_sys_download_done" HideFromIDE="true">_getstat_sys_download_done</name>
+      <returntype>anywheresoftware.b4a.objects.drawable.BitmapDrawable</returntype>
+    </method>
+    <method>
+      <name DesignerName="getstat_sys_headset" HideFromIDE="true">_getstat_sys_headset</name>
+      <returntype>anywheresoftware.b4a.objects.drawable.BitmapDrawable</returntype>
+    </method>
+    <method>
+      <name DesignerName="getstat_sys_phone_call" HideFromIDE="true">_getstat_sys_phone_call</name>
+      <returntype>anywheresoftware.b4a.objects.drawable.BitmapDrawable</returntype>
+    </method>
+    <method>
+      <name DesignerName="getstat_sys_phone_call_forward" HideFromIDE="true">_getstat_sys_phone_call_forward</name>
+      <returntype>anywheresoftware.b4a.objects.drawable.BitmapDrawable</returntype>
+    </method>
+    <method>
+      <name DesignerName="getstat_sys_phone_call_on_hold" HideFromIDE="true">_getstat_sys_phone_call_on_hold</name>
+      <returntype>anywheresoftware.b4a.objects.drawable.BitmapDrawable</returntype>
+    </method>
+    <method>
+      <name DesignerName="getstat_sys_speakerphone" HideFromIDE="true">_getstat_sys_speakerphone</name>
+      <returntype>anywheresoftware.b4a.objects.drawable.BitmapDrawable</returntype>
+    </method>
+    <method>
+      <name DesignerName="getstat_sys_upload" HideFromIDE="true">_getstat_sys_upload</name>
+      <returntype>anywheresoftware.b4a.objects.drawable.BitmapDrawable</returntype>
+    </method>
+    <method>
+      <name DesignerName="getstat_sys_upload_done" HideFromIDE="true">_getstat_sys_upload_done</name>
+      <returntype>anywheresoftware.b4a.objects.drawable.BitmapDrawable</returntype>
+    </method>
+    <method>
+      <name DesignerName="getstat_sys_vp_phone_call" HideFromIDE="true">_getstat_sys_vp_phone_call</name>
+      <returntype>anywheresoftware.b4a.objects.drawable.BitmapDrawable</returntype>
+    </method>
+    <method>
+      <name DesignerName="getstat_sys_vp_phone_call_on_hold" HideFromIDE="true">_getstat_sys_vp_phone_call_on_hold</name>
+      <returntype>anywheresoftware.b4a.objects.drawable.BitmapDrawable</returntype>
+    </method>
+    <method>
+      <name DesignerName="getstat_sys_warning" HideFromIDE="true">_getstat_sys_warning</name>
+      <returntype>anywheresoftware.b4a.objects.drawable.BitmapDrawable</returntype>
+    </method>
+    <method>
+      <name DesignerName="getstatus_bar_item_app_background" HideFromIDE="true">_getstatus_bar_item_app_background</name>
+      <returntype>anywheresoftware.b4a.objects.drawable.BitmapDrawable</returntype>
+    </method>
+    <method>
+      <name DesignerName="getstatus_bar_item_background" HideFromIDE="true">_getstatus_bar_item_background</name>
+      <returntype>anywheresoftware.b4a.objects.drawable.BitmapDrawable</returntype>
+    </method>
+    <method>
+      <name DesignerName="getsym_action_call" HideFromIDE="true">_getsym_action_call</name>
+      <returntype>anywheresoftware.b4a.objects.drawable.BitmapDrawable</returntype>
+    </method>
+    <method>
+      <name DesignerName="getsym_action_chat" HideFromIDE="true">_getsym_action_chat</name>
+      <returntype>anywheresoftware.b4a.objects.drawable.BitmapDrawable</returntype>
+    </method>
+    <method>
+      <name DesignerName="getsym_action_email" HideFromIDE="true">_getsym_action_email</name>
+      <returntype>anywheresoftware.b4a.objects.drawable.BitmapDrawable</returntype>
+    </method>
+    <method>
+      <name DesignerName="getsym_call_incoming" HideFromIDE="true">_getsym_call_incoming</name>
+      <returntype>anywheresoftware.b4a.objects.drawable.BitmapDrawable</returntype>
+    </method>
+    <method>
+      <name DesignerName="getsym_call_missed" HideFromIDE="true">_getsym_call_missed</name>
+      <returntype>anywheresoftware.b4a.objects.drawable.BitmapDrawable</returntype>
+    </method>
+    <method>
+      <name DesignerName="getsym_call_outgoing" HideFromIDE="true">_getsym_call_outgoing</name>
+      <returntype>anywheresoftware.b4a.objects.drawable.BitmapDrawable</returntype>
+    </method>
+    <method>
+      <name DesignerName="getsym_contact_card" HideFromIDE="true">_getsym_contact_card</name>
+      <returntype>anywheresoftware.b4a.objects.drawable.BitmapDrawable</returntype>
+    </method>
+    <method>
+      <name DesignerName="getsym_def_app_icon" HideFromIDE="true">_getsym_def_app_icon</name>
+      <returntype>anywheresoftware.b4a.objects.drawable.BitmapDrawable</returntype>
+    </method>
+    <method>
+      <name DesignerName="gettitle_bar" HideFromIDE="true">_gettitle_bar</name>
+      <returntype>anywheresoftware.b4a.objects.drawable.BitmapDrawable</returntype>
+    </method>
+    <method>
+      <name DesignerName="gettitle_bar_tall" HideFromIDE="true">_gettitle_bar_tall</name>
+      <returntype>anywheresoftware.b4a.objects.drawable.BitmapDrawable</returntype>
+    </method>
+    <method>
+      <name DesignerName="gettoast_frame" HideFromIDE="true">_gettoast_frame</name>
+      <returntype>anywheresoftware.b4a.objects.drawable.BitmapDrawable</returntype>
+    </method>
+    <method>
+      <name DesignerName="getzoom_plate" HideFromIDE="true">_getzoom_plate</name>
+      <returntype>anywheresoftware.b4a.objects.drawable.BitmapDrawable</returntype>
+    </method>
+    <method>
+      <name DesignerName="Initialize">_initialize</name>
+      <returntype>anywheresoftware.b4a.objects.collections.List</returntype>
+      <parameter>
+        <name>ba</name>
+        <type>anywheresoftware.b4a.BA</type>
+      </parameter>
+    </method>
+    <property>
+      <name DesignerName="alert_dark_frame">_alert_dark_frame</name>
+      <returntype>anywheresoftware.b4a.objects.drawable.BitmapDrawable</returntype>
+    </property>
+    <property>
+      <name DesignerName="alert_light_frame">_alert_light_frame</name>
+      <returntype>anywheresoftware.b4a.objects.drawable.BitmapDrawable</returntype>
+    </property>
+    <property>
+      <name DesignerName="arrow_down_float">_arrow_down_float</name>
+      <returntype>anywheresoftware.b4a.objects.drawable.BitmapDrawable</returntype>
+    </property>
+    <property>
+      <name DesignerName="arrow_up_float">_arrow_up_float</name>
+      <returntype>anywheresoftware.b4a.objects.drawable.BitmapDrawable</returntype>
+    </property>
+    <property>
+      <name DesignerName="bottom_bar">_bottom_bar</name>
+      <returntype>anywheresoftware.b4a.objects.drawable.BitmapDrawable</returntype>
+    </property>
+    <property>
+      <name DesignerName="btn_default">_btn_default</name>
+      <returntype>anywheresoftware.b4a.objects.drawable.BitmapDrawable</returntype>
+    </property>
+    <property>
+      <name DesignerName="btn_default_small">_btn_default_small</name>
+      <returntype>anywheresoftware.b4a.objects.drawable.BitmapDrawable</returntype>
+    </property>
+    <property>
+      <name DesignerName="btn_dialog">_btn_dialog</name>
+      <returntype>anywheresoftware.b4a.objects.drawable.BitmapDrawable</returntype>
+    </property>
+    <property>
+      <name DesignerName="btn_dropdown">_btn_dropdown</name>
+      <returntype>anywheresoftware.b4a.objects.drawable.BitmapDrawable</returntype>
+    </property>
+    <property>
+      <name DesignerName="btn_minus">_btn_minus</name>
+      <returntype>anywheresoftware.b4a.objects.drawable.BitmapDrawable</returntype>
+    </property>
+    <property>
+      <name DesignerName="btn_plus">_btn_plus</name>
+      <returntype>anywheresoftware.b4a.objects.drawable.BitmapDrawable</returntype>
+    </property>
+    <property>
+      <name DesignerName="btn_radio">_btn_radio</name>
+      <returntype>anywheresoftware.b4a.objects.drawable.BitmapDrawable</returntype>
+    </property>
+    <property>
+      <name DesignerName="btn_star">_btn_star</name>
+      <returntype>anywheresoftware.b4a.objects.drawable.BitmapDrawable</returntype>
+    </property>
+    <property>
+      <name DesignerName="btn_star_big_off">_btn_star_big_off</name>
+      <returntype>anywheresoftware.b4a.objects.drawable.BitmapDrawable</returntype>
+    </property>
+    <property>
+      <name DesignerName="btn_star_big_on">_btn_star_big_on</name>
+      <returntype>anywheresoftware.b4a.objects.drawable.BitmapDrawable</returntype>
+    </property>
+    <property>
+      <name DesignerName="button_onoff_indicator_off">_button_onoff_indicator_off</name>
+      <returntype>anywheresoftware.b4a.objects.drawable.BitmapDrawable</returntype>
+    </property>
+    <property>
+      <name DesignerName="button_onoff_indicator_on">_button_onoff_indicator_on</name>
+      <returntype>anywheresoftware.b4a.objects.drawable.BitmapDrawable</returntype>
+    </property>
+    <property>
+      <name DesignerName="checkbox_off_background">_checkbox_off_background</name>
+      <returntype>anywheresoftware.b4a.objects.drawable.BitmapDrawable</returntype>
+    </property>
+    <property>
+      <name DesignerName="checkbox_on_background">_checkbox_on_background</name>
+      <returntype>anywheresoftware.b4a.objects.drawable.BitmapDrawable</returntype>
+    </property>
+    <property>
+      <name DesignerName="dark_header">_dark_header</name>
+      <returntype>anywheresoftware.b4a.objects.drawable.BitmapDrawable</returntype>
+    </property>
+    <property>
+      <name DesignerName="dialog_frame">_dialog_frame</name>
+      <returntype>anywheresoftware.b4a.objects.drawable.BitmapDrawable</returntype>
+    </property>
+    <property>
+      <name DesignerName="dialog_holo_dark_frame">_dialog_holo_dark_frame</name>
+      <returntype>anywheresoftware.b4a.objects.drawable.BitmapDrawable</returntype>
+    </property>
+    <property>
+      <name DesignerName="dialog_holo_light_frame">_dialog_holo_light_frame</name>
+      <returntype>anywheresoftware.b4a.objects.drawable.BitmapDrawable</returntype>
+    </property>
+    <property>
+      <name DesignerName="divider_horizontal_bright">_divider_horizontal_bright</name>
+      <returntype>anywheresoftware.b4a.objects.drawable.BitmapDrawable</returntype>
+    </property>
+    <property>
+      <name DesignerName="divider_horizontal_dark">_divider_horizontal_dark</name>
+      <returntype>anywheresoftware.b4a.objects.drawable.BitmapDrawable</returntype>
+    </property>
+    <property>
+      <name DesignerName="divider_horizontal_dim_dark">_divider_horizontal_dim_dark</name>
+      <returntype>anywheresoftware.b4a.objects.drawable.BitmapDrawable</returntype>
+    </property>
+    <property>
+      <name DesignerName="divider_horizontal_textfield">_divider_horizontal_textfield</name>
+      <returntype>anywheresoftware.b4a.objects.drawable.BitmapDrawable</returntype>
+    </property>
+    <property>
+      <name DesignerName="edit_text">_edit_text</name>
+      <returntype>anywheresoftware.b4a.objects.drawable.BitmapDrawable</returntype>
+    </property>
+    <property>
+      <name DesignerName="editbox_background">_editbox_background</name>
+      <returntype>anywheresoftware.b4a.objects.drawable.BitmapDrawable</returntype>
+    </property>
+    <property>
+      <name DesignerName="editbox_background_normal">_editbox_background_normal</name>
+      <returntype>anywheresoftware.b4a.objects.drawable.BitmapDrawable</returntype>
+    </property>
+    <property>
+      <name DesignerName="editbox_dropdown_dark_frame">_editbox_dropdown_dark_frame</name>
+      <returntype>anywheresoftware.b4a.objects.drawable.BitmapDrawable</returntype>
+    </property>
+    <property>
+      <name DesignerName="editbox_dropdown_light_frame">_editbox_dropdown_light_frame</name>
+      <returntype>anywheresoftware.b4a.objects.drawable.BitmapDrawable</returntype>
+    </property>
+    <property>
+      <name DesignerName="gallery_thumb">_gallery_thumb</name>
+      <returntype>anywheresoftware.b4a.objects.drawable.BitmapDrawable</returntype>
+    </property>
+    <property>
+      <name DesignerName="ic_btn_speak_now">_ic_btn_speak_now</name>
+      <returntype>anywheresoftware.b4a.objects.drawable.BitmapDrawable</returntype>
+    </property>
+    <property>
+      <name DesignerName="ic_delete">_ic_delete</name>
+      <returntype>anywheresoftware.b4a.objects.drawable.BitmapDrawable</returntype>
+    </property>
+    <property>
+      <name DesignerName="ic_dialog_alert">_ic_dialog_alert</name>
+      <returntype>anywheresoftware.b4a.objects.drawable.BitmapDrawable</returntype>
+    </property>
+    <property>
+      <name DesignerName="ic_dialog_dialer">_ic_dialog_dialer</name>
+      <returntype>anywheresoftware.b4a.objects.drawable.BitmapDrawable</returntype>
+    </property>
+    <property>
+      <name DesignerName="ic_dialog_email">_ic_dialog_email</name>
+      <returntype>anywheresoftware.b4a.objects.drawable.BitmapDrawable</returntype>
+    </property>
+    <property>
+      <name DesignerName="ic_dialog_info">_ic_dialog_info</name>
+      <returntype>anywheresoftware.b4a.objects.drawable.BitmapDrawable</returntype>
+    </property>
+    <property>
+      <name DesignerName="ic_dialog_map">_ic_dialog_map</name>
+      <returntype>anywheresoftware.b4a.objects.drawable.BitmapDrawable</returntype>
+    </property>
+    <property>
+      <name DesignerName="ic_input_add">_ic_input_add</name>
+      <returntype>anywheresoftware.b4a.objects.drawable.BitmapDrawable</returntype>
+    </property>
+    <property>
+      <name DesignerName="ic_input_delete">_ic_input_delete</name>
+      <returntype>anywheresoftware.b4a.objects.drawable.BitmapDrawable</returntype>
+    </property>
+    <property>
+      <name DesignerName="ic_input_get">_ic_input_get</name>
+      <returntype>anywheresoftware.b4a.objects.drawable.BitmapDrawable</returntype>
+    </property>
+    <property>
+      <name DesignerName="ic_lock_idle_alarm">_ic_lock_idle_alarm</name>
+      <returntype>anywheresoftware.b4a.objects.drawable.BitmapDrawable</returntype>
+    </property>
+    <property>
+      <name DesignerName="ic_lock_idle_charging">_ic_lock_idle_charging</name>
+      <returntype>anywheresoftware.b4a.objects.drawable.BitmapDrawable</returntype>
+    </property>
+    <property>
+      <name DesignerName="ic_lock_idle_lock">_ic_lock_idle_lock</name>
+      <returntype>anywheresoftware.b4a.objects.drawable.BitmapDrawable</returntype>
+    </property>
+    <property>
+      <name DesignerName="ic_lock_idle_low_battery">_ic_lock_idle_low_battery</name>
+      <returntype>anywheresoftware.b4a.objects.drawable.BitmapDrawable</returntype>
+    </property>
+    <property>
+      <name DesignerName="ic_lock_lock">_ic_lock_lock</name>
+      <returntype>anywheresoftware.b4a.objects.drawable.BitmapDrawable</returntype>
+    </property>
+    <property>
+      <name DesignerName="ic_lock_power_off">_ic_lock_power_off</name>
+      <returntype>anywheresoftware.b4a.objects.drawable.BitmapDrawable</returntype>
+    </property>
+    <property>
+      <name DesignerName="ic_lock_silent_mode">_ic_lock_silent_mode</name>
+      <returntype>anywheresoftware.b4a.objects.drawable.BitmapDrawable</returntype>
+    </property>
+    <property>
+      <name DesignerName="ic_lock_silent_mode_off">_ic_lock_silent_mode_off</name>
+      <returntype>anywheresoftware.b4a.objects.drawable.BitmapDrawable</returntype>
+    </property>
+    <property>
+      <name DesignerName="ic_media_ff">_ic_media_ff</name>
+      <returntype>anywheresoftware.b4a.objects.drawable.BitmapDrawable</returntype>
+    </property>
+    <property>
+      <name DesignerName="ic_media_next">_ic_media_next</name>
+      <returntype>anywheresoftware.b4a.objects.drawable.BitmapDrawable</returntype>
+    </property>
+    <property>
+      <name DesignerName="ic_media_pause">_ic_media_pause</name>
+      <returntype>anywheresoftware.b4a.objects.drawable.BitmapDrawable</returntype>
+    </property>
+    <property>
+      <name DesignerName="ic_media_play">_ic_media_play</name>
+      <returntype>anywheresoftware.b4a.objects.drawable.BitmapDrawable</returntype>
+    </property>
+    <property>
+      <name DesignerName="ic_media_previous">_ic_media_previous</name>
+      <returntype>anywheresoftware.b4a.objects.drawable.BitmapDrawable</returntype>
+    </property>
+    <property>
+      <name DesignerName="ic_media_rew">_ic_media_rew</name>
+      <returntype>anywheresoftware.b4a.objects.drawable.BitmapDrawable</returntype>
+    </property>
+    <property>
+      <name DesignerName="ic_menu_add">_ic_menu_add</name>
+      <returntype>Object</returntype>
+    </property>
+    <property>
+      <name DesignerName="ic_menu_agenda">_ic_menu_agenda</name>
+      <returntype>anywheresoftware.b4a.objects.drawable.BitmapDrawable</returntype>
+    </property>
+    <property>
+      <name DesignerName="ic_menu_always_landscape_portrait">_ic_menu_always_landscape_portrait</name>
+      <returntype>anywheresoftware.b4a.objects.drawable.BitmapDrawable</returntype>
+    </property>
+    <property>
+      <name DesignerName="ic_menu_call">_ic_menu_call</name>
+      <returntype>anywheresoftware.b4a.objects.drawable.BitmapDrawable</returntype>
+    </property>
+    <property>
+      <name DesignerName="ic_menu_camera">_ic_menu_camera</name>
+      <returntype>anywheresoftware.b4a.objects.drawable.BitmapDrawable</returntype>
+    </property>
+    <property>
+      <name DesignerName="ic_menu_close_clear_cancel">_ic_menu_close_clear_cancel</name>
+      <returntype>anywheresoftware.b4a.objects.drawable.BitmapDrawable</returntype>
+    </property>
+    <property>
+      <name DesignerName="ic_menu_compass">_ic_menu_compass</name>
+      <returntype>anywheresoftware.b4a.objects.drawable.BitmapDrawable</returntype>
+    </property>
+    <property>
+      <name DesignerName="ic_menu_crop">_ic_menu_crop</name>
+      <returntype>anywheresoftware.b4a.objects.drawable.BitmapDrawable</returntype>
+    </property>
+    <property>
+      <name DesignerName="ic_menu_day">_ic_menu_day</name>
+      <returntype>anywheresoftware.b4a.objects.drawable.BitmapDrawable</returntype>
+    </property>
+    <property>
+      <name DesignerName="ic_menu_delete">_ic_menu_delete</name>
+      <returntype>anywheresoftware.b4a.objects.drawable.BitmapDrawable</returntype>
+    </property>
+    <property>
+      <name DesignerName="ic_menu_directions">_ic_menu_directions</name>
+      <returntype>anywheresoftware.b4a.objects.drawable.BitmapDrawable</returntype>
+    </property>
+    <property>
+      <name DesignerName="ic_menu_edit">_ic_menu_edit</name>
+      <returntype>anywheresoftware.b4a.objects.drawable.BitmapDrawable</returntype>
+    </property>
+    <property>
+      <name DesignerName="ic_menu_gallery">_ic_menu_gallery</name>
+      <returntype>anywheresoftware.b4a.objects.drawable.BitmapDrawable</returntype>
+    </property>
+    <property>
+      <name DesignerName="ic_menu_help">_ic_menu_help</name>
+      <returntype>anywheresoftware.b4a.objects.drawable.BitmapDrawable</returntype>
+    </property>
+    <property>
+      <name DesignerName="ic_menu_info_details">_ic_menu_info_details</name>
+      <returntype>anywheresoftware.b4a.objects.drawable.BitmapDrawable</returntype>
+    </property>
+    <property>
+      <name DesignerName="ic_menu_manage">_ic_menu_manage</name>
+      <returntype>anywheresoftware.b4a.objects.drawable.BitmapDrawable</returntype>
+    </property>
+    <property>
+      <name DesignerName="ic_menu_mapmode">_ic_menu_mapmode</name>
+      <returntype>anywheresoftware.b4a.objects.drawable.BitmapDrawable</returntype>
+    </property>
+    <property>
+      <name DesignerName="ic_menu_month">_ic_menu_month</name>
+      <returntype>anywheresoftware.b4a.objects.drawable.BitmapDrawable</returntype>
+    </property>
+    <property>
+      <name DesignerName="ic_menu_more">_ic_menu_more</name>
+      <returntype>anywheresoftware.b4a.objects.drawable.BitmapDrawable</returntype>
+    </property>
+    <property>
+      <name DesignerName="ic_menu_my_calendar">_ic_menu_my_calendar</name>
+      <returntype>anywheresoftware.b4a.objects.drawable.BitmapDrawable</returntype>
+    </property>
+    <property>
+      <name DesignerName="ic_menu_mylocation">_ic_menu_mylocation</name>
+      <returntype>anywheresoftware.b4a.objects.drawable.BitmapDrawable</returntype>
+    </property>
+    <property>
+      <name DesignerName="ic_menu_myplaces">_ic_menu_myplaces</name>
+      <returntype>anywheresoftware.b4a.objects.drawable.BitmapDrawable</returntype>
+    </property>
+    <property>
+      <name DesignerName="ic_menu_preferences">_ic_menu_preferences</name>
+      <returntype>anywheresoftware.b4a.objects.drawable.BitmapDrawable</returntype>
+    </property>
+    <property>
+      <name DesignerName="ic_menu_recent_history">_ic_menu_recent_history</name>
+      <returntype>anywheresoftware.b4a.objects.drawable.BitmapDrawable</returntype>
+    </property>
+    <property>
+      <name DesignerName="ic_menu_report_image">_ic_menu_report_image</name>
+      <returntype>anywheresoftware.b4a.objects.drawable.BitmapDrawable</returntype>
+    </property>
+    <property>
+      <name DesignerName="ic_menu_revert">_ic_menu_revert</name>
+      <returntype>anywheresoftware.b4a.objects.drawable.BitmapDrawable</returntype>
+    </property>
+    <property>
+      <name DesignerName="ic_menu_rotate">_ic_menu_rotate</name>
+      <returntype>anywheresoftware.b4a.objects.drawable.BitmapDrawable</returntype>
+    </property>
+    <property>
+      <name DesignerName="ic_menu_save">_ic_menu_save</name>
+      <returntype>anywheresoftware.b4a.objects.drawable.BitmapDrawable</returntype>
+    </property>
+    <property>
+      <name DesignerName="ic_menu_search">_ic_menu_search</name>
+      <returntype>anywheresoftware.b4a.objects.drawable.BitmapDrawable</returntype>
+    </property>
+    <property>
+      <name DesignerName="ic_menu_send">_ic_menu_send</name>
+      <returntype>anywheresoftware.b4a.objects.drawable.BitmapDrawable</returntype>
+    </property>
+    <property>
+      <name DesignerName="ic_menu_set_as">_ic_menu_set_as</name>
+      <returntype>anywheresoftware.b4a.objects.drawable.BitmapDrawable</returntype>
+    </property>
+    <property>
+      <name DesignerName="ic_menu_share">_ic_menu_share</name>
+      <returntype>anywheresoftware.b4a.objects.drawable.BitmapDrawable</returntype>
+    </property>
+    <property>
+      <name DesignerName="ic_menu_slideshow">_ic_menu_slideshow</name>
+      <returntype>anywheresoftware.b4a.objects.drawable.BitmapDrawable</returntype>
+    </property>
+    <property>
+      <name DesignerName="ic_menu_sort_alphabetically">_ic_menu_sort_alphabetically</name>
+      <returntype>anywheresoftware.b4a.objects.drawable.BitmapDrawable</returntype>
+    </property>
+    <property>
+      <name DesignerName="ic_menu_sort_by_size">_ic_menu_sort_by_size</name>
+      <returntype>anywheresoftware.b4a.objects.drawable.BitmapDrawable</returntype>
+    </property>
+    <property>
+      <name DesignerName="ic_menu_today">_ic_menu_today</name>
+      <returntype>anywheresoftware.b4a.objects.drawable.BitmapDrawable</returntype>
+    </property>
+    <property>
+      <name DesignerName="ic_menu_upload">_ic_menu_upload</name>
+      <returntype>anywheresoftware.b4a.objects.drawable.BitmapDrawable</returntype>
+    </property>
+    <property>
+      <name DesignerName="ic_menu_upload_you_tube">_ic_menu_upload_you_tube</name>
+      <returntype>anywheresoftware.b4a.objects.drawable.BitmapDrawable</returntype>
+    </property>
+    <property>
+      <name DesignerName="ic_menu_view">_ic_menu_view</name>
+      <returntype>anywheresoftware.b4a.objects.drawable.BitmapDrawable</returntype>
+    </property>
+    <property>
+      <name DesignerName="ic_menu_week">_ic_menu_week</name>
+      <returntype>anywheresoftware.b4a.objects.drawable.BitmapDrawable</returntype>
+    </property>
+    <property>
+      <name DesignerName="ic_menu_zoom">_ic_menu_zoom</name>
+      <returntype>anywheresoftware.b4a.objects.drawable.BitmapDrawable</returntype>
+    </property>
+    <property>
+      <name DesignerName="ic_notification_clear_all">_ic_notification_clear_all</name>
+      <returntype>anywheresoftware.b4a.objects.drawable.BitmapDrawable</returntype>
+    </property>
+    <property>
+      <name DesignerName="ic_notification_overlay">_ic_notification_overlay</name>
+      <returntype>anywheresoftware.b4a.objects.drawable.BitmapDrawable</returntype>
+    </property>
+    <property>
+      <name DesignerName="ic_partial_secure">_ic_partial_secure</name>
+      <returntype>anywheresoftware.b4a.objects.drawable.BitmapDrawable</returntype>
+    </property>
+    <property>
+      <name DesignerName="ic_popup_disk_full">_ic_popup_disk_full</name>
+      <returntype>anywheresoftware.b4a.objects.drawable.BitmapDrawable</returntype>
+    </property>
+    <property>
+      <name DesignerName="ic_popup_reminder">_ic_popup_reminder</name>
+      <returntype>anywheresoftware.b4a.objects.drawable.BitmapDrawable</returntype>
+    </property>
+    <property>
+      <name DesignerName="ic_popup_sync">_ic_popup_sync</name>
+      <returntype>anywheresoftware.b4a.objects.drawable.BitmapDrawable</returntype>
+    </property>
+    <property>
+      <name DesignerName="ic_search_category_default">_ic_search_category_default</name>
+      <returntype>anywheresoftware.b4a.objects.drawable.BitmapDrawable</returntype>
+    </property>
+    <property>
+      <name DesignerName="ic_secure">_ic_secure</name>
+      <returntype>anywheresoftware.b4a.objects.drawable.BitmapDrawable</returntype>
+    </property>
+    <property>
+      <name DesignerName="list_selector_background">_list_selector_background</name>
+      <returntype>anywheresoftware.b4a.objects.drawable.BitmapDrawable</returntype>
+    </property>
+    <property>
+      <name DesignerName="menu_frame">_menu_frame</name>
+      <returntype>anywheresoftware.b4a.objects.drawable.BitmapDrawable</returntype>
+    </property>
+    <property>
+      <name DesignerName="menu_full_frame">_menu_full_frame</name>
+      <returntype>anywheresoftware.b4a.objects.drawable.BitmapDrawable</returntype>
+    </property>
+    <property>
+      <name DesignerName="menuitem_background">_menuitem_background</name>
+      <returntype>anywheresoftware.b4a.objects.drawable.BitmapDrawable</returntype>
+    </property>
+    <property>
+      <name DesignerName="picture_frame">_picture_frame</name>
+      <returntype>anywheresoftware.b4a.objects.drawable.BitmapDrawable</returntype>
+    </property>
+    <property>
+      <name DesignerName="presence_audio_away">_presence_audio_away</name>
+      <returntype>anywheresoftware.b4a.objects.drawable.BitmapDrawable</returntype>
+    </property>
+    <property>
+      <name DesignerName="presence_audio_busy">_presence_audio_busy</name>
+      <returntype>anywheresoftware.b4a.objects.drawable.BitmapDrawable</returntype>
+    </property>
+    <property>
+      <name DesignerName="presence_audio_online">_presence_audio_online</name>
+      <returntype>anywheresoftware.b4a.objects.drawable.BitmapDrawable</returntype>
+    </property>
+    <property>
+      <name DesignerName="presence_away">_presence_away</name>
+      <returntype>anywheresoftware.b4a.objects.drawable.BitmapDrawable</returntype>
+    </property>
+    <property>
+      <name DesignerName="presence_busy">_presence_busy</name>
+      <returntype>anywheresoftware.b4a.objects.drawable.BitmapDrawable</returntype>
+    </property>
+    <property>
+      <name DesignerName="presence_invisible">_presence_invisible</name>
+      <returntype>anywheresoftware.b4a.objects.drawable.BitmapDrawable</returntype>
+    </property>
+    <property>
+      <name DesignerName="presence_offline">_presence_offline</name>
+      <returntype>anywheresoftware.b4a.objects.drawable.BitmapDrawable</returntype>
+    </property>
+    <property>
+      <name DesignerName="presence_online">_presence_online</name>
+      <returntype>anywheresoftware.b4a.objects.drawable.BitmapDrawable</returntype>
+    </property>
+    <property>
+      <name DesignerName="presence_video_away">_presence_video_away</name>
+      <returntype>anywheresoftware.b4a.objects.drawable.BitmapDrawable</returntype>
+    </property>
+    <property>
+      <name DesignerName="presence_video_busy">_presence_video_busy</name>
+      <returntype>anywheresoftware.b4a.objects.drawable.BitmapDrawable</returntype>
+    </property>
+    <property>
+      <name DesignerName="presence_video_online">_presence_video_online</name>
+      <returntype>anywheresoftware.b4a.objects.drawable.BitmapDrawable</returntype>
+    </property>
+    <property>
+      <name DesignerName="progress_horizontal">_progress_horizontal</name>
+      <returntype>anywheresoftware.b4a.objects.drawable.BitmapDrawable</returntype>
+    </property>
+    <property>
+      <name DesignerName="progress_indeterminate_horizontal">_progress_indeterminate_horizontal</name>
+      <returntype>anywheresoftware.b4a.objects.drawable.BitmapDrawable</returntype>
+    </property>
+    <property>
+      <name DesignerName="radiobutton_off_background">_radiobutton_off_background</name>
+      <returntype>anywheresoftware.b4a.objects.drawable.BitmapDrawable</returntype>
+    </property>
+    <property>
+      <name DesignerName="radiobutton_on_background">_radiobutton_on_background</name>
+      <returntype>anywheresoftware.b4a.objects.drawable.BitmapDrawable</returntype>
+    </property>
+    <property>
+      <name DesignerName="screen_background_dark">_screen_background_dark</name>
+      <returntype>anywheresoftware.b4a.objects.drawable.BitmapDrawable</returntype>
+    </property>
+    <property>
+      <name DesignerName="screen_background_dark_transparent">_screen_background_dark_transparent</name>
+      <returntype>anywheresoftware.b4a.objects.drawable.BitmapDrawable</returntype>
+    </property>
+    <property>
+      <name DesignerName="screen_background_light">_screen_background_light</name>
+      <returntype>anywheresoftware.b4a.objects.drawable.BitmapDrawable</returntype>
+    </property>
+    <property>
+      <name DesignerName="screen_background_light_transparent">_screen_background_light_transparent</name>
+      <returntype>anywheresoftware.b4a.objects.drawable.BitmapDrawable</returntype>
+    </property>
+    <property>
+      <name DesignerName="spinner_background">_spinner_background</name>
+      <returntype>anywheresoftware.b4a.objects.drawable.BitmapDrawable</returntype>
+    </property>
+    <property>
+      <name DesignerName="spinner_dropdown_background">_spinner_dropdown_background</name>
+      <returntype>anywheresoftware.b4a.objects.drawable.BitmapDrawable</returntype>
+    </property>
+    <property>
+      <name DesignerName="star_big_off">_star_big_off</name>
+      <returntype>anywheresoftware.b4a.objects.drawable.BitmapDrawable</returntype>
+    </property>
+    <property>
+      <name DesignerName="star_big_on">_star_big_on</name>
+      <returntype>anywheresoftware.b4a.objects.drawable.BitmapDrawable</returntype>
+    </property>
+    <property>
+      <name DesignerName="star_off">_star_off</name>
+      <returntype>anywheresoftware.b4a.objects.drawable.BitmapDrawable</returntype>
+    </property>
+    <property>
+      <name DesignerName="star_on">_star_on</name>
+      <returntype>anywheresoftware.b4a.objects.drawable.BitmapDrawable</returntype>
+    </property>
+    <property>
+      <name DesignerName="stat_notify_call_mute">_stat_notify_call_mute</name>
+      <returntype>anywheresoftware.b4a.objects.drawable.BitmapDrawable</returntype>
+    </property>
+    <property>
+      <name DesignerName="stat_notify_chat">_stat_notify_chat</name>
+      <returntype>anywheresoftware.b4a.objects.drawable.BitmapDrawable</returntype>
+    </property>
+    <property>
+      <name DesignerName="stat_notify_error">_stat_notify_error</name>
+      <returntype>anywheresoftware.b4a.objects.drawable.BitmapDrawable</returntype>
+    </property>
+    <property>
+      <name DesignerName="stat_notify_missed_call">_stat_notify_missed_call</name>
+      <returntype>anywheresoftware.b4a.objects.drawable.BitmapDrawable</returntype>
+    </property>
+    <property>
+      <name DesignerName="stat_notify_more">_stat_notify_more</name>
+      <returntype>anywheresoftware.b4a.objects.drawable.BitmapDrawable</returntype>
+    </property>
+    <property>
+      <name DesignerName="stat_notify_sdcard">_stat_notify_sdcard</name>
+      <returntype>anywheresoftware.b4a.objects.drawable.BitmapDrawable</returntype>
+    </property>
+    <property>
+      <name DesignerName="stat_notify_sdcard_prepare">_stat_notify_sdcard_prepare</name>
+      <returntype>anywheresoftware.b4a.objects.drawable.BitmapDrawable</returntype>
+    </property>
+    <property>
+      <name DesignerName="stat_notify_sdcard_usb">_stat_notify_sdcard_usb</name>
+      <returntype>anywheresoftware.b4a.objects.drawable.BitmapDrawable</returntype>
+    </property>
+    <property>
+      <name DesignerName="stat_notify_sync">_stat_notify_sync</name>
+      <returntype>anywheresoftware.b4a.objects.drawable.BitmapDrawable</returntype>
+    </property>
+    <property>
+      <name DesignerName="stat_notify_sync_noanim">_stat_notify_sync_noanim</name>
+      <returntype>anywheresoftware.b4a.objects.drawable.BitmapDrawable</returntype>
+    </property>
+    <property>
+      <name DesignerName="stat_notify_voicemail">_stat_notify_voicemail</name>
+      <returntype>anywheresoftware.b4a.objects.drawable.BitmapDrawable</returntype>
+    </property>
+    <property>
+      <name DesignerName="stat_sys_data_bluetooth">_stat_sys_data_bluetooth</name>
+      <returntype>anywheresoftware.b4a.objects.drawable.BitmapDrawable</returntype>
+    </property>
+    <property>
+      <name DesignerName="stat_sys_download">_stat_sys_download</name>
+      <returntype>anywheresoftware.b4a.objects.drawable.BitmapDrawable</returntype>
+    </property>
+    <property>
+      <name DesignerName="stat_sys_download_done">_stat_sys_download_done</name>
+      <returntype>anywheresoftware.b4a.objects.drawable.BitmapDrawable</returntype>
+    </property>
+    <property>
+      <name DesignerName="stat_sys_headset">_stat_sys_headset</name>
+      <returntype>anywheresoftware.b4a.objects.drawable.BitmapDrawable</returntype>
+    </property>
+    <property>
+      <name DesignerName="stat_sys_phone_call">_stat_sys_phone_call</name>
+      <returntype>anywheresoftware.b4a.objects.drawable.BitmapDrawable</returntype>
+    </property>
+    <property>
+      <name DesignerName="stat_sys_phone_call_forward">_stat_sys_phone_call_forward</name>
+      <returntype>anywheresoftware.b4a.objects.drawable.BitmapDrawable</returntype>
+    </property>
+    <property>
+      <name DesignerName="stat_sys_phone_call_on_hold">_stat_sys_phone_call_on_hold</name>
+      <returntype>anywheresoftware.b4a.objects.drawable.BitmapDrawable</returntype>
+    </property>
+    <property>
+      <name DesignerName="stat_sys_speakerphone">_stat_sys_speakerphone</name>
+      <returntype>anywheresoftware.b4a.objects.drawable.BitmapDrawable</returntype>
+    </property>
+    <property>
+      <name DesignerName="stat_sys_upload">_stat_sys_upload</name>
+      <returntype>anywheresoftware.b4a.objects.drawable.BitmapDrawable</returntype>
+    </property>
+    <property>
+      <name DesignerName="stat_sys_upload_done">_stat_sys_upload_done</name>
+      <returntype>anywheresoftware.b4a.objects.drawable.BitmapDrawable</returntype>
+    </property>
+    <property>
+      <name DesignerName="stat_sys_vp_phone_call">_stat_sys_vp_phone_call</name>
+      <returntype>anywheresoftware.b4a.objects.drawable.BitmapDrawable</returntype>
+    </property>
+    <property>
+      <name DesignerName="stat_sys_vp_phone_call_on_hold">_stat_sys_vp_phone_call_on_hold</name>
+      <returntype>anywheresoftware.b4a.objects.drawable.BitmapDrawable</returntype>
+    </property>
+    <property>
+      <name DesignerName="stat_sys_warning">_stat_sys_warning</name>
+      <returntype>anywheresoftware.b4a.objects.drawable.BitmapDrawable</returntype>
+    </property>
+    <property>
+      <name DesignerName="status_bar_item_app_background">_status_bar_item_app_background</name>
+      <returntype>anywheresoftware.b4a.objects.drawable.BitmapDrawable</returntype>
+    </property>
+    <property>
+      <name DesignerName="status_bar_item_background">_status_bar_item_background</name>
+      <returntype>anywheresoftware.b4a.objects.drawable.BitmapDrawable</returntype>
+    </property>
+    <property>
+      <name DesignerName="sym_action_call">_sym_action_call</name>
+      <returntype>anywheresoftware.b4a.objects.drawable.BitmapDrawable</returntype>
+    </property>
+    <property>
+      <name DesignerName="sym_action_chat">_sym_action_chat</name>
+      <returntype>anywheresoftware.b4a.objects.drawable.BitmapDrawable</returntype>
+    </property>
+    <property>
+      <name DesignerName="sym_action_email">_sym_action_email</name>
+      <returntype>anywheresoftware.b4a.objects.drawable.BitmapDrawable</returntype>
+    </property>
+    <property>
+      <name DesignerName="sym_call_incoming">_sym_call_incoming</name>
+      <returntype>anywheresoftware.b4a.objects.drawable.BitmapDrawable</returntype>
+    </property>
+    <property>
+      <name DesignerName="sym_call_missed">_sym_call_missed</name>
+      <returntype>anywheresoftware.b4a.objects.drawable.BitmapDrawable</returntype>
+    </property>
+    <property>
+      <name DesignerName="sym_call_outgoing">_sym_call_outgoing</name>
+      <returntype>anywheresoftware.b4a.objects.drawable.BitmapDrawable</returntype>
+    </property>
+    <property>
+      <name DesignerName="sym_contact_card">_sym_contact_card</name>
+      <returntype>anywheresoftware.b4a.objects.drawable.BitmapDrawable</returntype>
+    </property>
+    <property>
+      <name DesignerName="sym_def_app_icon">_sym_def_app_icon</name>
+      <returntype>anywheresoftware.b4a.objects.drawable.BitmapDrawable</returntype>
+    </property>
+    <property>
+      <name DesignerName="title_bar">_title_bar</name>
+      <returntype>anywheresoftware.b4a.objects.drawable.BitmapDrawable</returntype>
+    </property>
+    <property>
+      <name DesignerName="title_bar_tall">_title_bar_tall</name>
+      <returntype>anywheresoftware.b4a.objects.drawable.BitmapDrawable</returntype>
+    </property>
+    <property>
+      <name DesignerName="toast_frame">_toast_frame</name>
+      <returntype>anywheresoftware.b4a.objects.drawable.BitmapDrawable</returntype>
+    </property>
+    <property>
+      <name DesignerName="zoom_plate">_zoom_plate</name>
+      <returntype>anywheresoftware.b4a.objects.drawable.BitmapDrawable</returntype>
+    </property>
+  </class>
+  <version>1</version>
+</root>

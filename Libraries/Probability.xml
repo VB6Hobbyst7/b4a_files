@@ -1,0 +1,642 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root>
+    <doclet-version-NOT-library-version>1.02</doclet-version-NOT-library-version>
+    <class>
+        <name>derez.libs.Probability</name>
+        <shortname>Probability</shortname>
+        <comment>Note:
+ The library does not check for all possible errors in the 
+ input parameters of the methods.
+ For the cases that a check is done and the parameter does not fit –
+ the method returns the value -999.
+ In several cases the algorithm for the inverse is trying 
+ the forward method and the result may include a residual error. 
+ If accuracy is important re-check the result by implementing 
+ the forward method.
+ Some of the algorithms are taken from this site : 
+ &lt;link&gt;algorithms|http://statpages.org/pdfs.html&lt;/link&gt;</comment>
+        <owner>process</owner>
+        <method>
+            <name>Beta</name>
+            <comment>May be used for integers or integers + 0.5 .
+ See here &lt;link&gt;Beta_function|http://en.wikipedia.org/wiki/Beta_function&lt;/link&gt;</comment>
+            <returntype>double</returntype>
+            <parameter>
+                <name>m</name>
+                <type>double</type>
+            </parameter>
+            <parameter>
+                <name>n</name>
+                <type>double</type>
+            </parameter>
+        </method>
+        <method>
+            <name>Exponential</name>
+            <comment>The Exponential distributions (a.k.a. negative exponential distributions) 
+ are a class of continuous probability distributions. 
+ They describe the times between events in a Poisson process, 
+ i.e. a process in which events occur continuously and independently 
+ at a constant average rate.
+ For further information look here: 
+ &lt;link&gt;Exponential distribution|http://en.wikipedia.org/wiki/Exponential_distribution&lt;/link&gt;
+ The method returns an array of two Double variables, the first is 
+ the Exponential probability for the number x with the parameter 
+ Lambda and the second is the Density function.</comment>
+            <returntype>double[]</returntype>
+            <parameter>
+                <name>x</name>
+                <type>double</type>
+            </parameter>
+            <parameter>
+                <name>Lambda</name>
+                <type>double</type>
+            </parameter>
+        </method>
+        <method>
+            <name>FisherF</name>
+            <comment>The F-distribution is a continuous probability distribution. 
+ It is also known as Snedecor's F distribution or the Fisher-Snedecor distribution 
+ (after R.A. Fisher and George W. Snedecor). 
+ The F-distribution arises frequently as the null distribution 
+ of a test statistic, especially in likelihood-ratio tests, 
+ perhaps most notably in the analysis of variance.
+ It provides the probability for the ratio of two Chi-squared variables, 
+ each with its DOF.
+ The probability is for variables larger than the defined X 
+ (mode "R"). 
+ To have the left part use 1-Pf in the application.
+ For further information see  
+ &lt;link&gt;F distribution|http://en.wikipedia.org/wiki/F-distribution&lt;/link&gt;
+ Returns an array of two Double variables, 
+ the first is the Fisher F probability for n1 and n2 Degrees Of Freedom  
+ for the number f and the second is the Density function.</comment>
+            <returntype>double[]</returntype>
+            <parameter>
+                <name>f</name>
+                <type>double</type>
+            </parameter>
+            <parameter>
+                <name>n1</name>
+                <type>int</type>
+            </parameter>
+            <parameter>
+                <name>n2</name>
+                <type>int</type>
+            </parameter>
+        </method>
+        <method>
+            <name>Rayleigh</name>
+            <comment>The Rayleigh distribution  is a continuous probability distribution. 
+ As an example of how it arises, the wind speed will have a Rayleigh distribution 
+ if the components of the two-dimensional wind velocity vector are uncorrelated 
+ and normally distributed with equal variance. 
+ The distribution is named after Lord Rayleigh.
+ The distribution is a family of distributions, different by the Scale factor.
+ For further information see 
+  &lt;link&gt;Rayleigh_distribution|http://en.wikipedia.org/wiki/Rayleigh_distribution&lt;/link&gt;
+ The method returns an array of two Double variables, 
+ the first is the Rayleigh probability for the number r and 
+ the second is the Density F(r).</comment>
+            <returntype>double[]</returntype>
+            <parameter>
+                <name>r</name>
+                <type>double</type>
+            </parameter>
+            <parameter>
+                <name>Scale</name>
+                <type>double</type>
+            </parameter>
+        </method>
+        <method>
+            <name>InvErlang</name>
+            <comment>Returns the number for which the Erlang probability is Px.</comment>
+            <returntype>double</returntype>
+            <parameter>
+                <name>Px</name>
+                <type>double</type>
+            </parameter>
+            <parameter>
+                <name>k</name>
+                <type>int</type>
+            </parameter>
+            <parameter>
+                <name>Lambda</name>
+                <type>double</type>
+            </parameter>
+        </method>
+        <method>
+            <name>RNGNormal1</name>
+            <comment>Returns a random number based on Normal Distribution.</comment>
+            <returntype>double</returntype>
+            <parameter>
+                <name>Mean</name>
+                <type>double</type>
+            </parameter>
+            <parameter>
+                <name>Variance</name>
+                <type>double</type>
+            </parameter>
+        </method>
+        <method>
+            <name>Factorial</name>
+            <comment></comment>
+            <returntype>double</returntype>
+            <parameter>
+                <name>k</name>
+                <type>int</type>
+            </parameter>
+        </method>
+        <method>
+            <name>InvExponential</name>
+            <comment>Returns the variable x for which the Exponential probability is Px.</comment>
+            <returntype>double</returntype>
+            <parameter>
+                <name>Px</name>
+                <type>double</type>
+            </parameter>
+            <parameter>
+                <name>Lambda</name>
+                <type>double</type>
+            </parameter>
+        </method>
+        <method>
+            <name>Geometric</name>
+            <comment>The Geometric distribution is either of two discrete probability 
+ distributions:
+ 1. The probability distribution of the number X of Bernoulli trials 
+ needed to get one success, supported on the set { 1, 2, 3, ...}
+ 2. The probability distribution of the number Y = X − 1 of 
+ failures before the first success, supported on the set { 0, 1, 2, 3, ... }
+ Which of these one calls "the" geometric distribution is a matter of convention 
+ and convenience.
+ These two different geometric distributions should not be confused with each other.
+ Often, the name shifted geometric distribution is adopted for the first one 
+ (distribution of the number X); however, to avoid ambiguity, 
+ it is considered wise to indicate which is intended, by mentioning the range explicitly.
+ The library use the parameter Shifted as explained above, 
+ with values 0 for not shifted (var. Y) and 1 for shifted, var X .
+ For further information see 
+ &lt;link&gt;Geometric_distribution|http://en.wikipedia.org/wiki/Geometric_distribution&lt;/link&gt;
+ The method returns an array of two Double variables, the first 
+ is the Geometric probability for k trials with probability of p 
+ for each trial, and the second the Geometric Mass function for the number k.</comment>
+            <returntype>double[]</returntype>
+            <parameter>
+                <name>k</name>
+                <type>int</type>
+            </parameter>
+            <parameter>
+                <name>p</name>
+                <type>double</type>
+            </parameter>
+            <parameter>
+                <name>Shifted</name>
+                <type>int</type>
+            </parameter>
+        </method>
+        <method>
+            <name>RNGStdNormal2</name>
+            <comment>Returns an array of two random numbers based on Standard Normal Distribution.</comment>
+            <returntype>double[]</returntype>
+        </method>
+        <method>
+            <name>RNGStdNormal1</name>
+            <comment>Returns a random number based on Standard Normal Distribution.</comment>
+            <returntype>double</returntype>
+        </method>
+        <method>
+            <name>Gamma</name>
+            <comment>May be used for integers or integers + 0.5 .
+ See here &lt;link&gt;Gamma_function|http://en.wikipedia.org/wiki/Gamma_function&lt;/link&gt;</comment>
+            <returntype>double</returntype>
+            <parameter>
+                <name>k</name>
+                <type>double</type>
+            </parameter>
+        </method>
+        <method>
+            <name>StudentT</name>
+            <comment>Student's t-distribution (or simply the t-distribution) 
+ is a continuous probability distribution that arises in 
+ the problem of estimating the mean of a normally distributed 
+ population when the sample size is small. 
+ It is the basis of the popular Student's t-tests for the 
+ statistical significance of the difference between two sample 
+ means, and for confidence intervals for the difference between 
+ two population means. 
+ For further information see 
+ &lt;link&gt;t distribution|http://en.wikipedia.org/wiki/Student%27s_t-distribution&lt;/link&gt;
+ The library enable four types of results for the distribution, named Modes:
+ 1. The probability that the random variable is less than z, 
+ defined as Left, "L".
+ 2. The probability that the random variable is larger than z, 
+ defined as Right, "R".
+ 3. The probability that the random variable is between –z and z, 
+ defined as Center, "C".
+ 4. The probability that the random variable is less than –z or 
+ Larger than z, defined as Tails, "T".
+ The method returns an array of two Number variables, 
+ the first is the Student t  probability for n  Degrees Of  Freedom  
+ for the number x with the selected Mode, 
+ and the second is the density function for x.</comment>
+            <returntype>double[]</returntype>
+            <parameter>
+                <name>x</name>
+                <type>double</type>
+            </parameter>
+            <parameter>
+                <name>n</name>
+                <type>int</type>
+            </parameter>
+            <parameter>
+                <name>Mode</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+        <method>
+            <name>Normal</name>
+            <comment>The normal distribution, or Gaussian distribution, 
+ is an absolutely continuous probability distribution. 
+ The graph of the associated probability density function is  
+ "bell"-shaped, with peak at the mean, and is known as the 
+ Gaussian function or bell curve.
+ The parameters μ and σ² are the mean and the variance. 
+ The distribution with μ = 0 and σ² = 1 is called standard normal.
+ For further information see 
+ &lt;link&gt; Normal distribution|http://en.wikipedia.org/wiki/Normal_distribution&lt;/link&gt;
+ The library enables four types of results for the distribution, 
+ named Modes:
+ 1. The probability that the random variable is less than z, 
+ defined as Left, "L".
+ 2. The probability that the random variable is larger than z, 
+ defined as Right, "R".
+ 3. The probability that the random variable is between –z and z, 
+ defined as Center, "C".
+ 4. The probability that the random variable is less than –z 
+ or Larger than z, defined as Tails, "L".
+ The method returns an array of two Double variables, 
+ the first is the Normal Probability P(z) and the second is the Density F(z).</comment>
+            <returntype>double[]</returntype>
+            <parameter>
+                <name>Z</name>
+                <type>double</type>
+            </parameter>
+            <parameter>
+                <name>Mean</name>
+                <type>double</type>
+            </parameter>
+            <parameter>
+                <name>Variance</name>
+                <type>double</type>
+            </parameter>
+            <parameter>
+                <name>Mode</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+        <method>
+            <name>ChiSq</name>
+            <comment>The Chi-Square distribution (also Chi-squared or χ²-distribution)
+ with k degrees of freedom is the distribution of a sum of the squares
+ of k independent standard normal random variables. 
+ It is one of the most widely used probability distributions
+ in inferential statistics, e.g. in hypothesis testing, 
+ or in construction of confidence intervals.
+ The best-known situations in which the Chi-square distribution 
+ is used are the common Chi-square tests for goodness of fit 
+ of an observed distribution to a theoretical one, and of the 
+ independence of two criteria of classification of qualitative data. 
+ Many other statistical tests also lead to a use of this distribution,
+ like Friedman's analysis of variance by ranks.
+ For further information see  
+ &lt;link&gt;Chi square distribution|http://en.wikipedia.org/wiki/Chi-square_distribution&lt;/link&gt;
+ &lt;p&gt;
+ This method returns an array of two Double variables, 
+ the first is the probability that the sum of n squares of 
+ normal distributed variables (n Degrees Of Freedom) will be less than
+ x, and the second is the density function for x.</comment>
+            <returntype>double[]</returntype>
+            <parameter>
+                <name>x</name>
+                <type>double</type>
+            </parameter>
+            <parameter>
+                <name>n</name>
+                <type>int</type>
+            </parameter>
+        </method>
+        <method>
+            <name>Erlang</name>
+            <comment>The Erlang distribution is a continuous probability distribution 
+ with wide applicability primarily due to its relation to the exponential and Gamma distributions. 
+ The Erlang distribution was developed by A. K. Erlang to examine 
+ the number of telephone calls which might be made at the same time 
+ to the operators of the switching stations. 
+ This work on telephone traffic engineering has been expanded to consider 
+ waiting times in queueing systems in general. 
+ The distribution is now used in the fields of stochastic processes 
+ and of biomathematics.
+ The distribution is a continuous distribution, which has a positive value 
+ for all real numbers greater than zero, and is given by two parameters: 
+ the shape k, which is a non-negative integer, 
+ and the rate λ, which is a non-negative real number. 
+ The distribution is sometimes defined using the inverse of the rate parameter, 
+ the scale μ.
+ For further information see 
+ &lt;link&gt;Erlang distribution|http://en.wikipedia.org/wiki/Erlang distribution&lt;/link&gt;
+ The method returns an array of two Double variables, 
+ the first is the Erlang probability for the number x 
+ and the second is the Density F(x).</comment>
+            <returntype>double[]</returntype>
+            <parameter>
+                <name>x</name>
+                <type>double</type>
+            </parameter>
+            <parameter>
+                <name>k</name>
+                <type>int</type>
+            </parameter>
+            <parameter>
+                <name>Lambda</name>
+                <type>double</type>
+            </parameter>
+        </method>
+        <method>
+            <name>InvStdNormal</name>
+            <comment>Returns a Double variable Z for which the Standard Normal Probability is P(z).</comment>
+            <returntype>double</returntype>
+            <parameter>
+                <name>Pn</name>
+                <type>double</type>
+            </parameter>
+            <parameter>
+                <name>Mode</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+        <method>
+            <name>DblFactorial</name>
+            <comment>See here &lt;link&gt;Double_factorial|http://en.wikipedia.org/wiki/Double_factorial#Double_factorial&lt;/link&gt;</comment>
+            <returntype>double</returntype>
+            <parameter>
+                <name>n</name>
+                <type>int</type>
+            </parameter>
+        </method>
+        <method>
+            <name>StdNormal</name>
+            <comment></comment>
+            <returntype>double[]</returntype>
+            <parameter>
+                <name>Z</name>
+                <type>double</type>
+            </parameter>
+            <parameter>
+                <name>Mode</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+        <method>
+            <name>InvFisherF</name>
+            <comment>Returns the number for which the Fisher F probability is Pf.</comment>
+            <returntype>double</returntype>
+            <parameter>
+                <name>Pf</name>
+                <type>double</type>
+            </parameter>
+            <parameter>
+                <name>n1</name>
+                <type>int</type>
+            </parameter>
+            <parameter>
+                <name>n2</name>
+                <type>int</type>
+            </parameter>
+        </method>
+        <method>
+            <name>InvPoisson</name>
+            <comment>Returns an integer for which the Poisson Probability with 
+ Lambda is Pp.</comment>
+            <returntype>int</returntype>
+            <parameter>
+                <name>Pp</name>
+                <type>double</type>
+            </parameter>
+            <parameter>
+                <name>Lambda</name>
+                <type>double</type>
+            </parameter>
+        </method>
+        <method>
+            <name>Poisson</name>
+            <comment>The Poisson distribution is a discrete probability distribution 
+ that expresses the probability of a number of events occurring 
+ in a fixed period of time if these events occur with a known average rate 
+ and independently of the time since the last event. 
+ (The Poisson distribution can also be used for the number of events 
+ in other specified intervals such as distance, area or volume.)
+ For further information see 
+  &lt;link&gt;Poisson distribution|http://en.wikipedia.org/wiki/Poisson_distribution&lt;/link&gt;
+ The method returns an array of two Double variables, 
+ the first is the Poisson Probability Pp(k) and 
+ the second is the value of the Poisson Mass function for k. 
+ Lambda is the time interval.</comment>
+            <returntype>double[]</returntype>
+            <parameter>
+                <name>K</name>
+                <type>int</type>
+            </parameter>
+            <parameter>
+                <name>Lambda</name>
+                <type>double</type>
+            </parameter>
+        </method>
+        <method>
+            <name>InvGeometric</name>
+            <comment>Returns the number for which the Geometric probability, 
+ with trial’s probability p, is Pg.</comment>
+            <returntype>int</returntype>
+            <parameter>
+                <name>Pg</name>
+                <type>double</type>
+            </parameter>
+            <parameter>
+                <name>p</name>
+                <type>double</type>
+            </parameter>
+            <parameter>
+                <name>Shifted</name>
+                <type>int</type>
+            </parameter>
+        </method>
+        <method>
+            <name>RNGPoisson</name>
+            <comment>Returns a random number based on Poisson distribution with Lambda.</comment>
+            <returntype>int</returntype>
+            <parameter>
+                <name>Lambda</name>
+                <type>double</type>
+            </parameter>
+        </method>
+        <method>
+            <name>InvNormal</name>
+            <comment>Returns a Double variable Z for which the Normal Probability is P(z).</comment>
+            <returntype>double</returntype>
+            <parameter>
+                <name>Pn</name>
+                <type>double</type>
+            </parameter>
+            <parameter>
+                <name>Mean</name>
+                <type>double</type>
+            </parameter>
+            <parameter>
+                <name>Variance</name>
+                <type>double</type>
+            </parameter>
+            <parameter>
+                <name>Mode</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+        <method>
+            <name>Binomial</name>
+            <comment>The Binomial distribution is the discrete probability distribution 
+ of the number of successes in a sequence of n independent yes/no experiments, 
+ each of which yields success with probability  p. 
+ Such a success/failure experiment is also called a Bernoulli experiment 
+ or Bernoulli trial. 
+ The binomial distribution is the basis for the popular binomial test 
+ of statistical significance.
+ It is frequently used to model number of successes in a sample 
+ of size n from a population of size N. 
+ Since the samples are not independent (this is sampling without replacement), 
+ the resulting distribution is a hypergeometric distribution, 
+ not a binomial one. However, for N much larger than n, 
+ the binomial distribution is a good approximation, and widely used.
+ For further information see 
+ &lt;link&gt;Binomial_distribution|http://en.wikipedia.org/wiki/Binomial_distribution&lt;/link&gt;
+ The method returns an array of two Double variables, the first 
+ is the Binomial probability for k out of n trials 
+ with probability of p for each trial, and the second – 
+ the Binomial Mass function for the number k.</comment>
+            <returntype>double[]</returntype>
+            <parameter>
+                <name>k</name>
+                <type>int</type>
+            </parameter>
+            <parameter>
+                <name>n</name>
+                <type>int</type>
+            </parameter>
+            <parameter>
+                <name>p</name>
+                <type>double</type>
+            </parameter>
+        </method>
+        <method>
+            <name>RNGNormal2</name>
+            <comment>Returns an array of two random numbers based on Normal Distribution.</comment>
+            <returntype>double[]</returntype>
+            <parameter>
+                <name>Mean</name>
+                <type>double</type>
+            </parameter>
+            <parameter>
+                <name>Variance</name>
+                <type>double</type>
+            </parameter>
+        </method>
+        <method>
+            <name>InvBinomial</name>
+            <comment>Returns the number for which the Binomial Probability, 
+ with n trials and trial’s probability p, is Pb.</comment>
+            <returntype>int</returntype>
+            <parameter>
+                <name>Pb</name>
+                <type>double</type>
+            </parameter>
+            <parameter>
+                <name>n</name>
+                <type>int</type>
+            </parameter>
+            <parameter>
+                <name>p</name>
+                <type>double</type>
+            </parameter>
+        </method>
+        <method>
+            <name>RNGRayleigh</name>
+            <comment>Provides a random number with Rayleigh Distribution characteristics.</comment>
+            <returntype>double</returntype>
+            <parameter>
+                <name>Scale</name>
+                <type>double</type>
+            </parameter>
+        </method>
+        <method>
+            <name>NChooseK</name>
+            <comment>This methods is a mathematical function which calculates and 
+ returns the number of different possibilities to choose 
+ a group of k out of a group of n. 
+ The formula is n! / (k! * (n-k)! ).
+ See here &lt;link&gt;N_choose_k |http://en.wikipedia.org/wiki/N_choose_k&lt;/link&gt;</comment>
+            <returntype>double</returntype>
+            <parameter>
+                <name>n</name>
+                <type>int</type>
+            </parameter>
+            <parameter>
+                <name>k</name>
+                <type>int</type>
+            </parameter>
+        </method>
+        <method>
+            <name>InvChiSq</name>
+            <comment>Returns the sum of n squares of normal distributed variables 
+ (n Degrees Of Freedom) of which probability is Pc.</comment>
+            <returntype>double</returntype>
+            <parameter>
+                <name>Pc</name>
+                <type>double</type>
+            </parameter>
+            <parameter>
+                <name>n</name>
+                <type>int</type>
+            </parameter>
+        </method>
+        <method>
+            <name>InvRayleigh</name>
+            <comment>Returns the number for which the Rayleigh probability is Pr.</comment>
+            <returntype>double</returntype>
+            <parameter>
+                <name>Pr</name>
+                <type>double</type>
+            </parameter>
+            <parameter>
+                <name>Scale</name>
+                <type>double</type>
+            </parameter>
+        </method>
+        <method>
+            <name>InvStudentT</name>
+            <comment>Returns the number for which the Probability is Ps, 
+ according to the DOF and the selected Mode.</comment>
+            <returntype>double</returntype>
+            <parameter>
+                <name>Ps</name>
+                <type>double</type>
+            </parameter>
+            <parameter>
+                <name>n</name>
+                <type>int</type>
+            </parameter>
+            <parameter>
+                <name>Mode</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+    </class>
+    <version>1.0</version>
+    <author>Derez</author>
+</root>

@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root>
+    <doclet-version-NOT-library-version>1.00</doclet-version-NOT-library-version>
+    <class>
+        <name>xtremelyvirtualstudios.xvs.Streamer.Streamer</name>
+        <shortname>Streamer</shortname>
+        <owner>process</owner>
+        <permission>android.permission.WRITE_EXTERNAL_STORAGE</permission>
+        <permission>android.permission.RECORD_AUDIO</permission>
+        <method>
+            <name>canSeekForward</name>
+            <comment></comment>
+            <returntype>boolean</returntype>
+        </method>
+        <method>
+            <name>StopAudioStream</name>
+            <comment>Stops the current stream.</comment>
+            <returntype>void</returntype>
+        </method>
+        <method>
+            <name>StartAudioStream</name>
+            <comment>Starts the audio stream. Can take a while to load and can lagg.
+ for links:  please make sure it ends with audiotypes: 
+ e.g: http://www.freewebs.com/thebirdsmedia/faint.mp3</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>URL</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+        <method>
+            <name>canSeekBackward</name>
+            <comment></comment>
+            <returntype>boolean</returntype>
+        </method>
+        <method>
+            <name>IsStreaming</name>
+            <comment></comment>
+            <returntype>boolean</returntype>
+        </method>
+        <method>
+            <name>PauseStream</name>
+            <comment></comment>
+            <returntype>void</returntype>
+        </method>
+        <method>
+            <name>canPause</name>
+            <comment></comment>
+            <returntype>boolean</returntype>
+        </method>
+        <property>
+            <name>AudioDuration</name>
+            <returntype>int</returntype>
+            <comment></comment>
+        </property>
+    </class>
+    <version>1.2</version>
+    <author>XverhelstX</author>
+</root>

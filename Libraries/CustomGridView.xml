@@ -1,0 +1,284 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <doclet-version-NOT-library-version>1.00</doclet-version-NOT-library-version>
+  <dependsOn>reflection</dependsOn>
+  <dependsOn>javaobject</dependsOn>
+  <class>
+    <name>njdude.customgridview.library.customgridview</name>
+    <shortname>CustomGridView</shortname>
+    <owner>activity</owner>
+    <permission>android.permission.INTERNET</permission>
+    <event>ItemClicked(Item As String)</event>
+    <event>FinishedLoading</event>
+    <method>
+      <name>IsInitialized</name>
+      <comment>Tests whether the object has been initialized.</comment>
+      <returntype>boolean</returntype>
+    </method>
+    <method>
+      <name DesignerName="AddToGridView">_addtogridview</name>
+      <comment>Add data to the CustomGridView.</comment>
+      <returntype>String</returntype>
+      <parameter>
+        <name>PictureLocation</name>
+        <type>String</type>
+      </parameter>
+      <parameter>
+        <name>PictureTitle</name>
+        <type>String</type>
+      </parameter>
+      <parameter>
+        <name>Link</name>
+        <type>String</type>
+      </parameter>
+    </method>
+    <method>
+      <name DesignerName="BorderColor">_bordercolor</name>
+      <comment>Red, Green, Blue: Values 0 - 255.</comment>
+      <returntype>String</returntype>
+      <parameter>
+        <name>Red</name>
+        <type>int</type>
+      </parameter>
+      <parameter>
+        <name>Green</name>
+        <type>int</type>
+      </parameter>
+      <parameter>
+        <name>Blue</name>
+        <type>int</type>
+      </parameter>
+    </method>
+    <method>
+      <name DesignerName="BringToFront">_bringtofront</name>
+      <comment>Changes the Z order of this view and sends it to the front.</comment>
+      <returntype>String</returntype>
+    </method>
+    <method>
+      <name DesignerName="getIsVisible" HideFromIDE="true">_getisvisible</name>
+      <comment>Returns True if visible, False if not.</comment>
+      <returntype>boolean</returntype>
+    </method>
+    <method>
+      <name DesignerName="GridViewBackgroundColor">_gridviewbackgroundcolor</name>
+      <comment>Red, Green, Blue: Values 0 - 255.
+Alpha: Value 0 - 100.</comment>
+      <returntype>String</returntype>
+      <parameter>
+        <name>Red</name>
+        <type>int</type>
+      </parameter>
+      <parameter>
+        <name>Green</name>
+        <type>int</type>
+      </parameter>
+      <parameter>
+        <name>Blue</name>
+        <type>int</type>
+      </parameter>
+      <parameter>
+        <name>Alpha</name>
+        <type>int</type>
+      </parameter>
+    </method>
+    <method>
+      <name DesignerName="HideGridView">_hidegridview</name>
+      <comment>Hides the CustomGridView.</comment>
+      <returntype>String</returntype>
+    </method>
+    <method>
+      <name DesignerName="Initialize">_initialize</name>
+      <comment>Initializes the CustomGridView.
+Parent: Activity or Panel where the custom view will be added to.
+Module: Me (Required).
+EventName: Prefix to be used on the event responses.
+NumberOfColumns: 1 through 4.</comment>
+      <returntype>String</returntype>
+      <parameter>
+        <name>ba</name>
+        <type>anywheresoftware.b4a.BA</type>
+      </parameter>
+      <parameter>
+        <name>Parent</name>
+        <type>anywheresoftware.b4a.objects.PanelWrapper</type>
+      </parameter>
+      <parameter>
+        <name>Module</name>
+        <type>Object</type>
+      </parameter>
+      <parameter>
+        <name>EventName</name>
+        <type>String</type>
+      </parameter>
+      <parameter>
+        <name>NumberOfColumns</name>
+        <type>int</type>
+      </parameter>
+    </method>
+    <method>
+      <name DesignerName="PrepareGridView">_preparegridview</name>
+      <comment>Prepare the CustomGridView to receive data.
+This MUST be called before using AddToGridView.</comment>
+      <returntype>String</returntype>
+    </method>
+    <method>
+      <name DesignerName="ResetToDefaults">_resettodefaults</name>
+      <comment>Reset all the CustomGridView colors to default.</comment>
+      <returntype>String</returntype>
+    </method>
+    <method>
+      <name DesignerName="SendToBack">_sendtoback</name>
+      <comment>Changes the Z order of this view and sends it to the back.</comment>
+      <returntype>String</returntype>
+    </method>
+    <method>
+      <name DesignerName="setTitleBoxVisible" HideFromIDE="true">_settitleboxvisible</name>
+      <comment>Sets the TitleBox visibility.</comment>
+      <returntype>String</returntype>
+      <parameter>
+        <name>Visibility</name>
+        <type>boolean</type>
+      </parameter>
+    </method>
+    <method>
+      <name DesignerName="setVisible" HideFromIDE="true">_setvisible</name>
+      <comment>Sets the CustomGridView visibility.</comment>
+      <returntype>String</returntype>
+      <parameter>
+        <name>Visibility</name>
+        <type>boolean</type>
+      </parameter>
+    </method>
+    <method>
+      <name DesignerName="ShowGridView">_showgridview</name>
+      <comment>Show the CustomGridView.</comment>
+      <returntype>String</returntype>
+    </method>
+    <method>
+      <name DesignerName="TitleBoxBackgroundColor">_titleboxbackgroundcolor</name>
+      <comment>Red, Green, Blue: Values 0 - 255.
+Alpha: Value 0 - 100.</comment>
+      <returntype>String</returntype>
+      <parameter>
+        <name>Red</name>
+        <type>int</type>
+      </parameter>
+      <parameter>
+        <name>Green</name>
+        <type>int</type>
+      </parameter>
+      <parameter>
+        <name>Blue</name>
+        <type>int</type>
+      </parameter>
+      <parameter>
+        <name>Alpha</name>
+        <type>int</type>
+      </parameter>
+    </method>
+    <method>
+      <name DesignerName="TitleBoxFontColor">_titleboxfontcolor</name>
+      <comment>Red, Green, Blue: Values 0 - 255.</comment>
+      <returntype>String</returntype>
+      <parameter>
+        <name>Red</name>
+        <type>int</type>
+      </parameter>
+      <parameter>
+        <name>Green</name>
+        <type>int</type>
+      </parameter>
+      <parameter>
+        <name>Blue</name>
+        <type>int</type>
+      </parameter>
+    </method>
+    <property>
+      <name DesignerName="IsVisible">_isvisible</name>
+      <comment>Returns True if visible, False if not.</comment>
+      <returntype>boolean</returntype>
+    </property>
+    <property>
+      <name DesignerName="TitleBoxVisible">_titleboxvisible</name>
+      <comment>Sets the TitleBox visibility.</comment>
+      <returntype>void</returntype>
+      <parameter>
+        <name>Value</name>
+        <type>boolean</type>
+      </parameter>
+    </property>
+    <property>
+      <name DesignerName="Visible">_visible</name>
+      <comment>Sets the CustomGridView visibility.</comment>
+      <returntype>void</returntype>
+      <parameter>
+        <name>Value</name>
+        <type>boolean</type>
+      </parameter>
+    </property>
+  </class>
+  <class>
+    <name>njdude.customgridview.library.jarfileloader</name>
+    <shortname>JarFileLoader</shortname>
+    <owner>process</owner>
+    <method>
+      <name>IsInitialized</name>
+      <comment>Tests whether the object has been initialized.</comment>
+      <returntype>boolean</returntype>
+    </method>
+    <method>
+      <name DesignerName="Initialize">_initialize</name>
+      <returntype>String</returntype>
+      <parameter>
+        <name>ba</name>
+        <type>anywheresoftware.b4a.BA</type>
+      </parameter>
+      <parameter>
+        <name>FromAssetsFile</name>
+        <type>boolean</type>
+      </parameter>
+    </method>
+    <method>
+      <name DesignerName="LoadBitmapFromJar">_loadbitmapfromjar</name>
+      <returntype>anywheresoftware.b4a.objects.drawable.CanvasWrapper.BitmapWrapper</returntype>
+      <parameter>
+        <name>FileName</name>
+        <type>String</type>
+      </parameter>
+    </method>
+    <method>
+      <name DesignerName="LoadFileFromJar">_loadfilefromjar</name>
+      <returntype>anywheresoftware.b4a.objects.streams.File.InputStreamWrapper</returntype>
+      <parameter>
+        <name>FileName</name>
+        <type>String</type>
+      </parameter>
+    </method>
+    <method>
+      <name DesignerName="LoadNinePatchDrawable">_loadninepatchdrawable</name>
+      <returntype>Object</returntype>
+      <parameter>
+        <name>FileName</name>
+        <type>String</type>
+      </parameter>
+      <parameter>
+        <name>Left</name>
+        <type>int</type>
+      </parameter>
+      <parameter>
+        <name>Right</name>
+        <type>int</type>
+      </parameter>
+    </method>
+    <method>
+      <name DesignerName="LoadTextFileFromJar">_loadtextfilefromjar</name>
+      <returntype>String</returntype>
+      <parameter>
+        <name>FileName</name>
+        <type>String</type>
+      </parameter>
+    </method>
+  </class>
+  <version>1</version>
+  <author>NJDude</author>
+</root>

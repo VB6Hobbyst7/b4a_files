@@ -1,0 +1,397 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <doclet-version-NOT-library-version>1.00</doclet-version-NOT-library-version>
+  <dependsOn>reflection</dependsOn>
+  <class>
+    <name>it.apogeos.libs.ImageStock.imagestock</name>
+    <shortname>ImageStock</shortname>
+    <owner>process</owner>
+    <method>
+      <name>IsInitialized</name>
+      <comment>Tests whether the object has been initialized.</comment>
+      <returntype>boolean</returntype>
+    </method>
+    <method>
+      <name DesignerName="AppendKey">_v5</name>
+      <comment>Append a key to keyset. 
+Remember To keep the correspondence icons and keys.</comment>
+      <returntype>String</returntype>
+      <parameter>
+        <name>Key</name>
+        <type>String</type>
+      </parameter>
+    </method>
+    <method>
+      <name DesignerName="Capacity">_v6</name>
+      <comment>Returns the max number of icons storable into defined icon stock.</comment>
+      <returntype>int</returntype>
+    </method>
+    <method>
+      <name DesignerName="CreateBitmapFromBitmap">_v7</name>
+      <comment>Tool function: creates a bitmap that contains a portion of the original bitmap.
+Src is the original bitmap, Left, Top, PartWidth and PartHeight define the portion.</comment>
+      <returntype>anywheresoftware.b4a.objects.drawable.CanvasWrapper.BitmapWrapper</returntype>
+      <parameter>
+        <name>Src</name>
+        <type>anywheresoftware.b4a.objects.drawable.CanvasWrapper.BitmapWrapper</type>
+      </parameter>
+      <parameter>
+        <name>Left</name>
+        <type>int</type>
+      </parameter>
+      <parameter>
+        <name>Top</name>
+        <type>int</type>
+      </parameter>
+      <parameter>
+        <name>PartWidth</name>
+        <type>int</type>
+      </parameter>
+      <parameter>
+        <name>PartHeight</name>
+        <type>int</type>
+      </parameter>
+    </method>
+    <method>
+      <name DesignerName="CreateScaledBitmap">_v0</name>
+      <comment>Tool function: resizes the original bitmap.
+Src is the image to resize, NewWidth and NewHeight define new image dimension.
+UseMatrix sets if use (true) or not use (false) the java matrix during resize operation.
+UseFilters sets if use (true) or not use (false) the smooth filter during resize operation.</comment>
+      <returntype>anywheresoftware.b4a.objects.drawable.CanvasWrapper.BitmapWrapper</returntype>
+      <parameter>
+        <name>Src</name>
+        <type>anywheresoftware.b4a.objects.drawable.CanvasWrapper.BitmapWrapper</type>
+      </parameter>
+      <parameter>
+        <name>NewWidth</name>
+        <type>int</type>
+      </parameter>
+      <parameter>
+        <name>NewHeight</name>
+        <type>int</type>
+      </parameter>
+      <parameter>
+        <name>UseMatrix</name>
+        <type>boolean</type>
+      </parameter>
+      <parameter>
+        <name>UseFilters</name>
+        <type>boolean</type>
+      </parameter>
+    </method>
+    <method>
+      <name DesignerName="Draw">_vv1</name>
+      <comment>Draws the icon, mapped by Key, on canvas, starting at position (X, Y)</comment>
+      <returntype>String</returntype>
+      <parameter>
+        <name>C</name>
+        <type>anywheresoftware.b4a.objects.drawable.CanvasWrapper</type>
+      </parameter>
+      <parameter>
+        <name>Key</name>
+        <type>String</type>
+      </parameter>
+      <parameter>
+        <name>X</name>
+        <type>int</type>
+      </parameter>
+      <parameter>
+        <name>Y</name>
+        <type>int</type>
+      </parameter>
+    </method>
+    <method>
+      <name DesignerName="Draw2">_vv2</name>
+      <comment>Draws the icon, indexed by Index, on canvas, starting at position (X, Y)</comment>
+      <returntype>String</returntype>
+      <parameter>
+        <name>C</name>
+        <type>anywheresoftware.b4a.objects.drawable.CanvasWrapper</type>
+      </parameter>
+      <parameter>
+        <name>Index</name>
+        <type>int</type>
+      </parameter>
+      <parameter>
+        <name>X</name>
+        <type>int</type>
+      </parameter>
+      <parameter>
+        <name>Y</name>
+        <type>int</type>
+      </parameter>
+    </method>
+    <method>
+      <name DesignerName="DrawScaled">_vv3</name>
+      <comment>Draws the icon, mapped by Key, on canvas, starting at position (X, Y)
+Icon will be resized by NewWidth and NewHeight.
+UseMatrix sets if use (true) or not use (false) the java matrix during resize operation.
+UseFilters sets if use (true) or not use (false) the smooth filter during resize operation.</comment>
+      <returntype>String</returntype>
+      <parameter>
+        <name>C</name>
+        <type>anywheresoftware.b4a.objects.drawable.CanvasWrapper</type>
+      </parameter>
+      <parameter>
+        <name>Key</name>
+        <type>String</type>
+      </parameter>
+      <parameter>
+        <name>X</name>
+        <type>int</type>
+      </parameter>
+      <parameter>
+        <name>Y</name>
+        <type>int</type>
+      </parameter>
+      <parameter>
+        <name>NewWidth</name>
+        <type>int</type>
+      </parameter>
+      <parameter>
+        <name>NewHeight</name>
+        <type>int</type>
+      </parameter>
+      <parameter>
+        <name>UseMatrix</name>
+        <type>boolean</type>
+      </parameter>
+      <parameter>
+        <name>UseFilters</name>
+        <type>boolean</type>
+      </parameter>
+    </method>
+    <method>
+      <name DesignerName="DrawScaled2">_vv4</name>
+      <comment>Draws the icon, indexed by Index, on canvas, starting at position (X, Y)
+Icon will be resized by NewWidth and NewHeight.
+UseMatrix sets if use (true) or not use (false) the java matrix during resize operation.
+UseFilters sets if use (true) or not use (false) the smooth filter during resize operation.</comment>
+      <returntype>String</returntype>
+      <parameter>
+        <name>C</name>
+        <type>anywheresoftware.b4a.objects.drawable.CanvasWrapper</type>
+      </parameter>
+      <parameter>
+        <name>Index</name>
+        <type>int</type>
+      </parameter>
+      <parameter>
+        <name>X</name>
+        <type>int</type>
+      </parameter>
+      <parameter>
+        <name>Y</name>
+        <type>int</type>
+      </parameter>
+      <parameter>
+        <name>NewWidth</name>
+        <type>int</type>
+      </parameter>
+      <parameter>
+        <name>NewHeight</name>
+        <type>int</type>
+      </parameter>
+      <parameter>
+        <name>UseMatrix</name>
+        <type>boolean</type>
+      </parameter>
+      <parameter>
+        <name>UseFilters</name>
+        <type>boolean</type>
+      </parameter>
+    </method>
+    <method>
+      <name DesignerName="Get">_vv5</name>
+      <comment>Returns the icon from icon stock, mapped by Key.</comment>
+      <returntype>anywheresoftware.b4a.objects.drawable.CanvasWrapper.BitmapWrapper</returntype>
+      <parameter>
+        <name>Key</name>
+        <type>String</type>
+      </parameter>
+    </method>
+    <method>
+      <name DesignerName="Get2">_vv6</name>
+      <comment>Returns the icon from icon stock, indexed by Index.
+The Keys are linearized (line by line).</comment>
+      <returntype>anywheresoftware.b4a.objects.drawable.CanvasWrapper.BitmapWrapper</returntype>
+      <parameter>
+        <name>Index</name>
+        <type>int</type>
+      </parameter>
+    </method>
+    <method>
+      <name DesignerName="GetCols">_vv7</name>
+      <comment>Returns the number of icons by strip.</comment>
+      <returntype>int</returntype>
+    </method>
+    <method>
+      <name DesignerName="GetImageHeight">_vv0</name>
+      <comment>Gets icon height.</comment>
+      <returntype>int</returntype>
+    </method>
+    <method>
+      <name DesignerName="GetImageStock">_vvv1</name>
+      <comment>Gets current icon stock bitmap.</comment>
+      <returntype>anywheresoftware.b4a.objects.drawable.CanvasWrapper.BitmapWrapper</returntype>
+    </method>
+    <method>
+      <name DesignerName="GetImageWidth">_vvv2</name>
+      <comment>Gets icons width.</comment>
+      <returntype>int</returntype>
+    </method>
+    <method>
+      <name DesignerName="GetKeys">_vvv3</name>
+      <comment>Returns all keys.
+The Keys are linearized (line by line).</comment>
+      <returntype>anywheresoftware.b4a.objects.collections.List</returntype>
+    </method>
+    <method>
+      <name DesignerName="GetRows">_vvv4</name>
+      <comment>Returns the number of icon strips.</comment>
+      <returntype>int</returntype>
+    </method>
+    <method>
+      <name DesignerName="GetScaled">_vvv5</name>
+      <comment>Returns the icon from icon stock, mapped by Key, and resized by NewWidth and NewHeight.
+UseMatrix sets if use (true) or not use (false) the java matrix during resize operation.
+UseFilters sets if use (true) or not use (false) the smooth filter during resize operation.</comment>
+      <returntype>anywheresoftware.b4a.objects.drawable.CanvasWrapper.BitmapWrapper</returntype>
+      <parameter>
+        <name>Key</name>
+        <type>String</type>
+      </parameter>
+      <parameter>
+        <name>NewWidth</name>
+        <type>int</type>
+      </parameter>
+      <parameter>
+        <name>NewHeight</name>
+        <type>int</type>
+      </parameter>
+      <parameter>
+        <name>UseMatrix</name>
+        <type>boolean</type>
+      </parameter>
+      <parameter>
+        <name>UseFilters</name>
+        <type>boolean</type>
+      </parameter>
+    </method>
+    <method>
+      <name DesignerName="GetScaled2">_vvv6</name>
+      <comment>Returns the icon from icon stock, indexed by Index, and resized by NewWidth and NewHeight.
+UseMatrix sets if use (true) or not use (false) the java matrix during resize operation.
+UseFilters sets if use (true) or not use (false) the smooth filter during resize operation.</comment>
+      <returntype>anywheresoftware.b4a.objects.drawable.CanvasWrapper.BitmapWrapper</returntype>
+      <parameter>
+        <name>Index</name>
+        <type>int</type>
+      </parameter>
+      <parameter>
+        <name>NewWidth</name>
+        <type>int</type>
+      </parameter>
+      <parameter>
+        <name>NewHeight</name>
+        <type>int</type>
+      </parameter>
+      <parameter>
+        <name>UseMatrix</name>
+        <type>boolean</type>
+      </parameter>
+      <parameter>
+        <name>UseFilters</name>
+        <type>boolean</type>
+      </parameter>
+    </method>
+    <method>
+      <name DesignerName="Initialize">_vvv7</name>
+      <comment>Initializes the object. 
+Sets icon stock image and icon dimension (all icons must be the same Size).</comment>
+      <returntype>String</returntype>
+      <parameter>
+        <name>ba</name>
+        <type>anywheresoftware.b4a.BA</type>
+      </parameter>
+      <parameter>
+        <name>ImageStock</name>
+        <type>anywheresoftware.b4a.objects.drawable.CanvasWrapper.BitmapWrapper</type>
+      </parameter>
+      <parameter>
+        <name>ImageWidth</name>
+        <type>int</type>
+      </parameter>
+      <parameter>
+        <name>ImageHeight</name>
+        <type>int</type>
+      </parameter>
+    </method>
+    <method>
+      <name DesignerName="LoadKeys">_vvv0</name>
+      <comment>Loads all keys from file. 
+File must be a text File, with each key on a separate line. 
+The Keys are linearized (line by line).
+Remember To keep the correspondence icons and keys</comment>
+      <returntype>String</returntype>
+      <parameter>
+        <name>Dir</name>
+        <type>String</type>
+      </parameter>
+      <parameter>
+        <name>FileName</name>
+        <type>String</type>
+      </parameter>
+    </method>
+    <method>
+      <name DesignerName="RemoveKey">_vvvv1</name>
+      <comment>Remove a key from keyset.
+Remember To keep the correspondence icons and keys.</comment>
+      <returntype>boolean</returntype>
+      <parameter>
+        <name>Key</name>
+        <type>String</type>
+      </parameter>
+    </method>
+    <method>
+      <name DesignerName="SetImageSize">_vvvv2</name>
+      <comment>Sets new icons width and height.</comment>
+      <returntype>String</returntype>
+      <parameter>
+        <name>ImageWidth</name>
+        <type>int</type>
+      </parameter>
+      <parameter>
+        <name>ImageHeight</name>
+        <type>int</type>
+      </parameter>
+    </method>
+    <method>
+      <name DesignerName="SetImageStock">_vvvv3</name>
+      <comment>Sets new icon stock bitmap.</comment>
+      <returntype>String</returntype>
+      <parameter>
+        <name>ImageStock</name>
+        <type>anywheresoftware.b4a.objects.drawable.CanvasWrapper.BitmapWrapper</type>
+      </parameter>
+    </method>
+    <method>
+      <name DesignerName="SetKeys">_vvvv4</name>
+      <comment>Sets all keys. Each item is a different key.
+The Keys are linearized (line by line).
+Remember To keep the correspondence icons and keys.</comment>
+      <returntype>String</returntype>
+      <parameter>
+        <name>KeyList</name>
+        <type>anywheresoftware.b4a.objects.collections.List</type>
+      </parameter>
+    </method>
+    <method>
+      <name DesignerName="Size">_vvvv5</name>
+      <comment>Returns the number of mapped keys.</comment>
+      <returntype>int</returntype>
+    </method>
+  </class>
+  <version>1</version>
+</root>

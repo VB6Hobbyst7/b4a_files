@@ -1,0 +1,457 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root>
+    <doclet-version-NOT-library-version>1.02</doclet-version-NOT-library-version>
+    <class>
+        <name>forum.b4a.vitamio.vitamiowrap</name>
+        <shortname>VideoView</shortname>
+        <comment>VitamioB4A is a B4A-Wrapper of the Vitamio-plugin. The plugin is an Android APK which 
+ includes a collection of media demuxers, decoders, filters besides some video and audio 
+ output libraries. If the user does not have the plugin installed, the user will be prompted 
+ to download and install it from Google Play. Since the first release of the B4A-wrapper, many
+ other features have been added and now only subtitles-features of the VideoView-class are missing.
+ Other developers are encouraged to improve this first release of VitamioB4A including bug-fixes, 
+ adding other classes and methods/properties.
+ 
+ Note: android:minSdkVersion="8" 
+ 
+ VitamioB4A allows you to play video media inside your applications. 
+ The difference from the standard  Android-VideoView is that VitamioB4A supports much more formats 
+ and codecs since it is based on FFMPEG.
+ The VideoView shows a media controller (disabled by default) when the user touches 
+ the view. The Completed event is raised when playback is completed.
+ Simple example of using VitamioB4A VideoView:&lt;code&gt;
+Sub Globals
+    Dim vv As VideoView
+End Sub
+Sub Activity_Create(FirstTime As Boolean)
+    vv.Initialize("vv")
+    Activity.AddView(vv, 10dip, 10dip, 250dip, 250dip)
+    vv.LoadVideo(File.DirRootExternal, "somefile.mp4")
+End Sub
+Sub vv_Complete
+    Log("Playing completed")
+End Sub&lt;/code&gt;
+ Note: The method Play is not needed since it starts automatically.
+ Note2: To obtain maximum quality and to avoid pixeling, you must use the method 
+ VideoQuality and set it to 16. For reasons beyond my competence, I cannot set 
+ VideoQuality when using it within the method LoadVideo. The only way I got it 
+ working was by using a timer (see sample-app).
+ Suggestion: If you add the VideoView to a panel, you can implement nice stuff 
+ such OSD (On Screen Display) and other functionality.</comment>
+        <objectwrapper>io.vov.vitamio.widget.VideoView</objectwrapper>
+        <owner>activity</owner>
+        <permission>android.permission.INTERNET</permission>
+        <method>
+            <name>IsPlaying</name>
+            <comment>Tests whether the video is currently playing.</comment>
+            <returntype>boolean</returntype>
+        </method>
+        <method>
+            <name>isBuffering</name>
+            <comment>Checks whether the buffer is filled or not.</comment>
+            <returntype>boolean</returntype>
+        </method>
+        <method>
+            <name>RequestFocus</name>
+            <comment></comment>
+            <returntype>boolean</returntype>
+        </method>
+        <method>
+            <name>BringToFront</name>
+            <comment></comment>
+            <returntype>void</returntype>
+        </method>
+        <method>
+            <name>RemoveView</name>
+            <comment></comment>
+            <returntype>void</returntype>
+        </method>
+        <method>
+            <name>SetBackgroundImage</name>
+            <comment></comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>arg0</name>
+                <type>android.graphics.Bitmap</type>
+            </parameter>
+        </method>
+        <method>
+            <name>Stop</name>
+            <comment>Stops the playback.</comment>
+            <returntype>void</returntype>
+        </method>
+        <method>
+            <name>Invalidate3</name>
+            <comment></comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>arg0</name>
+                <type>int</type>
+            </parameter>
+            <parameter>
+                <name>arg1</name>
+                <type>int</type>
+            </parameter>
+            <parameter>
+                <name>arg2</name>
+                <type>int</type>
+            </parameter>
+            <parameter>
+                <name>arg3</name>
+                <type>int</type>
+            </parameter>
+        </method>
+        <method>
+            <name>Resume</name>
+            <comment>Resumes the playback. Perhaps same as Play (not tested).</comment>
+            <returntype>void</returntype>
+        </method>
+        <method>
+            <name>seekTo</name>
+            <comment>Seeks to specified time position.
+ Parameters:
+ msec - the offset in milliseconds from the start to seek to
+ Throws:
+ java.lang.IllegalStateException - if the internal player engine has not been initialized</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>msec</name>
+                <type>long</type>
+            </parameter>
+        </method>
+        <method>
+            <name>Invalidate2</name>
+            <comment></comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>arg0</name>
+                <type>android.graphics.Rect</type>
+            </parameter>
+        </method>
+        <method>
+            <name>IsInitialized</name>
+            <comment></comment>
+            <returntype>boolean</returntype>
+        </method>
+        <method>
+            <name>Initialize</name>
+            <comment></comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>ba</name>
+                <type>anywheresoftware.b4a.BA</type>
+            </parameter>
+            <parameter>
+                <name>EventName</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+        <method>
+            <name>Play</name>
+            <comment>Starts or resumes playing.</comment>
+            <returntype>void</returntype>
+        </method>
+        <method>
+            <name>setVolume</name>
+            <comment>sets the volume. No idea about ranges to use (perhaps 1 to 15). To test.
+  Might be better to use Phone-library in B4A.</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>leftVolume</name>
+                <type>float</type>
+            </parameter>
+            <parameter>
+                <name>rightVolume</name>
+                <type>float</type>
+            </parameter>
+        </method>
+        <method>
+            <name>VideoQuality</name>
+            <comment>Set the quality when playing video. If there is too much lag, try VIDEOQUALITY_LOW.
+ If there is too much pixeling, set the value to VIDEOQUALITY_HIGH
+ I would suggest always to use VIDEOQUALITY_HIGH or VIDEOQUALITY_MEDIUM
+ (most modern android-devices can cope with higher settings)
+ Note that default value is VIDEOQUALITY_LOW.
+ Quality-Parameters:
+ VIDEOQUALITY_HIGH or 16
+ VIDEOQUALITY_MEDIUM or 0
+ VIDEOQUALITY_LOW or -16</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>vQuality</name>
+                <type>int</type>
+            </parameter>
+        </method>
+        <method>
+            <name>SetLayout</name>
+            <comment></comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>arg0</name>
+                <type>int</type>
+            </parameter>
+            <parameter>
+                <name>arg1</name>
+                <type>int</type>
+            </parameter>
+            <parameter>
+                <name>arg2</name>
+                <type>int</type>
+            </parameter>
+            <parameter>
+                <name>arg3</name>
+                <type>int</type>
+            </parameter>
+        </method>
+        <method>
+            <name>Invalidate</name>
+            <comment></comment>
+            <returntype>void</returntype>
+        </method>
+        <method>
+            <name>VideoLayout</name>
+            <comment>Set the display options. Default is VIDEO_LAYOUT_ZOOM or 3. 
+  Layout-parameters: 
+  VIDEO_LAYOUT_ORIGIN or 0 
+  VIDEO_LAYOUT_SCALE or 1 
+  VIDEO_LAYOUT_STRETCH or 2 
+  VIDEO_LAYOUT_ZOOM or 3 
+  aspectRatio - video aspect ratio, will auto detect if 0.</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>vLayout</name>
+                <type>int</type>
+            </parameter>
+            <parameter>
+                <name>vAspectRatio</name>
+                <type>float</type>
+            </parameter>
+        </method>
+        <method>
+            <name>canSeekForward</name>
+            <comment>verifies if the media can seek forward.</comment>
+            <returntype>boolean</returntype>
+        </method>
+        <method>
+            <name>LoadVideo</name>
+            <comment>Loads a video file and prepares it for playing.
+ It is not possible to load files from the assets folder.
+ You can pass "http" to the Dir parameter and then a full URL (including http) to the FileName.
+ In this case the online video will be streamed. If you want for instance stream using MMS,
+ you must still pass "http" to the Dir parameter. 
+ Note: There is no need to add the INTERNET permission for this to work since it is already 
+ included in the B4A wrapper-library.
+ Note2: No need to use the method Play - the streaming will start anyway.
+ Note3: Depending on the URL, you may or not need to URL-encode before passing on the URL.</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>Dir</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>FileName</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+        <method>
+            <name>canSeekBackward</name>
+            <comment>verifies if the media can seek backward.</comment>
+            <returntype>boolean</returntype>
+        </method>
+        <method>
+            <name>Pause</name>
+            <comment>Pauses the playback.</comment>
+            <returntype>void</returntype>
+        </method>
+        <method>
+            <name>toString</name>
+            <comment></comment>
+            <returntype>java.lang.String</returntype>
+        </method>
+        <method>
+            <name>getAudioTrackMap</name>
+            <comment>Get the audio tracks embedded in the movie (e.g. "English", 3).
+ Parameters:
+ encoding - the encoding to format String, will detect it if null
+ Returns:
+ Map of track name and track number</comment>
+            <returntype>java.util.HashMap</returntype>
+            <parameter>
+                <name>encoding</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+        <method>
+            <name>SendToBack</name>
+            <comment></comment>
+            <returntype>void</returntype>
+        </method>
+        <method>
+            <name>isValid</name>
+            <comment>Checks (what??) is valid or not. To test.</comment>
+            <returntype>boolean</returntype>
+        </method>
+        <method>
+            <name>obtainAudioTrack</name>
+            <comment>Get the audio track number in playback</comment>
+            <returntype>int</returntype>
+        </method>
+        <method>
+            <name>selectAudioTrack</name>
+            <comment>Set the audio track to play, must be in the result of getAudioTrackMap(String)
+ Parameters:
+ audioIndex - the track number</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>audioIndex</name>
+                <type>int</type>
+            </parameter>
+        </method>
+        <property>
+            <name>VideoAspectRatio</name>
+            <returntype>float</returntype>
+            <comment>Returns the aspect ratio of the video.
+ the aspect ratio of the video, or 0 if there is no video, 
+ or the width and height is not available</comment>
+        </property>
+        <property>
+            <name>Enabled</name>
+            <returntype>boolean</returntype>
+            <parameter>
+                <name>arg0</name>
+                <type>boolean</type>
+            </parameter>
+            <comment></comment>
+        </property>
+        <property>
+            <name>Top</name>
+            <returntype>int</returntype>
+            <parameter>
+                <name>arg0</name>
+                <type>int</type>
+            </parameter>
+            <comment></comment>
+        </property>
+        <property>
+            <name>Visible</name>
+            <returntype>boolean</returntype>
+            <parameter>
+                <name>arg0</name>
+                <type>boolean</type>
+            </parameter>
+            <comment></comment>
+        </property>
+        <property>
+            <name>BufferSize</name>
+            <parameter>
+                <name>bufSize</name>
+                <type>int</type>
+            </parameter>
+            <comment>The buffer to fill before playback, default is 1024KB.</comment>
+        </property>
+        <property>
+            <name>Background</name>
+            <returntype>android.graphics.drawable.Drawable</returntype>
+            <parameter>
+                <name>arg0</name>
+                <type>android.graphics.drawable.Drawable</type>
+            </parameter>
+            <comment></comment>
+        </property>
+        <property>
+            <name>Height</name>
+            <returntype>int</returntype>
+            <parameter>
+                <name>arg0</name>
+                <type>int</type>
+            </parameter>
+            <comment></comment>
+        </property>
+        <property>
+            <name>Left</name>
+            <returntype>int</returntype>
+            <parameter>
+                <name>arg0</name>
+                <type>int</type>
+            </parameter>
+            <comment></comment>
+        </property>
+        <property>
+            <name>Color</name>
+            <parameter>
+                <name>arg0</name>
+                <type>int</type>
+            </parameter>
+            <comment></comment>
+        </property>
+        <property>
+            <name>CurrentLayout</name>
+            <returntype>int</returntype>
+            <comment>Returns current video-layout. This is not an official API.</comment>
+        </property>
+        <property>
+            <name>CurrentPosition</name>
+            <returntype>long</returntype>
+            <comment>Gets current playing position (in milliseconds).</comment>
+        </property>
+        <property>
+            <name>BufferPercentage</name>
+            <returntype>int</returntype>
+            <comment>returns buffer percentage.</comment>
+        </property>
+        <property>
+            <name>Tag</name>
+            <returntype>java.lang.Object</returntype>
+            <parameter>
+                <name>arg0</name>
+                <type>java.lang.Object</type>
+            </parameter>
+            <comment></comment>
+        </property>
+        <property>
+            <name>VideoHeight</name>
+            <returntype>int</returntype>
+            <comment>Returns the height of the video.</comment>
+        </property>
+        <property>
+            <name>Duration</name>
+            <returntype>long</returntype>
+            <comment>Gets the video duration in milliseconds.</comment>
+        </property>
+        <property>
+            <name>Position</name>
+            <returntype>long</returntype>
+            <parameter>
+                <name>v</name>
+                <type>int</type>
+            </parameter>
+            <comment>Gets or sets the playing position (in milliseconds). Not tested.</comment>
+        </property>
+        <property>
+            <name>Width</name>
+            <returntype>int</returntype>
+            <parameter>
+                <name>arg0</name>
+                <type>int</type>
+            </parameter>
+            <comment></comment>
+        </property>
+        <property>
+            <name>VideoWidth</name>
+            <returntype>int</returntype>
+            <comment>Returns the width of the video.</comment>
+        </property>
+        <property>
+            <name>MediaControllerEnabled</name>
+            <parameter>
+                <name>v</name>
+                <type>boolean</type>
+            </parameter>
+            <comment>Sets whether the media controller is enabled. It is disabled by default.
+ Note that the media player gets attached to the VideoView parent.</comment>
+        </property>
+    </class>
+    <version>1.05</version>
+    <author>moster67</author>
+    <dependsOn>vitamio</dependsOn>
+</root>

@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root>
+    <doclet-version-NOT-library-version>1.02</doclet-version-NOT-library-version>
+    <class>
+        <name>com.github.anrwatchdog.ANRWatchDogWrapper</name>
+        <shortname>ANRWatchDog</shortname>
+        <owner>process</owner>
+        <event>ApplicationNotResponding(StackTraceElements() As StackTraceElement)</event>
+        <event>Interrupted(ExceptionMsg As String)</event>
+        <method>
+            <name>Initialize</name>
+            <comment>Constructs a watchdog that checks the UI thread every 5000 milliseconds.
+EvtPrefix: Prefix of the ApplicationNotResponding and Interrupted event handlers.</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>ba</name>
+                <type>anywheresoftware.b4a.BA</type>
+            </parameter>
+            <parameter>
+                <name>EvtPrefix</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+        <method>
+            <name>IsInterrupted</name>
+            <comment></comment>
+            <returntype>boolean</returntype>
+        </method>
+        <method>
+            <name>Start</name>
+            <comment></comment>
+            <returntype>void</returntype>
+        </method>
+        <method>
+            <name>IsAlive</name>
+            <comment></comment>
+            <returntype>boolean</returntype>
+        </method>
+        <method>
+            <name>Initialize2</name>
+            <comment>Constructs a watchdog that checks the UI thread every given interval.
+TimeoutInterval: The interval, in milliseconds, between two checks of the UI thread. It is therefore the maximum time the UI may freeze before being reported as ANR.
+EvtPrefix: Prefix of the ApplicationNotResponding and Interrupted event handlers.</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>ba</name>
+                <type>anywheresoftware.b4a.BA</type>
+            </parameter>
+            <parameter>
+                <name>TimeoutInterval</name>
+                <type>int</type>
+            </parameter>
+            <parameter>
+                <name>EvtPrefix</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+        <method>
+            <name>Interrupt</name>
+            <comment></comment>
+            <returntype>void</returntype>
+        </method>
+        <method>
+            <name>IsInitialized</name>
+            <comment></comment>
+            <returntype>boolean</returntype>
+        </method>
+    </class>
+    <class>
+        <name>flm.b4a.errordetection.StackTraceElem</name>
+        <shortname>StackTraceElement</shortname>
+        <owner>process</owner>
+        <method>
+            <name>toString</name>
+            <comment></comment>
+            <returntype>java.lang.String</returntype>
+        </method>
+        <property>
+            <name>LineNumber</name>
+            <returntype>int</returntype>
+            <comment></comment>
+        </property>
+        <property>
+            <name>MethodName</name>
+            <returntype>java.lang.String</returntype>
+            <comment></comment>
+        </property>
+        <property>
+            <name>IsNativeMethod</name>
+            <returntype>boolean</returntype>
+            <comment></comment>
+        </property>
+        <property>
+            <name>FileName</name>
+            <returntype>java.lang.String</returntype>
+            <comment></comment>
+        </property>
+        <property>
+            <name>ClassName</name>
+            <returntype>java.lang.String</returntype>
+            <comment></comment>
+        </property>
+    </class>
+    <class>
+        <name>flm.b4a.errordetection.ErrorDetector</name>
+        <shortname>ErrorDetection</shortname>
+        <owner>process</owner>
+        <method>
+            <name>ThrowRuntimeException</name>
+            <comment>Throws a RuntimeException with the given message.</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>Message</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+        <method>
+            <name>ConvertStackOverflow2Runtime</name>
+            <comment>Converts a StackOverflow error to a Runtime exception, allowing to catch it. The error message ends with STACK_OVERFLOW.
+Once this error caught, get the stack trace elements with GetStackTraceElements.</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>ba</name>
+                <type>anywheresoftware.b4a.BA</type>
+            </parameter>
+            <parameter>
+                <name>SubToCall</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>SubParams</name>
+                <type>java.lang.Object[]</type>
+            </parameter>
+        </method>
+        <method>
+            <name>ConvertOutOfMemory2Runtime</name>
+            <comment>Converts an OutOfMemory error to a Runtime exception, allowing to catch it. The error message ends with OUT_OF_MEMORY.
+Once this error caught, get the stack trace elements with GetStackTraceElements.</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>ba</name>
+                <type>anywheresoftware.b4a.BA</type>
+            </parameter>
+            <parameter>
+                <name>SubToCall</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>SubParams</name>
+                <type>java.lang.Object[]</type>
+            </parameter>
+        </method>
+        <method>
+            <name>GetStackTraceElements</name>
+            <comment>Returns an array of stack trace elements after an OutOfMemory or StackOverflow error is thrown.</comment>
+            <returntype>flm.b4a.errordetection.StackTraceElem[]</returntype>
+        </method>
+        <field>
+            <name>STACK_OVERFLOW</name>
+            <comment></comment>
+            <returntype>java.lang.String</returntype>
+        </field>
+        <field>
+            <name>OUT_OF_MEMORY</name>
+            <comment></comment>
+            <returntype>java.lang.String</returntype>
+        </field>
+    </class>
+    <version>1.2</version>
+    <author>F. Leneuf-Magaud, Salomon Brys</author>
+</root>

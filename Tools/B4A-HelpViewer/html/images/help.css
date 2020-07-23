@@ -1,0 +1,21 @@
+h4 {
+	margin-bottom:0.4em;
+	margin-top:1em;
+	background-color:#D8E9B2;
+}
+h5 {
+	font-size: 16px;
+	margin-bottom:0.7em;
+	margin-top:1em;
+}
+.pre {
+	font-family:monospace;
+}
+hr {
+  border: 0;
+  width: 100%;
+
+	background-color: #7BBB43;
+   height: 5px;
+}
+a img {border: none; }

@@ -1,0 +1,2317 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root>
+    <doclet-version-NOT-library-version>1.04</doclet-version-NOT-library-version>
+    <class>
+        <name>uk.co.martinpearman.b4a.osmdroid.AttributionObject</name>
+        <shortname>AttributionObject</shortname>
+        <owner>process</owner>
+        <property>
+            <name>Html</name>
+            <returntype>java.lang.String</returntype>
+            <comment>Get the licensing and attribution Strings as HTML.</comment>
+        </property>
+        <property>
+            <name>PlainText</name>
+            <returntype>java.lang.String</returntype>
+            <comment>Get the licensing and attribution Strings as plain text.</comment>
+        </property>
+        <property>
+            <name>LibraryName</name>
+            <returntype>java.lang.String</returntype>
+            <comment>Get the name of the 3rd party library that this AttributionObject refers to.</comment>
+        </property>
+    </class>
+    <class>
+        <name>uk.co.martinpearman.b4a.osmdroid.util.wrappers.GeoPointWrapper</name>
+        <shortname>GeoPoint</shortname>
+        <objectwrapper>org.osmdroid.util.GeoPoint</objectwrapper>
+        <owner>process</owner>
+        <method>
+            <name>Initialize</name>
+            <comment>Initialize the GeoPoint using Latitude and Longitude.</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>Latitude</name>
+                <type>double</type>
+            </parameter>
+            <parameter>
+                <name>Longitude</name>
+                <type>double</type>
+            </parameter>
+        </method>
+        <method>
+            <name>GetBearingTo</name>
+            <comment>Get the bearing (in degrees) from this GeoPoint to GeoPoint1.</comment>
+            <returntype>double</returntype>
+            <parameter>
+                <name>GeoPoint1</name>
+                <type>org.osmdroid.util.GeoPoint</type>
+            </parameter>
+        </method>
+        <method>
+            <name>Initialize2</name>
+            <comment>Initialize the GeoPoint using a Location object.</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>aLocation</name>
+                <type>android.location.Location</type>
+            </parameter>
+        </method>
+        <method>
+            <name>GetDistanceTo</name>
+            <comment>Get the distance (in metres) from this GeoPoint to GeoPoint1.</comment>
+            <returntype>int</returntype>
+            <parameter>
+                <name>GeoPoint1</name>
+                <type>org.osmdroid.util.GeoPoint</type>
+            </parameter>
+        </method>
+        <method>
+            <name>IsInitialized</name>
+            <comment></comment>
+            <returntype>boolean</returntype>
+        </method>
+        <method>
+            <name>GetDestinationPoint</name>
+            <comment>Get a new GeoPoint that is the specified Distance (in meters) and Bearing (in degrees) away from this GeoPoint.</comment>
+            <returntype>uk.co.martinpearman.b4a.osmdroid.util.wrappers.GeoPointWrapper</returntype>
+            <parameter>
+                <name>Distance</name>
+                <type>double</type>
+            </parameter>
+            <parameter>
+                <name>Bearing</name>
+                <type>float</type>
+            </parameter>
+        </method>
+        <property>
+            <name>Altitude</name>
+            <returntype>int</returntype>
+            <parameter>
+                <name>Altitude</name>
+                <type>int</type>
+            </parameter>
+            <comment>Get or Set the altitude (in meters) of the GeoPoint</comment>
+        </property>
+        <property>
+            <name>Latitude</name>
+            <returntype>double</returntype>
+            <parameter>
+                <name>Latitude</name>
+                <type>double</type>
+            </parameter>
+            <comment>Get or Set the Latitude of the GeoPoint.</comment>
+        </property>
+        <property>
+            <name>Longitude</name>
+            <returntype>double</returntype>
+            <parameter>
+                <name>Longitude</name>
+                <type>double</type>
+            </parameter>
+            <comment>Get or Set the Longitude of the GeoPoint.</comment>
+        </property>
+    </class>
+    <class>
+        <name>uk.co.martinpearman.b4a.osmdroid.util.wrappers.BoundingBoxE6Wrapper</name>
+        <shortname>BoundingBox</shortname>
+        <objectwrapper>org.osmdroid.util.BoundingBoxE6</objectwrapper>
+        <owner>process</owner>
+        <method>
+            <name>Extend</name>
+            <comment>Extend the bounds of this BoundingBox with the bounds of BoundingBox1.</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>BoundingBox1</name>
+                <type>org.osmdroid.util.BoundingBoxE6</type>
+            </parameter>
+        </method>
+        <method>
+            <name>Initialize</name>
+            <comment>Initialise the BoundingBox with NorthWest and SouthEast Latitude and Longitude.</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>LatitudeNorth</name>
+                <type>double</type>
+            </parameter>
+            <parameter>
+                <name>LongitudeWest</name>
+                <type>double</type>
+            </parameter>
+            <parameter>
+                <name>LatitudeSouth</name>
+                <type>double</type>
+            </parameter>
+            <parameter>
+                <name>LongitudeEast</name>
+                <type>double</type>
+            </parameter>
+        </method>
+        <method>
+            <name>GetNorthWest</name>
+            <comment>Get the top left point of this BoundingBox as a GeoPoint.</comment>
+            <returntype>uk.co.martinpearman.b4a.osmdroid.util.wrappers.GeoPointWrapper</returntype>
+        </method>
+        <method>
+            <name>GetSouthEast</name>
+            <comment>Get the bottom right point of this BoundingBox as a GeoPoint.</comment>
+            <returntype>uk.co.martinpearman.b4a.osmdroid.util.wrappers.GeoPointWrapper</returntype>
+        </method>
+        <method>
+            <name>Contains</name>
+            <comment>Returns True if this BoundingBox contains the Latitude, Longitude.</comment>
+            <returntype>boolean</returntype>
+            <parameter>
+                <name>Latitude</name>
+                <type>double</type>
+            </parameter>
+            <parameter>
+                <name>Longitude</name>
+                <type>double</type>
+            </parameter>
+        </method>
+        <method>
+            <name>Contains2</name>
+            <comment>Returns True if this BoundingBox contains GeoPoint1.</comment>
+            <returntype>boolean</returntype>
+            <parameter>
+                <name>GeoPoint1</name>
+                <type>org.osmdroid.util.GeoPoint</type>
+            </parameter>
+        </method>
+        <method>
+            <name>Initialize2</name>
+            <comment>Initialise the BoundingBox with NorthWest and SouthEast GeoPoints.</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>NorthWest</name>
+                <type>org.osmdroid.util.GeoPoint</type>
+            </parameter>
+            <parameter>
+                <name>SouthEast</name>
+                <type>org.osmdroid.util.GeoPoint</type>
+            </parameter>
+        </method>
+        <method>
+            <name>IsInitialized</name>
+            <comment></comment>
+            <returntype>boolean</returntype>
+        </method>
+        <property>
+            <name>LongitudeEast</name>
+            <returntype>double</returntype>
+            <comment>Get the easterly longitude of this BoundingBox.</comment>
+        </property>
+        <property>
+            <name>LatitudeSouth</name>
+            <returntype>double</returntype>
+            <comment>Get the southerly latitude of this BoundingBox.</comment>
+        </property>
+        <property>
+            <name>LongitudeWest</name>
+            <returntype>double</returntype>
+            <comment>Get the westerly longitude of this BoundingBox.</comment>
+        </property>
+        <property>
+            <name>Center</name>
+            <returntype>uk.co.martinpearman.b4a.osmdroid.util.wrappers.GeoPointWrapper</returntype>
+            <comment></comment>
+        </property>
+        <property>
+            <name>LatitudeNorth</name>
+            <returntype>double</returntype>
+            <comment>Get the northerly latitude of this BoundingBox.</comment>
+        </property>
+    </class>
+    <class>
+        <name>uk.co.martinpearman.b4a.osmdroid.views.overlays.wrappers.MyOverlayItemWrapper</name>
+        <shortname>Marker</shortname>
+        <objectwrapper>uk.co.martinpearman.b4a.osmdroid.views.overlays.MyOverlayItem</objectwrapper>
+        <owner>process</owner>
+        <method>
+            <name>Initialize</name>
+            <comment>Initialize the Marker using Latitude and Longitude.
+Pass Null as Icon value if you want to use the default Icon.</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>Title</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>Description</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>Latitude</name>
+                <type>double</type>
+            </parameter>
+            <parameter>
+                <name>Longitude</name>
+                <type>double</type>
+            </parameter>
+            <parameter>
+                <name>Icon</name>
+                <type>android.graphics.drawable.BitmapDrawable</type>
+            </parameter>
+        </method>
+        <method>
+            <name>Initialize6</name>
+            <comment>Initialize the Marker using a GeoPoint object and UniqueId.
+Pass Null as Icon value if you want to use the default Icon.</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>UniqueId</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>Title</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>Description</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>aGeoPoint</name>
+                <type>org.osmdroid.util.GeoPoint</type>
+            </parameter>
+            <parameter>
+                <name>Icon</name>
+                <type>android.graphics.drawable.BitmapDrawable</type>
+            </parameter>
+        </method>
+        <method>
+            <name>Initialize4</name>
+            <comment>Initialize the Marker using Latitude, Longitude and UniqueId.
+Pass Null as Icon value if you want to use the default Icon.</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>UniqueId</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>Title</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>Description</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>Latitude</name>
+                <type>double</type>
+            </parameter>
+            <parameter>
+                <name>Longitude</name>
+                <type>double</type>
+            </parameter>
+            <parameter>
+                <name>Icon</name>
+                <type>android.graphics.drawable.BitmapDrawable</type>
+            </parameter>
+        </method>
+        <method>
+            <name>IsEqualTo</name>
+            <comment>Returns True if this Marker is the same object as aMarker.</comment>
+            <returntype>boolean</returntype>
+            <parameter>
+                <name>aMarker</name>
+                <type>uk.co.martinpearman.b4a.osmdroid.views.overlays.MyOverlayItem</type>
+            </parameter>
+        </method>
+        <method>
+            <name>Initialize5</name>
+            <comment>Initialize the Marker using a Location object and UniqueId.
+Pass Null as Icon value if you want to use the default Icon.</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>UniqueId</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>Title</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>Description</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>aLocation</name>
+                <type>android.location.Location</type>
+            </parameter>
+            <parameter>
+                <name>Icon</name>
+                <type>android.graphics.drawable.BitmapDrawable</type>
+            </parameter>
+        </method>
+        <method>
+            <name>Initialize2</name>
+            <comment>Initialize the Marker using a Location object.
+Pass Null as Icon value if you want to use the default Icon.</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>Title</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>Description</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>aLocation</name>
+                <type>android.location.Location</type>
+            </parameter>
+            <parameter>
+                <name>Icon</name>
+                <type>android.graphics.drawable.BitmapDrawable</type>
+            </parameter>
+        </method>
+        <method>
+            <name>Initialize3</name>
+            <comment>Initialize the Marker using a GeoPoint object.
+Pass Null as Icon value if you want to use the default Icon.</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>Title</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>Description</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>aGeoPoint</name>
+                <type>org.osmdroid.util.GeoPoint</type>
+            </parameter>
+            <parameter>
+                <name>Icon</name>
+                <type>android.graphics.drawable.BitmapDrawable</type>
+            </parameter>
+        </method>
+        <method>
+            <name>IsInitialized</name>
+            <comment></comment>
+            <returntype>boolean</returntype>
+        </method>
+        <property>
+            <name>Description</name>
+            <returntype>java.lang.String</returntype>
+            <comment>Get the Marker description.</comment>
+        </property>
+        <property>
+            <name>GeoPoint</name>
+            <returntype>uk.co.martinpearman.b4a.osmdroid.util.wrappers.GeoPointWrapper</returntype>
+            <comment>Get the Marker location.</comment>
+        </property>
+        <property>
+            <name>MarkerHotspot</name>
+            <parameter>
+                <name>HotspotPlace</name>
+                <type EnumType="true">org.osmdroid.views.overlay.OverlayItem.HotspotPlace</type>
+            </parameter>
+            <comment>Set the hotspot for a Marker.
+ This is where the origin (0,0) of a point will be located relative to the Marker.
+ In other words this acts as an offset. NONE indicates that no adjustment should be made.</comment>
+        </property>
+        <property>
+            <name>UniqueId</name>
+            <returntype>java.lang.String</returntype>
+            <comment>Get the Marker UniqueId.</comment>
+        </property>
+        <property>
+            <name>Title</name>
+            <returntype>java.lang.String</returntype>
+            <comment>Get the Marker title.</comment>
+        </property>
+        <field>
+            <name>HOTSPOT_PLACE_UPPER_RIGHT_CORNER</name>
+            <comment></comment>
+            <returntype EnumType="true">org.osmdroid.views.overlay.OverlayItem.HotspotPlace</returntype>
+        </field>
+        <field>
+            <name>HOTSPOT_PLACE_TOP_CENTER</name>
+            <comment></comment>
+            <returntype EnumType="true">org.osmdroid.views.overlay.OverlayItem.HotspotPlace</returntype>
+        </field>
+        <field>
+            <name>HOTSPOT_PLACE_LOWER_RIGHT_CORNER</name>
+            <comment></comment>
+            <returntype EnumType="true">org.osmdroid.views.overlay.OverlayItem.HotspotPlace</returntype>
+        </field>
+        <field>
+            <name>HOTSPOT_PLACE_UPPER_LEFT_CORNER</name>
+            <comment></comment>
+            <returntype EnumType="true">org.osmdroid.views.overlay.OverlayItem.HotspotPlace</returntype>
+        </field>
+        <field>
+            <name>HOTSPOT_PLACE_LEFT_CENTER</name>
+            <comment></comment>
+            <returntype EnumType="true">org.osmdroid.views.overlay.OverlayItem.HotspotPlace</returntype>
+        </field>
+        <field>
+            <name>HOTSPOT_PLACE_CENTER</name>
+            <comment></comment>
+            <returntype EnumType="true">org.osmdroid.views.overlay.OverlayItem.HotspotPlace</returntype>
+        </field>
+        <field>
+            <name>HOTSPOT_PLACE_LOWER_LEFT_CORNER</name>
+            <comment></comment>
+            <returntype EnumType="true">org.osmdroid.views.overlay.OverlayItem.HotspotPlace</returntype>
+        </field>
+        <field>
+            <name>HOTSPOT_PLACE_RIGHT_CENTER</name>
+            <comment></comment>
+            <returntype EnumType="true">org.osmdroid.views.overlay.OverlayItem.HotspotPlace</returntype>
+        </field>
+        <field>
+            <name>HOTSPOT_PLACE_BOTTOM_CENTER</name>
+            <comment></comment>
+            <returntype EnumType="true">org.osmdroid.views.overlay.OverlayItem.HotspotPlace</returntype>
+        </field>
+        <field>
+            <name>HOTSPOT_PLACE_NONE</name>
+            <comment></comment>
+            <returntype EnumType="true">org.osmdroid.views.overlay.OverlayItem.HotspotPlace</returntype>
+        </field>
+    </class>
+    <class>
+        <name>uk.co.martinpearman.b4a.osmdroid.views.overlays.wrappers.MyMyLocationOverlayWrapper</name>
+        <shortname>MyLocationOverlay</shortname>
+        <objectwrapper>uk.co.martinpearman.b4a.osmdroid.views.overlays.MyMyLocationOverlay</objectwrapper>
+        <owner>activity</owner>
+        <event>FollowLocationAutoDisabled</event>
+        <event>LocationChanged(NewLocation As Location, IsFirstFix As Boolean)</event>
+        <event>ProviderChanged(Provider As String, Enabled As Boolean)</event>
+        <method>
+            <name>Initialize</name>
+            <comment>Initialize the MyLocationOverlay.</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>pBA</name>
+                <type>anywheresoftware.b4a.BA</type>
+            </parameter>
+            <parameter>
+                <name>aMapView</name>
+                <type>org.osmdroid.views.MapView</type>
+            </parameter>
+            <parameter>
+                <name>EventName</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+        <method>
+            <name>SetCompassCenter</name>
+            <comment>Set the point at which the compass should be drawn within the MapView.
+Default value is (35, 35).</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>X</name>
+                <type>float</type>
+            </parameter>
+            <parameter>
+                <name>Y</name>
+                <type>float</type>
+            </parameter>
+        </method>
+        <method>
+            <name>IsInitialized</name>
+            <comment></comment>
+            <returntype>boolean</returntype>
+        </method>
+        <property>
+            <name>LocationUpdateMinDistance</name>
+            <returntype>float</returntype>
+            <parameter>
+                <name>Meters</name>
+                <type>float</type>
+            </parameter>
+            <comment>Get or Set the minimum distance (in meters) change that should be considered a new GPS fix.
+Default value is 0.</comment>
+        </property>
+        <property>
+            <name>LocationUpdateMinTime</name>
+            <returntype>long</returntype>
+            <parameter>
+                <name>MilliSeconds</name>
+                <type>long</type>
+            </parameter>
+            <comment>Get or Set the minimum time (in milliseconds) between GPS fixes that should treat the last fix as a new fix.
+Default value is 0.</comment>
+        </property>
+        <property>
+            <name>FollowLocationEnabled</name>
+            <returntype>boolean</returntype>
+            <parameter>
+                <name>Enabled</name>
+                <type>boolean</type>
+            </parameter>
+            <comment>Get or Set whether FollowLocation is enabled.
+If FollowLocation is enabled then the map will automatically center itself on the last GPS fix.
+Default value is False.</comment>
+        </property>
+        <property>
+            <name>CompassEnabled</name>
+            <returntype>boolean</returntype>
+            <parameter>
+                <name>Enabled</name>
+                <type>boolean</type>
+            </parameter>
+            <comment>Get or Set whether the compass is enabled.
+Default value is False.</comment>
+        </property>
+        <property>
+            <name>LastFix</name>
+            <returntype>anywheresoftware.b4a.gps.LocationWrapper</returntype>
+            <comment>Get the last GPS fix as a Location object.</comment>
+        </property>
+        <property>
+            <name>DrawAccuracyEnabled</name>
+            <returntype>boolean</returntype>
+            <parameter>
+                <name>Enabled</name>
+                <type>boolean</type>
+            </parameter>
+            <comment>Get or Set whether the DrawAccuracy circle is drawn around the Person icon.
+Default value is True.</comment>
+        </property>
+        <property>
+            <name>PersonIcon</name>
+            <parameter>
+                <name>Bitmap1</name>
+                <type>android.graphics.Bitmap</type>
+            </parameter>
+            <comment>Sets the icon used for the MyLocationOverlay.
+ The default icon is a 'pegman' type person icon.</comment>
+        </property>
+        <property>
+            <name>MyLocationEnabled</name>
+            <returntype>boolean</returntype>
+            <parameter>
+                <name>Enabled</name>
+                <type>boolean</type>
+            </parameter>
+            <comment>Get or Set whether the MyLocationOverlay should listen for GPS fixes.
+Default value is False.</comment>
+        </property>
+    </class>
+    <class>
+        <name>uk.co.martinpearman.b4a.osmdroid.views.overlays.wrappers.DeprecatedItemizedIconOverlayWrapper</name>
+        <shortname>MarkersOverlay</shortname>
+        <objectwrapper>uk.co.martinpearman.b4a.osmdroid.views.overlays.DeprecatedItemizedIconOverlay</objectwrapper>
+        <owner>activity</owner>
+        <event>Click(Title As String, Description As String, Point As GeoPoint) As Boolean</event>
+        <event>LongClick(Title As String, Description As String, Point As GeoPoint) As Boolean</event>
+        <method>
+            <name>Initialize</name>
+            <comment>Initialize the MarkersOverlay.</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>pBA</name>
+                <type>anywheresoftware.b4a.BA</type>
+            </parameter>
+            <parameter>
+                <name>aMapView</name>
+                <type>org.osmdroid.views.MapView</type>
+            </parameter>
+            <parameter>
+                <name>EventName</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+        <method>
+            <name>GetBoundingBox</name>
+            <comment>Get a BoundingBox which represents the area that is covered by the Markers.</comment>
+            <returntype>uk.co.martinpearman.b4a.osmdroid.util.wrappers.BoundingBoxE6Wrapper</returntype>
+        </method>
+        <method>
+            <name>AddMarkers</name>
+            <comment>Add a List of Markers to the MarkersOverlay.</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>Markers</name>
+                <type>anywheresoftware.b4a.objects.collections.List</type>
+            </parameter>
+        </method>
+        <method>
+            <name>RemoveMarkers</name>
+            <comment>Remove all Markers from the MarkersOverlay.</comment>
+            <returntype>void</returntype>
+        </method>
+        <method>
+            <name>IsInitialized</name>
+            <comment></comment>
+            <returntype>boolean</returntype>
+        </method>
+        <method>
+            <name>RemoveMarker</name>
+            <comment>Remove a Marker from the MarkersOverlay.</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>Marker</name>
+                <type>uk.co.martinpearman.b4a.osmdroid.views.overlays.MyOverlayItem</type>
+            </parameter>
+        </method>
+    </class>
+    <class>
+        <name>uk.co.martinpearman.b4a.osmdroid.views.overlays.wrappers.MinimapOverlayWrapper</name>
+        <shortname>MinimapOverlay</shortname>
+        <objectwrapper>org.osmdroid.views.overlay.MinimapOverlay</objectwrapper>
+        <owner>activity</owner>
+        <method>
+            <name>SetTileSource</name>
+            <comment>Set the TileSource that the minimap should display.</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>TileSource</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+        <method>
+            <name>Initialize</name>
+            <comment>Initialize the MinimapOverlay.</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>pBA</name>
+                <type>anywheresoftware.b4a.BA</type>
+            </parameter>
+            <parameter>
+                <name>aMapView</name>
+                <type>org.osmdroid.views.MapView</type>
+            </parameter>
+        </method>
+        <method>
+            <name>IsInitialized</name>
+            <comment></comment>
+            <returntype>boolean</returntype>
+        </method>
+        <property>
+            <name>ZoomDifference</name>
+            <returntype>int</returntype>
+            <parameter>
+                <name>ZoomDifference</name>
+                <type>int</type>
+            </parameter>
+            <comment>Get or Set the difference in zoom levels between the minimap and the main MapView map.
+Default value varies based upon the TileSource being used by the main MapView map.</comment>
+        </property>
+        <property>
+            <name>Height</name>
+            <returntype>int</returntype>
+            <parameter>
+                <name>Height</name>
+                <type>int</type>
+            </parameter>
+            <comment>Get or Set the height of the minimap in pixels.
+Default height is 100 pixels.</comment>
+        </property>
+        <property>
+            <name>Width</name>
+            <returntype>int</returntype>
+            <parameter>
+                <name>Width</name>
+                <type>int</type>
+            </parameter>
+            <comment>Get or Set the width of the minimap in pixels.
+Default width is 100 pixels.</comment>
+        </property>
+        <property>
+            <name>Padding</name>
+            <returntype>int</returntype>
+            <parameter>
+                <name>Padding</name>
+                <type>int</type>
+            </parameter>
+            <comment>Get or Set the padding (in pixels) between the minimap and the bottom right hand corner of the MapView.
+Default padding is 10 pixels.</comment>
+        </property>
+    </class>
+    <class>
+        <name>uk.co.martinpearman.b4a.osmdroid.views.overlays.wrappers.TilesOverlayWrapper</name>
+        <shortname>TilesOverlay</shortname>
+        <objectwrapper>org.osmdroid.views.overlay.TilesOverlay</objectwrapper>
+        <owner>activity</owner>
+        <method>
+            <name>Initialize</name>
+            <comment>Initialize the TilesOverlay, the TileSource must implement the Slippy map tile naming convention.</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>pBA</name>
+                <type>anywheresoftware.b4a.BA</type>
+            </parameter>
+            <parameter>
+                <name>Name</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>MinZoomLevel</name>
+                <type>int</type>
+            </parameter>
+            <parameter>
+                <name>MaxZoomLevel</name>
+                <type>int</type>
+            </parameter>
+            <parameter>
+                <name>TileSize</name>
+                <type>int</type>
+            </parameter>
+            <parameter>
+                <name>TileFilenameEnding</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>BaseUrl</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+        <method>
+            <name>Initialize4</name>
+            <comment>Initialize the TilesOverlay, the TileSource must implement the TileMapService (TMS) map tile naming convention.
+An Array of Strings is passed for the BaseUrls parameter.</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>pBA</name>
+                <type>anywheresoftware.b4a.BA</type>
+            </parameter>
+            <parameter>
+                <name>Name</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>MinZoomLevel</name>
+                <type>int</type>
+            </parameter>
+            <parameter>
+                <name>MaxZoomLevel</name>
+                <type>int</type>
+            </parameter>
+            <parameter>
+                <name>TileSize</name>
+                <type>int</type>
+            </parameter>
+            <parameter>
+                <name>TileFilenameEnding</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>BaseUrls</name>
+                <type>java.lang.String[]</type>
+            </parameter>
+        </method>
+        <method>
+            <name>Initialize2</name>
+            <comment>Initialize the TilesOverlay, the TileSource must implement the Slippy map tile naming convention.
+An Array of Strings is passed for the BaseUrls parameter.</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>pBA</name>
+                <type>anywheresoftware.b4a.BA</type>
+            </parameter>
+            <parameter>
+                <name>Name</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>MinZoomLevel</name>
+                <type>int</type>
+            </parameter>
+            <parameter>
+                <name>MaxZoomLevel</name>
+                <type>int</type>
+            </parameter>
+            <parameter>
+                <name>TileSize</name>
+                <type>int</type>
+            </parameter>
+            <parameter>
+                <name>TileFilenameEnding</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>BaseUrls</name>
+                <type>java.lang.String[]</type>
+            </parameter>
+        </method>
+        <method>
+            <name>Initialize3</name>
+            <comment>Initialize the TilesOverlay, the TileSource must implement the TileMapService (TMS) map tile naming convention.</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>pBA</name>
+                <type>anywheresoftware.b4a.BA</type>
+            </parameter>
+            <parameter>
+                <name>Name</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>MinZoomLevel</name>
+                <type>int</type>
+            </parameter>
+            <parameter>
+                <name>MaxZoomLevel</name>
+                <type>int</type>
+            </parameter>
+            <parameter>
+                <name>TileSize</name>
+                <type>int</type>
+            </parameter>
+            <parameter>
+                <name>TileFilenameEnding</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>BaseUrl</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+        <method>
+            <name>IsInitialized</name>
+            <comment></comment>
+            <returntype>boolean</returntype>
+        </method>
+        <property>
+            <name>DataConnectionEnabled</name>
+            <returntype>boolean</returntype>
+            <parameter>
+                <name>Enabled</name>
+                <type>boolean</type>
+            </parameter>
+            <comment>Get or Set whether this TilesOverlay will use the device's data connection.</comment>
+        </property>
+        <property>
+            <name>LoadingLineColor</name>
+            <returntype>int</returntype>
+            <parameter>
+                <name>aColor</name>
+                <type>int</type>
+            </parameter>
+            <comment>Get or Set the line color used to separate the background color drawn while waiting a tile to be downloaded.
+The line color will only be drawn if the background color is NOT set to transparent.
+The default value is Colors.rgb(200, 192, 192).</comment>
+        </property>
+        <property>
+            <name>LoadingBackgroundColor</name>
+            <returntype>int</returntype>
+            <parameter>
+                <name>aColor</name>
+                <type>int</type>
+            </parameter>
+            <comment>Get or Set the background color displayed while waiting for a tile to be downloaded.
+Setting a value of Colors.TRANSPARENT will disable the display of any background color.
+The default value is Colors.TRANSPARENT, no background color is displayed.</comment>
+        </property>
+    </class>
+    <class>
+        <name>uk.co.martinpearman.b4a.osmdroid.views.overlays.wrappers.TouchEventsOverlayWrapper</name>
+        <shortname>TouchEventsOverlay</shortname>
+        <objectwrapper>uk.co.martinpearman.b4a.osmdroid.views.overlays.TouchEventsOverlay</objectwrapper>
+        <owner>activity</owner>
+        <event>Click(GeoPoint1 As GeoPoint) As Boolean</event>
+        <event>LongClick(GeoPoint1 As GeoPoint) As Boolean</event>
+        <method>
+            <name>Initialize</name>
+            <comment></comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>pBA</name>
+                <type>anywheresoftware.b4a.BA</type>
+            </parameter>
+            <parameter>
+                <name>EventName</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+        <method>
+            <name>IsInitialized</name>
+            <comment></comment>
+            <returntype>boolean</returntype>
+        </method>
+    </class>
+    <class>
+        <name>uk.co.martinpearman.b4a.osmdroid.views.overlays.wrappers.BalloonMyOverlayItemWrapper</name>
+        <shortname>BalloonMarker</shortname>
+        <objectwrapper>uk.co.martinpearman.b4a.osmdroid.views.overlays.MyOverlayItem</objectwrapper>
+        <owner>process</owner>
+        <method>
+            <name>Initialize</name>
+            <comment>Initialize the Marker using Latitude and Longitude.
+Pass Null as Icon value if you want to use the default Icon.</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>Title</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>Description</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>Latitude</name>
+                <type>double</type>
+            </parameter>
+            <parameter>
+                <name>Longitude</name>
+                <type>double</type>
+            </parameter>
+            <parameter>
+                <name>Icon</name>
+                <type>android.graphics.drawable.BitmapDrawable</type>
+            </parameter>
+        </method>
+        <method>
+            <name>Initialize6</name>
+            <comment>Initialize the Marker using a GeoPoint object and UniqueId.
+Pass Null as Icon value if you want to use the default Icon.</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>UniqueId</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>Title</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>Description</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>aGeoPoint</name>
+                <type>org.osmdroid.util.GeoPoint</type>
+            </parameter>
+            <parameter>
+                <name>Icon</name>
+                <type>android.graphics.drawable.BitmapDrawable</type>
+            </parameter>
+        </method>
+        <method>
+            <name>Initialize4</name>
+            <comment>Initialize the Marker using Latitude, Longitude and UniqueId.
+Pass Null as Icon value if you want to use the default Icon.</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>UniqueId</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>Title</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>Description</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>Latitude</name>
+                <type>double</type>
+            </parameter>
+            <parameter>
+                <name>Longitude</name>
+                <type>double</type>
+            </parameter>
+            <parameter>
+                <name>Icon</name>
+                <type>android.graphics.drawable.BitmapDrawable</type>
+            </parameter>
+        </method>
+        <method>
+            <name>IsEqualTo</name>
+            <comment>Returns True if this Marker is the same object as aMarker.</comment>
+            <returntype>boolean</returntype>
+            <parameter>
+                <name>aMarker</name>
+                <type>uk.co.martinpearman.b4a.osmdroid.views.overlays.MyOverlayItem</type>
+            </parameter>
+        </method>
+        <method>
+            <name>Initialize5</name>
+            <comment>Initialize the Marker using a Location object and UniqueId.
+Pass Null as Icon value if you want to use the default Icon.</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>UniqueId</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>Title</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>Description</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>aLocation</name>
+                <type>android.location.Location</type>
+            </parameter>
+            <parameter>
+                <name>Icon</name>
+                <type>android.graphics.drawable.BitmapDrawable</type>
+            </parameter>
+        </method>
+        <method>
+            <name>Initialize2</name>
+            <comment>Initialize the Marker using a Location object.
+Pass Null as Icon value if you want to use the default Icon.</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>Title</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>Description</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>aLocation</name>
+                <type>android.location.Location</type>
+            </parameter>
+            <parameter>
+                <name>Icon</name>
+                <type>android.graphics.drawable.BitmapDrawable</type>
+            </parameter>
+        </method>
+        <method>
+            <name>Initialize3</name>
+            <comment>Initialize the Marker using a GeoPoint object.
+Pass Null as Icon value if you want to use the default Icon.</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>Title</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>Description</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>aGeoPoint</name>
+                <type>org.osmdroid.util.GeoPoint</type>
+            </parameter>
+            <parameter>
+                <name>Icon</name>
+                <type>android.graphics.drawable.BitmapDrawable</type>
+            </parameter>
+        </method>
+        <method>
+            <name>IsInitialized</name>
+            <comment></comment>
+            <returntype>boolean</returntype>
+        </method>
+        <property>
+            <name>Description</name>
+            <returntype>java.lang.String</returntype>
+            <comment>Get the Marker description.</comment>
+        </property>
+        <property>
+            <name>GeoPoint</name>
+            <returntype>uk.co.martinpearman.b4a.osmdroid.util.wrappers.GeoPointWrapper</returntype>
+            <comment>Get the Marker location.</comment>
+        </property>
+        <property>
+            <name>MarkerHotspot</name>
+            <parameter>
+                <name>HotspotPlace</name>
+                <type EnumType="true">org.osmdroid.views.overlay.OverlayItem.HotspotPlace</type>
+            </parameter>
+            <comment>Set the hotspot for a Marker.
+ This is where the origin (0,0) of a point will be located relative to the Marker.
+ In other words this acts as an offset. NONE indicates that no adjustment should be made.</comment>
+        </property>
+        <property>
+            <name>LayoutName</name>
+            <returntype>java.lang.String</returntype>
+            <parameter>
+                <name>LayoutFileName</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <comment></comment>
+        </property>
+        <property>
+            <name>UniqueId</name>
+            <returntype>java.lang.String</returntype>
+            <comment>Get the Marker UniqueId.</comment>
+        </property>
+        <property>
+            <name>Title</name>
+            <returntype>java.lang.String</returntype>
+            <comment>Get the Marker title.</comment>
+        </property>
+        <field>
+            <name>HOTSPOT_PLACE_UPPER_RIGHT_CORNER</name>
+            <comment></comment>
+            <returntype EnumType="true">org.osmdroid.views.overlay.OverlayItem.HotspotPlace</returntype>
+        </field>
+        <field>
+            <name>HOTSPOT_PLACE_TOP_CENTER</name>
+            <comment></comment>
+            <returntype EnumType="true">org.osmdroid.views.overlay.OverlayItem.HotspotPlace</returntype>
+        </field>
+        <field>
+            <name>HOTSPOT_PLACE_LOWER_RIGHT_CORNER</name>
+            <comment></comment>
+            <returntype EnumType="true">org.osmdroid.views.overlay.OverlayItem.HotspotPlace</returntype>
+        </field>
+        <field>
+            <name>HOTSPOT_PLACE_UPPER_LEFT_CORNER</name>
+            <comment></comment>
+            <returntype EnumType="true">org.osmdroid.views.overlay.OverlayItem.HotspotPlace</returntype>
+        </field>
+        <field>
+            <name>HOTSPOT_PLACE_LEFT_CENTER</name>
+            <comment></comment>
+            <returntype EnumType="true">org.osmdroid.views.overlay.OverlayItem.HotspotPlace</returntype>
+        </field>
+        <field>
+            <name>HOTSPOT_PLACE_CENTER</name>
+            <comment></comment>
+            <returntype EnumType="true">org.osmdroid.views.overlay.OverlayItem.HotspotPlace</returntype>
+        </field>
+        <field>
+            <name>HOTSPOT_PLACE_LOWER_LEFT_CORNER</name>
+            <comment></comment>
+            <returntype EnumType="true">org.osmdroid.views.overlay.OverlayItem.HotspotPlace</returntype>
+        </field>
+        <field>
+            <name>HOTSPOT_PLACE_RIGHT_CENTER</name>
+            <comment></comment>
+            <returntype EnumType="true">org.osmdroid.views.overlay.OverlayItem.HotspotPlace</returntype>
+        </field>
+        <field>
+            <name>HOTSPOT_PLACE_BOTTOM_CENTER</name>
+            <comment></comment>
+            <returntype EnumType="true">org.osmdroid.views.overlay.OverlayItem.HotspotPlace</returntype>
+        </field>
+        <field>
+            <name>HOTSPOT_PLACE_NONE</name>
+            <comment></comment>
+            <returntype EnumType="true">org.osmdroid.views.overlay.OverlayItem.HotspotPlace</returntype>
+        </field>
+    </class>
+    <class>
+        <name>uk.co.martinpearman.b4a.osmdroid.views.overlays.wrappers.MyItemizedIconOverlayWrapper</name>
+        <shortname>MarkersEventsOverlay</shortname>
+        <objectwrapper>uk.co.martinpearman.b4a.osmdroid.views.overlays.MyItemizedIconOverlay</objectwrapper>
+        <owner>activity</owner>
+        <event>Click(Marker1 As Marker) As Boolean</event>
+        <event>LongClick(Marker1 As Marker) As Boolean</event>
+        <method>
+            <name>Initialize</name>
+            <comment>Initialize the MarkersEventsOverlay.</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>pBA</name>
+                <type>anywheresoftware.b4a.BA</type>
+            </parameter>
+            <parameter>
+                <name>aMapView</name>
+                <type>org.osmdroid.views.MapView</type>
+            </parameter>
+            <parameter>
+                <name>EventName</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+        <method>
+            <name>GetBoundingBox</name>
+            <comment>Get a BoundingBox which represents the area that is covered by the Markers.</comment>
+            <returntype>uk.co.martinpearman.b4a.osmdroid.util.wrappers.BoundingBoxE6Wrapper</returntype>
+        </method>
+        <method>
+            <name>AddMarkers</name>
+            <comment>Add a List of Markers to the MarkersEventsOverlay.</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>Markers</name>
+                <type>anywheresoftware.b4a.objects.collections.List</type>
+            </parameter>
+        </method>
+        <method>
+            <name>RemoveMarkers</name>
+            <comment>Remove all Markers from the MarkersEventsOverlay.</comment>
+            <returntype>void</returntype>
+        </method>
+        <method>
+            <name>IsInitialized</name>
+            <comment></comment>
+            <returntype>boolean</returntype>
+        </method>
+        <method>
+            <name>RemoveMarker</name>
+            <comment>Remove a Marker from the MarkersEventsOverlay.</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>Marker</name>
+                <type>uk.co.martinpearman.b4a.osmdroid.views.overlays.MyOverlayItem</type>
+            </parameter>
+        </method>
+    </class>
+    <class>
+        <name>uk.co.martinpearman.b4a.osmdroid.views.overlays.wrappers.DeprecatedItemizedOverlayWithFocusWrapper</name>
+        <shortname>MarkersFocusOverlay</shortname>
+        <objectwrapper>uk.co.martinpearman.b4a.osmdroid.views.overlays.DeprecatedItemizedOverlayWithFocus</objectwrapper>
+        <owner>activity</owner>
+        <method>
+            <name>Initialize</name>
+            <comment>Initialize the MarkersFocusOverlay.</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>pBA</name>
+                <type>anywheresoftware.b4a.BA</type>
+            </parameter>
+            <parameter>
+                <name>aMapView</name>
+                <type>org.osmdroid.views.MapView</type>
+            </parameter>
+        </method>
+        <method>
+            <name>SetInfoWindowDescriptionSize</name>
+            <comment>Set the size of the InfoWindow title text.</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>Size</name>
+                <type>float</type>
+            </parameter>
+        </method>
+        <method>
+            <name>GetBoundingBox</name>
+            <comment>Get a BoundingBox which represents the area that is covered by the Markers.</comment>
+            <returntype>uk.co.martinpearman.b4a.osmdroid.util.wrappers.BoundingBoxE6Wrapper</returntype>
+        </method>
+        <method>
+            <name>AddMarkers</name>
+            <comment>Add a List of Markers to the MarkersFocusOverlay.</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>Markers</name>
+                <type>anywheresoftware.b4a.objects.collections.List</type>
+            </parameter>
+        </method>
+        <method>
+            <name>SetInfoWindowBackgroundColor</name>
+            <comment>Set the background color of the InfoWindow.</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>Color</name>
+                <type>int</type>
+            </parameter>
+        </method>
+        <method>
+            <name>SetInfoWindowDescriptionColor</name>
+            <comment>Set the color of the InfoWindow description text.</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>Color</name>
+                <type>int</type>
+            </parameter>
+        </method>
+        <method>
+            <name>SetInfoWindowTitleSize</name>
+            <comment>Set the size of the InfoWindow title text.</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>Size</name>
+                <type>float</type>
+            </parameter>
+        </method>
+        <method>
+            <name>RemoveMarker</name>
+            <comment>Remove a Marker from the MarkersFocusOverlay.</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>Marker</name>
+                <type>uk.co.martinpearman.b4a.osmdroid.views.overlays.MyOverlayItem</type>
+            </parameter>
+        </method>
+        <method>
+            <name>SetInfoWindowTitleColor</name>
+            <comment>Set the color of the InfoWindow title text.</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>Color</name>
+                <type>int</type>
+            </parameter>
+        </method>
+        <method>
+            <name>SetInfoWindowMaxWidth</name>
+            <comment>Set the maximum width (in pixels) of the InfoWindow.
+200 pixels is the default width.</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>Width</name>
+                <type>int</type>
+            </parameter>
+        </method>
+        <method>
+            <name>RemoveMarkers</name>
+            <comment>Remove all Markers from the MarkersOverlay.</comment>
+            <returntype>void</returntype>
+        </method>
+        <method>
+            <name>IsInitialized</name>
+            <comment></comment>
+            <returntype>boolean</returntype>
+        </method>
+    </class>
+    <class>
+        <name>uk.co.martinpearman.b4a.osmdroid.views.overlays.wrappers.MyScaleBarOverlayWrapper</name>
+        <shortname>ScaleBarOverlay</shortname>
+        <objectwrapper>uk.co.martinpearman.b4a.osmdroid.views.overlays.MyScaleBarOverlay</objectwrapper>
+        <owner>activity</owner>
+        <method>
+            <name>Initialize</name>
+            <comment>Initialise the ScaleBarOverlay.</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>pBA</name>
+                <type>anywheresoftware.b4a.BA</type>
+            </parameter>
+            <parameter>
+                <name>aMapView</name>
+                <type>org.osmdroid.views.MapView</type>
+            </parameter>
+        </method>
+        <method>
+            <name>SetMinZoom</name>
+            <comment>Set the minimum zoom level at which to display the scale bar.
+Default minimum zoom level is 0.</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>MinZoom</name>
+                <type>int</type>
+            </parameter>
+        </method>
+        <method>
+            <name>SetScaleUnit</name>
+            <comment>Set the unit of measure to be used by the scale bar.
+Possible values are:
+ScaleBarOverlay.SCALE_UNIT_IMPERIAL
+ScaleBarOverlay.SCALE_UNIT_METRIC
+ScaleBarOverlay.SCALE_UNIT_NAUTICAL
+
+Default value is ScaleBarOverlay.SCALE_UNIT_METRIC</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>ScaleUnit</name>
+                <type>int</type>
+            </parameter>
+        </method>
+        <method>
+            <name>SetEnabled</name>
+            <comment>Set whether the scale bar should be drawn on the map.</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>Enabled</name>
+                <type>boolean</type>
+            </parameter>
+        </method>
+        <method>
+            <name>SetTextColor</name>
+            <comment>Set the color of the scale bar label text.</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>TextColor</name>
+                <type>int</type>
+            </parameter>
+        </method>
+        <method>
+            <name>SetLineWidth</name>
+            <comment>Set the width of the line used to draw the scale bar.
+Default line width is 2 pixels.</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>LineWidth</name>
+                <type>float</type>
+            </parameter>
+        </method>
+        <method>
+            <name>SetOffset</name>
+            <comment>Set the offset at which to display the scale bar on the map.
+Default offset is (10, 10)</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>X</name>
+                <type>float</type>
+            </parameter>
+            <parameter>
+                <name>Y</name>
+                <type>float</type>
+            </parameter>
+        </method>
+        <method>
+            <name>SetPosition</name>
+            <comment>Set the position to display the scale bar within the MapView.
+Possible values are:
+ScaleBarOverlay.BOTTOM_LEFT
+ScaleBarOverlay.TOP_LEFT
+
+Default value is ScaleBarOverlay.TOP_LEFT</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>Position</name>
+                <type>int</type>
+            </parameter>
+        </method>
+        <method>
+            <name>SetLineColor</name>
+            <comment>Set the color of the line used to draw the scale bar.</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>LineColor</name>
+                <type>int</type>
+            </parameter>
+        </method>
+        <method>
+            <name>SetTextSize</name>
+            <comment>Set the font size of the scale bar label text.
+Default font size is 12 pixels.</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>TextSize</name>
+                <type>float</type>
+            </parameter>
+        </method>
+        <method>
+            <name>IsInitialized</name>
+            <comment></comment>
+            <returntype>boolean</returntype>
+        </method>
+        <field>
+            <name>SCALE_UNIT_METRIC</name>
+            <comment></comment>
+            <returntype>int</returntype>
+        </field>
+        <field>
+            <name>BOTTOM_LEFT</name>
+            <comment></comment>
+            <returntype>int</returntype>
+        </field>
+        <field>
+            <name>SCALE_UNIT_NAUTICAL</name>
+            <comment></comment>
+            <returntype>int</returntype>
+        </field>
+        <field>
+            <name>TOP_LEFT</name>
+            <comment></comment>
+            <returntype>int</returntype>
+        </field>
+        <field>
+            <name>SCALE_UNIT_IMPERIAL</name>
+            <comment></comment>
+            <returntype>int</returntype>
+        </field>
+    </class>
+    <class>
+        <name>uk.co.martinpearman.b4a.osmdroid.views.overlays.wrappers.MyItemizedOverlayWithFocusWrapper</name>
+        <shortname>MarkersBalloonOverlay</shortname>
+        <objectwrapper>uk.co.martinpearman.b4a.osmdroid.views.overlays.MyItemizedOverlayWithFocus</objectwrapper>
+        <owner>activity</owner>
+        <event>BalloonClick(ViewTag As String)</event>
+        <event>BalloonLongClick(ViewTag As String)</event>
+        <method>
+            <name>Initialize</name>
+            <comment>Initialize the MarkersBalloonOverlay.</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>pBA</name>
+                <type>anywheresoftware.b4a.BA</type>
+            </parameter>
+            <parameter>
+                <name>aMapView</name>
+                <type>org.osmdroid.views.MapView</type>
+            </parameter>
+            <parameter>
+                <name>EventName</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>BalloonLayoutName</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+        <method>
+            <name>UnsetFocusedMarker</name>
+            <comment>Clears the focused Marker, effectively closing the Balloon.</comment>
+            <returntype>void</returntype>
+        </method>
+        <method>
+            <name>GetBoundingBox</name>
+            <comment>Get a BoundingBox which represents the area that is covered by the Markers.</comment>
+            <returntype>uk.co.martinpearman.b4a.osmdroid.util.wrappers.BoundingBoxE6Wrapper</returntype>
+        </method>
+        <method>
+            <name>AddMarkers</name>
+            <comment>Add a List of Markers to the MarkersBalloonOverlay.</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>Markers</name>
+                <type>anywheresoftware.b4a.objects.collections.List</type>
+            </parameter>
+        </method>
+        <method>
+            <name>RemoveMarkers</name>
+            <comment>Remove all Markers from the MarkersBalloonOverlay.</comment>
+            <returntype>void</returntype>
+        </method>
+        <method>
+            <name>IsInitialized</name>
+            <comment></comment>
+            <returntype>boolean</returntype>
+        </method>
+        <method>
+            <name>RemoveMarker</name>
+            <comment>Remove a Marker from the MarkersBalloonOverlay.</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>Marker</name>
+                <type>uk.co.martinpearman.b4a.osmdroid.views.overlays.MyOverlayItem</type>
+            </parameter>
+        </method>
+        <property>
+            <name>FocusedMarker</name>
+            <returntype>uk.co.martinpearman.b4a.osmdroid.views.overlays.wrappers.MyOverlayItemWrapper</returntype>
+            <parameter>
+                <name>aMarker</name>
+                <type>uk.co.martinpearman.b4a.osmdroid.views.overlays.MyOverlayItem</type>
+            </parameter>
+            <comment>Get or Set the Marker whose Balloon is displayed.
+Returns Null if no Balloon is displayed.</comment>
+        </property>
+    </class>
+    <class>
+        <name>uk.co.martinpearman.b4a.osmdroid.views.overlays.wrappers.MyPathOverlayWrapper</name>
+        <shortname>PathOverlay</shortname>
+        <objectwrapper>uk.co.martinpearman.b4a.osmdroid.views.overlays.MyPathOverlay</objectwrapper>
+        <owner>activity</owner>
+        <method>
+            <name>Initialize</name>
+            <comment>Initialize the PathOverlay and set the PathColor</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>aMapView</name>
+                <type>org.osmdroid.views.MapView</type>
+            </parameter>
+            <parameter>
+                <name>PathColor</name>
+                <type>int</type>
+            </parameter>
+        </method>
+        <method>
+            <name>GetAllPoints</name>
+            <comment>Get a List of all GeoPoints in the path.</comment>
+            <returntype>anywheresoftware.b4a.objects.collections.List</returntype>
+        </method>
+        <method>
+            <name>ClearPath</name>
+            <comment>Clear all points from the path.</comment>
+            <returntype>void</returntype>
+        </method>
+        <method>
+            <name>GetBoundingBox</name>
+            <comment>Get a BoundingBox which represents the area that is covered by the path.</comment>
+            <returntype>uk.co.martinpearman.b4a.osmdroid.util.wrappers.BoundingBoxE6Wrapper</returntype>
+        </method>
+        <method>
+            <name>AddPoint2</name>
+            <comment>Add a Point to the path using a Location object.</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>aLocation</name>
+                <type>android.location.Location</type>
+            </parameter>
+        </method>
+        <method>
+            <name>AddPoints</name>
+            <comment>Add a List of GeoPoints to the path.</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>GeoPoints</name>
+                <type>anywheresoftware.b4a.objects.collections.List</type>
+            </parameter>
+        </method>
+        <method>
+            <name>AddGreatCircle</name>
+            <comment>Add NumberOfPoints points to the path to create a great circle path from StartPoint to EndPoint.</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>StartPoint</name>
+                <type>org.osmdroid.util.GeoPoint</type>
+            </parameter>
+            <parameter>
+                <name>EndPoint</name>
+                <type>org.osmdroid.util.GeoPoint</type>
+            </parameter>
+            <parameter>
+                <name>NumberOfPoints</name>
+                <type>int</type>
+            </parameter>
+        </method>
+        <method>
+            <name>AddPoint3</name>
+            <comment>Add a Point to the path using a GeoPoint object</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>aGeoPoint</name>
+                <type>org.osmdroid.util.GeoPoint</type>
+            </parameter>
+        </method>
+        <method>
+            <name>GetNumberOfPoints</name>
+            <comment>Get the total number of points added to the path.</comment>
+            <returntype>int</returntype>
+        </method>
+        <method>
+            <name>AddPoint</name>
+            <comment>Add a Point to the path using Latitude and Longitude.</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>Latitude</name>
+                <type>double</type>
+            </parameter>
+            <parameter>
+                <name>Longitude</name>
+                <type>double</type>
+            </parameter>
+        </method>
+        <method>
+            <name>IsInitialized</name>
+            <comment></comment>
+            <returntype>boolean</returntype>
+        </method>
+        <property>
+            <name>StrokeWidth</name>
+            <returntype>float</returntype>
+            <parameter>
+                <name>Width</name>
+                <type>float</type>
+            </parameter>
+            <comment>Get or Set the stroke width used to draw the path.
+Default stroke width is 2 pixels.</comment>
+        </property>
+        <property>
+            <name>Alpha</name>
+            <returntype>int</returntype>
+            <parameter>
+                <name>Alpha</name>
+                <type>int</type>
+            </parameter>
+            <comment>Get or Set the Alpha transparency of the path.
+Values of 0 to 255 are valid.
+Default value is 255 fully opaque.</comment>
+        </property>
+        <property>
+            <name>PathStyle</name>
+            <parameter>
+                <name>Style</name>
+                <type EnumType="true">android.graphics.Paint.Style</type>
+            </parameter>
+            <comment>Set the path style used to draw the path.
+Valid values are:
+PathOverlay.FILL
+PathOverlay.FILL_AND_STROKE
+PathOverlay.STROKE
+
+Default value is PathOverlay.STROKE</comment>
+        </property>
+        <property>
+            <name>Color</name>
+            <returntype>int</returntype>
+            <parameter>
+                <name>PathColor</name>
+                <type>int</type>
+            </parameter>
+            <comment>Get or Set the color of the path.</comment>
+        </property>
+        <field>
+            <name>FILL</name>
+            <comment>Geometry and text drawn with this style will be filled, ignoring all stroke-related settings in the paint.</comment>
+            <returntype EnumType="true">android.graphics.Paint.Style</returntype>
+        </field>
+        <field>
+            <name>STROKE</name>
+            <comment>Geometry and text drawn with this style will be stroked, respecting the stroke-related fields on the paint.</comment>
+            <returntype EnumType="true">android.graphics.Paint.Style</returntype>
+        </field>
+        <field>
+            <name>FILL_AND_STROKE</name>
+            <comment>Geometry and text drawn with this style will be both filled and stroked at the same time, respecting the stroke-related fields on the paint.</comment>
+            <returntype EnumType="true">android.graphics.Paint.Style</returntype>
+        </field>
+    </class>
+    <class>
+        <name>uk.co.martinpearman.b4a.osmdroid.views.overlays.wrappers.SimpleLocationOverlayWrapper</name>
+        <shortname>SimpleLocationOverlay</shortname>
+        <objectwrapper>org.osmdroid.views.overlay.SimpleLocationOverlay</objectwrapper>
+        <owner>activity</owner>
+        <method>
+            <name>SetMyLocation3</name>
+            <comment>Set the location of the overlay using a GeoPoint object.</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>aGeoPoint</name>
+                <type>org.osmdroid.util.GeoPoint</type>
+            </parameter>
+        </method>
+        <method>
+            <name>Initialize</name>
+            <comment>Initialize the SimpleLocationOverlay.</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>pBA</name>
+                <type>anywheresoftware.b4a.BA</type>
+            </parameter>
+            <parameter>
+                <name>aMapView</name>
+                <type>org.osmdroid.views.MapView</type>
+            </parameter>
+        </method>
+        <method>
+            <name>SetMyLocation</name>
+            <comment>Set the location of the overlay using Latitude and Longitude.</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>Latitude</name>
+                <type>double</type>
+            </parameter>
+            <parameter>
+                <name>Longitude</name>
+                <type>double</type>
+            </parameter>
+        </method>
+        <method>
+            <name>GetMyLocation</name>
+            <comment>Get the location of the overlay.</comment>
+            <returntype>uk.co.martinpearman.b4a.osmdroid.util.wrappers.GeoPointWrapper</returntype>
+        </method>
+        <method>
+            <name>SetMyLocation2</name>
+            <comment>Set the location of the overlay using a Location object.</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>aLocation</name>
+                <type>android.location.Location</type>
+            </parameter>
+        </method>
+        <method>
+            <name>IsInitialized</name>
+            <comment></comment>
+            <returntype>boolean</returntype>
+        </method>
+    </class>
+    <class>
+        <name>uk.co.martinpearman.b4a.osmdroid.views.wrappers.MapViewWrapper</name>
+        <shortname>MapView</shortname>
+        <objectwrapper>org.osmdroid.views.MapView</objectwrapper>
+        <owner>activity</owner>
+        <event>CenterChanged</event>
+        <event>ZoomChanged</event>
+        <permission>android.permission.ACCESS_COARSE_LOCATION</permission>
+        <permission>android.permission.ACCESS_FINE_LOCATION</permission>
+        <permission>android.permission.ACCESS_NETWORK_STATE</permission>
+        <permission>android.permission.ACCESS_WIFI_STATE</permission>
+        <permission>android.permission.INTERNET</permission>
+        <permission>android.permission.WRITE_EXTERNAL_STORAGE</permission>
+        <method>
+            <name>AnimateTo2</name>
+            <comment>Animate the map towards the given Location.</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>aLocation</name>
+                <type>android.location.Location</type>
+            </parameter>
+        </method>
+        <method>
+            <name>AnimateTo3</name>
+            <comment>Animate the map towards the given GeoPoint.</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>aGeoPoint</name>
+                <type>org.osmdroid.util.GeoPoint</type>
+            </parameter>
+        </method>
+        <method>
+            <name>GetTileSources</name>
+            <comment>Return a List of the names of available TileSources.</comment>
+            <returntype>anywheresoftware.b4a.objects.collections.List</returntype>
+        </method>
+        <method>
+            <name>GetBoundingBox</name>
+            <comment></comment>
+            <returntype>uk.co.martinpearman.b4a.osmdroid.util.wrappers.BoundingBoxE6Wrapper</returntype>
+        </method>
+        <method>
+            <name>RemoveView</name>
+            <comment></comment>
+            <returntype>void</returntype>
+        </method>
+        <method>
+            <name>RemoveOverlays</name>
+            <comment>Remove all Overlays layers from the map.</comment>
+            <returntype>void</returntype>
+        </method>
+        <method>
+            <name>IsInitialized</name>
+            <comment></comment>
+            <returntype>boolean</returntype>
+        </method>
+        <method>
+            <name>Initialize</name>
+            <comment>Initialize the MapView.</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>ba</name>
+                <type>anywheresoftware.b4a.BA</type>
+            </parameter>
+            <parameter>
+                <name>EventName</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+        <method>
+            <name>SetTileSource</name>
+            <comment>Set the TileSource that the map should display.</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>TileSource</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+        <method>
+            <name>CanZoomIn</name>
+            <comment>Return whether or not the map can be zoomed in one more level.</comment>
+            <returntype>boolean</returntype>
+        </method>
+        <method>
+            <name>SetCenter3</name>
+            <comment>Set the map center using a GeoPoint.</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>aGeoPoint</name>
+                <type>org.osmdroid.util.GeoPoint</type>
+            </parameter>
+        </method>
+        <method>
+            <name>SetCenter2</name>
+            <comment>Set the map center using a Location.</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>aLocation</name>
+                <type>android.location.Location</type>
+            </parameter>
+        </method>
+        <method>
+            <name>Invalidate</name>
+            <comment>Force the MapView to redraw itself.
+This must be called after making changes to Overlay layers for example.</comment>
+            <returntype>void</returntype>
+        </method>
+        <method>
+            <name>SetLayout</name>
+            <comment></comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>arg0</name>
+                <type Pixel="true">int</type>
+            </parameter>
+            <parameter>
+                <name>arg1</name>
+                <type Pixel="true">int</type>
+            </parameter>
+            <parameter>
+                <name>arg2</name>
+                <type Pixel="true">int</type>
+            </parameter>
+            <parameter>
+                <name>arg3</name>
+                <type Pixel="true">int</type>
+            </parameter>
+        </method>
+        <method>
+            <name>ZoomIn</name>
+            <comment>Zoom the map in by one zoom level.</comment>
+            <returntype>void</returntype>
+        </method>
+        <method>
+            <name>GetMaxZoomLevel</name>
+            <comment>Return the maximum zoom level for the point currently at the map center.</comment>
+            <returntype>int</returntype>
+        </method>
+        <method>
+            <name>SetMultiTouchEnabled</name>
+            <comment>Set whether or not the MapView multi-touch controller is enabled.</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>Enabled</name>
+                <type>boolean</type>
+            </parameter>
+        </method>
+        <method>
+            <name>SetZoomEnabled</name>
+            <comment>Set whether or not the MapView zoom control is enabled.</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>Enabled</name>
+                <type>boolean</type>
+            </parameter>
+        </method>
+        <method>
+            <name>SetCenter</name>
+            <comment>Set the map center.</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>Latitude</name>
+                <type>double</type>
+            </parameter>
+            <parameter>
+                <name>Longitude</name>
+                <type>double</type>
+            </parameter>
+        </method>
+        <method>
+            <name>CanZoomOut</name>
+            <comment>Return whether or not the map can be zoomed out one more level.</comment>
+            <returntype>boolean</returntype>
+        </method>
+        <method>
+            <name>RemoveOverlay</name>
+            <comment>Remove an Overlay layer from the map.</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>anOverlay</name>
+                <type>org.osmdroid.views.overlay.Overlay</type>
+            </parameter>
+        </method>
+        <method>
+            <name>GetBoundingBox2</name>
+            <comment></comment>
+            <returntype>uk.co.martinpearman.b4a.osmdroid.util.wrappers.BoundingBoxE6Wrapper</returntype>
+            <parameter>
+                <name>ViewWidth</name>
+                <type>int</type>
+            </parameter>
+            <parameter>
+                <name>ViewHeight</name>
+                <type>int</type>
+            </parameter>
+        </method>
+        <method>
+            <name>GetMinZoomLevel</name>
+            <comment>Return the minimum zoom level for the point currently at the map center.</comment>
+            <returntype>int</returntype>
+        </method>
+        <method>
+            <name>BringToFront</name>
+            <comment></comment>
+            <returntype>void</returntype>
+        </method>
+        <method>
+            <name>RequestFocus</name>
+            <comment></comment>
+            <returntype>boolean</returntype>
+        </method>
+        <method>
+            <name>FitMapToBoundingBox</name>
+            <comment>Fit the map to the BoundingBox.</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>BoundingBox</name>
+                <type>org.osmdroid.util.BoundingBoxE6</type>
+            </parameter>
+        </method>
+        <method>
+            <name>AddXYTileSource</name>
+            <comment>Add an XYTileSource to the map.</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>XYTileSource</name>
+                <type>uk.co.martinpearman.b4a.osmdroid.tileprovider.tilesource.MyXYTileSource</type>
+            </parameter>
+        </method>
+        <method>
+            <name>Invalidate3</name>
+            <comment></comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>arg0</name>
+                <type>int</type>
+            </parameter>
+            <parameter>
+                <name>arg1</name>
+                <type>int</type>
+            </parameter>
+            <parameter>
+                <name>arg2</name>
+                <type>int</type>
+            </parameter>
+            <parameter>
+                <name>arg3</name>
+                <type>int</type>
+            </parameter>
+        </method>
+        <method>
+            <name>SetDataConnectionEnabled</name>
+            <comment>Set whether or not the MapView can use the device's data connection.
+Useful if you are using offline tiles or the map tiles already exist in the cache.</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>Enabled</name>
+                <type>boolean</type>
+            </parameter>
+        </method>
+        <method>
+            <name>Invalidate2</name>
+            <comment></comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>arg0</name>
+                <type>android.graphics.Rect</type>
+            </parameter>
+        </method>
+        <method>
+            <name>AnimateTo</name>
+            <comment>Animate the map towards the given point.</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>Latitude</name>
+                <type>double</type>
+            </parameter>
+            <parameter>
+                <name>Longitude</name>
+                <type>double</type>
+            </parameter>
+        </method>
+        <method>
+            <name>ZoomOut</name>
+            <comment>Zoom the map out by one zoom level.</comment>
+            <returntype>void</returntype>
+        </method>
+        <method>
+            <name>AddTileSource</name>
+            <comment>Add a generic ITileSource to the map.</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>TileSource1</name>
+                <type>org.osmdroid.tileprovider.tilesource.ITileSource</type>
+            </parameter>
+        </method>
+        <method>
+            <name>GetAttributionObjects</name>
+            <comment>Returns an Array of AttributionObjects.
+An AttributionObject contains licensing and attribution Strings relating to 3rd party libraries used in this B4A library.
+You are required to display some or all of these Strings in your application if you use the related B4A library object(s).</comment>
+            <returntype>uk.co.martinpearman.b4a.osmdroid.AttributionObject[]</returntype>
+        </method>
+        <method>
+            <name>GetCenter</name>
+            <comment>Return the map center as a GeoPoint.</comment>
+            <returntype>uk.co.martinpearman.b4a.osmdroid.util.wrappers.GeoPointWrapper</returntype>
+        </method>
+        <method>
+            <name>AddOverlay</name>
+            <comment>Add an Overlay layer to the map.</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>anOverlay</name>
+                <type>org.osmdroid.views.overlay.Overlay</type>
+            </parameter>
+        </method>
+        <method>
+            <name>GetTileSource</name>
+            <comment>Return the name of the currently selected TileSource.</comment>
+            <returntype>java.lang.String</returntype>
+        </method>
+        <method>
+            <name>SendToBack</name>
+            <comment></comment>
+            <returntype>void</returntype>
+        </method>
+        <method>
+            <name>SetHttpRequestUserAgent</name>
+            <comment>Sets the value of the UserAgent header when requesting tiles using HTTP.
+ Default value is your application's packagename.
+ Recommended value is a unique value that identifies your application.</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>UserAgent</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+        <property>
+            <name>Top</name>
+            <returntype>int</returntype>
+            <parameter>
+                <name>arg0</name>
+                <type Pixel="true">int</type>
+            </parameter>
+            <comment></comment>
+        </property>
+        <property>
+            <name>Enabled</name>
+            <returntype>boolean</returntype>
+            <parameter>
+                <name>arg0</name>
+                <type>boolean</type>
+            </parameter>
+            <comment></comment>
+        </property>
+        <property>
+            <name>Visible</name>
+            <returntype>boolean</returntype>
+            <parameter>
+                <name>arg0</name>
+                <type>boolean</type>
+            </parameter>
+            <comment></comment>
+        </property>
+        <property>
+            <name>Zoom</name>
+            <returntype>int</returntype>
+            <parameter>
+                <name>ZoomLevel</name>
+                <type>int</type>
+            </parameter>
+            <comment>Get or Set the map zoom level.</comment>
+        </property>
+        <property>
+            <name>Height</name>
+            <returntype>int</returntype>
+            <parameter>
+                <name>arg0</name>
+                <type Pixel="true">int</type>
+            </parameter>
+            <comment></comment>
+        </property>
+        <property>
+            <name>Left</name>
+            <returntype>int</returntype>
+            <parameter>
+                <name>arg0</name>
+                <type Pixel="true">int</type>
+            </parameter>
+            <comment></comment>
+        </property>
+        <property>
+            <name>CloudmadeTileSourceStyle</name>
+            <returntype>int</returntype>
+            <parameter>
+                <name>Style</name>
+                <type>int</type>
+            </parameter>
+            <comment>Get or Set the Cloudmade TileSource Style</comment>
+        </property>
+        <property>
+            <name>Tag</name>
+            <returntype>java.lang.Object</returntype>
+            <parameter>
+                <name>arg0</name>
+                <type>java.lang.Object</type>
+            </parameter>
+            <comment></comment>
+        </property>
+        <property>
+            <name>Width</name>
+            <returntype>int</returntype>
+            <parameter>
+                <name>arg0</name>
+                <type Pixel="true">int</type>
+            </parameter>
+            <comment></comment>
+        </property>
+        <property>
+            <name>MapOrientation</name>
+            <returntype>int</returntype>
+            <parameter>
+                <name>Degrees</name>
+                <type>int</type>
+            </parameter>
+            <comment>Get or Set the MapView orientation in degrees.
+This is an alpha feature, results may be unpredictable!</comment>
+        </property>
+    </class>
+    <class>
+        <name>uk.co.martinpearman.b4a.osmdroid.tileprovider.tilesource.wrappers.MyXYTileSourceWrapper</name>
+        <shortname>XYTileSource</shortname>
+        <objectwrapper>uk.co.martinpearman.b4a.osmdroid.tileprovider.tilesource.MyXYTileSource</objectwrapper>
+        <owner>process</owner>
+        <method>
+            <name>Initialize</name>
+            <comment>Initialize the XYTileSource object.
+The XYTileSource must implement the Slippy map tile naming convention.</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>Name</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>MinZoomLevel</name>
+                <type>int</type>
+            </parameter>
+            <parameter>
+                <name>MaxZoomLevel</name>
+                <type>int</type>
+            </parameter>
+            <parameter>
+                <name>TileSize</name>
+                <type>int</type>
+            </parameter>
+            <parameter>
+                <name>TileFilenameEnding</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>BaseUrl</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+        <method>
+            <name>Initialize2</name>
+            <comment>Initialize the XYTileSource object.
+The XYTileSource must implement the Slippy map tile naming convention.
+An Array of Strings is passed for the BaseUrls parameter.</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>Name</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>MinZoomLevel</name>
+                <type>int</type>
+            </parameter>
+            <parameter>
+                <name>MaxZoomLevel</name>
+                <type>int</type>
+            </parameter>
+            <parameter>
+                <name>TileSize</name>
+                <type>int</type>
+            </parameter>
+            <parameter>
+                <name>TileFilenameEnding</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>BaseUrls</name>
+                <type>java.lang.String[]</type>
+            </parameter>
+        </method>
+        <method>
+            <name>IsInitialized</name>
+            <comment></comment>
+            <returntype>boolean</returntype>
+        </method>
+        <property>
+            <name>TMSMode</name>
+            <returntype>boolean</returntype>
+            <parameter>
+                <name>Enable</name>
+                <type>java.lang.Boolean</type>
+            </parameter>
+            <comment>Get or Set whether Tile Map Service (TMS) mode is enabled or not.
+By default TMS mode is NOT enabled.</comment>
+        </property>
+    </class>
+    <version>3.6</version>
+    <author>Martin Pearman</author>
+</root>

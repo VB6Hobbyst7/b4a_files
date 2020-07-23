@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root>
+    <doclet-version-NOT-library-version>1.02</doclet-version-NOT-library-version>
+    <class>
+        <name>com.dybos.YZipLib</name>
+        <shortname>YYZipLib</shortname>
+        <owner>process</owner>
+        <method>
+            <name>extractFile</name>
+            <comment></comment>
+            <returntype>int</returntype>
+            <parameter>
+                <name>path</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>pw</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>outPath</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+    </class>
+</root>

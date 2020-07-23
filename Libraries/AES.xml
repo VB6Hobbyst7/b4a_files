@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root>
+    <doclet-version-NOT-library-version>1.04</doclet-version-NOT-library-version>
+    <class>
+        <name>com.aes.security.AES</name>
+        <shortname>AES</shortname>
+        <owner>process</owner>
+        <method>
+            <name>Decrypt</name>
+            <comment>Decrypt data using AES Cipher (CBC) with 256 bit key
+key: - key to use password salt
+data: - data to encrypt
+Return type: @return:decryptedData data</comment>
+            <returntype>java.lang.String</returntype>
+            <parameter>
+                <name>Text</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>Key</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+        <method>
+            <name>Encrypt128</name>
+            <comment>Encrypt data using AES Cipher (CBC) with 128 bit key
+ This is compatible with openssl
+ key length must be 16 byte
+key: - key to use should be 16 bytes long (128 bits)
+iv: - initialization vector
+data: - data to encrypt
+Return type: @return:encryptedData data in base64 encoding with iv attached at end after a :</comment>
+            <returntype>java.lang.String</returntype>
+            <parameter>
+                <name>key</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>iv</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>data</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+        <method>
+            <name>Decrypt128</name>
+            <comment>Decrypt data using AES Cipher (CBC) with 128 bit key
+ This is compatible with openssl
+ key length must be 16 byte
+key: - key to use should be 16 bytes long (128 bits)
+data: - encrypted data with iv at the end separate by :
+Return type: @return:decrypted data string</comment>
+            <returntype>java.lang.String</returntype>
+            <parameter>
+                <name>key</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>data</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+        <method>
+            <name>Encrypt</name>
+            <comment>Encrypt data using AES Cipher (CBC) with 256 bit key
+key: - key to use password salt
+data: - data to encrypt
+Return type: @return:encryptedData data in base64 encoding with iv attached at end after a :</comment>
+            <returntype>java.lang.String</returntype>
+            <parameter>
+                <name>Text</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>Key</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+    </class>
+    <class>
+        <name>com.aes.security.Base64</name>
+        <comment>Utilities for encoding and decoding the Base64 representation of
+ binary data.  See RFCs &lt;a
+ href="http://www.ietf.org/rfc/rfc2045.txt"&gt;2045&lt;/a&gt; and &lt;a
+ href="http://www.ietf.org/rfc/rfc3548.txt"&gt;3548&lt;/a&gt;.</comment>
+        <owner>process</owner>
+        <method>
+            <name>encode</name>
+            <comment>Base64-encode the given data and return a newly allocated
+ byte[] with the result.
+input: the data to encode
+flags: controls certain features of the encoded output.
+               Passing {@code DEFAULT} results in output that
+               adheres to RFC 2045.</comment>
+            <returntype>byte[]</returntype>
+            <parameter>
+                <name>input</name>
+                <type>byte[]</type>
+            </parameter>
+            <parameter>
+                <name>flags</name>
+                <type>int</type>
+            </parameter>
+        </method>
+        <method>
+            <name>encodeToString</name>
+            <comment>Base64-encode the given data and return a newly allocated
+ String with the result.
+input: the data to encode
+flags: controls certain features of the encoded output.
+               Passing {@code DEFAULT} results in output that
+               adheres to RFC 2045.</comment>
+            <returntype>java.lang.String</returntype>
+            <parameter>
+                <name>input</name>
+                <type>byte[]</type>
+            </parameter>
+            <parameter>
+                <name>flags</name>
+                <type>int</type>
+            </parameter>
+        </method>
+        <method>
+            <name>decode</name>
+            <comment>Decode the Base64-encoded data in input and return the data in
+ a new byte array.
+
+ &lt;p&gt;The padding '=' characters at the end are considered optional, but
+ if any are present, there must be the correct number of them.
+str: the input String to decode, which is converted to
+               bytes using the default charset
+flags: controls certain features of the decoded output.
+               Pass {@code DEFAULT} to decode standard Base64.</comment>
+            <returntype>byte[]</returntype>
+            <parameter>
+                <name>str</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>flags</name>
+                <type>int</type>
+            </parameter>
+        </method>
+        <field>
+            <name>NO_WRAP</name>
+            <comment>Encoder flag bit to omit all line terminators (i.e., the output
+ will be on one long line).</comment>
+            <returntype>int</returntype>
+        </field>
+        <field>
+            <name>NO_CLOSE</name>
+            <comment>Flag to pass to {@link Base64OutputStream} to indicate that it
+ should not close the output stream it is wrapping when it
+ itself is closed.</comment>
+            <returntype>int</returntype>
+        </field>
+        <field>
+            <name>CRLF</name>
+            <comment>Encoder flag bit to indicate lines should be terminated with a
+ CRLF pair instead of just an LF.  Has no effect if {@code
+ NO_WRAP} is specified as well.</comment>
+            <returntype>int</returntype>
+        </field>
+        <field>
+            <name>NO_PADDING</name>
+            <comment>Encoder flag bit to omit the padding '=' characters at the end
+ of the output (if any).</comment>
+            <returntype>int</returntype>
+        </field>
+        <field>
+            <name>URL_SAFE</name>
+            <comment>Encoder/decoder flag bit to indicate using the "URL and
+ filename safe" variant of Base64 (see RFC 3548 section 4) where
+ {@code -} and {@code _} are used in place of {@code +} and
+ {@code /}.</comment>
+            <returntype>int</returntype>
+        </field>
+        <field>
+            <name>DEFAULT</name>
+            <comment>Default values for encoder/decoder flags.</comment>
+            <returntype>int</returntype>
+        </field>
+    </class>
+</root>

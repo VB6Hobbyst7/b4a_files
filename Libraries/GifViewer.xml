@@ -1,0 +1,193 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <doclet-version-NOT-library-version>1.00</doclet-version-NOT-library-version>
+  <dependsOn>gifdecoder</dependsOn>
+  <dependsOn>javaobject</dependsOn>
+  <class>
+    <name>b4a.example.gifviewer</name>
+    <shortname>GifViewer</shortname>
+    <owner>activity</owner>
+    <event>GetFrame(Frame As Bitmap)</event>
+    <method>
+      <name>IsInitialized</name>
+      <comment>Tests whether the object has been initialized.</comment>
+      <returntype>boolean</returntype>
+    </method>
+    <method>
+      <name DesignerName="GetDelays">_getdelays</name>
+      <returntype>int[]</returntype>
+    </method>
+    <method>
+      <name DesignerName="getDuration" HideFromIDE="true">_getduration</name>
+      <comment>return millisecond duration
+</comment>
+      <returntype>int</returntype>
+    </method>
+    <method>
+      <name DesignerName="getFrameHeight" HideFromIDE="true">_getframeheight</name>
+      <returntype>int</returntype>
+    </method>
+    <method>
+      <name DesignerName="GetFrames">_getframes</name>
+      <returntype>anywheresoftware.b4a.objects.drawable.CanvasWrapper.BitmapWrapper[]</returntype>
+    </method>
+    <method>
+      <name DesignerName="getFramesCount" HideFromIDE="true">_getframescount</name>
+      <returntype>int</returntype>
+    </method>
+    <method>
+      <name DesignerName="getFrameWidth" HideFromIDE="true">_getframewidth</name>
+      <returntype>int</returntype>
+    </method>
+    <method>
+      <name DesignerName="getLoopCount" HideFromIDE="true">_getloopcount</name>
+      <returntype>int</returntype>
+    </method>
+    <method>
+      <name DesignerName="Initialize">_initialize</name>
+      <comment>Use parameter &lt;code&gt;#DebuggerForceStandardAssets: True&lt;/code&gt; in Project Attribute in main activity
+autho www.iranapp.org
+</comment>
+      <returntype>String</returntype>
+      <parameter>
+        <name>ba</name>
+        <type>anywheresoftware.b4a.BA</type>
+      </parameter>
+      <parameter>
+        <name>Dir</name>
+        <type>String</type>
+      </parameter>
+      <parameter>
+        <name>Filename</name>
+        <type>String</type>
+      </parameter>
+    </method>
+    <method>
+      <name DesignerName="Pause">_pause</name>
+      <returntype>String</returntype>
+    </method>
+    <method>
+      <name DesignerName="Play">_play</name>
+      <comment>play gif directly in imageview
+</comment>
+      <returntype>String</returntype>
+      <parameter>
+        <name>Imageview1</name>
+        <type>anywheresoftware.b4a.objects.ImageViewWrapper</type>
+      </parameter>
+      <parameter>
+        <name>Looping</name>
+        <type>boolean</type>
+      </parameter>
+      <parameter>
+        <name>ScaleBitmap</name>
+        <type>boolean</type>
+      </parameter>
+    </method>
+    <method>
+      <name DesignerName="Play2">_play2</name>
+      <comment>Get frames of gif in event with bitmap format
+</comment>
+      <returntype>String</returntype>
+      <parameter>
+        <name>Module</name>
+        <type>Object</type>
+      </parameter>
+      <parameter>
+        <name>Event</name>
+        <type>String</type>
+      </parameter>
+      <parameter>
+        <name>Looping</name>
+        <type>boolean</type>
+      </parameter>
+    </method>
+    <method>
+      <name DesignerName="Resume">_resume</name>
+      <comment>play gif from where pause
+</comment>
+      <returntype>String</returntype>
+    </method>
+    <method>
+      <name DesignerName="SaveFrame">_saveframe</name>
+      <comment>Format : p for png and j for jpg
+</comment>
+      <returntype>String</returntype>
+      <parameter>
+        <name>Position</name>
+        <type>int</type>
+      </parameter>
+      <parameter>
+        <name>Dir</name>
+        <type>String</type>
+      </parameter>
+      <parameter>
+        <name>Filename</name>
+        <type>String</type>
+      </parameter>
+      <parameter>
+        <name>Format</name>
+        <type>String</type>
+      </parameter>
+      <parameter>
+        <name>Quailty</name>
+        <type>int</type>
+      </parameter>
+    </method>
+    <method>
+      <name DesignerName="SaveFrames">_saveframes</name>
+      <returntype>String</returntype>
+      <parameter>
+        <name>Dir</name>
+        <type>String</type>
+      </parameter>
+      <parameter>
+        <name>Filename</name>
+        <type>String</type>
+      </parameter>
+      <parameter>
+        <name>Format</name>
+        <type>String</type>
+      </parameter>
+      <parameter>
+        <name>Quailty</name>
+        <type>int</type>
+      </parameter>
+    </method>
+    <method>
+      <name DesignerName="setDuration" HideFromIDE="true">_setduration</name>
+      <returntype>String</returntype>
+      <parameter>
+        <name>Duration</name>
+        <type>int</type>
+      </parameter>
+    </method>
+    <method>
+      <name DesignerName="Stop">_stop</name>
+      <returntype>String</returntype>
+    </method>
+    <property>
+      <name DesignerName="Duration">_duration</name>
+      <comment>return millisecond duration
+</comment>
+      <returntype>int</returntype>
+      <parameter>
+        <name>Value</name>
+        <type>int</type>
+      </parameter>
+    </property>
+    <property>
+      <name DesignerName="FrameHeight">_frameheight</name>
+      <returntype>int</returntype>
+    </property>
+    <property>
+      <name DesignerName="FramesCount">_framescount</name>
+      <returntype>int</returntype>
+    </property>
+    <property>
+      <name DesignerName="FrameWidth">_framewidth</name>
+      <returntype>int</returntype>
+    </property>
+  </class>
+  <version>1</version>
+</root>

@@ -1,0 +1,57 @@
+﻿Version=5.8
+NumberOfModules=1
+Module1=Starter
+Build1=Default,b4a.SystemBarTint.example
+ManifestCode=AddManifestText(~\n~<uses-sdk android:minSdkVersion="5" android:targetSdkVersion="19"/>~\n~<supports-screens android:largeScreens="true" ~\n~    android:normalScreens="true" ~\n~    android:smallScreens="true" ~\n~    android:anyDensity="true"/>)~\n~SetApplicationAttribute(android:icon, "@drawable/icon")~\n~SetApplicationAttribute(android:label, "$LABEL$")~\n~SetApplicationAttribute(android:theme, "@style/FullBleedTheme")~\n~
+IconFile=
+NumberOfFiles=0
+NumberOfLibraries=2
+Library1=core
+Library2=systembartint
+@EndOfDesignText@
+#Region  Project Attributes 
+	#ApplicationLabel: B4A SystemBarTint
+	#VersionCode: 1
+	#VersionName: 
+	'SupportedOrientations possible values: unspecified, landscape or portrait.
+	#SupportedOrientations: unspecified
+	#CanInstallToExternalStorage: False
+#End Region
+
+#Region  Activity Attributes 
+	#FullScreen: False
+	#IncludeTitle: True
+	'****************
+	#AdditionalRes: ../res
+	'****************
+#End Region
+
+Sub Process_Globals
+	
+End Sub
+
+Sub Globals
+	Dim SystemBar As SystemBarTint
+End Sub
+
+Sub Activity_Create(FirstTime As Boolean)
+	SystemBar.Initialize
+	
+	SystemBar.SetNavigationBarTintEnabled(True)
+	SystemBar.SetStatusBarTintEnabled(True)
+	
+	
+	SystemBar.StatusBarTintColor = Colors.Red
+	SystemBar.TintColor = Colors.Red
+	SystemBar.NavigationBarTintColor = Colors.Green
+	SystemBar.StatusBarAlpha = 150
+	
+
+End Sub
+Sub Activity_Resume
+
+End Sub
+
+Sub Activity_Pause (UserClosed As Boolean)
+
+End Sub

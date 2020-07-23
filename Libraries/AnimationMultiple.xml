@@ -1,0 +1,468 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <doclet-version-NOT-library-version>1.00</doclet-version-NOT-library-version>
+  <dependsOn>animation</dependsOn>
+  <class>
+    <name>b4a.Animation.Multiple.animationmultiple._animations</name>
+    <shortname>Animations</shortname>
+    <owner>activity</owner>
+    <method>
+      <name>Initialize</name>
+      <comment>Initializes the fields to their default value.</comment>
+      <returntype>void</returntype>
+    </method>
+    <field>
+      <name>IsInitialized</name>
+      <comment>Tests whether the object has been initialized.</comment>
+      <returntype>boolean</returntype>
+    </field>
+    <field>
+      <name>Animation</name>
+      <returntype>anywheresoftware.b4a.objects.AnimationWrapper</returntype>
+    </field>
+    <field>
+      <name>Target</name>
+      <returntype>anywheresoftware.b4a.objects.ConcreteViewWrapper</returntype>
+    </field>
+  </class>
+  <class>
+    <name>b4a.Animation.Multiple.animationmultiple</name>
+    <shortname>AnimationMultiple</shortname>
+    <owner>activity</owner>
+    <event>AnimationMultipleEnd(WorkedView as View)</event>
+    <event>AnimationMultipleError ' Process cant find Animation in own Animation list</event>
+    <method>
+      <name>IsInitialized</name>
+      <comment>Tests whether the object has been initialized.</comment>
+      <returntype>boolean</returntype>
+    </method>
+    <method>
+      <name DesignerName="AddAlpha">_addalpha</name>
+      <comment>Causes a fading in or fading out effect.This animation affects the view's transparency (fading effect).
+The alpha values are between 0 to 1 where 0 is fully transparent and 1 is fully opaque.
+Target :  View for animaitons
+FromAlpha :  first Frame value
+ToAlpha :  last Frame value
+Duration  : animation cycle time, sets the animation duration. Value is measured in milliseconds.
+RepeatMode : Gets Or sets the repeat mode. Relevant when RepeatCount Is larger than 0 (Or -1).
+	The default Is REPEAT_RESTART which means that the animation will restart each time.
+	REPEAT_REVERSE causes the animation To repeat in reverse each time.
+	RepeatMode : REPEAT_RESTART (1)  and REPEAT_RESTART(2) like original Animation lib.
+	RepeatMode : Default is REPEAT_NULL (0)
+RepeatCount:Gets or sets the number of times the animation will repeat. A value of 0 means that it will play once.
+	Set to -1 for a non stopping animation.
+**** This same use " InitializeTranslate "  Animation [lib] in B4A IDE
+</comment>
+      <returntype>String</returntype>
+      <parameter>
+        <name>Target</name>
+        <type>anywheresoftware.b4a.objects.ConcreteViewWrapper</type>
+      </parameter>
+      <parameter>
+        <name>FromAlpha</name>
+        <type>float</type>
+      </parameter>
+      <parameter>
+        <name>ToAlpha</name>
+        <type>float</type>
+      </parameter>
+      <parameter>
+        <name>Duration</name>
+        <type>long</type>
+      </parameter>
+      <parameter>
+        <name>RepeatCount</name>
+        <type>int</type>
+      </parameter>
+      <parameter>
+        <name>RepeatMode</name>
+        <type>int</type>
+      </parameter>
+    </method>
+    <method>
+      <name DesignerName="AddRotate">_addrotate</name>
+      <comment>Initializes a rotation animation. The view will rotate between the given values.
+Rotation pivot Is set To the top left corner.
+Target :  View for animaitons
+FromDegrees : The first frame rotation value.
+ToDegrees : The last frame rotation value.
+Duration  : animation cycle time, sets the animation duration. Value is measured in milliseconds.
+RepeatMode : Gets Or sets the repeat mode. Relevant when RepeatCount Is larger than 0 (Or -1).
+	The default Is REPEAT_RESTART which means that the animation will restart each time.
+	REPEAT_REVERSE causes the animation To repeat in reverse each time.
+	RepeatMode : REPEAT_RESTART (1)  and REPEAT_RESTART(2) like original Animation lib.
+	RepeatMode : Default is REPEAT_NULL (0)
+RepeatCount:Gets or sets the number of times the animation will repeat. A value of 0 means that it will play once.
+	Set to -1 for a non stopping animation.
+**** This same use " InitializeTranslate "  Animation [lib] in B4A IDE
+</comment>
+      <returntype>String</returntype>
+      <parameter>
+        <name>Target</name>
+        <type>anywheresoftware.b4a.objects.ConcreteViewWrapper</type>
+      </parameter>
+      <parameter>
+        <name>FromDegrees</name>
+        <type>float</type>
+      </parameter>
+      <parameter>
+        <name>ToDegrees</name>
+        <type>float</type>
+      </parameter>
+      <parameter>
+        <name>Duration</name>
+        <type>long</type>
+      </parameter>
+      <parameter>
+        <name>RepeatCount</name>
+        <type>int</type>
+      </parameter>
+      <parameter>
+        <name>RepeatMode</name>
+        <type>int</type>
+      </parameter>
+    </method>
+    <method>
+      <name DesignerName="AddRotateCenter">_addrotatecenter</name>
+      <comment>Initializes a rotation animation. The view will rotate between the given values.
+Similar to InitializeRotate, with the pivot set to the given view's center.
+Target :  View for animaitons
+FromDegrees : The first frame rotation value.
+ToDegrees : The last frame rotation value.
+Center : the pivot set to the given view's center.
+Duration  : animation cycle time, sets the animation duration. Value is measured in milliseconds.
+RepeatMode : Gets Or sets the repeat mode. Relevant when RepeatCount Is larger than 0 (Or -1).
+	The default Is REPEAT_RESTART which means that the animation will restart each time.
+	REPEAT_REVERSE causes the animation To repeat in reverse each time.
+	RepeatMode : REPEAT_RESTART (1)  and REPEAT_RESTART(2) like original Animation lib.
+	RepeatMode : Default is REPEAT_NULL (0)
+RepeatCount:Gets or sets the number of times the animation will repeat. A value of 0 means that it will play once.
+	Set to -1 for a non stopping animation.
+**** This same use " InitializeTranslate "  Animation [lib] in B4A IDE
+</comment>
+      <returntype>String</returntype>
+      <parameter>
+        <name>Target</name>
+        <type>anywheresoftware.b4a.objects.ConcreteViewWrapper</type>
+      </parameter>
+      <parameter>
+        <name>FromDegrees</name>
+        <type>float</type>
+      </parameter>
+      <parameter>
+        <name>ToDegrees</name>
+        <type>float</type>
+      </parameter>
+      <parameter>
+        <name>Duration</name>
+        <type>long</type>
+      </parameter>
+      <parameter>
+        <name>RepeatCount</name>
+        <type>int</type>
+      </parameter>
+      <parameter>
+        <name>RepeatMode</name>
+        <type>int</type>
+      </parameter>
+      <parameter>
+        <name>Center</name>
+        <type>anywheresoftware.b4a.objects.ConcreteViewWrapper</type>
+      </parameter>
+    </method>
+    <method>
+      <name DesignerName="AddScale">_addscale</name>
+      <comment>Initializes a scale animation. The view will be scaled during the animation.
+The scaling pivot will be set to the top left corners.
+Target :  View for animaitons
+FromX :  The first frame horizontal scale.
+FromY :  The first frame vertical scale.
+ToX :  The last frame horizontal scale.
+ToY :  The last frame vertical scale.
+Duration  : animation cycle time, sets the animation duration. Value is measured in milliseconds.
+RepeatMode : Gets Or sets the repeat mode. Relevant when RepeatCount Is larger than 0 (Or -1).
+	The default Is REPEAT_RESTART which means that the animation will restart each time.
+	REPEAT_REVERSE causes the animation To repeat in reverse each time.
+	RepeatMode : REPEAT_RESTART (1)  and REPEAT_RESTART(2) like original Animation lib.
+	RepeatMode : Default is REPEAT_NULL (0)
+RepeatCount:Gets or sets the number of times the animation will repeat. A value of 0 means that it will play once.
+	Set to -1 for a non stopping animation.
+**** This same use " InitializeTranslate "  Animation [lib] in B4A IDE
+</comment>
+      <returntype>String</returntype>
+      <parameter>
+        <name>Target</name>
+        <type>anywheresoftware.b4a.objects.ConcreteViewWrapper</type>
+      </parameter>
+      <parameter>
+        <name>FromX</name>
+        <type>float</type>
+      </parameter>
+      <parameter>
+        <name>FromY</name>
+        <type>float</type>
+      </parameter>
+      <parameter>
+        <name>ToX</name>
+        <type>float</type>
+      </parameter>
+      <parameter>
+        <name>ToY</name>
+        <type>float</type>
+      </parameter>
+      <parameter>
+        <name>Duration</name>
+        <type>long</type>
+      </parameter>
+      <parameter>
+        <name>RepeatCount</name>
+        <type>int</type>
+      </parameter>
+      <parameter>
+        <name>RepeatMode</name>
+        <type>int</type>
+      </parameter>
+    </method>
+    <method>
+      <name DesignerName="AddScaleCenter">_addscalecenter</name>
+      <comment>Initializes a scale animation. The view will be scaled during the animation.
+The scaling pivot will be set to the top left corners.
+Target :  View for animaitons
+FromX :  The first frame horizontal scale.
+FromY :  The first frame vertical scale.
+ToX :  The last frame horizontal scale.
+ToY :  The last frame vertical scale.
+Center : Similar to InitializeScale with a pivot set to the given view's center.
+Duration  : animation cycle time, sets the animation duration. Value is measured in milliseconds.
+RepeatMode : Gets Or sets the repeat mode. Relevant when RepeatCount Is larger than 0 (Or -1).
+	The default Is REPEAT_RESTART which means that the animation will restart each time.
+	REPEAT_REVERSE causes the animation To repeat in reverse each time.
+	RepeatMode : REPEAT_RESTART (1)  and REPEAT_RESTART(2) like original Animation lib.
+	RepeatMode : Default is REPEAT_NULL (0)
+RepeatCount:Gets or sets the number of times the animation will repeat. A value of 0 means that it will play once.
+	Set to -1 for a non stopping animation.
+**** This same use " InitializeTranslate "  Animation [lib] in B4A IDE
+</comment>
+      <returntype>String</returntype>
+      <parameter>
+        <name>Target</name>
+        <type>anywheresoftware.b4a.objects.ConcreteViewWrapper</type>
+      </parameter>
+      <parameter>
+        <name>FromX</name>
+        <type>float</type>
+      </parameter>
+      <parameter>
+        <name>FromY</name>
+        <type>float</type>
+      </parameter>
+      <parameter>
+        <name>ToX</name>
+        <type>float</type>
+      </parameter>
+      <parameter>
+        <name>ToY</name>
+        <type>float</type>
+      </parameter>
+      <parameter>
+        <name>Duration</name>
+        <type>long</type>
+      </parameter>
+      <parameter>
+        <name>RepeatCount</name>
+        <type>int</type>
+      </parameter>
+      <parameter>
+        <name>RepeatMode</name>
+        <type>int</type>
+      </parameter>
+      <parameter>
+        <name>Center</name>
+        <type>anywheresoftware.b4a.objects.ConcreteViewWrapper</type>
+      </parameter>
+    </method>
+    <method>
+      <name DesignerName="AddTranslate">_addtranslate</name>
+      <comment>Initializes a translation animation. The view will move according to the given values.
+Target :  View for animaitons
+FromX :  first Frame horizontal pozition
+FromY :  first Frame vertical pozition
+ToX :  last Frame horizontal pozition
+ToY :  last Frame vertical pozition
+Duration  : animation cycle time, sets the animation duration. Value is measured in milliseconds.
+RepeatMode : Gets Or sets the repeat mode. Relevant when RepeatCount Is larger than 0 (Or -1).
+	The default Is REPEAT_RESTART which means that the animation will restart each time.
+	REPEAT_REVERSE causes the animation To repeat in reverse each time.
+	RepeatMode : REPEAT_RESTART (1)  and REPEAT_RESTART(2) like original Animation lib.
+	RepeatMode : Default is REPEAT_NULL (0)
+RepeatCount:Gets or sets the number of times the animation will repeat. A value of 0 means that it will play once.
+	Set to -1 for a non stopping animation.
+**** This same use " InitializeTranslate "  Animation [lib] in B4A IDE
+</comment>
+      <returntype>String</returntype>
+      <parameter>
+        <name>Target</name>
+        <type>anywheresoftware.b4a.objects.ConcreteViewWrapper</type>
+      </parameter>
+      <parameter>
+        <name>FromX</name>
+        <type>float</type>
+      </parameter>
+      <parameter>
+        <name>FromY</name>
+        <type>float</type>
+      </parameter>
+      <parameter>
+        <name>ToX</name>
+        <type>float</type>
+      </parameter>
+      <parameter>
+        <name>ToY</name>
+        <type>float</type>
+      </parameter>
+      <parameter>
+        <name>Duration</name>
+        <type>long</type>
+      </parameter>
+      <parameter>
+        <name>RepeatCount</name>
+        <type>int</type>
+      </parameter>
+      <parameter>
+        <name>RepeatMode</name>
+        <type>int</type>
+      </parameter>
+    </method>
+    <method>
+      <name DesignerName="AnimationGet">_animationget</name>
+      <comment>This method will get Animation  from own proceess list ( standart Animation Lib) with Target view
+ Process will delete old animation if Process has same target View
+Target : View for animaitons
+Animation :  This same use " InitializeTranslate "  Animation [lib] in B4A IDE
+</comment>
+      <returntype>anywheresoftware.b4a.objects.AnimationWrapper</returntype>
+      <parameter>
+        <name>Target</name>
+        <type>anywheresoftware.b4a.objects.ConcreteViewWrapper</type>
+      </parameter>
+    </method>
+    <method>
+      <name DesignerName="AnimationSet">_animationset</name>
+      <comment>This method will add a new Animation ( standart Animation Lib) with Target view
+ Process will delete old animation if Process has same target View
+Target : View for animaitons
+Animation :  This same use " InitializeTranslate "  Animation [lib] in B4A IDE
+</comment>
+      <returntype>String</returntype>
+      <parameter>
+        <name>Target</name>
+        <type>anywheresoftware.b4a.objects.ConcreteViewWrapper</type>
+      </parameter>
+      <parameter>
+        <name>Animation</name>
+        <type>anywheresoftware.b4a.objects.AnimationWrapper</type>
+      </parameter>
+    </method>
+    <method>
+      <name DesignerName="Class_Globals">_class_globals</name>
+      <comment>Class module
+</comment>
+      <returntype>String</returntype>
+    </method>
+    <method>
+      <name DesignerName="Count">_count</name>
+      <comment>Return all animation count in own list
+</comment>
+      <returntype>int</returntype>
+    </method>
+    <method>
+      <name DesignerName="DeleteAll">_deleteall</name>
+      <comment>delete all animations records.
+</comment>
+      <returntype>String</returntype>
+    </method>
+    <method>
+      <name DesignerName="DeleteAt">_deleteat</name>
+      <comment>Animations process will delete with your target view
+ TRUE &gt;&gt; target view now deleted
+ FALSE &gt;&gt; target view cant find in list
+</comment>
+      <returntype>boolean</returntype>
+      <parameter>
+        <name>Target</name>
+        <type>anywheresoftware.b4a.objects.ConcreteViewWrapper</type>
+      </parameter>
+    </method>
+    <method>
+      <name DesignerName="Initialize">_initialize</name>
+      <comment>Initializes the object. You can add parameters to this method if needed.
+ animi.Initialize(Me, "animi")
+</comment>
+      <returntype>String</returntype>
+      <parameter>
+        <name>ba</name>
+        <type>anywheresoftware.b4a.BA</type>
+      </parameter>
+      <parameter>
+        <name>CallbackModule</name>
+        <type>Object</type>
+      </parameter>
+      <parameter>
+        <name>cEventName</name>
+        <type>String</type>
+      </parameter>
+    </method>
+    <method>
+      <name DesignerName="StartAll">_startall</name>
+      <comment> all Views animations start
+Starts the animating the given view.
+Note that a single animation should not be applied to more than one view at a time.
+</comment>
+      <returntype>String</returntype>
+    </method>
+    <method>
+      <name DesignerName="StartAt">_startat</name>
+      <comment>Animations only start with your target view
+ TRUE &gt;&gt; target view now start
+ FALSE &gt;&gt; target view cant find in list
+</comment>
+      <returntype>boolean</returntype>
+      <parameter>
+        <name>Target</name>
+        <type>anywheresoftware.b4a.objects.ConcreteViewWrapper</type>
+      </parameter>
+    </method>
+    <method>
+      <name DesignerName="StopAll">_stopall</name>
+      <comment> all Views animations stop
+</comment>
+      <returntype>String</returntype>
+    </method>
+    <method>
+      <name DesignerName="StopAt">_stopat</name>
+      <comment>Animations only stop with your target view
+ TRUE &gt;&gt; target view now stoped
+ FALSE &gt;&gt; target view cant find in list
+</comment>
+      <returntype>boolean</returntype>
+      <parameter>
+        <name>Target</name>
+        <type>anywheresoftware.b4a.objects.ConcreteViewWrapper</type>
+      </parameter>
+    </method>
+    <field>
+      <name DesignerName="REPEAT_RESTART">_repeat_restart</name>
+      <returntype>int</returntype>
+    </field>
+    <field>
+      <name DesignerName="REPEAT_REVERSE">_repeat_reverse</name>
+      <returntype>int</returntype>
+    </field>
+    <field>
+      <name DesignerName="REPEAT_NULL">_repeat_null</name>
+      <returntype>int</returntype>
+    </field>
+  </class>
+  <version>1</version>
+  <author>MagicTURK</author>
+</root>

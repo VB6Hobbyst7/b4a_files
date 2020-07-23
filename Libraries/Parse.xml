@@ -1,0 +1,1067 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root>
+    <doclet-version-NOT-library-version>1.04</doclet-version-NOT-library-version>
+    <class>
+        <name>anywheresoftware.b4a.objects.ParseObjectWrapper</name>
+        <shortname>ParseObject</shortname>
+        <comment>The ParseObject is a local representation of data that can be saved and retrieved from the Parse cloud.
+The basic workflow for creating new data is to construct a new ParseObject, use Put() to fill it with data, and then use Save() to persist to the database.
+The basic workflow for accessing existing data is to use a ParseQuery to specify which existing data to retrieve.</comment>
+        <objectwrapper>com.parse.ParseObject</objectwrapper>
+        <owner>process</owner>
+        <event>DoneSave(Success As Boolean, TaskID As Int)</event>
+        <event>DoneDelete(Success As Boolean, TaskID As Int)</event>
+        <event>DoneRefresh(Success As Boolean, TaskID As Int)</event>
+        <method>
+            <name>Initialize</name>
+            <comment>Initializes the ParseObject and sets the class name into which the Key Value pairs will be saved.</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>ClassName</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+        <method>
+            <name>GetJSONArray</name>
+            <comment>Returns the value of a Key as a JSON array or an empty string if the value is undefined.
+Note that Key is case-sensitive.</comment>
+            <returntype>java.lang.String</returntype>
+            <parameter>
+                <name>Key</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+        <method>
+            <name>GetInt</name>
+            <comment>Returns the Value of Key as an Int. Note that Key is case-sensitive.</comment>
+            <returntype>int</returntype>
+            <parameter>
+                <name>Key</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+        <method>
+            <name>GetKeys</name>
+            <comment>Returns a String array containing the names of the Keys in the ParseObject.
+Only the Keys with defined data values are returned.</comment>
+            <returntype>java.lang.String[]</returntype>
+        </method>
+        <method>
+            <name>Put</name>
+            <comment>Places the provided Key Value pair in the present ParseObject.</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>Key</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>Value</name>
+                <type>java.lang.Object</type>
+            </parameter>
+        </method>
+        <method>
+            <name>Refresh</name>
+            <comment>Refreshes the object by reading it from the server.
+The DoneRefresh event will be raised when the operation completes.
+If an error occurs Success will be False and a ParseException with a message describing the error will be placed in LastException.</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>ba</name>
+                <type>anywheresoftware.b4a.BA</type>
+            </parameter>
+            <parameter>
+                <name>EventName</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>TaskID</name>
+                <type>int</type>
+            </parameter>
+        </method>
+        <method>
+            <name>GetObject</name>
+            <comment>Returns the Value object for the specified Key. Note that Key is case-sensitive.
+In most cases it is more convenient to use a helper function such as GetString or GetInt.
+This is mostly for use with Byte arrays, ParseFile, ParseGeoPoint and ParseObject objects.</comment>
+            <returntype>java.lang.Object</returntype>
+            <parameter>
+                <name>Key</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+        <method>
+            <name>GetLong</name>
+            <comment>Returns the Value of Key as a Long.</comment>
+            <returntype>long</returntype>
+            <parameter>
+                <name>Key</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+        <method>
+            <name>GetBoolean</name>
+            <comment>Returns the Value of Key as a Boolean. Note that Key is case-sensitive.</comment>
+            <returntype>boolean</returntype>
+            <parameter>
+                <name>Key</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+        <method>
+            <name>GetDouble</name>
+            <comment>Returns the Value of Key as a Double. Note that Key is case-sensitive.</comment>
+            <returntype>double</returntype>
+            <parameter>
+                <name>Key</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+        <method>
+            <name>GetString</name>
+            <comment>Returns the Value of Key as a String.  Note that Key is case-sensitive.</comment>
+            <returntype>java.lang.String</returntype>
+            <parameter>
+                <name>Key</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+        <method>
+            <name>Increment</name>
+            <comment>Increment (or decrement) the value of the given Key by the amount Number.</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>Key</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>Number</name>
+                <type>java.lang.Double</type>
+            </parameter>
+        </method>
+        <method>
+            <name>ContainsKey</name>
+            <comment>Returns True if the provided Key is present in the ParseObject.</comment>
+            <returntype>boolean</returntype>
+            <parameter>
+                <name>Key</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+        <method>
+            <name>GetObjectType</name>
+            <comment>Returns the type name of the Value that is returned by GetObject for the specified Key.
+Note that Key is case-sensitive. This is provided for diagnostic purposes.</comment>
+            <returntype>java.lang.String</returntype>
+            <parameter>
+                <name>Key</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+        <method>
+            <name>Add</name>
+            <comment>Adds the provided Value to the array of values for Key.
+The first use of Add for a Key defines the Value of that Key as an array
+The array of values for a Key may be accessed by GetJSONArray.</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>Key</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>Value</name>
+                <type>java.lang.Object</type>
+            </parameter>
+        </method>
+        <method>
+            <name>Delete</name>
+            <comment>Deletes the object from the server.
+The DoneDelete event will be raised when saving completes.
+If an error occurs Success will be False and a ParseException with a message describing the error will be placed in LastException.
+If you want to ignore the event then pass an empty String for EventName.</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>ba</name>
+                <type>anywheresoftware.b4a.BA</type>
+            </parameter>
+            <parameter>
+                <name>EventName</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>TaskID</name>
+                <type>int</type>
+            </parameter>
+        </method>
+        <method>
+            <name>Save</name>
+            <comment>Saves the object on the server.
+The DoneSave event will be raised when saving completes.
+If an error occurs Success will be False and a ParseException with a message describing the error will be placed in LastException.
+If you want to ignore the event then pass an empty String for EventName.</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>ba</name>
+                <type>anywheresoftware.b4a.BA</type>
+            </parameter>
+            <parameter>
+                <name>EventName</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>TaskID</name>
+                <type>int</type>
+            </parameter>
+        </method>
+        <method>
+            <name>IsInitialized</name>
+            <comment></comment>
+            <returntype>boolean</returntype>
+        </method>
+        <method>
+            <name>GetRelation</name>
+            <comment>Access or create a Relation value for a key.
+Returns the ParseRelation object if the relation already exists, or can be created, for the Key.</comment>
+            <returntype>anywheresoftware.b4a.objects.ParseObjectWrapper.ParseRelationWrapper</returntype>
+            <parameter>
+                <name>Key</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+        <method>
+            <name>CreateWithoutData</name>
+            <comment>Creates a reference to an existing ParseObject for use in creating associations between ParseObjects.
+Calling IsDataAvailable on this object will return false until Refresh has been called.
+No network request will be made.</comment>
+            <returntype>com.parse.ParseObject</returntype>
+            <parameter>
+                <name>ClassName</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>ObjectID</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+        <property>
+            <name>UpdatedAt</name>
+            <returntype>long</returntype>
+            <comment>Returns the time when the data was last updated on the Parse server.
+This reports time as the server sees it, so that if you make changes to a ParseObject,
+then wait a while, and then call save(), the updated time will be the time of the save()
+call rather than the time the object was changed locally.</comment>
+        </property>
+        <property>
+            <name>IsDataAvailable</name>
+            <returntype>boolean</returntype>
+            <comment>Returns True if the ParseObject is new or has been fetched or refreshed. False otherwise.</comment>
+        </property>
+        <property>
+            <name>Version</name>
+            <returntype>double</returntype>
+            <comment>Returns the version of the library.</comment>
+        </property>
+        <property>
+            <name>ObjectId</name>
+            <returntype>java.lang.String</returntype>
+            <comment>Returns the unique ObjectId for the ParseObject.
+An object id is assigned as soon as an object is saved to the server.
+The combination of a Class name and an ObjectId uniquely identifies an object in your application.</comment>
+        </property>
+        <property>
+            <name>CreatedAt</name>
+            <returntype>long</returntype>
+            <comment>Returns the time when the data was first created on the Parse server.
+This reports time as the server sees it, so that if you create a ParseObject,
+then wait a while, and then call save(), the creation time will be the time of
+the first save() call rather than the time the object was created locally.</comment>
+        </property>
+    </class>
+    <class>
+        <name>anywheresoftware.b4a.objects.ParseObjectWrapper.ParseWrapper</name>
+        <shortname>Parse</shortname>
+        <comment>This object has three methods.
+Initialize, which is required to Initialize the Parse library.
+TrackOpening allows openings of your applications to be recorded.
+EnableNotifications lets your application receive push notifications.</comment>
+        <owner>process</owner>
+        <permission>android.permission.INTERNET</permission>
+        <permission>android.permission.ACCESS_NETWORK_STATE</permission>
+        <permission>android.permission.RECEIVE_BOOT_COMPLETED</permission>
+        <permission>android.permission.VIBRATE</permission>
+        <method>
+            <name>Initialize</name>
+            <comment>Initializes the Parse library.</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>ApplicationId</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>ClientId</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+        <method>
+            <name>Subscribe2</name>
+            <comment>Call this function when the user should be subscribed to a new push channel.
+The specified icon file from the application resources will be used for the notification.
+The Activity named will be started for a push received for the specified channel.</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>ba</name>
+                <type>anywheresoftware.b4a.BA</type>
+            </parameter>
+            <parameter>
+                <name>Channel</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>ActivityName</name>
+                <type>java.lang.Class</type>
+            </parameter>
+            <parameter>
+                <name>Icon</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+        <method>
+            <name>Subscriptions</name>
+            <comment>Accesses the current set of channels for which the current installation is subscribed.</comment>
+            <returntype>java.lang.String[]</returntype>
+            <parameter>
+                <name>ba</name>
+                <type>anywheresoftware.b4a.BA</type>
+            </parameter>
+        </method>
+        <method>
+            <name>TrackOpening</name>
+            <comment>Enables tracking of launches of this application.
+
+The following is a technical comment included as a point of record.
+trackAppOpened does not work as documented in the Parse API.
+It states that a null argument to ParseAnalytics.trackAppOpened will work, but the code checks for null
+and does not send the tracking data if the intent is null or if the intent extras are null.
+This method creates a new intent with putExtra("Data", "B4a_App") and sends that which seems to work OK.</comment>
+            <returntype>void</returntype>
+        </method>
+        <method>
+            <name>EnableNotifications</name>
+            <comment>Enable push notifications and cause the specified Activity to be opened when one is received.
+The push data may be obtained in the Activity from the StartingIntent ExtrasToString method.
+To enable push you also need to add the following to the Manifest Editor in the project.
+
+The Activity named will be started for a push sent to everyone registered for push with the Parse application.
+The default application icon will be used for the notification.
+&lt;code&gt;
+AddApplicationText(&lt;service android:name="com.parse.PushService" /&gt;
+&lt;receiver android:name="com.parse.ParseBroadcastReceiver"&gt;
+   &lt;intent-filter&gt;
+      &lt;action android:name="android.intent.action.BOOT_COMPLETED" /&gt;
+      &lt;action android:name="android.intent.action.USER_PRESENT" /&gt;
+   &lt;/intent-filter&gt;
+&lt;/receiver&gt;)&lt;/code&gt;
+Object Browser does not show the actual XML text within AddApplicationText above.
+The XML is available for cut and paste in the first post of the Parse library forum thread</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>ba</name>
+                <type>anywheresoftware.b4a.BA</type>
+            </parameter>
+            <parameter>
+                <name>ActivityName</name>
+                <type>java.lang.Class</type>
+            </parameter>
+        </method>
+        <method>
+            <name>Unsubscribe</name>
+            <comment>Call this function when the user should be unsubscribed from a push channel.</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>ba</name>
+                <type>anywheresoftware.b4a.BA</type>
+            </parameter>
+            <parameter>
+                <name>Channel</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+        <method>
+            <name>Subscribe</name>
+            <comment>Call this function when the user should be subscribed to a new push channel.
+The default application icon will be used for the notification.
+The Activity named will be started for a push received for the specified channel.</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>ba</name>
+                <type>anywheresoftware.b4a.BA</type>
+            </parameter>
+            <parameter>
+                <name>Channel</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>ActivityName</name>
+                <type>java.lang.Class</type>
+            </parameter>
+        </method>
+        <method>
+            <name>SetLoggingLevel</name>
+            <comment>This is included for diagnostic purposes only. You should not use this unless requested to.
+
+Sets the level of logging to display, where each level includes all those below it.
+Ensure this is set to Parse.LOG_LEVEL_ERROR or Parse.LOG_LEVEL_NONE before deploying your app
+to ensure no sensitive information is logged. The default level is Parse.LOG_LEVEL_ERROR.
+
+The levels are:
+	LOG_LEVEL_VERBOSE = 2
+	LOG_LEVEL_DEBUG = 3
+	LOG_LEVEL_INFO = 4
+	LOG_LEVEL_WARNING = 5
+	LOG_LEVEL_ERROR = 6
+	LOG_LEVEL_NONE = 2147483647;</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>LogLevel</name>
+                <type>int</type>
+            </parameter>
+        </method>
+        <method>
+            <name>DisableNotifications</name>
+            <comment>Disables receiving pushes sent to everyone
+If no channels are subscribed to it should stop the PushService.</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>ba</name>
+                <type>anywheresoftware.b4a.BA</type>
+            </parameter>
+        </method>
+        <property>
+            <name>Version</name>
+            <returntype>double</returntype>
+            <comment>Returns the version of the library.</comment>
+        </property>
+    </class>
+    <class>
+        <name>anywheresoftware.b4a.objects.ParseObjectWrapper.ParseQueryWrapper</name>
+        <shortname>ParseQuery</shortname>
+        <objectwrapper>com.parse.ParseQuery</objectwrapper>
+        <owner>process</owner>
+        <event>DoneGet(Success As Boolean, PO As ParseObject, TaskId As Int)</event>
+        <event>DoneFind(Success As Boolean, ListOfPO As List, TaskId As Int)</event>
+        <event>DoneCount(Success As Boolean, Count As Int, TaskId As Int)</event>
+        <method>
+            <name>Initialize</name>
+            <comment>Initializes the object and sets the Class name.</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>ClassName</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+        <method>
+            <name>Count</name>
+            <comment>Counts the number of objects matching the query.
+The DoneCount event will be raised when the operation completes.
+If an error occurs Success will be False and a ParseException with a message describing the error will be placed in LastException.</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>ba</name>
+                <type>anywheresoftware.b4a.BA</type>
+            </parameter>
+            <parameter>
+                <name>EventName</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>TaskId</name>
+                <type>int</type>
+            </parameter>
+        </method>
+        <method>
+            <name>WhereEqualTo</name>
+            <comment>Adds a WhereEqualTo condition to the query.</comment>
+            <returntype>anywheresoftware.b4a.objects.ParseObjectWrapper.ParseQueryWrapper</returntype>
+            <parameter>
+                <name>Key</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>Value</name>
+                <type>java.lang.Object</type>
+            </parameter>
+        </method>
+        <method>
+            <name>WhereNotEqualTo</name>
+            <comment>Adds a WhereNotEqualTo condition to the query.</comment>
+            <returntype>anywheresoftware.b4a.objects.ParseObjectWrapper.ParseQueryWrapper</returntype>
+            <parameter>
+                <name>Key</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>Value</name>
+                <type>java.lang.Object</type>
+            </parameter>
+        </method>
+        <method>
+            <name>Find</name>
+            <comment>Finds all objects matching the query.
+The DoneFind event will be raised when the operation completes.
+If an error occurs Success will be False and a ParseException with a message describing the error will be placed in LastException.</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>ba</name>
+                <type>anywheresoftware.b4a.BA</type>
+            </parameter>
+            <parameter>
+                <name>EventName</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>TaskId</name>
+                <type>int</type>
+            </parameter>
+        </method>
+        <method>
+            <name>OrderBy</name>
+            <comment>Sets the ordering of the query results as Ascending or Descending.</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>Key</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>Ascending</name>
+                <type>boolean</type>
+            </parameter>
+        </method>
+        <method>
+            <name>WhereWithinKilometers</name>
+            <comment>Adds a WhereWithinKilometers condition to the query.</comment>
+            <returntype>anywheresoftware.b4a.objects.ParseObjectWrapper.ParseQueryWrapper</returntype>
+            <parameter>
+                <name>Key</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>GeoPoint</name>
+                <type>com.parse.ParseGeoPoint</type>
+            </parameter>
+            <parameter>
+                <name>Distance</name>
+                <type>double</type>
+            </parameter>
+        </method>
+        <method>
+            <name>GetById</name>
+            <comment>Gets an object based on its ObjectId.
+The DoneGet event will be raised when the operation completes.
+If an error occurs Success will be False and a ParseException with a message describing the error will be placed in LastException.</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>ba</name>
+                <type>anywheresoftware.b4a.BA</type>
+            </parameter>
+            <parameter>
+                <name>EventName</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>ObjectId</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>TaskId</name>
+                <type>int</type>
+            </parameter>
+        </method>
+        <method>
+            <name>whereWithinGeoBox</name>
+            <comment>Add a constraint to the query that requires a particular key's coordinates to be contained within a given rectangular geographic bounding box, 
+southwest as ParseGeoPoint:
+The lower-left inclusive corner of the box.
+northeast as ParseGeoPoint:
+The upper-right inclusive corner of the box.</comment>
+            <returntype>anywheresoftware.b4a.objects.ParseObjectWrapper.ParseQueryWrapper</returntype>
+            <parameter>
+                <name>Key</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>southwest</name>
+                <type>com.parse.ParseGeoPoint</type>
+            </parameter>
+            <parameter>
+                <name>northeast</name>
+                <type>com.parse.ParseGeoPoint</type>
+            </parameter>
+        </method>
+        <method>
+            <name>WhereLessThan</name>
+            <comment>Adds a WhereLessThan condition to the query.</comment>
+            <returntype>anywheresoftware.b4a.objects.ParseObjectWrapper.ParseQueryWrapper</returntype>
+            <parameter>
+                <name>Key</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>Value</name>
+                <type>java.lang.Object</type>
+            </parameter>
+        </method>
+        <method>
+            <name>WhereGreaterThan</name>
+            <comment>Adds a WhereGreaterThan condition to the query.</comment>
+            <returntype>anywheresoftware.b4a.objects.ParseObjectWrapper.ParseQueryWrapper</returntype>
+            <parameter>
+                <name>Key</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>Value</name>
+                <type>java.lang.Object</type>
+            </parameter>
+        </method>
+        <method>
+            <name>WhereWithinMiles</name>
+            <comment>Adds a WhereWithinMiles condition to the query.</comment>
+            <returntype>anywheresoftware.b4a.objects.ParseObjectWrapper.ParseQueryWrapper</returntype>
+            <parameter>
+                <name>Key</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>GeoPoint</name>
+                <type>com.parse.ParseGeoPoint</type>
+            </parameter>
+            <parameter>
+                <name>Distance</name>
+                <type>double</type>
+            </parameter>
+        </method>
+        <method>
+            <name>WhereNear</name>
+            <comment>Adds a WhereNear condition to the query.</comment>
+            <returntype>anywheresoftware.b4a.objects.ParseObjectWrapper.ParseQueryWrapper</returntype>
+            <parameter>
+                <name>Key</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>GeoPoint</name>
+                <type>com.parse.ParseGeoPoint</type>
+            </parameter>
+        </method>
+        <method>
+            <name>IsInitialized</name>
+            <comment></comment>
+            <returntype>boolean</returntype>
+        </method>
+        <property>
+            <name>Skip</name>
+            <parameter>
+                <name>v</name>
+                <type>int</type>
+            </parameter>
+            <comment>You can skip the first results with setSkip. This can be useful for pagination.</comment>
+        </property>
+        <property>
+            <name>Version</name>
+            <returntype>double</returntype>
+            <comment>Returns the version of the library.</comment>
+        </property>
+        <property>
+            <name>Limit</name>
+            <parameter>
+                <name>v</name>
+                <type>int</type>
+            </parameter>
+            <comment>Limits the number of results. Pass -1 to retrieve all items.</comment>
+        </property>
+    </class>
+    <class>
+        <name>anywheresoftware.b4a.objects.ParseObjectWrapper.ParseFileWrapper</name>
+        <shortname>ParseFile</shortname>
+        <comment>ParseFile is a local representation of a file that is saved to the Parse cloud. 
+The workflow is to construct a ParseFile with data and a filename.
+Then save it and set it as a field on a ParseObject.
+You can also use it to store any binary data (up to 10 megabytes).</comment>
+        <objectwrapper>com.parse.ParseFile</objectwrapper>
+        <owner>process</owner>
+        <event>DoneGet(Success As Boolean, Data() As Byte, TaskID As Int)</event>
+        <event>DoneSave(Success As Boolean, TaskID as Int)</event>
+        <permission>android.permission.INTERNET</permission>
+        <method>
+            <name>Initialize</name>
+            <comment>Initializes the ParseFile with a name and the file data as a Byte array.
+Giving a SaveName with a proper file extension (e.g. ".png") is best because it allows
+Parse to deduce the content type of the file and set appropriate HTTP headers when it is fetched.</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>SaveName</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>Data</name>
+                <type>byte[]</type>
+            </parameter>
+        </method>
+        <method>
+            <name>Get</name>
+            <comment>Gets the data for the object from the server.
+The DoneGet event will be raised when saving completes.
+If an error occurs Success will be False and a ParseException with a message describing the error will be placed in LastException.</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>ba</name>
+                <type>anywheresoftware.b4a.BA</type>
+            </parameter>
+            <parameter>
+                <name>EventName</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>TaskID</name>
+                <type>int</type>
+            </parameter>
+        </method>
+        <method>
+            <name>Initialize2</name>
+            <comment>Initializes the ParseFile from a filename and path.
+Giving a SaveName with a proper file extension (e.g. ".png") is best because it allows
+Parse to deduce the content type of the file and set appropriate HTTP headers when it is fetched.</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>Path</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>Name</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>SaveName</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+        <method>
+            <name>Save</name>
+            <comment>Saves the object on the server.
+The DoneSave event will be raised when saving completes.
+If you want to ignore the event then pass an empty String for EventName.
+If an error occurs Success will be False and a ParseException with a message describing the error will be placed in LastException.
+A ParseFile must be saved before it can be added to a ParseObject</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>ba</name>
+                <type>anywheresoftware.b4a.BA</type>
+            </parameter>
+            <parameter>
+                <name>EventName</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>TaskID</name>
+                <type>int</type>
+            </parameter>
+        </method>
+        <method>
+            <name>IsInitialized</name>
+            <comment></comment>
+            <returntype>boolean</returntype>
+        </method>
+        <property>
+            <name>Name</name>
+            <returntype>java.lang.String</returntype>
+            <comment>Returns the file SaveName. Before Save is called, this is just the SaveName given by Initialize.
+After Save is called, that name gets prefixed with a unique identifier.</comment>
+        </property>
+        <property>
+            <name>IsDataAvailable</name>
+            <returntype>boolean</returntype>
+            <comment>Returns whether the file has available data.</comment>
+        </property>
+        <property>
+            <name>URL</name>
+            <returntype>java.lang.String</returntype>
+            <comment>This returns the url of the file.
+It's only available after you Save or after you get the file from a ParseObject.</comment>
+        </property>
+        <property>
+            <name>Version</name>
+            <returntype>double</returntype>
+            <comment>Returns the version of the library.</comment>
+        </property>
+        <property>
+            <name>IsDirty</name>
+            <returntype>boolean</returntype>
+            <comment>Returns whether the file still needs to be saved.</comment>
+        </property>
+    </class>
+    <class>
+        <name>anywheresoftware.b4a.objects.ParseObjectWrapper.ParseGeoPointWrapper</name>
+        <shortname>ParseGeoPoint</shortname>
+        <comment>ParseGeoPoint represents a latitude/longitude point that may be associated with a key in a ParseObject
+or used as a reference point for geo queries. This allows proximity based queries on the key.
+
+Only one Key in a class may contain a GeoPoint.
+
+Points should not equal or exceed the extreme ends of the allowable ranges.
+Latitude should not be -90.0 or 90.0.
+Longitude should not be -180.0 or 180.0.
+Attempting to set latitude or longitude out of bounds will cause an error.</comment>
+        <objectwrapper>com.parse.ParseGeoPoint</objectwrapper>
+        <owner>process</owner>
+        <method>
+            <name>Initialize</name>
+            <comment>Initializes the object and sets latitude and longitude.
+Latitude should not be -90.0 or 90.0.
+Longitude should not be -180.0 or 180.0.</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>latitude</name>
+                <type>double</type>
+            </parameter>
+            <parameter>
+                <name>longitude</name>
+                <type>double</type>
+            </parameter>
+        </method>
+        <method>
+            <name>DistanceInMilesTo</name>
+            <comment>Get the distance between this point and another geopoint in miles.</comment>
+            <returntype>double</returntype>
+            <parameter>
+                <name>GeoPoint</name>
+                <type>com.parse.ParseGeoPoint</type>
+            </parameter>
+        </method>
+        <method>
+            <name>DistanceInKilometersTo</name>
+            <comment>Get the distance between this point and another geopoint in kilometers.</comment>
+            <returntype>double</returntype>
+            <parameter>
+                <name>GeoPoint</name>
+                <type>com.parse.ParseGeoPoint</type>
+            </parameter>
+        </method>
+        <method>
+            <name>DistanceInRadiansTo</name>
+            <comment>Get distance in radians between this point and another GeoPoint.
+This is the smallest angular distance between the two points.</comment>
+            <returntype>double</returntype>
+            <parameter>
+                <name>GeoPoint</name>
+                <type>com.parse.ParseGeoPoint</type>
+            </parameter>
+        </method>
+        <method>
+            <name>Initialize2</name>
+            <comment>Initializes the object and sets both latitude and longitude 0.</comment>
+            <returntype>void</returntype>
+        </method>
+        <method>
+            <name>IsInitialized</name>
+            <comment></comment>
+            <returntype>boolean</returntype>
+        </method>
+        <property>
+            <name>Latitude</name>
+            <returntype>double</returntype>
+            <parameter>
+                <name>latitude</name>
+                <type>double</type>
+            </parameter>
+            <comment>Gets or sets the latitude for this GeoPoint.
+Latitude should not be -90.0 or 90.0.</comment>
+        </property>
+        <property>
+            <name>Longitude</name>
+            <returntype>double</returntype>
+            <parameter>
+                <name>longitude</name>
+                <type>double</type>
+            </parameter>
+            <comment>Gets or sets the longitude for this GeoPoint.
+Longitude should not be -180.0 or 180.0.</comment>
+        </property>
+        <property>
+            <name>Version</name>
+            <returntype>double</returntype>
+            <comment>Returns the version of the library.</comment>
+        </property>
+    </class>
+    <class>
+        <name>anywheresoftware.b4a.objects.ParseObjectWrapper.ParseRelationWrapper</name>
+        <shortname>ParseRelation</shortname>
+        <comment>A class that is used to access all of the children of a many-to-many relationship.
+Each instance of Parse.Relation is associated with a particular parent object and key.
+A ParseRelation is obtained by invoking GetRelation on a ParseObject.</comment>
+        <objectwrapper>com.parse.ParseRelation</objectwrapper>
+        <owner>process</owner>
+        <method>
+            <name>GetQuery</name>
+            <comment>Gets a ParseQuery that can be used to query the objects in this relation and that
+restricts the results to objects in this relation.</comment>
+            <returntype>anywheresoftware.b4a.objects.ParseObjectWrapper.ParseQueryWrapper</returntype>
+        </method>
+        <method>
+            <name>Add</name>
+            <comment>Adds an object to this relation.</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>Object</name>
+                <type>com.parse.ParseObject</type>
+            </parameter>
+        </method>
+        <method>
+            <name>Remove</name>
+            <comment>Removes an object from this relation.</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>Object</name>
+                <type>com.parse.ParseObject</type>
+            </parameter>
+        </method>
+        <method>
+            <name>IsInitialized</name>
+            <comment></comment>
+            <returntype>boolean</returntype>
+        </method>
+        <property>
+            <name>Version</name>
+            <returntype>double</returntype>
+            <comment>Returns the version of the library.</comment>
+        </property>
+    </class>
+    <class>
+        <name>anywheresoftware.b4a.objects.ParseObjectWrapper.ParsePushWrapper</name>
+        <shortname>ParsePush</shortname>
+        <comment>A class that is used to access all of the children of a many-to-many relationship.
+Each instance of Parse.Relation is associated with a particular parent object and key.
+A ParseRelation is obtained by invoking GetRelation on a ParseObject.</comment>
+        <objectwrapper>com.parse.ParsePush</objectwrapper>
+        <owner>process</owner>
+        <event>DoneSend(Success As Boolean, TaskID As Int)</event>
+        <method>
+            <name>Initialize</name>
+            <comment>Initializes the ParsePush object.
+The default channel is the empty string, also known as the global broadcast channel,
+but this value can be overridden using SetChannel(String)</comment>
+            <returntype>void</returntype>
+        </method>
+        <method>
+            <name>Send</name>
+            <comment>Send the push notification. The DoneSend event will be raised when sending completes.
+If an error occurs Success will be False and a ParseException with a message describing the error will be placed in LastException.
+If you want to ignore the event then pass an empty String for EventName.</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>ba</name>
+                <type>anywheresoftware.b4a.BA</type>
+            </parameter>
+            <parameter>
+                <name>EventName</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>TaskID</name>
+                <type>int</type>
+            </parameter>
+        </method>
+        <method>
+            <name>SetExpirationTime</name>
+            <comment>Sets the timestamp at which this notification should expire, in seconds (UTC).
+This notification will be sent to devices which are either online at the time the notification is sent,
+or which come online before the expiration time is reached.
+Because device clocks are not guaranteed to be accurate, most applications should instead use ParsePush.setExpirationTimeInterval.
+Note that the underlying ParsePush method wants a Unix time so this method takes an Android time in ticks and converts it.</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>TimeTicks</name>
+                <type>long</type>
+            </parameter>
+        </method>
+        <method>
+            <name>SetMessage</name>
+            <comment>Sets the message that will be shown in the notification.</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>Message</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+        <method>
+            <name>SetExpirationTimeInterval</name>
+            <comment>Sets the time interval after which this notification should expire, in seconds.
+This notification will be sent to devices which are either online at the time the notification is sent,
+or which come online within the given number of seconds of the notification being received by Parse's server.
+An interval which is less than or equal to zero indicates that the message should only be sent to devices which are currently online.</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>Interval</name>
+                <type>long</type>
+            </parameter>
+        </method>
+        <method>
+            <name>ClearExpiration</name>
+            <comment>Clears both expiration values, indicating that the notification should never expire.</comment>
+            <returntype>void</returntype>
+        </method>
+        <method>
+            <name>SetChannel</name>
+            <comment>Sets the channel on which this push notification will be sent.</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>Channel</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+        <method>
+            <name>IsInitialized</name>
+            <comment></comment>
+            <returntype>boolean</returntype>
+        </method>
+        <property>
+            <name>Version</name>
+            <returntype>double</returntype>
+            <comment>Returns the version of the library.</comment>
+        </property>
+    </class>
+    <version>1.1</version>
+    <comment>The Parse platform provides a complete backend solution for your mobile application. 
+On Parse, you create an App for each of your mobile applications.
+Each App has its own application id and client key.
+Your account on Parse can accommodate multiple Apps.
+See the documentation on the Parse.com web site for more information.
+&lt;link&gt;https://parse.com/docs/index|https://parse.com/docs/index&lt;/link&gt;
+
+This library supports ParseObject, ParseQquery, ParseFile, ParseGeoPoint and Push Notifications.
+
+All the operations which need to access the Parse online service are done asynchronously
+and raise events when complete whose parameters include a Success indication.
+If an error occurs Success will be False and a ParseException with a message describing the error
+will be placed in LastException. If necessary this should be processed in the event code
+as there is a possibility that a further error could occur in another asynchronous call that
+would overwrite the existing LastException. 
+
+Note that these asynchronous operations do not necessarily complete in the order in which they are invoked.
+To deal with this possibility a TaskID parameter is provided in each call that can be used, if required,
+to identify which of several possible method calls has just completed. This may not always be needed.
+
+
+Copyright 2013 Anywhere Software
+
+Licensed under the Apache License, Version 2.0 (the "License");
+you may not use this file except in compliance with the License.
+You may obtain a copy of the License at
+
+		http://www.apache.org/licenses/LICENSE-2.0
+
+Unless required by applicable law or agreed to in writing, software
+distributed under the License is distributed on an "AS IS" BASIS,
+WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+See the License for the specific language governing permissions and
+limitations under the License.</comment>
+    <dependsOn>ParseNative</dependsOn>
+</root>

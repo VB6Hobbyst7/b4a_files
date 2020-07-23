@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root>
+    <doclet-version-NOT-library-version>1.05</doclet-version-NOT-library-version>
+    <class>
+        <name>iranapp.org.socket.Sockets</name>
+        <shortname>SocketExtra</shortname>
+        <owner>process</owner>
+        <method>
+            <name>KeepAlive</name>
+            <comment></comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>Status</name>
+                <type>boolean</type>
+            </parameter>
+        </method>
+        <method>
+            <name>Initilize</name>
+            <comment></comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>b4a</name>
+                <type>anywheresoftware.b4a.BA</type>
+            </parameter>
+            <parameter>
+                <name>socket</name>
+                <type>java.net.Socket</type>
+            </parameter>
+        </method>
+        <method>
+            <name>NoDelay</name>
+            <comment></comment>
+            <returntype>void</returntype>
+        </method>
+    </class>
+</root>

@@ -1,0 +1,967 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root>
+    <doclet-version-NOT-library-version>1.04</doclet-version-NOT-library-version>
+    <class>
+        <name>ariagp.amin.shahedi.files.AriaFile</name>
+        <shortname>AriaFile</shortname>
+        <objectwrapper>java.io.File</objectwrapper>
+        <owner>process</owner>
+        <permission>android.permission.WRITE_EXTERNAL_STORAGE</permission>
+        <permission>android.permission.READ_EXTERNAL_STORAGE</permission>
+        <method>
+            <name>Delete</name>
+            <comment>AriaGP - Amin Shahedi</comment>
+            <returntype>boolean</returntype>
+        </method>
+        <method>
+            <name>SetReadOnly</name>
+            <comment>AriaGP - Amin Shahedi</comment>
+            <returntype>boolean</returntype>
+        </method>
+        <method>
+            <name>IsDirectory</name>
+            <comment>AriaGP - Amin Shahedi</comment>
+            <returntype>boolean</returntype>
+        </method>
+        <method>
+            <name>SetExecutable</name>
+            <comment>AriaGP - Amin Shahedi</comment>
+            <returntype>boolean</returntype>
+            <parameter>
+                <name>executable</name>
+                <type>boolean</type>
+            </parameter>
+        </method>
+        <method>
+            <name>GetCanonicalPath</name>
+            <comment>AriaGP - Amin Shahedi</comment>
+            <returntype>java.lang.String</returntype>
+        </method>
+        <method>
+            <name>Size</name>
+            <comment>AriaGP - Amin Shahedi</comment>
+            <returntype>long</returntype>
+        </method>
+        <method>
+            <name>DeleteOnExit</name>
+            <comment>AriaGP - Amin Shahedi</comment>
+            <returntype>void</returntype>
+        </method>
+        <method>
+            <name>IsInitialized</name>
+            <comment></comment>
+            <returntype>boolean</returntype>
+        </method>
+        <method>
+            <name>GetAbsoluteFile</name>
+            <comment>AriaGP - Amin Shahedi</comment>
+            <returntype>ariagp.amin.shahedi.files.AriaFile</returntype>
+        </method>
+        <method>
+            <name>LastModified</name>
+            <comment>AriaGP - Amin Shahedi</comment>
+            <returntype>long</returntype>
+        </method>
+        <method>
+            <name>GetFileExtension</name>
+            <comment>Gereftane pasvande file</comment>
+            <returntype>java.lang.String</returntype>
+        </method>
+        <method>
+            <name>CanRead</name>
+            <comment>AriaGP - Amin Shahedi</comment>
+            <returntype>boolean</returntype>
+        </method>
+        <method>
+            <name>List</name>
+            <comment>AriaGP - Amin Shahedi</comment>
+            <returntype>anywheresoftware.b4a.objects.collections.List</returntype>
+        </method>
+        <method>
+            <name>SetReadable</name>
+            <comment>AriaGP - Amin Shahedi</comment>
+            <returntype>boolean</returntype>
+            <parameter>
+                <name>readable</name>
+                <type>boolean</type>
+            </parameter>
+        </method>
+        <method>
+            <name>initialize4</name>
+            <comment>AriaGP - Amin Shahedi</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>Uri</name>
+                <type>java.net.URI</type>
+            </parameter>
+        </method>
+        <method>
+            <name>GetMimeType</name>
+            <comment>AriaGP - Amin Shahedi</comment>
+            <returntype>java.lang.String</returntype>
+        </method>
+        <method>
+            <name>initialize3</name>
+            <comment>AriaGP - Amin Shahedi</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>Dir</name>
+                <type>ariagp.amin.shahedi.files.AriaFile</type>
+            </parameter>
+            <parameter>
+                <name>FileName</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+        <method>
+            <name>initialize2</name>
+            <comment>AriaGP - Amin Shahedi</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>path</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+        <method>
+            <name>GetParent</name>
+            <comment>AriaGP - Amin Shahedi</comment>
+            <returntype>java.lang.String</returntype>
+        </method>
+        <method>
+            <name>GetNameWithoutExtension</name>
+            <comment>AriaGP - Amin Shahedi
+ 
+ gereftane esme file bedune pasvand
+ 
+ &lt;code&gt;
+      GetNameWithoutExtension("a.mp3")                   =   "a"
+      GetNameWithoutExtension("emulated/0/admin")        =   "admin"
+      GetNameWithoutExtension("emulated/0/admin/b.mp3")  =   "b"
+ &lt;/code&gt;</comment>
+            <returntype>java.lang.String</returntype>
+        </method>
+        <method>
+            <name>Mkdirs</name>
+            <comment>AriaGP - Amin Shahedi</comment>
+            <returntype>boolean</returntype>
+        </method>
+        <method>
+            <name>GetPath</name>
+            <comment>AriaGP - Amin Shahedi</comment>
+            <returntype>java.lang.String</returntype>
+        </method>
+        <method>
+            <name>List_Array</name>
+            <comment>AriaGP - Amin Shahedi</comment>
+            <returntype>java.lang.String[]</returntype>
+        </method>
+        <method>
+            <name>RenameTo</name>
+            <comment>AriaGP - Amin Shahedi</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>file</name>
+                <type>ariagp.amin.shahedi.files.AriaFile</type>
+            </parameter>
+        </method>
+        <method>
+            <name>ListFiles</name>
+            <comment>AriaGP - Amin Shahedi</comment>
+            <returntype>ariagp.amin.shahedi.files.AriaFile[]</returntype>
+        </method>
+        <method>
+            <name>CanWrite</name>
+            <comment>AriaGP - Amin Shahedi</comment>
+            <returntype>boolean</returntype>
+        </method>
+        <method>
+            <name>GetTotalSpace</name>
+            <comment>AriaGP - Amin Shahedi</comment>
+            <returntype>long</returntype>
+        </method>
+        <method>
+            <name>GetFreeSpace</name>
+            <comment>AriaGP - Amin Shahedi</comment>
+            <returntype>long</returntype>
+        </method>
+        <method>
+            <name>GetName</name>
+            <comment>AriaGP - Amin Shahedi</comment>
+            <returntype>java.lang.String</returntype>
+        </method>
+        <method>
+            <name>GetUsableSpace</name>
+            <comment>AriaGP - Amin Shahedi</comment>
+            <returntype>long</returntype>
+        </method>
+        <method>
+            <name>GetCanonicalFile</name>
+            <comment>AriaGP - Amin Shahedi</comment>
+            <returntype>ariagp.amin.shahedi.files.AriaFile</returntype>
+        </method>
+        <method>
+            <name>CanExecute</name>
+            <comment>AriaGP - Amin Shahedi</comment>
+            <returntype>boolean</returntype>
+        </method>
+        <method>
+            <name>GetParentFile</name>
+            <comment>AriaGP - Amin Shahedi</comment>
+            <returntype>ariagp.amin.shahedi.files.AriaFile</returntype>
+        </method>
+        <method>
+            <name>Mkdir</name>
+            <comment>AriaGP - Amin Shahedi</comment>
+            <returntype>boolean</returntype>
+        </method>
+        <method>
+            <name>IsFile</name>
+            <comment>AriaGP - Amin Shahedi</comment>
+            <returntype>boolean</returntype>
+        </method>
+        <method>
+            <name>IsHidden</name>
+            <comment>AriaGP - Amin Shahedi</comment>
+            <returntype>boolean</returntype>
+        </method>
+        <method>
+            <name>SetReadable2</name>
+            <comment>AriaGP - Amin Shahedi</comment>
+            <returntype>boolean</returntype>
+            <parameter>
+                <name>readable</name>
+                <type>boolean</type>
+            </parameter>
+            <parameter>
+                <name>ownerOnly</name>
+                <type>boolean</type>
+            </parameter>
+        </method>
+        <method>
+            <name>SetExecutable2</name>
+            <comment>AriaGP - Amin Shahedi</comment>
+            <returntype>boolean</returntype>
+            <parameter>
+                <name>executable</name>
+                <type>boolean</type>
+            </parameter>
+            <parameter>
+                <name>ownerOnly</name>
+                <type>boolean</type>
+            </parameter>
+        </method>
+        <method>
+            <name>SetWritable</name>
+            <comment>AriaGP - Amin Shahedi</comment>
+            <returntype>boolean</returntype>
+            <parameter>
+                <name>writable</name>
+                <type>boolean</type>
+            </parameter>
+        </method>
+        <method>
+            <name>IsAbsolute</name>
+            <comment>AriaGP - Amin Shahedi</comment>
+            <returntype>boolean</returntype>
+        </method>
+        <method>
+            <name>GetFolderName</name>
+            <comment>AriaGP - Amin Shahedi
+ 
+ gerefte addresse folderi ke in file darune in qarar darad 
+ 
+ GetFolderName("/home/admin/b.mp3")  =   "/home/admin"</comment>
+            <returntype>java.lang.String</returntype>
+        </method>
+        <method>
+            <name>Equals</name>
+            <comment>AriaGP - Amin Shahedi</comment>
+            <returntype>boolean</returntype>
+            <parameter>
+                <name>file</name>
+                <type>ariagp.amin.shahedi.files.AriaFile</type>
+            </parameter>
+        </method>
+        <method>
+            <name>SetLastModified</name>
+            <comment>AriaGP - Amin Shahedi</comment>
+            <returntype>boolean</returntype>
+            <parameter>
+                <name>time</name>
+                <type>java.lang.Long</type>
+            </parameter>
+        </method>
+        <method>
+            <name>Exists</name>
+            <comment>AriaGP - Amin Shahedi</comment>
+            <returntype>boolean</returntype>
+        </method>
+        <method>
+            <name>SetWritable2</name>
+            <comment>AriaGP - Amin Shahedi</comment>
+            <returntype>boolean</returntype>
+            <parameter>
+                <name>writable</name>
+                <type>boolean</type>
+            </parameter>
+            <parameter>
+                <name>ownerOnly</name>
+                <type>boolean</type>
+            </parameter>
+        </method>
+        <method>
+            <name>GetAbsolutePath</name>
+            <comment>AriaGP - Amin Shahedi</comment>
+            <returntype>java.lang.String</returntype>
+        </method>
+        <method>
+            <name>initialize</name>
+            <comment>AriaGP - Amin Shahedi</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>Dir</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>FileName</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+        <method>
+            <name>CreateNewFile</name>
+            <comment>AriaGP - Amin Shahedi</comment>
+            <returntype>boolean</returntype>
+        </method>
+        <method>
+            <name>ToString</name>
+            <comment>AriaGP - Amin Shahedi</comment>
+            <returntype>java.lang.String</returntype>
+        </method>
+        <field>
+            <name>pathSeparator</name>
+            <comment></comment>
+            <returntype>java.lang.String</returntype>
+        </field>
+        <field>
+            <name>pathSeparatorChar</name>
+            <comment></comment>
+            <returntype>char</returntype>
+        </field>
+        <field>
+            <name>separatorChar</name>
+            <comment></comment>
+            <returntype>char</returntype>
+        </field>
+        <field>
+            <name>separator</name>
+            <comment></comment>
+            <returntype>java.lang.String</returntype>
+        </field>
+    </class>
+    <class>
+        <name>ariagp.amin.shahedi.files.AriaFileUtils</name>
+        <shortname>AriaFileUtils</shortname>
+        <owner>process</owner>
+        <permission>android.permission.WRITE_EXTERNAL_STORAGE</permission>
+        <permission>android.permission.READ_EXTERNAL_STORAGE</permission>
+        <method>
+            <name>ReadString3</name>
+            <comment>AriaGP - Amin Shahedi</comment>
+            <returntype>java.lang.String</returntype>
+            <parameter>
+                <name>path</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+        <method>
+            <name>IsDirectory</name>
+            <comment>AriaGP - Amin Shahedi</comment>
+            <returntype>boolean</returntype>
+            <parameter>
+                <name>Dir</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>FileName</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+        <method>
+            <name>Combine</name>
+            <comment>AriaGP - Amin Shahedi</comment>
+            <returntype>java.lang.String</returntype>
+            <parameter>
+                <name>dir</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>file</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+        <method>
+            <name>ReadString2</name>
+            <comment>AriaGP - Amin Shahedi</comment>
+            <returntype>java.lang.String</returntype>
+            <parameter>
+                <name>dir</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>file</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+        <method>
+            <name>ScanMediaFile</name>
+            <comment></comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>file</name>
+                <type>ariagp.amin.shahedi.files.AriaFile</type>
+            </parameter>
+        </method>
+        <method>
+            <name>GetBitmap</name>
+            <comment>AriaGP - Amin Shahedi</comment>
+            <returntype>android.graphics.Bitmap</returntype>
+            <parameter>
+                <name>path</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+        <method>
+            <name>DeleteFolder2</name>
+            <comment>AriaGP - Amin Shahedi</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>path</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+        <method>
+            <name>isExternalWritable</name>
+            <comment>AriaGP - Amin Shahedi</comment>
+            <returntype>boolean</returntype>
+        </method>
+        <method>
+            <name>GetBitmap2</name>
+            <comment>AriaGP - Amin Shahedi</comment>
+            <returntype>android.graphics.Bitmap</returntype>
+            <parameter>
+                <name>dir</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>file</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+        <method>
+            <name>GetBitmap3</name>
+            <comment>AriaGP - Amin Shahedi</comment>
+            <returntype>android.graphics.Bitmap</returntype>
+            <parameter>
+                <name>file</name>
+                <type>ariagp.amin.shahedi.files.AriaFile</type>
+            </parameter>
+        </method>
+        <method>
+            <name>SizeOfDirectory2</name>
+            <comment>AriaGP - Amin Shahedi</comment>
+            <returntype>long</returntype>
+            <parameter>
+                <name>dir</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+        <method>
+            <name>GetAddressForIntent</name>
+            <comment>AriaGP - Amin Shahedi
+Return type: @return:</comment>
+            <returntype>java.lang.String</returntype>
+            <parameter>
+                <name>path</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+        <method>
+            <name>DirRootExternalPath</name>
+            <comment>AriaGP - Amin Shahedi</comment>
+            <returntype>java.lang.String</returntype>
+        </method>
+        <method>
+            <name>DirInternalPath</name>
+            <comment>AriaGP - Amin Shahedi</comment>
+            <returntype>java.lang.String</returntype>
+        </method>
+        <method>
+            <name>GetExtensionFromMimeType</name>
+            <comment>AriaGP - Amin Shahedi</comment>
+            <returntype>java.lang.String</returntype>
+            <parameter>
+                <name>MimeType</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+        <method>
+            <name>SaveBitmap</name>
+            <comment>AriaGP - Amin Shahedi</comment>
+            <returntype>boolean</returntype>
+            <parameter>
+                <name>dir</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>file</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>bitmap</name>
+                <type>android.graphics.Bitmap</type>
+            </parameter>
+        </method>
+        <method>
+            <name>GetIntentForOpenFile</name>
+            <comment>Action :
+ 
+ true -&gt; VIEW
+ false -&gt; EDIT</comment>
+            <returntype>anywheresoftware.b4a.objects.IntentWrapper</returntype>
+            <parameter>
+                <name>file</name>
+                <type>ariagp.amin.shahedi.files.AriaFile</type>
+            </parameter>
+            <parameter>
+                <name>Action</name>
+                <type>boolean</type>
+            </parameter>
+        </method>
+        <method>
+            <name>isExternalReadable</name>
+            <comment>AriaGP - Amin Shahedi</comment>
+            <returntype>boolean</returntype>
+        </method>
+        <method>
+            <name>GetRealPathFromContentResolver</name>
+            <comment></comment>
+            <returntype>java.lang.String</returntype>
+            <parameter>
+                <name>uri</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+        <method>
+            <name>Copy2</name>
+            <comment>AriaGP - Amin Shahedi</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>from</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>to</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+        <method>
+            <name>Copy3</name>
+            <comment>AriaGP - Amin Shahedi</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>Dir_from</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>File_from</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>Dir_to</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>File_to</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+        <method>
+            <name>DeleteFolder</name>
+            <comment>AriaGP - Amin Shahedi</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>file</name>
+                <type>ariagp.amin.shahedi.files.AriaFile</type>
+            </parameter>
+        </method>
+        <method>
+            <name>CalcSize_FA</name>
+            <comment>AriaGP - Amin Shahedi</comment>
+            <returntype>java.lang.String</returntype>
+            <parameter>
+                <name>size</name>
+                <type>long</type>
+            </parameter>
+        </method>
+        <method>
+            <name>SizeOfFile3</name>
+            <comment>AriaGP - Amin Shahedi</comment>
+            <returntype>long</returntype>
+            <parameter>
+                <name>dir</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>fileName</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+        <method>
+            <name>GetMimeTypeFromExtension</name>
+            <comment>AriaGP - Amin Shahedi</comment>
+            <returntype>java.lang.String</returntype>
+            <parameter>
+                <name>Extension</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+        <method>
+            <name>SizeOfFile2</name>
+            <comment>AriaGP - Amin Shahedi</comment>
+            <returntype>long</returntype>
+            <parameter>
+                <name>path</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+        <method>
+            <name>DirDefaultExternalFile</name>
+            <comment>AriaGP - Amin Shahedi</comment>
+            <returntype>ariagp.amin.shahedi.files.AriaFile</returntype>
+        </method>
+        <method>
+            <name>WriteString</name>
+            <comment>AriaGP - Amin Shahedi</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>file</name>
+                <type>ariagp.amin.shahedi.files.AriaFile</type>
+            </parameter>
+            <parameter>
+                <name>text</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+        <method>
+            <name>ReadString</name>
+            <comment>AriaGP - Amin Shahedi</comment>
+            <returntype>java.lang.String</returntype>
+            <parameter>
+                <name>file</name>
+                <type>ariagp.amin.shahedi.files.AriaFile</type>
+            </parameter>
+        </method>
+        <method>
+            <name>SizeOfFile</name>
+            <comment>AriaGP - Amin Shahedi</comment>
+            <returntype>long</returntype>
+            <parameter>
+                <name>file</name>
+                <type>ariagp.amin.shahedi.files.AriaFile</type>
+            </parameter>
+        </method>
+        <method>
+            <name>CalcSize_EN</name>
+            <comment>AriaGP - Amin Shahedi</comment>
+            <returntype>java.lang.String</returntype>
+            <parameter>
+                <name>size</name>
+                <type>long</type>
+            </parameter>
+        </method>
+        <method>
+            <name>GetAddressForIntent2</name>
+            <comment>AriaGP - Amin Shahedi
+Return type: @return:</comment>
+            <returntype>java.lang.String</returntype>
+            <parameter>
+                <name>file</name>
+                <type>ariagp.amin.shahedi.files.AriaFile</type>
+            </parameter>
+        </method>
+        <method>
+            <name>CopyDirectory</name>
+            <comment>AriaGP - Amin Shahedi</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>srcDir</name>
+                <type>ariagp.amin.shahedi.files.AriaFile</type>
+            </parameter>
+            <parameter>
+                <name>destDir</name>
+                <type>ariagp.amin.shahedi.files.AriaFile</type>
+            </parameter>
+        </method>
+        <method>
+            <name>GetIntentForShareFile</name>
+            <comment>AriaGP - Amin Shahedi</comment>
+            <returntype>anywheresoftware.b4a.objects.IntentWrapper</returntype>
+            <parameter>
+                <name>file</name>
+                <type>ariagp.amin.shahedi.files.AriaFile</type>
+            </parameter>
+            <parameter>
+                <name>Subject</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+        <method>
+            <name>Copy</name>
+            <comment>AriaGP - Amin Shahedi</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>from</name>
+                <type>ariagp.amin.shahedi.files.AriaFile</type>
+            </parameter>
+            <parameter>
+                <name>to</name>
+                <type>ariagp.amin.shahedi.files.AriaFile</type>
+            </parameter>
+        </method>
+        <method>
+            <name>DirInternalCache</name>
+            <comment>AriaGP - Amin Shahedi</comment>
+            <returntype>ariagp.amin.shahedi.files.AriaFile</returntype>
+        </method>
+        <method>
+            <name>DirDefaultExternalPath</name>
+            <comment>AriaGP - Amin Shahedi</comment>
+            <returntype>java.lang.String</returntype>
+        </method>
+        <method>
+            <name>CopyDirectory2</name>
+            <comment>AriaGP - Amin Shahedi</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>srcDir</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>destDir</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+        <method>
+            <name>WriteString2</name>
+            <comment>AriaGP - Amin Shahedi</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>dir</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>file</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>text</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+        <method>
+            <name>DirRootExternalFile</name>
+            <comment>AriaGP - Amin Shahedi</comment>
+            <returntype>ariagp.amin.shahedi.files.AriaFile</returntype>
+        </method>
+        <method>
+            <name>WriteString3</name>
+            <comment>AriaGP - Amin Shahedi</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>path</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>text</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+        <method>
+            <name>SaveBitmap3</name>
+            <comment>AriaGP - Amin Shahedi</comment>
+            <returntype>boolean</returntype>
+            <parameter>
+                <name>file</name>
+                <type>ariagp.amin.shahedi.files.AriaFile</type>
+            </parameter>
+            <parameter>
+                <name>bitmap</name>
+                <type>android.graphics.Bitmap</type>
+            </parameter>
+        </method>
+        <method>
+            <name>DirInternalFile</name>
+            <comment>AriaGP - Amin Shahedi</comment>
+            <returntype>ariagp.amin.shahedi.files.AriaFile</returntype>
+        </method>
+        <method>
+            <name>DirInternalCachePath</name>
+            <comment>AriaGP - Amin Shahedi</comment>
+            <returntype>java.lang.String</returntype>
+        </method>
+        <method>
+            <name>SaveBitmap2</name>
+            <comment>AriaGP - Amin Shahedi</comment>
+            <returntype>boolean</returntype>
+            <parameter>
+                <name>path</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>bitmap</name>
+                <type>android.graphics.Bitmap</type>
+            </parameter>
+        </method>
+        <method>
+            <name>SizeOfDirectory</name>
+            <comment>AriaGP - Amin Shahedi</comment>
+            <returntype>long</returntype>
+            <parameter>
+                <name>dir</name>
+                <type>ariagp.amin.shahedi.files.AriaFile</type>
+            </parameter>
+        </method>
+    </class>
+    <class>
+        <name>ariagp.amin.shahedi.files.MimeUtils</name>
+        <comment>Utilities for dealing with MIME types.
+ Used to implement java.net.URLConnection and android.webkit.MimeTypeMap.</comment>
+        <owner>process</owner>
+        <method>
+            <name>hasMimeType</name>
+            <comment>Returns true if the given MIME type has an entry in the map.
+mimeType: A MIME type (i.e. text/plain)
+Return type: @return:True iff there is a mimeType entry in the map.</comment>
+            <returntype>boolean</returntype>
+            <parameter>
+                <name>mimeType</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+        <method>
+            <name>guessMimeTypeFromExtension</name>
+            <comment>Returns the MIME type for the given extension.
+extension: A file extension without the leading '.'
+Return type: @return:The MIME type for the given extension or null iff there is none.</comment>
+            <returntype>java.lang.String</returntype>
+            <parameter>
+                <name>extension</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+        <method>
+            <name>guessExtensionFromMimeType</name>
+            <comment>Returns the registered extension for the given MIME type. Note that some
+ MIME types map to multiple extensions. This call will return the most
+ common extension for the given MIME type.
+mimeType: A MIME type (i.e. text/plain)
+Return type: @return:The extension for the given MIME type or null iff there is none.</comment>
+            <returntype>java.lang.String</returntype>
+            <parameter>
+                <name>mimeType</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+        <method>
+            <name>hasExtension</name>
+            <comment>Returns true if the given extension has a registered MIME type.
+extension: A file extension without the leading '.'
+Return type: @return:True iff there is an extension entry in the map.</comment>
+            <returntype>boolean</returntype>
+            <parameter>
+                <name>extension</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+    </class>
+    <class>
+        <name>ariagp.amin.shahedi.files.RealPathUtil</name>
+        <comment>Created by AMiN on 4/18/2016.</comment>
+        <owner>process</owner>
+        <method>
+            <name>getDataColumn</name>
+            <comment>Get the value of the data column for this Uri. This is useful for
+ MediaStore Uris, and other file-based ContentProviders.
+context: The context.
+uri: The Uri to query.
+selection: (Optional) Filter used in the query.
+selectionArgs: (Optional) Selection arguments used in the query.
+Return type: @return:The value of the _data column, which is typically a file path.</comment>
+            <returntype>java.lang.String</returntype>
+            <parameter>
+                <name>context</name>
+                <type>android.content.Context</type>
+            </parameter>
+            <parameter>
+                <name>uri</name>
+                <type>android.net.Uri</type>
+            </parameter>
+            <parameter>
+                <name>selection</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>selectionArgs</name>
+                <type>java.lang.String[]</type>
+            </parameter>
+        </method>
+        <method>
+            <name>isDownloadsDocument</name>
+            <comment>
+uri: The Uri to check.
+Return type: @return:Whether the Uri authority is DownloadsProvider.</comment>
+            <returntype>boolean</returntype>
+            <parameter>
+                <name>uri</name>
+                <type>android.net.Uri</type>
+            </parameter>
+        </method>
+        <method>
+            <name>getPath</name>
+            <comment></comment>
+            <returntype>java.lang.String</returntype>
+            <parameter>
+                <name>context</name>
+                <type>android.content.Context</type>
+            </parameter>
+            <parameter>
+                <name>uri</name>
+                <type>android.net.Uri</type>
+            </parameter>
+        </method>
+        <method>
+            <name>isExternalStorageDocument</name>
+            <comment>
+uri: The Uri to check.
+Return type: @return:Whether the Uri authority is ExternalStorageProvider.</comment>
+            <returntype>boolean</returntype>
+            <parameter>
+                <name>uri</name>
+                <type>android.net.Uri</type>
+            </parameter>
+        </method>
+        <method>
+            <name>isMediaDocument</name>
+            <comment>
+uri: The Uri to check.
+Return type: @return:Whether the Uri authority is MediaProvider.</comment>
+            <returntype>boolean</returntype>
+            <parameter>
+                <name>uri</name>
+                <type>android.net.Uri</type>
+            </parameter>
+        </method>
+    </class>
+    <version>1.2</version>
+    <author>AminShahedi</author>
+</root>

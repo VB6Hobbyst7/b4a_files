@@ -1,0 +1,329 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <doclet-version-NOT-library-version>1.00</doclet-version-NOT-library-version>
+  <dependsOn>reflection</dependsOn>
+  <class>
+    <name>b4a.example.cltexteffects</name>
+    <shortname>clTextEffects</shortname>
+    <owner>activity</owner>
+    <method>
+      <name>IsInitialized</name>
+      <comment>Tests whether the object has been initialized.</comment>
+      <returntype>boolean</returntype>
+    </method>
+    <method>
+      <name DesignerName="Class_Globals">_class_globals</name>
+      <comment>Version: 0.14
+Aurthor: UDG
+Last Modified: 13.02.2015
+Location: Di Gioia Consulting - Lugano (CH)Sub Class_Globals</comment>
+      <returntype>String</returntype>
+    </method>
+    <method>
+      <name DesignerName="DesignerCreateView">_designercreateview</name>
+      <comment>Used by the designer when added there. Do not use manually. Use Initialize and Setup!</comment>
+      <returntype>String</returntype>
+      <parameter>
+        <name>Base</name>
+        <type>anywheresoftware.b4a.objects.PanelWrapper</type>
+      </parameter>
+      <parameter>
+        <name>Lbl</name>
+        <type>anywheresoftware.b4a.objects.LabelWrapper</type>
+      </parameter>
+      <parameter>
+        <name>Props</name>
+        <type>anywheresoftware.b4a.objects.collections.Map</type>
+      </parameter>
+    </method>
+    <method>
+      <name DesignerName="Initialize">_initialize</name>
+      <comment>Initializes the object.
+Make sure that the Customview in designer is large enough to display the labels with the format you need.
+Required for both Designer and Manual setup
+TargetModule - calling module
+EventName - prefix name for events associated to this class (none at the moment)</comment>
+      <returntype>String</returntype>
+      <parameter>
+        <name>ba</name>
+        <type>anywheresoftware.b4a.BA</type>
+      </parameter>
+      <parameter>
+        <name>TargetModule</name>
+        <type>Object</type>
+      </parameter>
+      <parameter>
+        <name>EventName</name>
+        <type>String</type>
+      </parameter>
+    </method>
+    <method>
+      <name DesignerName="setAutoStart" HideFromIDE="true">_setautostart</name>
+      <comment>set if animation should automatically start on calling an effect</comment>
+      <returntype>String</returntype>
+      <parameter>
+        <name>auto</name>
+        <type>boolean</type>
+      </parameter>
+    </method>
+    <method>
+      <name DesignerName="setColor" HideFromIDE="true">_setcolor</name>
+      <comment>Set the TextEffects background color</comment>
+      <returntype>String</returntype>
+      <parameter>
+        <name>BkgColor</name>
+        <type>int</type>
+      </parameter>
+    </method>
+    <method>
+      <name DesignerName="SetInnerText">_setinnertext</name>
+      <comment>
+Set text for inner labels. First transition effect will go from aLabel1 to aLabel2</comment>
+      <returntype>String</returntype>
+      <parameter>
+        <name>aText1</name>
+        <type>String</type>
+      </parameter>
+      <parameter>
+        <name>aText2</name>
+        <type>String</type>
+      </parameter>
+    </method>
+    <method>
+      <name DesignerName="SetInnerTextColors">_setinnertextcolors</name>
+      <comment>Set Text and Background color to use for first (T1xxx) and second (T2xxx) label.
+Default values: Text = black and Backgroung = transparent for both labels</comment>
+      <returntype>String</returntype>
+      <parameter>
+        <name>T1color</name>
+        <type>int</type>
+      </parameter>
+      <parameter>
+        <name>B1Color</name>
+        <type>int</type>
+      </parameter>
+      <parameter>
+        <name>T2color</name>
+        <type>int</type>
+      </parameter>
+      <parameter>
+        <name>B2Color</name>
+        <type>int</type>
+      </parameter>
+    </method>
+    <method>
+      <name DesignerName="SetInnerTextProperties">_setinnertextproperties</name>
+      <comment>Set the Text related properties in a single shot
+FirstLabel = True : applies prop to first internal label; False: applies props to second internal label</comment>
+      <returntype>String</returntype>
+      <parameter>
+        <name>FirstLabel</name>
+        <type>boolean</type>
+      </parameter>
+      <parameter>
+        <name>aTextSize</name>
+        <type>int</type>
+      </parameter>
+      <parameter>
+        <name>aTypeface</name>
+        <type>anywheresoftware.b4a.keywords.constants.TypefaceWrapper</type>
+      </parameter>
+      <parameter>
+        <name>aGravity</name>
+        <type>int</type>
+      </parameter>
+    </method>
+    <method>
+      <name DesignerName="setInterval" HideFromIDE="true">_setinterval</name>
+      <comment>set animation interval in milliseconds</comment>
+      <returntype>String</returntype>
+      <parameter>
+        <name>ms</name>
+        <type>long</type>
+      </parameter>
+    </method>
+    <method>
+      <name DesignerName="Setup">_setup</name>
+      <comment>
+TextEffect setup - TE will take all panel Base space and be positione at 0,0 relative to Base
+Base - panel container for TextEffect</comment>
+      <returntype>String</returntype>
+      <parameter>
+        <name>Base</name>
+        <type>anywheresoftware.b4a.objects.PanelWrapper</type>
+      </parameter>
+    </method>
+    <method>
+      <name DesignerName="Setup2">_setup2</name>
+      <comment>TextEffect setup - TE will be positioned and dimensioned as specified
+Base - panel container for TextEffect
+posX, posY - coordinates to position TE relative to its container
+awidth, aHeight - TE dimensions</comment>
+      <returntype>String</returntype>
+      <parameter>
+        <name>Base</name>
+        <type>anywheresoftware.b4a.objects.PanelWrapper</type>
+      </parameter>
+      <parameter>
+        <name>posX</name>
+        <type>int</type>
+      </parameter>
+      <parameter>
+        <name>posY</name>
+        <type>int</type>
+      </parameter>
+      <parameter>
+        <name>aWidth</name>
+        <type>int</type>
+      </parameter>
+      <parameter>
+        <name>aHeight</name>
+        <type>int</type>
+      </parameter>
+    </method>
+    <method>
+      <name DesignerName="setVisible" HideFromIDE="true">_setvisible</name>
+      <comment>Set the visibility of the TextEffects object</comment>
+      <returntype>String</returntype>
+      <parameter>
+        <name>Visible</name>
+        <type>boolean</type>
+      </parameter>
+    </method>
+    <method>
+      <name DesignerName="StartEffect">_starteffect</name>
+      <comment>manually start/stop an animation; start = True starts the selected animation</comment>
+      <returntype>String</returntype>
+      <parameter>
+        <name>start</name>
+        <type>boolean</type>
+      </parameter>
+    </method>
+    <method>
+      <name DesignerName="TextAlternate">_textalternate</name>
+      <comment>Alternate between txt1 and txt2</comment>
+      <returntype>String</returntype>
+      <parameter>
+        <name>txt1</name>
+        <type>String</type>
+      </parameter>
+      <parameter>
+        <name>txt2</name>
+        <type>String</type>
+      </parameter>
+    </method>
+    <method>
+      <name DesignerName="TextFlashB">_textflashb</name>
+      <comment>Flash text alternating two backgroud colors</comment>
+      <returntype>String</returntype>
+      <parameter>
+        <name>Txt</name>
+        <type>String</type>
+      </parameter>
+      <parameter>
+        <name>Color1</name>
+        <type>int</type>
+      </parameter>
+      <parameter>
+        <name>Color2</name>
+        <type>int</type>
+      </parameter>
+    </method>
+    <method>
+      <name DesignerName="TextFlashT">_textflasht</name>
+      <comment>Flash text alternating two text colors</comment>
+      <returntype>String</returntype>
+      <parameter>
+        <name>Txt</name>
+        <type>String</type>
+      </parameter>
+      <parameter>
+        <name>Color1</name>
+        <type>int</type>
+      </parameter>
+      <parameter>
+        <name>Color2</name>
+        <type>int</type>
+      </parameter>
+    </method>
+    <method>
+      <name DesignerName="TextGrow">_textgrow</name>
+      <comment>Alternate Txt between size1 and size2</comment>
+      <returntype>String</returntype>
+      <parameter>
+        <name>Txt</name>
+        <type>String</type>
+      </parameter>
+      <parameter>
+        <name>Size1</name>
+        <type>int</type>
+      </parameter>
+      <parameter>
+        <name>Size2</name>
+        <type>int</type>
+      </parameter>
+    </method>
+    <method>
+      <name DesignerName="TextRotate">_textrotate</name>
+      <comment>
+Circular rotation of text ( e.g. abc-&gt;bca-&gt;cab-&gt;abc )</comment>
+      <returntype>String</returntype>
+      <parameter>
+        <name>txt</name>
+        <type>String</type>
+      </parameter>
+    </method>
+    <method>
+      <name DesignerName="TextRotate2">_textrotate2</name>
+      <comment>Circular rotation of text limited to a substring maxSize in width
+Set maxSize to container's width in order to see as much text as possible</comment>
+      <returntype>String</returntype>
+      <parameter>
+        <name>txt</name>
+        <type>String</type>
+      </parameter>
+      <parameter>
+        <name>maxSize</name>
+        <type>int</type>
+      </parameter>
+    </method>
+    <property>
+      <name DesignerName="AutoStart">_autostart</name>
+      <comment>set if animation should automatically start on calling an effect</comment>
+      <returntype>void</returntype>
+      <parameter>
+        <name>Value</name>
+        <type>boolean</type>
+      </parameter>
+    </property>
+    <property>
+      <name DesignerName="Color">_color</name>
+      <comment>Set the TextEffects background color</comment>
+      <returntype>void</returntype>
+      <parameter>
+        <name>Value</name>
+        <type>int</type>
+      </parameter>
+    </property>
+    <property>
+      <name DesignerName="Interval">_interval</name>
+      <comment>set animation interval in milliseconds</comment>
+      <returntype>void</returntype>
+      <parameter>
+        <name>Value</name>
+        <type>long</type>
+      </parameter>
+    </property>
+    <property>
+      <name DesignerName="Visible">_visible</name>
+      <comment>Set the visibility of the TextEffects object</comment>
+      <returntype>void</returntype>
+      <parameter>
+        <name>Value</name>
+        <type>boolean</type>
+      </parameter>
+    </property>
+  </class>
+  <version>0.14</version>
+  <author>UDG</author>
+</root>

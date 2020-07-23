@@ -1,0 +1,196 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <doclet-version-NOT-library-version>1.00</doclet-version-NOT-library-version>
+  <dependsOn>serial</dependsOn>
+  <dependsOn>randomaccessfile</dependsOn>
+  <class b4a_type="Activity">
+    <name>b4a.example.acttemperature</name>
+    <shortname>actTemperature</shortname>
+    <owner>process</owner>
+    <objectwrapper>java.lang.Class</objectwrapper>
+    <method>
+      <name>process_globals</name>
+      <returntype>void</returntype>
+    </method>
+  </class>
+  <class b4a_type="Activity">
+    <name>b4a.example.actreleh</name>
+    <shortname>actReleh</shortname>
+    <owner>process</owner>
+    <objectwrapper>java.lang.Class</objectwrapper>
+    <method>
+      <name>process_globals</name>
+      <returntype>void</returntype>
+    </method>
+  </class>
+  <class b4a_type="Activity">
+    <name>b4a.example.actlight</name>
+    <shortname>actLight</shortname>
+    <owner>process</owner>
+    <objectwrapper>java.lang.Class</objectwrapper>
+    <method>
+      <name>process_globals</name>
+      <returntype>void</returntype>
+    </method>
+  </class>
+  <class b4a_type="Activity">
+    <name>b4a.example.actlamp</name>
+    <shortname>actLamp</shortname>
+    <owner>process</owner>
+    <objectwrapper>java.lang.Class</objectwrapper>
+    <method>
+      <name>process_globals</name>
+      <returntype>void</returntype>
+    </method>
+  </class>
+  <class>
+    <name>b4a.example.hardwareclass</name>
+    <shortname>HardwareClass</shortname>
+    <owner>process</owner>
+    <permission>android.permission.BLUETOOTH</permission>
+    <permission>android.permission.BLUETOOTH_ADMIN</permission>
+    <event>ReceiveResult As String</event>
+    <method>
+      <name>IsInitialized</name>
+      <comment>Tests whether the object has been initialized.</comment>
+      <returntype>boolean</returntype>
+    </method>
+    <method>
+      <name DesignerName="ChangeLEDBright">_changeledbright</name>
+      <returntype>String</returntype>
+      <parameter>
+        <name>State</name>
+        <type>String</type>
+      </parameter>
+    </method>
+    <method>
+      <name DesignerName="ChoosePairDevice">_choosepairdevice</name>
+      <returntype>String</returntype>
+    </method>
+    <method>
+      <name DesignerName="ConnectToDevice">_connecttodevice</name>
+      <returntype>String</returntype>
+    </method>
+    <method>
+      <name DesignerName="DisconnectDevice">_disconnectdevice</name>
+      <returntype>String</returntype>
+    </method>
+    <method>
+      <name DesignerName="Initialize">_initialize</name>
+      <returntype>String</returntype>
+      <parameter>
+        <name>ba</name>
+        <type>anywheresoftware.b4a.BA</type>
+      </parameter>
+      <parameter>
+        <name>Module</name>
+        <type>Object</type>
+      </parameter>
+      <parameter>
+        <name>ReceiveEvent</name>
+        <type>String</type>
+      </parameter>
+    </method>
+    <method>
+      <name DesignerName="Login">_login</name>
+      <returntype>String</returntype>
+      <parameter>
+        <name>Password</name>
+        <type>String</type>
+      </parameter>
+    </method>
+    <method>
+      <name DesignerName="Logout">_logout</name>
+      <returntype>String</returntype>
+    </method>
+    <method>
+      <name DesignerName="ReadSensor">_readsensor</name>
+      <returntype>String</returntype>
+      <parameter>
+        <name>ChannelID</name>
+        <type>String</type>
+      </parameter>
+    </method>
+    <method>
+      <name DesignerName="SetDevicePassword">_setdevicepassword</name>
+      <returntype>String</returntype>
+      <parameter>
+        <name>Password</name>
+        <type>String</type>
+      </parameter>
+    </method>
+    <method>
+      <name DesignerName="TurnOffLED">_turnoffled</name>
+      <returntype>String</returntype>
+    </method>
+    <method>
+      <name DesignerName="TurnOffRelay">_turnoffrelay</name>
+      <returntype>String</returntype>
+    </method>
+    <method>
+      <name DesignerName="TurnOnRelay">_turnonrelay</name>
+      <returntype>String</returntype>
+    </method>
+    <method>
+      <name DesignerName="Write">_write</name>
+      <returntype>String</returntype>
+      <parameter>
+        <name>Arg</name>
+        <type>String</type>
+      </parameter>
+    </method>
+    <field>
+      <name DesignerName="LED_BRIGHT_0">_led_bright_0</name>
+      <returntype>String</returntype>
+    </field>
+    <field>
+      <name DesignerName="LED_BRIGHT_10">_led_bright_10</name>
+      <returntype>String</returntype>
+    </field>
+    <field>
+      <name DesignerName="LED_BRIGHT_20">_led_bright_20</name>
+      <returntype>String</returntype>
+    </field>
+    <field>
+      <name DesignerName="LED_BRIGHT_30">_led_bright_30</name>
+      <returntype>String</returntype>
+    </field>
+    <field>
+      <name DesignerName="LED_BRIGHT_40">_led_bright_40</name>
+      <returntype>String</returntype>
+    </field>
+    <field>
+      <name DesignerName="LED_BRIGHT_50">_led_bright_50</name>
+      <returntype>String</returntype>
+    </field>
+    <field>
+      <name DesignerName="LED_BRIGHT_60">_led_bright_60</name>
+      <returntype>String</returntype>
+    </field>
+    <field>
+      <name DesignerName="LED_BRIGHT_70">_led_bright_70</name>
+      <returntype>String</returntype>
+    </field>
+    <field>
+      <name DesignerName="LED_BRIGHT_80">_led_bright_80</name>
+      <returntype>String</returntype>
+    </field>
+    <field>
+      <name DesignerName="LED_BRIGHT_90">_led_bright_90</name>
+      <returntype>String</returntype>
+    </field>
+    <field>
+      <name DesignerName="LED_BRIGHT_100">_led_bright_100</name>
+      <returntype>String</returntype>
+    </field>
+    <field>
+      <name DesignerName="ERROR_LOGIN">_error_login</name>
+      <returntype>String</returntype>
+    </field>
+    <field>
+      <name DesignerName="ERROR_INVALID_COMMAND">_error_invalid_command</name>
+      <returntype>String</returntype>
+    </field>
+  </class>
+  <version>1</version>
+</root>

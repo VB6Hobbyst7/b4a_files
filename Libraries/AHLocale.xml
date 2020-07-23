@@ -1,0 +1,388 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root>
+    <doclet-version-NOT-library-version>1.00</doclet-version-NOT-library-version>
+    <class>
+        <name>de.amberhome.AHLocale</name>
+        <shortname>AHLocale</shortname>
+        <comment>The AHLocale object allows you to access many locale aware values such as
+ localized month names, day names or currency symbols.
+ 
+ There are also methods to find out which locales are available on your device
+ or which languages and countries can be used.</comment>
+        <owner>process</owner>
+        <method>
+            <name>Initialize</name>
+            <comment>Initializes the AHLocale object with the default locale.</comment>
+            <returntype>void</returntype>
+        </method>
+        <method>
+            <name>InitializeUS</name>
+            <comment>Initializes the AHLocale Object with &lt;strong&gt;en_US&lt;/strong&gt; locale. This locale is
+ available on every device.</comment>
+            <returntype>void</returntype>
+        </method>
+        <method>
+            <name>Initialize2</name>
+            <comment>Initializes the AHLocale object using the specified language.</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>language</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+        <method>
+            <name>Initialize3</name>
+            <comment>Initializes the AHLocale object using the specified language and country.</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>language</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>country</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+        <property>
+            <name>FirstDayOfWeek</name>
+            <returntype>int</returntype>
+            <comment>Gets the first day of the week</comment>
+        </property>
+        <property>
+            <name>ShortWeekDays</name>
+            <returntype>java.lang.String[]</returntype>
+            <comment>Returns the array of strings containing the abbreviated names of the days of the week.</comment>
+        </property>
+        <property>
+            <name>ShortMonths</name>
+            <returntype>java.lang.String[]</returntype>
+            <comment>Returns the array of strings containing the abbreviated names of the months.</comment>
+        </property>
+        <property>
+            <name>DisplayCountry</name>
+            <returntype>java.lang.String</returntype>
+            <comment>Returns the name of this locale's country, localized to locale. Returns
+ the empty string if this locale does not correspond to a specific country</comment>
+        </property>
+        <property>
+            <name>EnglishLanguage</name>
+            <returntype>java.lang.String</returntype>
+            <comment>Returns the name of this locale's language in english. If the
+ language name is unknown, the language code is returned.</comment>
+        </property>
+        <property>
+            <name>Initialized</name>
+            <returntype>java.lang.Boolean</returntype>
+            <comment>Returns if the object is initialized</comment>
+        </property>
+        <property>
+            <name>EnglishCountry</name>
+            <returntype>java.lang.String</returntype>
+            <comment>Returns the name of this locale's country in english. Returns
+ the empty string if this locale does not correspond to a specific country</comment>
+        </property>
+        <property>
+            <name>WeekDays</name>
+            <returntype>java.lang.String[]</returntype>
+            <comment>Returns the array of strings containing the full names of the days of the week.</comment>
+        </property>
+        <property>
+            <name>AvailableLocales</name>
+            <returntype>anywheresoftware.b4a.objects.collections.List</returntype>
+            <comment>Returns the system's installed locales. These are returned as a B4A List of AHLocale Objects.
+ There are only locales in this list which have a non empty country and language.</comment>
+        </property>
+        <property>
+            <name>Country</name>
+            <returntype>java.lang.String</returntype>
+            <comment>Returns the country/region code for this locale, which will either be the
+ empty string or an uppercase ISO 3166 2-letter code.</comment>
+        </property>
+        <property>
+            <name>DisplayName</name>
+            <returntype>java.lang.String</returntype>
+            <comment>Returns this locale's language name, country name, and variant, localized
+ to locale. The exact output form depends on whether this locale
+ corresponds to a specific language, country and variant, such as:
+ English, English (United States), English (United States,Computer),
+ anglais (?tats-Unis), anglais (?tats-Unis,informatique).</comment>
+        </property>
+        <property>
+            <name>CurrencyCode</name>
+            <returntype>java.lang.String</returntype>
+            <comment>Returns this currency's ISO 4217 currency code.</comment>
+        </property>
+        <property>
+            <name>ISO3Country</name>
+            <returntype>java.lang.String</returntype>
+            <comment>Gets the three letter ISO country code which corresponds to the country
+ code for this Locale.</comment>
+        </property>
+        <property>
+            <name>AmPmStrings</name>
+            <returntype>java.lang.String[]</returntype>
+            <comment>Returns the array of strings which represent AM and PM.</comment>
+        </property>
+        <property>
+            <name>ISOCountries</name>
+            <returntype>java.lang.String[]</returntype>
+            <comment>Gets the list of two letter ISO country codes which can be used as the
+ country code for a Locale.</comment>
+        </property>
+        <property>
+            <name>CurrencyFractionDigits</name>
+            <returntype>int</returntype>
+            <comment>Returns the default number of fraction digits for this currency.</comment>
+        </property>
+        <property>
+            <name>Months</name>
+            <returntype>java.lang.String[]</returntype>
+            <comment>Returns the array of strings containing the full names of the months.</comment>
+        </property>
+        <property>
+            <name>ISOCode</name>
+            <returntype>java.lang.String</returntype>
+            <comment>Returns the ISO Code for this Locale such as &lt;strong&gt;en_US&lt;/strong&gt; or &lt;strong&gt;de_DE&lt;/strong&gt;</comment>
+        </property>
+        <property>
+            <name>EnglishName</name>
+            <returntype>java.lang.String</returntype>
+            <comment>Returns this locale's language name, country name, and variant in english.
+ The exact output form depends on whether this locale
+ corresponds to a specific language, country and variant, such as:
+ English, English (United States), English (United States,Computer),
+ anglais (?tats-Unis), anglais (?tats-Unis,informatique).</comment>
+        </property>
+        <property>
+            <name>DisplayLanguage</name>
+            <returntype>java.lang.String</returntype>
+            <comment>Returns the name of this locale's language, localized to locale. If the
+ language name is unknown, the language code is returned.</comment>
+        </property>
+        <property>
+            <name>Language</name>
+            <returntype>java.lang.String</returntype>
+            <comment>Gets the language code for this Locale or the empty string if no language
+ was set.</comment>
+        </property>
+        <property>
+            <name>ISOLanguages</name>
+            <returntype>java.lang.String[]</returntype>
+            <comment>Gets the list of two letter ISO language codes which can be used as the
+ language code for a Locale.</comment>
+        </property>
+        <property>
+            <name>ISO3Language</name>
+            <returntype>java.lang.String</returntype>
+            <comment>Gets the three letter ISO language code which corresponds to the language
+ code for this Locale.</comment>
+        </property>
+        <property>
+            <name>CurrencySymbol</name>
+            <returntype>java.lang.String</returntype>
+            <comment>Returns the localized currency symbol for this currency in locale.</comment>
+        </property>
+        <field>
+            <name>myLocale</name>
+            <comment></comment>
+            <returntype>java.util.Locale</returntype>
+        </field>
+    </class>
+    <class>
+        <name>de.amberhome.AHTranslator</name>
+        <shortname>AHTranslator</shortname>
+        <comment>With the Translator object you can make your programs support multiple
+ languages. It is very easy to create translations for your program and use
+ them.
+ 
+ Translation files have the following name convention:
+ [basename]_[language].lng
+ 
+ The format is a standard Java properties file. Special characters should be
+ converted to unicode sequences.
+ 
+ The translator object holds two Map Objects for the translations. One for the
+ existing translations in the language file and one for missing translations
+ in the language file. When you call GetText() with a string that is not in
+ the translation file then it will be added to the missing translations Map.</comment>
+        <owner>process</owner>
+        <method>
+            <name>Initialize</name>
+            <comment>Initializes a translation object with the device language. Tries to read a
+ translation file with the following name convention: basename_language.lng</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>dir</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>basename</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+        <method>
+            <name>WriteTranslation</name>
+            <comment>Writes two files to the specified dir. The current translation Map is
+ written to [filename]_[language].lng and the missing translation Map is
+ written to [filename]_miss_[language].lng</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>dir</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>filename</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+        <method>
+            <name>GetText2</name>
+            <comment>Searches for the text in the translation table and returns the translated
+ text.
+ 
+ You can use Placeholders in the form of {1} {2} etc. which will be
+ replaced with the content of the second parameter. {1} will be replaced
+ with the first item in the Array/List, {2} with the second one and so on.</comment>
+            <returntype>java.lang.String</returntype>
+            <parameter>
+                <name>text</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>params</name>
+                <type>anywheresoftware.b4a.objects.collections.List</type>
+            </parameter>
+        </method>
+        <method>
+            <name>GetText</name>
+            <comment>Searches for the text in the translation table. If a translation is
+ available it will be returned. If no translation is available the text is
+ added to the missing translation table and the original text is returned.
+ So you can write your whole program in a default language. If a
+ translation is available it will be used, if not, the text will be
+ returned in the default language.</comment>
+            <returntype>java.lang.String</returntype>
+            <parameter>
+                <name>text</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+        <method>
+            <name>Initialize2</name>
+            <comment>Initializes a translation object with the given language. Tries to read a
+ translation file with the following name convention: basename_language.lng</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>dir</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>basename</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>language</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+        <property>
+            <name>TranslationMap</name>
+            <returntype>anywheresoftware.b4a.objects.collections.Map</returntype>
+            <parameter>
+                <name>transmap</name>
+                <type>anywheresoftware.b4a.objects.collections.Map</type>
+            </parameter>
+            <comment>Returns a Map object with the current translations</comment>
+        </property>
+        <property>
+            <name>MissingTranslationMap</name>
+            <returntype>anywheresoftware.b4a.objects.collections.Map</returntype>
+            <comment>Returns a Map object with all text phrases which are missing in the 
+ translation file.</comment>
+        </property>
+        <property>
+            <name>CurrentLanguage</name>
+            <returntype>java.lang.String</returntype>
+            <comment>Returns current Language code</comment>
+        </property>
+        <property>
+            <name>CurrentFile</name>
+            <returntype>java.lang.String</returntype>
+            <comment>Returns current file name of language file</comment>
+        </property>
+    </class>
+    <class>
+        <name>de.amberhome.DateTime</name>
+        <shortname>AHDateTime</shortname>
+        <comment>With the AHDateTime object you can format and parse date and time strings.
+ 
+ The B4A builtin DateTime object always uses localized format strings so it is
+ not possible to parse something like "2011/05/19 01:45 PM" on a german device
+ because "PM" is "nachm." there. You can Initialize the AHDateTime object with
+ any locale you want and so you are totally free on date formats.</comment>
+        <owner>process</owner>
+        <method>
+            <name>Initialize</name>
+            <comment>Initializes the AHDateTime object with the default locale.</comment>
+            <returntype>void</returntype>
+        </method>
+        <method>
+            <name>Format</name>
+            <comment>Formats the specified ticks value to a string with the specified pattern.</comment>
+            <returntype>java.lang.String</returntype>
+            <parameter>
+                <name>ticks</name>
+                <type>long</type>
+            </parameter>
+        </method>
+        <method>
+            <name>InitializeUS</name>
+            <comment>Initializes the AHDateTime object with the &lt;strong&gt;en_US&lt;/strong&gt; locale.</comment>
+            <returntype>void</returntype>
+        </method>
+        <method>
+            <name>Parse</name>
+            <comment>Parses the specified string and returns a tick value.
+ 
+ Throws an exception if the string can not be parsed.</comment>
+            <returntype>long</returntype>
+            <parameter>
+                <name>date</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+        <method>
+            <name>Initialize2</name>
+            <comment>Initializes the AHDateTime object with the given AHLocale object</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>locale</name>
+                <type>de.amberhome.AHLocale</type>
+            </parameter>
+        </method>
+        <property>
+            <name>Pattern</name>
+            <returntype>java.lang.String</returntype>
+            <parameter>
+                <name>pattern</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <comment>Sets or gets the Date/Time pattern
+ 
+ Default pattern is: &lt;strong&gt;yyyy-MM-dd HH:mm:ss&lt;/strong&gt;
+ 
+ For allowed placeholders look here: &lt;link&gt;SimpleDateFormat|http://developer.android.com/reference/java/text/SimpleDateFormat.html&lt;/link&gt;</comment>
+        </property>
+        <property>
+            <name>Lenient</name>
+            <returntype>boolean</returntype>
+            <parameter>
+                <name>value</name>
+                <type>boolean</type>
+            </parameter>
+            <comment>If you set this to true the parser is not very strict on his date format.</comment>
+        </property>
+    </class>
+    <version>1.1</version>
+    <author>Markus Stipp</author>
+</root>

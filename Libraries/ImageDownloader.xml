@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root>
+    <doclet-version-NOT-library-version>1.02</doclet-version-NOT-library-version>
+    <class>
+        <name>com.student.library.ImageDownloader</name>
+        <shortname>ImageDownloader</shortname>
+        <owner>process</owner>
+        <method>
+            <name>LoadImage</name>
+            <comment>Load Image From Url And Set in ImageView
+This library cache image file</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>ba</name>
+                <type>anywheresoftware.b4a.BA</type>
+            </parameter>
+            <parameter>
+                <name>URL</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>imageview</name>
+                <type>android.widget.ImageView</type>
+            </parameter>
+        </method>
+    </class>
+    <version>1.0</version>
+</root>

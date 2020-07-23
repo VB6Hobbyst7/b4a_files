@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root>
+    <doclet-version-NOT-library-version>1.04</doclet-version-NOT-library-version>
+    <class>
+        <name>com.android.setting.Setting</name>
+        <shortname>Settings</shortname>
+        <owner>process</owner>
+        <method>
+            <name>OpenSettinsUI</name>
+            <comment></comment>
+            <returntype>android.content.Intent</returntype>
+        </method>
+        <method>
+            <name>OpenLocationUI</name>
+            <comment></comment>
+            <returntype>android.content.Intent</returntype>
+        </method>
+    </class>
+</root>

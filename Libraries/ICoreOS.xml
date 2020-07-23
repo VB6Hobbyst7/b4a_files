@@ -1,0 +1,814 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root>
+    <doclet-version-NOT-library-version>1.01</doclet-version-NOT-library-version>
+    <class>
+        <name>giuseppe.salvi.icoreos.library.OSSys</name>
+        <owner>process</owner>
+        <permission>android.permission.BLUETOOTH_ADMIN</permission>
+        <permission>android.permission.BLUETOOTH</permission>
+        <permission>android.permission.CAMERA</permission>
+        <permission>android.permission.WRITE_SETTINGS</permission>
+        <permission>android.permission.WRITE_SECURE_SETTINGS</permission>
+        <permission>android.permission.ACCESS_FINE_LOCATION</permission>
+        <permission>android.permission.ACCESS_WIFI_STATE</permission>
+        <permission>android.permission.CHANGE_WIFI_STATE</permission>
+        <permission>android.permission.ACCESS_LOCATION</permission>
+        <permission>android.permission.ACCESS_GPS</permission>
+        <permission>android.permission.ACCESS_ASSISTED_GPS</permission>
+        <permission>android.permission.ACCESS_CELL_ID</permission>
+        <permission>android.permission.ACCESS_COARSE_LOCATION</permission>
+        <permission>android.permission.ACCESS_FINE_LOCATION</permission>
+        <permission>android.permission.ACCESS_NETWORK_STATE</permission>
+        <permission>android.permission.INTERNET</permission>
+        <permission>android.permission.READ_PHONE_STATE</permission>
+        <permission>android.permission.MODIFY_PHONE_STATE</permission>
+        <permission>android.permission.CALL_PHONE</permission>
+        <permission>android.permission.CALL_PRIVILEGED</permission>
+        <permission>android.permission.PROCESS_OUTGOING_CALLS</permission>
+        <permission>android.permission.SEND_SMS</permission>
+        <method>
+            <name>Rgb</name>
+            <comment></comment>
+            <returntype>int</returntype>
+            <parameter>
+                <name>R</name>
+                <type>int</type>
+            </parameter>
+            <parameter>
+                <name>G</name>
+                <type>int</type>
+            </parameter>
+            <parameter>
+                <name>B</name>
+                <type>int</type>
+            </parameter>
+        </method>
+        <method>
+            <name>aRgb</name>
+            <comment></comment>
+            <returntype>int</returntype>
+            <parameter>
+                <name>Alpha</name>
+                <type>int</type>
+            </parameter>
+            <parameter>
+                <name>R</name>
+                <type>int</type>
+            </parameter>
+            <parameter>
+                <name>G</name>
+                <type>int</type>
+            </parameter>
+            <parameter>
+                <name>B</name>
+                <type>int</type>
+            </parameter>
+        </method>
+        <field>
+            <name>WHITE</name>
+            <comment></comment>
+            <returntype>int</returntype>
+        </field>
+        <field>
+            <name>BLUE</name>
+            <comment></comment>
+            <returntype>int</returntype>
+        </field>
+        <field>
+            <name>CENTER_VERTICAL</name>
+            <comment></comment>
+            <returntype>int</returntype>
+        </field>
+        <field>
+            <name>NO_GRAVITY</name>
+            <comment></comment>
+            <returntype>int</returntype>
+        </field>
+        <field>
+            <name>GREEN</name>
+            <comment></comment>
+            <returntype>int</returntype>
+        </field>
+        <field>
+            <name>CYAN</name>
+            <comment></comment>
+            <returntype>int</returntype>
+        </field>
+        <field>
+            <name>FILL</name>
+            <comment></comment>
+            <returntype>int</returntype>
+        </field>
+        <field>
+            <name>LEFT</name>
+            <comment></comment>
+            <returntype>int</returntype>
+        </field>
+        <field>
+            <name>LTGRAY</name>
+            <comment></comment>
+            <returntype>int</returntype>
+        </field>
+        <field>
+            <name>BOTTOM</name>
+            <comment></comment>
+            <returntype>int</returntype>
+        </field>
+        <field>
+            <name>TRANSPARENT</name>
+            <comment></comment>
+            <returntype>int</returntype>
+        </field>
+        <field>
+            <name>RIGHT</name>
+            <comment></comment>
+            <returntype>int</returntype>
+        </field>
+        <field>
+            <name>Colour_Dkgray</name>
+            <comment></comment>
+            <returntype>int</returntype>
+        </field>
+        <field>
+            <name>YELLOW</name>
+            <comment></comment>
+            <returntype>int</returntype>
+        </field>
+        <field>
+            <name>MAGENTA</name>
+            <comment></comment>
+            <returntype>int</returntype>
+        </field>
+        <field>
+            <name>TOP</name>
+            <comment></comment>
+            <returntype>int</returntype>
+        </field>
+        <field>
+            <name>Color_Black</name>
+            <comment></comment>
+            <returntype>int</returntype>
+        </field>
+        <field>
+            <name>RED</name>
+            <comment></comment>
+            <returntype>int</returntype>
+        </field>
+        <field>
+            <name>CENTER_HORIZONTAL</name>
+            <comment></comment>
+            <returntype>int</returntype>
+        </field>
+        <field>
+            <name>CENTER</name>
+            <comment></comment>
+            <returntype>int</returntype>
+        </field>
+        <field>
+            <name>Colour_Gray</name>
+            <comment></comment>
+            <returntype>int</returntype>
+        </field>
+    </class>
+    <class>
+        <name>giuseppe.salvi.icoreos.library.OSString</name>
+        <shortname>OSCustomString</shortname>
+        <owner>process</owner>
+        <method>
+            <name>Mid$</name>
+            <comment>Dim OSString1 as OSCustomString
+  Example:
+  OSString1.Mid$("Hello Basic4Android" , 7 , 13)
+  "BasicAndroid"</comment>
+            <returntype>java.lang.String</returntype>
+            <parameter>
+                <name>text</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>value1</name>
+                <type>int</type>
+            </parameter>
+            <parameter>
+                <name>value2</name>
+                <type>int</type>
+            </parameter>
+        </method>
+        <method>
+            <name>StrRight$</name>
+            <comment>Dim OSString1 as OSCustomString
+ Example:
+ OSString1.StrRight$("Hello Basic4Android" , 7)
+ "Android"</comment>
+            <returntype>java.lang.String</returntype>
+            <parameter>
+                <name>text</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>value</name>
+                <type>int</type>
+            </parameter>
+        </method>
+        <method>
+            <name>StrLeft$</name>
+            <comment>Dim OSString1 as OSCustomString
+ Example:
+ OSString1.StrLeft$("Hello Basic4Android" , 5)
+ "Hello"</comment>
+            <returntype>java.lang.String</returntype>
+            <parameter>
+                <name>text</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>value</name>
+                <type>int</type>
+            </parameter>
+        </method>
+        <property>
+            <name>Version</name>
+            <returntype>double</returntype>
+            <comment>Return The Version Of Library</comment>
+        </property>
+    </class>
+    <class>
+        <name>giuseppe.salvi.icoreos.library.OSPhoneManager</name>
+        <shortname>OSManagePhone</shortname>
+        <owner>activity</owner>
+        <method>
+            <name>EnableDisableBluetooth</name>
+            <comment>Examples:
+ Dim Button1 as Button
+ Dim mphone as OSManagePhone
+ 
+ Sub Button1_Click
+ mphone.EnableDisableBluetooth
+ End Sub</comment>
+            <returntype>void</returntype>
+        </method>
+        <method>
+            <name>Initialize</name>
+            <comment>Initialize The Object.
+ Example:
+ Dim mphone as OSManagePhone
+ mphone.Initialize</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>ba</name>
+                <type>anywheresoftware.b4a.BA</type>
+            </parameter>
+        </method>
+        <method>
+            <name>OpenWifiSettings</name>
+            <comment>Examples:
+ Dim Button1 as Button
+ Dim mphone as OSManagePhone
+ 
+ Sub Button1_Click
+ mphone.OpenWifiSettings
+ End Sub</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>ba</name>
+                <type>anywheresoftware.b4a.BA</type>
+            </parameter>
+        </method>
+        <method>
+            <name>GetDeviceModel</name>
+            <comment>Return The Device model</comment>
+            <returntype>java.lang.String</returntype>
+        </method>
+        <method>
+            <name>EnableDisableWiFi</name>
+            <comment>Examples:
+ Dim Button1 as Button
+ Dim mphone as OSManagePhone
+ 
+ Sub Button1_Click
+ mphone.EnableDisableWiFi
+ End Sub</comment>
+            <returntype>boolean</returntype>
+            <parameter>
+                <name>ba</name>
+                <type>anywheresoftware.b4a.BA</type>
+            </parameter>
+        </method>
+        <method>
+            <name>GetIPAddress</name>
+            <comment>Return Your Current IPAddress</comment>
+            <returntype>java.lang.String</returntype>
+        </method>
+        <method>
+            <name>PowerUsageSummary</name>
+            <comment>Examples:
+ Dim Button1 as Button
+ Dim mphone as OSManagePhone
+ 
+ Sub Button1_Click
+ mphone.PowerUsageSummary
+ End Sub</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>ba</name>
+                <type>anywheresoftware.b4a.BA</type>
+            </parameter>
+        </method>
+        <method>
+            <name>AvailMemorySpace</name>
+            <comment>Return AvailMemorySpace</comment>
+            <returntype>java.lang.String</returntype>
+        </method>
+        <method>
+            <name>OpenGpsSetting</name>
+            <comment>Examples:
+ Dim Button1 as Button
+ Dim mphone as OSManagePhone
+ 
+ Sub Button1_Click
+ mphone.OpenGpsSetting
+ End Sub</comment>
+            <returntype>void</returntype>
+        </method>
+        <method>
+            <name>GetOSVersion</name>
+            <comment>Return The OSVersion</comment>
+            <returntype>java.lang.String</returntype>
+        </method>
+        <method>
+            <name>GetPhoneNumber</name>
+            <comment>Return Your Current Phone Number</comment>
+            <returntype>java.lang.String</returntype>
+        </method>
+    </class>
+    <class>
+        <name>giuseppe.salvi.icoreos.library.OSMusicPlayer</name>
+        <shortname>OSMusicPlayer</shortname>
+        <owner>process</owner>
+        <method>
+            <name>Initialize</name>
+            <comment>Initialize The Object.
+ You Should Initialize Before Load Any Sounds.
+ Example:
+ Dim Mp as OSMusicPlayer
+ MP.Initialize</comment>
+            <returntype>void</returntype>
+        </method>
+        <method>
+            <name>PlayMusicFromFile</name>
+            <comment>Load An Audio File and Play.
+ Example:
+ mp.PlayMusicFromFile("sdcard/media/somefile.mp3",true)</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>FileName</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>PlayOn</name>
+                <type>boolean</type>
+            </parameter>
+        </method>
+        <method>
+            <name>IsPlaying</name>
+            <comment>Return True If OSMusicPlayer Is Currently Playig</comment>
+            <returntype>boolean</returntype>
+        </method>
+        <method>
+            <name>Play</name>
+            <comment>Play Or Resume The Audio You Loaded Before</comment>
+            <returntype>void</returntype>
+        </method>
+        <method>
+            <name>PlayMusicFromAsset</name>
+            <comment>Load An Audio File And Play.
+ Example:
+ mp.PlayMusicFromAsset("somefile.mp3",true)</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>FileName</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>PlayOn</name>
+                <type>boolean</type>
+            </parameter>
+        </method>
+        <method>
+            <name>GetMP3HeaderInfo</name>
+            <comment>Get All Information About Sound
+ Example:
+ Label1.text=mp.GetMP3HeaderInfo("sdcard/media/somefile.mp3",mp.GET_TITLE)</comment>
+            <returntype>java.lang.String</returntype>
+            <parameter>
+                <name>FileName</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>type</name>
+                <type>int</type>
+            </parameter>
+        </method>
+        <method>
+            <name>Stop</name>
+            <comment>Stop Playing.
+ You Must load The sound Before To Play It Again</comment>
+            <returntype>void</returntype>
+        </method>
+        <method>
+            <name>Release</name>
+            <comment>Release All Resources
+ Allocated By OSMusicPlayer</comment>
+            <returntype>void</returntype>
+        </method>
+        <method>
+            <name>SetVolume</name>
+            <comment>Set the Volume For Each Channell.
+ The Value Should Be Between 0 to 100.
+ Example:
+ mp.SetVolume(100,100)</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>Left</name>
+                <type>float</type>
+            </parameter>
+            <parameter>
+                <name>Right</name>
+                <type>float</type>
+            </parameter>
+        </method>
+        <method>
+            <name>Pause</name>
+            <comment>Pause The Current Playback.
+ You Can Resume It From The Current Position
+ By Calling MP.Play</comment>
+            <returntype>void</returntype>
+        </method>
+        <method>
+            <name>PlayRingtone</name>
+            <comment>TYPE_RINGTONE
+	TYPE_NOTIFICATION
+	TYPE_ALARM
+	TYPE_ALL
+
+ Example:
+ 
+ mp.PlayMusicFromAsset(mp.TYPE_RINGTONE)</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>type</name>
+                <type>int</type>
+            </parameter>
+        </method>
+        <method>
+            <name>ConvertToTimeFormat</name>
+            <comment>Give You The Real Length In MM:SS
+ 
+ Refer to MediaPlayer Tutorial
+
+ Example:
+
+ Sub timer1_Tick
+ 
+ If mp.IsPlaying Then
+ Label1.text="Position: " + mp.ConvertToTimeFormat  - ex: "Position: 3:28 - 0:00"
+ End If
+ 
+ End Sub</comment>
+            <returntype>java.lang.String</returntype>
+        </method>
+        <property>
+            <name>Duration</name>
+            <returntype>int</returntype>
+            <comment>Return The Total Value Of The Loaded sound In MilliSeconds</comment>
+        </property>
+        <property>
+            <name>Position</name>
+            <returntype>int</returntype>
+            <comment>Get Or Set The Current Position In MilliSeconds</comment>
+        </property>
+        <property>
+            <name>Version</name>
+            <returntype>double</returntype>
+            <comment>Return The Version Of Library</comment>
+        </property>
+        <field>
+            <name>TYPE_ALL</name>
+            <comment></comment>
+            <returntype>int</returntype>
+        </field>
+        <field>
+            <name>GET_ALBUM</name>
+            <comment></comment>
+            <returntype>int</returntype>
+        </field>
+        <field>
+            <name>GET_DISC_NUMBER</name>
+            <comment></comment>
+            <returntype>int</returntype>
+        </field>
+        <field>
+            <name>GET_COMPILATION</name>
+            <comment></comment>
+            <returntype>int</returntype>
+        </field>
+        <field>
+            <name>TYPE_RINGTONE</name>
+            <comment></comment>
+            <returntype>int</returntype>
+        </field>
+        <field>
+            <name>GET_NUM_TRACKS</name>
+            <comment></comment>
+            <returntype>int</returntype>
+        </field>
+        <field>
+            <name>GET_DATE</name>
+            <comment></comment>
+            <returntype>int</returntype>
+        </field>
+        <field>
+            <name>GET_CD_TRACK_NUMBER</name>
+            <comment></comment>
+            <returntype>int</returntype>
+        </field>
+        <field>
+            <name>GET_BITRATE</name>
+            <comment></comment>
+            <returntype>int</returntype>
+        </field>
+        <field>
+            <name>GET_TITLE</name>
+            <comment></comment>
+            <returntype>int</returntype>
+        </field>
+        <field>
+            <name>GET_DURATION</name>
+            <comment></comment>
+            <returntype>int</returntype>
+        </field>
+        <field>
+            <name>GET_WRITER</name>
+            <comment></comment>
+            <returntype>int</returntype>
+        </field>
+        <field>
+            <name>GET_YEAR</name>
+            <comment></comment>
+            <returntype>int</returntype>
+        </field>
+        <field>
+            <name>GET_HAS_AUDIO</name>
+            <comment></comment>
+            <returntype>int</returntype>
+        </field>
+        <field>
+            <name>TYPE_NOTIFICATION</name>
+            <comment></comment>
+            <returntype>int</returntype>
+        </field>
+        <field>
+            <name>GET_MIMETYPE</name>
+            <comment></comment>
+            <returntype>int</returntype>
+        </field>
+        <field>
+            <name>GET_COMPOSER</name>
+            <comment></comment>
+            <returntype>int</returntype>
+        </field>
+        <field>
+            <name>GET_ARTIST</name>
+            <comment></comment>
+            <returntype>int</returntype>
+        </field>
+        <field>
+            <name>GET_LOCATION</name>
+            <comment></comment>
+            <returntype>int</returntype>
+        </field>
+        <field>
+            <name>GET_ALBUMARTIST</name>
+            <comment></comment>
+            <returntype>int</returntype>
+        </field>
+        <field>
+            <name>TYPE_ALARM</name>
+            <comment></comment>
+            <returntype>int</returntype>
+        </field>
+        <field>
+            <name>GET_AUTHOR</name>
+            <comment></comment>
+            <returntype>int</returntype>
+        </field>
+        <field>
+            <name>GET_GENRE</name>
+            <comment></comment>
+            <returntype>int</returntype>
+        </field>
+    </class>
+    <class>
+        <name>giuseppe.salvi.icoreos.library.OSGraphics</name>
+        <shortname>OSImageProcessing</shortname>
+        <owner>activity</owner>
+        <method>
+            <name>SepiaEffect</name>
+            <comment>
+Dim: ImageView1 as ImageView
+OSImageProcessing1: as OSImageProcessing
+Example: 
+ImageView1=OSImageProcessing1.SepiaEffect(LoadBitmap(File.Dirassets: , "SomeFile.png" ,depth , red , green , blue)</comment>
+            <returntype>android.graphics.Bitmap</returntype>
+            <parameter>
+                <name>ba</name>
+                <type>anywheresoftware.b4a.BA</type>
+            </parameter>
+            <parameter>
+                <name>bmp</name>
+                <type>android.graphics.Bitmap</type>
+            </parameter>
+            <parameter>
+                <name>depth</name>
+                <type>int</type>
+            </parameter>
+            <parameter>
+                <name>red</name>
+                <type>double</type>
+            </parameter>
+            <parameter>
+                <name>green</name>
+                <type>double</type>
+            </parameter>
+            <parameter>
+                <name>blue</name>
+                <type>double</type>
+            </parameter>
+        </method>
+        <method>
+            <name>GaussianBlur</name>
+            <comment>
+Dim: ImageView1 as ImageView
+Dim: OSImageProcessing1 as OSImageProcessing
+Example: 
+ImageView1=OSImageProcessing1.GaussianBlur(LoadBitmap(File.Dirassets: , "SomeFile.png")</comment>
+            <returntype>android.graphics.Bitmap</returntype>
+            <parameter>
+                <name>bmp</name>
+                <type>android.graphics.Bitmap</type>
+            </parameter>
+        </method>
+        <method>
+            <name>Smooth</name>
+            <comment>
+Dim: ImageView1 as ImageView
+OSImageProcessing1: as OSImageProcessing
+Example: 
+ImageView1=OSImageProcessing1.Smooth(LoadBitmap(File.Dirassets: , "SomeFile.png" , value)</comment>
+            <returntype>android.graphics.Bitmap</returntype>
+            <parameter>
+                <name>bmp</name>
+                <type>android.graphics.Bitmap</type>
+            </parameter>
+            <parameter>
+                <name>value</name>
+                <type>double</type>
+            </parameter>
+        </method>
+        <method>
+            <name>Emboss</name>
+            <comment>
+Dim: ImageView1 as ImageView
+OSImageProcessing1: as OSImageProcessing
+Example: 
+ImageView1=OSImageProcessing1.Emboss(LoadBitmap(File.Dirassets: , "SomeFile.png")</comment>
+            <returntype>android.graphics.Bitmap</returntype>
+            <parameter>
+                <name>bmp</name>
+                <type>android.graphics.Bitmap</type>
+            </parameter>
+        </method>
+        <method>
+            <name>Mirror</name>
+            <comment>
+Dim: ImageView1 as ImageView
+OSImageProcessing1: as OSImageProcessing
+Example: 
+ImageView1=OSImageProcessing1.Mirror(LoadBitmap(File.Dirassets: , "SomeFile.png"))</comment>
+            <returntype>android.graphics.Bitmap</returntype>
+            <parameter>
+                <name>bmp</name>
+                <type>android.graphics.Bitmap</type>
+            </parameter>
+        </method>
+        <method>
+            <name>RoundCorner</name>
+            <comment>
+Dim: ImageView1 as ImageView
+Dim: OSImageProcessing1 as OSImageProcessing
+Example: 
+ImageView1=OSImageProcessing1.RoundCorner(LoadBitmap(File.Dirassets: , "SomeFile.png" , round)</comment>
+            <returntype>android.graphics.Bitmap</returntype>
+            <parameter>
+                <name>bmp</name>
+                <type>android.graphics.Bitmap</type>
+            </parameter>
+            <parameter>
+                <name>round</name>
+                <type>float</type>
+            </parameter>
+        </method>
+        <method>
+            <name>ShowCustomToast</name>
+            <comment>
+OSImageProcessing1: as OSImageProcessing
+Example: 
+OSImageProcessing1.ShowCustomToast("Hello: Basic4Android",LoadBitmap(File.Dirassets , "SomeFile.png"))</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>ba</name>
+                <type>anywheresoftware.b4a.BA</type>
+            </parameter>
+            <parameter>
+                <name>SomeText</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>bmp</name>
+                <type>android.graphics.Bitmap</type>
+            </parameter>
+        </method>
+        <method>
+            <name>Rotate</name>
+            <comment>
+Dim: ImageView1 as ImageView
+Dim: OSImageProcessing1 as OSImageProcessing
+Example: 
+ImageView1=OSImageProcessing1.Rotate(LoadBitmap(File.Dirassets: , "SomeFile.png" , Degree)</comment>
+            <returntype>android.graphics.Bitmap</returntype>
+            <parameter>
+                <name>bmp</name>
+                <type>android.graphics.Bitmap</type>
+            </parameter>
+            <parameter>
+                <name>degree</name>
+                <type>float</type>
+            </parameter>
+        </method>
+        <method>
+            <name>Flip</name>
+            <comment>
+Dim: ImageView1 as ImageView
+Dim: OSImageProcessing1 as OSImageProcessing
+Type: FLIP_HORIZONTAL = 1
+Type: FLIP_VERTICAL = 2
+Example: 
+ImageView1=OSImageProcessing1.Flip(LoadBitmap(File.Dirassets: , "SomeFile.png" , type)</comment>
+            <returntype>android.graphics.Bitmap</returntype>
+            <parameter>
+                <name>bmp</name>
+                <type>android.graphics.Bitmap</type>
+            </parameter>
+            <parameter>
+                <name>type</name>
+                <type>int</type>
+            </parameter>
+        </method>
+        <method>
+            <name>Boost</name>
+            <comment>
+Dim: ImageView1 as ImageView
+Dim: OSImageProcessing1 as OSImageProcessing
+Example: 
+ImageView1=OSImageProcessing1.Boost(LoadBitmap(File.Dirassets: , "SomeFile.png" , type , percent)</comment>
+            <returntype>android.graphics.Bitmap</returntype>
+            <parameter>
+                <name>bmp</name>
+                <type>android.graphics.Bitmap</type>
+            </parameter>
+            <parameter>
+                <name>type</name>
+                <type>int</type>
+            </parameter>
+            <parameter>
+                <name>percent</name>
+                <type>float</type>
+            </parameter>
+        </method>
+        <method>
+            <name>Engrave</name>
+            <comment>
+Dim: ImageView1 as ImageView
+OSImageProcessing1: as OSImageProcessing
+Example: 
+ImageView1=OSImageProcessing1.Engrave(LoadBitmap(File.Dirassets: , "SomeFile.png")</comment>
+            <returntype>android.graphics.Bitmap</returntype>
+            <parameter>
+                <name>bmp</name>
+                <type>android.graphics.Bitmap</type>
+            </parameter>
+        </method>
+    </class>
+    <version>1.2</version>
+    <author>Giuseppe Salvi</author>
+</root>

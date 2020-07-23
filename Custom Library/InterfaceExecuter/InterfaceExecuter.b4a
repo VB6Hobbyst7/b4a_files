@@ -1,0 +1,59 @@
+﻿Build1=Default,b4a.example.asds
+File1=f1.bal
+File2=logotype.svg
+FileGroup1=Default Group
+FileGroup2=Default Group
+Group=Default Group
+IconFile=
+Library1=core
+Library2=svg
+ManifestCode='This code will be applied to the manifest file during compilation.~\n~'You do not need to modify it in most cases.~\n~'See this link for for more information: https://www.b4x.com/forum/showthread.php?p=78136~\n~AddManifestText(~\n~<uses-sdk android:targetSdkVersion="19"/>~\n~<supports-screens android:largeScreens="true" ~\n~    android:normalScreens="true" ~\n~    android:smallScreens="true" ~\n~    android:anyDensity="true"/>)~\n~SetApplicationAttribute(android:icon, "@drawable/icon")~\n~SetApplicationAttribute(android:label, "$LABEL$")~\n~AddPermission(android.permission.ACCESS_NETWORK_STATE)~\n~AddApplicationText(<meta-data~\n~    android:name="com.google.android.gms.version"~\n~    android:value="@integer/google_play_services_version" />)~\n~	~\n~AddPermission(android.permission.ACCESS_FINE_LOCATION)
+Module1=Starter
+Module2=InterfaceExecuter
+NumberOfFiles=2
+NumberOfLibraries=2
+NumberOfModules=2
+Version=7.8
+@EndOfDesignText@
+#Region  Project Attributes 
+	#ApplicationLabel: B4A Example
+	#VersionCode: 1
+	#BridgeLogger: True
+	#VersionName: 
+	#SupportedOrientations: unspecified
+	#CanInstallToExternalStorage: False
+	#DebuggerForceStandardAssets: true
+ 	#LibraryAuthor: www.iranapp.org
+	#LibraryName: SVGViewer
+	#LibraryVersion: 1.0
+#End Region
+
+#Region  Activity Attributes 
+	#FullScreen: False
+	#IncludeTitle: True
+#End Region
+
+Sub Process_Globals
+
+End Sub
+
+Sub Globals
+ 
+End Sub
+
+Sub Activity_Create(FirstTime As Boolean)
+Activity.LoadLayout("f1")
+End Sub
+
+Sub Activity_Click
+
+End Sub
+
+Sub Activity_Resume
+
+End Sub
+
+Sub Activity_Pause (UserClosed As Boolean)
+
+End Sub
+ 

@@ -1,0 +1,193 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root>
+    <doclet-version-NOT-library-version>1.01</doclet-version-NOT-library-version>
+    <class>
+        <name>giuseppe.salvi.icos.library.ICOSFadeAnimation</name>
+        <shortname>ICOSFadeAnimation</shortname>
+        <objectwrapper>android.view.animation.Animation</objectwrapper>
+        <owner>activity</owner>
+        <event>animationend</event>
+        <method>
+            <name>FadeInOut</name>
+            <comment>Example:
+ Dim anim As ICOSAnimation
+ Dim ImageView1 As ImageView
+ Dim Button1 As Button
+ 
+ Sub b1_Click
+ anim.FadeInOut("anim",2)
+ anim.StartAnim(ImageView1)
+ End Sub</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>ba</name>
+                <type>anywheresoftware.b4a.BA</type>
+            </parameter>
+            <parameter>
+                <name>EventName</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>Duration</name>
+                <type>int</type>
+            </parameter>
+        </method>
+        <method>
+            <name>AutoRepeat</name>
+            <comment>Set repeat infinity automatically</comment>
+            <returntype>void</returntype>
+        </method>
+        <method>
+            <name>FadeOut</name>
+            <comment>Example:
+ Dim anim As ICOSAnimation
+ Dim ImageView1 As ImageView
+ Dim Button1 As Button
+ 
+ Sub b1_Click
+ anim.FadeOut("anim",2)
+ anim.StartAnim(ImageView1)
+ End Sub</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>ba</name>
+                <type>anywheresoftware.b4a.BA</type>
+            </parameter>
+            <parameter>
+                <name>EventName</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>Duration</name>
+                <type>long</type>
+            </parameter>
+        </method>
+        <method>
+            <name>FadeOutIn</name>
+            <comment>Example:
+ Dim anim As ICOSAnimation
+ Dim ImageView1 As ImageView
+ Dim Button1 As Button
+ 
+ Sub b1_Click
+ anim.FadeOutIn("anim",2)
+ anim.StartAnim(ImageView1)
+ End Sub</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>ba</name>
+                <type>anywheresoftware.b4a.BA</type>
+            </parameter>
+            <parameter>
+                <name>EventName</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>Duration</name>
+                <type>long</type>
+            </parameter>
+        </method>
+        <method>
+            <name>StartAnim</name>
+            <comment>anim.StartAnim</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>view</name>
+                <type>android.view.View</type>
+            </parameter>
+        </method>
+        <method>
+            <name>FadeIn</name>
+            <comment>Example:
+ Dim anim As ICOSAnimation
+ Dim ImageView1 As ImageView
+ Dim Button1 As Button
+ 
+ Sub b1_Click
+ anim.FadeIn("anim",2)
+ anim.StartAnim(ImageView1)
+ End Sub</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>ba</name>
+                <type>anywheresoftware.b4a.BA</type>
+            </parameter>
+            <parameter>
+                <name>EventName</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>Duration</name>
+                <type>long</type>
+            </parameter>
+        </method>
+        <method>
+            <name>AutoReverse</name>
+            <comment>Set reverse automatically</comment>
+            <returntype>void</returntype>
+        </method>
+        <method>
+            <name>StopAnin</name>
+            <comment>Stop the animation</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>view</name>
+                <type>android.view.View</type>
+            </parameter>
+        </method>
+        <method>
+            <name>InfinityFade</name>
+            <comment>Example:
+ Dim anim As ICOSAnimation
+ Dim ImageView1 As ImageView
+ Dim Button1 As Button
+ 
+ Sub b1_Click
+ anim.InfiniteFade("anim",2)
+ anim.StartAnim(ImageView1)
+ End Sub</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>ba</name>
+                <type>anywheresoftware.b4a.BA</type>
+            </parameter>
+            <parameter>
+                <name>EventName</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>Duration</name>
+                <type>long</type>
+            </parameter>
+        </method>
+        <method>
+            <name>IsInitialized</name>
+            <comment></comment>
+            <returntype>boolean</returntype>
+        </method>
+        <property>
+            <name>StartAnimAtTime</name>
+            <parameter>
+                <name>Seconds</name>
+                <type>int</type>
+            </parameter>
+            <comment>Example:
+ Dim anim As ICOSAnimation
+ Dim ImageView1 As ImageView
+ Dim Button1 As Button
+ 
+ Sub b1_Click
+ anim.StartAnimAtTime=5000 The Animation Will start after 5 seconds
+ anim.FadeOut(2)
+ anim.StartAnim(ImageView1)
+ End Sub</comment>
+        </property>
+        <property>
+            <name>Version</name>
+            <returntype>double</returntype>
+            <comment>Return the version of this library</comment>
+        </property>
+    </class>
+    <version>1.4</version>
+    <author>Giuseppe Salvi</author>
+</root>

@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <doclet-version-NOT-library-version>1.00</doclet-version-NOT-library-version>
+  <dependsOn>reflection</dependsOn>
+  <class>
+    <name>adr.fileselectlib.fileselect</name>
+    <shortname>FileSelect</shortname>
+    <owner>activity</owner>
+    <method>
+      <name>IsInitialized</name>
+      <comment>Tests whether the object has been initialized.</comment>
+      <returntype>boolean</returntype>
+    </method>
+    <method>
+      <name DesignerName="AddMemory">_v5</name>
+      <comment>You can add memory stores in two ways. This command adds a new location as a memory store like: SDCard, 
+Removeable_Ext, etc. Do this before calling ShowFiles but after the Initialize command. You can also create
+a text file called: 
+
+memdrives.dat
+
+Place this in your projects Files folder and add the store names in this file.  Make sure you only have one name 
+for each line in the text file. Also, this files name should also be in all lower case as listed above.</comment>
+      <returntype>String</returntype>
+      <parameter>
+        <name>MemoryStore</name>
+        <type>String</type>
+      </parameter>
+    </method>
+    <method>
+      <name DesignerName="ClearSelectionsList">_v0</name>
+      <comment>The FileSelect library keeps a running log of files you have selected in a selections list.  This list
+is added to each time a selection is made. There are two ways to clear this list. It is cleared when the 
+object is Initialized or using ClearSelectionsList.</comment>
+      <returntype>String</returntype>
+    </method>
+    <method>
+      <name DesignerName="GetSelection">_vv1</name>
+      <comment>Used with SelectionsSize. This allows you to move through the SelectionsList and to retrieve items
+from the list. See also, ClearSelectionsList. </comment>
+      <returntype>String</returntype>
+      <parameter>
+        <name>WhichElement</name>
+        <type>int</type>
+      </parameter>
+      <parameter>
+        <name>FileNameOnly</name>
+        <type>boolean</type>
+      </parameter>
+    </method>
+    <method>
+      <name DesignerName="Initialize">_initialize</name>
+      <comment>Initializes the object for use. Pass the calling Activity(Activity) and Object(Me) in this Initialize procedure. 
+If  FullScreen is set to True, it will override the Left, Top, etc. settings. However, you must still pass a valid
+Int for these parameters. You can pass 0 for all.</comment>
+      <returntype>String</returntype>
+      <parameter>
+        <name>ba</name>
+        <type>anywheresoftware.b4a.BA</type>
+      </parameter>
+      <parameter>
+        <name>Act</name>
+        <type>anywheresoftware.b4a.objects.ActivityWrapper</type>
+      </parameter>
+      <parameter>
+        <name>mMe</name>
+        <type>Object</type>
+      </parameter>
+      <parameter>
+        <name>FullScreen</name>
+        <type>boolean</type>
+      </parameter>
+      <parameter>
+        <name>mLeft</name>
+        <type>int</type>
+      </parameter>
+      <parameter>
+        <name>mTop</name>
+        <type>int</type>
+      </parameter>
+      <parameter>
+        <name>mWidth</name>
+        <type>int</type>
+      </parameter>
+      <parameter>
+        <name>mHeight</name>
+        <type>int</type>
+      </parameter>
+    </method>
+    <method>
+      <name DesignerName="IsVisible">_vv4</name>
+      <comment>Returns the state of the view as Boolean.</comment>
+      <returntype>String</returntype>
+    </method>
+    <method>
+      <name DesignerName="PutSelection">_vvv1</name>
+      <comment>You can use this option to add to the Selections List. See also, ClearSelectionsList.</comment>
+      <returntype>String</returntype>
+      <parameter>
+        <name>mKey</name>
+        <type>String</type>
+      </parameter>
+      <parameter>
+        <name>mValue</name>
+        <type>String</type>
+      </parameter>
+    </method>
+    <method>
+      <name DesignerName="Read_Me">_read_me</name>
+      <comment>The Sub listed below MUST be added in the calling Activity,
+where it will be called once a selection is made.
+
+Sub File_Selected(FileName As String, PathAndFile As String)
+	'Msgbox(FileName, PathAndFile), etc.
+End Sub
+
+Also the two variables: Selection and SelectionPath hold the last selection 
+made. Selection is file name only, where SelectionPath is the complete path
+and file name.</comment>
+      <returntype>String</returntype>
+    </method>
+    <method>
+      <name DesignerName="RemoveView">_vvv2</name>
+      <comment>Removes the view from the Activity.</comment>
+      <returntype>String</returntype>
+    </method>
+    <method>
+      <name DesignerName="SelectionsSize">_vvv5</name>
+      <comment>This returns the current Size of the selections list.  See also, ClearSelections and GetSelection.
+Example:
+
+For i = 0 to FS.SelectionsSize -1
+    'Your code here
+    FS.GetSelection(i, False)
+Next</comment>
+      <returntype>int</returntype>
+    </method>
+    <method>
+      <name DesignerName="SetLayoutSize">_vvv6</name>
+      <comment>Set the LayOut properties of the view.</comment>
+      <returntype>String</returntype>
+      <parameter>
+        <name>mLeft</name>
+        <type>int</type>
+      </parameter>
+      <parameter>
+        <name>mTop</name>
+        <type>int</type>
+      </parameter>
+      <parameter>
+        <name>mWidth</name>
+        <type>int</type>
+      </parameter>
+      <parameter>
+        <name>mHeight</name>
+        <type>int</type>
+      </parameter>
+    </method>
+    <method>
+      <name DesignerName="SetViewVisible">_vvv7</name>
+      <comment>Set the state of the FileSelect view.</comment>
+      <returntype>String</returntype>
+      <parameter>
+        <name>mVisible</name>
+        <type>boolean</type>
+      </parameter>
+    </method>
+    <method>
+      <name DesignerName="ShowFiles">_vvvv1</name>
+      <comment>Opens the view and display files and folders passed in FileDirPath. FileDirPath becomes the Root
+folder or directory.</comment>
+      <returntype>String</returntype>
+      <parameter>
+        <name>FileDirPath</name>
+        <type>String</type>
+      </parameter>
+    </method>
+    <field>
+      <name DesignerName="Selection">_vvvvv0</name>
+      <returntype>String</returntype>
+    </field>
+    <field>
+      <name DesignerName="SelectionPath">_vvvvvv1</name>
+      <returntype>String</returntype>
+    </field>
+  </class>
+  <version>1.02</version>
+  <author>Margret</author>
+</root>

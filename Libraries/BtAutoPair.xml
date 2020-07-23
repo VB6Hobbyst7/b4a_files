@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root>
+    <doclet-version-NOT-library-version>1.02</doclet-version-NOT-library-version>
+    <class>
+        <name>leongcc.BtAutoPair</name>
+        <shortname>BtAutoPair</shortname>
+        <owner>process</owner>
+        <permission>android.permission.BLUETOOTH_ADMIN</permission>
+        <permission>android.permission.BLUETOOTH</permission>
+        <method>
+            <name>Start4</name>
+            <comment></comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>intent</name>
+                <type>android.content.Intent</type>
+            </parameter>
+            <parameter>
+                <name>pin</name>
+                <type>byte[]</type>
+            </parameter>
+        </method>
+        <method>
+            <name>GetMac</name>
+            <comment></comment>
+            <returntype>java.lang.String</returntype>
+            <parameter>
+                <name>intent</name>
+                <type>android.content.Intent</type>
+            </parameter>
+        </method>
+        <method>
+            <name>GetName</name>
+            <comment></comment>
+            <returntype>java.lang.String</returntype>
+            <parameter>
+                <name>intent</name>
+                <type>android.content.Intent</type>
+            </parameter>
+        </method>
+    </class>
+    <version>1.0</version>
+</root>

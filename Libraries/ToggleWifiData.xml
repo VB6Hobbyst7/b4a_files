@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root>
+    <doclet-version-NOT-library-version>1.00</doclet-version-NOT-library-version>
+    <class>
+        <name>tillekesoft.b4a.ToggleWifiData.ToggleWifiData</name>
+        <shortname>ToggleWifiData</shortname>
+        <owner>process</owner>
+        <permission>android.permission.CHANGE_WIFI_STATE</permission>
+        <permission>android.permission.ACCESS_WIFI_STATE</permission>
+        <permission>android.permission.UPDATE_DEVICE_STATS</permission>
+        <permission>android.permission.MODIFY_PHONE_STATE</permission>
+        <method>
+            <name>Initialize</name>
+            <comment></comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>ba</name>
+                <type>anywheresoftware.b4a.BA</type>
+            </parameter>
+        </method>
+        <method>
+            <name>toggleWIFI</name>
+            <comment></comment>
+            <returntype>boolean</returntype>
+        </method>
+        <method>
+            <name>isWIFI_enabled</name>
+            <comment></comment>
+            <returntype>boolean</returntype>
+        </method>
+    </class>
+    <version>2.0</version>
+    <author>Moster67</author>
+</root>

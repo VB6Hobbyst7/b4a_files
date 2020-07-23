@@ -1,0 +1,519 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root>
+    <doclet-version-NOT-library-version>1.04</doclet-version-NOT-library-version>
+    <class>
+        <name>de.donmanfred.RangeBarWrapper</name>
+        <shortname>RangeBar</shortname>
+        <objectwrapper>com.appyvet.rangebar.RangeBar</objectwrapper>
+        <owner>process</owner>
+        <method>
+            <name>DesignerCreateView</name>
+            <comment></comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>base</name>
+                <type>anywheresoftware.b4a.objects.PanelWrapper</type>
+            </parameter>
+            <parameter>
+                <name>lw</name>
+                <type>anywheresoftware.b4a.objects.LabelWrapper</type>
+            </parameter>
+            <parameter>
+                <name>props</name>
+                <type>anywheresoftware.b4a.objects.collections.Map</type>
+            </parameter>
+        </method>
+        <method>
+            <name>IsInitialized</name>
+            <comment></comment>
+            <returntype>boolean</returntype>
+        </method>
+        <method>
+            <name>Initialize</name>
+            <comment></comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>ba</name>
+                <type>anywheresoftware.b4a.BA</type>
+            </parameter>
+            <parameter>
+                <name>EventName</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+        <method>
+            <name>BringToFront</name>
+            <comment></comment>
+            <returntype>void</returntype>
+        </method>
+        <method>
+            <name>SetLayout</name>
+            <comment></comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>arg0</name>
+                <type Pixel="true">int</type>
+            </parameter>
+            <parameter>
+                <name>arg1</name>
+                <type Pixel="true">int</type>
+            </parameter>
+            <parameter>
+                <name>arg2</name>
+                <type Pixel="true">int</type>
+            </parameter>
+            <parameter>
+                <name>arg3</name>
+                <type Pixel="true">int</type>
+            </parameter>
+        </method>
+        <method>
+            <name>SendToBack</name>
+            <comment></comment>
+            <returntype>void</returntype>
+        </method>
+        <method>
+            <name>SetVisibleAnimated</name>
+            <comment></comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>arg0</name>
+                <type>int</type>
+            </parameter>
+            <parameter>
+                <name>arg1</name>
+                <type>boolean</type>
+            </parameter>
+        </method>
+        <method>
+            <name>RemoveView</name>
+            <comment></comment>
+            <returntype>void</returntype>
+        </method>
+        <method>
+            <name>AddToParent</name>
+            <comment></comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>Parent</name>
+                <type>android.view.ViewGroup</type>
+            </parameter>
+            <parameter>
+                <name>left</name>
+                <type Pixel="true">int</type>
+            </parameter>
+            <parameter>
+                <name>top</name>
+                <type Pixel="true">int</type>
+            </parameter>
+            <parameter>
+                <name>width</name>
+                <type Pixel="true">int</type>
+            </parameter>
+            <parameter>
+                <name>height</name>
+                <type Pixel="true">int</type>
+            </parameter>
+        </method>
+        <method>
+            <name>Invalidate3</name>
+            <comment></comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>arg0</name>
+                <type>int</type>
+            </parameter>
+            <parameter>
+                <name>arg1</name>
+                <type>int</type>
+            </parameter>
+            <parameter>
+                <name>arg2</name>
+                <type>int</type>
+            </parameter>
+            <parameter>
+                <name>arg3</name>
+                <type>int</type>
+            </parameter>
+        </method>
+        <method>
+            <name>Invalidate2</name>
+            <comment></comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>arg0</name>
+                <type>android.graphics.Rect</type>
+            </parameter>
+        </method>
+        <method>
+            <name>isRangeBar</name>
+            <comment>Gets the type of the bar.
+
+ return true if rangebar, false if seekbar.</comment>
+            <returntype>boolean</returntype>
+        </method>
+        <method>
+            <name>SetColorAnimated</name>
+            <comment></comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>arg0</name>
+                <type>int</type>
+            </parameter>
+            <parameter>
+                <name>arg1</name>
+                <type>int</type>
+            </parameter>
+            <parameter>
+                <name>arg2</name>
+                <type>int</type>
+            </parameter>
+        </method>
+        <method>
+            <name>SetBackgroundImage</name>
+            <comment></comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>arg0</name>
+                <type>android.graphics.Bitmap</type>
+            </parameter>
+        </method>
+        <method>
+            <name>setRangePinsByValue</name>
+            <comment>Sets the location of pins according by the supplied values.
+
+ leftPinValue  Float specifying the index of the left pin
+ rightPinValue Float specifying the index of the right pin</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>leftPinValue</name>
+                <type>float</type>
+            </parameter>
+            <parameter>
+                <name>rightPinValue</name>
+                <type>float</type>
+            </parameter>
+        </method>
+        <method>
+            <name>setRangePinsByIndices</name>
+            <comment>Sets the location of the pins according by the supplied index.
+ Numbered from 0 to mTickCount - 1 from the left.
+
+ leftPinIndex  Integer specifying the index of the left pin
+ rightPinIndex Integer specifying the index of the right pin</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>leftPinIndex</name>
+                <type>int</type>
+            </parameter>
+            <parameter>
+                <name>rightPinIndex</name>
+                <type>int</type>
+            </parameter>
+        </method>
+        <method>
+            <name>Invalidate</name>
+            <comment></comment>
+            <returntype>void</returntype>
+        </method>
+        <method>
+            <name>SetLayoutAnimated</name>
+            <comment></comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>arg0</name>
+                <type>int</type>
+            </parameter>
+            <parameter>
+                <name>arg1</name>
+                <type Pixel="true">int</type>
+            </parameter>
+            <parameter>
+                <name>arg2</name>
+                <type Pixel="true">int</type>
+            </parameter>
+            <parameter>
+                <name>arg3</name>
+                <type Pixel="true">int</type>
+            </parameter>
+            <parameter>
+                <name>arg4</name>
+                <type Pixel="true">int</type>
+            </parameter>
+        </method>
+        <method>
+            <name>RequestFocus</name>
+            <comment></comment>
+            <returntype>boolean</returntype>
+        </method>
+        <property>
+            <name>TickCount</name>
+            <returntype>int</returntype>
+            <comment>Gets the tick count.
+
+ return the tick count</comment>
+        </property>
+        <property>
+            <name>TickEnd</name>
+            <returntype>float</returntype>
+            <parameter>
+                <name>tickEnd</name>
+                <type>float</type>
+            </parameter>
+            <comment>Gets the end tick.
+
+ return the end tick.</comment>
+        </property>
+        <property>
+            <name>Left</name>
+            <returntype>int</returntype>
+            <parameter>
+                <name>left</name>
+                <type>int</type>
+            </parameter>
+            <comment></comment>
+        </property>
+        <property>
+            <name>SeekPinByIndex</name>
+            <parameter>
+                <name>pinIndex</name>
+                <type>int</type>
+            </parameter>
+            <comment>Sets the location of pin according by the supplied index.
+ Numbered from 0 to mTickCount - 1 from the left.
+
+ pinIndex Integer specifying the index of the seek pin</comment>
+        </property>
+        <property>
+            <name>BarColor</name>
+            <parameter>
+                <name>barColor</name>
+                <type>int</type>
+            </parameter>
+            <comment>Set the color of the bar line and the tick lines in the range bar.
+ 
+ barColor Integer specifying the color of the bar line.</comment>
+        </property>
+        <property>
+            <name>PinColor</name>
+            <parameter>
+                <name>pinColor</name>
+                <type>int</type>
+            </parameter>
+            <comment>Set the color of the pins.
+ pinColor Integer specifying the color of the pin.</comment>
+        </property>
+        <property>
+            <name>TickInterval</name>
+            <returntype>double</returntype>
+            <parameter>
+                <name>tickInterval</name>
+                <type>float</type>
+            </parameter>
+            <comment>Gets the tick interval.
+
+ return the tick interval</comment>
+        </property>
+        <property>
+            <name>TickStart</name>
+            <returntype>float</returntype>
+            <parameter>
+                <name>tickStart</name>
+                <type>float</type>
+            </parameter>
+            <comment>Gets the start tick.
+
+ return the start tick.</comment>
+        </property>
+        <property>
+            <name>TickHeight</name>
+            <parameter>
+                <name>tickHeight</name>
+                <type>float</type>
+            </parameter>
+            <comment>Sets the height of the ticks in the range bar.
+
+ tickHeight Float specifying the height of each tick mark in dp.</comment>
+        </property>
+        <property>
+            <name>ConnectingLineWeight</name>
+            <parameter>
+                <name>connectingLineWeight</name>
+                <type>float</type>
+            </parameter>
+            <comment>Set the weight of the connecting line between the thumbs.
+
+ connectingLineWeight Float specifying the weight of the connecting
+                             line.</comment>
+        </property>
+        <property>
+            <name>RightIndex</name>
+            <returntype>int</returntype>
+            <comment>Gets the index of the right-most pin.
+
+ return the 0-based index of the right pin</comment>
+        </property>
+        <property>
+            <name>RangeBarEnabled</name>
+            <parameter>
+                <name>isRangeBar</name>
+                <type>boolean</type>
+            </parameter>
+            <comment>Set if the view is a range bar or a seek bar.
+
+ isRangeBar Boolean - true sets it to rangebar, false to seekbar.</comment>
+        </property>
+        <property>
+            <name>Visible</name>
+            <returntype>boolean</returntype>
+            <parameter>
+                <name>arg0</name>
+                <type>boolean</type>
+            </parameter>
+            <comment></comment>
+        </property>
+        <property>
+            <name>Height</name>
+            <returntype>int</returntype>
+            <parameter>
+                <name>arg0</name>
+                <type Pixel="true">int</type>
+            </parameter>
+            <comment></comment>
+        </property>
+        <property>
+            <name>Width</name>
+            <returntype>int</returntype>
+            <parameter>
+                <name>arg0</name>
+                <type Pixel="true">int</type>
+            </parameter>
+            <comment></comment>
+        </property>
+        <property>
+            <name>SelectorColor</name>
+            <parameter>
+                <name>selectorColor</name>
+                <type>int</type>
+            </parameter>
+            <comment>Set the color of the selector.</comment>
+        </property>
+        <property>
+            <name>Background</name>
+            <returntype>android.graphics.drawable.Drawable</returntype>
+            <parameter>
+                <name>arg0</name>
+                <type>android.graphics.drawable.Drawable</type>
+            </parameter>
+            <comment></comment>
+        </property>
+        <property>
+            <name>LeftIndex</name>
+            <returntype>int</returntype>
+            <comment>Gets the index of the left-most pin.
+
+ return the 0-based index of the left pin</comment>
+        </property>
+        <property>
+            <name>Color</name>
+            <parameter>
+                <name>arg0</name>
+                <type>int</type>
+            </parameter>
+            <comment></comment>
+        </property>
+        <property>
+            <name>Enabled</name>
+            <returntype>boolean</returntype>
+            <parameter>
+                <name>enabled</name>
+                <type>boolean</type>
+            </parameter>
+            <comment></comment>
+        </property>
+        <property>
+            <name>ConnectingLineColor</name>
+            <parameter>
+                <name>connectingLineColor</name>
+                <type>int</type>
+            </parameter>
+            <comment>Set the color of the connecting line between the thumbs.
+
+ connectingLineColor Integer specifying the color of the connecting
+                            line.</comment>
+        </property>
+        <property>
+            <name>PinTextColor</name>
+            <parameter>
+                <name>textColor</name>
+                <type>int</type>
+            </parameter>
+            <comment>Set the color of the text within the pin.
+ textColor Integer specifying the color of the text in the pin.</comment>
+        </property>
+        <property>
+            <name>SeekPinByValue</name>
+            <parameter>
+                <name>pinValue</name>
+                <type>float</type>
+            </parameter>
+            <comment>Sets the location of pin according by the supplied value.
+
+ pinValue Float specifying the value of the pin</comment>
+        </property>
+        <property>
+            <name>Top</name>
+            <returntype>int</returntype>
+            <parameter>
+                <name>top</name>
+                <type>int</type>
+            </parameter>
+            <comment></comment>
+        </property>
+        <property>
+            <name>TickColor</name>
+            <parameter>
+                <name>tickColor</name>
+                <type>int</type>
+            </parameter>
+            <comment>Set the color of the ticks.</comment>
+        </property>
+        <property>
+            <name>BarWeight</name>
+            <parameter>
+                <name>barWeight</name>
+                <type>float</type>
+            </parameter>
+            <comment>Set the weight of the bar line and the tick lines in the range bar.
+
+ barWeight Float specifying the weight of the bar and tick lines in
+                  px.</comment>
+        </property>
+        <property>
+            <name>PinRadius</name>
+            <parameter>
+                <name>pinRadius</name>
+                <type>float</type>
+            </parameter>
+            <comment>If this is set, the thumb images will be replaced with a circle of the
+ specified radius. Default width = 20dp.
+
+ pinRadius Float specifying the radius of the thumbs to be drawn.</comment>
+        </property>
+        <property>
+            <name>Tag</name>
+            <returntype>java.lang.Object</returntype>
+            <parameter>
+                <name>arg0</name>
+                <type>java.lang.Object</type>
+            </parameter>
+            <comment></comment>
+        </property>
+        <field>
+            <name>ba</name>
+            <comment></comment>
+            <returntype>anywheresoftware.b4a.BA</returntype>
+        </field>
+    </class>
+    <version>1.0</version>
+</root>

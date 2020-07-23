@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root>
+    <doclet-version-NOT-library-version>1.00</doclet-version-NOT-library-version>
+    <class>
+        <name>anywheresoftware.b4a.agraham.gpstoosgb.GPStoOSGB</name>
+        <shortname>GPStoOSGB</shortname>
+        <comment>This is the GPStoOSGB object that can make transformations between WGS84 latitude,
+longitude and altitude to OSGB36 latitude, longitude and ODN height and to National Grid
+coordinates. 
+
+The methods use the Ordnance Survey specified 7 parameter Helmert transformation.
+See http://www.ordnancesurvey.co.uk/oswebsite/gps/information/coordinatesystemsinfo/guidecontents/index.html
+While the absolute accuracy of conversion is stated by the OS to be within 5 metres the differential
+accuracy is likely to be much higher.
+
+Easting and Northing are the displacement in metres of a point from the origin of the National Grid
+For a Grid reference the 100 km square in which the point is located is allocated a two character
+reference and the location of the point in that sqare is given by 2,3,4, 5 or even 6 numerals.
+The E/W location is always stated first.</comment>
+        <owner>process</owner>
+        <method>
+            <name>NEtoNGR</name>
+            <comment>Converts a Northing and an Easting to a National Grid Reference.
+Doesn't change any properties.</comment>
+            <returntype>java.lang.String</returntype>
+            <parameter>
+                <name>easting</name>
+                <type>double</type>
+            </parameter>
+            <parameter>
+                <name>northing</name>
+                <type>double</type>
+            </parameter>
+        </method>
+        <method>
+            <name>OSGB36toNGR</name>
+            <comment>Converts OSGB36 decimal lat and long to an OS national grid reference.
+Sets the Northing and Easting properties.</comment>
+            <returntype>java.lang.String</returntype>
+            <parameter>
+                <name>OSGBlat</name>
+                <type>double</type>
+            </parameter>
+            <parameter>
+                <name>OSGBlong</name>
+                <type>double</type>
+            </parameter>
+        </method>
+        <method>
+            <name>WGS84toOSGB36</name>
+            <comment>Converts WGS84 decimal lat, long and altitue to OSGB36 decimal
+lat,decimal long and ODN altitude. Returns a comma separated string.
+Sets the NewLatitude, NewLongitude and NewAltitude properties.
+S latitudes and W longitudes are -ve.</comment>
+            <returntype>java.lang.String</returntype>
+            <parameter>
+                <name>WGSlat</name>
+                <type>double</type>
+            </parameter>
+            <parameter>
+                <name>WGSlong</name>
+                <type>double</type>
+            </parameter>
+            <parameter>
+                <name>WGSalt</name>
+                <type>double</type>
+            </parameter>
+        </method>
+        <method>
+            <name>NGRtoOSGB36</name>
+            <comment>Converts an OS national grid reference to OSGB36 decimal lat and long.
+Returns a comma separated string.
+The grid reference can be 2, 3, 4 or  5 digits precision, spaces are ignored
+Also converts it to Northing and Easting which can be retrieved
+from the Northing and Easting properties.</comment>
+            <returntype>java.lang.String</returntype>
+            <parameter>
+                <name>ngr</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+        <method>
+            <name>OSGB36toWGS84</name>
+            <comment>Converts OSGB36 decimal lat,long and ODN altitude to WGS84 decimal
+lat, long and altitude. Returns a comma separated string.
+Sets the NewLatitude, NewLongitude and NewAltitude properties.
+S latitudes and W longitudes are -ve.</comment>
+            <returntype>java.lang.String</returntype>
+            <parameter>
+                <name>OSGBlat</name>
+                <type>double</type>
+            </parameter>
+            <parameter>
+                <name>OSGBlong</name>
+                <type>double</type>
+            </parameter>
+            <parameter>
+                <name>OSGBalt</name>
+                <type>double</type>
+            </parameter>
+        </method>
+        <property>
+            <name>Northing</name>
+            <returntype>double</returntype>
+            <comment>Returns the Northing value resulting from the latest
+NGRtoOSGB36 or OSGB36toNGR transformation.</comment>
+        </property>
+        <property>
+            <name>NewLatitude</name>
+            <returntype>double</returntype>
+            <comment>Returns the Latitude value resulting from the latest
+OSGB36toWGS84 or WGS84toOSGB36 transformation.</comment>
+        </property>
+        <property>
+            <name>NewLongitude</name>
+            <returntype>double</returntype>
+            <comment>Returns the Longitude value resulting from the latest
+OSGB36toWGS84 or WGS84toOSGB36 transformation.</comment>
+        </property>
+        <property>
+            <name>Easting</name>
+            <returntype>double</returntype>
+            <comment>Returns the Easting value resulting from the latest
+NGRtoOSGB36 or OSGB36toNGR transformation.</comment>
+        </property>
+        <property>
+            <name>NewAltitude</name>
+            <returntype>double</returntype>
+            <comment>Returns the Altitude value resulting from the latest
+OSGB36toWGS84 or WGS84toOSGB36 transformation.</comment>
+        </property>
+        <property>
+            <name>Version</name>
+            <returntype>double</returntype>
+            <comment>Returns the version number of the library.</comment>
+        </property>
+    </class>
+    <version>1.0</version>
+    <comment>The Ordnance Survey (OS) is Great Britain's national mapping agency. OS maps are
+based upon the OSGB36 ellipsoid and latitude and longitude shown on GB OS maps are
+those of the OSGB36 ellipsoid. However the OS National Grid Reference is the primary
+way that map locations are specified in the UK. The National Grid is printed on all
+OS maps as a grid as the primary location mechanism. Lat/long is included but only
+as small crosses at spot points for cross reference to the grid.
+
+Latitude and longitude from GPS is usually that of the WSG84 ellipsoid. This differs
+slightly from the OSGB36 ellipsoid.
+
+Heights shown on GB OS maps are relative to mean sea level at the Newlyn Tidal Observatory,
+known as the Ordnance Datum Newlyn (ODN) while altitude from GPS is usually relative to the
+WGS84 ellipsoid.These altitudes differ across Great Britain by between 41 to 53 metres.
+
+This library contains a GPStoOSGB object that can make transformations between WGS84 latitude,
+longitude and altitude and OSGB36 latitude, longitude and ODN height, and to and from National Grid
+coordinates.</comment>
+</root>

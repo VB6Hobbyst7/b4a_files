@@ -1,0 +1,143 @@
+// OnStartBeforeOpenPorts
+// This script is executed before ports are opened
+
+//$LogI    appDir : $appDir
+//$LogI    iptables : $iptables 
+//$LogI    busybox : $busybox 
+
+// Sample use on how to set linux property using setprop and reading linux property using getprop. 
+// Latest command result is stored in $lastResultStdout
+//setprop var1 res1
+//getprop var1
+//$LogI  var1 : $lastResultStdout
+
+// set the interface ip
+$myIp =  192.168.1.2
+
+// set the redirect interface (lo, wlan0, usb0, sit0, pdp0,eth0,ifb0, ifb1,svnet0,...)
+
+//$LogD Linux interfaces before updates :
+//------------------------------------------------------
+//netcfg
+//$LogD  $lastResultStdout
+//$LogD
+//$busybox route
+//$LogD  $lastResultStdout
+
+$LogD wifi or 3g card adress : "$oldAdress"
+$LogD Interface to use : "$myInterface"
+$LogD Old route adress to disable :  "$defaultRoute"
+$LogD adress to use :  "$myIp" 
+
+
+
+// IPTABLES
+//-------------------------------
+
+// create TETHER chain
+$iptables -t nat -N TETHER
+
+// clear all rules.
+$iptables -t nat -F TETHER
+         
+//$LogI don't care if you see errors here, it depends of your kernel.
+
+
+
+// IPTABLES : ICMP
+//-----------------------------
+//$iptables          -A INPUT  -p icmp -j LOG --log-uid --log-level debug --log-prefix "MYPREROUTING " --log-ip-options
+//$iptables          -A OUTPUT -p icmp -j LOG --log-uid --log-level debug --log-prefix "MYPREROUTING " --log-ip-options
+
+// don't print error
+//$printScriptError false
+
+// work on acer A500, don't work on galaxy S.
+//$iptables -t nat -A INPUT  -p icmp -j LOG --log-uid --log-level debug --log-prefix "MYPREROUTING " --log-ip-options
+//$iptables -t nat -A OUTPUT -p icmp -j LOG --log-uid --log-level debug --log-prefix "MYPREROUTING " --log-ip-options
+//$iptables -t nat -A TETHER -p icmp -j LOG --log-uid --log-level debug --log-prefix "MYPREROUTING " --log-ip-options
+//$printScriptError true
+
+// todo
+//$iptables           -A INPUT -p icmp  --icmp-type destination-unreachable -j DROP
+
+//$iptables           -A INPUT -p icmp  -m state --state RELATED -j ACCEPT
+//$iptables -t filter -A INPUT -p icmp -j ACCEPT
+//$iptables -t filter -A OUTPUT -p icmp -j ACCEPT
+
+
+// IPTABLES  LOG : TCP / UDP
+//---------------------------------------
+// log all connections (tcp and udp). Needed to know source ip and port (port forwarding mode)
+//$iptables -t nat -A TETHER -j LOG --log-uid --log-level debug --log-prefix "MYPREROUTING " --log-ip-options
+
+// Activate interface
+//------------------------------------------
+$busybox ifconfig $myInterface up
+
+// give an adress to the interface. TODO : check if myinterface don't already have an Ip
+$busybox ifconfig $myInterface $myIp  netmask 255.255.255.0 
+         
+// ROUTE : add route to default gateway and delete old route adress
+//-------------------------------------------------
+       
+$busybox route add default gateway $myIp  $myInterface    
+ 
+
+if "$defaultRoute"= "" then
+   $LogD no default route to delete
+else
+   $LogD route del default gateway $defaultRoute
+   $busybox route del default gateway $defaultRoute
+fi
+
+
+// DNS
+//----------------------------------------------
+
+setprop net.gprs.local-ip $myIp
+
+// set DNS. 
+
+setprop dhcp.wlan0.dns1 8.8.8.8
+setprop dhcp.wlan0.gateway 192.168.1.1
+setprop dhcp.wlan0.ipaddress 192.168.1.4
+//setprop dhcp.wlan0.leasetime 86400
+//setprop dhcp.wlan0.mask 255.255.255.0
+//setprop dhcp.wlan0.reason BOUND
+///setprop dhcp.wlan0.result ok
+setprop dhcp.wlan0.server 192.168.1.1
+//setprop init.svc.dhcpcd_wlan0 running
+//setprop init.svc.wpa_supplicant running
+setprop net.dns1 8.8.8.8
+//setprop net.change net.dnschange 
+//setprop net.tcp.buffersize 4095,87380,110208,4096,16384,110208
+//setprop net.wlan0.dns1 49.0.0.0
+//setprop wlan.driver.status ok
+
+setprop dhcp.usb0.dns1 8.8.8.8
+setprop dhcp.usb0.gateway 192.168.1.1
+setprop dhcp.usb0.ipaddress 192.168.1.4
+//setprop dhcp.usb0.leasetime 86400
+//setprop dhcp.usb0.mask 255.255.255.0
+//setprop dhcp.usb0.reason BOUND
+//setprop dhcp.usb0.result ok
+setprop dhcp.usb0.server 192.168.1.1
+
+setprop init.svc.dhcpcd_usb0 running
+
+setprop net.usb0.dns1 8.8.8.8
+//setprop usb.driver.status ok
+
+
+setprop dhcp.usb0.dns1  8.8.8.8
+setprop dhcp.wlan0.dns1 8.8.8.8
+setprop net.dns1 8.8.8.8
+setprop net.usb0.dns1 8.8.8.8
+
+
+/////////
+// when all ports will be opened, the OnStartAfterPort script will be called
+// all communications will be forwarded to the chain tether : $iptables -t nat -A OUTPUT -j TETHER
+////////
+

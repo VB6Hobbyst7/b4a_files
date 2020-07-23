@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <doclet-version-NOT-library-version>1.00</doclet-version-NOT-library-version>
+  <dependsOn>http</dependsOn>
+  <dependsOn>stringutils</dependsOn>
+  <class>
+    <name>njdude.barcodegenerator.sample.barcodegenerator</name>
+    <shortname>BarcodeGenerator</shortname>
+    <owner>activity</owner>
+    <permission>android.permission.INTERNET</permission>
+    <permission>android.permission.WRITE_EXTERNAL_STORAGE</permission>
+    <method>
+      <name>IsInitialized</name>
+      <comment>Tests whether the object has been initialized.</comment>
+      <returntype>boolean</returntype>
+    </method>
+    <method>
+      <name DesignerName="GenerateBarcode">_generatebarcode</name>
+      <comment>ImageViewName: ImageView receiving the barcode
+Encoding: QRCODE, DATAMATRIX, PDF417, POSTNET, UPC-A, UPC-E, EAN-8, EAN-13, CODE39, CODE93, CODE128, CODABAR, ISBN
+Data: What the barcode represents
+BackgroundColor: In hex format e.g. B4AB4A
+ForegroundColor: In hex format e.g. B4AB4A</comment>
+      <returntype>String</returntype>
+      <parameter>
+        <name>ImageViewName</name>
+        <type>anywheresoftware.b4a.objects.ImageViewWrapper</type>
+      </parameter>
+      <parameter>
+        <name>Encoding</name>
+        <type>String</type>
+      </parameter>
+      <parameter>
+        <name>Data</name>
+        <type>String</type>
+      </parameter>
+      <parameter>
+        <name>BackgroundColor</name>
+        <type>String</type>
+      </parameter>
+      <parameter>
+        <name>ForegroundColor</name>
+        <type>String</type>
+      </parameter>
+    </method>
+    <method>
+      <name DesignerName="Initialize">_initialize</name>
+      <comment>Initializes the BarcodeGenerator library.</comment>
+      <returntype>String</returntype>
+      <parameter>
+        <name>ba</name>
+        <type>anywheresoftware.b4a.BA</type>
+      </parameter>
+    </method>
+    <method>
+      <name DesignerName="SaveBarcode">_savebarcode</name>
+      <comment>Directory: Path to where the barcode will be saved
+BarcodeName: Name of the barcode
+Encoding: QRCODE, DATAMATRIX, PDF417, POSTNET, UPC-A, UPC-E, EAN-8, EAN-13, CODE39, CODE93, CODE128, CODABAR, ISBN
+Data: What the barcode represents
+BackgroundColor: In hex format e.g. B4AB4A
+ForegroundColor: In hex format e.g. B4AB4A
+Notify: TRUE = Show a message when the barcode is saved successfully, FALSE = No message</comment>
+      <returntype>String</returntype>
+      <parameter>
+        <name>Directory</name>
+        <type>String</type>
+      </parameter>
+      <parameter>
+        <name>BarcodeName</name>
+        <type>String</type>
+      </parameter>
+      <parameter>
+        <name>Encoding</name>
+        <type>String</type>
+      </parameter>
+      <parameter>
+        <name>Data</name>
+        <type>String</type>
+      </parameter>
+      <parameter>
+        <name>BackgroundColor</name>
+        <type>String</type>
+      </parameter>
+      <parameter>
+        <name>ForegroundColor</name>
+        <type>String</type>
+      </parameter>
+      <parameter>
+        <name>Notify</name>
+        <type>boolean</type>
+      </parameter>
+    </method>
+  </class>
+  <version>1</version>
+  <author>NJDude</author>
+</root>

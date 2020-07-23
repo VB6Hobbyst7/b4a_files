@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <doclet-version-NOT-library-version>1.00</doclet-version-NOT-library-version>
+  <dependsOn>svg</dependsOn>
+  <class>
+    <name>b4a.example.asds.svgviewer</name>
+    <shortname>SVGViewer</shortname>
+    <owner>activity</owner>
+    <designerProperty>Key: filename, DisplayName: Filename in DirAsset, FieldType: String,, DefaultValue:  ,Description: filename of svg file in asset folder.</designerProperty>
+    <designerProperty>Key: fit, DisplayName: Fit Mode, FieldType: Boolean, DefaultValue: True, Description: show fit picture in parent view.</designerProperty>
+    <method>
+      <name>IsInitialized</name>
+      <comment>Tests whether the object has been initialized.</comment>
+      <returntype>boolean</returntype>
+    </method>
+    <method>
+      <name DesignerName="Class_Globals">_class_globals</name>
+      <returntype>String</returntype>
+    </method>
+    <method>
+      <name DesignerName="DesignerCreateView">_designercreateview</name>
+      <returntype>String</returntype>
+      <parameter>
+        <name>Base</name>
+        <type>anywheresoftware.b4a.objects.PanelWrapper</type>
+      </parameter>
+      <parameter>
+        <name>Lbl</name>
+        <type>anywheresoftware.b4a.objects.LabelWrapper</type>
+      </parameter>
+      <parameter>
+        <name>Props</name>
+        <type>anywheresoftware.b4a.objects.collections.Map</type>
+      </parameter>
+    </method>
+    <method>
+      <name DesignerName="GetBase">_v5</name>
+      <returntype>anywheresoftware.b4a.objects.PanelWrapper</returntype>
+    </method>
+    <method>
+      <name DesignerName="Initialize">_initialize</name>
+      <returntype>String</returntype>
+      <parameter>
+        <name>ba</name>
+        <type>anywheresoftware.b4a.BA</type>
+      </parameter>
+      <parameter>
+        <name>Callback</name>
+        <type>Object</type>
+      </parameter>
+      <parameter>
+        <name>EventName</name>
+        <type>String</type>
+      </parameter>
+    </method>
+  </class>
+  <version>1</version>
+  <author>www.iranapp.org</author>
+</root>

@@ -1,0 +1,219 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <doclet-version-NOT-library-version>1.00</doclet-version-NOT-library-version>
+  <dependsOn>appcompat</dependsOn>
+  <dependsOn>javaobject</dependsOn>
+  <dependsOn>phone</dependsOn>
+  <dependsOn>reflection</dependsOn>
+  <dependsOn>xmllayoutbuilder</dependsOn>
+  <dependsOn>android-support-v4</dependsOn>
+  <dependsOn>android-support-v7-appcompat</dependsOn>
+  <dependsOn>animation</dependsOn>
+  <class>
+    <name>de.amberhome.appcompat.toolbarmenuexample.parsrtltoolbar</name>
+    <shortname>ParsRTLToolbar</shortname>
+    <owner>process</owner>
+    <method>
+      <name DesignerName="InitACSearchViewDark">_initacsearchviewdark</name>
+      <comment>
+Use this sub when use ACToolBarDark and ACSearchView
+NOTE:Initialize SearchView before this sub.
+
+Example:&lt;code&gt;
+Private sv As ACSearchView
+sv.Initialize("search")
+
+ToolBar.Title = "پارس تولبار"
+ToolBar.SubTitle=" تولبار و سرچ ویو راستچین"
+
+Dim PRTL As ParsRTLToolbar
+PRTL.InitACSearchViewDark(ToolBar,sv,15,Typeface.LoadFromAssets("IRAN.ttf"),Colors.White)
+PRTL.TitleACToolBarLight(ToolBar,14,Typeface.LoadFromAssets("IRAN.ttf"),Colors.White)
+ToolBar.NavigationIconDrawable=xml.GetDrawable("ic_menu_white_24dp")&lt;/code&gt;
+
+</comment>
+      <returntype>String</returntype>
+      <parameter>
+        <name>ToolBar</name>
+        <type>de.amberhome.objects.appcompat.ACToolbarDarkWrapper</type>
+      </parameter>
+      <parameter>
+        <name>SearchView</name>
+        <type>de.amberhome.objects.appcompat.ACSearchViewWrapper</type>
+      </parameter>
+      <parameter>
+        <name>SearchViewTextSize</name>
+        <type>float</type>
+      </parameter>
+      <parameter>
+        <name>SearchViewFont</name>
+        <type>anywheresoftware.b4a.keywords.constants.TypefaceWrapper</type>
+      </parameter>
+      <parameter>
+        <name>SearchViewTextColor</name>
+        <type>int</type>
+      </parameter>
+    </method>
+    <method>
+      <name DesignerName="InitACSearchViewLight">_initacsearchviewlight</name>
+      <comment>
+Use this sub when use ACToolBarLight and ACSearchView
+NOTE:Initialize SearchView before this sub.
+
+Example:&lt;code&gt;
+Private sv As ACSearchView
+sv.Initialize("search")
+
+ToolBar.Title = "پارس تولبار"
+ToolBar.SubTitle=" تولبار و سرچ ویو راستچین"
+
+Dim PRTL As ParsRTLToolbar
+PRTL.InitACSearchViewLight(ToolBar,sv,15,Typeface.LoadFromAssets("IRAN.ttf"),Colors.White)
+PRTL.TitleACToolBarLight(ToolBar,14,Typeface.LoadFromAssets("IRAN.ttf"),Colors.White)
+ToolBar.NavigationIconDrawable=xml.GetDrawable("ic_menu_white_24dp")&lt;/code&gt;
+
+</comment>
+      <returntype>String</returntype>
+      <parameter>
+        <name>ToolBar</name>
+        <type>de.amberhome.objects.appcompat.ACToolbarLightWrapper</type>
+      </parameter>
+      <parameter>
+        <name>SearchView</name>
+        <type>de.amberhome.objects.appcompat.ACSearchViewWrapper</type>
+      </parameter>
+      <parameter>
+        <name>SearchViewTextSize</name>
+        <type>float</type>
+      </parameter>
+      <parameter>
+        <name>SearchViewFont</name>
+        <type>anywheresoftware.b4a.keywords.constants.TypefaceWrapper</type>
+      </parameter>
+      <parameter>
+        <name>SearchViewTextColor</name>
+        <type>int</type>
+      </parameter>
+    </method>
+    <method>
+      <name DesignerName="InitACToolBarDark">_initactoolbardark</name>
+      <comment>
+Use this sub when use ACToolBarDark
+
+Example:
+&lt;code&gt;ToolBar.Title = "پارس تولبار"
+ToolBar.SubTitle=" تولبار و سرچ ویو راستچین"
+
+Dim PRTL As ParsRTLToolbar
+PRTL.InitACToolBarLight(ToolBar)
+PRTL.TitleACToolBarLight(ToolBar,14,Typeface.LoadFromAssets("IRAN.ttf"),Colors.White)
+ToolBar.NavigationIconDrawable=xml.GetDrawable("ic_menu_white_24dp")&lt;/code&gt;
+
+</comment>
+      <returntype>String</returntype>
+      <parameter>
+        <name>ToolBar</name>
+        <type>de.amberhome.objects.appcompat.ACToolbarDarkWrapper</type>
+      </parameter>
+    </method>
+    <method>
+      <name DesignerName="InitACToolBarLight">_initactoolbarlight</name>
+      <comment>
+Use this sub when use ACToolBarLight
+
+Example:
+&lt;code&gt;ToolBar.Title = "پارس تولبار"
+ToolBar.SubTitle=" تولبار و سرچ ویو راستچین"
+
+Dim PRTL As ParsRTLToolbar
+PRTL.InitACToolBarLight(ToolBar)
+PRTL.TitleACToolBarLight(ToolBar,14,Typeface.LoadFromAssets("IRAN.ttf"),Colors.White)
+ToolBar.NavigationIconDrawable=xml.GetDrawable("ic_menu_white_24dp")&lt;/code&gt;
+
+</comment>
+      <returntype>String</returntype>
+      <parameter>
+        <name>ToolBar</name>
+        <type>de.amberhome.objects.appcompat.ACToolbarLightWrapper</type>
+      </parameter>
+    </method>
+    <method>
+      <name DesignerName="TitleACToolBarDark">_titleactoolbardark</name>
+      <comment>
+Use this sub to customize Title and SubTitle of ACToolBarDark
+
+Example:
+&lt;code&gt;ToolBar.Title = "پارس تولبار"
+ToolBar.SubTitle=" تولبار و سرچ ویو راستچین"
+
+Dim PRTL As ParsRTLToolbar
+PRTL.TitleACToolBarDark(ToolBar,14,Typeface.LoadFromAssets("IRAN.ttf"),Colors.White)&lt;/code&gt;
+
+</comment>
+      <returntype>String</returntype>
+      <parameter>
+        <name>ToolBar</name>
+        <type>de.amberhome.objects.appcompat.ACToolbarDarkWrapper</type>
+      </parameter>
+      <parameter>
+        <name>textsize</name>
+        <type>float</type>
+      </parameter>
+      <parameter>
+        <name>font</name>
+        <type>anywheresoftware.b4a.keywords.constants.TypefaceWrapper</type>
+      </parameter>
+      <parameter>
+        <name>textcolor</name>
+        <type>int</type>
+      </parameter>
+    </method>
+    <method>
+      <name DesignerName="TitleACToolBarLight">_titleactoolbarlight</name>
+      <comment>
+Use this sub to customize Title and SubTitle of ACToolBarLight
+
+Example:
+&lt;code&gt;ToolBar.Title = "پارس تولبار"
+ToolBar.SubTitle=" تولبار و سرچ ویو راستچین"
+
+Dim PRTL As ParsRTLToolbar
+PRTL.TitleACToolBarLight(ToolBar,14,Typeface.LoadFromAssets("IRAN.ttf"),Colors.White)&lt;/code&gt;
+
+</comment>
+      <returntype>String</returntype>
+      <parameter>
+        <name>ToolBar</name>
+        <type>de.amberhome.objects.appcompat.ACToolbarLightWrapper</type>
+      </parameter>
+      <parameter>
+        <name>textsize</name>
+        <type>float</type>
+      </parameter>
+      <parameter>
+        <name>font</name>
+        <type>anywheresoftware.b4a.keywords.constants.TypefaceWrapper</type>
+      </parameter>
+      <parameter>
+        <name>textcolor</name>
+        <type>int</type>
+      </parameter>
+    </method>
+    <method>
+      <name DesignerName="xLibraryInformation">_xlibraryinformation</name>
+      <comment>&lt;code&gt;
+
+Library Author:ME_Esmaiel Shafiee
+
+Library Name:ParsRTLToolbar
+
+Library Version:1.0.0
+
+Good Luck&lt;/code&gt;
+</comment>
+      <returntype>String</returntype>
+    </method>
+  </class>
+  <version>2</version>
+  <author>ME_Esmaiel Shafiee</author>
+</root>

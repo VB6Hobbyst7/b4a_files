@@ -1,0 +1,331 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root>
+    <doclet-version-NOT-library-version>1.01</doclet-version-NOT-library-version>
+    <class>
+        <name>giuseppe.salvi.icos.library.ICOSGraphics</name>
+        <shortname>ICOSGraphics</shortname>
+        <objectwrapper>android.view.View</objectwrapper>
+        <owner>activity</owner>
+        <permission>android.permission.SET_WALLPAPER</permission>
+        <method>
+            <name>InitializeBitmap</name>
+            <comment>Initialize the Object.
+ Example:
+ Dim ip as ICOSImageProcessing
+ ip.Initialize("ip")</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>ba</name>
+                <type>anywheresoftware.b4a.BA</type>
+            </parameter>
+            <parameter>
+                <name>bmp</name>
+                <type>android.graphics.Bitmap</type>
+            </parameter>
+        </method>
+        <method>
+            <name>MyToastView</name>
+            <comment>mGravity 1 = Gravity.TOP
+ mGravity 2 = Gravity.CENTER
+ mGravity 3 = Gravity.BOTTOM
+ 
+ Duration 0 = Toast.LENGTH_SHORT
+ Duration 1 = Toast.LENGTH_LONG
+ 
+ Dim ip as ICOSImageProcessing
+ Dim img As ImageView  -  ( You can use any view " (ImageView is just an examples) ")
+ Example:
+
+ Sub b1_Click
+ ip.MyToastView(img, mGravity, Duration)
+ End Sub</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>ba</name>
+                <type>anywheresoftware.b4a.BA</type>
+            </parameter>
+            <parameter>
+                <name>view</name>
+                <type>android.view.View</type>
+            </parameter>
+            <parameter>
+                <name>mGravity</name>
+                <type>int</type>
+            </parameter>
+            <parameter>
+                <name>Duration</name>
+                <type>int</type>
+            </parameter>
+        </method>
+        <method>
+            <name>Emboss</name>
+            <comment>Dim ImageView1 as ImageView
+ Dim ip as ICOSImageProcessing
+ Example:
+ ImageView1.Bitmap=ip.Emboss(LoadBitmap(File.Dirassets , "SomeFile.png")
+ Or
+ ImageView1.Bitmap=ip.Boost(ImageView1.Bitmap)</comment>
+            <returntype>android.graphics.Bitmap</returntype>
+            <parameter>
+                <name>Factor</name>
+                <type>int</type>
+            </parameter>
+            <parameter>
+                <name>Offset</name>
+                <type>int</type>
+            </parameter>
+        </method>
+        <method>
+            <name>Smooth</name>
+            <comment>Dim ImageView1 as ImageView
+ Dim ip as ICOSImageProcessing
+ Example:
+ ImageView1.Bitmap=ip.Smooth(LoadBitmap(File.Dirassets , "SomeFile.png" , SmoothValue)
+ Or
+ ImageView1.Bitmap=ip.Boost(ImageView1.Bitmap ,SmoothValue)</comment>
+            <returntype>android.graphics.Bitmap</returntype>
+            <parameter>
+                <name>Factor</name>
+                <type>int</type>
+            </parameter>
+            <parameter>
+                <name>Offset</name>
+                <type>int</type>
+            </parameter>
+        </method>
+        <method>
+            <name>Mirror</name>
+            <comment>Dim ImageView1 as ImageView
+ Dim ip as ICOSImageProcessing
+ Example:
+ ImageView1.Bitmap=ip.Mirror(LoadBitmap(File.Dirassets , "SomeFile.png"))
+ Or
+ ImageView1.Bitmap=ip.Boost(ImageView1.Bitmap)</comment>
+            <returntype>android.graphics.Bitmap</returntype>
+        </method>
+        <method>
+            <name>RoundCorner</name>
+            <comment>Dim ImageView1 as ImageView
+ Dim ip as ICOSImageProcessing
+ Example:
+ ImageView1.Bitmap=ip.RoundCorner(LoadBitmap(File.Dirassets , "SomeFile.png" , RoundValue)
+ Or
+ ImageView1.Bitmap=ip.Boost(ImageView1.Bitmap , RoundValue)</comment>
+            <returntype>android.graphics.Bitmap</returntype>
+            <parameter>
+                <name>RoundValue</name>
+                <type>float</type>
+            </parameter>
+        </method>
+        <method>
+            <name>FlipBitmap</name>
+            <comment>Dim ImageView1 as ImageView
+ Dim ip as ICOSImageProcessing
+ Type = 1 --&gt; FLIP_VERTICAL
+ Type = 2 --&gt; FLIP_HORIZONTAL
+ Example:
+ ImageView1.Bitmap=ip.Flip(LoadBitmap(File.Dirassets , "SomeFile.png" , Type)
+ Or
+ ImageView1.Bitmap=ip.Boost(ImageView1.Bitmap , type)</comment>
+            <returntype>android.graphics.Bitmap</returntype>
+            <parameter>
+                <name>Type</name>
+                <type>int</type>
+            </parameter>
+        </method>
+        <method>
+            <name>SetWalpaper</name>
+            <comment>Dim ip as ICOSImageProcessing
+ Example:
+ Sub b1_Click
+ ip.setWalpaper(LoadBitmap(File.Dirassets , "SomeFile.png"))
+ End Sub</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>ba</name>
+                <type>anywheresoftware.b4a.BA</type>
+            </parameter>
+            <parameter>
+                <name>bmp</name>
+                <type>android.graphics.Bitmap</type>
+            </parameter>
+        </method>
+        <method>
+            <name>MyToastBitmap</name>
+            <comment>mGravity 1 = Gravity.TOP
+ mGravity 2 = Gravity.CENTER
+ mGravity 3 = Gravity.BOTTOM
+ 
+ mDuration 0 = Toast.LENGTH_SHORT
+ mDuration 1 = Toast.LENGTH_LONG
+ 
+ Dim ip as ICOSImageProcessing
+ Dim img As ImageView 
+ Example:
+ Sub b1_Click
+ ip.MyToastBitmap(LoadBitmap(LoadBitmap(File.Dirassets , "SomeFile.png") , mGravity, mDuration)
+ End Sub</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>ba</name>
+                <type>anywheresoftware.b4a.BA</type>
+            </parameter>
+            <parameter>
+                <name>bmp</name>
+                <type>android.graphics.Bitmap</type>
+            </parameter>
+            <parameter>
+                <name>mGravity</name>
+                <type>int</type>
+            </parameter>
+            <parameter>
+                <name>mDuration</name>
+                <type>int</type>
+            </parameter>
+        </method>
+        <method>
+            <name>Boost</name>
+            <comment>Dim ImageView1 as ImageView
+ Dim ip as ICOSImageProcessing
+ Example:
+ Type = 1 --&gt; RED
+ Type = 2 --&gt; GREEN 
+ Type = 3 --&gt; BLUE
+ ImageView1.Bitmap=ip.Boost(LoadBitmap(File.Dirassets , "SomeFile.png" , Type , Percentage)
+ Or
+ ImageView1.Bitmap=ip.Boost(ImageView1.Bitmap , Type , Percentage)</comment>
+            <returntype>android.graphics.Bitmap</returntype>
+            <parameter>
+                <name>Type</name>
+                <type>int</type>
+            </parameter>
+            <parameter>
+                <name>Percentage</name>
+                <type>float</type>
+            </parameter>
+        </method>
+        <method>
+            <name>FastBlur</name>
+            <comment></comment>
+            <returntype>android.graphics.Bitmap</returntype>
+            <parameter>
+                <name>ba</name>
+                <type>anywheresoftware.b4a.BA</type>
+            </parameter>
+            <parameter>
+                <name>radius</name>
+                <type>int</type>
+            </parameter>
+        </method>
+        <method>
+            <name>ImageRotate</name>
+            <comment>Dim ImageView1 as ImageView
+ Dim ip as ICOSImageProcessing
+ Example:
+ ImageView1.Bitmap=ip.Rotate(LoadBitmap(File.Dirassets , "SomeFile.png" , RotateDegree)
+ Or
+ ImageView1.Bitmap=ip.Boost(ImageView1.Bitmap ,RotateDegree)</comment>
+            <returntype>android.graphics.Bitmap</returntype>
+            <parameter>
+                <name>RotateDegree</name>
+                <type>float</type>
+            </parameter>
+        </method>
+        <method>
+            <name>GaussianBlur</name>
+            <comment>Dim ImageView1 as ImageView
+ Dim ip as ICOSImageProcessing
+ Example:
+ ImageView1.Bitmap=ip.GaussianBlur(LoadBitmap(File.Dirassets , "SomeFile.png",BlurValue)
+ Or
+ ImageView1.Bitmap=ip.Boost(ImageView1.Bitmap, BlurValue)</comment>
+            <returntype>android.graphics.Bitmap</returntype>
+            <parameter>
+                <name>BlurValue</name>
+                <type>double</type>
+            </parameter>
+        </method>
+        <method>
+            <name>SepiaEffect</name>
+            <comment>Dim ImageView1 as ImageView
+ Dim ip as ICOSImageProcessing
+ Example:
+ ImageView1.Bitmap=ip.SepiaEffect(LoadBitmap(File.Dirassets , "SomeFile.png" ,Depth , Red , Green , Blue)
+ Or
+ ImageView1.Bitmap=ip.Boost(ImageView1.Bitmap ,Depth , Red , Green , Blue)</comment>
+            <returntype>android.graphics.Bitmap</returntype>
+            <parameter>
+                <name>Depth</name>
+                <type>int</type>
+            </parameter>
+            <parameter>
+                <name>Red</name>
+                <type>double</type>
+            </parameter>
+            <parameter>
+                <name>Green</name>
+                <type>double</type>
+            </parameter>
+            <parameter>
+                <name>Blue</name>
+                <type>double</type>
+            </parameter>
+        </method>
+        <method>
+            <name>Engrave</name>
+            <comment>Dim ImageView1 as ImageView
+ Dim ip as ICOSImageProcessing
+ Example:
+ ImageView1.Bitmap=ip.Engrave(LoadBitmap(File.Dirassets , "SomeFile.png")
+ Or
+ ImageView1.Bitmap=ip.Boost(ImageView1.Bitmap)</comment>
+            <returntype>android.graphics.Bitmap</returntype>
+            <parameter>
+                <name>Factor</name>
+                <type>int</type>
+            </parameter>
+            <parameter>
+                <name>Offset</name>
+                <type>int</type>
+            </parameter>
+        </method>
+        <method>
+            <name>IsInitialized</name>
+            <comment></comment>
+            <returntype>boolean</returntype>
+        </method>
+        <property>
+            <name>Version</name>
+            <returntype>double</returntype>
+            <comment>Return the version of this library</comment>
+        </property>
+        <field>
+            <name>LENGTH_LONG</name>
+            <comment></comment>
+            <returntype>int</returntype>
+        </field>
+        <field>
+            <name>Gravity_CENTER</name>
+            <comment></comment>
+            <returntype>int</returntype>
+        </field>
+        <field>
+            <name>Gravity_BOTTOM</name>
+            <comment></comment>
+            <returntype>int</returntype>
+        </field>
+        <field>
+            <name>Gravity_TOP</name>
+            <comment></comment>
+            <returntype>int</returntype>
+        </field>
+        <field>
+            <name>LENGTH_SHORT</name>
+            <comment></comment>
+            <returntype>int</returntype>
+        </field>
+    </class>
+    <version>1.4</version>
+    <comment></comment>
+    <author>Giuseppe Salvi</author>
+</root>

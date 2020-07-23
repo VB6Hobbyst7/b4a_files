@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root>
+    <doclet-version-NOT-library-version>1.04</doclet-version-NOT-library-version>
+    <class>
+        <name>hixte.typeface.Hitex_TypeFace</name>
+        <shortname>Hitex_TypeFace</shortname>
+        <owner>activity</owner>
+        <method>
+            <name>Initialize</name>
+            <comment>Created By Sadeq Nameni ( Hitexroid )
+ __________________________________________________________________
+ This is a simple library for setting specific font to all of your view with a single line.
+ __________________________________________________________________
+ Example: &lt;code&gt;
+ Private Hitex As Hitex_TypeFace
+ Hitex.Initialize("samim-bold.ttf",True)
+ &lt;/code&gt;
+ </comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>ba</name>
+                <type>anywheresoftware.b4a.BA</type>
+            </parameter>
+            <parameter>
+                <name>Font</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>IncludeActionBar</name>
+                <type>boolean</type>
+            </parameter>
+        </method>
+    </class>
+    <version>1.0</version>
+</root>

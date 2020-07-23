@@ -1,0 +1,263 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root>
+    <doclet-version-NOT-library-version>1.04</doclet-version-NOT-library-version>
+    <class>
+        <name>simcard.SimCard</name>
+        <shortname>SimCard</shortname>
+        <owner>process</owner>
+        <permission>android.permission.READ_PHONE_STATE</permission>
+        <method>
+            <name>Initialize</name>
+            <comment>Initialize - &lt;link&gt;Documentation:|http://developer.android.com/reference/android/telephony/TelephonyManager.html#SIM_STATE_ABSENT&lt;/link&gt;.
+Example:&lt;code&gt;
+Dim sim As SimCard
+sim.Initialize()&lt;/code&gt;</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>ba</name>
+                <type>anywheresoftware.b4a.BA</type>
+            </parameter>
+        </method>
+        <method>
+            <name>GetNetworkCountryIso</name>
+            <comment>Returns the ISO country code equivalent of the current registered operator's MCC (Mobile Country Code) and returns its content as a string.
+Example:&lt;code&gt;
+Dim sim As SimCard
+Dim text As String
+text = sim.GetNetworkCountryIso&lt;/code&gt;</comment>
+            <returntype>java.lang.String</returntype>
+        </method>
+        <method>
+            <name>GetSimSerialNumber1</name>
+            <comment>Returns the serial number of the SIM, if applicable and returns its content as a string.
+Example:&lt;code&gt;
+Dim sim As SimCard
+Dim text As String
+text = sim.GetSimSerialNumber&lt;/code&gt;</comment>
+            <returntype>java.lang.String</returntype>
+        </method>
+        <method>
+            <name>GetSimSerialNumber2</name>
+            <comment>Returns the serial number of the SIM-2, if applicable and returns its content as a string.
+Example:&lt;code&gt;
+ Note: Utilize sim.IsDualSIM
+Dim sim As SimCard
+Dim text As String
+text = sim.GetSimSerialNumber&lt;/code&gt;</comment>
+            <returntype>java.lang.String</returntype>
+        </method>
+        <method>
+            <name>GetMmsAgent</name>
+            <comment>Reads MMS user Agent and returns its content as a string.
+Example:&lt;code&gt;
+Dim sim As SimCard
+Dim text As String
+text = sim.GetMmsAgent&lt;/code&gt;</comment>
+            <returntype>java.lang.String</returntype>
+        </method>
+        <method>
+            <name>Imei</name>
+            <comment>Reads IMEI for GSM and the MEDI or ESN for CDMA phones and returns its content as a string.
+Example:&lt;code&gt;
+Dim sim As SimCard
+Dim text As String
+text = sim.Imei&lt;/code&gt;</comment>
+            <returntype>java.lang.String</returntype>
+        </method>
+        <method>
+            <name>GetLine2Number</name>
+            <comment>Reads NumberPhone-2 and returns its content as a string.
+Example:&lt;code&gt;
+ Note: Utilize sim.IsDualSIM
+Dim sim As SimCard
+Dim text As String
+text = sim.GetLine2Number&lt;/code&gt;</comment>
+            <returntype>java.lang.String</returntype>
+        </method>
+        <method>
+            <name>GetDataState</name>
+            <comment>Returns a constant indicating the current data connection state (cellular).
+Return DATA_DISCONNECTED
+Return DATA_CONNECTING
+Return DATA_CONNECTED
+Return DATA_SUSPENDED
+Example:&lt;code&gt;
+Dim sim As SimCard
+Dim torna As String
+torna = sim.GetDataState &lt;/code&gt;</comment>
+            <returntype>java.lang.String</returntype>
+        </method>
+        <method>
+            <name>GetMmsURL</name>
+            <comment>Reads MMS user Agent profile URL and returns its content as a string.
+Example:&lt;code&gt;
+Dim sim As SimCard
+Dim text As String
+text = sim.GetMmsURL&lt;/code&gt;</comment>
+            <returntype>java.lang.String</returntype>
+        </method>
+        <method>
+            <name>GetSimOperatorName</name>
+            <comment>Returns the Service Provider Name (SPN) and returns its content as a string.
+Example:&lt;code&gt;
+Dim sim As SimCard
+Dim text As String
+text = sim.GetSimOperatorName&lt;/code&gt;</comment>
+            <returntype>java.lang.String</returntype>
+        </method>
+        <method>
+            <name>GetNetworkOperator</name>
+            <comment>Returns the numeric name (MCC+MNC) of current registered operator and returns its content as a string.
+Example:&lt;code&gt;
+Dim sim As SimCard
+Dim text As String
+text = sim.GetNetworkOperator&lt;/code&gt;</comment>
+            <returntype>java.lang.String</returntype>
+        </method>
+        <method>
+            <name>GetVoiceMailAlphaTag</name>
+            <comment>Retrieves the alphabetic identifier associated with the voice mail number and returns its content as a string.
+Example:&lt;code&gt;
+Dim sim As SimCard
+Dim text As String
+text = sim.GetVoiceMailAlphaTag&lt;/code&gt;</comment>
+            <returntype>java.lang.String</returntype>
+        </method>
+        <method>
+            <name>GetNetworkOperatorName</name>
+            <comment>Returns the operator name (MCC+MNC) of current registered operator and returns its content as a string.
+Example:&lt;code&gt;
+Dim sim As SimCard
+Dim text As String
+text = sim.GetNetworkOperator&lt;/code&gt;</comment>
+            <returntype>java.lang.String</returntype>
+        </method>
+        <method>
+            <name>GetSimOperator</name>
+            <comment>Returns the MCC+MNC (mobile country code + mobile network code) of the provider of the SIM. and returns its content as a string.
+Example:&lt;code&gt;
+Dim sim As SimCard
+Dim text As String
+text = sim.GetSimOperator&lt;/code&gt;</comment>
+            <returntype>java.lang.String</returntype>
+        </method>
+        <method>
+            <name>Imei2</name>
+            <comment>Reads IMEI2 for GSM and the MEDI or ESN for CDMA phones and returns its content as a string.
+ Note: Utilize sim.IsDualSIM and IsSIM2Ready
+Example:&lt;code&gt;
+Dim sim As SimCard
+Dim text As String
+text = sim.Imei2&lt;/code&gt;</comment>
+            <returntype>java.lang.String</returntype>
+        </method>
+        <method>
+            <name>GetPhoneType</name>
+            <comment>Returns a constant indicating the device phone type. This indicates the type of radio used to transmit voice calls.
+Return PHONE_TYPE_NONE
+Return PHONE_TYPE_GSM
+Return PHONE_TYPE_CDMA
+Return PHONE_TYPE_SIP
+Example:&lt;code&gt;
+Dim sim As SimCard
+Dim torna As String
+torna = sim.GetPhoneType &lt;/code&gt;</comment>
+            <returntype>java.lang.String</returntype>
+        </method>
+        <method>
+            <name>GetSimCountryIso</name>
+            <comment>Returns the ISO country code equivalent for the SIM provider's country code and returns its content as a string.
+Example:&lt;code&gt;
+Dim sim As SimCard
+Dim text As String
+text = sim.GetSimCountryIso&lt;/code&gt;</comment>
+            <returntype>java.lang.String</returntype>
+        </method>
+        <method>
+            <name>GetSubscriberId</name>
+            <comment>Returns the unique subscriber ID, for example, the IMSI for a GSM phone and returns its content as a string.
+Example:&lt;code&gt;
+Dim sim As SimCard
+Dim text As String
+text = sim.GetSubscriberId&lt;/code&gt;</comment>
+            <returntype>java.lang.String</returntype>
+        </method>
+        <method>
+            <name>IsDualSIM</name>
+            <comment>Check if is DUAL SIM.
+Example:&lt;code&gt;
+Dim sim As SimCard
+Dim vero As boolean
+vero = sim.IsDualSIM&lt;/code&gt;</comment>
+            <returntype>boolean</returntype>
+        </method>
+        <method>
+            <name>GetVoiceMailNumber</name>
+            <comment>Returns the voice mail number and returns its content as a string.
+Example:&lt;code&gt;
+Dim sim As SimCard
+Dim text As String
+text = sim.GetVoiceMailNumber &lt;/code&gt;</comment>
+            <returntype>java.lang.String</returntype>
+        </method>
+        <method>
+            <name>GetDataActivity</name>
+            <comment>Returns a constant indicating the type of activity on a data connection (cellular).
+Return DATA_ACTIVITY_NONE
+Return DATA_ACTIVITY_IN
+Return DATA_ACTIVITY_OUT
+Return DATA_ACTIVITY_INOUT
+Return DATA_ACTIVITY_DORMANT
+Example:&lt;code&gt;
+Dim sim As SimCard
+Dim torna As String
+torna = sim.GetDataActivity  &lt;/code&gt;</comment>
+            <returntype>java.lang.String</returntype>
+        </method>
+        <method>
+            <name>HasIccCard</name>
+            <comment>Returns true if a ICC card is present.
+Example:&lt;code&gt;
+Dim sim As SimCard
+Dim vero As boolean
+vero = sim.HasIccCard &lt;/code&gt;</comment>
+            <returntype>boolean</returntype>
+        </method>
+        <method>
+            <name>IsNetworkRoaming</name>
+            <comment>Returns true if the device is considered roaming on the current network, for GSM purposes.
+Example:&lt;code&gt;
+Dim sim As SimCard
+Dim vero As boolean
+vero = sim.IsNetworkRoaming &lt;/code&gt;</comment>
+            <returntype>boolean</returntype>
+        </method>
+        <method>
+            <name>GetLine1Number</name>
+            <comment>Reads NumberPhone-1 and returns its content as a string.
+Example:&lt;code&gt;
+Dim sim As SimCard
+Dim text As String
+text = sim.GetLine1Number&lt;/code&gt;</comment>
+            <returntype>java.lang.String</returntype>
+        </method>
+        <method>
+            <name>GetSimState</name>
+            <comment>Returns a constant indicating the state of the device SIM card.
+Return SIM_STATE_UNKNOWN
+Return SIM_STATE_ABSENT - SIM card state: no SIM card is available in the device 
+Return SIM_STATE_PIN_REQUIRED - SIM card state: Locked: requires the user's SIM PIN to unlock 
+Return SIM_STATE_PUK_REQUIRED - SIM card state: Locked: requires the user's SIM PUK to unlock 
+Return SIM_STATE_NETWORK_LOCKED - SIM card state: Locked: requries a network PIN to unlock 
+Return SIM_STATE_READY
+Example:&lt;code&gt;
+Dim sim As SimCard
+Dim torna As String
+torna = sim.GetSimState &lt;/code&gt;</comment>
+            <returntype>java.lang.String</returntype>
+        </method>
+    </class>
+    <version>2.0</version>
+    <author>Devil-App</author>
+    <dependsOn>TelephonyInfo</dependsOn>
+</root>

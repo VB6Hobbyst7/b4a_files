@@ -1,0 +1,432 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root>
+    <doclet-version-NOT-library-version>1.04</doclet-version-NOT-library-version>
+    <class>
+        <name>wrap.jcvideoplayer.Hitex_MediaManager</name>
+        <shortname>Hitex_MediaManager</shortname>
+        <owner>process</owner>
+        <method>
+            <name>SetScreenOnWhilePlaying</name>
+            <comment></comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>ScreenOn</name>
+                <type>boolean</type>
+            </parameter>
+        </method>
+        <method>
+            <name>Play</name>
+            <comment></comment>
+            <returntype>void</returntype>
+        </method>
+        <method>
+            <name>isPlaying</name>
+            <comment></comment>
+            <returntype>boolean</returntype>
+        </method>
+        <method>
+            <name>Pause</name>
+            <comment></comment>
+            <returntype>void</returntype>
+        </method>
+        <method>
+            <name>Stop</name>
+            <comment>Stops the playback.</comment>
+            <returntype>void</returntype>
+        </method>
+        <method>
+            <name>release</name>
+            <comment></comment>
+            <returntype>void</returntype>
+        </method>
+        <method>
+            <name>isLooping</name>
+            <comment></comment>
+            <returntype>boolean</returntype>
+        </method>
+        <method>
+            <name>SetVideoScalingMode</name>
+            <comment></comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>ScaleMode</name>
+                <type>int</type>
+            </parameter>
+        </method>
+        <property>
+            <name>VideoHeight</name>
+            <returntype>int</returntype>
+            <comment></comment>
+        </property>
+        <property>
+            <name>CurrentDuration</name>
+            <returntype>java.lang.String</returntype>
+            <comment></comment>
+        </property>
+        <property>
+            <name>Position</name>
+            <returntype>int</returntype>
+            <parameter>
+                <name>Position</name>
+                <type>int</type>
+            </parameter>
+            <comment>Gets or sets the playing position (in milliseconds).</comment>
+        </property>
+        <property>
+            <name>VideoWidth</name>
+            <returntype>int</returntype>
+            <comment></comment>
+        </property>
+        <property>
+            <name>Duration</name>
+            <returntype>java.lang.String</returntype>
+            <comment></comment>
+        </property>
+        <property>
+            <name>Looping</name>
+            <parameter>
+                <name>Loop</name>
+                <type>boolean</type>
+            </parameter>
+            <comment></comment>
+        </property>
+        <field>
+            <name>MODE_SCALE_TO_FIT_WITH_CROPPING</name>
+            <comment></comment>
+            <returntype>int</returntype>
+        </field>
+        <field>
+            <name>MODE_SCALE_TO_FIT</name>
+            <comment></comment>
+            <returntype>int</returntype>
+        </field>
+    </class>
+    <class>
+        <name>wrap.jcvideoplayer.Hitex_VideoPlayer</name>
+        <shortname>Hitex_VideoPlayer</shortname>
+        <objectwrapper>fm.jiecao.jcvideoplayer_lib.JCVideoPlayerStandard</objectwrapper>
+        <owner>activity</owner>
+        <event>onClickStartThumb (Url As String,Title As String)</event>
+        <event>onClickBlank (Url As String,Title As String)</event>
+        <event>onClickBlankFullscreen (Url As String,Title As String)</event>
+        <event>onClickStartIcon (Url As String,Title As String)</event>
+        <event>onClickStartError (Url As String,Title As String)</event>
+        <event>onClickStop (Url As String,Title As String)</event>
+        <event>onClickStopFullscreen (Url As String,Title As String)</event>
+        <event>onClickResume (Url As String,Title As String)</event>
+        <event>onClickResumeFullscreen (Url As String,Title As String)</event>
+        <event>onClickSeekbar (Url As String,Title As String)</event>
+        <event>onClickSeekbarFullscreen (Url As String,Title As String)</event>
+        <event>onAutoComplete (Url As String,Title As String)</event>
+        <event>onAutoCompleteFullscreen (Url As String,Title As String)</event>
+        <event>onEnterFullscreen (Url As String,Title As String)</event>
+        <event>onQuitFullscreen (Url As String,Title As String)</event>
+        <event>onTouchScreenSeekVolume (Url As String,Title As String)</event>
+        <event>onTouchScreenSeekPosition (Url As String,Title As String)</event>
+        <permission>android.permission.ACCESS_NETWORK_STATE</permission>
+        <permission>android.permission.INTERNET</permission>
+        <method>
+            <name>IsInitialized</name>
+            <comment></comment>
+            <returntype>boolean</returntype>
+        </method>
+        <method>
+            <name>Initialize</name>
+            <comment>.
+ Created by Sadeq Nameni (Hitexroid)
+ .
+ 
+ 
+ &lt;b&gt;Dont forget to add this code to manifest.&lt;/b&gt;
+ 
+ AddApplicationText(
+ &amp;lt;activity
+ android:name="fm.jiecao.jcvideoplayer_lib.Hitex_FullScreenActivity"
+ android:configChanges="orientation|keyboardHidden"
+ android:screenOrientation="landscape" /&amp;gt;
+ )
+ 
+ &lt;b&gt;And write this code to Activity_Pause.&lt;/b&gt;
+ 
+ Sub Activity_Pause (UserClosed As Boolean)
+ 
+ VideoPlayer.Release
+ 
+ End Sub
+ 
+ .</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>ba</name>
+                <type>anywheresoftware.b4a.BA</type>
+            </parameter>
+            <parameter>
+                <name>EventName</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+        <method>
+            <name>LoadVideo</name>
+            <comment>.
+ Loads a video file and prepares it for playing.
+ &lt;b&gt;It is not possible to load files from the assets folder.&lt;/b&gt;
+ Advanced: you can pass "http" to the Dir parameter and then a full URL (including http) to the FileName.
+ In this case the online video will be streamed.
+ .</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>Dir</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>FileName</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>Title</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+        <method>
+            <name>BringToFront</name>
+            <comment></comment>
+            <returntype>void</returntype>
+        </method>
+        <method>
+            <name>SetLayout</name>
+            <comment></comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>arg0</name>
+                <type Pixel="true">int</type>
+            </parameter>
+            <parameter>
+                <name>arg1</name>
+                <type Pixel="true">int</type>
+            </parameter>
+            <parameter>
+                <name>arg2</name>
+                <type Pixel="true">int</type>
+            </parameter>
+            <parameter>
+                <name>arg3</name>
+                <type Pixel="true">int</type>
+            </parameter>
+        </method>
+        <method>
+            <name>SendToBack</name>
+            <comment></comment>
+            <returntype>void</returntype>
+        </method>
+        <method>
+            <name>Release</name>
+            <comment></comment>
+            <returntype>void</returntype>
+        </method>
+        <method>
+            <name>SetVisibleAnimated</name>
+            <comment></comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>arg0</name>
+                <type>int</type>
+            </parameter>
+            <parameter>
+                <name>arg1</name>
+                <type>boolean</type>
+            </parameter>
+        </method>
+        <method>
+            <name>RemoveView</name>
+            <comment></comment>
+            <returntype>void</returntype>
+        </method>
+        <method>
+            <name>Invalidate3</name>
+            <comment></comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>arg0</name>
+                <type>int</type>
+            </parameter>
+            <parameter>
+                <name>arg1</name>
+                <type>int</type>
+            </parameter>
+            <parameter>
+                <name>arg2</name>
+                <type>int</type>
+            </parameter>
+            <parameter>
+                <name>arg3</name>
+                <type>int</type>
+            </parameter>
+        </method>
+        <method>
+            <name>Invalidate2</name>
+            <comment></comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>arg0</name>
+                <type>android.graphics.Rect</type>
+            </parameter>
+        </method>
+        <method>
+            <name>SetColorAnimated</name>
+            <comment></comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>arg0</name>
+                <type>int</type>
+            </parameter>
+            <parameter>
+                <name>arg1</name>
+                <type>int</type>
+            </parameter>
+            <parameter>
+                <name>arg2</name>
+                <type>int</type>
+            </parameter>
+        </method>
+        <method>
+            <name>SetBackgroundImage</name>
+            <comment></comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>arg0</name>
+                <type>android.graphics.Bitmap</type>
+            </parameter>
+        </method>
+        <method>
+            <name>Invalidate</name>
+            <comment></comment>
+            <returntype>void</returntype>
+        </method>
+        <method>
+            <name>ReleaseAllVideos</name>
+            <comment></comment>
+            <returntype>void</returntype>
+        </method>
+        <method>
+            <name>SetLayoutAnimated</name>
+            <comment></comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>arg0</name>
+                <type>int</type>
+            </parameter>
+            <parameter>
+                <name>arg1</name>
+                <type Pixel="true">int</type>
+            </parameter>
+            <parameter>
+                <name>arg2</name>
+                <type Pixel="true">int</type>
+            </parameter>
+            <parameter>
+                <name>arg3</name>
+                <type Pixel="true">int</type>
+            </parameter>
+            <parameter>
+                <name>arg4</name>
+                <type Pixel="true">int</type>
+            </parameter>
+        </method>
+        <method>
+            <name>RequestFocus</name>
+            <comment></comment>
+            <returntype>boolean</returntype>
+        </method>
+        <property>
+            <name>Left</name>
+            <returntype>int</returntype>
+            <parameter>
+                <name>arg0</name>
+                <type Pixel="true">int</type>
+            </parameter>
+            <comment></comment>
+        </property>
+        <property>
+            <name>Background</name>
+            <returntype>android.graphics.drawable.Drawable</returntype>
+            <parameter>
+                <name>arg0</name>
+                <type>android.graphics.drawable.Drawable</type>
+            </parameter>
+            <comment></comment>
+        </property>
+        <property>
+            <name>Top</name>
+            <returntype>int</returntype>
+            <parameter>
+                <name>arg0</name>
+                <type Pixel="true">int</type>
+            </parameter>
+            <comment></comment>
+        </property>
+        <property>
+            <name>Parent</name>
+            <returntype>java.lang.Object</returntype>
+            <comment></comment>
+        </property>
+        <property>
+            <name>Color</name>
+            <parameter>
+                <name>arg0</name>
+                <type>int</type>
+            </parameter>
+            <comment></comment>
+        </property>
+        <property>
+            <name>Visible</name>
+            <returntype>boolean</returntype>
+            <parameter>
+                <name>arg0</name>
+                <type>boolean</type>
+            </parameter>
+            <comment></comment>
+        </property>
+        <property>
+            <name>Enabled</name>
+            <returntype>boolean</returntype>
+            <parameter>
+                <name>arg0</name>
+                <type>boolean</type>
+            </parameter>
+            <comment></comment>
+        </property>
+        <property>
+            <name>Height</name>
+            <returntype>int</returntype>
+            <parameter>
+                <name>arg0</name>
+                <type Pixel="true">int</type>
+            </parameter>
+            <comment></comment>
+        </property>
+        <property>
+            <name>Tag</name>
+            <returntype>java.lang.Object</returntype>
+            <parameter>
+                <name>arg0</name>
+                <type>java.lang.Object</type>
+            </parameter>
+            <comment></comment>
+        </property>
+        <property>
+            <name>Width</name>
+            <returntype>int</returntype>
+            <parameter>
+                <name>arg0</name>
+                <type Pixel="true">int</type>
+            </parameter>
+            <comment></comment>
+        </property>
+        <field>
+            <name>ba</name>
+            <comment></comment>
+            <returntype>anywheresoftware.b4a.BA</returntype>
+        </field>
+    </class>
+    <version>1.0</version>
+</root>

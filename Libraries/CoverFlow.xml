@@ -1,0 +1,317 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root>
+    <doclet-version-NOT-library-version>1.02</doclet-version-NOT-library-version>
+    <class>
+        <name>flm.b4a.coverflow.CoverFlowWrapper</name>
+        <shortname>CoverFlow</shortname>
+        <objectwrapper>flm.b4a.coverflow.CoverFlow</objectwrapper>
+        <owner>activity</owner>
+        <event>ItemClick(Position As Int)</event>
+        <event>ItemLongClick(Position As Int)</event>
+        <event>ItemSelected(Position As Int)</event>
+        <event>NeedBitmap(Position As Int) As Object</event>
+        <event>NeedBitmapCount As Int</event>
+        <method>
+            <name>Initialize</name>
+            <comment>Initializes the CoverFlow view.
+&lt;B&gt;ImageWidth&lt;/B&gt;: maximum width of images.
+&lt;B&gt;ImageHeight&lt;/B&gt;: maximum height of images.
+&lt;B&gt;WithList&lt;/B&gt;: if true, all bitmaps are retrieved from a list populated with AddBitmap. If false, each bitmap is requested when needed by the NeedBitmap event (NeedBitmapCount is called before to return the number of bitmaps) and Refresh must be called to update the gallery.
+&lt;B&gt;WithReflection&lt;/B&gt;: if true, a reflection effect is added under each image.
+&lt;B&gt;EventName&lt;/B&gt;: prefix of the event handlers (&lt;I&gt;myEventName&lt;/I&gt;_ItemClick, &lt;I&gt;myEventName&lt;/I&gt;_ItemLongClick, &lt;I&gt;myEventName&lt;/I&gt;_ItemSelected, &lt;I&gt;myEventName&lt;/I&gt;_NeedBitmap).</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>ba</name>
+                <type>anywheresoftware.b4a.BA</type>
+            </parameter>
+            <parameter>
+                <name>ImageWidth</name>
+                <type>int</type>
+            </parameter>
+            <parameter>
+                <name>ImageHeight</name>
+                <type>int</type>
+            </parameter>
+            <parameter>
+                <name>WithList</name>
+                <type>boolean</type>
+            </parameter>
+            <parameter>
+                <name>WithReflection</name>
+                <type>boolean</type>
+            </parameter>
+            <parameter>
+                <name>EventName</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+        <method>
+            <name>RequestFocus</name>
+            <comment>Tries to set the focus to this view.
+Returns True if the focus was set.</comment>
+            <returntype>boolean</returntype>
+        </method>
+        <method>
+            <name>BringToFront</name>
+            <comment>Changes the Z order of this view and brings it to the front.</comment>
+            <returntype>void</returntype>
+        </method>
+        <method>
+            <name>RemoveView</name>
+            <comment>Removes this view from its parent.</comment>
+            <returntype>void</returntype>
+        </method>
+        <method>
+            <name>Refresh</name>
+            <comment>Updates the contents of the gallery (the bitmaps displayed).
+Calls to this function are only required if WithList = false.
+It cannot be called in Activity_Create and must be called at least once after Initialize.</comment>
+            <returntype>void</returntype>
+        </method>
+        <method>
+            <name>AddBitmap</name>
+            <comment>Adds a bitmap to the list.
+This function is ignored if WithList = false.</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>Bmp</name>
+                <type>anywheresoftware.b4a.objects.drawable.CanvasWrapper.BitmapWrapper</type>
+            </parameter>
+        </method>
+        <method>
+            <name>BitmapCount</name>
+            <comment>Returns the number of items in the bitmap list.</comment>
+            <returntype>int</returntype>
+        </method>
+        <method>
+            <name>SetBackgroundImage</name>
+            <comment></comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>Bitmap</name>
+                <type>android.graphics.Bitmap</type>
+            </parameter>
+        </method>
+        <method>
+            <name>ClearBitmapList</name>
+            <comment>Clears the bitmap list.
+This function is ignored if WithList = false.</comment>
+            <returntype>void</returntype>
+        </method>
+        <method>
+            <name>SetLayout</name>
+            <comment>Changes the view position and size.</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>Left</name>
+                <type>int</type>
+            </parameter>
+            <parameter>
+                <name>Top</name>
+                <type>int</type>
+            </parameter>
+            <parameter>
+                <name>Width</name>
+                <type>int</type>
+            </parameter>
+            <parameter>
+                <name>Height</name>
+                <type>int</type>
+            </parameter>
+        </method>
+        <method>
+            <name>Invalidate</name>
+            <comment>Invalidates the whole view forcing the view to redraw itself.
+Redrawing will only happen when the program can process messages. Usually when it finishes running the current code.</comment>
+            <returntype>void</returntype>
+        </method>
+        <method>
+            <name>Invalidate3</name>
+            <comment>Invalidates the given rectangle.
+Redrawing will only happen when the program can process messages. Usually when it finishes running the current code.</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>Left</name>
+                <type>int</type>
+            </parameter>
+            <parameter>
+                <name>Top</name>
+                <type>int</type>
+            </parameter>
+            <parameter>
+                <name>Right</name>
+                <type>int</type>
+            </parameter>
+            <parameter>
+                <name>Bottom</name>
+                <type>int</type>
+            </parameter>
+        </method>
+        <method>
+            <name>Invalidate2</name>
+            <comment>Invalidates the given rectangle.
+Redrawing will only happen when the program can process messages. Usually when it finishes running the current code.</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>Rect</name>
+                <type>android.graphics.Rect</type>
+            </parameter>
+        </method>
+        <method>
+            <name>SetSpacing</name>
+            <comment>Sets the spacing between images (default = -15).</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>Value</name>
+                <type>int</type>
+            </parameter>
+        </method>
+        <method>
+            <name>SendToBack</name>
+            <comment>Changes the Z order of this view and sends it to the back.</comment>
+            <returntype>void</returntype>
+        </method>
+        <method>
+            <name>IsInitialized</name>
+            <comment></comment>
+            <returntype>boolean</returntype>
+        </method>
+        <property>
+            <name>ReflectionIntensity</name>
+            <returntype>int</returntype>
+            <parameter>
+                <name>NewIntensity</name>
+                <type>int</type>
+            </parameter>
+            <comment>Gets/sets the reflection intensity (from 0:dark to 255:bright).</comment>
+        </property>
+        <property>
+            <name>Enabled</name>
+            <returntype>boolean</returntype>
+            <parameter>
+                <name>Enabled</name>
+                <type>boolean</type>
+            </parameter>
+            <comment></comment>
+        </property>
+        <property>
+            <name>Top</name>
+            <returntype>int</returntype>
+            <parameter>
+                <name>top</name>
+                <type>int</type>
+            </parameter>
+            <comment></comment>
+        </property>
+        <property>
+            <name>ImageReflectionRatio</name>
+            <returntype>float</returntype>
+            <parameter>
+                <name>NewRatio</name>
+                <type>float</type>
+            </parameter>
+            <comment>Gets/sets the image reflection ratio (default = 0.3).</comment>
+        </property>
+        <property>
+            <name>Visible</name>
+            <returntype>boolean</returntype>
+            <parameter>
+                <name>Visible</name>
+                <type>boolean</type>
+            </parameter>
+            <comment></comment>
+        </property>
+        <property>
+            <name>Background</name>
+            <returntype>android.graphics.drawable.Drawable</returntype>
+            <parameter>
+                <name>drawable</name>
+                <type>android.graphics.drawable.Drawable</type>
+            </parameter>
+            <comment>Gets or sets the background drawable.</comment>
+        </property>
+        <property>
+            <name>Height</name>
+            <returntype>int</returntype>
+            <parameter>
+                <name>height</name>
+                <type>int</type>
+            </parameter>
+            <comment></comment>
+        </property>
+        <property>
+            <name>ReflectionGap</name>
+            <returntype>float</returntype>
+            <parameter>
+                <name>NewGap</name>
+                <type>float</type>
+            </parameter>
+            <comment>Gets/sets the reflection gap.</comment>
+        </property>
+        <property>
+            <name>Left</name>
+            <returntype>int</returntype>
+            <parameter>
+                <name>left</name>
+                <type>int</type>
+            </parameter>
+            <comment></comment>
+        </property>
+        <property>
+            <name>Color</name>
+            <parameter>
+                <name>color</name>
+                <type>int</type>
+            </parameter>
+            <comment>Sets the background of the view to be a ColorDrawable with the given color.
+If the current background is of type GradientDrawable or ColorDrawable the round corners will be kept.</comment>
+        </property>
+        <property>
+            <name>Tag</name>
+            <returntype>java.lang.Object</returntype>
+            <parameter>
+                <name>tag</name>
+                <type>java.lang.Object</type>
+            </parameter>
+            <comment>Gets or sets the Tag value. This is a place holder which can used to store additional data.</comment>
+        </property>
+        <property>
+            <name>MaxRotationAngle</name>
+            <returntype>int</returntype>
+            <parameter>
+                <name>NewAngle</name>
+                <type>int</type>
+            </parameter>
+            <comment>Gets/sets the maximum rotation angle of each image (default = 60).</comment>
+        </property>
+        <property>
+            <name>Width</name>
+            <returntype>int</returntype>
+            <parameter>
+                <name>width</name>
+                <type>int</type>
+            </parameter>
+            <comment>Gets or sets the view's width.</comment>
+        </property>
+        <property>
+            <name>Selection</name>
+            <returntype>int</returntype>
+            <parameter>
+                <name>Position</name>
+                <type>int</type>
+            </parameter>
+            <comment>Gets/sets the selected item.</comment>
+        </property>
+        <property>
+            <name>MaxZoom</name>
+            <returntype>int</returntype>
+            <parameter>
+                <name>NewMaxZoom</name>
+                <type>int</type>
+            </parameter>
+            <comment>Gets/sets the maximum zoom of the central image (default = -120).</comment>
+        </property>
+    </class>
+    <version>1.31</version>
+    <author>Fr\u00e9d\u00e9ric Leneuf-Magaud</author>
+</root>

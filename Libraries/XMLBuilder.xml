@@ -1,0 +1,707 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root>
+    <doclet-version-NOT-library-version>1.02</doclet-version-NOT-library-version>
+    <class>
+        <name>com.jamesmurty.utils.XMLBuilder</name>
+        <shortname>XMLBuilder</shortname>
+        <comment>This is a wrapper for the java-xmlbuilder &lt;link&gt;library|http://code.google.com/p/java-xmlbuilder/&lt;/link&gt;.
+ XML Builder is a utility that creates simple XML documents using relatively
+ sparse Java code. It is intended to allow for quick and painless creation of
+ XML documents where you might otherwise be tempted to use concatenated
+ strings, rather than face the tedium and verbosity of coding with
+ JAXP (http://jaxp.dev.java.net/).
+ &lt;p&gt;
+ Internally, XML Builder uses JAXP to build a standard W3C
+ {@link org.w3c.dom.Document} model (DOM) that you can easily export as a
+ string, or access and manipulate further if you have special requirements.
+ &lt;/p&gt;
+ &lt;p&gt;
+ The XMLBuilder class serves as a wrapper of {@link org.w3c.dom.Element} nodes,
+ and provides a number of utility methods that make it simple to
+ manipulate the underlying element and the document to which it belongs.
+ In essence, this class performs dual roles: it represents a specific XML
+ node, and also allows manipulation of the entire underlying XML document.
+ The platform's default {@link DocumentBuilderFactory} and
+ {@link DocumentBuilder} classes are used to build the document.
+ &lt;/p&gt;</comment>
+        <owner>process</owner>
+        <method>
+            <name>cdata</name>
+            <comment>Add a CDATA node with String content to the element represented by this
+ builder node, and return the node representing the element to which the
+ data was added (&lt;strong&gt;not&lt;/strong&gt; the new CDATA node).
+data: the String value that will be added to a CDATA element.
+Return type: @return:the builder node representing the element to which the data was added.</comment>
+            <returntype>com.jamesmurty.utils.XMLBuilder</returntype>
+            <parameter>
+                <name>data</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+        <method>
+            <name>ns</name>
+            <comment>Synonym for {@link #namespace(String)}.
+namespaceURI: a namespace uri
+Return type: @return:the builder node representing the element to which the attribute was added.</comment>
+            <returntype>com.jamesmurty.utils.XMLBuilder</returntype>
+            <parameter>
+                <name>namespaceURI</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+        <method>
+            <name>xpathQuery</name>
+            <comment>Return the result of evaluating an XPath query on the builder's DOM.
+ Returns null if the query finds nothing,
+ or finds a node that does not match the type specified by returnType.
+xpath: an XPath expression
+type: the type the XPath is expected to resolve to, e.g:
+ {@link XPathConstants#NODE}, {@link XPathConstants#NODESET},
+ {@link XPathConstants#STRING}
+Return type: @return:a builder node representing the first Element that matches the
+ XPath expression.</comment>
+            <returntype>java.lang.Object</returntype>
+            <parameter>
+                <name>xpath</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>type</name>
+                <type>javax.xml.namespace.QName</type>
+            </parameter>
+        </method>
+        <method>
+            <name>elementAsString</name>
+            <comment>Serialize the current XML Element and its descendants to a string by
+ delegating to the {@link #toWriter(Writer, Properties)} method.
+ If output options are provided, these options are provided to the
+ {@link Transformer} serializer.
+outputProperties: settings for the {@link Transformer} serializer. This parameter may be
+ null or an empty Properties object, in which case the default output
+ properties will be applied.
+Return type: @return:the XML document as a string</comment>
+            <returntype>java.lang.String</returntype>
+            <parameter>
+                <name>outputProperties</name>
+                <type>java.util.Map</type>
+            </parameter>
+        </method>
+        <method>
+            <name>toWriter2</name>
+            <comment>Serialize the XML document to the given writer using the default
+ {@link TransformerFactory} and {@link Transformer} classes. If output
+ options are provided, these options are provided to the
+ {@link Transformer} serializer.
+writer: a writer to which the serialized document is written.
+outputProperties: settings for the {@link Transformer} serializer. This parameter may be
+ null or an empty Properties object, in which case the default output
+ properties will be applied.</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>writer</name>
+                <type>java.io.Writer</type>
+            </parameter>
+            <parameter>
+                <name>outputProperties</name>
+                <type>java.util.Map</type>
+            </parameter>
+        </method>
+        <method>
+            <name>toWriter</name>
+            <comment>Serialize either the specific Element wrapped by this XMLBuilder, or its entire
+ XML document, to the given writer using the default {@link TransformerFactory}
+ and {@link Transformer} classes.
+ If output options are provided, these options are provided to the
+ {@link Transformer} serializer.
+wholeDocument: if true the whole XML document (i.e. the document root) is serialized,
+ if false just the current Element and its descendants are serialized.
+writer: a writer to which the serialized document is written.
+outputProperties: settings for the {@link Transformer} serializer. This parameter may be
+ null or an empty Properties object, in which case the default output
+ properties will be applied.</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>wholeDocument</name>
+                <type>boolean</type>
+            </parameter>
+            <parameter>
+                <name>writer</name>
+                <type>java.io.Writer</type>
+            </parameter>
+            <parameter>
+                <name>outputProperties</name>
+                <type>java.util.Map</type>
+            </parameter>
+        </method>
+        <method>
+            <name>root</name>
+            <comment>
+Return type: @return:the builder node representing the root element of the XML document.
+ In other words, the same builder node returned by the initial
+ {@link #create(String)} or {@link #parse(InputSource)} method.</comment>
+            <returntype>com.jamesmurty.utils.XMLBuilder</returntype>
+        </method>
+        <method>
+            <name>cmnt</name>
+            <comment>Synonym for {@link #comment(String)}.
+comment: the comment to add to the element.
+Return type: @return:the builder node representing the element to which the comment was added.</comment>
+            <returntype>com.jamesmurty.utils.XMLBuilder</returntype>
+            <parameter>
+                <name>comment</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+        <method>
+            <name>data</name>
+            <comment>Synonym for {@link #cdata(String)}.
+data: the String value that will be added to a CDATA element.
+Return type: @return:the builder node representing the element to which the data was added.</comment>
+            <returntype>com.jamesmurty.utils.XMLBuilder</returntype>
+            <parameter>
+                <name>data</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+        <method>
+            <name>attribute</name>
+            <comment>Add a named attribute value to the element represented by this builder
+ node, and return the node representing the element to which the
+ attribute was added (&lt;strong&gt;not&lt;/strong&gt; the new attribute node).
+name: the attribute's name.
+value: the attribute's value.
+Return type: @return:the builder node representing the element to which the attribute was
+ added.</comment>
+            <returntype>com.jamesmurty.utils.XMLBuilder</returntype>
+            <parameter>
+                <name>name</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>value</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+        <method>
+            <name>elementBefore</name>
+            <comment>Add a named XML element to the document as a sibling element
+ that precedes the position of this builder node, and return the builder node
+ representing the new child.
+
+ When adding an element to a namespaced document, the new node will be
+ assigned a namespace matching it's qualified name prefix (if any) or
+ the document's default namespace. NOTE: If the element has a prefix that
+ does not match any known namespaces, the element will be created
+ without any namespace.
+name: the name of the XML element.
+Return type: @return:a builder node representing the new child.</comment>
+            <returntype>com.jamesmurty.utils.XMLBuilder</returntype>
+            <parameter>
+                <name>name</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+        <method>
+            <name>asString</name>
+            <comment>Serialize the XML document to a string excluding the XML declaration.
+Return type: @return:the XML document as a string without the XML declaration at the
+ beginning of the output.</comment>
+            <returntype>java.lang.String</returntype>
+        </method>
+        <method>
+            <name>inst</name>
+            <comment>Synonym for {@link #instruction(String, String)}.
+target: the target value for the instruction.
+data: the data value for the instruction
+Return type: @return:the builder node representing the element to which the instruction was
+ added.</comment>
+            <returntype>com.jamesmurty.utils.XMLBuilder</returntype>
+            <parameter>
+                <name>target</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>data</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+        <method>
+            <name>elementBefore2</name>
+            <comment>Add a named and namespaced XML element to the document as a sibling element
+ that precedes the position of this builder node, and return the builder node
+ representing the new child.
+name: the name of the XML element.
+namespaceURI: a namespace URI
+Return type: @return:a builder node representing the new child.</comment>
+            <returntype>com.jamesmurty.utils.XMLBuilder</returntype>
+            <parameter>
+                <name>name</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>namespaceURI</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+        <method>
+            <name>create2</name>
+            <comment>Construct a builder for new XML document with a default namespace.
+ The document will be created with the given root element, and the builder
+ returned by this method will serve as the starting-point for any further
+ document additions.
+name: the name of the document's root element.
+namespaceURI: default namespace URI for document, ignored if null or empty.
+Return type: @return:a builder node that can be used to add more nodes to the XML document.</comment>
+            <returntype>com.jamesmurty.utils.XMLBuilder</returntype>
+            <parameter>
+                <name>name</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>namespaceURI</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+        <method>
+            <name>namespace</name>
+            <comment>Add an XML namespace attribute to this builder's element node
+ without a prefix.
+namespaceURI: a namespace uri
+Return type: @return:the builder node representing the element to which the attribute was added.</comment>
+            <returntype>com.jamesmurty.utils.XMLBuilder</returntype>
+            <parameter>
+                <name>namespaceURI</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+        <method>
+            <name>element2</name>
+            <comment>Add a named and namespaced XML element to the document as a child of
+ this builder node, and return the builder node representing the new child.
+name: the name of the XML element.
+namespaceURI: a namespace URI
+Return type: @return:a builder node representing the new child.</comment>
+            <returntype>com.jamesmurty.utils.XMLBuilder</returntype>
+            <parameter>
+                <name>name</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>namespaceURI</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+        <method>
+            <name>instruction</name>
+            <comment>Add an instruction to the element represented by this builder node, and
+ return the node representing the element to which the instruction
+ was added (&lt;strong&gt;not&lt;/strong&gt; the new instruction node).
+target: the target value for the instruction.
+data: the data value for the instruction
+Return type: @return:the builder node representing the element to which the instruction was
+ added.</comment>
+            <returntype>com.jamesmurty.utils.XMLBuilder</returntype>
+            <parameter>
+                <name>target</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>data</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+        <method>
+            <name>parse</name>
+            <comment>Construct a builder from an existing XML document. The provided XML
+ document will be parsed and an XMLBuilder object referencing the
+ document's root element will be returned.
+inputSource: an XML document input source that will be parsed into a DOM.
+Return type: @return:a builder node that can be used to add more nodes to the XML document.</comment>
+            <returntype>com.jamesmurty.utils.XMLBuilder</returntype>
+            <parameter>
+                <name>inputSource</name>
+                <type>org.xml.sax.InputSource</type>
+            </parameter>
+        </method>
+        <method>
+            <name>element</name>
+            <comment>Add a named XML element to the document as a child of this builder node,
+ and return the builder node representing the new child.
+
+ When adding an element to a namespaced document, the new node will be
+ assigned a namespace matching it's qualified name prefix (if any) or
+ the document's default namespace. NOTE: If the element has a prefix that
+ does not match any known namespaces, the element will be created
+ without any namespace.
+name: the name of the XML element.
+Return type: @return:a builder node representing the new child.</comment>
+            <returntype>com.jamesmurty.utils.XMLBuilder</returntype>
+            <parameter>
+                <name>name</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+        <method>
+            <name>text</name>
+            <comment>Add a text value to the element represented by this builder node, and
+ return the node representing the element to which the text
+ was added (&lt;strong&gt;not&lt;/strong&gt; the new text node).
+value: the text value to add to the element.
+Return type: @return:the builder node representing the element to which the text was added.</comment>
+            <returntype>com.jamesmurty.utils.XMLBuilder</returntype>
+            <parameter>
+                <name>value</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+        <method>
+            <name>d</name>
+            <comment>Synonym for {@link #cdata(String)}.
+data: the String value that will be added to a CDATA element.
+Return type: @return:the builder node representing the element to which the data was added.</comment>
+            <returntype>com.jamesmurty.utils.XMLBuilder</returntype>
+            <parameter>
+                <name>data</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+        <method>
+            <name>e</name>
+            <comment>Synonym for {@link #element(String)}.
+name: the name of the XML element.
+Return type: @return:a builder node representing the new child.</comment>
+            <returntype>com.jamesmurty.utils.XMLBuilder</returntype>
+            <parameter>
+                <name>name</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+        <method>
+            <name>c</name>
+            <comment>Synonym for {@link #comment(String)}.
+comment: the comment to add to the element.
+Return type: @return:the builder node representing the element to which the comment was added.</comment>
+            <returntype>com.jamesmurty.utils.XMLBuilder</returntype>
+            <parameter>
+                <name>comment</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+        <method>
+            <name>equals</name>
+            <comment>
+Return type: @return:true if the XML Document and Element objects wrapped by this
+ builder are equal to the other's wrapped objects.</comment>
+            <returntype>boolean</returntype>
+            <parameter>
+                <name>obj</name>
+                <type>java.lang.Object</type>
+            </parameter>
+        </method>
+        <method>
+            <name>importXMLBuilder</name>
+            <comment>Imports another XMLBuilder document into this document at the
+ current position. The entire document provided is imported.
+builder: the XMLBuilder document to be imported.
+Return type: @return:a builder node at the same location as before the import, but
+ now containing the entire document tree provided.</comment>
+            <returntype>com.jamesmurty.utils.XMLBuilder</returntype>
+            <parameter>
+                <name>builder</name>
+                <type>com.jamesmurty.utils.XMLBuilder</type>
+            </parameter>
+        </method>
+        <method>
+            <name>namespace2</name>
+            <comment>Add an XML namespace attribute to this builder's element node.
+prefix: a prefix for the namespace URI within the document, may be null
+ or empty in which case a default "xmlns" attribute is created.
+namespaceURI: a namespace uri
+Return type: @return:the builder node representing the element to which the attribute was added.</comment>
+            <returntype>com.jamesmurty.utils.XMLBuilder</returntype>
+            <parameter>
+                <name>prefix</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>namespaceURI</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+        <method>
+            <name>a</name>
+            <comment>Synonym for {@link #attribute(String, String)}.
+name: the attribute's name.
+value: the attribute's value.
+Return type: @return:the builder node representing the element to which the attribute was
+ added.</comment>
+            <returntype>com.jamesmurty.utils.XMLBuilder</returntype>
+            <parameter>
+                <name>name</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>value</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+        <method>
+            <name>xpathQuery2</name>
+            <comment>Return the result of evaluating an XPath query on the builder's DOM
+ using the given namespace. Returns null if the query finds nothing,
+ or finds a node that does not match the type specified by returnType.
+xpath: an XPath expression
+type: the type the XPath is expected to resolve to, e.g:
+ {@link XPathConstants#NODE}, {@link XPathConstants#NODESET},
+ {@link XPathConstants#STRING}.
+nsContext: a mapping of prefixes to namespace URIs that allows the XPath expression
+ to use namespaces, or null for a non-namespaced document.
+Return type: @return:a builder node representing the first Element that matches the
+ XPath expression.</comment>
+            <returntype>java.lang.Object</returntype>
+            <parameter>
+                <name>xpath</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>type</name>
+                <type>javax.xml.namespace.QName</type>
+            </parameter>
+            <parameter>
+                <name>nsContext</name>
+                <type>javax.xml.namespace.NamespaceContext</type>
+            </parameter>
+        </method>
+        <method>
+            <name>attr</name>
+            <comment>Synonym for {@link #attribute(String, String)}.
+name: the attribute's name.
+value: the attribute's value.
+Return type: @return:the builder node representing the element to which the attribute was
+ added.</comment>
+            <returntype>com.jamesmurty.utils.XMLBuilder</returntype>
+            <parameter>
+                <name>name</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>value</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+        <method>
+            <name>xpathFind2</name>
+            <comment>Find the first element in the builder's DOM matching the given
+ XPath expression, where the expression may include namespaces if
+ a {@link NamespaceContext} is provided.
+xpath: An XPath expression that *must* resolve to an existing Element within
+ the document object model.
+nsContext: a mapping of prefixes to namespace URIs that allows the XPath expression
+ to use namespaces.
+Return type: @return:a builder node representing the first Element that matches the
+ XPath expression.</comment>
+            <returntype>com.jamesmurty.utils.XMLBuilder</returntype>
+            <parameter>
+                <name>xpath</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>nsContext</name>
+                <type>javax.xml.namespace.NamespaceContext</type>
+            </parameter>
+        </method>
+        <method>
+            <name>buildDocumentNamespaceContext</name>
+            <comment>
+Return type: @return:a namespace context containing the prefixes and namespace URI's used
+ within this builder's document, to assist in running namespace-aware
+ XPath queries against the document.</comment>
+            <returntype>com.jamesmurty.utils.NamespaceContextImpl</returntype>
+        </method>
+        <method>
+            <name>up2</name>
+            <comment>Return the builder node representing the n&lt;em&gt;th&lt;/em&gt; ancestor element
+ of this node, or the root node if n exceeds the document's depth.
+steps: the number of parent elements to step over while navigating up the chain
+ of node ancestors. A steps value of 1 will find a node's parent, 2 will
+ find its grandparent etc.
+Return type: @return:the n&lt;em&gt;th&lt;/em&gt; ancestor of this node, or the root node if this is
+ reached before the n&lt;em&gt;th&lt;/em&gt; parent is found.</comment>
+            <returntype>com.jamesmurty.utils.XMLBuilder</returntype>
+            <parameter>
+                <name>steps</name>
+                <type>int</type>
+            </parameter>
+        </method>
+        <method>
+            <name>create</name>
+            <comment>Construct a builder for new XML document. The document will be created
+ with the given root element, and the builder returned by this method
+ will serve as the starting-point for any further document additions.
+name: the name of the document's root element.
+Return type: @return:a builder node that can be used to add more nodes to the XML document.</comment>
+            <returntype>com.jamesmurty.utils.XMLBuilder</returntype>
+            <parameter>
+                <name>name</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+        <method>
+            <name>reference</name>
+            <comment>Add a reference to the element represented by this builder node, and
+ return the node representing the element to which the reference
+ was added (&lt;strong&gt;not&lt;/strong&gt; the new reference node).
+name: the name value for the reference.
+Return type: @return:the builder node representing the element to which the reference was
+ added.</comment>
+            <returntype>com.jamesmurty.utils.XMLBuilder</returntype>
+            <parameter>
+                <name>name</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+        <method>
+            <name>up</name>
+            <comment>Return the builder node representing the parent of the current node.
+Return type: @return:the parent of this node, or the root node if this method is called on the
+ root node.</comment>
+            <returntype>com.jamesmurty.utils.XMLBuilder</returntype>
+        </method>
+        <method>
+            <name>i</name>
+            <comment>Synonym for {@link #instruction(String, String)}.
+target: the target value for the instruction.
+data: the data value for the instruction
+Return type: @return:the builder node representing the element to which the instruction was
+ added.</comment>
+            <returntype>com.jamesmurty.utils.XMLBuilder</returntype>
+            <parameter>
+                <name>target</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>data</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+        <method>
+            <name>ns2</name>
+            <comment>Synonym for {@link #namespace(String, String)}.
+prefix: a prefix for the namespace URI within the document, may be null
+ or empty in which case a default xmlns attribute is created.
+namespaceURI: a namespace uri
+Return type: @return:the builder node representing the element to which the attribute was added.</comment>
+            <returntype>com.jamesmurty.utils.XMLBuilder</returntype>
+            <parameter>
+                <name>prefix</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>namespaceURI</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+        <method>
+            <name>elem</name>
+            <comment>Synonym for {@link #element(String)}.
+name: the name of the XML element.
+Return type: @return:a builder node representing the new child.</comment>
+            <returntype>com.jamesmurty.utils.XMLBuilder</returntype>
+            <parameter>
+                <name>name</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+        <method>
+            <name>asString2</name>
+            <comment>Serialize the XML document to a string by delegating to the
+ {@link #toWriter(Writer, Properties)} method. If output options are
+ provided, these options are provided to the {@link Transformer}
+ serializer.
+outputProperties: settings for the {@link Transformer} serializer. This parameter may be
+ null or an empty Properties object, in which case the default output
+ properties will be applied.
+Return type: @return:the XML document as a string</comment>
+            <returntype>java.lang.String</returntype>
+            <parameter>
+                <name>outputProperties</name>
+                <type>java.util.Map</type>
+            </parameter>
+        </method>
+        <method>
+            <name>ref</name>
+            <comment>Synonym for {@link #reference(String)}.
+name: the name value for the reference.
+Return type: @return:the builder node representing the element to which the reference was
+ added.</comment>
+            <returntype>com.jamesmurty.utils.XMLBuilder</returntype>
+            <parameter>
+                <name>name</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+        <method>
+            <name>xpathFind</name>
+            <comment>Find the first element in the builder's DOM matching the given
+ XPath expression.
+xpath: An XPath expression that *must* resolve to an existing Element within
+ the document object model.
+Return type: @return:a builder node representing the first Element that matches the
+ XPath expression.</comment>
+            <returntype>com.jamesmurty.utils.XMLBuilder</returntype>
+            <parameter>
+                <name>xpath</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+        <method>
+            <name>t</name>
+            <comment>Synonmy for {@link #text(String)}.
+value: the text value to add to the element.
+Return type: @return:the builder node representing the element to which the text was added.</comment>
+            <returntype>com.jamesmurty.utils.XMLBuilder</returntype>
+            <parameter>
+                <name>value</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+        <method>
+            <name>r</name>
+            <comment>Synonym for {@link #reference(String)}.
+name: the name value for the reference.
+Return type: @return:the builder node representing the element to which the reference was
+ added.</comment>
+            <returntype>com.jamesmurty.utils.XMLBuilder</returntype>
+            <parameter>
+                <name>name</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+        <method>
+            <name>GetElement</name>
+            <comment>
+Return type: @return:the XML element wrapped by this builder node.</comment>
+            <returntype>org.w3c.dom.Element</returntype>
+        </method>
+        <method>
+            <name>comment</name>
+            <comment>Add a comment to the element represented by this builder node, and
+ return the node representing the element to which the comment
+ was added (&lt;strong&gt;not&lt;/strong&gt; the new comment node).
+comment: the comment to add to the element.
+Return type: @return:the builder node representing the element to which the comment was added.</comment>
+            <returntype>com.jamesmurty.utils.XMLBuilder</returntype>
+            <parameter>
+                <name>comment</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+        <property>
+            <name>Document</name>
+            <returntype>org.w3c.dom.Document</returntype>
+            <comment></comment>
+        </property>
+    </class>
+    <version>1.0</version>
+    <author>James Murty</author>
+</root>

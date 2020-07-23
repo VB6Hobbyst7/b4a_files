@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root>
+    <doclet-version-NOT-library-version>1.05</doclet-version-NOT-library-version>
+    <class>
+        <name>anywheresoftware.b4x.objects.FacebookSdkWrapper</name>
+        <shortname>FacebookSdk</shortname>
+        <owner>process</owner>
+        <permission>android.permission.INTERNET</permission>
+        <method>
+            <name>Initialize</name>
+            <comment></comment>
+            <returntype>void</returntype>
+        </method>
+        <method>
+            <name>SignIn</name>
+            <comment>Starts the sign in process. This method should be called from an Activity.</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>ba</name>
+                <type>anywheresoftware.b4a.BA</type>
+            </parameter>
+        </method>
+        <method>
+            <name>SignOut</name>
+            <comment>Logs out from the signed in Facebook account;</comment>
+            <returntype>void</returntype>
+        </method>
+    </class>
+    <version>1.0</version>
+    <dependsOn>facebook-android-sdk.aar</dependsOn>
+    <dependsOn>com.android.support:cardview-v7</dependsOn>
+</root>

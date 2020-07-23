@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <doclet-version-NOT-library-version>1.00</doclet-version-NOT-library-version>
+  <class>
+    <name>b4a.example.timecountdown</name>
+    <shortname>TimeCountDown</shortname>
+    <owner>activity</owner>
+    <event>CountingEnd</event>
+    <event>TimeCount(Time as string)</event>
+    <method>
+      <name DesignerName="Initialize">_initialize</name>
+      <comment>created by mkabir -&gt; @Mehdimou
+v = a view for show countdown text
+</comment>
+      <returntype>String</returntype>
+      <parameter>
+        <name>ba</name>
+        <type>anywheresoftware.b4a.BA</type>
+      </parameter>
+      <parameter>
+        <name>EventName</name>
+        <type>String</type>
+      </parameter>
+      <parameter>
+        <name>v</name>
+        <type>anywheresoftware.b4a.objects.ConcreteViewWrapper</type>
+      </parameter>
+      <parameter>
+        <name>targetActivity</name>
+        <type>Object</type>
+      </parameter>
+    </method>
+    <method>
+      <name DesignerName="inputTime">_v5</name>
+      <comment>input value for Counting
+</comment>
+      <returntype>String</returntype>
+      <parameter>
+        <name>dayValue</name>
+        <type>int</type>
+      </parameter>
+      <parameter>
+        <name>hourValue</name>
+        <type>int</type>
+      </parameter>
+      <parameter>
+        <name>minuteValue</name>
+        <type>int</type>
+      </parameter>
+      <parameter>
+        <name>secondValue</name>
+        <type>int</type>
+      </parameter>
+    </method>
+    <method>
+      <name DesignerName="setCountingMode" HideFromIDE="true">_setvv4</name>
+      <comment>MODE_CountDown: show Time Count Down
+Mode_Count: show Time Count Like a Watch
+</comment>
+      <returntype>String</returntype>
+      <parameter>
+        <name>CountMode</name>
+        <type>int</type>
+      </parameter>
+    </method>
+    <method>
+      <name DesignerName="setShowSetting">_v0</name>
+      <returntype>String</returntype>
+      <parameter>
+        <name>showDay</name>
+        <type>boolean</type>
+      </parameter>
+      <parameter>
+        <name>showHour</name>
+        <type>boolean</type>
+      </parameter>
+      <parameter>
+        <name>showMinute</name>
+        <type>boolean</type>
+      </parameter>
+    </method>
+    <method>
+      <name DesignerName="setTimeTicker" HideFromIDE="true">_setvv5</name>
+      <comment>time per second  (measured in milliseconds)
+</comment>
+      <returntype>String</returntype>
+      <parameter>
+        <name>timePerSecond</name>
+        <type>long</type>
+      </parameter>
+    </method>
+    <method>
+      <name DesignerName="start">_vv2</name>
+      <returntype>String</returntype>
+    </method>
+    <method>
+      <name DesignerName="stop">_vv3</name>
+      <returntype>String</returntype>
+    </method>
+    <property>
+      <name DesignerName="CountingMode">_vv4</name>
+      <comment>MODE_CountDown: show Time Count Down
+Mode_Count: show Time Count Like a Watch
+</comment>
+      <returntype>void</returntype>
+      <parameter>
+        <name>Value</name>
+        <type>int</type>
+      </parameter>
+    </property>
+    <property>
+      <name DesignerName="TimeTicker">_vv5</name>
+      <comment>time per second  (measured in milliseconds)
+</comment>
+      <returntype>void</returntype>
+      <parameter>
+        <name>Value</name>
+        <type>long</type>
+      </parameter>
+    </property>
+    <field>
+      <name DesignerName="MODE_CountDown">_mode_countdown</name>
+      <returntype>int</returntype>
+    </field>
+    <field>
+      <name DesignerName="MODE_Count">_mode_count</name>
+      <returntype>int</returntype>
+    </field>
+  </class>
+  <version>1.2</version>
+</root>

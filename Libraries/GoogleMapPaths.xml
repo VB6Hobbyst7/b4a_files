@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root>
+    <doclet-version-NOT-library-version>1.04</doclet-version-NOT-library-version>
+    <class>
+        <name>anywheresoftware.b4a.googlemappath.JSONParser</name>
+        <owner>process</owner>
+        <method>
+            <name>getJSONFromUrl</name>
+            <comment></comment>
+            <returntype>java.lang.String</returntype>
+            <parameter>
+                <name>url</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+    </class>
+    <class>
+        <name>anywheresoftware.b4a.googlemappath.Path</name>
+        <shortname>GoogleMapPath</shortname>
+        <owner>process</owner>
+        <method>
+            <name>GetPath</name>
+            <comment>Get paths between two location</comment>
+            <returntype>java.lang.String</returntype>
+            <parameter>
+                <name>FromLat</name>
+                <type>double</type>
+            </parameter>
+            <parameter>
+                <name>FromLon</name>
+                <type>double</type>
+            </parameter>
+            <parameter>
+                <name>ToLat</name>
+                <type>double</type>
+            </parameter>
+            <parameter>
+                <name>ToLong</name>
+                <type>double</type>
+            </parameter>
+        </method>
+        <method>
+            <name>Initilize</name>
+            <comment>Create project in google console and return api key for android</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>ApiKey</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+    </class>
+    <version>1.0</version>
+</root>

@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <doclet-version-NOT-library-version>1.00</doclet-version-NOT-library-version>
+  <dependsOn>animationplus</dependsOn>
+  <dependsOn>animation</dependsOn>
+  <class>
+    <name>barxdroid.ArcMenuDemo.arcmenu</name>
+    <shortname>ArcMenu</shortname>
+    <owner>activity</owner>
+    <method>
+      <name>IsInitialized</name>
+      <comment>Tests whether the object has been initialized.</comment>
+      <returntype>boolean</returntype>
+    </method>
+    <method>
+      <name DesignerName="AddItem">_additem</name>
+      <comment>Adds an item to the menu.
+ItemImage - the image shown as the MenuItem</comment>
+      <returntype>String</returntype>
+      <parameter>
+        <name>ItemImage</name>
+        <type>anywheresoftware.b4a.objects.drawable.CanvasWrapper.BitmapWrapper</type>
+      </parameter>
+    </method>
+    <method>
+      <name DesignerName="Class_Globals">_class_globals</name>
+      <returntype>String</returntype>
+    </method>
+    <method>
+      <name DesignerName="Initialize">_initialize</name>
+      <comment>Initializes the object.
+
+Parameters:
+Activity - The activity to add the OrbitalMenu to. Use 'Activity' to pass the current activity.
+Module - Use 'Me'
+EventName - The EventName to be use for callbacks. 
+            _AnimationEnd(Open as Boolean) - this event triggers once the menu has finished expanding or collapsing.
+                                             Open - will return whether the menu is open or not.
+            _Click(Position as Int)
+            _LongClick(Position as Int)
+            Position - returns the Item Position that triggered the event. First Item = 1.
+StaticButtonImage - A static background for the menu button. Use NULL for no image.
+AnimatedButtonImage - A bitmap that will show in front of the StaticBackgroundImage and will rotate 90 degrees when pressed. Use NULL for no image.
+x, y - The coordinates for where the button will appear.</comment>
+      <returntype>String</returntype>
+      <parameter>
+        <name>ba</name>
+        <type>anywheresoftware.b4a.BA</type>
+      </parameter>
+      <parameter>
+        <name>Activity</name>
+        <type>anywheresoftware.b4a.objects.ActivityWrapper</type>
+      </parameter>
+      <parameter>
+        <name>Module</name>
+        <type>Object</type>
+      </parameter>
+      <parameter>
+        <name>EventName</name>
+        <type>String</type>
+      </parameter>
+      <parameter>
+        <name>AnimatedButtonImage</name>
+        <type>anywheresoftware.b4a.objects.drawable.CanvasWrapper.BitmapWrapper</type>
+      </parameter>
+      <parameter>
+        <name>StaticButtonImage</name>
+        <type>anywheresoftware.b4a.objects.drawable.CanvasWrapper.BitmapWrapper</type>
+      </parameter>
+      <parameter>
+        <name>x</name>
+        <type>int</type>
+      </parameter>
+      <parameter>
+        <name>y</name>
+        <type>int</type>
+      </parameter>
+    </method>
+    <method>
+      <name DesignerName="IsOpen">_isopen</name>
+      <returntype>boolean</returntype>
+    </method>
+    <method>
+      <name DesignerName="SetAnimatedButtonDimensions">_setanimatedbuttondimensions</name>
+      <comment>Use to override the dimensions of the AnimatedButtonImage
+Defaults are 20dip x 20dip</comment>
+      <returntype>String</returntype>
+      <parameter>
+        <name>width</name>
+        <type>int</type>
+      </parameter>
+      <parameter>
+        <name>height</name>
+        <type>int</type>
+      </parameter>
+    </method>
+    <method>
+      <name DesignerName="SetDegreeSpan">_setdegreespan</name>
+      <comment>Sets the amount of degrees the MenuItems Orbit will span from the starting point.
+Default is 90</comment>
+      <returntype>String</returntype>
+      <parameter>
+        <name>value</name>
+        <type>int</type>
+      </parameter>
+    </method>
+    <method>
+      <name DesignerName="SetMenuItemDimensions">_setmenuitemdimensions</name>
+      <comment>NOTE: Must be called before Adding and items to the menu.
+Use to override the dimensions of the menu items.
+Defaults are 40dip x 40dip</comment>
+      <returntype>String</returntype>
+      <parameter>
+        <name>width</name>
+        <type>int</type>
+      </parameter>
+      <parameter>
+        <name>height</name>
+        <type>int</type>
+      </parameter>
+    </method>
+    <method>
+      <name DesignerName="SetMenuItemRadius">_setmenuitemradius</name>
+      <comment>Use to set the Menu item radius (the distance the items pop out from center)
+Default is 120dip</comment>
+      <returntype>String</returntype>
+      <parameter>
+        <name>value</name>
+        <type>int</type>
+      </parameter>
+    </method>
+    <method>
+      <name DesignerName="SetStartDegrees">_setstartdegrees</name>
+      <comment>Sets the angle the MenuItems Orbit will start at.
+Default is 0 (straight up.)</comment>
+      <returntype>String</returntype>
+      <parameter>
+        <name>value</name>
+        <type>int</type>
+      </parameter>
+    </method>
+    <method>
+      <name DesignerName="SetStaticButtonDimensions">_setstaticbuttondimensions</name>
+      <comment>Use to override the dimensions of the StaticButtonImage
+Defaults are 20dip x 20dip</comment>
+      <returntype>String</returntype>
+      <parameter>
+        <name>width</name>
+        <type>int</type>
+      </parameter>
+      <parameter>
+        <name>height</name>
+        <type>int</type>
+      </parameter>
+    </method>
+    <method>
+      <name DesignerName="Toggle">_toggle</name>
+      <comment>Simulates a Click of the menu Button</comment>
+      <returntype>String</returntype>
+    </method>
+  </class>
+  <version>1</version>
+</root>

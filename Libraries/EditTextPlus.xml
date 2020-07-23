@@ -1,0 +1,278 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root>
+    <doclet-version-NOT-library-version>1.04</doclet-version-NOT-library-version>
+    <class>
+        <name>ir.EditTextPlus.pejman.EditTextPlus</name>
+        <shortname>EditTextPlus</shortname>
+        <owner>process</owner>
+        <method>
+            <name>getTextOfALines</name>
+            <comment>برای مثال می توانید متن خط 2 را دریافت کنید
+ 
+ &lt;code&gt;Dim ep As EditTextPlus
+Log(ep.getTextOfALines(EditText1,2))&lt;/code&gt;</comment>
+            <returntype>java.lang.String</returntype>
+            <parameter>
+                <name>EditTextName</name>
+                <type>android.widget.EditText</type>
+            </parameter>
+            <parameter>
+                <name>Line</name>
+                <type>int</type>
+            </parameter>
+        </method>
+        <method>
+            <name>setCursorDrawableColor</name>
+            <comment>تغییر رنگ کرسر ادیت تکست
+ مثال:
+ 
+ &lt;code&gt;Dim ep As EditTextPlus
+ep.setCursorDrawableColor(EditText1,Colors.Red)&lt;/code&gt;</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>EditTextName</name>
+                <type>android.widget.EditText</type>
+            </parameter>
+            <parameter>
+                <name>Color</name>
+                <type>int</type>
+            </parameter>
+        </method>
+        <method>
+            <name>setSelection</name>
+            <comment>انتخاب متن داخل ادیت تکست (Highlight)
+ مثال:
+ 
+&lt;code&gt; EditText1.Text="inMatnTestAst"
+	'agar in matn ma bashad
+	'Kalameye "Matn" ra be in Sorat Select Mikonim
+	Dim ep As EditTextPlus
+	ep.setSelection(EditText1,2,5) 'az karakter 2 ta 5&lt;/code&gt;</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>EditTextName</name>
+                <type>android.widget.EditText</type>
+            </parameter>
+            <parameter>
+                <name>Start</name>
+                <type>int</type>
+            </parameter>
+            <parameter>
+                <name>Stop</name>
+                <type>int</type>
+            </parameter>
+        </method>
+        <method>
+            <name>insertTextToCursorPosition</name>
+            <comment>درج متن به جایی که کرسر چشمک میزند
+ مثال:
+ 
+ &lt;code&gt;Dim ep As EditTextPlus
+ep.insertTextToCursorPosition(EditText1,"Matn Mored Nazar")&lt;/code&gt;</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>EditTextName</name>
+                <type>android.widget.EditText</type>
+            </parameter>
+            <parameter>
+                <name>Text</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+        <method>
+            <name>setHighlightColor</name>
+            <comment>تغییر رنگ زمینه متن انتخاب شده(Highlight)
+ مثال:
+ 
+ &lt;code&gt;Dim ep As EditTextPlus
+ep.setHighlightColor(EditText1,Colors.Green)&lt;/code&gt;</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>EditTextName</name>
+                <type>android.widget.EditText</type>
+            </parameter>
+            <parameter>
+                <name>Color</name>
+                <type>int</type>
+            </parameter>
+        </method>
+        <method>
+            <name>setCursorVisible</name>
+            <comment>مخفی یا نمایان کردن کرسر ادیت تکست
+ مثال:
+ 
+ &lt;code&gt;Dim ep As EditTextPlus
+ep.setCursorVisible(EditText1,True)&lt;/code&gt;</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>EditTextName</name>
+                <type>android.widget.EditText</type>
+            </parameter>
+            <parameter>
+                <name>Visible</name>
+                <type>java.lang.Boolean</type>
+            </parameter>
+        </method>
+        <method>
+            <name>getError</name>
+            <comment>خطایی که کنار ادیت تکست نمایش داده بودید را برگشت می دهد
+ مثال:
+ 
+ &lt;code&gt;Dim ep As EditTextPlus
+ep.getError(EditText1)&lt;/code&gt;</comment>
+            <returntype>java.lang.String</returntype>
+            <parameter>
+                <name>EditTextName</name>
+                <type>android.widget.EditText</type>
+            </parameter>
+        </method>
+        <method>
+            <name>getLineCount</name>
+            <comment>دریافت تعداد خط های متن ادیت تکست
+ مثال:
+ 
+ &lt;code&gt;Dim ep As EditTextPlus
+Log("EditText Lines: "&amp;ep.getLineCount(EditText1))&lt;/code&gt;</comment>
+            <returntype>int</returntype>
+            <parameter>
+                <name>EditTextName</name>
+                <type>android.widget.EditText</type>
+            </parameter>
+        </method>
+        <method>
+            <name>setUnderLineColor</name>
+            <comment>تغییر رنگ زیر کادر ادیت تکست
+ مثال:
+ 
+ &lt;code&gt;Dim ep As EditTextPlus
+ep.setUnderLineColor(EditText1,Colors.Red)&lt;/code&gt;</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>EditTextName</name>
+                <type>android.widget.EditText</type>
+            </parameter>
+            <parameter>
+                <name>Color</name>
+                <type>int</type>
+            </parameter>
+        </method>
+        <method>
+            <name>insertTextToIndex</name>
+            <comment>درج متن به مکانی که خودتان مشخص میکنید
+ مثال:
+ 
+ &lt;code&gt;Dim ep As EditTextPlus
+ep.insertTextToIndex(EditText1,"Matn Mored Nazar",4)&lt;/code&gt;</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>EditTextName</name>
+                <type>android.widget.EditText</type>
+            </parameter>
+            <parameter>
+                <name>Text</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>Index</name>
+                <type>int</type>
+            </parameter>
+        </method>
+        <method>
+            <name>About</name>
+            <comment>درباره ما...
+ 
+ PEJMAN NIKRAVAN</comment>
+            <returntype>java.lang.String</returntype>
+        </method>
+        <method>
+            <name>isCursorVisible</name>
+            <comment>میتوانید وضعیت مخفی یا مخفی نبودن کرسر ادیت تکست را دریافت کنید
+ مثال:
+ 
+ &lt;code&gt;Dim ep As EditTextPlus
+If ep.isCursorVisible(EditText1)=True Then
+	ToastMessageShow("کرسر مخفی نیست",False)
+	Else
+	ToastMessageShow("کرسر مخفی است",False)
+End If&lt;/code&gt;</comment>
+            <returntype>java.lang.Boolean</returntype>
+            <parameter>
+                <name>EditTextName</name>
+                <type>android.widget.EditText</type>
+            </parameter>
+        </method>
+        <method>
+            <name>setEmailsClickable</name>
+            <comment>میتوانید به ایمیل هایی که در ادیت تکست شما نوشته شده است قابلیت کلیک اضافه کنید و رنگ آنها را تغییر دهید
+ مثال:
+ 
+ &lt;code&gt;Dim ep As EditTextPlus
+ep.setEmailsClickable(EditText1,True,Colors.Blue)&lt;/code&gt;
+
+برای اینکه همزمان بعد از وارد کردن متن توسط کاربر عکس العمل نشان داده شود ، کد بالا را در رویداد "تکست چنج" وارد کنید:
+&lt;code&gt;Sub EditText1_TextChanged (Old As String, New As String)
+	Dim ep As EditTextPlus
+	ep.setEmailsClickable(EditText1,True,Colors.Blue)
+End Sub&lt;/code&gt;</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>EditTextName</name>
+                <type>android.widget.EditText</type>
+            </parameter>
+            <parameter>
+                <name>Enabled</name>
+                <type>java.lang.Boolean</type>
+            </parameter>
+            <parameter>
+                <name>EmailsTextColor</name>
+                <type>int</type>
+            </parameter>
+        </method>
+        <method>
+            <name>setError</name>
+            <comment>نمایش یک خطا کنار ادیت تکست ، برای مثال می توانید تعیین کنید اگر ادیت تکست خالی بود پیغامی کنار آن ظاهر شود
+ مثال:
+ 
+ &lt;code&gt;Dim ep As EditTextPlus
+ ep.setError(EditText1,"متن ادیت تکست خالی است!")&lt;/code&gt;</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>EditTextName</name>
+                <type>android.widget.EditText</type>
+            </parameter>
+            <parameter>
+                <name>ErrorText</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+        <method>
+            <name>setLinksClickable</name>
+            <comment>میتوانید به لینک هایی که در ادیت تکست شما نوشته شده است قابلیت کلیک اضافه کنید و رنگ آنها را تغییر دهید ، پس از کلیک روی لینک ، لینک توسط مرورگر باز خواهد شد
+ مثال:
+ 
+ &lt;code&gt;Dim ep As EditTextPlus
+ep.setLinksClickable(EditText1,True,Colors.Blue)&lt;/code&gt;
+
+برای اینکه همزمان بعد از وارد کردن متن توسط کاربر عکس العمل نشان داده شود ، کد بالا را در رویداد "تکست چنج" وارد کنید:
+&lt;code&gt;Sub EditText1_TextChanged (Old As String, New As String)
+	Dim ep As EditTextPlus
+	ep.setLinksClickable(EditText1,True,Colors.Blue)
+End Sub&lt;/code&gt;</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>EditTextName</name>
+                <type>android.widget.EditText</type>
+            </parameter>
+            <parameter>
+                <name>Enabled</name>
+                <type>java.lang.Boolean</type>
+            </parameter>
+            <parameter>
+                <name>LinksTextColor</name>
+                <type>int</type>
+            </parameter>
+        </method>
+    </class>
+    <version>1.0</version>
+    <author>pejman nikravan</author>
+</root>

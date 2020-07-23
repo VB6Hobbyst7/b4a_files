@@ -1,0 +1,251 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <doclet-version-NOT-library-version>1.00</doclet-version-NOT-library-version>
+  <dependsOn>javaobject</dependsOn>
+  <dependsOn>threading</dependsOn>
+  <class b4a_type="StaticCode">
+    <name>vlfsoft.gacc.bgoogleaccountutils</name>
+    <shortname>bGoogleAccountUtils</shortname>
+    <owner>activity</owner>
+    <objectwrapper>java.lang.Class</objectwrapper>
+    <field>
+      <name DesignerName="GoogleAccount_TYPE_Google">_googleaccount_type_google</name>
+      <returntype>String</returntype>
+    </field>
+    <field>
+      <name DesignerName="AccountManager_KEY_AUTHTOKEN">_accountmanager_key_authtoken</name>
+      <returntype>String</returntype>
+    </field>
+    <field>
+      <name DesignerName="AuthToken_NO">_authtoken_no</name>
+      <returntype>String</returntype>
+    </field>
+    <method>
+      <name DesignerName="AuthScope">_authscope</name>
+      <comment> https://developers.google.com/android/guides/http-auth#obtain
+ The Credentials page then provides the available credentials such as an OAuth 2.0 client ID and an Android Key,
+ but you don't need these to authorize your Android users.
+ Simply registering your app with the package name and SHA1 makes the Google services accessible by your app.
+ http://android-developers.blogspot.com/2012/09/google-play-services-and-oauth-identity.html
+ Suppose you’ve registered your app and called GoogleAuthUtil.getToken() and received a token.
+ For the purposes of this discussion, let’s suppose that it’s “MissassaugaParnassus42”.
+ Then all you need to do is, when you send off an HTTP request to your service provider,
+ include an HTTP header access token:
+
+ scope в GoogleAuthUtil.getToken или authTokenType в AccountManager.getAuthToken:
+ A String representing the authentication scope,
+ prefixed with "oauth2:". To specify multiple scopes, separate them with a space
+ (for example, "oauth2:scope1 scope2 scope3").
+ a_sScopes брать из bRestUtils_GoogleXX.bas
+</comment>
+      <returntype>String</returntype>
+      <parameter>
+        <name>ba</name>
+        <type>anywheresoftware.b4a.BA</type>
+      </parameter>
+      <parameter>
+        <name>a_sScopes</name>
+        <type>anywheresoftware.b4a.objects.collections.List</type>
+      </parameter>
+    </method>
+    <method>
+      <name DesignerName="AuthScope_with_Client_id">_authscope_with_client_id</name>
+      <comment> authTokenType	The auth token type, an authenticator-dependent string token, must not be null
+
+ В https://developers.google.com/identity/protocols/CrossClientAuth
+ See. "Android app obtains offline access for web back-end"
+ Описывается формат если есть web компоненты приложения
+ для scope в GoogleAuthUtil.getToken
+ https://developers.google.com/android/reference/com/google/android/gms/auth/GoogleAuthUtil
+ ИЛИ
+ для authTokenType который передается в AccountManager.getAuthToken
+ http://developer.android.com/reference/android/accounts/AccountManager.html
+
+ A String representing the authentication scope,
+ a_sScopes брать из bRestUtils_GoogleXX.bas
+</comment>
+      <returntype>String</returntype>
+      <parameter>
+        <name>ba</name>
+        <type>anywheresoftware.b4a.BA</type>
+      </parameter>
+      <parameter>
+        <name>a_sClient_id</name>
+        <type>String</type>
+      </parameter>
+      <parameter>
+        <name>a_sScopes</name>
+        <type>anywheresoftware.b4a.objects.collections.List</type>
+      </parameter>
+    </method>
+    <method>
+      <name DesignerName="AuthTokenType">_authtokentype</name>
+      <returntype>String</returntype>
+      <parameter>
+        <name>ba</name>
+        <type>anywheresoftware.b4a.BA</type>
+      </parameter>
+      <parameter>
+        <name>a_sScopes</name>
+        <type>anywheresoftware.b4a.objects.collections.List</type>
+      </parameter>
+    </method>
+    <method>
+      <name DesignerName="AuthTokenType_with_Client_id">_authtokentype_with_client_id</name>
+      <comment> https://habrahabr.ru/post/229039/
+   Private final static String G_PLUS_SCOPE =
+            "oauth2:https://www.googleapis.com/auth/plus.me";
+    Private final static String USERINFO_SCOPE =
+            "https://www.googleapis.com/auth/userinfo.profile";
+    Private final static String EMAIL_SCOPE =
+            "https://www.googleapis.com/auth/userinfo.email";
+    Private final static String SCOPES = G_PLUS_SCOPE + " " + USERINFO_SCOPE + " " + EMAIL_SCOPE;
+
+ http://stackoverflow.com/questions/9125331/oauth-2-0-token-type-alias-in-android-for-google-calendar
+ private static final String AUTH_TOKEN_TYPE = "oauth2:https://www.googleapis.com/auth/calendar";
+
+ https://developers.google.com/google-apps/tasks/oauth-and-tasks-on-android
+ String AUTH_TOKEN_TYPE = "oauth2:https://www.googleapis.com/auth/tasks";
+
+ https://developers.google.com/oauthplayground/
+ a_sScopes брать из bRestUtils_GoogleXX.bas
+ ПРОБЛЕМА: "android.accounts.AuthenticatorException: Unknown" in getAuthToken_foreground
+ Решение: Исп. AuthScope без Client Id, так как
+ https://developers.google.com/android/guides/http-auth#obtain
+ The Credentials page then provides the available credentials such as an OAuth 2.0 client ID and an Android Key,
+ but you don't need these to authorize your Android users.
+ Simply registering your app with the package name and SHA1 makes the Google services accessible by your app.
+</comment>
+      <returntype>String</returntype>
+      <parameter>
+        <name>ba</name>
+        <type>anywheresoftware.b4a.BA</type>
+      </parameter>
+      <parameter>
+        <name>a_sClient_id</name>
+        <type>String</type>
+      </parameter>
+      <parameter>
+        <name>a_sScopes</name>
+        <type>anywheresoftware.b4a.objects.collections.List</type>
+      </parameter>
+    </method>
+    <method>
+      <name DesignerName="Process_Globals">_process_globals</name>
+      <comment>Code module
+</comment>
+      <returntype>String</returntype>
+    </method>
+  </class>
+  <class>
+    <name>vlfsoft.gacc.clsb_googleaccountmanager</name>
+    <shortname>clsB_GoogleAccountManager</shortname>
+    <owner>process</owner>
+    <method>
+      <name>IsInitialized</name>
+      <comment>Tests whether the object has been initialized.</comment>
+      <returntype>boolean</returntype>
+    </method>
+    <method>
+      <name DesignerName="Class_Globals">_class_globals</name>
+      <comment>Class module
+</comment>
+      <returntype>String</returntype>
+    </method>
+    <method>
+      <name DesignerName="Finilize">_finilize</name>
+      <returntype>String</returntype>
+    </method>
+    <method>
+      <name DesignerName="getAccountsByType">_getaccountsbytype</name>
+      <comment>#BEG: getAccounts Subs
+ http://developer.android.com/reference/android/accounts/AccountManager.html#getAccountsByType(java.lang.String)
+ NOTE: If targeting your app to work on API level 22 and before,
+ GET_ACCOUNTS permission is needed for those platforms, irrespective of uid or signature match. See docs for this function in API level 22.
+ http://stackoverflow.com/questions/4038333/how-do-i-retrieve-the-logged-in-google-account-on-android-phones
+ And you will need the following permission in your manifest:
+ &lt;uses-permission android:name="android.permission.GET_ACCOUNTS"&gt;&lt;/uses-permission&gt;
+ add in Manifest Editor
+ ' clsB_GoogleAccountManager: RunMethod("getAccountsByType", Array(a_sType))
+ AddPermission(android.permission.GET_ACCOUNTS)
+ a_sType: bGoogleAccountUtils.AuthTokenType
+</comment>
+      <returntype>Object[]</returntype>
+      <parameter>
+        <name>a_sType</name>
+        <type>String</type>
+      </parameter>
+    </method>
+    <method>
+      <name DesignerName="getAuthToken_background">_getauthtoken_background</name>
+      <comment> http://developer.android.com/reference/android/accounts/AccountManager.html#getAuthToken(android.accounts.Account, java.lang.String, android.os.Bundle, boolean, android.accounts.AccountManagerCallback&lt;android.os.Bundle&gt;, android.os.Handler)
+ Gets an auth token of the specified type for a particular account, optionally raising a notification if the user must enter credentials. This method is intended for background tasks and services where the user should not be immediately interrupted with a password prompt.
+</comment>
+      <returntype>String</returntype>
+      <parameter>
+        <name>a_joAccount</name>
+        <type>anywheresoftware.b4j.object.JavaObject</type>
+      </parameter>
+      <parameter>
+        <name>a_sAuthTokenType</name>
+        <type>String</type>
+      </parameter>
+      <parameter>
+        <name>a_bnotifyAuthFailure</name>
+        <type>boolean</type>
+      </parameter>
+    </method>
+    <method>
+      <name DesignerName="getAuthToken_foreground">_getauthtoken_foreground</name>
+      <comment> http://developer.android.com/reference/android/accounts/AccountManager.html#getAuthToken(android.accounts.Account, java.lang.String, android.os.Bundle, android.app.Activity, android.accounts.AccountManagerCallback&lt;android.os.Bundle&gt;, android.os.Handler)
+ Gets an auth token of the specified type for a particular account, prompting the user for credentials if necessary.
+ This method is intended for applications running in the foreground where it makes sense to ask the user directly for a password.
+ public AccountManagerFuture&lt;Bundle&gt; getAuthToken (Account account, String authTokenType, Bundle options, Activity activity, AccountManagerCallback&lt;Bundle&gt; callback, Handler handler)
+</comment>
+      <returntype>String</returntype>
+      <parameter>
+        <name>a_joAccount</name>
+        <type>anywheresoftware.b4j.object.JavaObject</type>
+      </parameter>
+      <parameter>
+        <name>a_sAuthTokenType</name>
+        <type>String</type>
+      </parameter>
+    </method>
+    <method>
+      <name DesignerName="Initialize">_initialize</name>
+      <returntype>String</returntype>
+      <parameter>
+        <name>ba</name>
+        <type>anywheresoftware.b4a.BA</type>
+      </parameter>
+      <parameter>
+        <name>a_iJoin_Secs</name>
+        <type>int</type>
+      </parameter>
+    </method>
+    <method>
+      <name DesignerName="joAccountManager">_joaccountmanager</name>
+      <comment>#BEG: Accessor Subs
+</comment>
+      <returntype>anywheresoftware.b4j.object.JavaObject</returntype>
+    </method>
+    <method>
+      <name DesignerName="Thread_getAuthToken">_thread_getauthtoken</name>
+      <comment> https://developers.google.com/android/guides/http-auth#obtain
+ The GoogleAuthUtil.getToken() method requires a network connection, so your app must acquire the INTERNET permission.
+ You should also check whether the device has a network connection at runtime by querying NetworkInfo,
+ which requires that your app also acquire the ACCESS_NETWORK_STATE permission. For more details, read Connecting To the Network.
+ add in Manifest Editor
+ ' clsB_GoogleAccountManager: RunMethod("getAuthToken",
+ AddPermission(android.permission.INTERNET)
+</comment>
+      <returntype>String</returntype>
+      <parameter>
+        <name>a_args</name>
+        <type>Object</type>
+      </parameter>
+    </method>
+  </class>
+  <version>1</version>
+</root>

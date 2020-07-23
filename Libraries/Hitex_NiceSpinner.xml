@@ -1,0 +1,464 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root>
+    <doclet-version-NOT-library-version>1.04</doclet-version-NOT-library-version>
+    <class>
+        <name>hitex.nice.spinner.Hitex_NiceSpinner</name>
+        <shortname>Hitex_NiceSpinner</shortname>
+        <objectwrapper>org.angmarch.views.NiceSpinner</objectwrapper>
+        <owner>activity</owner>
+        <event>ItemClick (Position As Int, Value As Object)</event>
+        <method>
+            <name>Add</name>
+            <comment>NiceSpinner1.Add("Number 1").Show
+ 
+ or
+ 
+ For i = 0 To 8
+ NiceSpinner1.Add("tbl_list_" &amp;amp; i)
+ Next
+ NiceSpinner1.Show
+ 
+ Don't forget to call (Show) After using this method.</comment>
+            <returntype>hitex.nice.spinner.Hitex_NiceSpinner</returntype>
+            <parameter>
+                <name>Item</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+        <method>
+            <name>DesignerCreateView</name>
+            <comment></comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>base</name>
+                <type>anywheresoftware.b4a.objects.PanelWrapper</type>
+            </parameter>
+            <parameter>
+                <name>lw</name>
+                <type>anywheresoftware.b4a.objects.LabelWrapper</type>
+            </parameter>
+            <parameter>
+                <name>props</name>
+                <type>anywheresoftware.b4a.objects.collections.Map</type>
+            </parameter>
+        </method>
+        <method>
+            <name>AddItems</name>
+            <comment></comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>items</name>
+                <type>java.lang.String[]</type>
+            </parameter>
+            <parameter>
+                <name>Color</name>
+                <type>int</type>
+            </parameter>
+            <parameter>
+                <name>SpinnerTextSize</name>
+                <type>float</type>
+            </parameter>
+        </method>
+        <method>
+            <name>IsInitialized</name>
+            <comment></comment>
+            <returntype>boolean</returntype>
+        </method>
+        <method>
+            <name>Initialize</name>
+            <comment>.
+	
+	&lt;b&gt;
+	Created By Sadeq Nameni (Hitexroid)
+	Telegram id : &lt;a href="http://telegram.me/hitexroid"&gt;@hitexroid&lt;/a&gt;
+	Email : &lt;a href="mailto:sadeq.hitex@gmail.com?Subject=Hitex_NiceSpinner" target="_top"&gt;Sadeq.hitex@gmail.com&lt;/a&gt;
+	&lt;/b&gt;
+	
+	
+	Public NiceSpinner As Hitex_NiceSpinner
+	Activity.Color = 0xFFF7F7F7
+	NiceSpinner.Initialize("NiceSpinner",False,False)
+	Activity.AddView(NiceSpinner,5%x,10%y,90%x,10%y)
+	NiceSpinner.TextColor = Colors.Black
+	NiceSpinner.Gravity = Gravity.CENTER_HORIZONTAL
+	NiceSpinner.Typeface = Typeface.LoadFromAssets("iransans_light.ttf")
+	NiceSpinner.AddItems(Array As String("Select a food : ","Noddle","Soup","Steak","Pasta","Pizza"))
+	
+	
+	Event : 
+
+	Sub NiceSpinner_ItemClick (Position As Int, Value As Object)
+	ToastMessageShow(Position &amp;amp; "  _  " &amp;amp; Value,False)
+	End Sub
+	
+	.</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>ba</name>
+                <type>anywheresoftware.b4a.BA</type>
+            </parameter>
+            <parameter>
+                <name>EventName</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>arrowcolor</name>
+                <type>boolean</type>
+            </parameter>
+            <parameter>
+                <name>left</name>
+                <type>boolean</type>
+            </parameter>
+        </method>
+        <method>
+            <name>Clear</name>
+            <comment></comment>
+            <returntype>void</returntype>
+        </method>
+        <method>
+            <name>GetItem</name>
+            <comment>Returns the value at the given index.</comment>
+            <returntype>java.lang.String</returntype>
+            <parameter>
+                <name>Index</name>
+                <type>int</type>
+            </parameter>
+        </method>
+        <method>
+            <name>SetTextSizeAnimated</name>
+            <comment></comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>arg0</name>
+                <type>int</type>
+            </parameter>
+            <parameter>
+                <name>arg1</name>
+                <type>float</type>
+            </parameter>
+        </method>
+        <method>
+            <name>BringToFront</name>
+            <comment></comment>
+            <returntype>void</returntype>
+        </method>
+        <method>
+            <name>SetLayout</name>
+            <comment></comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>arg0</name>
+                <type Pixel="true">int</type>
+            </parameter>
+            <parameter>
+                <name>arg1</name>
+                <type Pixel="true">int</type>
+            </parameter>
+            <parameter>
+                <name>arg2</name>
+                <type Pixel="true">int</type>
+            </parameter>
+            <parameter>
+                <name>arg3</name>
+                <type Pixel="true">int</type>
+            </parameter>
+        </method>
+        <method>
+            <name>SetTextColorAnimated</name>
+            <comment></comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>arg0</name>
+                <type>int</type>
+            </parameter>
+            <parameter>
+                <name>arg1</name>
+                <type>int</type>
+            </parameter>
+        </method>
+        <method>
+            <name>SendToBack</name>
+            <comment></comment>
+            <returntype>void</returntype>
+        </method>
+        <method>
+            <name>ShowDropDown</name>
+            <comment></comment>
+            <returntype>void</returntype>
+        </method>
+        <method>
+            <name>SetVisibleAnimated</name>
+            <comment></comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>arg0</name>
+                <type>int</type>
+            </parameter>
+            <parameter>
+                <name>arg1</name>
+                <type>boolean</type>
+            </parameter>
+        </method>
+        <method>
+            <name>RemoveView</name>
+            <comment></comment>
+            <returntype>void</returntype>
+        </method>
+        <method>
+            <name>Invalidate3</name>
+            <comment></comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>arg0</name>
+                <type>int</type>
+            </parameter>
+            <parameter>
+                <name>arg1</name>
+                <type>int</type>
+            </parameter>
+            <parameter>
+                <name>arg2</name>
+                <type>int</type>
+            </parameter>
+            <parameter>
+                <name>arg3</name>
+                <type>int</type>
+            </parameter>
+        </method>
+        <method>
+            <name>DismissDropDown</name>
+            <comment></comment>
+            <returntype>void</returntype>
+        </method>
+        <method>
+            <name>Invalidate2</name>
+            <comment></comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>arg0</name>
+                <type>android.graphics.Rect</type>
+            </parameter>
+        </method>
+        <method>
+            <name>SetColorAnimated</name>
+            <comment></comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>arg0</name>
+                <type>int</type>
+            </parameter>
+            <parameter>
+                <name>arg1</name>
+                <type>int</type>
+            </parameter>
+            <parameter>
+                <name>arg2</name>
+                <type>int</type>
+            </parameter>
+        </method>
+        <method>
+            <name>SetBackgroundImage</name>
+            <comment></comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>arg0</name>
+                <type>android.graphics.Bitmap</type>
+            </parameter>
+        </method>
+        <method>
+            <name>Invalidate</name>
+            <comment></comment>
+            <returntype>void</returntype>
+        </method>
+        <method>
+            <name>Show</name>
+            <comment>Call this , after using Add method</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>Color</name>
+                <type>int</type>
+            </parameter>
+            <parameter>
+                <name>SpinnerTextSize</name>
+                <type>float</type>
+            </parameter>
+        </method>
+        <method>
+            <name>SetLayoutAnimated</name>
+            <comment></comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>arg0</name>
+                <type>int</type>
+            </parameter>
+            <parameter>
+                <name>arg1</name>
+                <type Pixel="true">int</type>
+            </parameter>
+            <parameter>
+                <name>arg2</name>
+                <type Pixel="true">int</type>
+            </parameter>
+            <parameter>
+                <name>arg3</name>
+                <type Pixel="true">int</type>
+            </parameter>
+            <parameter>
+                <name>arg4</name>
+                <type Pixel="true">int</type>
+            </parameter>
+        </method>
+        <method>
+            <name>RequestFocus</name>
+            <comment></comment>
+            <returntype>boolean</returntype>
+        </method>
+        <property>
+            <name>SelectedIndex</name>
+            <returntype>int</returntype>
+            <parameter>
+                <name>Index</name>
+                <type>int</type>
+            </parameter>
+            <comment>Gets or sets the index of selected items.</comment>
+        </property>
+        <property>
+            <name>Left</name>
+            <returntype>int</returntype>
+            <parameter>
+                <name>arg0</name>
+                <type Pixel="true">int</type>
+            </parameter>
+            <comment></comment>
+        </property>
+        <property>
+            <name>Background</name>
+            <returntype>android.graphics.drawable.Drawable</returntype>
+            <parameter>
+                <name>arg0</name>
+                <type>android.graphics.drawable.Drawable</type>
+            </parameter>
+            <comment></comment>
+        </property>
+        <property>
+            <name>Typeface</name>
+            <returntype>android.graphics.Typeface</returntype>
+            <parameter>
+                <name>Typeface</name>
+                <type>android.graphics.Typeface</type>
+            </parameter>
+            <comment></comment>
+        </property>
+        <property>
+            <name>Parent</name>
+            <returntype>java.lang.Object</returntype>
+            <comment></comment>
+        </property>
+        <property>
+            <name>Color</name>
+            <parameter>
+                <name>arg0</name>
+                <type>int</type>
+            </parameter>
+            <comment></comment>
+        </property>
+        <property>
+            <name>TextSize</name>
+            <returntype>float</returntype>
+            <parameter>
+                <name>size</name>
+                <type>float</type>
+            </parameter>
+            <comment></comment>
+        </property>
+        <property>
+            <name>Enabled</name>
+            <returntype>boolean</returntype>
+            <parameter>
+                <name>arg0</name>
+                <type>boolean</type>
+            </parameter>
+            <comment></comment>
+        </property>
+        <property>
+            <name>Text</name>
+            <returntype>java.lang.String</returntype>
+            <parameter>
+                <name>arg0</name>
+                <type>java.lang.Object</type>
+            </parameter>
+            <comment></comment>
+        </property>
+        <property>
+            <name>Top</name>
+            <returntype>int</returntype>
+            <parameter>
+                <name>arg0</name>
+                <type Pixel="true">int</type>
+            </parameter>
+            <comment></comment>
+        </property>
+        <property>
+            <name>Visible</name>
+            <returntype>boolean</returntype>
+            <parameter>
+                <name>arg0</name>
+                <type>boolean</type>
+            </parameter>
+            <comment></comment>
+        </property>
+        <property>
+            <name>Height</name>
+            <returntype>int</returntype>
+            <parameter>
+                <name>arg0</name>
+                <type Pixel="true">int</type>
+            </parameter>
+            <comment></comment>
+        </property>
+        <property>
+            <name>TextColor</name>
+            <returntype>int</returntype>
+            <parameter>
+                <name>arg0</name>
+                <type>int</type>
+            </parameter>
+            <comment></comment>
+        </property>
+        <property>
+            <name>Tag</name>
+            <returntype>java.lang.Object</returntype>
+            <parameter>
+                <name>arg0</name>
+                <type>java.lang.Object</type>
+            </parameter>
+            <comment></comment>
+        </property>
+        <property>
+            <name>SelectedItem</name>
+            <returntype>java.lang.String</returntype>
+            <comment>Returns the value of the selected index.</comment>
+        </property>
+        <property>
+            <name>Width</name>
+            <returntype>int</returntype>
+            <parameter>
+                <name>arg0</name>
+                <type Pixel="true">int</type>
+            </parameter>
+            <comment></comment>
+        </property>
+        <property>
+            <name>Gravity</name>
+            <returntype>int</returntype>
+            <parameter>
+                <name>Gravity</name>
+                <type>int</type>
+            </parameter>
+            <comment>Call This , before (Show) Method  or  before AddItems</comment>
+        </property>
+    </class>
+    <version>1.7</version>
+    <author>Sadeq_Nameni</author>
+    <dependsOn>android-support-v4</dependsOn>
+</root>

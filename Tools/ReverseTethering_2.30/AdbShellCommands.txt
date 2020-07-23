@@ -1,0 +1,14 @@
+process : ps
+files : ls
+package manager : pm list packages -f
+netstat
+printenv
+netcfg
+cd
+
+start an activity (see on the device) :
+
+link : am start 'http://www.wikipedia.org'
+facebook : am start -a android.intent.action.VIEW -d facebook://facebook.com/inbox
+start tracetool service : am broadcast -a TTServiceStart
+start tracetool intent : am start -a android.intent.action.MAIN -n service.tracetool/service.tracetool.MainServiceActivity

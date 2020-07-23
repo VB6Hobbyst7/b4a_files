@@ -1,0 +1,63 @@
+﻿Build1=Default,b4a.example.asds
+File1=f1.bal
+File2=logo.svg
+File3=logotype.svg
+File4=ritchie.svg
+FileGroup1=Default Group
+FileGroup2=Default Group
+FileGroup3=Default Group
+FileGroup4=Default Group
+Group=Default Group
+IconFile=
+Library1=core
+Library2=svg
+ManifestCode='This code will be applied to the manifest file during compilation.~\n~'You do not need to modify it in most cases.~\n~'See this link for for more information: https://www.b4x.com/forum/showthread.php?p=78136~\n~AddManifestText(~\n~<uses-sdk android:targetSdkVersion="19"/>~\n~<supports-screens android:largeScreens="true" ~\n~    android:normalScreens="true" ~\n~    android:smallScreens="true" ~\n~    android:anyDensity="true"/>)~\n~SetApplicationAttribute(android:icon, "@drawable/icon")~\n~SetApplicationAttribute(android:label, "$LABEL$")
+Module1=SVGViewer
+Module2=Starter
+NumberOfFiles=4
+NumberOfLibraries=2
+NumberOfModules=2
+Version=7.8
+@EndOfDesignText@
+#Region  Project Attributes 
+	#ApplicationLabel: B4A Example
+	#VersionCode: 1
+	#BridgeLogger: True
+	#VersionName: 
+	#SupportedOrientations: unspecified
+	#CanInstallToExternalStorage: False
+	#DebuggerForceStandardAssets: true
+ 	#LibraryAuthor: www.iranapp.org
+	#LibraryName: SVGViewer
+	#LibraryVersion: 1.0
+#End Region
+
+#Region  Activity Attributes 
+	#FullScreen: False
+	#IncludeTitle: True
+#End Region
+
+Sub Process_Globals
+
+End Sub
+
+Sub Globals
+ 
+End Sub
+
+Sub Activity_Create(FirstTime As Boolean)
+Activity.LoadLayout("f1")
+End Sub
+
+Sub Activity_Click
+
+End Sub
+
+Sub Activity_Resume
+
+End Sub
+
+Sub Activity_Pause (UserClosed As Boolean)
+
+End Sub
+ 

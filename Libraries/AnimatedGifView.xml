@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root>
+    <doclet-version-NOT-library-version>1.04</doclet-version-NOT-library-version>
+    <class>
+        <name>com.datasteam.b4a.controls.AnimatedGifViewWrapper</name>
+        <shortname>AnimatedGifView</shortname>
+        <owner>process</owner>
+        <event>Load (Frames as Int)</event>
+        <event>Frame (Frame as Int, Total as Int)</event>
+        <event>Pause</event>
+        <event>Stop</event>
+        <event>Play</event>
+        <method>
+            <name>DesignerCreateView</name>
+            <comment></comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>base</name>
+                <type>anywheresoftware.b4a.objects.PanelWrapper</type>
+            </parameter>
+            <parameter>
+                <name>lw</name>
+                <type>anywheresoftware.b4a.objects.LabelWrapper</type>
+            </parameter>
+            <parameter>
+                <name>props</name>
+                <type>anywheresoftware.b4a.objects.collections.Map</type>
+            </parameter>
+        </method>
+        <method>
+            <name RaisesSynchronousEvents="true">Load</name>
+            <comment></comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>PathName</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>FileName</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>Paused</name>
+                <type>boolean</type>
+            </parameter>
+        </method>
+        <property>
+            <name RaisesSynchronousEvents="true">Stopped</name>
+            <returntype>boolean</returntype>
+            <parameter>
+                <name>value</name>
+                <type>boolean</type>
+            </parameter>
+            <comment></comment>
+        </property>
+        <property>
+            <name>Visible</name>
+            <returntype>boolean</returntype>
+            <parameter>
+                <name>value</name>
+                <type>boolean</type>
+            </parameter>
+            <comment></comment>
+        </property>
+        <property>
+            <name RaisesSynchronousEvents="true">Paused</name>
+            <returntype>boolean</returntype>
+            <parameter>
+                <name>value</name>
+                <type>boolean</type>
+            </parameter>
+            <comment></comment>
+        </property>
+        <property>
+            <name>EventsDisabled</name>
+            <returntype>boolean</returntype>
+            <parameter>
+                <name>value</name>
+                <type>boolean</type>
+            </parameter>
+            <comment></comment>
+        </property>
+        <property>
+            <name RaisesSynchronousEvents="true">Frame</name>
+            <returntype>int</returntype>
+            <parameter>
+                <name>frame</name>
+                <type>int</type>
+            </parameter>
+            <comment></comment>
+        </property>
+        <property>
+            <name>Frames</name>
+            <returntype>int</returntype>
+            <comment></comment>
+        </property>
+    </class>
+    <version>1.2</version>
+    <author>Periklis Koutsogiannis (datasteam.com)</author>
+</root>

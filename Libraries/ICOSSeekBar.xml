@@ -1,0 +1,199 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root>
+    <doclet-version-NOT-library-version>1.01</doclet-version-NOT-library-version>
+    <class>
+        <name>giuseppe.salvi.icos.library.ICOSSeekBar</name>
+        <shortname>ICOSSeekBar</shortname>
+        <objectwrapper>android.view.View</objectwrapper>
+        <owner>activity</owner>
+        <event>ValueChanged(Value As Int , FromUser As Boolean)</event>
+        <event>VolumeChanged(Volume As Int , FromUser As Boolean)</event>
+        <method>
+            <name>InitializeVolumeBar</name>
+            <comment>You have to use this with MediaPlayer or ICOSMusicPlayer
+ 
+ Example:
+ Dim ics As ICOSSeekBar
+ 
+ Sub Activity_Create(FirstTime As Boolean)
+ ics.InitializeVolumeBar("ics")
+ ics.ProgressBitmap=LoadBitmap(File.DirAssets,"somefile.png")
+ ics.CursorBitmap=LoadBitmap(File.DirAssets,"somefile.png")
+ Activity.AddView(ics,115,500,350,35)
+ End Sub</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>ba</name>
+                <type>anywheresoftware.b4a.BA</type>
+            </parameter>
+            <parameter>
+                <name>EventName</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+        <method>
+            <name>BringToFront</name>
+            <comment>Send this view to front</comment>
+            <returntype>void</returntype>
+        </method>
+        <method>
+            <name>InitializeProgressBar</name>
+            <comment>Example:
+ Dim ics As ICOSSeekBar
+ 
+ Sub Activity_Create(FirstTime As Boolean)
+ ics.InitializeProgressBar("ics")
+ Activity.AddView(ics,115,500,350,35)
+ End Sub</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>ba</name>
+                <type>anywheresoftware.b4a.BA</type>
+            </parameter>
+            <parameter>
+                <name>EventName</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+        <method>
+            <name>RemoveView</name>
+            <comment>Remove this View</comment>
+            <returntype>void</returntype>
+        </method>
+        <method>
+            <name>InitializeSeekBar</name>
+            <comment>Example:
+ Dim ics As ICOSSeekBar
+ 
+ Sub Activity_Create(FirstTime As Boolean)
+ ics.InitializeSeekBar("ics")
+ ics.ProgressBitmap=LoadBitmap(File.DirAssets,"somefile.png")
+ ics.CursorBitmap=LoadBitmap(File.DirAssets,"somefile.png")
+ Activity.AddView(ics,115,500,350,35)
+ End Sub</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>ba</name>
+                <type>anywheresoftware.b4a.BA</type>
+            </parameter>
+            <parameter>
+                <name>EventName</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+        <method>
+            <name>SendToBack</name>
+            <comment>Send this view to back</comment>
+            <returntype>void</returntype>
+        </method>
+        <method>
+            <name>IsInitialized</name>
+            <comment></comment>
+            <returntype>boolean</returntype>
+        </method>
+        <property>
+            <name>ProgressBarMax</name>
+            <parameter>
+                <name>value</name>
+                <type>int</type>
+            </parameter>
+            <comment>This is part of InitializeProgressBar ( You'll find it in ICOSSeekBar )
+ 
+ Set the Max value of ProgressBarMax</comment>
+        </property>
+        <property>
+            <name>Enabled</name>
+            <returntype>boolean</returntype>
+            <comment></comment>
+        </property>
+        <property>
+            <name>Value</name>
+            <returntype>int</returntype>
+            <parameter>
+                <name>value</name>
+                <type>int</type>
+            </parameter>
+            <comment>This is part of InitializeSeekBar or InitializeVolumeBar ( You'll find it in ICOSSeekBar )
+ 
+ return progress Value</comment>
+        </property>
+        <property>
+            <name>Visible</name>
+            <returntype>boolean</returntype>
+            <parameter>
+                <name>Visible</name>
+                <type>boolean</type>
+            </parameter>
+            <comment></comment>
+        </property>
+        <property>
+            <name>CursorBitmap</name>
+            <parameter>
+                <name>bmp</name>
+                <type>android.graphics.Bitmap</type>
+            </parameter>
+            <comment>This is part of InitializeSeekBar or InitializeVolumeBar ( You'll find it in ICOSSeekBar )
+ 
+ Example:
+ 
+ ics.CursorBitmap=LoadBitmap(File.DirAssets,"somefile.png")</comment>
+        </property>
+        <property>
+            <name>ProgressBitmap</name>
+            <parameter>
+                <name>bmp</name>
+                <type>android.graphics.Bitmap</type>
+            </parameter>
+            <comment>This is part of InitializeSeekBar or InitializeVolumeBar ( You'll find it in ICOSSeekBar )
+ 
+ Example:
+ 
+ ics.ProgressBitmap=LoadBitmap(File.DirAssets,"somefile.png")</comment>
+        </property>
+        <property>
+            <name>StreamVolume</name>
+            <returntype>int</returntype>
+            <parameter>
+                <name>Value</name>
+                <type>int</type>
+            </parameter>
+            <comment>return the value of Volume ( the value is between 0 to 15)</comment>
+        </property>
+        <property>
+            <name>Enable</name>
+            <parameter>
+                <name>Enable</name>
+                <type>boolean</type>
+            </parameter>
+            <comment></comment>
+        </property>
+        <property>
+            <name>Max</name>
+            <returntype>int</returntype>
+            <parameter>
+                <name>value</name>
+                <type>int</type>
+            </parameter>
+            <comment>This is part of InitializeSeekBar or InitializeVolumeBar ( You'll find it in ICOSSeekBar )
+ 
+ return Max Value</comment>
+        </property>
+        <property>
+            <name>ProgressBarValue</name>
+            <parameter>
+                <name>value</name>
+                <type>int</type>
+            </parameter>
+            <comment>This is part of InitializeProgressBar ( You'll find it in ICOSSeekBar)
+ 
+ Set the value of ProgressBarValue</comment>
+        </property>
+        <property>
+            <name>Version</name>
+            <returntype>double</returntype>
+            <comment>Return the version of this library</comment>
+        </property>
+    </class>
+    <version>1.4</version>
+    <author>Giuseppe Salvi</author>
+</root>

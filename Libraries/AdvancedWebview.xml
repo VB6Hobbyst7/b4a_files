@@ -1,0 +1,569 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root>
+    <doclet-version-NOT-library-version>1.05</doclet-version-NOT-library-version>
+    <class>
+        <name>de.donmanfred.AdvancedWebViewWrapper</name>
+        <shortname>AdvancedWebView</shortname>
+        <objectwrapper>im.delight.android.webview.AdvancedWebView</objectwrapper>
+        <owner>process</owner>
+        <event>onPageError(errorCode As Int, description As String, failingUrl As String)</event>
+        <event>onPageStarted(url As String, favIcon As Object)</event>
+        <event>onDownloadRequested(url As String, suggestedFilename As String, mimeType As String, contentLength As long, contentDisposition As String, userAgent As String)</event>
+        <event>onPageFinished(url As String)</event>
+        <event>onExternalPageRequest(url As String)</event>
+        <permission>android.permission.INTERNET</permission>
+        <permission>android.permission.ACCESS_NETWORK_STATE</permission>
+        <permission>android.permission.WRITE_EXTERNAL_STORAGE</permission>
+        <method>
+            <name>DesignerCreateView</name>
+            <comment></comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>base</name>
+                <type>anywheresoftware.b4a.objects.PanelWrapper</type>
+            </parameter>
+            <parameter>
+                <name>lw</name>
+                <type>anywheresoftware.b4a.objects.LabelWrapper</type>
+            </parameter>
+            <parameter>
+                <name>props</name>
+                <type>anywheresoftware.b4a.objects.collections.Map</type>
+            </parameter>
+        </method>
+        <method>
+            <name>clearPermittedHostnames</name>
+            <comment></comment>
+            <returntype>void</returntype>
+        </method>
+        <method>
+            <name>onPause</name>
+            <comment></comment>
+            <returntype>void</returntype>
+        </method>
+        <method>
+            <name>handleDownload</name>
+            <comment>Handles a download by loading the file from `fromUrl` and saving it to `toFilename` on the external storage
+
+ This requires the two permissions `android.permission.INTERNET` and `android.permission.WRITE_EXTERNAL_STORAGE`
+
+ Only supported on API level 9 (Android 2.3) and above
+context: a valid `Context` reference
+fromUrl: the URL of the file to download, e.g. the one from `AdvancedWebView.onDownloadRequested(...)`
+toFilename: the name of the destination file where the download should be saved, e.g. `myImage.jpg`
+Return type: @return:whether the download has been successfully handled or not</comment>
+            <returntype>boolean</returntype>
+            <parameter>
+                <name>fromUrl</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>toFilename</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+        <method>
+            <name>IsInitialized</name>
+            <comment></comment>
+            <returntype>boolean</returntype>
+        </method>
+        <method>
+            <name>Initialize</name>
+            <comment></comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>ba</name>
+                <type>anywheresoftware.b4a.BA</type>
+            </parameter>
+            <parameter>
+                <name>EventName</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+        <method>
+            <name>loadHtml</name>
+            <comment>Loads and displays the provided HTML source text
+html: the HTML source text to load</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>html</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+        <method>
+            <name>addHttpHeader</name>
+            <comment>Adds an additional HTTP header that will be sent along with every HTTP `GET` request
+
+ This does only affect the main requests, not the requests to included resources (e.g. images)
+
+ If you later want to delete an HTTP header that was previously added this way, call `removeHttpHeader()`
+
+ The `WebView` implementation may in some cases overwrite headers that you set or unset
+name: the name of the HTTP header to add
+value: the value of the HTTP header to send</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>name</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>value</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+        <method>
+            <name>BringToFront</name>
+            <comment></comment>
+            <returntype>void</returntype>
+        </method>
+        <method>
+            <name>SetLayout</name>
+            <comment></comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>arg0</name>
+                <type Pixel="true">int</type>
+            </parameter>
+            <parameter>
+                <name>arg1</name>
+                <type Pixel="true">int</type>
+            </parameter>
+            <parameter>
+                <name>arg2</name>
+                <type Pixel="true">int</type>
+            </parameter>
+            <parameter>
+                <name>arg3</name>
+                <type Pixel="true">int</type>
+            </parameter>
+        </method>
+        <method>
+            <name>removePermittedHostname</name>
+            <comment></comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>hostname</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+        <method>
+            <name>SendToBack</name>
+            <comment></comment>
+            <returntype>void</returntype>
+        </method>
+        <method>
+            <name>addPermittedHostnames</name>
+            <comment></comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>collection</name>
+                <type>java.util.Collection</type>
+            </parameter>
+        </method>
+        <method>
+            <name>onBackPressed</name>
+            <comment></comment>
+            <returntype>boolean</returntype>
+        </method>
+        <method>
+            <name>SetVisibleAnimated</name>
+            <comment></comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>arg0</name>
+                <type>int</type>
+            </parameter>
+            <parameter>
+                <name>arg1</name>
+                <type>boolean</type>
+            </parameter>
+        </method>
+        <method>
+            <name>onDestroy</name>
+            <comment></comment>
+            <returntype>void</returntype>
+        </method>
+        <method>
+            <name>RemoveView</name>
+            <comment></comment>
+            <returntype>void</returntype>
+        </method>
+        <method>
+            <name>Invalidate3</name>
+            <comment></comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>arg0</name>
+                <type>int</type>
+            </parameter>
+            <parameter>
+                <name>arg1</name>
+                <type>int</type>
+            </parameter>
+            <parameter>
+                <name>arg2</name>
+                <type>int</type>
+            </parameter>
+            <parameter>
+                <name>arg3</name>
+                <type>int</type>
+            </parameter>
+        </method>
+        <method>
+            <name>Invalidate2</name>
+            <comment></comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>arg0</name>
+                <type>android.graphics.Rect</type>
+            </parameter>
+        </method>
+        <method>
+            <name>SetColorAnimated</name>
+            <comment></comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>arg0</name>
+                <type>int</type>
+            </parameter>
+            <parameter>
+                <name>arg1</name>
+                <type>int</type>
+            </parameter>
+            <parameter>
+                <name>arg2</name>
+                <type>int</type>
+            </parameter>
+        </method>
+        <method>
+            <name>loadUrl2</name>
+            <comment></comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>url</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>preventCaching</name>
+                <type>boolean</type>
+            </parameter>
+        </method>
+        <method>
+            <name>loadHtml4</name>
+            <comment>Loads and displays the provided HTML source text
+html: the HTML source text to load
+baseUrl: the URL to use as the page's base URL
+historyUrl: the URL to use for the page's history entry
+encoding: the encoding or charset of the HTML source text</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>html</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>baseUrl</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>historyUrl</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>encoding</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+        <method>
+            <name>isFileUploadAvailable</name>
+            <comment>Returns whether file uploads can be used on the current device (generally all platform versions except for 4.4)
+Return type: @return:whether file uploads can be used</comment>
+            <returntype>boolean</returntype>
+        </method>
+        <method>
+            <name>SetBackgroundImage</name>
+            <comment></comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>arg0</name>
+                <type>android.graphics.Bitmap</type>
+            </parameter>
+        </method>
+        <method>
+            <name>loadHtml3</name>
+            <comment>Loads and displays the provided HTML source text
+html: the HTML source text to load
+baseUrl: the URL to use as the page's base URL
+historyUrl: the URL to use for the page's history entry</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>html</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>baseUrl</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>historyUrl</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+        <method>
+            <name>loadHtml2</name>
+            <comment>Loads and displays the provided HTML source text
+html: the HTML source text to load
+baseUrl: the URL to use as the page's base URL</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>html</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>baseUrl</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+        <method>
+            <name>onResume</name>
+            <comment></comment>
+            <returntype>void</returntype>
+        </method>
+        <method>
+            <name>loadUrl</name>
+            <comment></comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>url</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+        <method>
+            <name>Invalidate</name>
+            <comment></comment>
+            <returntype>void</returntype>
+        </method>
+        <method>
+            <name>addPermittedHostname</name>
+            <comment></comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>hostname</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+        <method>
+            <name>removeHttpHeader</name>
+            <comment>Removes one of the HTTP headers that have previously been added via `addHttpHeader()`
+
+ If you want to unset a pre-defined header, set it to an empty string with `addHttpHeader()` instead
+
+ The `WebView` implementation may in some cases overwrite headers that you set or unset
+name: the name of the HTTP header to remove</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>name</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+        <method>
+            <name>SetLayoutAnimated</name>
+            <comment></comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>arg0</name>
+                <type>int</type>
+            </parameter>
+            <parameter>
+                <name>arg1</name>
+                <type Pixel="true">int</type>
+            </parameter>
+            <parameter>
+                <name>arg2</name>
+                <type Pixel="true">int</type>
+            </parameter>
+            <parameter>
+                <name>arg3</name>
+                <type Pixel="true">int</type>
+            </parameter>
+            <parameter>
+                <name>arg4</name>
+                <type Pixel="true">int</type>
+            </parameter>
+        </method>
+        <method>
+            <name>RequestFocus</name>
+            <comment></comment>
+            <returntype>boolean</returntype>
+        </method>
+        <property>
+            <name>Left</name>
+            <returntype>int</returntype>
+            <parameter>
+                <name>arg0</name>
+                <type Pixel="true">int</type>
+            </parameter>
+            <comment></comment>
+        </property>
+        <property>
+            <name>Background</name>
+            <returntype>android.graphics.drawable.Drawable</returntype>
+            <parameter>
+                <name>arg0</name>
+                <type>android.graphics.drawable.Drawable</type>
+            </parameter>
+            <comment></comment>
+        </property>
+        <property>
+            <name>Parent</name>
+            <returntype>java.lang.Object</returntype>
+            <comment></comment>
+        </property>
+        <property>
+            <name>ThirdPartyCookiesEnabled</name>
+            <parameter>
+                <name>enabled</name>
+                <type>boolean</type>
+            </parameter>
+            <comment></comment>
+        </property>
+        <property>
+            <name>Color</name>
+            <parameter>
+                <name>arg0</name>
+                <type>int</type>
+            </parameter>
+            <comment></comment>
+        </property>
+        <property>
+            <name>Enabled</name>
+            <returntype>boolean</returntype>
+            <parameter>
+                <name>arg0</name>
+                <type>boolean</type>
+            </parameter>
+            <comment></comment>
+        </property>
+        <property>
+            <name>PermittedHostnames</name>
+            <returntype>java.util.List</returntype>
+            <comment></comment>
+        </property>
+        <property>
+            <name>MixedContentAllowed</name>
+            <parameter>
+                <name>allowed</name>
+                <type>boolean</type>
+            </parameter>
+            <comment></comment>
+        </property>
+        <property>
+            <name>Top</name>
+            <returntype>int</returntype>
+            <parameter>
+                <name>arg0</name>
+                <type Pixel="true">int</type>
+            </parameter>
+            <comment></comment>
+        </property>
+        <property>
+            <name>CookiesEnabled</name>
+            <parameter>
+                <name>enabled</name>
+                <type>boolean</type>
+            </parameter>
+            <comment></comment>
+        </property>
+        <property>
+            <name>UploadableFileTypes</name>
+            <parameter>
+                <name>mimeType</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <comment></comment>
+        </property>
+        <property>
+            <name>WebChromeClient</name>
+            <parameter>
+                <name>client</name>
+                <type>android.webkit.WebChromeClient</type>
+            </parameter>
+            <comment></comment>
+        </property>
+        <property>
+            <name>Visible</name>
+            <returntype>boolean</returntype>
+            <parameter>
+                <name>arg0</name>
+                <type>boolean</type>
+            </parameter>
+            <comment></comment>
+        </property>
+        <property>
+            <name>Padding</name>
+            <returntype>int[]</returntype>
+            <parameter>
+                <name>arg0</name>
+                <type>int[]</type>
+            </parameter>
+            <comment></comment>
+        </property>
+        <property>
+            <name>Height</name>
+            <returntype>int</returntype>
+            <parameter>
+                <name>arg0</name>
+                <type Pixel="true">int</type>
+            </parameter>
+            <comment></comment>
+        </property>
+        <property>
+            <name>Tag</name>
+            <returntype>java.lang.Object</returntype>
+            <parameter>
+                <name>arg0</name>
+                <type>java.lang.Object</type>
+            </parameter>
+            <comment></comment>
+        </property>
+        <property>
+            <name>Width</name>
+            <returntype>int</returntype>
+            <parameter>
+                <name>arg0</name>
+                <type Pixel="true">int</type>
+            </parameter>
+            <comment></comment>
+        </property>
+        <property>
+            <name>GeolocationEnabled</name>
+            <parameter>
+                <name>enabled</name>
+                <type>boolean</type>
+            </parameter>
+            <comment></comment>
+        </property>
+        <property>
+            <name>WebViewClient</name>
+            <parameter>
+                <name>client</name>
+                <type>android.webkit.WebViewClient</type>
+            </parameter>
+            <comment></comment>
+        </property>
+        <property>
+            <name>DesktopMode</name>
+            <parameter>
+                <name>enabled</name>
+                <type>boolean</type>
+            </parameter>
+            <comment></comment>
+        </property>
+        <field>
+            <name>ba</name>
+            <comment></comment>
+            <returntype>anywheresoftware.b4a.BA</returntype>
+        </field>
+    </class>
+    <version>1.0</version>
+    <author>DonManfred (wrapper)</author>
+</root>

@@ -1,0 +1,71 @@
+<HTML>
+<HEAD>
+<META http-equiv="Content-Type" content="text/html; charset=utf-8">
+<TITLE>
+Basic4android - Serial
+</TITLE>
+<link rel="stylesheet" type="text/css" href="images/help.css" />
+
+</HEAD>
+
+<BODY BGCOLOR="white" leftmargin="50">
+<a name="top"/>
+<h1>Serial</h1>
+
+</h5>
+<h4>List of types:</h4>
+<a href='#serial'>Serial</a><br/>
+<hr/>
+<h3><u><a name='serial'>Serial</a></u></h3>
+</h5>The Serial library allows you to connect with other Bluetooth devices using RFCOMM, also named virtual serial port.<br/><b>This library requires Android 2.0 (API level 5) or above</b>.<br/>The Serial object should be declared as a process global object.<br/>After initializing the object you can connect to other devices by calling Connect with the target device MAC address.<br/>This can be done by first getting the paired devices map. This map contains the friendly name and address of each paired device.<br/>To allow other devices to connect to your device you should call Listen. When a connection is established the Connected event will be raised.<br/>There is no problem with both listening to connections and trying to connect to a different device (this allows you to use the same application on two devices without defining a server and client).<br/>A Serial object can handle a single connection. If a new connection is established, it will replace the previous one.<br/>See this <a href='http://www.basic4ppc.com/forum/basic4android-getting-started-tutorials/6908-android-serial-tutorial.html'>tutorial</a> for more information.
+<br/>
+<h4>Permissions:</h4>android.permission.BLUETOOTH<br/>
+<h4>Events:</h4>
+Connected (Success As Boolean)<br/>
+<h4>Members:</h4><br/>
+<img src='images/19.png'/>&nbsp;&nbsp;<span style="color: #000000;"><a href='#serial_address'><b>Address</b></a> </span><span style="color: #0000FF;">As</span><span style="color: #000000;"> </span><span style="color: #008B8B;">String</span><span style="color: #000000;">  [read only]</span><br/><br/>
+<img src='images/15.png'/>&nbsp;&nbsp;<span style="color: #000000;"><a href='#serial_connect'><b>Connect</b></a> (MacAddress </span><span style="color: #0000FF;">As</span><span style="color: #000000;"> </span><span style="color: #008B8B;">String</span><span style="color: #000000;">)</span><br/><br/>
+<img src='images/15.png'/>&nbsp;&nbsp;<span style="color: #000000;"><a href='#serial_connect2'><b>Connect2</b></a> (MacAddress </span><span style="color: #0000FF;">As</span><span style="color: #000000;"> </span><span style="color: #008B8B;">String</span><span style="color: #000000;">, UUID </span><span style="color: #0000FF;">As</span><span style="color: #000000;"> </span><span style="color: #008B8B;">String</span><span style="color: #000000;">)</span><br/><br/>
+<img src='images/15.png'/>&nbsp;&nbsp;<span style="color: #000000;"><a href='#serial_disconnect'><b>Disconnect</b></a></span><br/><br/>
+<img src='images/15.png'/>&nbsp;&nbsp;<span style="color: #000000;"><a href='#serial_getpaireddevices'><b>GetPairedDevices</b></a> </span><span style="color: #0000FF;">As</span><span style="color: #000000;"> </span><span style="color: #008B8B;">Map</span><br/><br/>
+<img src='images/15.png'/>&nbsp;&nbsp;<span style="color: #000000;"><a href='#serial_initialize'><b>Initialize</b></a> (EventName </span><span style="color: #0000FF;">As</span><span style="color: #000000;"> </span><span style="color: #008B8B;">String</span><span style="color: #000000;">)</span><br/><br/>
+<img src='images/19.png'/>&nbsp;&nbsp;<span style="color: #008B8B;"><a href='#serial_inputstream'><b>InputStream</b></a></span><span style="color: #000000;"> </span><span style="color: #0000FF;">As</span><span style="color: #000000;"> java.io.InputStream  [read only]</span><br/><br/>
+<img src='images/15.png'/>&nbsp;&nbsp;<span style="color: #000000;"><a href='#serial_isenabled'><b>IsEnabled</b></a> </span><span style="color: #0000FF;">As</span><span style="color: #000000;"> </span><span style="color: #008B8B;">Boolean</span><br/><br/>
+<img src='images/15.png'/>&nbsp;&nbsp;<span style="color: #000000;"><a href='#serial_listen'><b>Listen</b></a></span><br/><br/>
+<img src='images/15.png'/>&nbsp;&nbsp;<span style="color: #000000;"><a href='#serial_listen2'><b>Listen2</b></a> (Name </span><span style="color: #0000FF;">As</span><span style="color: #000000;"> </span><span style="color: #008B8B;">String</span><span style="color: #000000;">, UUID </span><span style="color: #0000FF;">As</span><span style="color: #000000;"> </span><span style="color: #008B8B;">String</span><span style="color: #000000;">)</span><br/><br/>
+<img src='images/19.png'/>&nbsp;&nbsp;<span style="color: #000000;"><a href='#serial_name'><b>Name</b></a> </span><span style="color: #0000FF;">As</span><span style="color: #000000;"> </span><span style="color: #008B8B;">String</span><span style="color: #000000;">  [read only]</span><br/><br/>
+<img src='images/19.png'/>&nbsp;&nbsp;<span style="color: #008B8B;"><a href='#serial_outputstream'><b>OutputStream</b></a></span><span style="color: #000000;"> </span><span style="color: #0000FF;">As</span><span style="color: #000000;"> java.io.OutputStream  [read only]</span><br/><br/>
+<img src='images/15.png'/>&nbsp;&nbsp;<span style="color: #000000;"><a href='#serial_stoplistening'><b>StopListening</b></a></span><br/><br/>
+
+<h4>Members description:</h4>
+<a name='serial_address'/>
+<h5><img src='images/19.png'/>
+<span style="color: #000000;">Address </span><span style="color: #0000FF;">As</span><span style="color: #000000;"> </span><span style="color: #008B8B;">String</span><span style="color: #000000;">  [read only]</span></h5>Returns the current device MAC address.<a name='serial_connect'/>
+<h5><img src='images/15.png'/>
+<span style="color: #000000;">Connect (MacAddress </span><span style="color: #0000FF;">As</span><span style="color: #000000;"> </span><span style="color: #008B8B;">String</span><span style="color: #000000;">)</span></h5>Tries to connect to a device with the given address. The connection is done in the background.<br/>The Connected event will be raised when the connection is ready (or fails).<br/>The UUID used for the connection is the default UUID: 00001101-0000-1000-8000-00805F9B34FB.<a name='serial_connect2'/>
+<h5><img src='images/15.png'/>
+<span style="color: #000000;">Connect2 (MacAddress </span><span style="color: #0000FF;">As</span><span style="color: #000000;"> </span><span style="color: #008B8B;">String</span><span style="color: #000000;">, UUID </span><span style="color: #0000FF;">As</span><span style="color: #000000;"> </span><span style="color: #008B8B;">String</span><span style="color: #000000;">)</span></h5>Tries to connect to a device with the given address and UUID. The connection is done in the background.<br/>The Connected event will be raised when the connection is ready (or fails).<a name='serial_disconnect'/>
+<h5><img src='images/15.png'/>
+<span style="color: #000000;">Disconnect</span></h5>Disconnects the connection (if such exists) and stops listening for new connections.<a name='serial_getpaireddevices'/>
+<h5><img src='images/15.png'/>
+<span style="color: #000000;">GetPairedDevices </span><span style="color: #0000FF;">As</span><span style="color: #000000;"> </span><span style="color: #008B8B;">Map</span></h5>Returns a map with the paired devices friendly names as keys and addresses as values.<br/>The following code shows a list of available devices and allows the user to connect to one:<span class='pre'><span style="color: #000000;"><br/></span><span style="color: #0000FF;">Dim</span><span style="color: #000000;"> PairedDevices </span><span style="color: #0000FF;">As</span><span style="color: #000000;"> </span><span style="color: #008B8B;">Map</span><span style="color: #000000;"><br/>PairedDevices = Serial1.GetPairedDevices<br/></span><span style="color: #0000FF;">Dim</span><span style="color: #000000;"> l </span><span style="color: #0000FF;">As</span><span style="color: #000000;"> </span><span style="color: #008B8B;">List</span><span style="color: #000000;"><br/>l.Initialize<br/></span><span style="color: #0000FF;">For</span><span style="color: #000000;"> i = </span><span style="color: #800080;">0</span><span style="color: #000000;"> </span><span style="color: #0000FF;">To</span><span style="color: #000000;"> PairedDevices.Size - </span><span style="color: #800080;">1</span><span style="color: #000000;"><br/>&nbsp;&nbsp;&nbsp;&nbsp;l.Add(PairedDevices.GetKeyAt(i))<br/></span><span style="color: #0000FF;">Next</span><span style="color: #000000;"><br/></span><span style="color: #0000FF;">Dim</span><span style="color: #000000;"> res </span><span style="color: #0000FF;">As</span><span style="color: #000000;"> </span><span style="color: #008B8B;">Int</span><span style="color: #000000;"><br/>res = InputList(l, </span><span style="color: #800000;">"</span><span style="color: #800000;">Choose device</span><span style="color: #800000;">"</span><span style="color: #000000;">, -</span><span style="color: #800080;">1</span><span style="color: #000000;">) </span><span style="color: #008000;">'</span><span style="color: #008000;">show list with paired devices</span><span style="color: #008000;"><br/></span><span style="color: #0000FF;">If</span><span style="color: #000000;"> res &lt;&gt; DialogResponse.CANCEL </span><span style="color: #0000FF;">Then</span><span style="color: #000000;"><br/>&nbsp;&nbsp;&nbsp;&nbsp;Serial1.Connect(PairedDevices.Get(l.Get(res))) </span><span style="color: #008000;">'</span><span style="color: #008000;">convert the name to mac address and connect</span><span style="color: #008000;"><br/></span><span style="color: #0000FF;">End</span><span style="color: #000000;"> </span><span style="color: #0000FF;">If</span></span><a name='serial_initialize'/>
+<h5><img src='images/15.png'/>
+<span style="color: #000000;">Initialize (EventName </span><span style="color: #0000FF;">As</span><span style="color: #000000;"> </span><span style="color: #008B8B;">String</span><span style="color: #000000;">)</span></h5>Initialized the object. You may want to call IsEnabled before trying to work with the object.<a name='serial_inputstream'/>
+<h5><img src='images/19.png'/>
+<span style="color: #008B8B;">InputStream</span><span style="color: #000000;"> </span><span style="color: #0000FF;">As</span><span style="color: #000000;"> java.io.InputStream  [read only]</span></h5>Returns the InputStream that is used to read data from the other device.<br/>Should be called after a connection is established.<a name='serial_isenabled'/>
+<h5><img src='images/15.png'/>
+<span style="color: #000000;">IsEnabled </span><span style="color: #0000FF;">As</span><span style="color: #000000;"> </span><span style="color: #008B8B;">Boolean</span></h5>Tests whether the Bluetooth is enabled.<a name='serial_listen'/>
+<h5><img src='images/15.png'/>
+<span style="color: #000000;">Listen</span></h5>Starts listening for incoming connections using the default UUID.<br/>The Connected event will be raised when the connection is established.<br/>Nothing happens if the device already listens for connections.<a name='serial_listen2'/>
+<h5><img src='images/15.png'/>
+<span style="color: #000000;">Listen2 (Name </span><span style="color: #0000FF;">As</span><span style="color: #000000;"> </span><span style="color: #008B8B;">String</span><span style="color: #000000;">, UUID </span><span style="color: #0000FF;">As</span><span style="color: #000000;"> </span><span style="color: #008B8B;">String</span><span style="color: #000000;">)</span></h5>Starts listening for incoming connections.<br/>The Connected event will be raised when the connection is established.<br/>Nothing happens if the device already listens for connections.<br/>Name - An arbitrary string that will be used for internal registration.<br/>UUID - The UUID defined for this record.<a name='serial_name'/>
+<h5><img src='images/19.png'/>
+<span style="color: #000000;">Name </span><span style="color: #0000FF;">As</span><span style="color: #000000;"> </span><span style="color: #008B8B;">String</span><span style="color: #000000;">  [read only]</span></h5>Returns the current device friendly name.<a name='serial_outputstream'/>
+<h5><img src='images/19.png'/>
+<span style="color: #008B8B;">OutputStream</span><span style="color: #000000;"> </span><span style="color: #0000FF;">As</span><span style="color: #000000;"> java.io.OutputStream  [read only]</span></h5>Returns the OutputStream that is used to write data to the other device.<br/>Should be called after a connection is established.<a name='serial_stoplistening'/>
+<h5><img src='images/15.png'/>
+<span style="color: #000000;">StopListening</span></h5>Stops listening for incoming connections.<br/>This will not disconnect any active connection.
+<hr/>
+<a href="#top">Top</a>
+</body>
+</html>

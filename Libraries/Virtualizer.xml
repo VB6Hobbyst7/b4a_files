@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root>
+    <doclet-version-NOT-library-version>1.01</doclet-version-NOT-library-version>
+    <class>
+        <name>com.gtr.virtualizer.Vrlib</name>
+        <owner>process</owner>
+        <method>
+            <name>Release</name>
+            <comment></comment>
+            <returntype>void</returntype>
+        </method>
+        <method>
+            <name>Initialize</name>
+            <comment></comment>
+            <returntype>void</returntype>
+        </method>
+        <method>
+            <name>CheckAvailable</name>
+            <comment></comment>
+            <returntype>void</returntype>
+        </method>
+        <method>
+            <name>SetStrength</name>
+            <comment></comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>strength</name>
+                <type>short</type>
+            </parameter>
+        </method>
+        <method>
+            <name>Enable</name>
+            <comment></comment>
+            <returntype>int</returntype>
+            <parameter>
+                <name>enable</name>
+                <type>boolean</type>
+            </parameter>
+        </method>
+        <method>
+            <name>GetEnabled</name>
+            <comment></comment>
+            <returntype>boolean</returntype>
+        </method>
+        <method>
+            <name>GetProperties</name>
+            <comment></comment>
+            <returntype>java.lang.String</returntype>
+        </method>
+        <method>
+            <name>SetProperties</name>
+            <comment></comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>settingsStr</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+        <method>
+            <name>HasControl</name>
+            <comment></comment>
+            <returntype>boolean</returntype>
+        </method>
+        <method>
+            <name>IsInitialized</name>
+            <comment></comment>
+            <returntype>boolean</returntype>
+        </method>
+    </class>
+    <class>
+        <name>com.gtr.virtualizer.Virtualizer</name>
+        <shortname>Virtualizer</shortname>
+        <owner>process</owner>
+        <permission>android.permission.MODIFY_AUDIO_SETTINGS</permission>
+        <method>
+            <name>Release</name>
+            <comment>Releases the native AudioEffect resources. 
+ It is a good practice to release the effect engine when not 
+ in use as control can be returned to other 
+ applications or the native resources released.</comment>
+            <returntype>void</returntype>
+        </method>
+        <method>
+            <name>Initialize</name>
+            <comment>Checks whether the Virtualizer is available and Initializes the object,
+ only for all output and not for specific media players.
+ For backwards compatibility, the library will not throw an exception 
+ on failure to initialize the Virtualizer, but will return true or false 
+ and set the IsInitialized flag appropriately if it fails for any reason.
+ check either of these before running the other methods as if the Virtualizer
+ is not initialized, you will get a runtime error.
+ &lt;code&gt;Dim VR As Virtualizer
+ VR.Initialize
+ &lt;/code&gt;</comment>
+            <returntype>boolean</returntype>
+        </method>
+        <method>
+            <name>IsAvailable</name>
+            <comment>Returns the availability of the Virtualizer object, it must be available for
+ the devices API level (9 or later)</comment>
+            <returntype>boolean</returntype>
+        </method>
+        <method>
+            <name>SetStrength</name>
+            <comment>Sets the strength of the virtualizer effect. If the implementation does not support per mille
+ accuracy for setting the strength, it is allowed to round the given strength to the nearest
+ supported value. You can use the {@link #getRoundedStrength()} method to query the
+ (possibly rounded) value that was actually set.
+strength: strength of the effect. The valid range for strength strength is [0, 1000],
+ where 0 per mille designates the mildest effect and 1000 per mille designates the strongest.</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>strength</name>
+                <type>short</type>
+            </parameter>
+        </method>
+        <method>
+            <name>Enable</name>
+            <comment>Enables or disables the Audio effect engine.</comment>
+            <returntype>int</returntype>
+            <parameter>
+                <name>enable</name>
+                <type>boolean</type>
+            </parameter>
+        </method>
+        <method>
+            <name>GetEnabled</name>
+            <comment>Gets the Enabled status of the Audio effect engine.</comment>
+            <returntype>boolean</returntype>
+        </method>
+        <method>
+            <name>GetProperties</name>
+            <comment>Gets the Virtualizer properties.
+ &lt;code&gt;
+ Dim VR As Virtualizer
+ VR.Initialize
+ VR.Enable(True)
+ VRSett= VR.GetProperties
+ VR.SetProperties(VRSett)
+ &lt;/code&gt;</comment>
+            <returntype>java.lang.String</returntype>
+        </method>
+        <method>
+            <name>SetProperties</name>
+            <comment>Sets the Virtualizer properties.
+ &lt;code&gt;
+ Dim VR As Virtualizer
+ VR.Initialize
+ VR.Enable(True)
+ VRSett= VR.GetProperties
+ VR.SetProperties(VRSett)
+ &lt;/code&gt;</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>settingsStr</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+        <method>
+            <name>IsInitialized</name>
+            <comment>Returns the status of the Virtualizer object, it must be available for
+ the devices API level and initialized
+ &lt;code&gt;
+ Dim VR As Virtualizer
+ VR.Initialize
+ If VR.IsInitialized Then
+      VR.Enable(True)
+      * End if
+ &lt;/code&gt;</comment>
+            <returntype>boolean</returntype>
+        </method>
+        <method>
+            <name>HasControl</name>
+            <comment>Checks if this AudioEffect object is controlling the effect engine</comment>
+            <returntype>boolean</returntype>
+        </method>
+    </class>
+    <version>1.01</version>
+    <author>GTR</author>
+</root>

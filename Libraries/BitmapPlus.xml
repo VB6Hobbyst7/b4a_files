@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root>
+    <doclet-version-NOT-library-version>1.02</doclet-version-NOT-library-version>
+    <class>
+        <name>flm.b4a.bitmapplus.BitmapPlus</name>
+        <shortname>BitmapPlus</shortname>
+        <owner>process</owner>
+        <method>
+            <name>ReduceColors</name>
+            <comment>Converts a bitmap from the format ARGB_8888 to the format RGB_565 to save memory.</comment>
+            <returntype>android.graphics.Bitmap</returntype>
+            <parameter>
+                <name>src</name>
+                <type>android.graphics.Bitmap</type>
+            </parameter>
+        </method>
+        <method>
+            <name>Crop</name>
+            <comment>Creates a bitmap by removing the outer parts of another one</comment>
+            <returntype>android.graphics.Bitmap</returntype>
+            <parameter>
+                <name>src</name>
+                <type>android.graphics.Bitmap</type>
+            </parameter>
+            <parameter>
+                <name>x</name>
+                <type>int</type>
+            </parameter>
+            <parameter>
+                <name>y</name>
+                <type>int</type>
+            </parameter>
+            <parameter>
+                <name>width</name>
+                <type>int</type>
+            </parameter>
+            <parameter>
+                <name>height</name>
+                <type>int</type>
+            </parameter>
+        </method>
+        <method>
+            <name>GetImageDimensions</name>
+            <comment></comment>
+            <returntype>anywheresoftware.b4a.objects.collections.Map</returntype>
+            <parameter>
+                <name>Location</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+        <method>
+            <name>createScaledBitmap</name>
+            <comment>Creates a new bitmap, scaled from an existing bitmap, when possible.
+If the specified width and height are the same as the current width and height of the source bitmap, the source bitmap is returned and no new bitmap is created.
+
+Parameters:
+src:			The source bitmap.
+dstWidth:	The new bitmap's desired width.
+dstHeight:	The new bitmap's desired height.
+filter:		True if the source should be filtered.</comment>
+            <returntype>android.graphics.Bitmap</returntype>
+            <parameter>
+                <name>src</name>
+                <type>android.graphics.Bitmap</type>
+            </parameter>
+            <parameter>
+                <name>dstWidth</name>
+                <type>int</type>
+            </parameter>
+            <parameter>
+                <name>dstHeight</name>
+                <type>int</type>
+            </parameter>
+            <parameter>
+                <name>filter</name>
+                <type>boolean</type>
+            </parameter>
+        </method>
+        <method>
+            <name>Recycle</name>
+            <comment></comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>bmp</name>
+                <type>android.graphics.Bitmap</type>
+            </parameter>
+        </method>
+        <method>
+            <name>Rotate</name>
+            <comment>Rotates the given bitmap by the specified number of degrees</comment>
+            <returntype>android.graphics.Bitmap</returntype>
+            <parameter>
+                <name>src</name>
+                <type>android.graphics.Bitmap</type>
+            </parameter>
+            <parameter>
+                <name>width</name>
+                <type>int</type>
+            </parameter>
+            <parameter>
+                <name>height</name>
+                <type>int</type>
+            </parameter>
+            <parameter>
+                <name>degrees</name>
+                <type>int</type>
+            </parameter>
+            <parameter>
+                <name>filter</name>
+                <type>boolean</type>
+            </parameter>
+        </method>
+        <method>
+            <name>IsRecycled</name>
+            <comment></comment>
+            <returntype>boolean</returntype>
+            <parameter>
+                <name>bmp</name>
+                <type>android.graphics.Bitmap</type>
+            </parameter>
+        </method>
+        <method>
+            <name>getPixels</name>
+            <comment>Returns in pixels() a copy of the data in the bitmap. Each value is a packed int representing a Color.
+The stride parameter allows the caller to allow for gaps in the returned pixels array between rows.
+For normal packed results, just pass width for the stride value.
+
+Parameters:
+pixels:	The array to receive the bitmap's colors
+offset:	The first index to write into pixels()
+stride:	The number of entries in pixels() to skip between rows (must be &gt;= bitmap's width). Can be negative.
+x:		The x coordinate of the first pixel to read from the bitmap
+y:		The y coordinate of the first pixel to read from the bitmap
+width:	The number of pixels to read from each row
+height:	The number of rows to read</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>src</name>
+                <type>android.graphics.Bitmap</type>
+            </parameter>
+            <parameter>
+                <name>pixels</name>
+                <type>int[]</type>
+            </parameter>
+            <parameter>
+                <name>offset</name>
+                <type>int</type>
+            </parameter>
+            <parameter>
+                <name>stride</name>
+                <type>int</type>
+            </parameter>
+            <parameter>
+                <name>x</name>
+                <type>int</type>
+            </parameter>
+            <parameter>
+                <name>y</name>
+                <type>int</type>
+            </parameter>
+            <parameter>
+                <name>width</name>
+                <type>int</type>
+            </parameter>
+            <parameter>
+                <name>height</name>
+                <type>int</type>
+            </parameter>
+        </method>
+    </class>
+    <version>1.11</version>
+    <author>Frederic Leneuf-Magaud</author>
+</root>

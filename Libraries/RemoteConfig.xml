@@ -1,0 +1,378 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root>
+    <doclet-version-NOT-library-version>1.05</doclet-version-NOT-library-version>
+    <class>
+        <name>de.donmanfred.FirebaseRemoteConfigValueWrapper</name>
+        <shortname>RemoteConfigValue</shortname>
+        <objectwrapper>com.google.firebase.remoteconfig.FirebaseRemoteConfigValue</objectwrapper>
+        <owner>process</owner>
+        <method>
+            <name>IsInitialized</name>
+            <comment></comment>
+            <returntype>boolean</returntype>
+        </method>
+        <method>
+            <name>Initialize</name>
+            <comment></comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>ba</name>
+                <type>anywheresoftware.b4a.BA</type>
+            </parameter>
+            <parameter>
+                <name>cfg</name>
+                <type>com.google.firebase.remoteconfig.FirebaseRemoteConfigValue</type>
+            </parameter>
+        </method>
+        <method>
+            <name>asLong</name>
+            <comment></comment>
+            <returntype>long</returntype>
+        </method>
+        <method>
+            <name>asByteArray</name>
+            <comment></comment>
+            <returntype>byte[]</returntype>
+        </method>
+        <method>
+            <name>asDouble</name>
+            <comment></comment>
+            <returntype>double</returntype>
+        </method>
+        <method>
+            <name>asString</name>
+            <comment></comment>
+            <returntype>java.lang.String</returntype>
+        </method>
+        <method>
+            <name>asBoolean</name>
+            <comment></comment>
+            <returntype>boolean</returntype>
+        </method>
+        <property>
+            <name>Source</name>
+            <returntype>int</returntype>
+            <comment>VALUE_SOURCE_REMOTE if the value was retrieved 
+ from the server, VALUE_SOURCE_DEFAULT if the 
+ value was set as a default, or VALUE_SOURCE_STATIC 
+ if no value was found and a static default 
+ value was returned instead.</comment>
+        </property>
+    </class>
+    <class>
+        <name>de.donmanfred.FirebaseRemoteConfigWrapper</name>
+        <shortname>RemoteConfig</shortname>
+        <objectwrapper>com.google.firebase.remoteconfig.FirebaseRemoteConfig</objectwrapper>
+        <owner>process</owner>
+        <event>onFetchComplete(success As Boolean)</event>
+        <method>
+            <name>getLong2</name>
+            <comment>Gets the value corresponding to the specified 
+ key, in the specified namespace, as a long.</comment>
+            <returntype>long</returntype>
+            <parameter>
+                <name>key</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>namespace</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+        <method>
+            <name>setDefaults2</name>
+            <comment></comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>defaults</name>
+                <type>anywheresoftware.b4a.objects.collections.Map</type>
+            </parameter>
+            <parameter>
+                <name>namespace</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+        <method>
+            <name>getString2</name>
+            <comment>Gets value as a string corresponding 
+ to the specified key in the specified namespace.
+ returns alue as a string if a value corresponding 
+ to the look up key was present and could be converted 
+ to a string; default (if set) or 
+ static default value otherwise.</comment>
+            <returntype>java.lang.String</returntype>
+            <parameter>
+                <name>key</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>namespace</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+        <method>
+            <name>getDouble</name>
+            <comment>Gets the value corresponding to the specified 
+ key, in the specified namespace, as a double.
+ 
+ Returns Value as a double if a value corresponding 
+ to the look up key was present and could be 
+ converted to a double; default (if set) or 
+ static default value otherwise.</comment>
+            <returntype>double</returntype>
+            <parameter>
+                <name>key</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+        <method>
+            <name>getValue2</name>
+            <comment></comment>
+            <returntype>com.google.firebase.remoteconfig.FirebaseRemoteConfigValue</returntype>
+            <parameter>
+                <name>key</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>namespace</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+        <method>
+            <name>getString</name>
+            <comment>Gets the value corresponding to 
+ the specified key, as a string.
+  
+ returns alue as a string if a value corresponding 
+ to the look up key was present and could be converted 
+ to a string; default (if set) or 
+ static default value otherwise.</comment>
+            <returntype>java.lang.String</returntype>
+            <parameter>
+                <name>key</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+        <method>
+            <name>IsInitialized</name>
+            <comment></comment>
+            <returntype>boolean</returntype>
+        </method>
+        <method>
+            <name>getBoolean2</name>
+            <comment>Gets the value corresponding to the specified key, 
+ as a boolean, in the specified namespace.</comment>
+            <returntype>boolean</returntype>
+            <parameter>
+                <name>key</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>namespace</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+        <method>
+            <name>Initialize</name>
+            <comment></comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>ba</name>
+                <type>anywheresoftware.b4a.BA</type>
+            </parameter>
+            <parameter>
+                <name>EventName</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+        <method>
+            <name>getByteArray2</name>
+            <comment>Gets the value corresponding to the specified 
+ key, in the specified namespace, as a byte array.
+ 
+ Returns Value as a byte array if a value 
+ corresponding to the look up key was present; 
+ default (if set) or static default value otherwise.</comment>
+            <returntype>byte[]</returntype>
+            <parameter>
+                <name>key</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>namespace</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+        <method>
+            <name>getDouble2</name>
+            <comment>Gets the value corresponding to the specified 
+ key as a double.
+ 
+ Returns Value as a double if a value corresponding 
+ to the look up key was present and could be 
+ converted to a double; default (if set) or 
+ static default value otherwise.</comment>
+            <returntype>double</returntype>
+            <parameter>
+                <name>key</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>namespace</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+        <method>
+            <name>getLong</name>
+            <comment>Gets the value corresponding to the 
+ specified key, as a long.
+  
+ returns Value as a long if a value corresponding 
+ to the look up key was present and could be 
+ converted to a long; default (if set) or 
+ static default value otherwise.</comment>
+            <returntype>long</returntype>
+            <parameter>
+                <name>key</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+        <method>
+            <name>getValue</name>
+            <comment>Gets the FirebaseRemoteConfigValue 
+ corresponding to the specified key.</comment>
+            <returntype>com.google.firebase.remoteconfig.FirebaseRemoteConfigValue</returntype>
+            <parameter>
+                <name>key</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+        <method>
+            <name>Defaults</name>
+            <comment></comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>defaults</name>
+                <type>anywheresoftware.b4a.objects.collections.Map</type>
+            </parameter>
+        </method>
+        <method>
+            <name>fetch</name>
+            <comment></comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>cacheExpiration</name>
+                <type>int</type>
+            </parameter>
+        </method>
+        <method>
+            <name>getByteArray</name>
+            <comment>Gets the value corresponding to the specified 
+ key as a byte array.
+ 
+ Returns Value as a byte array if a value 
+ corresponding to the look up key was present; 
+ default (if set) or static default value otherwise.</comment>
+            <returntype>byte[]</returntype>
+            <parameter>
+                <name>key</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+        <method>
+            <name>getBoolean</name>
+            <comment>Gets the value corresponding to the specified key, 
+ as a boolean.</comment>
+            <returntype>boolean</returntype>
+            <parameter>
+                <name>key</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+        <method>
+            <name>activateFetched</name>
+            <comment>Fetches parameter values for your app. Parameter values may be from the 
+ Default Config (local cache), or from the Remote Config Server, 
+ depending on how much time has elapsed since parameter values were last 
+ fetched from the Remote Config server. This method uses the default 
+ cache expiration of 12 hours.
+Return type: @return:</comment>
+            <returntype>boolean</returntype>
+        </method>
+        <property>
+            <name>ConfigSettings</name>
+            <parameter>
+                <name>settings</name>
+                <type>com.google.firebase.remoteconfig.FirebaseRemoteConfigSettings</type>
+            </parameter>
+            <comment>Changes the settings for the FirebaseRemoteConfig 
+ object's operations, such as turning the developer mode on.</comment>
+        </property>
+        <property>
+            <name>Info</name>
+            <returntype>com.google.firebase.remoteconfig.FirebaseRemoteConfigInfo</returntype>
+            <comment>Gets the current state of the 
+ FirebaseRemoteConfig singleton object.
+ 
+ returns A FirebaseRemoteConfigInfo wrapping the current state.</comment>
+        </property>
+        <field>
+            <name>DEFAULT_VALUE_FOR_STRING</name>
+            <comment></comment>
+            <returntype>java.lang.String</returntype>
+        </field>
+        <field>
+            <name>DEFAULT_VALUE_FOR_BOOLEAN</name>
+            <comment></comment>
+            <returntype>boolean</returntype>
+        </field>
+        <field>
+            <name>LAST_FETCH_STATUS_NO_FETCH_YET</name>
+            <comment></comment>
+            <returntype>int</returntype>
+        </field>
+        <field>
+            <name>LAST_FETCH_STATUS_THROTTLED</name>
+            <comment></comment>
+            <returntype>int</returntype>
+        </field>
+        <field>
+            <name>LAST_FETCH_STATUS_SUCCESS</name>
+            <comment></comment>
+            <returntype>int</returntype>
+        </field>
+        <field>
+            <name>LAST_FETCH_STATUS_FAILURE</name>
+            <comment></comment>
+            <returntype>int</returntype>
+        </field>
+        <field>
+            <name>DEFAULT_VALUE_FOR_DOUBLE</name>
+            <comment></comment>
+            <returntype>double</returntype>
+        </field>
+        <field>
+            <name>DEFAULT_VALUE_FOR_LONG</name>
+            <comment></comment>
+            <returntype>long</returntype>
+        </field>
+        <field>
+            <name>VALUE_SOURCE_STATIC</name>
+            <comment></comment>
+            <returntype>int</returntype>
+        </field>
+        <field>
+            <name>VALUE_SOURCE_DEFAULT</name>
+            <comment></comment>
+            <returntype>int</returntype>
+        </field>
+        <field>
+            <name>VALUE_SOURCE_REMOTE</name>
+            <comment></comment>
+            <returntype>int</returntype>
+        </field>
+    </class>
+    <version>1.0</version>
+    <author>DonManfred (wrapper)</author>
+    <dependsOn>com.google.firebase:firebase-config</dependsOn>
+</root>

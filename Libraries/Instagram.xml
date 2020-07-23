@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root>
+    <doclet-version-NOT-library-version>1.02</doclet-version-NOT-library-version>
+    <class>
+        <name>anywheresoftware.b4a.student.Instagram</name>
+        <shortname>Instagram</shortname>
+        <owner>process</owner>
+        <method>
+            <name>OpenProfile</name>
+            <comment>Open your instagram profile
+&lt;code&gt;
+StartActivity(OpenProfile("omid_student"))
+&lt;/code&gt;
+Visit out website : iranapp.org :)))))))</comment>
+            <returntype>android.content.Intent</returntype>
+            <parameter>
+                <name>ba</name>
+                <type>anywheresoftware.b4a.BA</type>
+            </parameter>
+            <parameter>
+                <name>UserName</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+    </class>
+    <version>1.0</version>
+</root>

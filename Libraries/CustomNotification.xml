@@ -1,0 +1,396 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root>
+    <doclet-version-NOT-library-version>1.02</doclet-version-NOT-library-version>
+    <class>
+        <name>barkernetdesign.customnotification.CustomNotification</name>
+        <shortname>CustomNotification</shortname>
+        <objectwrapper>android.app.Notification</objectwrapper>
+        <owner>activity</owner>
+        <permission>android.permission.VIBRATE</permission>
+        <method>
+            <name>Initialize</name>
+            <comment>Initializes the notification setting default values of:
+ LED = Enabled
+ Sound = Enabled
+ Vibration = Enabled
+ Layout - Sets the layout to be used.
+ Options:
+ 1 = Default notification layout (Two Text fields plus Icon)
+ 2 = Two Text fields plus One Image
+ 3 = One Text field plus One Image plus One Progress Bar
+ 4 = Two Text fields ONLY
+ 5 = User Defined. Add your xml file to the res/layout. Name it mylayout.xml and make it read only.
+ 
+ Example:
+ cn.Initialize(2) 'Initializes the notification and sets the layout to Two Text fields plus One Image</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>Layout</name>
+                <type>int</type>
+            </parameter>
+        </method>
+        <method>
+            <name>SetTag</name>
+            <comment>The Tag is a string that can be extracted later on Activity_Resume.
+ This can be used to determine which notification has been clicked by the user when multiple notifications exist.
+ 
+ Example of extracting the Tag:
+ Sub Activity_Resume
+   Dim in as Intent
+   Dim intentExtra as String
+   
+   in = Activity.GetStartingIntent
+   If in.HasExtra("Notification_Tag") Then
+     intentExtra = in.GetExtra("Notification_Tag")
+   End If
+ End Sub</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>Tag</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+        <method>
+            <name>SetTextColor</name>
+            <comment>Sets the Color of a text item.
+ For Preset Layouts the id's are "title" and "text".
+ Example:
+ 
+ cn.SetText("title", "New notification")
+ cn.SetTextColor("title", Colors.Red)</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>ba</name>
+                <type>anywheresoftware.b4a.BA</type>
+            </parameter>
+            <parameter>
+                <name>id</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>Color</name>
+                <type>int</type>
+            </parameter>
+        </method>
+        <method>
+            <name>SetImage</name>
+            <comment>Sets image used in a notification. Only use with "twotextsplusimage" and "onetextplusimageplusprogress" Presets or if defined as part of a user defined layout.
+ For Preset layout the id is "image".</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>ba</name>
+                <type>anywheresoftware.b4a.BA</type>
+            </parameter>
+            <parameter>
+                <name>id</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>Image</name>
+                <type>android.graphics.Bitmap</type>
+            </parameter>
+        </method>
+        <method>
+            <name>SetIntent</name>
+            <comment>Sets the Activity that is called when the user clicks the notification
+ Example:
+ cn.Activity(Main)</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>Activity</name>
+                <type>java.lang.Object</type>
+            </parameter>
+        </method>
+        <method>
+            <name>SetCustomVibrate</name>
+            <comment>Sets A custom vibrate sequence for notification Vibration
+ The Array of values can be as long as you wish.
+ The First Value is the pause before vibration starts, then it's ON, OFF, ON, OFF, etc.
+ 
+ NOTE: DefaultVibrate must be set to False
+ 
+ Example:
+ Dim cn as CustomNotification
+ Dim v() as Long
+ 
+ v = Array as Long(0, 100, 200, 300, 400)
+ cn.DefaultVibrate = False
+ cn.CustomVibrate(v)</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>Values</name>
+                <type>long[]</type>
+            </parameter>
+        </method>
+        <method>
+            <name>SetCustomSound</name>
+            <comment>Sets a custom sound to be played on new notification
+ 
+ Example:
+ cn.CustomSound("file:///sdcard/notification/ringer.mp3")</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>path</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+        <method>
+            <name>SetText</name>
+            <comment>Sets the content of text items for the notification
+ For Preset Layouts the id's are "title" and "text".
+ Example:
+ 
+ cn.SetText("title", "New notification")
+ cn.SetText("text", "You have a new notification")</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>ba</name>
+                <type>anywheresoftware.b4a.BA</type>
+            </parameter>
+            <parameter>
+                <name>id</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>text</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+        <method>
+            <name>SetProgress</name>
+            <comment>Sets the parameters for a progress bar used in a notification. Only use with "onetextplusprogress" Preset or if defined as part of a user defined layout.
+ For Preset layout the id is "progress".
+ 
+ maxProgress - the upper limit of the progress bar. A good value is 100
+ progress - the current level of progress to be shown. Must be &amp;lt;= maxProgress.</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>ba</name>
+                <type>anywheresoftware.b4a.BA</type>
+            </parameter>
+            <parameter>
+                <name>id</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>maxProgress</name>
+                <type>int</type>
+            </parameter>
+            <parameter>
+                <name>progress</name>
+                <type>int</type>
+            </parameter>
+            <parameter>
+                <name>indeterminate</name>
+                <type>boolean</type>
+            </parameter>
+        </method>
+        <method>
+            <name>setCustomLED</name>
+            <comment>Set a custom timing for the notification Light.
+ Timings are in milliseconds.
+ 
+ NOTE: DefaultLED must be set to False.
+ 
+ Example:
+ Dim cn as CustomNotification
+ 
+ cn.DefaultLED = False
+ cn.CustomLED(300, 1000)</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>LightOn</name>
+                <type>int</type>
+            </parameter>
+            <parameter>
+                <name>LightOff</name>
+                <type>int</type>
+            </parameter>
+        </method>
+        <method>
+            <name>Cancel</name>
+            <comment>Cancels the notification with the given Id</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>Id</name>
+                <type>int</type>
+            </parameter>
+        </method>
+        <method>
+            <name>SetTextSize</name>
+            <comment>Sets the text size of a text item.
+ For Preset Layouts the id's are "title" and "text".
+ Example:
+ 
+ cn.SetText("title", "New notification")
+ cn.SetTextSize("title", 20)</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>ba</name>
+                <type>anywheresoftware.b4a.BA</type>
+            </parameter>
+            <parameter>
+                <name>id</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>Value</name>
+                <type>int</type>
+            </parameter>
+        </method>
+        <method>
+            <name>setIcon</name>
+            <comment>Sets the icon to be displayed.
+ The image file should manually copied to the Objects\res\drawable\ folder and set to read-only.
+ The file name is case sensitive and should not contain the file extension.
+ You can use "icon" to use the applications icon.
+ 
+ Example:
+ cn.Icon("icon")</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>ba</name>
+                <type>anywheresoftware.b4a.BA</type>
+            </parameter>
+            <parameter>
+                <name>FileName</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+        <method>
+            <name>Notify</name>
+            <comment>Displays the notification.
+Id: - The notification Id. This can be used later to update the notification (by calling notify again with the same Id) or cancel it.</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>ba</name>
+                <type>anywheresoftware.b4a.BA</type>
+            </parameter>
+            <parameter>
+                <name>Id</name>
+                <type>int</type>
+            </parameter>
+        </method>
+        <method>
+            <name>IsInitialized</name>
+            <comment></comment>
+            <returntype>boolean</returntype>
+        </method>
+        <property>
+            <name>NoClear</name>
+            <parameter>
+                <name>v</name>
+                <type>boolean</type>
+            </parameter>
+            <comment>Sets whether the notification should NOT be cancelled when the user clicks the Clear All button.
+ Example:
+ 
+ Dim cn as CustomNotification
+ 
+ cn.NoClear = True 'Notification will not clear.</comment>
+        </property>
+        <property>
+            <name>Insistent</name>
+            <parameter>
+                <name>v</name>
+                <type>boolean</type>
+            </parameter>
+            <comment>Sets whether the sound will play repeatedly until the user opens the notification screen</comment>
+        </property>
+        <property>
+            <name>DefaultLED</name>
+            <parameter>
+                <name>v</name>
+                <type>boolean</type>
+            </parameter>
+            <comment>Sets whether the notification will Flash the LED (if available) using the Default settings.
+ 
+ NOTE: Setting to True will over rule the CustomLED
+ 
+ Example:
+ n.DefaultLED = False</comment>
+        </property>
+        <property>
+            <name>AlertOnce</name>
+            <parameter>
+                <name>v</name>
+                <type>boolean</type>
+            </parameter>
+            <comment>Sets whether the notification sound and/or vibration should sound each time the notification is sent, even if it has not been cancelled before.</comment>
+        </property>
+        <property>
+            <name>Number</name>
+            <returntype>int</returntype>
+            <parameter>
+                <name>v</name>
+                <type>int</type>
+            </parameter>
+            <comment>Gets or Sets a number that will be displayed over the icon. This is useful to represent multiple events in a single notification.</comment>
+        </property>
+        <property>
+            <name>OnGoingEvent</name>
+            <parameter>
+                <name>v</name>
+                <type>boolean</type>
+            </parameter>
+            <comment>Set if the notification is in reference to an ongoing event, e.g. a phone call. 
+ Do not set for notifications that are in reference to something that happened at a particular point in time.</comment>
+        </property>
+        <property>
+            <name>DefaultVibrate</name>
+            <parameter>
+                <name>v</name>
+                <type>boolean</type>
+            </parameter>
+            <comment>Sets whether the notification will vibrate using the default settings
+ 
+ NOTE: Setting to True will overrule the CustomVibrate
+ 
+ Example:
+ n.DefaultVibrate = True</comment>
+        </property>
+        <property>
+            <name>AutoCancel</name>
+            <parameter>
+                <name>v</name>
+                <type>boolean</type>
+            </parameter>
+            <comment>Sets whether the notification will be cancelled automatically when the user click on it</comment>
+        </property>
+        <property>
+            <name>When</name>
+            <returntype>long</returntype>
+            <parameter>
+                <name>Value</name>
+                <type>long</type>
+            </parameter>
+            <comment>&lt;B&gt;Note: Experimental Feature&lt;/B&gt;
+ The offical description of this method is - &lt;i&gt;The timestamp for the notification.&lt;/i&gt;
+ 
+ Setting this to the max Value for a long (9,223,372,036,854,775,807) pushes the Notification Icon to the right.</comment>
+        </property>
+        <property>
+            <name>TickerText</name>
+            <parameter>
+                <name>text</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <comment>Sets the Ticker Text which shows along side the status bar icon on new notification.
+ 
+ Example:
+ cn.TickerText = "New notification"</comment>
+        </property>
+        <property>
+            <name>DefaultSound</name>
+            <parameter>
+                <name>v</name>
+                <type>boolean</type>
+            </parameter>
+            <comment>Sets whether the notification will play a sound using the default settings
+ Example:
+ n.DefaultSound = True</comment>
+        </property>
+    </class>
+    <version>1.1</version>
+    <author>Barx</author>
+</root>

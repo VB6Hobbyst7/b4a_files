@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <doclet-version-NOT-library-version>1.00</doclet-version-NOT-library-version>
+  <dependsOn>msmaterialedittext</dependsOn>
+  <dependsOn>nineoldandroids</dependsOn>
+  <class>
+    <name>com.maximussoft.materialedittextsample.clsmaterialedittext</name>
+    <shortname>clsMaterialEditText</shortname>
+    <owner>activity</owner>
+    <method>
+      <name>IsInitialized</name>
+      <comment>Tests whether the object has been initialized.</comment>
+      <returntype>boolean</returntype>
+    </method>
+    <method>
+      <name DesignerName="AddToParent">_addtoparent</name>
+      <comment>Make me 60dip high</comment>
+      <returntype>String</returntype>
+      <parameter>
+        <name>mParent</name>
+        <type>anywheresoftware.b4a.objects.PanelWrapper</type>
+      </parameter>
+      <parameter>
+        <name>Left</name>
+        <type>int</type>
+      </parameter>
+      <parameter>
+        <name>Top</name>
+        <type>int</type>
+      </parameter>
+      <parameter>
+        <name>Width</name>
+        <type>int</type>
+      </parameter>
+      <parameter>
+        <name>Height</name>
+        <type>int</type>
+      </parameter>
+    </method>
+    <method>
+      <name DesignerName="AsEditText">_asedittext</name>
+      <returntype>anywheresoftware.b4a.objects.EditTextWrapper</returntype>
+    </method>
+    <method>
+      <name DesignerName="AsView">_asview</name>
+      <returntype>anywheresoftware.b4a.objects.ConcreteViewWrapper</returntype>
+    </method>
+    <method>
+      <name DesignerName="Class_Globals">_class_globals</name>
+      <returntype>String</returntype>
+    </method>
+    <method>
+      <name DesignerName="DesignerCreateView">_designercreateview</name>
+      <returntype>String</returntype>
+      <parameter>
+        <name>base</name>
+        <type>anywheresoftware.b4a.objects.PanelWrapper</type>
+      </parameter>
+      <parameter>
+        <name>lbl</name>
+        <type>anywheresoftware.b4a.objects.LabelWrapper</type>
+      </parameter>
+      <parameter>
+        <name>Props</name>
+        <type>anywheresoftware.b4a.objects.collections.Map</type>
+      </parameter>
+    </method>
+    <method>
+      <name DesignerName="HintLabel">_hintlabel</name>
+      <returntype>anywheresoftware.b4a.objects.LabelWrapper</returntype>
+    </method>
+    <method>
+      <name DesignerName="Initialize">_initialize</name>
+      <comment>Initializes the object. You can add parameters to this method if needed.</comment>
+      <returntype>String</returntype>
+      <parameter>
+        <name>ba</name>
+        <type>anywheresoftware.b4a.BA</type>
+      </parameter>
+      <parameter>
+        <name>pModule</name>
+        <type>Object</type>
+      </parameter>
+      <parameter>
+        <name>pEventName</name>
+        <type>String</type>
+      </parameter>
+    </method>
+  </class>
+  <version>1</version>
+</root>

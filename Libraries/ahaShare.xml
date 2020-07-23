@@ -1,0 +1,869 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <doclet-version-NOT-library-version>1.00</doclet-version-NOT-library-version>
+  <dependsOn>http</dependsOn>
+  <dependsOn>phone</dependsOn>
+  <dependsOn>reflection</dependsOn>
+  <class b4a_type="Activity">
+    <name>at.ahadev.b4a.ahashare.ahacontentchooser</name>
+    <shortname>ahaContentChooser</shortname>
+    <owner>process</owner>
+    <objectwrapper>java.lang.Class</objectwrapper>
+    <permission>android.permission.INTERNET</permission>
+    <field>
+      <name DesignerName="mEventName">_meventname</name>
+      <returntype>String</returntype>
+    </field>
+    <field>
+      <name DesignerName="mModule">_mmodule</name>
+      <returntype>Object</returntype>
+    </field>
+    <field>
+      <name DesignerName="mIntentType">_mintenttype</name>
+      <returntype>String</returntype>
+    </field>
+    <field>
+      <name DesignerName="mSubject">_msubject</name>
+      <returntype>String</returntype>
+    </field>
+    <field>
+      <name DesignerName="mText">_mtext</name>
+      <returntype>String</returntype>
+    </field>
+    <field>
+      <name DesignerName="mLineColor">_mlinecolor</name>
+      <returntype>int</returntype>
+    </field>
+    <field>
+      <name DesignerName="mHeaderText">_mheadertext</name>
+      <returntype>String</returntype>
+    </field>
+    <field>
+      <name DesignerName="mHeaderTextSize">_mheadertextsize</name>
+      <returntype>int</returntype>
+    </field>
+    <field>
+      <name DesignerName="mHeaderTextColor">_mheadertextcolor</name>
+      <returntype>int</returntype>
+    </field>
+    <field>
+      <name DesignerName="mHeaderBackColor">_mheaderbackcolor</name>
+      <returntype>int</returntype>
+    </field>
+    <field>
+      <name DesignerName="mTextSize">_mtextsize</name>
+      <returntype>int</returntype>
+    </field>
+    <field>
+      <name DesignerName="mTextColor">_mtextcolor</name>
+      <returntype>int</returntype>
+    </field>
+    <field>
+      <name DesignerName="mPadding">_mpadding</name>
+      <returntype>int</returntype>
+    </field>
+    <field>
+      <name DesignerName="mButtonNormalColor">_mbuttonnormalcolor</name>
+      <returntype>int</returntype>
+    </field>
+    <field>
+      <name DesignerName="mButtonPressedColor">_mbuttonpressedcolor</name>
+      <returntype>int</returntype>
+    </field>
+    <field>
+      <name DesignerName="mShadowColor">_mshadowcolor</name>
+      <returntype>int</returntype>
+    </field>
+    <field>
+      <name DesignerName="mPanelColor">_mpanelcolor</name>
+      <returntype>int</returntype>
+    </field>
+    <field>
+      <name DesignerName="mCornerRadius">_mcornerradius</name>
+      <returntype>int</returntype>
+    </field>
+    <field>
+      <name DesignerName="mFaceBookAppID">_mfacebookappid</name>
+      <returntype>String</returntype>
+    </field>
+    <field>
+      <name DesignerName="mFaceBookRedirectUri">_mfacebookredirecturi</name>
+      <returntype>String</returntype>
+    </field>
+    <field>
+      <name DesignerName="mSendingToFaceBook">_msendingtofacebook</name>
+      <returntype>String</returntype>
+    </field>
+    <field>
+      <name DesignerName="mSendingToFaceBookFinished">_msendingtofacebookfinished</name>
+      <returntype>String</returntype>
+    </field>
+    <field>
+      <name DesignerName="FilterList">_filterlist</name>
+      <returntype>anywheresoftware.b4a.objects.collections.List</returntype>
+    </field>
+    <field>
+      <name DesignerName="FileList">_filelist</name>
+      <returntype>anywheresoftware.b4a.objects.collections.List</returntype>
+    </field>
+    <field>
+      <name DesignerName="mAppButtonWidth">_mappbuttonwidth</name>
+      <returntype>int</returntype>
+    </field>
+    <field>
+      <name DesignerName="mAppButtonHeight">_mappbuttonheight</name>
+      <returntype>int</returntype>
+    </field>
+    <field>
+      <name DesignerName="mAppIconSize">_mappiconsize</name>
+      <returntype>int</returntype>
+    </field>
+    <field>
+      <name DesignerName="mHeaderHeight">_mheaderheight</name>
+      <returntype>int</returntype>
+    </field>
+    <field>
+      <name DesignerName="FBAccessToken">_fbaccesstoken</name>
+      <returntype>String</returntype>
+    </field>
+    <field>
+      <name DesignerName="FBDataRequestLink">_fbdatarequestlink</name>
+      <returntype>String</returntype>
+    </field>
+    <field>
+      <name DesignerName="FBhc">_fbhc</name>
+      <returntype>anywheresoftware.b4a.http.HttpClientWrapper</returntype>
+    </field>
+    <field>
+      <name DesignerName="FBreq">_fbreq</name>
+      <returntype>anywheresoftware.b4a.http.HttpClientWrapper.HttpUriRequestWrapper</returntype>
+    </field>
+    <method>
+      <name>process_globals</name>
+      <returntype>void</returntype>
+    </method>
+  </class>
+  <class>
+    <name>at.ahadev.b4a.ahashare.ahacontentchooser._filedata</name>
+    <shortname>FileData</shortname>
+    <owner>process</owner>
+    <method>
+      <name>Initialize</name>
+      <comment>Initializes the fields to their default value.</comment>
+      <returntype>void</returntype>
+    </method>
+    <field>
+      <name>IsInitialized</name>
+      <comment>Tests whether the object has been initialized.</comment>
+      <returntype>boolean</returntype>
+    </field>
+    <field>
+      <name>Dir</name>
+      <returntype>String</returntype>
+    </field>
+    <field>
+      <name>FileName</name>
+      <returntype>String</returntype>
+    </field>
+    <field>
+      <name>KeyName</name>
+      <returntype>String</returntype>
+    </field>
+    <field>
+      <name>ContentType</name>
+      <returntype>String</returntype>
+    </field>
+  </class>
+  <class>
+    <name>at.ahadev.b4a.ahashare.ahacontentchooser._intentdata</name>
+    <shortname>IntentData</shortname>
+    <owner>process</owner>
+    <method>
+      <name>Initialize</name>
+      <comment>Initializes the fields to their default value.</comment>
+      <returntype>void</returntype>
+    </method>
+    <field>
+      <name>IsInitialized</name>
+      <comment>Tests whether the object has been initialized.</comment>
+      <returntype>boolean</returntype>
+    </field>
+    <field>
+      <name>ShareIntent</name>
+      <returntype>Object</returntype>
+    </field>
+    <field>
+      <name>DetailsIntent</name>
+      <returntype>Object</returntype>
+    </field>
+  </class>
+  <class>
+    <name>at.ahadev.b4a.ahashare.ahashare</name>
+    <shortname>ahaShare</shortname>
+    <owner>process</owner>
+    <event>Finished</event>
+    <method>
+      <name>IsInitialized</name>
+      <comment>Tests whether the object has been initialized.</comment>
+      <returntype>boolean</returntype>
+    </method>
+    <method>
+      <name DesignerName="AddFile">_addfile</name>
+      <comment>Adds a file to the Intent
+&lt;B&gt;Attention: file.DirAssets and file.dirInternal will &lt;I&gt;NOT&gt;&lt;/I&gt; work as Directory!!&lt;/B&gt;</comment>
+      <returntype>String</returntype>
+      <parameter>
+        <name>Directory</name>
+        <type>String</type>
+      </parameter>
+      <parameter>
+        <name>Filename</name>
+        <type>String</type>
+      </parameter>
+    </method>
+    <method>
+      <name DesignerName="AddPackageFilter">_addpackagefilter</name>
+      <comment>Adds a packagefilter. Packages with the given names will not be shown in the ContentChooser
+Example1: "com.google.android.keep" to hide Google Keep from the choosable Apps
+Example2: "synology" hides every Synology-App</comment>
+      <returntype>String</returntype>
+      <parameter>
+        <name>PackageFilter</name>
+        <type>String</type>
+      </parameter>
+    </method>
+    <method>
+      <name DesignerName="Class_Globals">_class_globals</name>
+      <comment>Class module</comment>
+      <returntype>String</returntype>
+    </method>
+    <method>
+      <name DesignerName="ClearFiles">_clearfiles</name>
+      <comment>Clears all added files</comment>
+      <returntype>String</returntype>
+    </method>
+    <method>
+      <name DesignerName="getAppButtonHeight" HideFromIDE="true">_getappbuttonheight</name>
+      <comment>Height of the Buttons
+Standard: 120dip</comment>
+      <returntype>int</returntype>
+    </method>
+    <method>
+      <name DesignerName="getAppButtonWidth" HideFromIDE="true">_getappbuttonwidth</name>
+      <comment>Width of the Buttons
+Standard: 160dip</comment>
+      <returntype>int</returntype>
+    </method>
+    <method>
+      <name DesignerName="getAppIconSize" HideFromIDE="true">_getappiconsize</name>
+      <comment>Size of the Images on the Buttons
+Standard: 48dip</comment>
+      <returntype>int</returntype>
+    </method>
+    <method>
+      <name DesignerName="getButtonNormalColor" HideFromIDE="true">_getbuttonnormalcolor</name>
+      <comment>Color of the unpressed Buttons
+Standard: colors.white</comment>
+      <returntype>int</returntype>
+    </method>
+    <method>
+      <name DesignerName="getButtonPressedColor" HideFromIDE="true">_getbuttonpressedcolor</name>
+      <comment>Color of the pressed Button
+Standard: Colors.RGB(29,162,235)</comment>
+      <returntype>int</returntype>
+    </method>
+    <method>
+      <name DesignerName="getCornerRadius" HideFromIDE="true">_getcornerradius</name>
+      <comment>Corner radius of the Buttons
+Standard: 0dip</comment>
+      <returntype>int</returntype>
+    </method>
+    <method>
+      <name DesignerName="getFaceBookAppID" HideFromIDE="true">_getfacebookappid</name>
+      <comment>Your Facebook AppID. Needed for publishing to FaceBook.
+Tutorial by NJDude: &lt;link&gt;http://www.basic4ppc.com/forum/basic4android-getting-started-tutorials/17739-tutorial-post-facebook-wall-via-b4a-app.html|http://www.basic4ppc.com/forum/basic4android-getting-started-tutorials/17739-tutorial-post-facebook-wall-via-b4a-app.html&lt;/link&gt;
+Attention: If not set, FaceBook will not be available to share with</comment>
+      <returntype>String</returntype>
+    </method>
+    <method>
+      <name DesignerName="getFaceBookRedirectUri" HideFromIDE="true">_getfacebookredirecturi</name>
+      <comment>Your Facebook RedirectUri. Needed for publishing to FaceBook.
+Tutorial by NJDude: &lt;link&gt;http://www.basic4ppc.com/forum/basic4android-getting-started-tutorials/17739-tutorial-post-facebook-wall-via-b4a-app.html|http://www.basic4ppc.com/forum/basic4android-getting-started-tutorials/17739-tutorial-post-facebook-wall-via-b4a-app.html&lt;/link&gt;
+Attention: If not set, FaceBook will not be available to share with</comment>
+      <returntype>String</returntype>
+    </method>
+    <method>
+      <name DesignerName="getHeaderBackColor" HideFromIDE="true">_getheaderbackcolor</name>
+      <comment>BackColor of the Header
+Standard: Colors.Transparent </comment>
+      <returntype>int</returntype>
+    </method>
+    <method>
+      <name DesignerName="getHeaderHeight" HideFromIDE="true">_getheaderheight</name>
+      <comment>Height of the Header
+Standard: 60dip</comment>
+      <returntype>int</returntype>
+    </method>
+    <method>
+      <name DesignerName="getHeaderText" HideFromIDE="true">_getheadertext</name>
+      <comment>HeaderText of the ContentChooser
+Standard: Choose</comment>
+      <returntype>String</returntype>
+    </method>
+    <method>
+      <name DesignerName="getHeaderTextColor" HideFromIDE="true">_getheadertextcolor</name>
+      <comment>TextColor of the Header
+Standard: Colors.RGB(49,182,255)</comment>
+      <returntype>int</returntype>
+    </method>
+    <method>
+      <name DesignerName="getHeaderTextSize" HideFromIDE="true">_getheadertextsize</name>
+      <comment>TextSize of the Header
+Standard: 22</comment>
+      <returntype>int</returntype>
+    </method>
+    <method>
+      <name DesignerName="getIntentType" HideFromIDE="true">_getintenttype</name>
+      <comment>IntentType, for example "text/*" for Text, "image/jpeg" for jpg, "image/png" for png etc..</comment>
+      <returntype>String</returntype>
+    </method>
+    <method>
+      <name DesignerName="getLineColor" HideFromIDE="true">_getlinecolor</name>
+      <comment>Color of the Seperatorline below the Header
+Standard: Colors.RGB(49,182,255)</comment>
+      <returntype>int</returntype>
+    </method>
+    <method>
+      <name DesignerName="getPadding" HideFromIDE="true">_getpadding</name>
+      <comment>Padding
+Standard: 10dip</comment>
+      <returntype>int</returntype>
+    </method>
+    <method>
+      <name DesignerName="getPanelColor" HideFromIDE="true">_getpanelcolor</name>
+      <comment>Color of the ContentChooser Panel
+Standard: Colors.white</comment>
+      <returntype>int</returntype>
+    </method>
+    <method>
+      <name DesignerName="getSendingToFaceBookFinishedString" HideFromIDE="true">_getsendingtofacebookfinishedstring</name>
+      <comment>The String displayed as ToastMessage after Sending to Facebook succeeded
+Standard: "Posted to Facebook"</comment>
+      <returntype>String</returntype>
+    </method>
+    <method>
+      <name DesignerName="getSendingToFaceBookString" HideFromIDE="true">_getsendingtofacebookstring</name>
+      <comment>The String displayed in the ProgressDialog while sending to FaceBook
+Standard: "Posting to Facebook..."</comment>
+      <returntype>String</returntype>
+    </method>
+    <method>
+      <name DesignerName="getShadowColor" HideFromIDE="true">_getshadowcolor</name>
+      <comment>Color of the Background Shadow.
+Use colors.rgb(x,x,x) for opaque background, colors.argb(x,x,x,x) for Transparency
+Standard: Colors.ARGB(150,0,0,0)</comment>
+      <returntype>int</returntype>
+    </method>
+    <method>
+      <name DesignerName="getSubject" HideFromIDE="true">_getsubject</name>
+      <comment>Subject (for E-Mail,..) set as android.intent.extra.SUBJECT</comment>
+      <returntype>String</returntype>
+    </method>
+    <method>
+      <name DesignerName="getText" HideFromIDE="true">_gettext</name>
+      <comment>The Message. Set as android.intent.extra.TEXT</comment>
+      <returntype>String</returntype>
+    </method>
+    <method>
+      <name DesignerName="getTextColor" HideFromIDE="true">_gettextcolor</name>
+      <comment>Textcolor of the Names of the displayed Packages
+Standard: Colors.Black</comment>
+      <returntype>int</returntype>
+    </method>
+    <method>
+      <name DesignerName="getTextSize" HideFromIDE="true">_gettextsize</name>
+      <comment>TextSize of the Names of the displayed Packages.
+Standard: 14</comment>
+      <returntype>int</returntype>
+    </method>
+    <method>
+      <name DesignerName="Initialize">_initialize</name>
+      <comment>Initializes the Library
+
+&lt;B&gt;Normal Library usage:&lt;/B&gt;
+-----------------------
+&lt;code&gt;Dim Share as ahaShare
+Share.initialize(me, "Share")
+Share.FaceBookAppID = "xxxx"
+Share.FaceBookRedirectUri = "http://www.xxxxxx.xxx/"
+Share.Share("Test-Subject","Test-Text")&lt;/code&gt;
+
+Event Finished will be raised when Sharing is finished:
+Sub Share_Finished
+	..your code here (i.e deleting temp files,...)
+End Sub
+
+&lt;B&gt;That's it :-)&lt;/B&gt;</comment>
+      <returntype>String</returntype>
+      <parameter>
+        <name>ba</name>
+        <type>anywheresoftware.b4a.BA</type>
+      </parameter>
+      <parameter>
+        <name>Module</name>
+        <type>Object</type>
+      </parameter>
+      <parameter>
+        <name>EventName</name>
+        <type>String</type>
+      </parameter>
+    </method>
+    <method>
+      <name DesignerName="setAppButtonHeight" HideFromIDE="true">_setappbuttonheight</name>
+      <returntype>String</returntype>
+      <parameter>
+        <name>AppButtonHeight</name>
+        <type>int</type>
+      </parameter>
+    </method>
+    <method>
+      <name DesignerName="setAppButtonWidth" HideFromIDE="true">_setappbuttonwidth</name>
+      <returntype>String</returntype>
+      <parameter>
+        <name>AppButtonWidth</name>
+        <type>int</type>
+      </parameter>
+    </method>
+    <method>
+      <name DesignerName="setAppIconSize" HideFromIDE="true">_setappiconsize</name>
+      <returntype>String</returntype>
+      <parameter>
+        <name>AppIconSize</name>
+        <type>int</type>
+      </parameter>
+    </method>
+    <method>
+      <name DesignerName="setButtonNormalColor" HideFromIDE="true">_setbuttonnormalcolor</name>
+      <returntype>String</returntype>
+      <parameter>
+        <name>Color</name>
+        <type>int</type>
+      </parameter>
+    </method>
+    <method>
+      <name DesignerName="setButtonPressedColor" HideFromIDE="true">_setbuttonpressedcolor</name>
+      <returntype>String</returntype>
+      <parameter>
+        <name>Color</name>
+        <type>int</type>
+      </parameter>
+    </method>
+    <method>
+      <name DesignerName="setCornerRadius" HideFromIDE="true">_setcornerradius</name>
+      <returntype>String</returntype>
+      <parameter>
+        <name>CornerRadius</name>
+        <type>int</type>
+      </parameter>
+    </method>
+    <method>
+      <name DesignerName="setFaceBookAppID" HideFromIDE="true">_setfacebookappid</name>
+      <returntype>String</returntype>
+      <parameter>
+        <name>FaceBookAppID</name>
+        <type>String</type>
+      </parameter>
+    </method>
+    <method>
+      <name DesignerName="setFaceBookRedirectUri" HideFromIDE="true">_setfacebookredirecturi</name>
+      <returntype>String</returntype>
+      <parameter>
+        <name>FaceBookRedirectUri</name>
+        <type>String</type>
+      </parameter>
+    </method>
+    <method>
+      <name DesignerName="setHeaderBackColor" HideFromIDE="true">_setheaderbackcolor</name>
+      <returntype>String</returntype>
+      <parameter>
+        <name>Color</name>
+        <type>int</type>
+      </parameter>
+    </method>
+    <method>
+      <name DesignerName="setHeaderHeight" HideFromIDE="true">_setheaderheight</name>
+      <returntype>String</returntype>
+      <parameter>
+        <name>HeaderHeight</name>
+        <type>int</type>
+      </parameter>
+    </method>
+    <method>
+      <name DesignerName="setHeaderText" HideFromIDE="true">_setheadertext</name>
+      <returntype>String</returntype>
+      <parameter>
+        <name>HeaderText</name>
+        <type>String</type>
+      </parameter>
+    </method>
+    <method>
+      <name DesignerName="setHeaderTextColor" HideFromIDE="true">_setheadertextcolor</name>
+      <returntype>String</returntype>
+      <parameter>
+        <name>Color</name>
+        <type>int</type>
+      </parameter>
+    </method>
+    <method>
+      <name DesignerName="setHeaderTextSize" HideFromIDE="true">_setheadertextsize</name>
+      <returntype>String</returntype>
+      <parameter>
+        <name>TextSize</name>
+        <type>int</type>
+      </parameter>
+    </method>
+    <method>
+      <name DesignerName="setIntentType" HideFromIDE="true">_setintenttype</name>
+      <returntype>String</returntype>
+      <parameter>
+        <name>IntentType</name>
+        <type>String</type>
+      </parameter>
+    </method>
+    <method>
+      <name DesignerName="setLineColor" HideFromIDE="true">_setlinecolor</name>
+      <returntype>String</returntype>
+      <parameter>
+        <name>Color</name>
+        <type>int</type>
+      </parameter>
+    </method>
+    <method>
+      <name DesignerName="setPadding" HideFromIDE="true">_setpadding</name>
+      <returntype>String</returntype>
+      <parameter>
+        <name>Padding</name>
+        <type>int</type>
+      </parameter>
+    </method>
+    <method>
+      <name DesignerName="setPanelColor" HideFromIDE="true">_setpanelcolor</name>
+      <returntype>String</returntype>
+      <parameter>
+        <name>Color</name>
+        <type>int</type>
+      </parameter>
+    </method>
+    <method>
+      <name DesignerName="setSendingToFaceBookFinishedString" HideFromIDE="true">_setsendingtofacebookfinishedstring</name>
+      <returntype>String</returntype>
+      <parameter>
+        <name>SendingToFaceBookFinishedText</name>
+        <type>String</type>
+      </parameter>
+    </method>
+    <method>
+      <name DesignerName="setSendingToFaceBookString" HideFromIDE="true">_setsendingtofacebookstring</name>
+      <returntype>String</returntype>
+      <parameter>
+        <name>SendingToFaceBookText</name>
+        <type>String</type>
+      </parameter>
+    </method>
+    <method>
+      <name DesignerName="setShadowColor" HideFromIDE="true">_setshadowcolor</name>
+      <returntype>String</returntype>
+      <parameter>
+        <name>Color</name>
+        <type>int</type>
+      </parameter>
+    </method>
+    <method>
+      <name DesignerName="setSubject" HideFromIDE="true">_setsubject</name>
+      <returntype>String</returntype>
+      <parameter>
+        <name>Subject</name>
+        <type>String</type>
+      </parameter>
+    </method>
+    <method>
+      <name DesignerName="setText" HideFromIDE="true">_settext</name>
+      <returntype>String</returntype>
+      <parameter>
+        <name>Text</name>
+        <type>String</type>
+      </parameter>
+    </method>
+    <method>
+      <name DesignerName="setTextColor" HideFromIDE="true">_settextcolor</name>
+      <returntype>String</returntype>
+      <parameter>
+        <name>Color</name>
+        <type>int</type>
+      </parameter>
+    </method>
+    <method>
+      <name DesignerName="setTextSize" HideFromIDE="true">_settextsize</name>
+      <returntype>String</returntype>
+      <parameter>
+        <name>TextSize</name>
+        <type>int</type>
+      </parameter>
+    </method>
+    <method>
+      <name DesignerName="Share">_share</name>
+      <comment>Starts the ContentChooser</comment>
+      <returntype>String</returntype>
+      <parameter>
+        <name>Subject</name>
+        <type>String</type>
+      </parameter>
+      <parameter>
+        <name>Text</name>
+        <type>String</type>
+      </parameter>
+    </method>
+    <property>
+      <name DesignerName="AppButtonHeight">_appbuttonheight</name>
+      <comment>Height of the Buttons
+Standard: 120dip</comment>
+      <returntype>int</returntype>
+      <parameter>
+        <name>Value</name>
+        <type>int</type>
+      </parameter>
+    </property>
+    <property>
+      <name DesignerName="AppButtonWidth">_appbuttonwidth</name>
+      <comment>Width of the Buttons
+Standard: 160dip</comment>
+      <returntype>int</returntype>
+      <parameter>
+        <name>Value</name>
+        <type>int</type>
+      </parameter>
+    </property>
+    <property>
+      <name DesignerName="AppIconSize">_appiconsize</name>
+      <comment>Size of the Images on the Buttons
+Standard: 48dip</comment>
+      <returntype>int</returntype>
+      <parameter>
+        <name>Value</name>
+        <type>int</type>
+      </parameter>
+    </property>
+    <property>
+      <name DesignerName="ButtonNormalColor">_buttonnormalcolor</name>
+      <comment>Color of the unpressed Buttons
+Standard: colors.white</comment>
+      <returntype>int</returntype>
+      <parameter>
+        <name>Value</name>
+        <type>int</type>
+      </parameter>
+    </property>
+    <property>
+      <name DesignerName="ButtonPressedColor">_buttonpressedcolor</name>
+      <comment>Color of the pressed Button
+Standard: Colors.RGB(29,162,235)</comment>
+      <returntype>int</returntype>
+      <parameter>
+        <name>Value</name>
+        <type>int</type>
+      </parameter>
+    </property>
+    <property>
+      <name DesignerName="CornerRadius">_cornerradius</name>
+      <comment>Corner radius of the Buttons
+Standard: 0dip</comment>
+      <returntype>int</returntype>
+      <parameter>
+        <name>Value</name>
+        <type>int</type>
+      </parameter>
+    </property>
+    <property>
+      <name DesignerName="FaceBookAppID">_facebookappid</name>
+      <comment>Your Facebook AppID. Needed for publishing to FaceBook.
+Tutorial by NJDude: &lt;link&gt;http://www.basic4ppc.com/forum/basic4android-getting-started-tutorials/17739-tutorial-post-facebook-wall-via-b4a-app.html|http://www.basic4ppc.com/forum/basic4android-getting-started-tutorials/17739-tutorial-post-facebook-wall-via-b4a-app.html&lt;/link&gt;
+Attention: If not set, FaceBook will not be available to share with</comment>
+      <returntype>String</returntype>
+      <parameter>
+        <name>Value</name>
+        <type>String</type>
+      </parameter>
+    </property>
+    <property>
+      <name DesignerName="FaceBookRedirectUri">_facebookredirecturi</name>
+      <comment>Your Facebook RedirectUri. Needed for publishing to FaceBook.
+Tutorial by NJDude: &lt;link&gt;http://www.basic4ppc.com/forum/basic4android-getting-started-tutorials/17739-tutorial-post-facebook-wall-via-b4a-app.html|http://www.basic4ppc.com/forum/basic4android-getting-started-tutorials/17739-tutorial-post-facebook-wall-via-b4a-app.html&lt;/link&gt;
+Attention: If not set, FaceBook will not be available to share with</comment>
+      <returntype>String</returntype>
+      <parameter>
+        <name>Value</name>
+        <type>String</type>
+      </parameter>
+    </property>
+    <property>
+      <name DesignerName="HeaderBackColor">_headerbackcolor</name>
+      <comment>BackColor of the Header
+Standard: Colors.Transparent </comment>
+      <returntype>int</returntype>
+      <parameter>
+        <name>Value</name>
+        <type>int</type>
+      </parameter>
+    </property>
+    <property>
+      <name DesignerName="HeaderHeight">_headerheight</name>
+      <comment>Height of the Header
+Standard: 60dip</comment>
+      <returntype>int</returntype>
+      <parameter>
+        <name>Value</name>
+        <type>int</type>
+      </parameter>
+    </property>
+    <property>
+      <name DesignerName="HeaderText">_headertext</name>
+      <comment>HeaderText of the ContentChooser
+Standard: Choose</comment>
+      <returntype>String</returntype>
+      <parameter>
+        <name>Value</name>
+        <type>String</type>
+      </parameter>
+    </property>
+    <property>
+      <name DesignerName="HeaderTextColor">_headertextcolor</name>
+      <comment>TextColor of the Header
+Standard: Colors.RGB(49,182,255)</comment>
+      <returntype>int</returntype>
+      <parameter>
+        <name>Value</name>
+        <type>int</type>
+      </parameter>
+    </property>
+    <property>
+      <name DesignerName="HeaderTextSize">_headertextsize</name>
+      <comment>TextSize of the Header
+Standard: 22</comment>
+      <returntype>int</returntype>
+      <parameter>
+        <name>Value</name>
+        <type>int</type>
+      </parameter>
+    </property>
+    <property>
+      <name DesignerName="IntentType">_intenttype</name>
+      <comment>IntentType, for example "text/*" for Text, "image/jpeg" for jpg, "image/png" for png etc..</comment>
+      <returntype>String</returntype>
+      <parameter>
+        <name>Value</name>
+        <type>String</type>
+      </parameter>
+    </property>
+    <property>
+      <name DesignerName="LineColor">_linecolor</name>
+      <comment>Color of the Seperatorline below the Header
+Standard: Colors.RGB(49,182,255)</comment>
+      <returntype>int</returntype>
+      <parameter>
+        <name>Value</name>
+        <type>int</type>
+      </parameter>
+    </property>
+    <property>
+      <name DesignerName="Padding">_padding</name>
+      <comment>Padding
+Standard: 10dip</comment>
+      <returntype>int</returntype>
+      <parameter>
+        <name>Value</name>
+        <type>int</type>
+      </parameter>
+    </property>
+    <property>
+      <name DesignerName="PanelColor">_panelcolor</name>
+      <comment>Color of the ContentChooser Panel
+Standard: Colors.white</comment>
+      <returntype>int</returntype>
+      <parameter>
+        <name>Value</name>
+        <type>int</type>
+      </parameter>
+    </property>
+    <property>
+      <name DesignerName="SendingToFaceBookFinishedString">_sendingtofacebookfinishedstring</name>
+      <comment>The String displayed as ToastMessage after Sending to Facebook succeeded
+Standard: "Posted to Facebook"</comment>
+      <returntype>String</returntype>
+      <parameter>
+        <name>Value</name>
+        <type>String</type>
+      </parameter>
+    </property>
+    <property>
+      <name DesignerName="SendingToFaceBookString">_sendingtofacebookstring</name>
+      <comment>The String displayed in the ProgressDialog while sending to FaceBook
+Standard: "Posting to Facebook..."</comment>
+      <returntype>String</returntype>
+      <parameter>
+        <name>Value</name>
+        <type>String</type>
+      </parameter>
+    </property>
+    <property>
+      <name DesignerName="ShadowColor">_shadowcolor</name>
+      <comment>Color of the Background Shadow.
+Use colors.rgb(x,x,x) for opaque background, colors.argb(x,x,x,x) for Transparency
+Standard: Colors.ARGB(150,0,0,0)</comment>
+      <returntype>int</returntype>
+      <parameter>
+        <name>Value</name>
+        <type>int</type>
+      </parameter>
+    </property>
+    <property>
+      <name DesignerName="Subject">_subject</name>
+      <comment>Subject (for E-Mail,..) set as android.intent.extra.SUBJECT</comment>
+      <returntype>String</returntype>
+      <parameter>
+        <name>Value</name>
+        <type>String</type>
+      </parameter>
+    </property>
+    <property>
+      <name DesignerName="Text">_text</name>
+      <comment>The Message. Set as android.intent.extra.TEXT</comment>
+      <returntype>String</returntype>
+      <parameter>
+        <name>Value</name>
+        <type>String</type>
+      </parameter>
+    </property>
+    <property>
+      <name DesignerName="TextColor">_textcolor</name>
+      <comment>Textcolor of the Names of the displayed Packages
+Standard: Colors.Black</comment>
+      <returntype>int</returntype>
+      <parameter>
+        <name>Value</name>
+        <type>int</type>
+      </parameter>
+    </property>
+    <property>
+      <name DesignerName="TextSize">_textsize</name>
+      <comment>TextSize of the Names of the displayed Packages.
+Standard: 14</comment>
+      <returntype>int</returntype>
+      <parameter>
+        <name>Value</name>
+        <type>int</type>
+      </parameter>
+    </property>
+  </class>
+  <version>1</version>
+  <author>aha!dev</author>
+</root>

@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root>
+    <doclet-version-NOT-library-version>1.02</doclet-version-NOT-library-version>
+    <class>
+        <name>com.rootsoft.crop.RSCrop</name>
+        <shortname>RSCrop</shortname>
+        <owner>process</owner>
+        <permission>android.permission.WRITE_SECURE_SETTINGS</permission>
+        <permission>android.permission.READ_PHONE_STATE</permission>
+        <method>
+            <name>Initialize</name>
+            <comment>Initializes the RSCrop Library.
+ EventName - Events subs prefix. 
+ Events: "Cropped (Success As Boolean, Path as String)"</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>ba</name>
+                <type>anywheresoftware.b4a.BA</type>
+            </parameter>
+            <parameter>
+                <name>EventName</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>FileName</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+        <method>
+            <name>cropImage2</name>
+            <comment>Crops an image with the standard media gallery.
+ Difference is that you can use a rectangular crop with this.
+scale: - should it scale
+return_data: - Return the bitmap with Action=inline-data by using the data
+faceDetection: 
+circleCrop: - if this string is not null, it will provide some circular crop</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>scale</name>
+                <type>boolean</type>
+            </parameter>
+            <parameter>
+                <name>return_data</name>
+                <type>boolean</type>
+            </parameter>
+            <parameter>
+                <name>faceDetection</name>
+                <type>boolean</type>
+            </parameter>
+            <parameter>
+                <name>circleCrop</name>
+                <type>boolean</type>
+            </parameter>
+        </method>
+        <method>
+            <name>cropImage</name>
+            <comment>Crops an image with the standard media gallery.
+aspectX: - Set this to define the X aspect ratio of the shape
+aspectY: - Set this to define the Y aspect ratio of the shape
+outputX: - Set this to define the max size of the output bitmap
+outputY: - Set this to define the max size of the output bitmap
+scale: - should it scale
+return_data: - Return the bitmap with Action=inline-data by using the data
+faceDetection: 
+circleCrop: - if this string is not null, it will provide some circular crop</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>aspectX</name>
+                <type>int</type>
+            </parameter>
+            <parameter>
+                <name>aspectY</name>
+                <type>int</type>
+            </parameter>
+            <parameter>
+                <name>outputX</name>
+                <type>int</type>
+            </parameter>
+            <parameter>
+                <name>outputY</name>
+                <type>int</type>
+            </parameter>
+            <parameter>
+                <name>scale</name>
+                <type>boolean</type>
+            </parameter>
+            <parameter>
+                <name>return_data</name>
+                <type>boolean</type>
+            </parameter>
+            <parameter>
+                <name>faceDetection</name>
+                <type>boolean</type>
+            </parameter>
+            <parameter>
+                <name>circleCrop</name>
+                <type>boolean</type>
+            </parameter>
+        </method>
+        <method>
+            <name>cropImage3</name>
+            <comment>Crops an image with the standard media gallery.
+ Difference is that you can preselect a bitmap with this.
+scale: - should it scale
+return_data: - Return the bitmap with Action=inline-data by using the data
+faceDetection: 
+circleCrop: - if this string is not null, it will provide some circular crop</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>scale</name>
+                <type>boolean</type>
+            </parameter>
+            <parameter>
+                <name>return_data</name>
+                <type>boolean</type>
+            </parameter>
+            <parameter>
+                <name>faceDetection</name>
+                <type>boolean</type>
+            </parameter>
+            <parameter>
+                <name>circleCrop</name>
+                <type>boolean</type>
+            </parameter>
+            <parameter>
+                <name>btmp</name>
+                <type>android.graphics.Bitmap</type>
+            </parameter>
+        </method>
+    </class>
+    <version>1.0</version>
+    <author>XverhelstX</author>
+</root>

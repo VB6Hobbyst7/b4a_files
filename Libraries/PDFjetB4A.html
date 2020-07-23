@@ -1,0 +1,2084 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <title>PDFjetB4A</title>
+		<style type="text/css">
+			body{
+				background-color:#E1DEE6;
+				color:#222;
+				font-family:Arial,Helvetica,sans-serif;
+				font-size:14px;
+				margin:0;
+				padding:0;
+			}
+			h3{
+				background-color:#869BBF;
+				margin:0;
+				padding:5px;
+			}
+			ul{
+				list-style:none;
+				margin:5px;
+				padding:0;
+			}
+			ul li{
+				background-color:#FFF;
+				border:1px solid #666;
+				margin:0;
+				padding:5px;
+			}
+			ul li:first-child, h3{
+				border-top-left-radius:5px;
+				border-top-right-radius:5px;
+			}
+			ul li:last-child, h3{
+				border-bottom-left-radius:5px;
+				border-bottom-right-radius:5px;
+			}
+			ul h3:first-child{
+				background-color:#869BDF;
+				margin-bottom:5px;
+			}
+		</style>
+    </head>
+    <body><h3>PDFjetB4A</h3>
+<ul><li><h3>Comment:</h3></li><li>PDFjetB4A is a PDF document authoring library.
+ PDFjetB4A wraps the PDFjet for Java library from http://pdfjet.com/.
+ The PDFjet for Java library is available under a fully functional paid for license, an evaluation license and also under a feature limited open source license.
+ PDFjetB4A supports supports all license versions.
+ PDFjetB4A is built around version 5.03 of the PDFjet for Java library.</li></ul>
+<ul>
+<li><h3>PDFjetAlign</h3>
+<h3>Fields:</h3>
+<ul>
+<li><b>CENTER <span style='color:blue'>As</span> <span style='color:#008B8B'>Int</span></b>
+</li>
+<li><b>JUSTIFY <span style='color:blue'>As</span> <span style='color:#008B8B'>Int</span></b>
+</li>
+<li><b>LEFT <span style='color:blue'>As</span> <span style='color:#008B8B'>Int</span></b>
+</li>
+<li><b>RIGHT <span style='color:blue'>As</span> <span style='color:#008B8B'>Int</span></b>
+</li>
+</ul>
+<h3>Methods:</h3>
+<ul>
+<li><b>ValueOf</b> (Value <span style='color:blue'>As</span> <span style='color:#008B8B'>String</span>)<b> <span style='color:blue'>As</span> <span style='color:#008B8B'>Int</span></b>
+</li>
+</ul>
+</ul>
+<ul>
+<li><h3>PDFjetAnnotation</h3>
+<h3>Methods:</h3>
+<ul>
+<li><b>Initialize</b> (URI <span style='color:blue'>As</span> <span style='color:#008B8B'>String</span>, Key <span style='color:blue'>As</span> <span style='color:#008B8B'>String</span>, X1 <span style='color:blue'>As</span> <span style='color:#008B8B'>Float</span>, Y1 <span style='color:blue'>As</span> <span style='color:#008B8B'>Float</span>, X2 <span style='color:blue'>As</span> <span style='color:#008B8B'>Float</span>, Y2 <span style='color:blue'>As</span> <span style='color:#008B8B'>Float</span>)<b></b>
+<br><i>Initialize the Annotation object.
+ URI - The URI string.
+ Key - The destination name.
+ X1 - The X coordinate of the top left corner.
+ Y1 - The Y coordinate of the top left corner.
+ X2 - The X coordinate of the bottom right corner.
+ Y2 - The Y coordinate of the bottom right corner.</i>
+</li>
+<li><b>IsInitialized <span style='color:blue'>As</span> <span style='color:#008B8B'>Boolean</span></b>
+</li>
+</ul>
+</ul>
+<ul>
+<li><h3>PDFjetBarCode</h3>
+<h3>Fields:</h3>
+<ul>
+<li><b>BOTTOM_TO_TOP <span style='color:blue'>As</span> <span style='color:#008B8B'>Int</span></b>
+</li>
+<li><b>CODE128 <span style='color:blue'>As</span> <span style='color:#008B8B'>Int</span></b>
+</li>
+<li><b>CODE39 <span style='color:blue'>As</span> <span style='color:#008B8B'>Int</span></b>
+</li>
+<li><b>LEFT_TO_RIGHT <span style='color:blue'>As</span> <span style='color:#008B8B'>Int</span></b>
+</li>
+<li><b>TOP_TO_BOTTOM <span style='color:blue'>As</span> <span style='color:#008B8B'>Int</span></b>
+</li>
+<li><b>UPC <span style='color:blue'>As</span> <span style='color:#008B8B'>Int</span></b>
+</li>
+</ul>
+<h3>Methods:</h3>
+<ul>
+<li><b>DrawOn</b> (PDFjetPage <span style='color:blue'>As</span> <span style='color:#008B8B'>Page</span>)<b></b>
+</li>
+<li><b>Initialize</b> (Type <span style='color:blue'>As</span> <span style='color:#008B8B'>Int</span>, String1 <span style='color:blue'>As</span> <span style='color:#008B8B'>String</span>)<b></b>
+</li>
+<li><b>IsInitialized <span style='color:blue'>As</span> <span style='color:#008B8B'>Boolean</span></b>
+</li>
+<li><b>SetBarHeightFactor</b> (Factor <span style='color:blue'>As</span> <span style='color:#008B8B'>Float</span>)<b></b>
+</li>
+<li><b>SetDirection</b> (Direction <span style='color:blue'>As</span> <span style='color:#008B8B'>Int</span>)<b></b>
+</li>
+<li><b>SetFont</b> (PDFjetFont <span style='color:blue'>As</span> <span style='color:#008B8B'>Font</span>)<b></b>
+</li>
+<li><b>SetModuleLength</b> (Length <span style='color:blue'>As</span> <span style='color:#008B8B'>Float</span>)<b></b>
+</li>
+<li><b>SetPosition</b> (X <span style='color:blue'>As</span> <span style='color:#008B8B'>Float</span>, Y <span style='color:blue'>As</span> <span style='color:#008B8B'>Float</span>)<b></b>
+</li>
+</ul>
+</ul>
+<ul>
+<li><h3>PDFjetBarCode2D</h3>
+<h3>Methods:</h3>
+<ul>
+<li><b>DrawOn</b> (PDFjetPage <span style='color:blue'>As</span> <span style='color:#008B8B'>Page</span>)<b></b>
+</li>
+<li><b>Initialize</b> (String1 <span style='color:blue'>As</span> <span style='color:#008B8B'>String</span>)<b></b>
+</li>
+<li><b>IsInitialized <span style='color:blue'>As</span> <span style='color:#008B8B'>Boolean</span></b>
+</li>
+<li><b>SetPosition</b> (X <span style='color:blue'>As</span> <span style='color:#008B8B'>Float</span>, Y <span style='color:blue'>As</span> <span style='color:#008B8B'>Float</span>)<b></b>
+</li>
+</ul>
+</ul>
+<ul>
+<li><h3>PDFjetBidi</h3>
+<h3>Methods:</h3>
+<ul>
+<li><b>ReorderVisually</b> (Text <span style='color:blue'>As</span> <span style='color:#008B8B'>String</span>)<b> <span style='color:blue'>As</span> <span style='color:#008B8B'>String</span></b>
+<br><i>Reorders the string so that Hebrew text flows from right to left while numbers and Latin text flow from left to right.</i>
+</li>
+</ul>
+</ul>
+<ul>
+<li><h3>PDFjetBorder</h3>
+<h3>Fields:</h3>
+<ul>
+<li><b>BOTTOM <span style='color:blue'>As</span> <span style='color:#008B8B'>Int</span></b>
+</li>
+<li><b>LEFT <span style='color:blue'>As</span> <span style='color:#008B8B'>Int</span></b>
+</li>
+<li><b>RIGHT <span style='color:blue'>As</span> <span style='color:#008B8B'>Int</span></b>
+</li>
+<li><b>TOP <span style='color:blue'>As</span> <span style='color:#008B8B'>Int</span></b>
+</li>
+</ul>
+<h3>Methods:</h3>
+<ul>
+<li><b>ValueOf</b> (Value <span style='color:blue'>As</span> <span style='color:#008B8B'>String</span>)<b> <span style='color:blue'>As</span> <span style='color:#008B8B'>Int</span></b>
+</li>
+</ul>
+</ul>
+<ul>
+<li><h3>PDFjetBox</h3>
+<h3>Methods:</h3>
+<ul>
+<li><b>DrawOn</b> (PDFjetPage <span style='color:blue'>As</span> <span style='color:#008B8B'>Page</span>)<b></b>
+<br><i>Draws this Box on the specified Page.</i>
+</li>
+<li><b>Initialize</b>
+<br><i>Initialize the Box object.
+ The Box object is used to create rectangular boxes on a Page.
+ Also used to for layout purposes.
+ See the PlaceIn method in the Image and TextLine classes.</i>
+</li>
+<li><b>Initialize2</b> (X <span style='color:blue'>As</span> <span style='color:#008B8B'>Float</span>, Y <span style='color:blue'>As</span> <span style='color:#008B8B'>Float</span>, Width <span style='color:blue'>As</span> <span style='color:#008B8B'>Float</span>, Height <span style='color:blue'>As</span> <span style='color:#008B8B'>Float</span>)<b></b>
+</li>
+<li><b>IsInitialized <span style='color:blue'>As</span> <span style='color:#008B8B'>Boolean</span></b>
+</li>
+<li><b>PlaceIn</b> (PDFjetBox <span style='color:blue'>As</span> <span style='color:#008B8B'>Box</span>, XOffset <span style='color:blue'>As</span> <span style='color:#008B8B'>Float</span>, YOffset <span style='color:blue'>As</span> <span style='color:#008B8B'>Float</span>)<b></b>
+<br><i>Places this Box in the another Box.</i>
+</li>
+<li><b>ScaleBy</b> (Factor <span style='color:blue'>As</span> <span style='color:#008B8B'>Float</span>)<b></b>
+<br><i>Scales this box by the specified factor.</i>
+</li>
+<li><b>SetColor</b> (Color1 <span style='color:blue'>As</span> <span style='color:#008B8B'>Int</span>)<b></b>
+<br><i>Sets the color for this box.</i>
+</li>
+<li><b>SetFillShape</b> (Enable <span style='color:blue'>As</span> <span style='color:#008B8B'>Boolean</span>)<b></b>
+</li>
+<li><b>SetGoToAction</b> (Key <span style='color:blue'>As</span> <span style='color:#008B8B'>String</span>)<b></b>
+<br><i>Sets the destination key for the action.</i>
+</li>
+<li><b>SetLineWidth</b> (Width <span style='color:blue'>As</span> <span style='color:#008B8B'>Float</span>)<b></b>
+</li>
+<li><b>SetPattern</b> (Pattern <span style='color:blue'>As</span> <span style='color:#008B8B'>String</span>)<b></b>
+<br><i>The line dash pattern controls the pattern of dashes and gaps used to stroke paths.
+  It is specified by a dash array and a dash phase.
+  The elements of the dash array are positive numbers that specify the lengths of
+  alternating dashes and gaps.
+  The dash phase specifies the distance into the dash pattern at which to start the dash.
+  The elements of both the dash array and the dash phase are expressed in user space units.
+  <pre>
+  Examples of line dash patterns:
+
+      "[Array] Phase"     Appearance          Description
+      _______________     _________________   ____________________________________
+
+      "[] 0"              -----------------   Solid line
+      "[3] 0"             ---   ---   ---     3 units on, 3 units off, ...
+      "[2] 1"             -  --  --  --  --   1 on, 2 off, 2 on, 2 off, ...
+      "[2 1] 0"           -- -- -- -- -- --   2 on, 1 off, 2 on, 1 off, ...
+      "[3 5] 6"             ---     ---       2 off, 3 on, 5 off, 3 on, 5 off, ...
+      "[2 3] 11"          -   --   --   --    1 on, 3 off, 2 on, 3 off, 2 on, ...
+  </pre></i>
+</li>
+<li><b>SetPosition</b> (X <span style='color:blue'>As</span> <span style='color:#008B8B'>Float</span>, Y <span style='color:blue'>As</span> <span style='color:#008B8B'>Float</span>)<b></b>
+<br><i>Sets the position of this box on the page.</i>
+</li>
+<li><b>SetSize</b> (Width <span style='color:blue'>As</span> <span style='color:#008B8B'>Float</span>, Height <span style='color:blue'>As</span> <span style='color:#008B8B'>Float</span>)<b></b>
+</li>
+<li><b>SetURIAction</b> (Uri <span style='color:blue'>As</span> <span style='color:#008B8B'>String</span>)<b></b>
+<br><i>Sets the URL for the "click box" action.</i>
+</li>
+</ul>
+</ul>
+<ul>
+<li><h3>PDFjetCap</h3>
+<h3>Fields:</h3>
+<ul>
+<li><b>BUTT <span style='color:blue'>As</span> <span style='color:#008B8B'>Int</span></b>
+</li>
+<li><b>PROJECTING_SQUARE <span style='color:blue'>As</span> <span style='color:#008B8B'>Int</span></b>
+</li>
+<li><b>ROUND <span style='color:blue'>As</span> <span style='color:#008B8B'>Int</span></b>
+</li>
+</ul>
+<h3>Methods:</h3>
+<ul>
+<li><b>ValueOf</b> (Value <span style='color:blue'>As</span> <span style='color:#008B8B'>String</span>)<b> <span style='color:blue'>As</span> <span style='color:#008B8B'>Int</span></b>
+</li>
+</ul>
+</ul>
+<ul>
+<li><h3>PDFjetCell</h3>
+<h3>Methods:</h3>
+<ul>
+<li><b>GetBgColor <span style='color:blue'>As</span> <span style='color:#008B8B'>Int</span></b>
+<br><i>Returns the background color of this cell.</i>
+</li>
+<li><b>GetBorder</b> (Border1 <span style='color:blue'>As</span> <span style='color:#008B8B'>Int</span>)<b> <span style='color:blue'>As</span> <span style='color:#008B8B'>Boolean</span></b>
+<br><i>Returns the Cell's Border object.</i>
+</li>
+<li><b>GetBrushColor <span style='color:blue'>As</span> <span style='color:#008B8B'>Int</span></b>
+</li>
+<li><b>GetColSpan <span style='color:blue'>As</span> <span style='color:#008B8B'>Int</span></b>
+</li>
+<li><b>GetCompositeTextLine <span style='color:blue'>As</span> <span style='color:#008B8B'>CompositeTextLineWrapper</span></b>
+</li>
+<li><b>GetFont <span style='color:blue'>As</span> <span style='color:#008B8B'>FontWrapper</span></b>
+</li>
+<li><b>GetHeight <span style='color:blue'>As</span> <span style='color:#008B8B'>Float</span></b>
+</li>
+<li><b>GetImage <span style='color:blue'>As</span> <span style='color:#008B8B'>ImageWrapper</span></b>
+</li>
+<li><b>GetLineWidth <span style='color:blue'>As</span> <span style='color:#008B8B'>Float</span></b>
+</li>
+<li><b>GetPenColor <span style='color:blue'>As</span> <span style='color:#008B8B'>Int</span></b>
+</li>
+<li><b>GetPoint <span style='color:blue'>As</span> <span style='color:#008B8B'>PointWrapper</span></b>
+</li>
+<li><b>GetStrikeout <span style='color:blue'>As</span> <span style='color:#008B8B'>Boolean</span></b>
+</li>
+<li><b>GetText <span style='color:blue'>As</span> <span style='color:#008B8B'>String</span></b>
+</li>
+<li><b>GetTextAlignment <span style='color:blue'>As</span> <span style='color:#008B8B'>Int</span></b>
+</li>
+<li><b>GetUnderline <span style='color:blue'>As</span> <span style='color:#008B8B'>Boolean</span></b>
+</li>
+<li><b>GetWidth <span style='color:blue'>As</span> <span style='color:#008B8B'>Float</span></b>
+</li>
+<li><b>Initialize</b> (PDFjetFont <span style='color:blue'>As</span> <span style='color:#008B8B'>Font</span>)<b></b>
+<br><i>Initializes a Cell object and sets the Font.
+Cell is used to create Table cell objects.</i>
+</li>
+<li><b>Initialize2</b> (PDFjetFont <span style='color:blue'>As</span> <span style='color:#008B8B'>Font</span>, Text <span style='color:blue'>As</span> <span style='color:#008B8B'>String</span>)<b></b>
+<br><i>Initializes a Cell object, sets the Font and the Cell text.</i>
+</li>
+<li><b>IsInitialized <span style='color:blue'>As</span> <span style='color:#008B8B'>Boolean</span></b>
+</li>
+<li><b>SetBgColor</b> (Color1 <span style='color:blue'>As</span> <span style='color:#008B8B'>Int</span>)<b></b>
+</li>
+<li><b>SetBorder</b> (Border1 <span style='color:blue'>As</span> <span style='color:#008B8B'>Int</span>, Visible <span style='color:blue'>As</span> <span style='color:#008B8B'>Boolean</span>)<b></b>
+</li>
+<li><b>SetBottomPadding</b> (Padding <span style='color:blue'>As</span> <span style='color:#008B8B'>Float</span>)<b></b>
+</li>
+<li><b>SetBrushColor</b> (Color1 <span style='color:blue'>As</span> <span style='color:#008B8B'>Int</span>)<b></b>
+</li>
+<li><b>SetColSpan</b> (ColSpan <span style='color:blue'>As</span> <span style='color:#008B8B'>Int</span>)<b></b>
+</li>
+<li><b>SetCompositeTextLine</b> (PDFjetCompositeTextLine <span style='color:blue'>As</span> <span style='color:#008B8B'>CompositeTextLine</span>)<b></b>
+</li>
+<li><b>SetFgColor</b> (Color1 <span style='color:blue'>As</span> <span style='color:#008B8B'>Int</span>)<b></b>
+<br><i>Sets both pen and brush colors to the specified color.</i>
+</li>
+<li><b>SetFont</b> (PDFjetFont <span style='color:blue'>As</span> <span style='color:#008B8B'>Font</span>)<b></b>
+</li>
+<li><b>SetImage</b> (PDFjetImage <span style='color:blue'>As</span> <span style='color:#008B8B'>Image</span>)<b></b>
+</li>
+<li><b>SetLeftPadding</b> (Padding <span style='color:blue'>As</span> <span style='color:#008B8B'>Float</span>)<b></b>
+</li>
+<li><b>SetLineWidth</b> (Width <span style='color:blue'>As</span> <span style='color:#008B8B'>Float</span>)<b></b>
+</li>
+<li><b>SetNoBorders</b>
+</li>
+<li><b>SetPenColor</b> (Color1 <span style='color:blue'>As</span> <span style='color:#008B8B'>Int</span>)<b></b>
+</li>
+<li><b>SetPoint</b> (PDFjetPoint <span style='color:blue'>As</span> <span style='color:#008B8B'>Point</span>)<b></b>
+</li>
+<li><b>SetRightPadding</b> (Padding <span style='color:blue'>As</span> <span style='color:#008B8B'>Float</span>)<b></b>
+</li>
+<li><b>SetStrikeout</b> (Strikeout <span style='color:blue'>As</span> <span style='color:#008B8B'>Boolean</span>)<b></b>
+</li>
+<li><b>SetText</b> (Text <span style='color:blue'>As</span> <span style='color:#008B8B'>String</span>)<b></b>
+</li>
+<li><b>SetTextAlignment</b> (Alignment <span style='color:blue'>As</span> <span style='color:#008B8B'>Int</span>)<b></b>
+</li>
+<li><b>SetTopPadding</b> (Padding <span style='color:blue'>As</span> <span style='color:#008B8B'>Float</span>)<b></b>
+</li>
+<li><b>SetUnderline</b> (Underline <span style='color:blue'>As</span> <span style='color:#008B8B'>Boolean</span>)<b></b>
+</li>
+<li><b>SetWidth</b> (Width <span style='color:blue'>As</span> <span style='color:#008B8B'>Float</span>)<b></b>
+</li>
+</ul>
+</ul>
+<ul>
+<li><h3>PDFjetCellList</h3>
+<h3>Methods:</h3>
+<ul>
+<li><b>Add</b> (Cell1 <span style='color:blue'>As</span> <span style='color:#008B8B'>Cell</span>)<b></b>
+</li>
+<li><b>Clear</b>
+</li>
+<li><b>CreateCell</b> (PDFjetFont <span style='color:blue'>As</span> <span style='color:#008B8B'>Font</span>)<b> <span style='color:blue'>As</span> <span style='color:#008B8B'>CellWrapper</span></b>
+</li>
+<li><b>CreateCell2</b> (PDFjetFont <span style='color:blue'>As</span> <span style='color:#008B8B'>Font</span>, Text <span style='color:blue'>As</span> <span style='color:#008B8B'>String</span>)<b> <span style='color:blue'>As</span> <span style='color:#008B8B'>CellWrapper</span></b>
+</li>
+<li><b>Get</b> (Index <span style='color:blue'>As</span> <span style='color:#008B8B'>Int</span>)<b> <span style='color:blue'>As</span> <span style='color:#008B8B'>CellWrapper</span></b>
+</li>
+<li><b>IndexOf</b> (Cell1 <span style='color:blue'>As</span> <span style='color:#008B8B'>Cell</span>)<b> <span style='color:blue'>As</span> <span style='color:#008B8B'>Int</span></b>
+</li>
+<li><b>Initialize</b>
+</li>
+<li><b>InsertAt</b> (Index <span style='color:blue'>As</span> <span style='color:#008B8B'>Int</span>, Cell1 <span style='color:blue'>As</span> <span style='color:#008B8B'>Cell</span>)<b></b>
+</li>
+<li><b>IsInitialized <span style='color:blue'>As</span> <span style='color:#008B8B'>Boolean</span></b>
+</li>
+<li><b>Remove</b> (Cell1 <span style='color:blue'>As</span> <span style='color:#008B8B'>Cell</span>)<b></b>
+</li>
+<li><b>RemoveAt</b> (Index <span style='color:blue'>As</span> <span style='color:#008B8B'>Int</span>)<b></b>
+</li>
+<li><b>Set</b> (Index <span style='color:blue'>As</span> <span style='color:#008B8B'>Int</span>, Cell1 <span style='color:blue'>As</span> <span style='color:#008B8B'>Cell</span>)<b></b>
+</li>
+</ul>
+<h3>Properties:</h3>
+<ul>
+<li><b>Size <span style='color:blue'>As</span> <span style='color:#008B8B'>Int</span></b> <i>[read only]</i>
+</li>
+</ul>
+</ul>
+<ul>
+<li><h3>PDFjetChart</h3>
+<h3>Methods:</h3>
+<ul>
+<li><b>DrawOn</b> (PDFjetPage <span style='color:blue'>As</span> <span style='color:#008B8B'>Page</span>)<b></b>
+</li>
+<li><b>GetData <span style='color:blue'>As</span> <span style='color:#008B8B'>PointWrapper[][]</span></b>
+</li>
+<li><b>Initialize</b> (PDFjetFont1 <span style='color:blue'>As</span> <span style='color:#008B8B'>Font</span>, PDFjetFont2 <span style='color:blue'>As</span> <span style='color:#008B8B'>Font</span>)<b></b>
+</li>
+<li><b>Intercept</b> (Points <span style='color:blue'>As</span> <span style='color:#008B8B'>List</span>, Slope <span style='color:blue'>As</span> <span style='color:#008B8B'>Float</span>)<b> <span style='color:blue'>As</span> <span style='color:#008B8B'>Float</span></b>
+</li>
+<li><b>IsInitialized <span style='color:blue'>As</span> <span style='color:#008B8B'>Boolean</span></b>
+</li>
+<li><b>SetData</b> (Points <span style='color:blue'>As</span> <span style='color:#008B8B'>List</span>)<b></b>
+</li>
+<li><b>SetMaximumFractionDigits</b> (Maximum <span style='color:blue'>As</span> <span style='color:#008B8B'>Int</span>)<b></b>
+</li>
+<li><b>SetMinimumFractionDigits</b> (Maximum <span style='color:blue'>As</span> <span style='color:#008B8B'>Int</span>)<b></b>
+</li>
+<li><b>SetPosition</b> (X <span style='color:blue'>As</span> <span style='color:#008B8B'>Int</span>, Y <span style='color:blue'>As</span> <span style='color:#008B8B'>Int</span>)<b></b>
+</li>
+<li><b>SetSize</b> (Width <span style='color:blue'>As</span> <span style='color:#008B8B'>Float</span>, Height <span style='color:blue'>As</span> <span style='color:#008B8B'>Float</span>)<b></b>
+</li>
+<li><b>SetTitle</b> (Title <span style='color:blue'>As</span> <span style='color:#008B8B'>String</span>)<b></b>
+</li>
+<li><b>SetXAxisTitle</b> (Title <span style='color:blue'>As</span> <span style='color:#008B8B'>String</span>)<b></b>
+</li>
+<li><b>SetYAxisTitle</b> (Title <span style='color:blue'>As</span> <span style='color:#008B8B'>String</span>)<b></b>
+</li>
+<li><b>Slope</b> (Points <span style='color:blue'>As</span> <span style='color:#008B8B'>List</span>)<b> <span style='color:blue'>As</span> <span style='color:#008B8B'>Float</span></b>
+</li>
+</ul>
+</ul>
+<ul>
+<li><h3>PDFjetCheckBox</h3>
+<h3>Methods:</h3>
+<ul>
+<li><b>DrawOn</b> (PDFjetPage <span style='color:blue'>As</span> <span style='color:#008B8B'>Page</span>)<b></b>
+</li>
+<li><b>GetHeight <span style='color:blue'>As</span> <span style='color:#008B8B'>Float</span></b>
+</li>
+<li><b>GetWidth <span style='color:blue'>As</span> <span style='color:#008B8B'>Float</span></b>
+</li>
+<li><b>GetX <span style='color:blue'>As</span> <span style='color:#008B8B'>Float</span></b>
+</li>
+<li><b>GetY <span style='color:blue'>As</span> <span style='color:#008B8B'>Float</span></b>
+</li>
+<li><b>Initialize</b> (Checked <span style='color:blue'>As</span> <span style='color:#008B8B'>Boolean</span>)<b></b>
+<br><i>Creates a CheckBox, which can be set checked or unchecked.
+ Default check mark is blue.
+ Default box is black, default font size is 14.0f.</i>
+</li>
+<li><b>Initialize2</b> (Checked <span style='color:blue'>As</span> <span style='color:#008B8B'>Boolean</span>, Color <span style='color:blue'>As</span> <span style='color:#008B8B'>Int</span>)<b></b>
+</li>
+<li><b>Initialize3</b> (PDFjetFont <span style='color:blue'>As</span> <span style='color:#008B8B'>Font</span>, Text <span style='color:blue'>As</span> <span style='color:#008B8B'>String</span>)<b></b>
+</li>
+<li><b>IsInitialized <span style='color:blue'>As</span> <span style='color:#008B8B'>Boolean</span></b>
+</li>
+<li><b>SetBoxColor</b> (Color <span style='color:blue'>As</span> <span style='color:#008B8B'>Int</span>)<b></b>
+<br><i>Sets the color of the check box.</i>
+</li>
+<li><b>SetCheckColor</b> (Color <span style='color:blue'>As</span> <span style='color:#008B8B'>Int</span>)<b></b>
+<br><i>Sets the color of the check mark.</i>
+</li>
+<li><b>SetChecked</b> (Checked <span style='color:blue'>As</span> <span style='color:#008B8B'>Boolean</span>)<b></b>
+</li>
+<li><b>SetMarkType</b> (MarkType <span style='color:blue'>As</span> <span style='color:#008B8B'>Int</span>)<b></b>
+<br><i>Sets the type of check mark.
+ MarkType - The type of check mark.
+ 1 = check (the default), 2 = X.</i>
+</li>
+<li><b>SetPosition</b> (X <span style='color:blue'>As</span> <span style='color:#008B8B'>Float</span>, Y <span style='color:blue'>As</span> <span style='color:#008B8B'>Float</span>)<b></b>
+</li>
+<li><b>SetSize</b> (Size <span style='color:blue'>As</span> <span style='color:#008B8B'>Float</span>)<b></b>
+<br><i>Set the size of the CheckBox.</i>
+</li>
+</ul>
+</ul>
+<ul>
+<li><h3>PDFjetCodePage</h3>
+<h3>Fields:</h3>
+<ul>
+<li><b>CP1250 <span style='color:blue'>As</span> <span style='color:#008B8B'>Int</span></b>
+</li>
+<li><b>CP1251 <span style='color:blue'>As</span> <span style='color:#008B8B'>Int</span></b>
+</li>
+<li><b>CP1252 <span style='color:blue'>As</span> <span style='color:#008B8B'>Int</span></b>
+</li>
+<li><b>CP1253 <span style='color:blue'>As</span> <span style='color:#008B8B'>Int</span></b>
+</li>
+<li><b>CP1254 <span style='color:blue'>As</span> <span style='color:#008B8B'>Int</span></b>
+</li>
+<li><b>CP1257 <span style='color:blue'>As</span> <span style='color:#008B8B'>Int</span></b>
+</li>
+<li><b>UNICODE <span style='color:blue'>As</span> <span style='color:#008B8B'>Int</span></b>
+</li>
+</ul>
+<h3>Methods:</h3>
+<ul>
+<li><b>ValueOf</b> (Value <span style='color:blue'>As</span> <span style='color:#008B8B'>String</span>)<b> <span style='color:blue'>As</span> <span style='color:#008B8B'>Int</span></b>
+</li>
+</ul>
+</ul>
+<ul>
+<li><h3>PDFjetColor</h3>
+<h3>Fields:</h3>
+<ul>
+<li><b>aliceblue <span style='color:blue'>As</span> <span style='color:#008B8B'>Int</span></b>
+</li>
+<li><b>antiquewhite <span style='color:blue'>As</span> <span style='color:#008B8B'>Int</span></b>
+</li>
+<li><b>aqua <span style='color:blue'>As</span> <span style='color:#008B8B'>Int</span></b>
+</li>
+<li><b>aquamarine <span style='color:blue'>As</span> <span style='color:#008B8B'>Int</span></b>
+</li>
+<li><b>azure <span style='color:blue'>As</span> <span style='color:#008B8B'>Int</span></b>
+</li>
+<li><b>beige <span style='color:blue'>As</span> <span style='color:#008B8B'>Int</span></b>
+</li>
+<li><b>bisque <span style='color:blue'>As</span> <span style='color:#008B8B'>Int</span></b>
+</li>
+<li><b>black <span style='color:blue'>As</span> <span style='color:#008B8B'>Int</span></b>
+</li>
+<li><b>blanchedalmond <span style='color:blue'>As</span> <span style='color:#008B8B'>Int</span></b>
+</li>
+<li><b>blue <span style='color:blue'>As</span> <span style='color:#008B8B'>Int</span></b>
+</li>
+<li><b>blueviolet <span style='color:blue'>As</span> <span style='color:#008B8B'>Int</span></b>
+</li>
+<li><b>brown <span style='color:blue'>As</span> <span style='color:#008B8B'>Int</span></b>
+</li>
+<li><b>burlywood <span style='color:blue'>As</span> <span style='color:#008B8B'>Int</span></b>
+</li>
+<li><b>cadetblue <span style='color:blue'>As</span> <span style='color:#008B8B'>Int</span></b>
+</li>
+<li><b>chartreuse <span style='color:blue'>As</span> <span style='color:#008B8B'>Int</span></b>
+</li>
+<li><b>chocolate <span style='color:blue'>As</span> <span style='color:#008B8B'>Int</span></b>
+</li>
+<li><b>coral <span style='color:blue'>As</span> <span style='color:#008B8B'>Int</span></b>
+</li>
+<li><b>cornflowerblue <span style='color:blue'>As</span> <span style='color:#008B8B'>Int</span></b>
+</li>
+<li><b>cornsilk <span style='color:blue'>As</span> <span style='color:#008B8B'>Int</span></b>
+</li>
+<li><b>crimson <span style='color:blue'>As</span> <span style='color:#008B8B'>Int</span></b>
+</li>
+<li><b>cyan <span style='color:blue'>As</span> <span style='color:#008B8B'>Int</span></b>
+</li>
+<li><b>darkblue <span style='color:blue'>As</span> <span style='color:#008B8B'>Int</span></b>
+</li>
+<li><b>darkcyan <span style='color:blue'>As</span> <span style='color:#008B8B'>Int</span></b>
+</li>
+<li><b>darkgoldenrod <span style='color:blue'>As</span> <span style='color:#008B8B'>Int</span></b>
+</li>
+<li><b>darkgray <span style='color:blue'>As</span> <span style='color:#008B8B'>Int</span></b>
+</li>
+<li><b>darkgreen <span style='color:blue'>As</span> <span style='color:#008B8B'>Int</span></b>
+</li>
+<li><b>darkgrey <span style='color:blue'>As</span> <span style='color:#008B8B'>Int</span></b>
+</li>
+<li><b>darkkhaki <span style='color:blue'>As</span> <span style='color:#008B8B'>Int</span></b>
+</li>
+<li><b>darkmagenta <span style='color:blue'>As</span> <span style='color:#008B8B'>Int</span></b>
+</li>
+<li><b>darkolivegreen <span style='color:blue'>As</span> <span style='color:#008B8B'>Int</span></b>
+</li>
+<li><b>darkorange <span style='color:blue'>As</span> <span style='color:#008B8B'>Int</span></b>
+</li>
+<li><b>darkorchid <span style='color:blue'>As</span> <span style='color:#008B8B'>Int</span></b>
+</li>
+<li><b>darkred <span style='color:blue'>As</span> <span style='color:#008B8B'>Int</span></b>
+</li>
+<li><b>darksalmon <span style='color:blue'>As</span> <span style='color:#008B8B'>Int</span></b>
+</li>
+<li><b>darkseagreen <span style='color:blue'>As</span> <span style='color:#008B8B'>Int</span></b>
+</li>
+<li><b>darkslateblue <span style='color:blue'>As</span> <span style='color:#008B8B'>Int</span></b>
+</li>
+<li><b>darkslategray <span style='color:blue'>As</span> <span style='color:#008B8B'>Int</span></b>
+</li>
+<li><b>darkslategrey <span style='color:blue'>As</span> <span style='color:#008B8B'>Int</span></b>
+</li>
+<li><b>darkturquoise <span style='color:blue'>As</span> <span style='color:#008B8B'>Int</span></b>
+</li>
+<li><b>darkviolet <span style='color:blue'>As</span> <span style='color:#008B8B'>Int</span></b>
+</li>
+<li><b>deeppink <span style='color:blue'>As</span> <span style='color:#008B8B'>Int</span></b>
+</li>
+<li><b>deepskyblue <span style='color:blue'>As</span> <span style='color:#008B8B'>Int</span></b>
+</li>
+<li><b>dimgray <span style='color:blue'>As</span> <span style='color:#008B8B'>Int</span></b>
+</li>
+<li><b>dimgrey <span style='color:blue'>As</span> <span style='color:#008B8B'>Int</span></b>
+</li>
+<li><b>dodgerblue <span style='color:blue'>As</span> <span style='color:#008B8B'>Int</span></b>
+</li>
+<li><b>firebrick <span style='color:blue'>As</span> <span style='color:#008B8B'>Int</span></b>
+</li>
+<li><b>floralwhite <span style='color:blue'>As</span> <span style='color:#008B8B'>Int</span></b>
+</li>
+<li><b>forestgreen <span style='color:blue'>As</span> <span style='color:#008B8B'>Int</span></b>
+</li>
+<li><b>fuchsia <span style='color:blue'>As</span> <span style='color:#008B8B'>Int</span></b>
+</li>
+<li><b>gainsboro <span style='color:blue'>As</span> <span style='color:#008B8B'>Int</span></b>
+</li>
+<li><b>ghostwhite <span style='color:blue'>As</span> <span style='color:#008B8B'>Int</span></b>
+</li>
+<li><b>gold <span style='color:blue'>As</span> <span style='color:#008B8B'>Int</span></b>
+</li>
+<li><b>goldenrod <span style='color:blue'>As</span> <span style='color:#008B8B'>Int</span></b>
+</li>
+<li><b>gray <span style='color:blue'>As</span> <span style='color:#008B8B'>Int</span></b>
+</li>
+<li><b>green <span style='color:blue'>As</span> <span style='color:#008B8B'>Int</span></b>
+</li>
+<li><b>greenyellow <span style='color:blue'>As</span> <span style='color:#008B8B'>Int</span></b>
+</li>
+<li><b>grey <span style='color:blue'>As</span> <span style='color:#008B8B'>Int</span></b>
+</li>
+<li><b>honeydew <span style='color:blue'>As</span> <span style='color:#008B8B'>Int</span></b>
+</li>
+<li><b>hotpink <span style='color:blue'>As</span> <span style='color:#008B8B'>Int</span></b>
+</li>
+<li><b>indianred <span style='color:blue'>As</span> <span style='color:#008B8B'>Int</span></b>
+</li>
+<li><b>indigo <span style='color:blue'>As</span> <span style='color:#008B8B'>Int</span></b>
+</li>
+<li><b>ivory <span style='color:blue'>As</span> <span style='color:#008B8B'>Int</span></b>
+</li>
+<li><b>khaki <span style='color:blue'>As</span> <span style='color:#008B8B'>Int</span></b>
+</li>
+<li><b>lavender <span style='color:blue'>As</span> <span style='color:#008B8B'>Int</span></b>
+</li>
+<li><b>lavenderblush <span style='color:blue'>As</span> <span style='color:#008B8B'>Int</span></b>
+</li>
+<li><b>lawngreen <span style='color:blue'>As</span> <span style='color:#008B8B'>Int</span></b>
+</li>
+<li><b>lemonchiffon <span style='color:blue'>As</span> <span style='color:#008B8B'>Int</span></b>
+</li>
+<li><b>lightblue <span style='color:blue'>As</span> <span style='color:#008B8B'>Int</span></b>
+</li>
+<li><b>lightcoral <span style='color:blue'>As</span> <span style='color:#008B8B'>Int</span></b>
+</li>
+<li><b>lightcyan <span style='color:blue'>As</span> <span style='color:#008B8B'>Int</span></b>
+</li>
+<li><b>lightgoldenrodyellow <span style='color:blue'>As</span> <span style='color:#008B8B'>Int</span></b>
+</li>
+<li><b>lightgray <span style='color:blue'>As</span> <span style='color:#008B8B'>Int</span></b>
+</li>
+<li><b>lightgreen <span style='color:blue'>As</span> <span style='color:#008B8B'>Int</span></b>
+</li>
+<li><b>lightgrey <span style='color:blue'>As</span> <span style='color:#008B8B'>Int</span></b>
+</li>
+<li><b>lightpink <span style='color:blue'>As</span> <span style='color:#008B8B'>Int</span></b>
+</li>
+<li><b>lightsalmon <span style='color:blue'>As</span> <span style='color:#008B8B'>Int</span></b>
+</li>
+<li><b>lightseagreen <span style='color:blue'>As</span> <span style='color:#008B8B'>Int</span></b>
+</li>
+<li><b>lightskyblue <span style='color:blue'>As</span> <span style='color:#008B8B'>Int</span></b>
+</li>
+<li><b>lightslategray <span style='color:blue'>As</span> <span style='color:#008B8B'>Int</span></b>
+</li>
+<li><b>lightslategrey <span style='color:blue'>As</span> <span style='color:#008B8B'>Int</span></b>
+</li>
+<li><b>lightsteelblue <span style='color:blue'>As</span> <span style='color:#008B8B'>Int</span></b>
+</li>
+<li><b>lightyellow <span style='color:blue'>As</span> <span style='color:#008B8B'>Int</span></b>
+</li>
+<li><b>lime <span style='color:blue'>As</span> <span style='color:#008B8B'>Int</span></b>
+</li>
+<li><b>limegreen <span style='color:blue'>As</span> <span style='color:#008B8B'>Int</span></b>
+</li>
+<li><b>linen <span style='color:blue'>As</span> <span style='color:#008B8B'>Int</span></b>
+</li>
+<li><b>magenta <span style='color:blue'>As</span> <span style='color:#008B8B'>Int</span></b>
+</li>
+<li><b>maroon <span style='color:blue'>As</span> <span style='color:#008B8B'>Int</span></b>
+</li>
+<li><b>mediumaquamarine <span style='color:blue'>As</span> <span style='color:#008B8B'>Int</span></b>
+</li>
+<li><b>mediumblue <span style='color:blue'>As</span> <span style='color:#008B8B'>Int</span></b>
+</li>
+<li><b>mediumorchid <span style='color:blue'>As</span> <span style='color:#008B8B'>Int</span></b>
+</li>
+<li><b>mediumpurple <span style='color:blue'>As</span> <span style='color:#008B8B'>Int</span></b>
+</li>
+<li><b>mediumseagreen <span style='color:blue'>As</span> <span style='color:#008B8B'>Int</span></b>
+</li>
+<li><b>mediumslateblue <span style='color:blue'>As</span> <span style='color:#008B8B'>Int</span></b>
+</li>
+<li><b>mediumspringgreen <span style='color:blue'>As</span> <span style='color:#008B8B'>Int</span></b>
+</li>
+<li><b>mediumturquoise <span style='color:blue'>As</span> <span style='color:#008B8B'>Int</span></b>
+</li>
+<li><b>mediumvioletred <span style='color:blue'>As</span> <span style='color:#008B8B'>Int</span></b>
+</li>
+<li><b>midnightblue <span style='color:blue'>As</span> <span style='color:#008B8B'>Int</span></b>
+</li>
+<li><b>mintcream <span style='color:blue'>As</span> <span style='color:#008B8B'>Int</span></b>
+</li>
+<li><b>mistyrose <span style='color:blue'>As</span> <span style='color:#008B8B'>Int</span></b>
+</li>
+<li><b>moccasin <span style='color:blue'>As</span> <span style='color:#008B8B'>Int</span></b>
+</li>
+<li><b>navajowhite <span style='color:blue'>As</span> <span style='color:#008B8B'>Int</span></b>
+</li>
+<li><b>navy <span style='color:blue'>As</span> <span style='color:#008B8B'>Int</span></b>
+</li>
+<li><b>oldgloryblue <span style='color:blue'>As</span> <span style='color:#008B8B'>Int</span></b>
+</li>
+<li><b>oldgloryred <span style='color:blue'>As</span> <span style='color:#008B8B'>Int</span></b>
+</li>
+<li><b>oldlace <span style='color:blue'>As</span> <span style='color:#008B8B'>Int</span></b>
+</li>
+<li><b>olive <span style='color:blue'>As</span> <span style='color:#008B8B'>Int</span></b>
+</li>
+<li><b>olivedrab <span style='color:blue'>As</span> <span style='color:#008B8B'>Int</span></b>
+</li>
+<li><b>orange <span style='color:blue'>As</span> <span style='color:#008B8B'>Int</span></b>
+</li>
+<li><b>orangered <span style='color:blue'>As</span> <span style='color:#008B8B'>Int</span></b>
+</li>
+<li><b>orchid <span style='color:blue'>As</span> <span style='color:#008B8B'>Int</span></b>
+</li>
+<li><b>palegoldenrod <span style='color:blue'>As</span> <span style='color:#008B8B'>Int</span></b>
+</li>
+<li><b>palegreen <span style='color:blue'>As</span> <span style='color:#008B8B'>Int</span></b>
+</li>
+<li><b>paleturquoise <span style='color:blue'>As</span> <span style='color:#008B8B'>Int</span></b>
+</li>
+<li><b>palevioletred <span style='color:blue'>As</span> <span style='color:#008B8B'>Int</span></b>
+</li>
+<li><b>papayawhip <span style='color:blue'>As</span> <span style='color:#008B8B'>Int</span></b>
+</li>
+<li><b>peachpuff <span style='color:blue'>As</span> <span style='color:#008B8B'>Int</span></b>
+</li>
+<li><b>peru <span style='color:blue'>As</span> <span style='color:#008B8B'>Int</span></b>
+</li>
+<li><b>pink <span style='color:blue'>As</span> <span style='color:#008B8B'>Int</span></b>
+</li>
+<li><b>plum <span style='color:blue'>As</span> <span style='color:#008B8B'>Int</span></b>
+</li>
+<li><b>powderblue <span style='color:blue'>As</span> <span style='color:#008B8B'>Int</span></b>
+</li>
+<li><b>purple <span style='color:blue'>As</span> <span style='color:#008B8B'>Int</span></b>
+</li>
+<li><b>red <span style='color:blue'>As</span> <span style='color:#008B8B'>Int</span></b>
+</li>
+<li><b>rosybrown <span style='color:blue'>As</span> <span style='color:#008B8B'>Int</span></b>
+</li>
+<li><b>royalblue <span style='color:blue'>As</span> <span style='color:#008B8B'>Int</span></b>
+</li>
+<li><b>saddlebrown <span style='color:blue'>As</span> <span style='color:#008B8B'>Int</span></b>
+</li>
+<li><b>salmon <span style='color:blue'>As</span> <span style='color:#008B8B'>Int</span></b>
+</li>
+<li><b>sandybrown <span style='color:blue'>As</span> <span style='color:#008B8B'>Int</span></b>
+</li>
+<li><b>seagreen <span style='color:blue'>As</span> <span style='color:#008B8B'>Int</span></b>
+</li>
+<li><b>seashell <span style='color:blue'>As</span> <span style='color:#008B8B'>Int</span></b>
+</li>
+<li><b>sienna <span style='color:blue'>As</span> <span style='color:#008B8B'>Int</span></b>
+</li>
+<li><b>silver <span style='color:blue'>As</span> <span style='color:#008B8B'>Int</span></b>
+</li>
+<li><b>skyblue <span style='color:blue'>As</span> <span style='color:#008B8B'>Int</span></b>
+</li>
+<li><b>slateblue <span style='color:blue'>As</span> <span style='color:#008B8B'>Int</span></b>
+</li>
+<li><b>slategray <span style='color:blue'>As</span> <span style='color:#008B8B'>Int</span></b>
+</li>
+<li><b>slategrey <span style='color:blue'>As</span> <span style='color:#008B8B'>Int</span></b>
+</li>
+<li><b>snow <span style='color:blue'>As</span> <span style='color:#008B8B'>Int</span></b>
+</li>
+<li><b>springgreen <span style='color:blue'>As</span> <span style='color:#008B8B'>Int</span></b>
+</li>
+<li><b>steelblue <span style='color:blue'>As</span> <span style='color:#008B8B'>Int</span></b>
+</li>
+<li><b>tan <span style='color:blue'>As</span> <span style='color:#008B8B'>Int</span></b>
+</li>
+<li><b>teal <span style='color:blue'>As</span> <span style='color:#008B8B'>Int</span></b>
+</li>
+<li><b>thistle <span style='color:blue'>As</span> <span style='color:#008B8B'>Int</span></b>
+</li>
+<li><b>tomato <span style='color:blue'>As</span> <span style='color:#008B8B'>Int</span></b>
+</li>
+<li><b>turquoise <span style='color:blue'>As</span> <span style='color:#008B8B'>Int</span></b>
+</li>
+<li><b>violet <span style='color:blue'>As</span> <span style='color:#008B8B'>Int</span></b>
+</li>
+<li><b>wheat <span style='color:blue'>As</span> <span style='color:#008B8B'>Int</span></b>
+</li>
+<li><b>white <span style='color:blue'>As</span> <span style='color:#008B8B'>Int</span></b>
+</li>
+<li><b>whitesmoke <span style='color:blue'>As</span> <span style='color:#008B8B'>Int</span></b>
+</li>
+<li><b>yellow <span style='color:blue'>As</span> <span style='color:#008B8B'>Int</span></b>
+</li>
+<li><b>yellowgreen <span style='color:blue'>As</span> <span style='color:#008B8B'>Int</span></b>
+</li>
+</ul>
+<h3>Methods:</h3>
+<ul>
+<li><b>ValueOf</b> (Value <span style='color:blue'>As</span> <span style='color:#008B8B'>String</span>)<b> <span style='color:blue'>As</span> <span style='color:#008B8B'>Int</span></b>
+</li>
+</ul>
+</ul>
+<ul>
+<li><h3>PDFjetCompliance</h3>
+<h3>Fields:</h3>
+<ul>
+<li><b>PDF_A_1B <span style='color:blue'>As</span> <span style='color:#008B8B'>Int</span></b>
+</li>
+</ul>
+</ul>
+<ul>
+<li><h3>PDFjetCompositeTextLine</h3>
+<h3>Methods:</h3>
+<ul>
+<li><b>AddComponent</b> (PDFjetTextLine <span style='color:blue'>As</span> <span style='color:#008B8B'>TextLine</span>)<b></b>
+</li>
+<li><b>DrawOn</b> (PDFjetPage <span style='color:blue'>As</span> <span style='color:#008B8B'>Page</span>)<b></b>
+</li>
+<li><b>GetFontSize <span style='color:blue'>As</span> <span style='color:#008B8B'>Float</span></b>
+</li>
+<li><b>GetHeight <span style='color:blue'>As</span> <span style='color:#008B8B'>Float</span></b>
+</li>
+<li><b>GetMinMax <span style='color:blue'>As</span> <span style='color:#008B8B'>Float[]</span></b>
+<br><i>Returns the vertical coordinates of the top left and bottom right corners of the bounding box of this CompositeTextLine.</i>
+</li>
+<li><b>GetNumberOfTextLines <span style='color:blue'>As</span> <span style='color:#008B8B'>Int</span></b>
+</li>
+<li><b>GetPosition <span style='color:blue'>As</span> <span style='color:#008B8B'>Float[]</span></b>
+</li>
+<li><b>GetSubscriptFactor <span style='color:blue'>As</span> <span style='color:#008B8B'>Float</span></b>
+</li>
+<li><b>GetSubscriptPosition <span style='color:blue'>As</span> <span style='color:#008B8B'>Float</span></b>
+</li>
+<li><b>GetSuperscriptFactor <span style='color:blue'>As</span> <span style='color:#008B8B'>Float</span></b>
+</li>
+<li><b>GetSuperscriptPosition <span style='color:blue'>As</span> <span style='color:#008B8B'>Float</span></b>
+</li>
+<li><b>GetTextline</b> (Index <span style='color:blue'>As</span> <span style='color:#008B8B'>Int</span>)<b> <span style='color:blue'>As</span> <span style='color:#008B8B'>TextLineWrapper</span></b>
+</li>
+<li><b>GetWidth <span style='color:blue'>As</span> <span style='color:#008B8B'>Float</span></b>
+</li>
+<li><b>Initialize</b> (X <span style='color:blue'>As</span> <span style='color:#008B8B'>Float</span>, Y <span style='color:blue'>As</span> <span style='color:#008B8B'>Float</span>)<b></b>
+<br><i>Initialize the CompositeTextLine object.</i>
+</li>
+<li><b>IsInitialized <span style='color:blue'>As</span> <span style='color:#008B8B'>Boolean</span></b>
+</li>
+<li><b>SetFontSize</b> (FontSize <span style='color:blue'>As</span> <span style='color:#008B8B'>Float</span>)<b></b>
+</li>
+<li><b>SetPosition</b> (X <span style='color:blue'>As</span> <span style='color:#008B8B'>Float</span>, Y <span style='color:blue'>As</span> <span style='color:#008B8B'>Float</span>)<b></b>
+</li>
+<li><b>SetSubscriptFactor</b> (Factor <span style='color:blue'>As</span> <span style='color:#008B8B'>Float</span>)<b></b>
+</li>
+<li><b>SetSubscriptPosition</b> (Position <span style='color:blue'>As</span> <span style='color:#008B8B'>Float</span>)<b></b>
+</li>
+<li><b>SetSuperscriptFactor</b> (Factor <span style='color:blue'>As</span> <span style='color:#008B8B'>Float</span>)<b></b>
+</li>
+<li><b>SetSuperscriptPosition</b> (Position <span style='color:blue'>As</span> <span style='color:#008B8B'>Float</span>)<b></b>
+</li>
+</ul>
+</ul>
+<ul>
+<li><h3>PDFjetConstants</h3>
+<h3>Fields:</h3>
+<ul>
+<li><b>Align <span style='color:blue'>As</span> <span style='color:#008B8B'>Align</span></b>
+</li>
+<li><b>Border <span style='color:blue'>As</span> <span style='color:#008B8B'>Border</span></b>
+</li>
+<li><b>Cap <span style='color:blue'>As</span> <span style='color:#008B8B'>Cap</span></b>
+</li>
+<li><b>CodePage <span style='color:blue'>As</span> <span style='color:#008B8B'>CodePage</span></b>
+</li>
+<li><b>Color <span style='color:blue'>As</span> <span style='color:#008B8B'>Color</span></b>
+</li>
+<li><b>Compliance <span style='color:blue'>As</span> <span style='color:#008B8B'>Compliance</span></b>
+</li>
+<li><b>CoreFont <span style='color:blue'>As</span> <span style='color:#008B8B'>CoreFont</span></b>
+</li>
+<li><b>Effect <span style='color:blue'>As</span> <span style='color:#008B8B'>Effect</span></b>
+</li>
+<li><b>Embed <span style='color:blue'>As</span> <span style='color:#008B8B'>Embed</span></b>
+</li>
+<li><b>ErrorCorrectLevel <span style='color:blue'>As</span> <span style='color:#008B8B'>ErrorCorrectLevel</span></b>
+</li>
+<li><b>ImageType <span style='color:blue'>As</span> <span style='color:#008B8B'>ImageType</span></b>
+</li>
+<li><b>Join <span style='color:blue'>As</span> <span style='color:#008B8B'>Join</span></b>
+</li>
+<li><b>Operation <span style='color:blue'>As</span> <span style='color:#008B8B'>Operation</span></b>
+</li>
+<li><b>PageSize <span style='color:blue'>As</span> <span style='color:#008B8B'>PageSize</span></b>
+</li>
+<li><b>Segment <span style='color:blue'>As</span> <span style='color:#008B8B'>Segment</span></b>
+</li>
+<li><b>TextAlign <span style='color:blue'>As</span> <span style='color:#008B8B'>TextAlign</span></b>
+</li>
+</ul>
+</ul>
+<ul>
+<li><h3>PDFjetCoreFont</h3>
+<h3>Fields:</h3>
+<ul>
+<li><b>COURIER <span style='color:blue'>As</span> <span style='color:#008B8B'>CoreFont</span></b>
+</li>
+<li><b>COURIER_BOLD <span style='color:blue'>As</span> <span style='color:#008B8B'>CoreFont</span></b>
+</li>
+<li><b>COURIER_BOLD_OBLIQUE <span style='color:blue'>As</span> <span style='color:#008B8B'>CoreFont</span></b>
+</li>
+<li><b>COURIER_OBLIQUE <span style='color:blue'>As</span> <span style='color:#008B8B'>CoreFont</span></b>
+</li>
+<li><b>HELVETICA <span style='color:blue'>As</span> <span style='color:#008B8B'>CoreFont</span></b>
+</li>
+<li><b>HELVETICA_BOLD <span style='color:blue'>As</span> <span style='color:#008B8B'>CoreFont</span></b>
+</li>
+<li><b>HELVETICA_BOLD_OBLIQUE <span style='color:blue'>As</span> <span style='color:#008B8B'>CoreFont</span></b>
+</li>
+<li><b>HELVETICA_OBLIQUE <span style='color:blue'>As</span> <span style='color:#008B8B'>CoreFont</span></b>
+</li>
+<li><b>SYMBOL <span style='color:blue'>As</span> <span style='color:#008B8B'>CoreFont</span></b>
+</li>
+<li><b>TIMES_BOLD <span style='color:blue'>As</span> <span style='color:#008B8B'>CoreFont</span></b>
+</li>
+<li><b>TIMES_BOLD_ITALIC <span style='color:blue'>As</span> <span style='color:#008B8B'>CoreFont</span></b>
+</li>
+<li><b>TIMES_ITALIC <span style='color:blue'>As</span> <span style='color:#008B8B'>CoreFont</span></b>
+</li>
+<li><b>TIMES_ROMAN <span style='color:blue'>As</span> <span style='color:#008B8B'>CoreFont</span></b>
+</li>
+<li><b>ZAPF_DINGBATS <span style='color:blue'>As</span> <span style='color:#008B8B'>CoreFont</span></b>
+</li>
+</ul>
+<h3>Methods:</h3>
+<ul>
+<li><b>ValueOf</b> (Value <span style='color:blue'>As</span> <span style='color:#008B8B'>String</span>)<b> <span style='color:blue'>As</span> <span style='color:#008B8B'>CoreFont</span></b>
+</li>
+</ul>
+</ul>
+<ul>
+<li><h3>PDFjetDestination</h3>
+<h3>Methods:</h3>
+<ul>
+<li><b>Initialize</b> (Name <span style='color:blue'>As</span> <span style='color:#008B8B'>String</span>, YPosition <span style='color:blue'>As</span> <span style='color:#008B8B'>Float</span>)<b></b>
+</li>
+<li><b>IsInitialized <span style='color:blue'>As</span> <span style='color:#008B8B'>Boolean</span></b>
+</li>
+</ul>
+</ul>
+<ul>
+<li><h3>PDFjetDimension</h3>
+<h3>Methods:</h3>
+<ul>
+<li><b>GetHeight <span style='color:blue'>As</span> <span style='color:#008B8B'>Float</span></b>
+</li>
+<li><b>GetWidth <span style='color:blue'>As</span> <span style='color:#008B8B'>Float</span></b>
+</li>
+<li><b>Initialize</b> (Width <span style='color:blue'>As</span> <span style='color:#008B8B'>Float</span>, Height <span style='color:blue'>As</span> <span style='color:#008B8B'>Float</span>)<b></b>
+</li>
+<li><b>IsInitialized <span style='color:blue'>As</span> <span style='color:#008B8B'>Boolean</span></b>
+</li>
+</ul>
+</ul>
+<ul>
+<li><h3>PDFjetEffect</h3>
+<h3>Fields:</h3>
+<ul>
+<li><b>NORMAL <span style='color:blue'>As</span> <span style='color:#008B8B'>Int</span></b>
+</li>
+<li><b>SUBSCRIPT <span style='color:blue'>As</span> <span style='color:#008B8B'>Int</span></b>
+</li>
+<li><b>SUPERSCRIPT <span style='color:blue'>As</span> <span style='color:#008B8B'>Int</span></b>
+</li>
+</ul>
+<h3>Methods:</h3>
+<ul>
+<li><b>ValueOf</b> (Value <span style='color:blue'>As</span> <span style='color:#008B8B'>String</span>)<b> <span style='color:blue'>As</span> <span style='color:#008B8B'>Int</span></b>
+</li>
+</ul>
+</ul>
+<ul>
+<li><h3>PDFjetEmbed</h3>
+<h3>Fields:</h3>
+<ul>
+<li><b>NO <span style='color:blue'>As</span> <span style='color:#008B8B'>Boolean</span></b>
+</li>
+<li><b>YES <span style='color:blue'>As</span> <span style='color:#008B8B'>Boolean</span></b>
+</li>
+</ul>
+<h3>Methods:</h3>
+<ul>
+<li><b>ValueOf</b> (Value <span style='color:blue'>As</span> <span style='color:#008B8B'>String</span>)<b> <span style='color:blue'>As</span> <span style='color:#008B8B'>Int</span></b>
+</li>
+</ul>
+</ul>
+<ul>
+<li><h3>PDFjetErrorCorrectLevel</h3>
+<h3>Fields:</h3>
+<ul>
+<li><b>H <span style='color:blue'>As</span> <span style='color:#008B8B'>Int</span></b>
+</li>
+<li><b>L <span style='color:blue'>As</span> <span style='color:#008B8B'>Int</span></b>
+</li>
+<li><b>M <span style='color:blue'>As</span> <span style='color:#008B8B'>Int</span></b>
+</li>
+<li><b>Q <span style='color:blue'>As</span> <span style='color:#008B8B'>Int</span></b>
+</li>
+</ul>
+<h3>Methods:</h3>
+<ul>
+<li><b>ValueOf</b> (Value <span style='color:blue'>As</span> <span style='color:#008B8B'>String</span>)<b> <span style='color:blue'>As</span> <span style='color:#008B8B'>Int</span></b>
+</li>
+</ul>
+</ul>
+<ul>
+<li><h3>PDFjetFont</h3>
+<h3>Methods:</h3>
+<ul>
+<li><b>GetAscent <span style='color:blue'>As</span> <span style='color:#008B8B'>Float</span></b>
+</li>
+<li><b>GetBodyHeight <span style='color:blue'>As</span> <span style='color:#008B8B'>Float</span></b>
+<br><i>Returns the height of the body of the Font.</i>
+</li>
+<li><b>GetDescent <span style='color:blue'>As</span> <span style='color:#008B8B'>Float</span></b>
+</li>
+<li><b>GetFitChars</b> (Text <span style='color:blue'>As</span> <span style='color:#008B8B'>String</span>, Width <span style='color:blue'>As</span> <span style='color:#008B8B'>Float</span>)<b> <span style='color:blue'>As</span> <span style='color:#008B8B'>Int</span></b>
+<br><i>Gets the number of characters from the specified string Text that will fit within the specified width.</i>
+</li>
+<li><b>GetHeight <span style='color:blue'>As</span> <span style='color:#008B8B'>Float</span></b>
+<br><i>Returns the height of this Font.</i>
+</li>
+<li><b>GetSize <span style='color:blue'>As</span> <span style='color:#008B8B'>Float</span></b>
+<br><i>Get or Set the current Font size.</i>
+</li>
+<li><b>Initialize</b> (PDFjetPDF <span style='color:blue'>As</span> <span style='color:#008B8B'>PDF</span>, CoreFont1 <span style='color:blue'>As</span> <span style='color:#008B8B'>CoreFont</span>)<b></b>
+<br><i>Initialize using a built in Font.
+ CoreFont1 - one of the PDFjetCoreFont constants.</i>
+</li>
+<li><b>Initialize2</b> (PDFjetPDF <span style='color:blue'>As</span> <span style='color:#008B8B'>PDF</span>, FontName <span style='color:blue'>As</span> <span style='color:#008B8B'>String</span>, CodePage <span style='color:blue'>As</span> <span style='color:#008B8B'>Int</span>)<b></b>
+<br><i>Initialize2 is used to create an Asian Font.
+ FontName - known working values are:
+ 'AdobeMingStd-Light' - Chinese (Traditional).
+ 'STHeitiSC-Light' - Chinese (Simplified).
+ 'KozMinProVI-Regular' - Japanese.
+ 'AdobeMyungjoStd-Medium' - Korean.
+ CodePage - 1 of the PDFjetCodePage constants.</i>
+</li>
+<li><b>Initialize3</b> (PDFjetPDF <span style='color:blue'>As</span> <span style='color:#008B8B'>PDF</span>, InputStream1 <span style='color:blue'>As</span> <span style='color:#008B8B'>InputStream</span>)<b></b>
+</li>
+<li><b>Initialize4</b> (PDFjetPDF <span style='color:blue'>As</span> <span style='color:#008B8B'>PDF</span>, InputStream1 <span style='color:blue'>As</span> <span style='color:#008B8B'>InputStream</span>, PDFjetCodePage <span style='color:blue'>As</span> <span style='color:#008B8B'>Int</span>, Embed <span style='color:blue'>As</span> <span style='color:#008B8B'>Boolean</span>)<b></b>
+</li>
+<li><b>IsInitialized <span style='color:blue'>As</span> <span style='color:#008B8B'>Boolean</span></b>
+</li>
+<li><b>SetItalic</b> (Enable <span style='color:blue'>As</span> <span style='color:#008B8B'>Boolean</span>)<b></b>
+</li>
+<li><b>SetKernPairs</b> (Enable <span style='color:blue'>As</span> <span style='color:#008B8B'>Boolean</span>)<b></b>
+<br><i>Sets the kerning for the selected Font to True or False depending on the passed value.</i>
+</li>
+<li><b>SetSize</b> (FontSize <span style='color:blue'>As</span> <span style='color:#008B8B'>Float</span>)<b></b>
+</li>
+<li><b>StringWidth</b> (Text <span style='color:blue'>As</span> <span style='color:#008B8B'>String</span>)<b> <span style='color:blue'>As</span> <span style='color:#008B8B'>Float</span></b>
+<br><i>Returns the width of the specified String when drawn on the Page with this Font using the current Font size.</i>
+</li>
+<li><b>StringWidth2</b> (PDFjetFont <span style='color:blue'>As</span> <span style='color:#008B8B'>Font</span>, Text <span style='color:blue'>As</span> <span style='color:#008B8B'>String</span>)<b> <span style='color:blue'>As</span> <span style='color:#008B8B'>Float</span></b>
+</li>
+</ul>
+</ul>
+<ul>
+<li><h3>PDFjetImage</h3>
+<h3>Methods:</h3>
+<ul>
+<li><b>DrawOn</b> (PDFjetPage <span style='color:blue'>As</span> <span style='color:#008B8B'>Page</span>)<b></b>
+</li>
+<li><b>GetHeight <span style='color:blue'>As</span> <span style='color:#008B8B'>Float</span></b>
+</li>
+<li><b>GetWidth <span style='color:blue'>As</span> <span style='color:#008B8B'>Float</span></b>
+</li>
+<li><b>Initialize</b> (PDFjetPDF <span style='color:blue'>As</span> <span style='color:#008B8B'>PDF</span>, InputStream1 <span style='color:blue'>As</span> <span style='color:#008B8B'>InputStream</span>, ImageType <span style='color:blue'>As</span> <span style='color:#008B8B'>Int</span>)<b></b>
+<br><i>Initialize the PDFjetImage object.
+InputStream1 will be closed when this method completes.</i>
+</li>
+<li><b>Initialize2</b> (PDFjetPDF <span style='color:blue'>As</span> <span style='color:#008B8B'>PDF</span>, PDFjetJPGImage <span style='color:blue'>As</span> <span style='color:#008B8B'>JPGImage</span>)<b></b>
+<br><i>Initialize the PDFjetJPGImage object.
+ Use of this method will result in reduced memory consumption and faster processing, however it currently only supports JPG images.</i>
+</li>
+<li><b>IsInitialized <span style='color:blue'>As</span> <span style='color:#008B8B'>Boolean</span></b>
+</li>
+<li><b>PlaceIn</b> (PDFjetBox <span style='color:blue'>As</span> <span style='color:#008B8B'>Box</span>)<b></b>
+</li>
+<li><b>ScaleBy</b> (Factor <span style='color:blue'>As</span> <span style='color:#008B8B'>Float</span>)<b></b>
+<br><i>Scales this Image width and height by the specified factor.</i>
+</li>
+<li><b>SetGotoAction</b> (Key <span style='color:blue'>As</span> <span style='color:#008B8B'>String</span>)<b></b>
+<br><i>Sets the destination key for the action.</i>
+</li>
+<li><b>SetPosition</b> (X <span style='color:blue'>As</span> <span style='color:#008B8B'>Float</span>, Y <span style='color:blue'>As</span> <span style='color:#008B8B'>Float</span>)<b></b>
+</li>
+<li><b>SetRotateCW90</b> (Enable <span style='color:blue'>As</span> <span style='color:#008B8B'>Boolean</span>)<b></b>
+</li>
+<li><b>SetURIAction</b> (Uri <span style='color:blue'>As</span> <span style='color:#008B8B'>String</span>)<b></b>
+<br><i>Sets the URI for the "click box" action.</i>
+</li>
+</ul>
+</ul>
+<ul>
+<li><h3>PDFjetImageType</h3>
+<h3>Fields:</h3>
+<ul>
+<li><b>BMP <span style='color:blue'>As</span> <span style='color:#008B8B'>Int</span></b>
+</li>
+<li><b>JPG <span style='color:blue'>As</span> <span style='color:#008B8B'>Int</span></b>
+</li>
+<li><b>PDF <span style='color:blue'>As</span> <span style='color:#008B8B'>Int</span></b>
+</li>
+<li><b>PNG <span style='color:blue'>As</span> <span style='color:#008B8B'>Int</span></b>
+</li>
+</ul>
+<h3>Methods:</h3>
+<ul>
+<li><b>ValueOf</b> (Value <span style='color:blue'>As</span> <span style='color:#008B8B'>String</span>)<b> <span style='color:blue'>As</span> <span style='color:#008B8B'>Int</span></b>
+</li>
+</ul>
+</ul>
+<ul>
+<li><h3>PDFjetJPGImage</h3>
+<h3>Methods:</h3>
+<ul>
+<li><b>Initialize</b> (InputStream1 <span style='color:blue'>As</span> <span style='color:#008B8B'>InputStream</span>)<b></b>
+<br><i>Initialize the JPGImage object.</i>
+</li>
+<li><b>Initialize2</b> (PDFjetJPGImage <span style='color:blue'>As</span> <span style='color:#008B8B'>JPGImage</span>, InputStream1 <span style='color:blue'>As</span> <span style='color:#008B8B'>InputStream</span>)<b></b>
+</li>
+<li><b>IsInitialized <span style='color:blue'>As</span> <span style='color:#008B8B'>Boolean</span></b>
+</li>
+</ul>
+</ul>
+<ul>
+<li><h3>PDFjetJoin</h3>
+<h3>Fields:</h3>
+<ul>
+<li><b>BEVEL <span style='color:blue'>As</span> <span style='color:#008B8B'>Int</span></b>
+</li>
+<li><b>MITER <span style='color:blue'>As</span> <span style='color:#008B8B'>Int</span></b>
+</li>
+<li><b>ROUND <span style='color:blue'>As</span> <span style='color:#008B8B'>Int</span></b>
+</li>
+</ul>
+<h3>Methods:</h3>
+<ul>
+<li><b>ValueOf</b> (Value <span style='color:blue'>As</span> <span style='color:#008B8B'>String</span>)<b> <span style='color:blue'>As</span> <span style='color:#008B8B'>Int</span></b>
+</li>
+</ul>
+</ul>
+<ul>
+<li><h3>PDFjetLine</h3>
+<h3>Methods:</h3>
+<ul>
+<li><b>DrawOn</b> (PDFjetPage <span style='color:blue'>As</span> <span style='color:#008B8B'>Page</span>)<b></b>
+</li>
+<li><b>GetCapStyle <span style='color:blue'>As</span> <span style='color:#008B8B'>Int</span></b>
+</li>
+<li><b>GetEndPoint <span style='color:blue'>As</span> <span style='color:#008B8B'>PointWrapper</span></b>
+</li>
+<li><b>GetStartPoint <span style='color:blue'>As</span> <span style='color:#008B8B'>PointWrapper</span></b>
+</li>
+<li><b>Initialize</b> (X1 <span style='color:blue'>As</span> <span style='color:#008B8B'>Float</span>, Y1 <span style='color:blue'>As</span> <span style='color:#008B8B'>Float</span>, X2 <span style='color:blue'>As</span> <span style='color:#008B8B'>Float</span>, Y2 <span style='color:blue'>As</span> <span style='color:#008B8B'>Float</span>)<b></b>
+</li>
+<li><b>IsInitialized <span style='color:blue'>As</span> <span style='color:#008B8B'>Boolean</span></b>
+</li>
+<li><b>PlaceIn</b> (PDFjetBox <span style='color:blue'>As</span> <span style='color:#008B8B'>Box</span>)<b></b>
+<br><i>Places this line in the specified box at position (0.0, 0.0).</i>
+</li>
+<li><b>PlaceIn2</b> (PDFjetBox <span style='color:blue'>As</span> <span style='color:#008B8B'>Box</span>, XOffset <span style='color:blue'>As</span> <span style='color:#008B8B'>Float</span>, YOffset <span style='color:blue'>As</span> <span style='color:#008B8B'>Float</span>)<b></b>
+<br><i>Places this line in the specified box at the specified offset.</i>
+</li>
+<li><b>ScaleBy</b> (Factor <span style='color:blue'>As</span> <span style='color:#008B8B'>Float</span>)<b></b>
+</li>
+<li><b>SetCapsStyle</b> (Style <span style='color:blue'>As</span> <span style='color:#008B8B'>Int</span>)<b></b>
+</li>
+<li><b>SetColor</b> (Color <span style='color:blue'>As</span> <span style='color:#008B8B'>Int</span>)<b></b>
+</li>
+<li><b>SetEndPoint</b> (X <span style='color:blue'>As</span> <span style='color:#008B8B'>Float</span>, Y <span style='color:blue'>As</span> <span style='color:#008B8B'>Float</span>)<b></b>
+</li>
+<li><b>SetPattern</b> (Pattern <span style='color:blue'>As</span> <span style='color:#008B8B'>String</span>)<b></b>
+<br><i>The line dash pattern controls the pattern of dashes and gaps used to stroke paths.</i>
+</li>
+<li><b>SetStartPoint</b> (X <span style='color:blue'>As</span> <span style='color:#008B8B'>Float</span>, Y <span style='color:blue'>As</span> <span style='color:#008B8B'>Float</span>)<b></b>
+</li>
+<li><b>SetWidth</b> (Width <span style='color:blue'>As</span> <span style='color:#008B8B'>Float</span>)<b></b>
+</li>
+</ul>
+</ul>
+<ul>
+<li><h3>PDFjetOperation</h3>
+<h3>Fields:</h3>
+<ul>
+<li><b>CLOSE <span style='color:blue'>As</span> <span style='color:#008B8B'>Char</span></b>
+</li>
+<li><b>FILL <span style='color:blue'>As</span> <span style='color:#008B8B'>Char</span></b>
+</li>
+<li><b>STROKE <span style='color:blue'>As</span> <span style='color:#008B8B'>Char</span></b>
+</li>
+</ul>
+<h3>Methods:</h3>
+<ul>
+<li><b>ValueOf</b> (Value <span style='color:blue'>As</span> <span style='color:#008B8B'>String</span>)<b> <span style='color:blue'>As</span> <span style='color:#008B8B'>Int</span></b>
+</li>
+</ul>
+</ul>
+<ul>
+<li><h3>PDFjetOptionalContentGroup</h3>
+<h3>Methods:</h3>
+<ul>
+<li><b>Add</b> (PDFjetDrawable <span style='color:blue'>As</span> <span style='color:#008B8B'>Drawable</span>)<b></b>
+<br><i>Add an object of type com.pdfjet.Drawable.
+ PDFjetDrawable - CompositeTextLine, Image, Line, Path, Point, QRCode, TextBox or TextLine.</i>
+</li>
+<li><b>DrawOn</b> (PDFjetPage <span style='color:blue'>As</span> <span style='color:#008B8B'>Page</span>)<b></b>
+</li>
+<li><b>Initialize</b> (Name <span style='color:blue'>As</span> <span style='color:#008B8B'>String</span>)<b></b>
+</li>
+<li><b>IsInitialized <span style='color:blue'>As</span> <span style='color:#008B8B'>Boolean</span></b>
+</li>
+<li><b>SetExportable</b> (Exportable <span style='color:blue'>As</span> <span style='color:#008B8B'>Boolean</span>)<b></b>
+</li>
+<li><b>SetPrintable</b> (Printable <span style='color:blue'>As</span> <span style='color:#008B8B'>Boolean</span>)<b></b>
+</li>
+<li><b>SetVisible</b> (Visible <span style='color:blue'>As</span> <span style='color:#008B8B'>Boolean</span>)<b></b>
+</li>
+</ul>
+</ul>
+<ul>
+<li><h3>PDFjetPDF</h3>
+<h3>Events:</h3>
+<ul>
+<li><b>CloseComplete</b> (Success <span style='color:blue'>As</span> <span style='color:#008B8B'>Boolean</span>)</li>
+<li><b>FlushComplete</b> (Success <span style='color:blue'>As</span> <span style='color:#008B8B'>Boolean</span>)</li>
+</ul>
+<h3>Methods:</h3>
+<ul>
+<li><b>AddObjects</b> (Objects <span style='color:blue'>As</span> <span style='color:#008B8B'>Map</span>)<b></b>
+</li>
+<li><b>AddPage</b> (PDFjetPage <span style='color:blue'>As</span> <span style='color:#008B8B'>Page</span>)<b></b>
+</li>
+<li><b>Close</b>
+<br><i>Writes the PDF object to the output stream and closes it.
+ Raises the event CloseComplete(Success As Boolean).</i>
+</li>
+<li><b>Flush</b>
+<br><i>Writes the PDF object to the output stream.
+ Raises the event FlushComplete(Success As Boolean).</i>
+</li>
+<li><b>GetPageObjects</b> (Objects <span style='color:blue'>As</span> <span style='color:#008B8B'>Map</span>)<b> <span style='color:blue'>As</span> <span style='color:#008B8B'>PDFobjWrapper[]</span></b>
+</li>
+<li><b>Initialize</b> (EventName <span style='color:blue'>As</span> <span style='color:#008B8B'>String</span>, OutputStream1 <span style='color:blue'>As</span> <span style='color:#008B8B'>OutputStream</span>)<b></b>
+<br><i>Initialize the PDF object.
+ Used to create PDF documents.</i>
+</li>
+<li><b>Initialize2</b> (EventName <span style='color:blue'>As</span> <span style='color:#008B8B'>String</span>, OutputStream1 <span style='color:blue'>As</span> <span style='color:#008B8B'>OutputStream</span>, PDFjetCompliance1 <span style='color:blue'>As</span> <span style='color:#008B8B'>Int</span>)<b></b>
+<br><i>Initialize the PDF object.
+ Used to create PDF documents.</i>
+</li>
+<li><b>Initialize3</b>
+<br><i>Initialize the PDF object.
+ Used to read PDF documents.</i>
+</li>
+<li><b>IsInitialized <span style='color:blue'>As</span> <span style='color:#008B8B'>Boolean</span></b>
+</li>
+<li><b>Read</b> (InputStream1 <span style='color:blue'>As</span> <span style='color:#008B8B'>InputStream</span>)<b> <span style='color:blue'>As</span> <span style='color:#008B8B'>Map</span></b>
+<br><i>Returns a list of objects of type PDFobj read from input stream.
+ Untested method - possible ClassCastException.</i>
+</li>
+<li><b>SetAuthor</b> (Author <span style='color:blue'>As</span> <span style='color:#008B8B'>String</span>)<b></b>
+<br><i>Set the "Author" document property of the PDF file.</i>
+</li>
+<li><b>SetSubject</b> (Subject <span style='color:blue'>As</span> <span style='color:#008B8B'>String</span>)<b></b>
+<br><i>Set the "Subject" document property of the PDF file.</i>
+</li>
+<li><b>SetTitle</b> (Title <span style='color:blue'>As</span> <span style='color:#008B8B'>String</span>)<b></b>
+<br><i>Set the "Title" document property of the PDF file.</i>
+</li>
+</ul>
+</ul>
+<ul>
+<li><h3>PDFjetPDFImage</h3>
+<h3>Methods:</h3>
+<ul>
+<li><b>Initialize</b> (Path <span style='color:blue'>As</span> <span style='color:#008B8B'>String</span>, InputStream1 <span style='color:blue'>As</span> <span style='color:#008B8B'>InputStream</span>, Size <span style='color:blue'>As</span> <span style='color:#008B8B'>Long</span>)<b></b>
+<br><i>Used to construct images from pre-processed raw image data files.</i>
+</li>
+<li><b>IsInitialized <span style='color:blue'>As</span> <span style='color:#008B8B'>Boolean</span></b>
+</li>
+</ul>
+</ul>
+<ul>
+<li><h3>PDFjetPDFobj</h3>
+<h3>Methods:</h3>
+<ul>
+<li><b>AddContent</b> (Content() <span style='color:blue'>As</span> <span style='color:#008B8B'>Byte</span>, Objects <span style='color:blue'>As</span> <span style='color:#008B8B'>Map</span>)<b></b>
+</li>
+<li><b>AddFontResource</b> (CoreFont1 <span style='color:blue'>As</span> <span style='color:#008B8B'>CoreFont</span>, Objects <span style='color:blue'>As</span> <span style='color:#008B8B'>Map</span>)<b></b>
+</li>
+<li><b>GetData <span style='color:blue'>As</span> <span style='color:#008B8B'>Byte[]</span></b>
+<br><i>Returns the uncompressed stream data.</i>
+</li>
+<li><b>GetDict <span style='color:blue'>As</span> <span style='color:#008B8B'>List</span></b>
+<br><i>Returns the object dictionary.</i>
+</li>
+<li><b>GetPageSize <span style='color:blue'>As</span> <span style='color:#008B8B'>Float[]</span></b>
+</li>
+<li><b>GetValue</b> (Key <span style='color:blue'>As</span> <span style='color:#008B8B'>String</span>)<b> <span style='color:blue'>As</span> <span style='color:#008B8B'>String</span></b>
+<br><i>Returns the parameter value given the specified key.</i>
+</li>
+<li><b>Initialize</b> (Offset <span style='color:blue'>As</span> <span style='color:#008B8B'>Int</span>)<b></b>
+</li>
+<li><b>IsInitialized <span style='color:blue'>As</span> <span style='color:#008B8B'>Boolean</span></b>
+</li>
+</ul>
+</ul>
+<ul>
+<li><h3>PDFjetPNGImage</h3>
+<h3>Methods:</h3>
+<ul>
+<li><b>Initialize</b> (InputStream1 <span style='color:blue'>As</span> <span style='color:#008B8B'>InputStream</span>)<b></b>
+</li>
+<li><b>IsInitialized <span style='color:blue'>As</span> <span style='color:#008B8B'>Boolean</span></b>
+</li>
+</ul>
+</ul>
+<ul>
+<li><h3>PDFjetPage</h3>
+<h3>Methods:</h3>
+<ul>
+<li><b>AddDestination</b> (Name <span style='color:blue'>As</span> <span style='color:#008B8B'>String</span>, PositionY <span style='color:blue'>As</span> <span style='color:#008B8B'>Float</span>)<b></b>
+</li>
+<li><b>Append</b> (Bytes() <span style='color:blue'>As</span> <span style='color:#008B8B'>Byte</span>)<b></b>
+<br><i>Appends the specified array of bytes to the page.</i>
+</li>
+<li><b>BezierCurveTo</b> (Point1 <span style='color:blue'>As</span> <span style='color:#008B8B'>Point</span>, Point2 <span style='color:blue'>As</span> <span style='color:#008B8B'>Point</span>, Point3 <span style='color:blue'>As</span> <span style='color:#008B8B'>Point</span>)<b></b>
+<br><i>Draws a bezier curve on the Page starting from the current point.</i>
+</li>
+<li><b>ClipPath</b>
+</li>
+<li><b>ClipRect</b> (X <span style='color:blue'>As</span> <span style='color:#008B8B'>Float</span>, Y <span style='color:blue'>As</span> <span style='color:#008B8B'>Float</span>, Width <span style='color:blue'>As</span> <span style='color:#008B8B'>Float</span>, Height <span style='color:blue'>As</span> <span style='color:#008B8B'>Float</span>)<b></b>
+</li>
+<li><b>ClosePath</b>
+<br><i>Closes the path and draws it using the current pen color.</i>
+</li>
+<li><b>DrawCircle</b> (X <span style='color:blue'>As</span> <span style='color:#008B8B'>Float</span>, Y <span style='color:blue'>As</span> <span style='color:#008B8B'>Float</span>, Radius <span style='color:blue'>As</span> <span style='color:#008B8B'>Float</span>)<b></b>
+<br><i>Draw a circle on the Page using the current pen color.</i>
+</li>
+<li><b>DrawCircle2</b> (X <span style='color:blue'>As</span> <span style='color:#008B8B'>Double</span>, Y <span style='color:blue'>As</span> <span style='color:#008B8B'>Double</span>, Radius <span style='color:blue'>As</span> <span style='color:#008B8B'>Double</span>, Operand <span style='color:blue'>As</span> <span style='color:#008B8B'>Char</span>)<b></b>
+<br><i>Draw a circle on the Page and fill it with the current brush color.</i>
+</li>
+<li><b>DrawEllipse</b> (X <span style='color:blue'>As</span> <span style='color:#008B8B'>Float</span>, Y <span style='color:blue'>As</span> <span style='color:#008B8B'>Float</span>, RadiusX <span style='color:blue'>As</span> <span style='color:#008B8B'>Float</span>, RadiusY <span style='color:blue'>As</span> <span style='color:#008B8B'>Float</span>)<b></b>
+<br><i>Draw an ellipse on the Page using the current pen color.</i>
+</li>
+<li><b>DrawLine</b> (X1 <span style='color:blue'>As</span> <span style='color:#008B8B'>Float</span>, Y1 <span style='color:blue'>As</span> <span style='color:#008B8B'>Float</span>, X2 <span style='color:blue'>As</span> <span style='color:#008B8B'>Float</span>, Y2 <span style='color:blue'>As</span> <span style='color:#008B8B'>Float</span>)<b></b>
+<br><i>Draw a line on the Page, using the current pen color, between the points (X1, Y1) and (X2, Y2).</i>
+</li>
+<li><b>DrawPath</b> (PDFjetPoints <span style='color:blue'>As</span> <span style='color:#008B8B'>List</span>, Operand <span style='color:blue'>As</span> <span style='color:#008B8B'>Char</span>)<b></b>
+<br><i>Draw or fills the specified path using the current pen or brush color.</i>
+</li>
+<li><b>DrawPoint</b> (Point1 <span style='color:blue'>As</span> <span style='color:#008B8B'>Point</span>)<b></b>
+<br><i>Draw a point on the Page using the current pen color.</i>
+</li>
+<li><b>DrawRect</b> (X <span style='color:blue'>As</span> <span style='color:#008B8B'>Float</span>, Y <span style='color:blue'>As</span> <span style='color:#008B8B'>Float</span>, Width <span style='color:blue'>As</span> <span style='color:#008B8B'>Float</span>, Height <span style='color:blue'>As</span> <span style='color:#008B8B'>Float</span>)<b></b>
+<br><i>Draw the outline of the specified rectangle on the Page.</i>
+</li>
+<li><b>DrawRectRoundCorners</b> (X <span style='color:blue'>As</span> <span style='color:#008B8B'>Float</span>, Y <span style='color:blue'>As</span> <span style='color:#008B8B'>Float</span>, Width <span style='color:blue'>As</span> <span style='color:#008B8B'>Float</span>, Height <span style='color:blue'>As</span> <span style='color:#008B8B'>Float</span>, Radius1 <span style='color:blue'>As</span> <span style='color:#008B8B'>Float</span>, Radius2 <span style='color:blue'>As</span> <span style='color:#008B8B'>Float</span>, Operand <span style='color:blue'>As</span> <span style='color:#008B8B'>Char</span>)<b></b>
+</li>
+<li><b>DrawString</b> (PDFjetFont <span style='color:blue'>As</span> <span style='color:#008B8B'>Font</span>, Text <span style='color:blue'>As</span> <span style='color:#008B8B'>String</span>, X <span style='color:blue'>As</span> <span style='color:#008B8B'>Float</span>, Y <span style='color:blue'>As</span> <span style='color:#008B8B'>Float</span>)<b></b>
+<br><i>Draw the text using the specified Font and the current brush color.</i>
+</li>
+<li><b>FillEllipse</b> (X <span style='color:blue'>As</span> <span style='color:#008B8B'>Float</span>, Y <span style='color:blue'>As</span> <span style='color:#008B8B'>Float</span>, Radius1 <span style='color:blue'>As</span> <span style='color:#008B8B'>Float</span>, Radius2 <span style='color:blue'>As</span> <span style='color:#008B8B'>Float</span>)<b></b>
+<br><i>Fills an ellipse on the page using the current pen color.</i>
+</li>
+<li><b>FillPath</b>
+<br><i>Closes and fills the path with the current brush color.</i>
+</li>
+<li><b>FillRect</b> (X <span style='color:blue'>As</span> <span style='color:#008B8B'>Float</span>, Y <span style='color:blue'>As</span> <span style='color:#008B8B'>Float</span>, Width <span style='color:blue'>As</span> <span style='color:#008B8B'>Float</span>, Height <span style='color:blue'>As</span> <span style='color:#008B8B'>Float</span>)<b></b>
+<br><i>Fills the specified rectangle on the page.</i>
+</li>
+<li><b>GetBrushColor <span style='color:blue'>As</span> <span style='color:#008B8B'>Float[]</span></b>
+</li>
+<li><b>GetHeight <span style='color:blue'>As</span> <span style='color:#008B8B'>Float</span></b>
+</li>
+<li><b>GetWidth <span style='color:blue'>As</span> <span style='color:#008B8B'>Float</span></b>
+</li>
+<li><b>Initialize</b> (PDFjetPDF <span style='color:blue'>As</span> <span style='color:#008B8B'>PDF</span>, PageSize() <span style='color:blue'>As</span> <span style='color:#008B8B'>Float</span>)<b></b>
+<br><i>Initialize the Page object.
+ The coordinate (0.0, 0.0) is the top left corner of the page.
+ The size of the pages are represented in points.
+ 1 point is 1/72 inches.</i>
+</li>
+<li><b>IsInitialized <span style='color:blue'>As</span> <span style='color:#008B8B'>Boolean</span></b>
+</li>
+<li><b>LineTo</b> (X <span style='color:blue'>As</span> <span style='color:#008B8B'>Float</span>, Y <span style='color:blue'>As</span> <span style='color:#008B8B'>Float</span>)<b></b>
+<br><i>Draw a line from the current pen position to the point with coordinates (X, Y), using the current pen width and stroke color.</i>
+</li>
+<li><b>MoveTo</b> (X <span style='color:blue'>As</span> <span style='color:#008B8B'>Float</span>, Y <span style='color:blue'>As</span> <span style='color:#008B8B'>Float</span>)<b></b>
+<br><i>Move the pen to the point with coordinates (X, Y) on the Page.</i>
+</li>
+<li><b>Print</b> (Text <span style='color:blue'>As</span> <span style='color:#008B8B'>String</span>)<b></b>
+<br><i>Prints a line of text.</i>
+</li>
+<li><b>PrintLn</b>
+<br><i>Move to the next line.</i>
+</li>
+<li><b>PrintLn2</b> (Text <span style='color:blue'>As</span> <span style='color:#008B8B'>String</span>)<b></b>
+<br><i>Prints a line of text and moves to the next line.</i>
+</li>
+<li><b>Restore</b>
+</li>
+<li><b>Save</b>
+</li>
+<li><b>SetArtBox</b> (UpperLeftX <span style='color:blue'>As</span> <span style='color:#008B8B'>Float</span>, UpperLeftY <span style='color:blue'>As</span> <span style='color:#008B8B'>Float</span>, LowerRightX <span style='color:blue'>As</span> <span style='color:#008B8B'>Float</span>, LowerRightY <span style='color:blue'>As</span> <span style='color:#008B8B'>Float</span>)<b></b>
+<br><i>Sets the page ArtBox.</i>
+</li>
+<li><b>SetBleedBox</b> (UpperLeftX <span style='color:blue'>As</span> <span style='color:#008B8B'>Float</span>, UpperLeftY <span style='color:blue'>As</span> <span style='color:#008B8B'>Float</span>, LowerRightX <span style='color:blue'>As</span> <span style='color:#008B8B'>Float</span>, LowerRightY <span style='color:blue'>As</span> <span style='color:#008B8B'>Float</span>)<b></b>
+<br><i>Sets the page BleedBox.</i>
+</li>
+<li><b>SetBrushColor</b> (Color <span style='color:blue'>As</span> <span style='color:#008B8B'>Int</span>)<b></b>
+<br><i>Sets the color for brush operations.</i>
+</li>
+<li><b>SetBrushColor2</b> (Red <span style='color:blue'>As</span> <span style='color:#008B8B'>Float</span>, Green <span style='color:blue'>As</span> <span style='color:#008B8B'>Float</span>, Blue <span style='color:blue'>As</span> <span style='color:#008B8B'>Float</span>)<b></b>
+</li>
+<li><b>SetBrushColor3</b> (Color() <span style='color:blue'>As</span> <span style='color:#008B8B'>Float</span>)<b></b>
+</li>
+<li><b>SetCharSpacing</b> (Spacing <span style='color:blue'>As</span> <span style='color:#008B8B'>Float</span>)<b></b>
+</li>
+<li><b>SetCropBox</b> (UpperLeftX <span style='color:blue'>As</span> <span style='color:#008B8B'>Float</span>, UpperLeftY <span style='color:blue'>As</span> <span style='color:#008B8B'>Float</span>, LowerRightX <span style='color:blue'>As</span> <span style='color:#008B8B'>Float</span>, LowerRightY <span style='color:blue'>As</span> <span style='color:#008B8B'>Float</span>)<b></b>
+<br><i>Sets the page CropBox.</i>
+</li>
+<li><b>SetDefaultLinePattern</b>
+<br><i>Set the default line dash pattern - solid line.</i>
+</li>
+<li><b>SetDefaultLineWidth</b>
+<br><i>Set the line width to the default.</i>
+</li>
+<li><b>SetLineCapStyle</b> (Style <span style='color:blue'>As</span> <span style='color:#008B8B'>Int</span>)<b></b>
+<br><i>Sets the current line cap style.</i>
+</li>
+<li><b>SetLineJoinStyle</b> (Style <span style='color:blue'>As</span> <span style='color:#008B8B'>Int</span>)<b></b>
+<br><i>Sets the line join style.</i>
+</li>
+<li><b>SetLinePattern</b> (Pattern <span style='color:blue'>As</span> <span style='color:#008B8B'>String</span>)<b></b>
+<br><i>The line dash pattern controls the pattern of dashes and gaps used to stroke paths.</i>
+</li>
+<li><b>SetPenColor</b> (Color <span style='color:blue'>As</span> <span style='color:#008B8B'>Int</span>)<b></b>
+<br><i>Set the color for stroking operations.</i>
+</li>
+<li><b>SetPenColor2</b> (Red <span style='color:blue'>As</span> <span style='color:#008B8B'>Float</span>, Green <span style='color:blue'>As</span> <span style='color:#008B8B'>Float</span>, Blue <span style='color:blue'>As</span> <span style='color:#008B8B'>Float</span>)<b></b>
+</li>
+<li><b>SetPenWidth</b> (Width <span style='color:blue'>As</span> <span style='color:#008B8B'>Float</span>)<b></b>
+<br><i>Set the pen width that will be used to draw lines and splines on this Page.</i>
+</li>
+<li><b>SetTextBegin</b> (X <span style='color:blue'>As</span> <span style='color:#008B8B'>Float</span>, Y <span style='color:blue'>As</span> <span style='color:#008B8B'>Float</span>)<b></b>
+</li>
+<li><b>SetTextDirection</b> (Degrees <span style='color:blue'>As</span> <span style='color:#008B8B'>Int</span>)<b></b>
+<br><i>Set the text direction.</i>
+</li>
+<li><b>SetTextEnd</b>
+<br><i>Sets the end of text block.</i>
+</li>
+<li><b>SetTextFont</b> (PDFjetFont <span style='color:blue'>As</span> <span style='color:#008B8B'>Font</span>)<b></b>
+</li>
+<li><b>SetTextLeading</b> (Leading <span style='color:blue'>As</span> <span style='color:#008B8B'>Float</span>)<b></b>
+</li>
+<li><b>SetTextLocation</b> (X <span style='color:blue'>As</span> <span style='color:#008B8B'>Float</span>, Y <span style='color:blue'>As</span> <span style='color:#008B8B'>Float</span>)<b></b>
+</li>
+<li><b>SetTextRenderingMode</b> (Mode <span style='color:blue'>As</span> <span style='color:#008B8B'>Int</span>)<b></b>
+</li>
+<li><b>SetTextRise</b> (Rise <span style='color:blue'>As</span> <span style='color:#008B8B'>Float</span>)<b></b>
+</li>
+<li><b>SetTextScaling</b> (Scaling <span style='color:blue'>As</span> <span style='color:#008B8B'>Float</span>)<b></b>
+</li>
+<li><b>SetTextStart</b>
+</li>
+<li><b>SetTrimBox</b> (UpperLeftX <span style='color:blue'>As</span> <span style='color:#008B8B'>Float</span>, UpperLeftY <span style='color:blue'>As</span> <span style='color:#008B8B'>Float</span>, LowerRightX <span style='color:blue'>As</span> <span style='color:#008B8B'>Float</span>, LowerRightY <span style='color:blue'>As</span> <span style='color:#008B8B'>Float</span>)<b></b>
+<br><i>Sets the page TrimBox.</i>
+</li>
+<li><b>SetWordSpacing</b> (Spacing <span style='color:blue'>As</span> <span style='color:#008B8B'>Float</span>)<b></b>
+</li>
+<li><b>StrokePath</b>
+<br><i>Draws the current path using the current pen color.</i>
+</li>
+</ul>
+</ul>
+<ul>
+<li><h3>PDFjetPageSize</h3>
+<h3>Fields:</h3>
+<ul>
+<li><b>A3_LANDSCAPE <span style='color:blue'>As</span> <span style='color:#008B8B'>Float[]</span></b>
+</li>
+<li><b>A3_PORTRAIT <span style='color:blue'>As</span> <span style='color:#008B8B'>Float[]</span></b>
+</li>
+<li><b>A4_LANDSCAPE <span style='color:blue'>As</span> <span style='color:#008B8B'>Float[]</span></b>
+</li>
+<li><b>A4_PORTRAIT <span style='color:blue'>As</span> <span style='color:#008B8B'>Float[]</span></b>
+</li>
+<li><b>A5_LANDSCAPE <span style='color:blue'>As</span> <span style='color:#008B8B'>Float[]</span></b>
+</li>
+<li><b>A5_PORTRAIT <span style='color:blue'>As</span> <span style='color:#008B8B'>Float[]</span></b>
+</li>
+<li><b>B5_LANDSCAPE <span style='color:blue'>As</span> <span style='color:#008B8B'>Float[]</span></b>
+</li>
+<li><b>B5_PORTRAIT <span style='color:blue'>As</span> <span style='color:#008B8B'>Float[]</span></b>
+</li>
+<li><b>Executive_LANDSCAPE <span style='color:blue'>As</span> <span style='color:#008B8B'>Float[]</span></b>
+</li>
+<li><b>Executive_PORTRAIT <span style='color:blue'>As</span> <span style='color:#008B8B'>Float[]</span></b>
+</li>
+<li><b>Legal_LANDSCAPE <span style='color:blue'>As</span> <span style='color:#008B8B'>Float[]</span></b>
+</li>
+<li><b>Legal_PORTRAIT <span style='color:blue'>As</span> <span style='color:#008B8B'>Float[]</span></b>
+</li>
+<li><b>Letter_LANDSCAPE <span style='color:blue'>As</span> <span style='color:#008B8B'>Float[]</span></b>
+</li>
+<li><b>Letter_PORTRAIT <span style='color:blue'>As</span> <span style='color:#008B8B'>Float[]</span></b>
+</li>
+<li><b>Tabloid_LANDSCAPE <span style='color:blue'>As</span> <span style='color:#008B8B'>Float[]</span></b>
+</li>
+<li><b>Tabloid_PORTRAIT <span style='color:blue'>As</span> <span style='color:#008B8B'>Float[]</span></b>
+</li>
+</ul>
+<h3>Methods:</h3>
+<ul>
+<li><b>ValueOf</b> (Value <span style='color:blue'>As</span> <span style='color:#008B8B'>String</span>)<b> <span style='color:blue'>As</span> <span style='color:#008B8B'>Float[]</span></b>
+</li>
+</ul>
+</ul>
+<ul>
+<li><h3>PDFjetParagraph</h3>
+<h3>Methods:</h3>
+<ul>
+<li><b>Add</b> (PDFjetTextLine <span style='color:blue'>As</span> <span style='color:#008B8B'>TextLine</span>)<b></b>
+</li>
+<li><b>Initialize</b>
+</li>
+<li><b>IsInitialized <span style='color:blue'>As</span> <span style='color:#008B8B'>Boolean</span></b>
+</li>
+<li><b>RemoveLastTextLine</b>
+</li>
+<li><b>SetAlignment</b> (Alignment <span style='color:blue'>As</span> <span style='color:#008B8B'>Int</span>)<b></b>
+</li>
+</ul>
+</ul>
+<ul>
+<li><h3>PDFjetPath</h3>
+<h3>Methods:</h3>
+<ul>
+<li><b>Add</b> (PDFjetPoint <span style='color:blue'>As</span> <span style='color:#008B8B'>Point</span>)<b></b>
+</li>
+<li><b>DrawOn</b> (PDFjetPage <span style='color:blue'>As</span> <span style='color:#008B8B'>Page</span>)<b></b>
+</li>
+<li><b>GetCurvePoints</b> (X <span style='color:blue'>As</span> <span style='color:#008B8B'>Float</span>, Y <span style='color:blue'>As</span> <span style='color:#008B8B'>Float</span>, Radius1 <span style='color:blue'>As</span> <span style='color:#008B8B'>Float</span>, Radius2 <span style='color:blue'>As</span> <span style='color:#008B8B'>Float</span>, Segment <span style='color:blue'>As</span> <span style='color:#008B8B'>Int</span>)<b> <span style='color:blue'>As</span> <span style='color:#008B8B'>PointWrapper[]</span></b>
+<br><i>Returns an array containing the start point, first control point, second control point and the end point of elliptical curve segment.</i>
+</li>
+<li><b>GetLineCapStyle <span style='color:blue'>As</span> <span style='color:#008B8B'>Int</span></b>
+</li>
+<li><b>GetLineJoinStyle <span style='color:blue'>As</span> <span style='color:#008B8B'>Int</span></b>
+</li>
+<li><b>Initialize</b>
+</li>
+<li><b>IsInitialized <span style='color:blue'>As</span> <span style='color:#008B8B'>Boolean</span></b>
+</li>
+<li><b>PlaceIn</b> (PDFjetBox <span style='color:blue'>As</span> <span style='color:#008B8B'>Box</span>)<b></b>
+<br><i>Places this path in the specified box at position (0.0, 0.0).</i>
+</li>
+<li><b>PlaceIn2</b> (PDFjetBox <span style='color:blue'>As</span> <span style='color:#008B8B'>Box</span>, XOffset <span style='color:blue'>As</span> <span style='color:#008B8B'>Float</span>, YOffset <span style='color:blue'>As</span> <span style='color:#008B8B'>Float</span>)<b></b>
+</li>
+<li><b>ScaleBy</b> (Factor <span style='color:blue'>As</span> <span style='color:#008B8B'>Float</span>)<b></b>
+</li>
+<li><b>SetClosePath</b> (ClosePath <span style='color:blue'>As</span> <span style='color:#008B8B'>Boolean</span>)<b></b>
+</li>
+<li><b>SetColor</b> (Color <span style='color:blue'>As</span> <span style='color:#008B8B'>Int</span>)<b></b>
+</li>
+<li><b>SetFillShape</b> (FillShape <span style='color:blue'>As</span> <span style='color:#008B8B'>Boolean</span>)<b></b>
+</li>
+<li><b>SetLineCapStyle</b> (Style <span style='color:blue'>As</span> <span style='color:#008B8B'>Int</span>)<b></b>
+</li>
+<li><b>SetLineJoinStyle</b> (Style <span style='color:blue'>As</span> <span style='color:#008B8B'>Int</span>)<b></b>
+</li>
+<li><b>SetPattern</b> (Pattern <span style='color:blue'>As</span> <span style='color:#008B8B'>String</span>)<b></b>
+</li>
+<li><b>SetWidth</b> (Width <span style='color:blue'>As</span> <span style='color:#008B8B'>Float</span>)<b></b>
+</li>
+</ul>
+</ul>
+<ul>
+<li><h3>PDFjetPoint</h3>
+<h3>Fields:</h3>
+<ul>
+<li><b>BOX <span style='color:blue'>As</span> <span style='color:#008B8B'>Int</span></b>
+</li>
+<li><b>CIRCLE <span style='color:blue'>As</span> <span style='color:#008B8B'>Int</span></b>
+</li>
+<li><b>CONTROL_POINT <span style='color:blue'>As</span> <span style='color:#008B8B'>Boolean</span></b>
+</li>
+<li><b>DIAMOND <span style='color:blue'>As</span> <span style='color:#008B8B'>Int</span></b>
+</li>
+<li><b>DOWN_ARROW <span style='color:blue'>As</span> <span style='color:#008B8B'>Int</span></b>
+</li>
+<li><b>H_DASH <span style='color:blue'>As</span> <span style='color:#008B8B'>Int</span></b>
+</li>
+<li><b>INVISIBLE <span style='color:blue'>As</span> <span style='color:#008B8B'>Int</span></b>
+</li>
+<li><b>LEFT_ARROW <span style='color:blue'>As</span> <span style='color:#008B8B'>Int</span></b>
+</li>
+<li><b>MULTIPLY <span style='color:blue'>As</span> <span style='color:#008B8B'>Int</span></b>
+</li>
+<li><b>PLUS <span style='color:blue'>As</span> <span style='color:#008B8B'>Int</span></b>
+</li>
+<li><b>RIGHT_ARROW <span style='color:blue'>As</span> <span style='color:#008B8B'>Int</span></b>
+</li>
+<li><b>STAR <span style='color:blue'>As</span> <span style='color:#008B8B'>Int</span></b>
+</li>
+<li><b>UP_ARROW <span style='color:blue'>As</span> <span style='color:#008B8B'>Int</span></b>
+</li>
+<li><b>V_DASH <span style='color:blue'>As</span> <span style='color:#008B8B'>Int</span></b>
+</li>
+<li><b>X_MARK <span style='color:blue'>As</span> <span style='color:#008B8B'>Int</span></b>
+</li>
+</ul>
+<h3>Methods:</h3>
+<ul>
+<li><b>DrawOn</b> (PDFjetPage <span style='color:blue'>As</span> <span style='color:#008B8B'>Page</span>)<b></b>
+</li>
+<li><b>GetAlignment <span style='color:blue'>As</span> <span style='color:#008B8B'>Int</span></b>
+<br><i>Returns the point alignment.</i>
+</li>
+<li><b>GetColor <span style='color:blue'>As</span> <span style='color:#008B8B'>Int</span></b>
+<br><i>Returns the point color.</i>
+</li>
+<li><b>GetFillShape <span style='color:blue'>As</span> <span style='color:#008B8B'>Boolean</span></b>
+<br><i>Returns the current value of the FillShape property.</i>
+</li>
+<li><b>GetLinePattern <span style='color:blue'>As</span> <span style='color:#008B8B'>String</span></b>
+<br><i>Returns the line dash pattern.</i>
+</li>
+<li><b>GetLineWidth <span style='color:blue'>As</span> <span style='color:#008B8B'>Float</span></b>
+</li>
+<li><b>GetRadius <span style='color:blue'>As</span> <span style='color:#008B8B'>Float</span></b>
+</li>
+<li><b>GetShape <span style='color:blue'>As</span> <span style='color:#008B8B'>Int</span></b>
+</li>
+<li><b>GetText <span style='color:blue'>As</span> <span style='color:#008B8B'>String</span></b>
+</li>
+<li><b>GetTextColor <span style='color:blue'>As</span> <span style='color:#008B8B'>Int</span></b>
+</li>
+<li><b>GetTextDirection <span style='color:blue'>As</span> <span style='color:#008B8B'>Int</span></b>
+</li>
+<li><b>GetURIAction <span style='color:blue'>As</span> <span style='color:#008B8B'>String</span></b>
+</li>
+<li><b>GetX <span style='color:blue'>As</span> <span style='color:#008B8B'>Float</span></b>
+</li>
+<li><b>GetY <span style='color:blue'>As</span> <span style='color:#008B8B'>Float</span></b>
+</li>
+<li><b>Initialize</b> (X <span style='color:blue'>As</span> <span style='color:#008B8B'>Float</span>, Y <span style='color:blue'>As</span> <span style='color:#008B8B'>Float</span>)<b></b>
+</li>
+<li><b>Initialize2</b> (X <span style='color:blue'>As</span> <span style='color:#008B8B'>Float</span>, Y <span style='color:blue'>As</span> <span style='color:#008B8B'>Float</span>, IsControlPoint <span style='color:blue'>As</span> <span style='color:#008B8B'>Boolean</span>)<b></b>
+</li>
+<li><b>IsInitialized <span style='color:blue'>As</span> <span style='color:#008B8B'>Boolean</span></b>
+</li>
+<li><b>PlaceIn</b> (PDFjetBox <span style='color:blue'>As</span> <span style='color:#008B8B'>Box</span>)<b></b>
+<br><i>Places this point in the specified box at position (0.0, 0.0).</i>
+</li>
+<li><b>PlaceIn2</b> (PDFjetBox <span style='color:blue'>As</span> <span style='color:#008B8B'>Box</span>, XOffset <span style='color:blue'>As</span> <span style='color:#008B8B'>Float</span>, YOffset <span style='color:blue'>As</span> <span style='color:#008B8B'>Float</span>)<b></b>
+</li>
+<li><b>SetAlignment</b> (Alignment <span style='color:blue'>As</span> <span style='color:#008B8B'>Int</span>)<b></b>
+</li>
+<li><b>SetColor</b> (Color <span style='color:blue'>As</span> <span style='color:#008B8B'>Int</span>)<b></b>
+</li>
+<li><b>SetDrawLineTo</b> (Enable <span style='color:blue'>As</span> <span style='color:#008B8B'>Boolean</span>)<b></b>
+<br><i>Deprecated. Please use the SetStartOfPath method.</i>
+</li>
+<li><b>SetFillShape</b> (Enable <span style='color:blue'>As</span> <span style='color:#008B8B'>Boolean</span>)<b></b>
+</li>
+<li><b>SetLinePattern</b> (Pattern <span style='color:blue'>As</span> <span style='color:#008B8B'>String</span>)<b></b>
+</li>
+<li><b>SetLineWidth</b> (Width <span style='color:blue'>As</span> <span style='color:#008B8B'>Float</span>)<b></b>
+</li>
+<li><b>SetPosition</b> (X <span style='color:blue'>As</span> <span style='color:#008B8B'>Float</span>, Y <span style='color:blue'>As</span> <span style='color:#008B8B'>Float</span>)<b></b>
+</li>
+<li><b>SetRadius</b> (Radius <span style='color:blue'>As</span> <span style='color:#008B8B'>Float</span>)<b></b>
+</li>
+<li><b>SetShape</b> (Shape <span style='color:blue'>As</span> <span style='color:#008B8B'>Int</span>)<b></b>
+</li>
+<li><b>SetStartOfPath</b>
+<br><i>Sets this point as the start of a path that will be drawn on the chart.</i>
+</li>
+<li><b>SetText</b> (Text <span style='color:blue'>As</span> <span style='color:#008B8B'>String</span>)<b></b>
+</li>
+<li><b>SetTextColor</b> (TextColor <span style='color:blue'>As</span> <span style='color:#008B8B'>Int</span>)<b></b>
+</li>
+<li><b>SetTextDirection</b> (TextDirection <span style='color:blue'>As</span> <span style='color:#008B8B'>Int</span>)<b></b>
+</li>
+<li><b>SetURIAction</b> (URI <span style='color:blue'>As</span> <span style='color:#008B8B'>String</span>)<b></b>
+<br><i>Sets the URI for the "click point" action.</i>
+</li>
+<li><b>SetX</b> (X <span style='color:blue'>As</span> <span style='color:#008B8B'>Float</span>)<b></b>
+</li>
+<li><b>SetY</b> (Y <span style='color:blue'>As</span> <span style='color:#008B8B'>Float</span>)<b></b>
+</li>
+</ul>
+</ul>
+<ul>
+<li><h3>PDFjetQRCode</h3>
+<h3>Methods:</h3>
+<ul>
+<li><b>DrawOn</b> (PDFjetPage <span style='color:blue'>As</span> <span style='color:#008B8B'>Page</span>)<b></b>
+</li>
+<li><b>GetData <span style='color:blue'>As</span> <span style='color:#008B8B'>Boolean[][]</span></b>
+</li>
+<li><b>Initialize</b> (TextToEncode <span style='color:blue'>As</span> <span style='color:#008B8B'>String</span>, PDFjetErrorCorrection <span style='color:blue'>As</span> <span style='color:#008B8B'>Int</span>)<b></b>
+</li>
+<li><b>IsInitialized <span style='color:blue'>As</span> <span style='color:#008B8B'>Boolean</span></b>
+</li>
+<li><b>SetModuleLength</b> (ModuleLength <span style='color:blue'>As</span> <span style='color:#008B8B'>Float</span>)<b></b>
+</li>
+<li><b>SetPosition</b> (X <span style='color:blue'>As</span> <span style='color:#008B8B'>Float</span>, Y <span style='color:blue'>As</span> <span style='color:#008B8B'>Float</span>)<b></b>
+</li>
+</ul>
+</ul>
+<ul>
+<li><h3>PDFjetSegment</h3>
+<h3>Fields:</h3>
+<ul>
+<li><b>CLOCKWISE_00_03 <span style='color:blue'>As</span> <span style='color:#008B8B'>Int</span></b>
+</li>
+<li><b>CLOCKWISE_03_06 <span style='color:blue'>As</span> <span style='color:#008B8B'>Int</span></b>
+</li>
+<li><b>CLOCKWISE_06_09 <span style='color:blue'>As</span> <span style='color:#008B8B'>Int</span></b>
+</li>
+<li><b>CLOCKWISE_09_12 <span style='color:blue'>As</span> <span style='color:#008B8B'>Int</span></b>
+</li>
+</ul>
+<h3>Methods:</h3>
+<ul>
+<li><b>ValueOf</b> (Value <span style='color:blue'>As</span> <span style='color:#008B8B'>String</span>)<b> <span style='color:blue'>As</span> <span style='color:#008B8B'>Int</span></b>
+</li>
+</ul>
+</ul>
+<ul>
+<li><h3>PDFjetTable</h3>
+<h3>Fields:</h3>
+<ul>
+<li><b>DATA_HAS_0_HEADER_ROWS <span style='color:blue'>As</span> <span style='color:#008B8B'>Int</span></b>
+</li>
+<li><b>DATA_HAS_1_HEADER_ROWS <span style='color:blue'>As</span> <span style='color:#008B8B'>Int</span></b>
+</li>
+<li><b>DATA_HAS_2_HEADER_ROWS <span style='color:blue'>As</span> <span style='color:#008B8B'>Int</span></b>
+</li>
+<li><b>DATA_HAS_3_HEADER_ROWS <span style='color:blue'>As</span> <span style='color:#008B8B'>Int</span></b>
+</li>
+<li><b>DATA_HAS_4_HEADER_ROWS <span style='color:blue'>As</span> <span style='color:#008B8B'>Int</span></b>
+</li>
+<li><b>DATA_HAS_5_HEADER_ROWS <span style='color:blue'>As</span> <span style='color:#008B8B'>Int</span></b>
+</li>
+<li><b>DATA_HAS_6_HEADER_ROWS <span style='color:blue'>As</span> <span style='color:#008B8B'>Int</span></b>
+</li>
+<li><b>DATA_HAS_7_HEADER_ROWS <span style='color:blue'>As</span> <span style='color:#008B8B'>Int</span></b>
+</li>
+<li><b>DATA_HAS_8_HEADER_ROWS <span style='color:blue'>As</span> <span style='color:#008B8B'>Int</span></b>
+</li>
+<li><b>DATA_HAS_9_HEADER_ROWS <span style='color:blue'>As</span> <span style='color:#008B8B'>Int</span></b>
+</li>
+</ul>
+<h3>Methods:</h3>
+<ul>
+<li><b>AutoAdjustColumnWidths</b>
+<br><i>Auto adjusts the widths of all columns so that they are just wide enough to hold the text without truncation.
+ This method must be called after the SetData method, otherwise an Exception will occur.</i>
+</li>
+<li><b>DrawOn</b> (PDFjetPage <span style='color:blue'>As</span> <span style='color:#008B8B'>Page</span>)<b> <span style='color:blue'>As</span> <span style='color:#008B8B'>PointWrapper</span></b>
+</li>
+<li><b>GetCellAt</b> (Row <span style='color:blue'>As</span> <span style='color:#008B8B'>Int</span>, Column <span style='color:blue'>As</span> <span style='color:#008B8B'>Int</span>)<b> <span style='color:blue'>As</span> <span style='color:#008B8B'>CellWrapper</span></b>
+</li>
+<li><b>GetColumn</b> (Index <span style='color:blue'>As</span> <span style='color:#008B8B'>Int</span>)<b> <span style='color:blue'>As</span> <span style='color:#008B8B'>CellList</span></b>
+<br><i>Returns a CellList for the specified column index.</i>
+</li>
+<li><b>GetColumnHeight</b> (Index <span style='color:blue'>As</span> <span style='color:#008B8B'>Int</span>)<b> <span style='color:blue'>As</span> <span style='color:#008B8B'>Float</span></b>
+<br><i>Returns the column height of the column at the specified index.</i>
+</li>
+<li><b>GetColumnWidth</b> (Index <span style='color:blue'>As</span> <span style='color:#008B8B'>Int</span>)<b> <span style='color:blue'>As</span> <span style='color:#008B8B'>Float</span></b>
+<br><i>Returns the column width of the column at the specified index.</i>
+</li>
+<li><b>GetNumberOfPages</b> (PDFjetPage <span style='color:blue'>As</span> <span style='color:#008B8B'>Page</span>)<b> <span style='color:blue'>As</span> <span style='color:#008B8B'>Int</span></b>
+<br><i>Returns the total number of pages that are required to draw this table on.</i>
+</li>
+<li><b>GetRow</b> (Index <span style='color:blue'>As</span> <span style='color:#008B8B'>Int</span>)<b> <span style='color:blue'>As</span> <span style='color:#008B8B'>CellList</span></b>
+<br><i>Returns a CellList for the specified row index.</i>
+</li>
+<li><b>GetRowsRendered <span style='color:blue'>As</span> <span style='color:#008B8B'>Int</span></b>
+<br><i>Returns the number of data rows that have been rendered so far.</i>
+</li>
+<li><b>GetWidth <span style='color:blue'>As</span> <span style='color:#008B8B'>Float</span></b>
+<br><i>Returns the width of this table when drawn on a page.</i>
+</li>
+<li><b>HasMoreData <span style='color:blue'>As</span> <span style='color:#008B8B'>Boolean</span></b>
+<br><i>Returns True if the table contains more data that needs to be drawn on a Page.</i>
+</li>
+<li><b>Initialize</b>
+</li>
+<li><b>IsInitialized <span style='color:blue'>As</span> <span style='color:#008B8B'>Boolean</span></b>
+</li>
+<li><b>RemoveLineBetweenRows</b> (Index1 <span style='color:blue'>As</span> <span style='color:#008B8B'>Int</span>, Index2 <span style='color:blue'>As</span> <span style='color:#008B8B'>Int</span>)<b></b>
+<br><i>Removes the horizontal lines between the rows from Index1 to Index2.</i>
+</li>
+<li><b>ResetRenderedPageCount</b>
+</li>
+<li><b>RightAlignNumbers</b>
+<br><i>Sets the alignment of the numbers to the right.</i>
+</li>
+<li><b>SetBottomMargin</b> (Margin <span style='color:blue'>As</span> <span style='color:#008B8B'>Float</span>)<b></b>
+</li>
+<li><b>SetCellBordersColor</b> (Color <span style='color:blue'>As</span> <span style='color:#008B8B'>Int</span>)<b></b>
+</li>
+<li><b>SetCellBordersWidth</b> (Width <span style='color:blue'>As</span> <span style='color:#008B8B'>Float</span>)<b></b>
+</li>
+<li><b>SetColumnWidth</b> (Index <span style='color:blue'>As</span> <span style='color:#008B8B'>Int</span>, Width <span style='color:blue'>As</span> <span style='color:#008B8B'>Float</span>)<b></b>
+</li>
+<li><b>SetData</b> (TableData1 <span style='color:blue'>As</span> <span style='color:#008B8B'>List</span>)<b></b>
+<br><i>Sets the table data.
+ TableData1 - A TableData object.</i>
+</li>
+<li><b>SetData2</b> (TableData1 <span style='color:blue'>As</span> <span style='color:#008B8B'>List</span>, NumOfHeaderRows <span style='color:blue'>As</span> <span style='color:#008B8B'>Int</span>)<b></b>
+<br><i>Sets the table data and specifies the number of header rows in this data.
+ TableData1 - A TableData object.</i>
+</li>
+<li><b>SetFontInColumn</b> (Index <span style='color:blue'>As</span> <span style='color:#008B8B'>Int</span>, PDFjetFont <span style='color:blue'>As</span> <span style='color:#008B8B'>Font</span>)<b></b>
+<br><i>Sets the font for the specified column.</i>
+</li>
+<li><b>SetFontInRow</b> (Index <span style='color:blue'>As</span> <span style='color:#008B8B'>Int</span>, PDFjetFont <span style='color:blue'>As</span> <span style='color:#008B8B'>Font</span>)<b></b>
+<br><i>Sets the font for the specified row.</i>
+</li>
+<li><b>SetNoCellBorders</b>
+</li>
+<li><b>SetPosition</b> (X <span style='color:blue'>As</span> <span style='color:#008B8B'>Float</span>, Y <span style='color:blue'>As</span> <span style='color:#008B8B'>Float</span>)<b></b>
+<br><i>Sets the position (X, Y) of the top left corner of this table on the page.</i>
+</li>
+<li><b>SetTextAlignInColumn</b> (Index <span style='color:blue'>As</span> <span style='color:#008B8B'>Int</span>, Alignment <span style='color:blue'>As</span> <span style='color:#008B8B'>Int</span>)<b></b>
+<br><i>Sets the text alignment in the specified column.</i>
+</li>
+<li><b>SetTextColorInColumn</b> (Index <span style='color:blue'>As</span> <span style='color:#008B8B'>Int</span>, Color1 <span style='color:blue'>As</span> <span style='color:#008B8B'>Int</span>)<b></b>
+</li>
+<li><b>SetTextColorInRow</b> (Index <span style='color:blue'>As</span> <span style='color:#008B8B'>Int</span>, Color1 <span style='color:blue'>As</span> <span style='color:#008B8B'>Int</span>)<b></b>
+</li>
+<li><b>WrapAroundCellText</b>
+<br><i>Wraps around the text in all cells so it fits the column width.</i>
+</li>
+</ul>
+</ul>
+<ul>
+<li><h3>PDFjetTableData</h3>
+<h3>Methods:</h3>
+<ul>
+<li><b>AddRow</b> (CellList1 <span style='color:blue'>As</span> <span style='color:#008B8B'>List</span>)<b></b>
+<br><i>Add a CellList as a new row of data.</i>
+</li>
+<li><b>Clear</b>
+</li>
+<li><b>GetColumn</b> (Index <span style='color:blue'>As</span> <span style='color:#008B8B'>Int</span>)<b> <span style='color:blue'>As</span> <span style='color:#008B8B'>CellList</span></b>
+</li>
+<li><b>GetRow</b> (Index <span style='color:blue'>As</span> <span style='color:#008B8B'>Int</span>)<b> <span style='color:blue'>As</span> <span style='color:#008B8B'>CellList</span></b>
+</li>
+<li><b>IndexOfRow</b> (CellList1 <span style='color:blue'>As</span> <span style='color:#008B8B'>ArrayList</span>)<b> <span style='color:blue'>As</span> <span style='color:#008B8B'>Int</span></b>
+</li>
+<li><b>Initialize</b>
+</li>
+<li><b>InsertRowAt</b> (Index <span style='color:blue'>As</span> <span style='color:#008B8B'>Int</span>, CellList1 <span style='color:blue'>As</span> <span style='color:#008B8B'>ArrayList</span>)<b></b>
+</li>
+<li><b>IsInitialized <span style='color:blue'>As</span> <span style='color:#008B8B'>Boolean</span></b>
+</li>
+<li><b>RemoveRow</b> (CellList1 <span style='color:blue'>As</span> <span style='color:#008B8B'>ArrayList</span>)<b></b>
+</li>
+<li><b>RemoveRowAt</b> (Index <span style='color:blue'>As</span> <span style='color:#008B8B'>Int</span>)<b></b>
+</li>
+<li><b>SetRow</b> (Index <span style='color:blue'>As</span> <span style='color:#008B8B'>Int</span>, CellList1 <span style='color:blue'>As</span> <span style='color:#008B8B'>ArrayList</span>)<b></b>
+</li>
+</ul>
+<h3>Properties:</h3>
+<ul>
+<li><b>RowCount <span style='color:blue'>As</span> <span style='color:#008B8B'>Int</span></b> <i>[read only]</i>
+</li>
+</ul>
+</ul>
+<ul>
+<li><h3>PDFjetTextAlign</h3>
+<h3>Fields:</h3>
+<ul>
+<li><b>BOTTOM <span style='color:blue'>As</span> <span style='color:#008B8B'>Int</span></b>
+</li>
+<li><b>CENTER <span style='color:blue'>As</span> <span style='color:#008B8B'>Int</span></b>
+</li>
+<li><b>TOP <span style='color:blue'>As</span> <span style='color:#008B8B'>Int</span></b>
+</li>
+</ul>
+<h3>Methods:</h3>
+<ul>
+<li><b>ValueOf</b> (Value <span style='color:blue'>As</span> <span style='color:#008B8B'>String</span>)<b> <span style='color:blue'>As</span> <span style='color:#008B8B'>Int</span></b>
+</li>
+</ul>
+</ul>
+<ul>
+<li><h3>PDFjetTextBox</h3>
+<h3>Methods:</h3>
+<ul>
+<li><b>DrawOn</b> (PDFjetPage <span style='color:blue'>As</span> <span style='color:#008B8B'>Page</span>)<b></b>
+</li>
+<li><b>GetBgColor <span style='color:blue'>As</span> <span style='color:#008B8B'>Int</span></b>
+</li>
+<li><b>GetBorder</b> (Border1 <span style='color:blue'>As</span> <span style='color:#008B8B'>Int</span>)<b> <span style='color:blue'>As</span> <span style='color:#008B8B'>Boolean</span></b>
+<br><i>Returns the text box border.</i>
+</li>
+<li><b>GetBrushColor <span style='color:blue'>As</span> <span style='color:#008B8B'>Int</span></b>
+</li>
+<li><b>GetFont <span style='color:blue'>As</span> <span style='color:#008B8B'>FontWrapper</span></b>
+</li>
+<li><b>GetHeight <span style='color:blue'>As</span> <span style='color:#008B8B'>Float</span></b>
+</li>
+<li><b>GetLineWidth <span style='color:blue'>As</span> <span style='color:#008B8B'>Float</span></b>
+</li>
+<li><b>GetMargin <span style='color:blue'>As</span> <span style='color:#008B8B'>Float</span></b>
+<br><i>Returns the text box margin.</i>
+</li>
+<li><b>GetPenColor <span style='color:blue'>As</span> <span style='color:#008B8B'>Int</span></b>
+<br><i>Returns the pen color as 0xRRGGBB integer.</i>
+</li>
+<li><b>GetSpacing <span style='color:blue'>As</span> <span style='color:#008B8B'>Float</span></b>
+<br><i>Returns the spacing between lines of text.</i>
+</li>
+<li><b>GetStrikeout <span style='color:blue'>As</span> <span style='color:#008B8B'>Boolean</span></b>
+<br><i>Returns whether a strike line will be drawn through the text.</i>
+</li>
+<li><b>GetText <span style='color:blue'>As</span> <span style='color:#008B8B'>String</span></b>
+<br><i>Returns the text box text.</i>
+</li>
+<li><b>GetTextAlignment <span style='color:blue'>As</span> <span style='color:#008B8B'>Int</span></b>
+</li>
+<li><b>GetUnderline <span style='color:blue'>As</span> <span style='color:#008B8B'>Boolean</span></b>
+</li>
+<li><b>GetVerticalAlignment <span style='color:blue'>As</span> <span style='color:#008B8B'>Int</span></b>
+</li>
+<li><b>GetWidth <span style='color:blue'>As</span> <span style='color:#008B8B'>Float</span></b>
+</li>
+<li><b>GetX <span style='color:blue'>As</span> <span style='color:#008B8B'>Float</span></b>
+</li>
+<li><b>GetY <span style='color:blue'>As</span> <span style='color:#008B8B'>Float</span></b>
+</li>
+<li><b>Initialize</b> (PDFjetFont <span style='color:blue'>As</span> <span style='color:#008B8B'>Font</span>)<b></b>
+</li>
+<li><b>Initialize2</b> (PDFjetFont <span style='color:blue'>As</span> <span style='color:#008B8B'>Font</span>, Text <span style='color:blue'>As</span> <span style='color:#008B8B'>String</span>, Width <span style='color:blue'>As</span> <span style='color:#008B8B'>Float</span>, Height <span style='color:blue'>As</span> <span style='color:#008B8B'>Float</span>)<b></b>
+</li>
+<li><b>IsInitialized <span style='color:blue'>As</span> <span style='color:#008B8B'>Boolean</span></b>
+</li>
+<li><b>SetBgColor</b> (BgColor <span style='color:blue'>As</span> <span style='color:#008B8B'>Int</span>)<b></b>
+</li>
+<li><b>SetBorder</b> (Border1 <span style='color:blue'>As</span> <span style='color:#008B8B'>Int</span>, Visible <span style='color:blue'>As</span> <span style='color:#008B8B'>Boolean</span>)<b></b>
+</li>
+<li><b>SetBrushColor</b> (BrushColor <span style='color:blue'>As</span> <span style='color:#008B8B'>Int</span>)<b></b>
+</li>
+<li><b>SetFallbackFont</b> (PDFjetFont <span style='color:blue'>As</span> <span style='color:#008B8B'>Font</span>)<b></b>
+</li>
+<li><b>SetFgColor</b> (FgColor <span style='color:blue'>As</span> <span style='color:#008B8B'>Int</span>)<b></b>
+</li>
+<li><b>SetFont</b> (PDFjetFont <span style='color:blue'>As</span> <span style='color:#008B8B'>Font</span>)<b></b>
+</li>
+<li><b>SetHeight</b> (Height <span style='color:blue'>As</span> <span style='color:#008B8B'>Float</span>)<b></b>
+</li>
+<li><b>SetLineWidth</b> (Width <span style='color:blue'>As</span> <span style='color:#008B8B'>Float</span>)<b></b>
+</li>
+<li><b>SetMargin</b> (Margin <span style='color:blue'>As</span> <span style='color:#008B8B'>Float</span>)<b></b>
+</li>
+<li><b>SetNoBorders</b>
+</li>
+<li><b>SetPenColor</b> (PenColor <span style='color:blue'>As</span> <span style='color:#008B8B'>Int</span>)<b></b>
+</li>
+<li><b>SetPosition</b> (X <span style='color:blue'>As</span> <span style='color:#008B8B'>Float</span>, Y <span style='color:blue'>As</span> <span style='color:#008B8B'>Float</span>)<b></b>
+</li>
+<li><b>SetSpacing</b> (Spacing <span style='color:blue'>As</span> <span style='color:#008B8B'>Float</span>)<b></b>
+</li>
+<li><b>SetStrikeOut</b> (Enable <span style='color:blue'>As</span> <span style='color:#008B8B'>Boolean</span>)<b></b>
+</li>
+<li><b>SetText</b> (Text <span style='color:blue'>As</span> <span style='color:#008B8B'>String</span>)<b></b>
+</li>
+<li><b>SetTextAlignment</b> (Alignment <span style='color:blue'>As</span> <span style='color:#008B8B'>Int</span>)<b></b>
+</li>
+<li><b>SetUnderline</b> (Enable <span style='color:blue'>As</span> <span style='color:#008B8B'>Boolean</span>)<b></b>
+</li>
+<li><b>SetVerticalAlignment</b> (Alignment <span style='color:blue'>As</span> <span style='color:#008B8B'>Int</span>)<b></b>
+</li>
+<li><b>SetWidth</b> (Width <span style='color:blue'>As</span> <span style='color:#008B8B'>Float</span>)<b></b>
+</li>
+</ul>
+</ul>
+<ul>
+<li><h3>PDFjetTextColumn</h3>
+<h3>Methods:</h3>
+<ul>
+<li><b>AddParagraph</b> (PDFjetParagraph <span style='color:blue'>As</span> <span style='color:#008B8B'>Paragraph</span>)<b></b>
+</li>
+<li><b>DrawOn</b> (PDFjetPage <span style='color:blue'>As</span> <span style='color:#008B8B'>Page</span>)<b> <span style='color:blue'>As</span> <span style='color:#008B8B'>PointWrapper</span></b>
+<br><i>Draws this text column on the specified page.</i>
+</li>
+<li><b>DrawOn2</b> (PDFjetPage <span style='color:blue'>As</span> <span style='color:#008B8B'>Page</span>, Draw <span style='color:blue'>As</span> <span style='color:#008B8B'>Boolean</span>)<b> <span style='color:blue'>As</span> <span style='color:#008B8B'>PointWrapper</span></b>
+<br><i>Draws this text column on the specified page if the 'Draw' boolean value is 'true'.</i>
+</li>
+<li><b>GetSize <span style='color:blue'>As</span> <span style='color:#008B8B'>DimensionWrapper</span></b>
+</li>
+<li><b>Initialize</b>
+</li>
+<li><b>Initialize2</b> (Rotate <span style='color:blue'>As</span> <span style='color:#008B8B'>Int</span>)<b></b>
+</li>
+<li><b>IsInitialized <span style='color:blue'>As</span> <span style='color:#008B8B'>Boolean</span></b>
+</li>
+<li><b>RemoveLastParagraph</b>
+</li>
+<li><b>SetAlignment</b> (Alignment <span style='color:blue'>As</span> <span style='color:#008B8B'>Int</span>)<b></b>
+</li>
+<li><b>SetLineBetweenParagraphs</b> (LineBetweenParagraphs <span style='color:blue'>As</span> <span style='color:#008B8B'>Boolean</span>)<b></b>
+</li>
+<li><b>SetLineSpacing</b> (Spacing <span style='color:blue'>As</span> <span style='color:#008B8B'>Float</span>)<b></b>
+</li>
+<li><b>SetPosition</b> (X <span style='color:blue'>As</span> <span style='color:#008B8B'>Float</span>, Y <span style='color:blue'>As</span> <span style='color:#008B8B'>Float</span>)<b></b>
+</li>
+<li><b>SetSize</b> (Width <span style='color:blue'>As</span> <span style='color:#008B8B'>Float</span>, Height <span style='color:blue'>As</span> <span style='color:#008B8B'>Float</span>)<b></b>
+</li>
+<li><b>SetSpaceBetweenLines</b> (Space <span style='color:blue'>As</span> <span style='color:#008B8B'>Float</span>)<b></b>
+</li>
+<li><b>SetSpaceBetweenParagraphs</b> (Space <span style='color:blue'>As</span> <span style='color:#008B8B'>Float</span>)<b></b>
+</li>
+</ul>
+</ul>
+<ul>
+<li><h3>PDFjetTextLine</h3>
+<h3>Methods:</h3>
+<ul>
+<li><b>DrawOn</b> (PDFjetPage <span style='color:blue'>As</span> <span style='color:#008B8B'>Page</span>)<b></b>
+<br><i>Draws this text line on the specified page.</i>
+</li>
+<li><b>GetColor <span style='color:blue'>As</span> <span style='color:#008B8B'>Int</span></b>
+</li>
+<li><b>GetDestinationY <span style='color:blue'>As</span> <span style='color:#008B8B'>Float</span></b>
+</li>
+<li><b>GetFont <span style='color:blue'>As</span> <span style='color:#008B8B'>FontWrapper</span></b>
+</li>
+<li><b>GetGoToAction <span style='color:blue'>As</span> <span style='color:#008B8B'>String</span></b>
+</li>
+<li><b>GetHeight <span style='color:blue'>As</span> <span style='color:#008B8B'>Float</span></b>
+</li>
+<li><b>GetStrikeout <span style='color:blue'>As</span> <span style='color:#008B8B'>Boolean</span></b>
+</li>
+<li><b>GetText <span style='color:blue'>As</span> <span style='color:#008B8B'>String</span></b>
+</li>
+<li><b>GetTextEffect <span style='color:blue'>As</span> <span style='color:#008B8B'>Int</span></b>
+</li>
+<li><b>GetURIAction <span style='color:blue'>As</span> <span style='color:#008B8B'>String</span></b>
+</li>
+<li><b>GetUnderline <span style='color:blue'>As</span> <span style='color:#008B8B'>Boolean</span></b>
+</li>
+<li><b>GetWidth <span style='color:blue'>As</span> <span style='color:#008B8B'>Float</span></b>
+</li>
+<li><b>Initialize</b> (PDFjetFont <span style='color:blue'>As</span> <span style='color:#008B8B'>Font</span>)<b></b>
+</li>
+<li><b>Initialize2</b> (PDFjetFont <span style='color:blue'>As</span> <span style='color:#008B8B'>Font</span>, Text <span style='color:blue'>As</span> <span style='color:#008B8B'>String</span>)<b></b>
+</li>
+<li><b>IsInitialized <span style='color:blue'>As</span> <span style='color:#008B8B'>Boolean</span></b>
+</li>
+<li><b>PlaceIn</b> (PDFjetBox <span style='color:blue'>As</span> <span style='color:#008B8B'>Box</span>)<b></b>
+</li>
+<li><b>SetColor</b> (Color1 <span style='color:blue'>As</span> <span style='color:#008B8B'>Int</span>)<b></b>
+</li>
+<li><b>SetFallbackFont</b> (PDFjetFont <span style='color:blue'>As</span> <span style='color:#008B8B'>Font</span>)<b></b>
+</li>
+<li><b>SetFont</b> (PDFjetFont <span style='color:blue'>As</span> <span style='color:#008B8B'>Font</span>)<b></b>
+</li>
+<li><b>SetGoToAction</b> (Key <span style='color:blue'>As</span> <span style='color:#008B8B'>String</span>)<b></b>
+</li>
+<li><b>SetPosition</b> (X <span style='color:blue'>As</span> <span style='color:#008B8B'>Float</span>, Y <span style='color:blue'>As</span> <span style='color:#008B8B'>Float</span>)<b></b>
+<br><i>Sets the position where this text line will be drawn on the page.</i>
+</li>
+<li><b>SetStrikeout</b> (Enable <span style='color:blue'>As</span> <span style='color:#008B8B'>Boolean</span>)<b></b>
+</li>
+<li><b>SetText</b> (Text <span style='color:blue'>As</span> <span style='color:#008B8B'>String</span>)<b></b>
+</li>
+<li><b>SetTextDirection</b> (Degrees <span style='color:blue'>As</span> <span style='color:#008B8B'>Int</span>)<b></b>
+<br><i>Sets the direction in which to draw the text.</i>
+</li>
+<li><b>SetTextEffect</b> (EffectName <span style='color:blue'>As</span> <span style='color:#008B8B'>Int</span>)<b></b>
+</li>
+<li><b>SetURIAction</b> (URI <span style='color:blue'>As</span> <span style='color:#008B8B'>String</span>)<b></b>
+<br><i>Sets the URI for the "click text line" action.</i>
+</li>
+<li><b>SetUnderline</b> (Enable <span style='color:blue'>As</span> <span style='color:#008B8B'>Boolean</span>)<b></b>
+</li>
+</ul>
+</ul>
+<ul><li><h3>Author: Martin Pearman</h3></li></ul>
+<ul><li><h3>Version: 1.10</h3></li></ul></body>
+</html>								

@@ -1,0 +1,696 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root>
+    <doclet-version-NOT-library-version>1.00</doclet-version-NOT-library-version>
+    <class>
+        <name>com.rootsoft.bitmaplibrary.BitmapLibrary</name>
+        <shortname>BitmapExtended</shortname>
+        <owner>process</owner>
+        <permission>android.permission.BIND_WALLPAPER</permission>
+        <permission>android.permission.SET_WALLPAPER</permission>
+        <method>
+            <name>createBitmap3</name>
+            <comment>Returns an immutable bitmap from the specified subset of the source bitmap. 
+ The new bitmap may be the same object as source, or a copy may have been made. 
+ It is initialized with the same density as the original bitmap.
+source: 
+x: 
+y: 
+width: 
+height: 
+Return type: @return:</comment>
+            <returntype>android.graphics.Bitmap</returntype>
+            <parameter>
+                <name>source</name>
+                <type>android.graphics.Bitmap</type>
+            </parameter>
+            <parameter>
+                <name>x</name>
+                <type>int</type>
+            </parameter>
+            <parameter>
+                <name>y</name>
+                <type>int</type>
+            </parameter>
+            <parameter>
+                <name>width</name>
+                <type>int</type>
+            </parameter>
+            <parameter>
+                <name>height</name>
+                <type>int</type>
+            </parameter>
+        </method>
+        <method>
+            <name>createBitmap4</name>
+            <comment>Returns an immutable bitmap from the source bitmap. 
+ The new bitmap may be the same object as source, or a copy may have been made. 
+ It is initialized with the same density as the original bitmap.
+src: 
+Return type: @return:</comment>
+            <returntype>android.graphics.Bitmap</returntype>
+            <parameter>
+                <name>src</name>
+                <type>android.graphics.Bitmap</type>
+            </parameter>
+        </method>
+        <method>
+            <name>createBitmap5</name>
+            <comment></comment>
+            <returntype>android.graphics.Bitmap</returntype>
+            <parameter>
+                <name>colors</name>
+                <type>int[]</type>
+            </parameter>
+            <parameter>
+                <name>width</name>
+                <type>int</type>
+            </parameter>
+            <parameter>
+                <name>height</name>
+                <type>int</type>
+            </parameter>
+            <parameter>
+                <name>config</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+        <method>
+            <name>createScaledBitmap</name>
+            <comment>Creates a new bitmap, scaled from an existing bitmap.
+ src	The source bitmap.
+ dstWidth	The new bitmap's desired width.
+ dstHeight	The new bitmap's desired height.
+ filter	true if the source should be filtered.
+Return type: @return:the bitmap</comment>
+            <returntype>android.graphics.Bitmap</returntype>
+            <parameter>
+                <name>src</name>
+                <type>android.graphics.Bitmap</type>
+            </parameter>
+            <parameter>
+                <name>dstWidth</name>
+                <type>int</type>
+            </parameter>
+            <parameter>
+                <name>dstHeight</name>
+                <type>int</type>
+            </parameter>
+            <parameter>
+                <name>filter</name>
+                <type>boolean</type>
+            </parameter>
+        </method>
+        <method>
+            <name>isMutable</name>
+            <comment>Returns true if the bitmap is marked as mutable (i.e. can be drawn into)
+bitmap: 
+Return type: @return:</comment>
+            <returntype>boolean</returntype>
+            <parameter>
+                <name>bitmap</name>
+                <type>android.graphics.Bitmap</type>
+            </parameter>
+        </method>
+        <method>
+            <name>translateBitmap</name>
+            <comment>Skews the bitmap.
+bitmap: 
+degrees: 
+Return type: @return:</comment>
+            <returntype>android.graphics.Bitmap</returntype>
+            <parameter>
+                <name>bitmap</name>
+                <type>android.graphics.Bitmap</type>
+            </parameter>
+            <parameter>
+                <name>dx</name>
+                <type>float</type>
+            </parameter>
+            <parameter>
+                <name>dy</name>
+                <type>float</type>
+            </parameter>
+        </method>
+        <method>
+            <name>createBitmap2</name>
+            <comment>Returns a mutable bitmap with the specified width and height.
+width: 
+height: 
+config: 
+Return type: @return:</comment>
+            <returntype>android.graphics.Bitmap</returntype>
+            <parameter>
+                <name>width</name>
+                <type>int</type>
+            </parameter>
+            <parameter>
+                <name>height</name>
+                <type>int</type>
+            </parameter>
+            <parameter>
+                <name>config</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+        <method>
+            <name>getHeight</name>
+            <comment>Returns the bitmap's height
+bitmap: 
+Return type: @return:</comment>
+            <returntype>int</returntype>
+            <parameter>
+                <name>bitmap</name>
+                <type>android.graphics.Bitmap</type>
+            </parameter>
+        </method>
+        <method>
+            <name>createBitmap</name>
+            <comment>Returns an immutable bitmap from subset of the source bitmap, transformed by the optional matrix. 
+ It is initialized with the same density as the original bitmap.
+source: 
+x: 
+y: 
+width: 
+height: 
+m: 
+filter: 
+Return type: @return:</comment>
+            <returntype>android.graphics.Bitmap</returntype>
+            <parameter>
+                <name>source</name>
+                <type>android.graphics.Bitmap</type>
+            </parameter>
+            <parameter>
+                <name>x</name>
+                <type>int</type>
+            </parameter>
+            <parameter>
+                <name>y</name>
+                <type>int</type>
+            </parameter>
+            <parameter>
+                <name>width</name>
+                <type>int</type>
+            </parameter>
+            <parameter>
+                <name>height</name>
+                <type>int</type>
+            </parameter>
+            <parameter>
+                <name>m</name>
+                <type>android.graphics.Matrix</type>
+            </parameter>
+            <parameter>
+                <name>filter</name>
+                <type>boolean</type>
+            </parameter>
+        </method>
+        <method>
+            <name>copyPixelsFromBuffer</name>
+            <comment>Copy the pixels from the buffer, beginning at the current position, overwriting the bitmap's pixels. 
+ The data in the buffer is not changed in any way (unlike setPixels(), which converts from unpremultipled 32bit to 
+ whatever the bitmap's native format is.
+bitmap: 
+src: </comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>bitmap</name>
+                <type>android.graphics.Bitmap</type>
+            </parameter>
+            <parameter>
+                <name>src</name>
+                <type>java.nio.Buffer</type>
+            </parameter>
+        </method>
+        <method>
+            <name>extractAlpha</name>
+            <comment>Returns a new bitmap that captures the alpha values of the original.
+bitmap: </comment>
+            <returntype>android.graphics.Bitmap</returntype>
+            <parameter>
+                <name>bitmap</name>
+                <type>android.graphics.Bitmap</type>
+            </parameter>
+        </method>
+        <method>
+            <name>getWidth</name>
+            <comment>Returns the bitmap's width
+bitmap: 
+Return type: @return:</comment>
+            <returntype>int</returntype>
+            <parameter>
+                <name>bitmap</name>
+                <type>android.graphics.Bitmap</type>
+            </parameter>
+        </method>
+        <method>
+            <name>hasAlpha</name>
+            <comment>Returns true if the bitmap's config supports per-pixel alpha, and if the pixels may contain non-opaque alpha values. 
+ For some configs, this is always false (e.g. RGB_565), since they do not support per-pixel alpha. 
+ However, for configs that do, the bitmap may be flagged to be known that all of its pixels are opaque. 
+ In this case hasAlpha() will also return false. If a config such as ARGB_8888 is not so flagged, it will return true by default.
+bitmap: 
+Return type: @return:</comment>
+            <returntype>boolean</returntype>
+            <parameter>
+                <name>bitmap</name>
+                <type>android.graphics.Bitmap</type>
+            </parameter>
+        </method>
+        <method>
+            <name>skewBitmap</name>
+            <comment>Skews the bitmap.
+bitmap: 
+kx: 
+ky: 
+Return type: @return:</comment>
+            <returntype>android.graphics.Bitmap</returntype>
+            <parameter>
+                <name>bitmap</name>
+                <type>android.graphics.Bitmap</type>
+            </parameter>
+            <parameter>
+                <name>kx</name>
+                <type>float</type>
+            </parameter>
+            <parameter>
+                <name>ky</name>
+                <type>float</type>
+            </parameter>
+        </method>
+        <method>
+            <name>scaleBitmap</name>
+            <comment>Scales the bitmap.
+bitmap: 
+degrees: 
+Return type: @return:</comment>
+            <returntype>android.graphics.Bitmap</returntype>
+            <parameter>
+                <name>bitmap</name>
+                <type>android.graphics.Bitmap</type>
+            </parameter>
+            <parameter>
+                <name>sx</name>
+                <type>float</type>
+            </parameter>
+            <parameter>
+                <name>sy</name>
+                <type>float</type>
+            </parameter>
+        </method>
+        <method>
+            <name>getPixels</name>
+            <comment>Returns in pixels[] a copy of the data in the bitmap. Each value is a packed int representing a Color. 
+ The stride parameter allows the caller to allow for gaps in the returned pixels array between rows. 
+ For normal packed results, just pass width for the stride value
+bitmap: 
+pixels: The array to receive the bitmap's colors
+offset: The first index to write into pixels[]
+stride: The number of entries in pixels[] to skip between rows (must be &gt;= bitmap's width). Can be negative.
+x: The x coordinate of the first pixel to read from the bitmap
+y: The y coordinate of the first pixel to read from the bitmap
+The: number of pixels to read from each row
+height: The number of rows to read</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>bitmap</name>
+                <type>android.graphics.Bitmap</type>
+            </parameter>
+            <parameter>
+                <name>pixels</name>
+                <type>int[]</type>
+            </parameter>
+            <parameter>
+                <name>offset</name>
+                <type>int</type>
+            </parameter>
+            <parameter>
+                <name>stride</name>
+                <type>int</type>
+            </parameter>
+            <parameter>
+                <name>x</name>
+                <type>int</type>
+            </parameter>
+            <parameter>
+                <name>y</name>
+                <type>int</type>
+            </parameter>
+            <parameter>
+                <name>width</name>
+                <type>int</type>
+            </parameter>
+            <parameter>
+                <name>height</name>
+                <type>int</type>
+            </parameter>
+        </method>
+        <method>
+            <name>Initialize</name>
+            <comment>Initializes BitmapExtended Library.</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>ba</name>
+                <type>anywheresoftware.b4a.BA</type>
+            </parameter>
+            <parameter>
+                <name>Eventname</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+        <method>
+            <name>eraseColor</name>
+            <comment>Fills the bitmap's pixels with the specified Color.
+bitmap: the source bitmap. (must be mutable!)
+c: colours</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>bitmap</name>
+                <type>android.graphics.Bitmap</type>
+            </parameter>
+            <parameter>
+                <name>c</name>
+                <type>int</type>
+            </parameter>
+        </method>
+        <method>
+            <name>getScaledHeight</name>
+            <comment>Convenience method that returns the height of this bitmap divided by the density scale factor.
+bitmap: 
+targetDensity: The density of the target canvas of the bitmap.
+Return type: @return:The scaled height of this bitmap, according to the density scale factor.</comment>
+            <returntype>int</returntype>
+            <parameter>
+                <name>bitmap</name>
+                <type>android.graphics.Bitmap</type>
+            </parameter>
+            <parameter>
+                <name>targetDensity</name>
+                <type>int</type>
+            </parameter>
+        </method>
+        <method>
+            <name>prepareToDraw</name>
+            <comment>Rebuilds any caches associated with the bitmap that are used for drawing it. 
+ In the case of purgeable bitmaps, this call will attempt to ensure that the pixels have been decoded. 
+ If this is called on more than one bitmap in sequence, the priority is given in LRU order 
+ (i.e. the last bitmap called will be given highest priority). For bitmaps with no associated caches, 
+ this call is effectively a no-op, and therefore is harmless.
+bitmap: </comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>bitmap</name>
+                <type>android.graphics.Bitmap</type>
+            </parameter>
+        </method>
+        <method>
+            <name>getPixel</name>
+            <comment>Returns the Color at the specified location. 
+ Throws an exception if x or y are out of bounds (negative or &gt;= to the width or height respectively).
+bitmap: 
+x: The x coordinate (0...width-1) of the pixel to return
+y: The y coordinate (0...height-1) of the pixel to return
+Return type: @return:The argb Color at the specified coordinate</comment>
+            <returntype>int</returntype>
+            <parameter>
+                <name>bitmap</name>
+                <type>android.graphics.Bitmap</type>
+            </parameter>
+            <parameter>
+                <name>x</name>
+                <type>int</type>
+            </parameter>
+            <parameter>
+                <name>y</name>
+                <type>int</type>
+            </parameter>
+        </method>
+        <method>
+            <name>setDensity</name>
+            <comment>Specifies the density for this bitmap. When the bitmap is drawn to a Canvas that also has a density, 
+ it will be scaled appropriately.
+bitmap: 
+density: The density scaling factor to use with this bitmap or DENSITY_NONE if the density is unknown.</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>bitmap</name>
+                <type>android.graphics.Bitmap</type>
+            </parameter>
+            <parameter>
+                <name>density</name>
+                <type>int</type>
+            </parameter>
+        </method>
+        <method>
+            <name>getNinePatchChunk</name>
+            <comment>Returns an optional array of private data, used by the UI system for some bitmaps. Not intended to be called by applications.
+bitmap: 
+Return type: @return:</comment>
+            <returntype>byte[]</returntype>
+            <parameter>
+                <name>bitmap</name>
+                <type>android.graphics.Bitmap</type>
+            </parameter>
+        </method>
+        <method>
+            <name>isRecycled</name>
+            <comment>Returns true if this bitmap has been recycled. If so, then it is an error to try to access its pixels, and the bitmap will not draw.
+bitmap: 
+Return type: @return:true if the bitmap has been recycled</comment>
+            <returntype>boolean</returntype>
+            <parameter>
+                <name>bitmap</name>
+                <type>android.graphics.Bitmap</type>
+            </parameter>
+        </method>
+        <method>
+            <name>copyPixelsToBuffer</name>
+            <comment>Copy the bitmap's pixels into the specified buffer (allocated by the caller). 
+ An exception is thrown if the buffer is not large enough to hold all of the pixels 
+ (taking into account the number of bytes per pixel) or if the Buffer subclass is not one of the support types 
+ (ByteBuffer, ShortBuffer, IntBuffer).
+bitmap: 
+dst: </comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>bitmap</name>
+                <type>android.graphics.Bitmap</type>
+            </parameter>
+            <parameter>
+                <name>dst</name>
+                <type>java.nio.Buffer</type>
+            </parameter>
+        </method>
+        <method>
+            <name>compress</name>
+            <comment>Write a compressed version of the bitmap to the specified outputstream.
+ 
+ format	The format of the compressed image
+ quality	Hint to the compressor, 0-100. 0 meaning compress for small size, 100 meaning compress for max quality. Some formats, like PNG which is lossless, will ignore the quality setting
+ stream	The outputstream to write the compressed data.</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>bitmap</name>
+                <type>android.graphics.Bitmap</type>
+            </parameter>
+            <parameter>
+                <name>format</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>quality</name>
+                <type>int</type>
+            </parameter>
+            <parameter>
+                <name>stream</name>
+                <type>java.io.OutputStream</type>
+            </parameter>
+        </method>
+        <method>
+            <name>getRowBytes</name>
+            <comment>Return the number of bytes between rows in the bitmap's pixels. 
+ Note that this refers to the pixels as stored natively by the bitmap. 
+ If you call getPixels() or setPixels(), then the pixels are uniformly treated as 32bit values, 
+ packed according to the Color class.
+bitmap: 
+Return type: @return:number of bytes between rows of the native bitmap pixels.</comment>
+            <returntype>int</returntype>
+            <parameter>
+                <name>bitmap</name>
+                <type>android.graphics.Bitmap</type>
+            </parameter>
+        </method>
+        <method>
+            <name>getConfig</name>
+            <comment>If the bitmap's internal config is in one of the public formats, return that config, otherwise return null.
+bitmap: 
+Return type: @return:</comment>
+            <returntype EnumType="true">android.graphics.Bitmap.Config</returntype>
+            <parameter>
+                <name>bitmap</name>
+                <type>android.graphics.Bitmap</type>
+            </parameter>
+        </method>
+        <method>
+            <name>recycle</name>
+            <comment>Free the native object associated with this bitmap, and clear the reference to the pixel data. 
+ This will not free the pixel data synchronously; it simply allows it to be garbage collected if 
+ there are no other references. The bitmap is marked as "dead", meaning it will throw an exception if 
+ getPixels() or setPixels() is called, and will draw nothing. This operation cannot be reversed, 
+ so it should only be called if you are sure there are no further uses for the bitmap. 
+ This is an advanced call, and normally need not be called, since the normal GC process will free 
+ up this memory when there are no more references to this bitmap.
+bitmap: </comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>bitmap</name>
+                <type>android.graphics.Bitmap</type>
+            </parameter>
+        </method>
+        <method>
+            <name>rotateBitmap</name>
+            <comment>Rotates the bitmap.
+bitmap: 
+degrees: 
+Return type: @return:</comment>
+            <returntype>android.graphics.Bitmap</returntype>
+            <parameter>
+                <name>bitmap</name>
+                <type>android.graphics.Bitmap</type>
+            </parameter>
+            <parameter>
+                <name>degrees</name>
+                <type>float</type>
+            </parameter>
+        </method>
+        <method>
+            <name>setPixel</name>
+            <comment>Replace pixels in the bitmap with the colors in the array. Each element in the array is a packed int prepresenting a Color
+bitmap: 
+x: The x coordinate of the pixel to replace (0...width-1)
+y: The y coordinate of the pixel to replace (0...height-1)
+color: The Color to write into the bitmap</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>bitmap</name>
+                <type>android.graphics.Bitmap</type>
+            </parameter>
+            <parameter>
+                <name>x</name>
+                <type>int</type>
+            </parameter>
+            <parameter>
+                <name>y</name>
+                <type>int</type>
+            </parameter>
+            <parameter>
+                <name>color</name>
+                <type>int</type>
+            </parameter>
+        </method>
+        <method>
+            <name>getScaledWidth</name>
+            <comment>Convenience method that returns the width of this bitmap divided by the density scale factor.
+bitmap: 
+targetDensity: The density of the target canvas of the bitmap.
+Return type: @return:The scaled width of this bitmap, according to the density scale factor.</comment>
+            <returntype>int</returntype>
+            <parameter>
+                <name>bitmap</name>
+                <type>android.graphics.Bitmap</type>
+            </parameter>
+            <parameter>
+                <name>targetDensity</name>
+                <type>int</type>
+            </parameter>
+        </method>
+        <method>
+            <name>getDensity</name>
+            <comment>Returns the density for this bitmap.
+bitmap: 
+Return type: @return:</comment>
+            <returntype>int</returntype>
+            <parameter>
+                <name>bitmap</name>
+                <type>android.graphics.Bitmap</type>
+            </parameter>
+        </method>
+        <method>
+            <name>setPixels</name>
+            <comment>Replace pixels in the bitmap with the colors in the array. Each element in the array is a packed int prepresenting a Color
+bitmap: 
+pixels: The colors to write to the bitmap
+offset: The index of the first color to read from pixels[]
+stride: The number of colors in pixels[] to skip between rows. Normally this value will be the same as the width of the bitmap, but it can be larger (or negative).
+x: The x coordinate of the first pixel to write to in the bitmap.
+y: The y coordinate of the first pixel to write to in the bitmap.
+width: The number of colors to copy from pixels[] per row
+height: The number of rows to write to the bitmap</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>bitmap</name>
+                <type>android.graphics.Bitmap</type>
+            </parameter>
+            <parameter>
+                <name>pixels</name>
+                <type>int[]</type>
+            </parameter>
+            <parameter>
+                <name>offset</name>
+                <type>int</type>
+            </parameter>
+            <parameter>
+                <name>stride</name>
+                <type>int</type>
+            </parameter>
+            <parameter>
+                <name>x</name>
+                <type>int</type>
+            </parameter>
+            <parameter>
+                <name>y</name>
+                <type>int</type>
+            </parameter>
+            <parameter>
+                <name>width</name>
+                <type>int</type>
+            </parameter>
+            <parameter>
+                <name>height</name>
+                <type>int</type>
+            </parameter>
+        </method>
+        <field>
+            <name>ARGB_4444</name>
+            <comment></comment>
+            <returntype>java.lang.String</returntype>
+        </field>
+        <field>
+            <name>ARGB_8888</name>
+            <comment></comment>
+            <returntype>java.lang.String</returntype>
+        </field>
+        <field>
+            <name>ALPHA_8</name>
+            <comment></comment>
+            <returntype>java.lang.String</returntype>
+        </field>
+        <field>
+            <name>PNG</name>
+            <comment></comment>
+            <returntype>java.lang.String</returntype>
+        </field>
+        <field>
+            <name>JPEG</name>
+            <comment></comment>
+            <returntype>java.lang.String</returntype>
+        </field>
+        <field>
+            <name>RGB_565</name>
+            <comment></comment>
+            <returntype>java.lang.String</returntype>
+        </field>
+    </class>
+    <version>1.0</version>
+    <author>XverhelstX</author>
+</root>

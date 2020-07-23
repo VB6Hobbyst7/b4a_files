@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <doclet-version-NOT-library-version>1.00</doclet-version-NOT-library-version>
+  <dependsOn includesSingletonModules="true">httputils2</dependsOn>
+  <dependsOn>http</dependsOn>
+  <dependsOn>stringutils</dependsOn>
+  <class>
+    <name>b4a.example.translator</name>
+    <shortname>Translator</shortname>
+    <owner>process</owner>
+    <event>TranslateDone(result As String )</event>
+    <method>
+      <name>IsInitialized</name>
+      <comment>Tests whether the object has been initialized.</comment>
+      <returntype>boolean</returntype>
+    </method>
+    <method>
+      <name DesignerName="Initialize">_initialize</name>
+      <comment> 
+Initializes the ManamTranslator object. 
+------------------------------------------------------------------------------------------------------
+- AppIdKey : The uniqe AppIdKey of your application
+- Target : Activity name of your application
+- EventName : EventName of ManamTranslator library object
+&lt;code&gt;
+Sample :
+
+Dim mTranslate As Translator
+mTranslate.Initialize("b65ff7f590d3090ebeea8d15ee0b6a03",Me,"ManamTranslator")&lt;/code&gt;
+ ----------------------------------------------------------------------------------------------------
+Dont forget to add event of ManamTranslator object same below code  :
+&lt;code&gt;
+Sub ManamTranslator_TranslateDone(result As String )
+  ToastMessageShow(result , true )
+End Sub&lt;/code&gt;</comment>
+      <returntype>String</returntype>
+      <parameter>
+        <name>ba</name>
+        <type>anywheresoftware.b4a.BA</type>
+      </parameter>
+      <parameter>
+        <name>AppIdKey</name>
+        <type>String</type>
+      </parameter>
+      <parameter>
+        <name>Target</name>
+        <type>Object</type>
+      </parameter>
+      <parameter>
+        <name>EventName</name>
+        <type>String</type>
+      </parameter>
+    </method>
+    <method>
+      <name DesignerName="RequestTranslate">_v5</name>
+      <comment> 
+Request Translate :
+-----------------------------------------------------------------------------------------------------
+- EngineName : Engine name of translator [ google or bing ]
+- strToTranlate : The string you wants to translate
+- LanFrom : Language of string
+- LanTo : Language of string you wants to translate to that language
+&lt;code&gt;
+Sample :
+
+mTranslate.RequestTranslate("google","hello my friend ! , my name is Ali","en","fa")&lt;/code&gt;
+ ----------------------------------------------------------------------------------------------------
+Dont forget to add event of ManamTranslator object same below code  :
+&lt;code&gt;
+Sub ManamTranslator_TranslateDone(result As String )
+  ToastMessageShow(result , true )
+End Sub&lt;/code&gt;</comment>
+      <returntype>String</returntype>
+      <parameter>
+        <name>EngineName</name>
+        <type>String</type>
+      </parameter>
+      <parameter>
+        <name>strToTranlate</name>
+        <type>String</type>
+      </parameter>
+      <parameter>
+        <name>LanFrom</name>
+        <type>String</type>
+      </parameter>
+      <parameter>
+        <name>LanTo</name>
+        <type>String</type>
+      </parameter>
+    </method>
+  </class>
+  <version>0.1</version>
+  <author>Ali Dakhilzadeh</author>
+</root>

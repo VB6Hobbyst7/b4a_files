@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root>
+    <doclet-version-NOT-library-version>1.02</doclet-version-NOT-library-version>
+    <class>
+        <name>bismillah.rabiuls.tgetcontacts.TGetContacts</name>
+        <shortname>TGetContacts</shortname>
+        <owner>process</owner>
+        <permission>android.permission.READ_CONTACTS</permission>
+        <method>
+            <name>GetAllContacts</name>
+            <comment>Get all contacts in a List, Name and Phonenumber separated by newline.
+ 
+ Example:
+ 
+ 'Needs android.permission.READ_CONTACTS. Add the following line in Manifest file:
+ 'AddPermission("android.permission.READ_CONTACTS")
+ 
+ Dim TC As TGetContacts
+ Dim ContactList As List
+ Dim SelectedList As List
+ Dim result As List
+
+  ContactList.Initialize
+  SelectedList.Initialize
+  
+  ContactList.AddAll(TC.GetAllContacts) 'Retrieve all contacts. Each list item is a string of Name and Phonenumber - newline separated.
+  result = InputMultiList(ContactList, "Select contact") 'Allow user to select necessary contact.
+
+  ListView1.Clear
+
+
+  For i = 0 To result.Size - 1
+     SelectedList.Add( ContactList.get(result.get(i)) ) 'SelectedList contains the user selected contact's name and number separated by "newline"
+  Next
+
+  For i = 0 To SelectedList.Size - 1
+     ListView1.AddSingleLine(SelectedList.get(i)) 'Show the selected items.
+  Next</comment>
+            <returntype>anywheresoftware.b4a.objects.collections.List</returntype>
+        </method>
+    </class>
+    <version>1.0</version>
+    <author>Rabiul</author>
+</root>

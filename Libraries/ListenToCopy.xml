@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root>
+    <doclet-version-NOT-library-version>1.04</doclet-version-NOT-library-version>
+    <class>
+        <name>ListenCopy.ListenToCopy</name>
+        <shortname>ListenToCopy</shortname>
+        <owner>process</owner>
+        <event>oncopied</event>
+        <method>
+            <name>Initialize</name>
+            <comment>Ketabkhane ro Initialize Konid va yek EventName Behesh Bedin.
+Mesal:
+&lt;code&gt;Dim l As ListenToCopy&lt;/code&gt;
+&lt;code&gt;l.Initialize("pejman")&lt;/code&gt;
+
+va Roydad zir ro injad Konid:
+&lt;code&gt;Sub pejman_oncopied&lt;/code&gt;
+&lt;code&gt;'harVaghat Copy shod in Etefagh biofteh!&lt;/code&gt;
+&lt;code&gt;End Sub&lt;/code&gt;
+
+BY: پژمان نیکروان</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>ba</name>
+                <type>anywheresoftware.b4a.BA</type>
+            </parameter>
+            <parameter>
+                <name>EventName</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+        <method>
+            <name>about</name>
+            <comment>توسعه دهنده: پژمان نیکروان</comment>
+            <returntype>void</returntype>
+        </method>
+    </class>
+    <version>1.0</version>
+    <author>pejman nikravan</author>
+</root>

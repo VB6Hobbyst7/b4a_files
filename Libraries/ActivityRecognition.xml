@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root>
+    <doclet-version-NOT-library-version>1.04</doclet-version-NOT-library-version>
+    <class>
+        <name>anywheresoftware.b4a.objects.ActivityRecognition</name>
+        <shortname>ActivityRecognition</shortname>
+        <owner>process</owner>
+        <event>Connected (Success As Boolean)</event>
+        <permission>com.google.android.gms.permission.ACTIVITY_RECOGNITION</permission>
+        <method>
+            <name>Connect</name>
+            <comment>Connects to the activity recognition services. Connected event will be raised when the connection is established (or failed).
+DetectionIntervalMilliseconds - Detection interval.</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>DetectionIntervalMilliseconds</name>
+                <type>int</type>
+            </parameter>
+        </method>
+        <method>
+            <name>Initialize</name>
+            <comment>Initializes the object.</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>EventName</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>ba</name>
+                <type>anywheresoftware.b4a.BA</type>
+            </parameter>
+        </method>
+        <method>
+            <name>Stop</name>
+            <comment>Stops detection.</comment>
+            <returntype>void</returntype>
+        </method>
+    </class>
+    <version>2.1</version>
+    <dependsOn>google-play-services</dependsOn>
+</root>

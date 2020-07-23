@@ -1,0 +1,525 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root>
+    <doclet-version-NOT-library-version>1.04</doclet-version-NOT-library-version>
+    <class>
+        <name>de.amberhome.navdrawer.SlideDrawableWrapper</name>
+        <shortname>SlideDrawable</shortname>
+        <objectwrapper>de.amberhome.navdrawer.internal.SlideDrawable</objectwrapper>
+        <owner>process</owner>
+        <method>
+            <name>Initialize</name>
+            <comment></comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>wrapped</name>
+                <type>android.graphics.drawable.Drawable</type>
+            </parameter>
+        </method>
+        <method>
+            <name>IsInitialized</name>
+            <comment></comment>
+            <returntype>boolean</returntype>
+        </method>
+        <property>
+            <name>OffsetBy</name>
+            <parameter>
+                <name>Offset</name>
+                <type>float</type>
+            </parameter>
+            <comment>Sets the maximum slide offset. If you set this to 1 the image will be
+ completely moved outside the visible area. Standard value is 0.33</comment>
+        </property>
+        <property>
+            <name>Offset</name>
+            <returntype>float</returntype>
+            <parameter>
+                <name>Offset</name>
+                <type>float</type>
+            </parameter>
+            <comment>Sets or gets the current offset of the image.
+ 
+ If set to 0 the image will be completely visible. If set to 1 the image
+ will be moved out of the visible area as set by the OffsetBy value.</comment>
+        </property>
+    </class>
+    <class>
+        <name>de.amberhome.navdrawer.NavigationDrawer</name>
+        <shortname>AHNavigationDrawer</shortname>
+        <owner>activity</owner>
+        <event>DrawerClosed (DrawerGravity as Int)</event>
+        <event>DrawerOpened (DrawerGravity as Int)</event>
+        <event>DrawerSlide (Position As Float, DrawerGravity as Int)</event>
+        <event>DrawerStateChanged (State as Int)</event>
+        <method>
+            <name>GetEdgeSize</name>
+            <comment>Get the touch sensitive edge size for the given drawer
+
+ Gravity - Gravity of the drawer</comment>
+            <returntype>int</returntype>
+            <parameter>
+                <name>Gravity</name>
+                <type>int</type>
+            </parameter>
+        </method>
+        <method>
+            <name>Initialize</name>
+            <comment>Initializes the navigation drawer. The gravity for the drawer is GRAVITY_START.
+ 
+ EventName - Name of the event
+ Panel - Parent panel for the navigation drawer.
+ NavWidth - The width of the navigation panel.</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>ba</name>
+                <type>anywheresoftware.b4a.BA</type>
+            </parameter>
+            <parameter>
+                <name>EventName</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>Panel</name>
+                <type>anywheresoftware.b4a.objects.PanelWrapper</type>
+            </parameter>
+            <parameter>
+                <name>NavWidth</name>
+                <type>int</type>
+            </parameter>
+        </method>
+        <method>
+            <name>CloseDrawer2</name>
+            <comment>Closes the Drawer with the given gravity.
+ 
+ Gravity - Gravity of the drawer</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>Gravity</name>
+                <type>int</type>
+            </parameter>
+        </method>
+        <method>
+            <name>IsDrawerOpen2</name>
+            <comment>Check if the drawer is open.
+ 
+ Gravity - Gravity of the drawer</comment>
+            <returntype>boolean</returntype>
+            <parameter>
+                <name>Gravity</name>
+                <type>int</type>
+            </parameter>
+        </method>
+        <method>
+            <name>OpenDrawer</name>
+            <comment>Opens the Drawer</comment>
+            <returntype>void</returntype>
+        </method>
+        <method>
+            <name>SetLockMode</name>
+            <comment>Set the LockMode of the drawer. You can unlock it or lock it in open or closed state.
+ 
+ Gravity - Gravity of the drawer
+ LockMode - Locking mode</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>Gravity</name>
+                <type>int</type>
+            </parameter>
+            <parameter>
+                <name>LockMode</name>
+                <type>int</type>
+            </parameter>
+        </method>
+        <method>
+            <name>IsDrawerOpen</name>
+            <comment>Check if the drawer is open.</comment>
+            <returntype>boolean</returntype>
+        </method>
+        <method>
+            <name>OpenDrawer2</name>
+            <comment>Opens the Drawer with the given gravity.
+ 
+ Gravity - Gravity of the drawer</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>Gravity</name>
+                <type>int</type>
+            </parameter>
+        </method>
+        <method>
+            <name>SetShadowDrawable</name>
+            <comment>Sets a shadow drawable for the navigation drawer
+ 
+ Gravity - Gravity of the drawer
+ Drawable - Drawable of the shadow</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>Gravity</name>
+                <type>int</type>
+            </parameter>
+            <parameter>
+                <name>Drawable</name>
+                <type>android.graphics.drawable.Drawable</type>
+            </parameter>
+        </method>
+        <method>
+            <name>CloseDrawer</name>
+            <comment>Closes the Drawer</comment>
+            <returntype>void</returntype>
+        </method>
+        <method>
+            <name>GetLockMode</name>
+            <comment>Get the LockMode of the drawer. You can unlock it or lock it in open or closed state.
+ 
+ Gravity - Gravity of the drawer
+ LockMode - Locking mode</comment>
+            <returntype>int</returntype>
+            <parameter>
+                <name>Gravity</name>
+                <type>int</type>
+            </parameter>
+        </method>
+        <method>
+            <name>Initialize2</name>
+            <comment>Initializes the navigation drawer with the given gravity.
+ 
+ EventName - Name of the event
+ Panel - Parent panel for the navigation drawer.
+ NavWidth - The width of the navigation panel.
+ Gravity - The Gravity for the drawer (START, END, LEFT, RIGHT)</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>ba</name>
+                <type>anywheresoftware.b4a.BA</type>
+            </parameter>
+            <parameter>
+                <name>EventName</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>Panel</name>
+                <type>anywheresoftware.b4a.objects.PanelWrapper</type>
+            </parameter>
+            <parameter>
+                <name>NavWidth</name>
+                <type>int</type>
+            </parameter>
+            <parameter>
+                <name>Gravity</name>
+                <type>int</type>
+            </parameter>
+        </method>
+        <method>
+            <name>SetEdgeSize</name>
+            <comment>Set the touch sensitive edge size for the given drawer
+
+ Gravity - Gravity of the drawer
+ EdgeSize - Size of the touch sensitive edge (use dip values)</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>Gravity</name>
+                <type>int</type>
+            </parameter>
+            <parameter>
+                <name>EdgeSize</name>
+                <type>int</type>
+            </parameter>
+        </method>
+        <method>
+            <name>AddSecondaryDrawer</name>
+            <comment>Add a second drawer to the NavigationDrawer. Only two drawers are supported currently.
+ 
+ Width - width of the new navigation drawer
+ Gravity - gravity for the drawer</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>Width</name>
+                <type>int</type>
+            </parameter>
+            <parameter>
+                <name>Gravity</name>
+                <type>int</type>
+            </parameter>
+        </method>
+        <property>
+            <name>ShadowDrawable</name>
+            <parameter>
+                <name>Drawable</name>
+                <type>android.graphics.drawable.Drawable</type>
+            </parameter>
+            <comment>Sets a shadow drawable for the navigation drawer</comment>
+        </property>
+        <property>
+            <name>ContentPanel</name>
+            <returntype>anywheresoftware.b4a.objects.PanelWrapper</returntype>
+            <comment>The Panel object where the content of your activity should go.</comment>
+        </property>
+        <property>
+            <name>NavigationPanel</name>
+            <returntype>anywheresoftware.b4a.objects.PanelWrapper</returntype>
+            <comment>The Panel object for the navigation drawer. You should add something like a ListView to this panel.</comment>
+        </property>
+        <property>
+            <name>SecondaryNavigationPanel</name>
+            <returntype>anywheresoftware.b4a.objects.PanelWrapper</returntype>
+            <comment>The Panel object for the secondary navigation drawer. You should add something like a ListView to this panel.</comment>
+        </property>
+        <property>
+            <name>StatusBarColor</name>
+            <parameter>
+                <name>Color</name>
+                <type>int</type>
+            </parameter>
+            <comment>Sets the statusbar background color. Only works if FitsSystemWindows is set to true.</comment>
+        </property>
+        <property>
+            <name>FitsSystemWindows</name>
+            <parameter>
+                <name>Flag</name>
+                <type>boolean</type>
+            </parameter>
+            <comment>Let the DrawerLayout fit the system window size (Overlaps status bar)</comment>
+        </property>
+        <field>
+            <name>DRAWERSTATE_SETTLING</name>
+            <comment></comment>
+            <returntype>int</returntype>
+        </field>
+        <field>
+            <name>LOCK_MODE_LOCKED_OPEN</name>
+            <comment></comment>
+            <returntype>int</returntype>
+        </field>
+        <field>
+            <name>LOCK_MODE_LOCKED_CLOSED</name>
+            <comment></comment>
+            <returntype>int</returntype>
+        </field>
+        <field>
+            <name>GRAVITY_RIGHT</name>
+            <comment></comment>
+            <returntype>int</returntype>
+        </field>
+        <field>
+            <name>DRAWERSTATE_IDLE</name>
+            <comment></comment>
+            <returntype>int</returntype>
+        </field>
+        <field>
+            <name>GRAVITY_LEFT</name>
+            <comment></comment>
+            <returntype>int</returntype>
+        </field>
+        <field>
+            <name>GRAVITY_END</name>
+            <comment></comment>
+            <returntype>int</returntype>
+        </field>
+        <field>
+            <name>LOCK_MODE_UNLOCKED</name>
+            <comment></comment>
+            <returntype>int</returntype>
+        </field>
+        <field>
+            <name>GRAVITY_START</name>
+            <comment></comment>
+            <returntype>int</returntype>
+        </field>
+        <field>
+            <name>DRAWERSTATE_DRAGGING</name>
+            <comment></comment>
+            <returntype>int</returntype>
+        </field>
+    </class>
+    <class>
+        <name>de.amberhome.navdrawer.MaterialMenuDrawableWrapper</name>
+        <shortname>MaterialMenuDrawable</shortname>
+        <objectwrapper>de.amberhome.navdrawer.internal.MaterialMenuDrawable</objectwrapper>
+        <owner>activity</owner>
+        <method>
+            <name>Initialize</name>
+            <comment>Initializes the object.
+
+ Color - Color of the icon
+ Stroke - Stroke width. Use one of the STROKE_XXX constants.</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>ba</name>
+                <type>anywheresoftware.b4a.BA</type>
+            </parameter>
+            <parameter>
+                <name>Color</name>
+                <type>int</type>
+            </parameter>
+            <parameter>
+                <name>Stroke</name>
+                <type EnumType="true">de.amberhome.navdrawer.internal.MaterialMenuDrawable.Stroke</type>
+            </parameter>
+        </method>
+        <method>
+            <name>AnimateIconState</name>
+            <comment>Animate the icon to a new state.
+ 
+ NewState - The new icon state to which the icon will animate.
+ DrawTouch - Setting if a touch response should be drawn (ripple effect).</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>NewState</name>
+                <type EnumType="true">de.amberhome.navdrawer.internal.MaterialMenuDrawable.IconState</type>
+            </parameter>
+            <parameter>
+                <name>DrawTouch</name>
+                <type>boolean</type>
+            </parameter>
+        </method>
+        <method>
+            <name>IsInitialized</name>
+            <comment></comment>
+            <returntype>boolean</returntype>
+        </method>
+        <method>
+            <name>SetTransformationOffset</name>
+            <comment>Sets the transformation offset.
+  
+ State - One of the ANIMSTATE_XXX_YYY constants. The Icon will animate from XXX to YYY state.
+ Offset - A value between 0 and 2. Values between 0 and 1 is for forward animation,
+ values between 1 and 2 are for backwards animation.</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>State</name>
+                <type EnumType="true">de.amberhome.navdrawer.internal.MaterialMenuDrawable.AnimationState</type>
+            </parameter>
+            <parameter>
+                <name>Offset</name>
+                <type>float</type>
+            </parameter>
+        </method>
+        <property>
+            <name>NeverDrawTouch</name>
+            <parameter>
+                <name>Flag</name>
+                <type>boolean</type>
+            </parameter>
+            <comment>Sets, if a touch response should be drawn or not.</comment>
+        </property>
+        <property>
+            <name>TransformationDuration</name>
+            <parameter>
+                <name>Duration</name>
+                <type>int</type>
+            </parameter>
+            <comment>Sets the duration of the transformation animation.</comment>
+        </property>
+        <property>
+            <name>Alpha</name>
+            <parameter>
+                <name>Alpha</name>
+                <type>int</type>
+            </parameter>
+            <comment>Sets the alpha value for the icon.</comment>
+        </property>
+        <property>
+            <name>PressedDuration</name>
+            <parameter>
+                <name>Duration</name>
+                <type>int</type>
+            </parameter>
+            <comment>Sets the duration of the touch animation (ripple effect).</comment>
+        </property>
+        <property>
+            <name>TransformationValue</name>
+            <returntype>float</returntype>
+            <parameter>
+                <name>Value</name>
+                <type>float</type>
+            </parameter>
+            <comment>Sets of gets the current value of the Transformation.</comment>
+        </property>
+        <property>
+            <name>IconState</name>
+            <returntype EnumType="true">de.amberhome.navdrawer.internal.MaterialMenuDrawable.IconState</returntype>
+            <parameter>
+                <name>IconState</name>
+                <type EnumType="true">de.amberhome.navdrawer.internal.MaterialMenuDrawable.IconState</type>
+            </parameter>
+            <comment>Sets or gets the current IconState. You can set the current state with this property.
+ The change is not animated.</comment>
+        </property>
+        <property>
+            <name>Color</name>
+            <parameter>
+                <name>Color</name>
+                <type>int</type>
+            </parameter>
+            <comment>Sets the color of the icon.</comment>
+        </property>
+        <field>
+            <name>ANIMSTATE_ARROW_X</name>
+            <comment></comment>
+            <returntype EnumType="true">de.amberhome.navdrawer.internal.MaterialMenuDrawable.AnimationState</returntype>
+        </field>
+        <field>
+            <name>ANIMSTATE_BURGER_ARROW</name>
+            <comment></comment>
+            <returntype EnumType="true">de.amberhome.navdrawer.internal.MaterialMenuDrawable.AnimationState</returntype>
+        </field>
+        <field>
+            <name>ICONSTATE_X</name>
+            <comment></comment>
+            <returntype EnumType="true">de.amberhome.navdrawer.internal.MaterialMenuDrawable.IconState</returntype>
+        </field>
+        <field>
+            <name>STROKE_THIN</name>
+            <comment></comment>
+            <returntype EnumType="true">de.amberhome.navdrawer.internal.MaterialMenuDrawable.Stroke</returntype>
+        </field>
+        <field>
+            <name>ANIMSTATE_BURGER_CHECK</name>
+            <comment></comment>
+            <returntype EnumType="true">de.amberhome.navdrawer.internal.MaterialMenuDrawable.AnimationState</returntype>
+        </field>
+        <field>
+            <name>ANIMSTATE_BURGER_X</name>
+            <comment></comment>
+            <returntype EnumType="true">de.amberhome.navdrawer.internal.MaterialMenuDrawable.AnimationState</returntype>
+        </field>
+        <field>
+            <name>ICONSTATE_CHECK</name>
+            <comment></comment>
+            <returntype EnumType="true">de.amberhome.navdrawer.internal.MaterialMenuDrawable.IconState</returntype>
+        </field>
+        <field>
+            <name>ICONSTATE_BURGER</name>
+            <comment></comment>
+            <returntype EnumType="true">de.amberhome.navdrawer.internal.MaterialMenuDrawable.IconState</returntype>
+        </field>
+        <field>
+            <name>ANIMSTATE_ARROW_CHECK</name>
+            <comment></comment>
+            <returntype EnumType="true">de.amberhome.navdrawer.internal.MaterialMenuDrawable.AnimationState</returntype>
+        </field>
+        <field>
+            <name>STROKE_REGULAR</name>
+            <comment></comment>
+            <returntype EnumType="true">de.amberhome.navdrawer.internal.MaterialMenuDrawable.Stroke</returntype>
+        </field>
+        <field>
+            <name>ANIMSTATE_X_CHECK</name>
+            <comment></comment>
+            <returntype EnumType="true">de.amberhome.navdrawer.internal.MaterialMenuDrawable.AnimationState</returntype>
+        </field>
+        <field>
+            <name>STROKE_EXTRA_THIN</name>
+            <comment></comment>
+            <returntype EnumType="true">de.amberhome.navdrawer.internal.MaterialMenuDrawable.Stroke</returntype>
+        </field>
+        <field>
+            <name>ICONSTATE_ARROW</name>
+            <comment></comment>
+            <returntype EnumType="true">de.amberhome.navdrawer.internal.MaterialMenuDrawable.IconState</returntype>
+        </field>
+    </class>
+    <version>1.4</version>
+    <author>Markus Stipp</author>
+    <dependsOn>android-support-v4</dependsOn>
+    <dependsOn>nineoldandroids-2.4.0</dependsOn>
+</root>

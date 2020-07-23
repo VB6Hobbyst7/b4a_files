@@ -1,0 +1,304 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root>
+    <doclet-version-NOT-library-version>1.00</doclet-version-NOT-library-version>
+    <class>
+        <name>xvs.ACL.ACL</name>
+        <shortname>AdvancedCamera</shortname>
+        <comment>The new, improved camera library has a lot of new functions!
+These include: flashlight, scene modes, orientations, front- and back camera, picture size, white balance and a lot more!
+Only one process can access the camera at any time. Therefore it is highly recommended to initialize the camera object in Activity_Resume and release it in Activity_Pause.
+A working example with explanations is available &lt;link&gt;here|http://www.basic4ppc.com/forum/basic4android-getting-started-tutorials/6891-take-pictures-internal-camera.html&lt;/link&gt;.</comment>
+        <owner>activity</owner>
+        <event>Ready (Success As Boolean)</event>
+        <event>PictureTaken (Data() As Byte)</event>
+        <permission>android.permission.CAMERA</permission>
+        <permission>android.permission.FLASHLIGHT</permission>
+        <method>
+            <name>Initialize</name>
+            <comment>Initializes the camera.
+Panel - The preview images will be displayed on the panel.
+EventName - Events subs prefix.
+The Ready event will be raised when the camera has finished opening.</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>ba</name>
+                <type>anywheresoftware.b4a.BA</type>
+            </parameter>
+            <parameter>
+                <name>Panel</name>
+                <type>android.view.ViewGroup</type>
+            </parameter>
+            <parameter>
+                <name>EventName</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+        <method>
+            <name>FlashOff</name>
+            <comment>Turns the flashlight off.</comment>
+            <returntype>void</returntype>
+        </method>
+        <method>
+            <name>OriPortrait</name>
+            <comment>Sets the camera orientation to portrait.</comment>
+            <returntype>void</returntype>
+        </method>
+        <method>
+            <name>StopPreview</name>
+            <comment>Stops displaying the preview images.</comment>
+            <returntype>void</returntype>
+        </method>
+        <method>
+            <name>CameraBack</name>
+            <comment>Use the back camera as primary.</comment>
+            <returntype>void</returntype>
+        </method>
+        <method>
+            <name>FlashAuto</name>
+            <comment>Enables the flashlight to turn on automatically.</comment>
+            <returntype>void</returntype>
+        </method>
+        <method>
+            <name>PictureSize</name>
+            <comment>Sets the size of the picture in pixels.</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>width</name>
+                <type>int</type>
+            </parameter>
+            <parameter>
+                <name>height</name>
+                <type>int</type>
+            </parameter>
+        </method>
+        <method>
+            <name>isZoomSupported</name>
+            <comment>Returns a true or false statement when zooming is supported or not.
+Return type: @return:</comment>
+            <returntype>boolean</returntype>
+        </method>
+        <method>
+            <name>Release</name>
+            <comment>Releases the camera object and allows other processes to access the camera.</comment>
+            <returntype>void</returntype>
+        </method>
+        <method>
+            <name>TakePicture</name>
+            <comment>Takes a picture. When the picture is ready, the PictureTaken event will be raised.
+You should not call TakePicture while another picture is currently taken.
+The preview images are stopped after calling this method. You can call StartPreview to restart the preview images.</comment>
+            <returntype>void</returntype>
+        </method>
+        <method>
+            <name>FlashOn</name>
+            <comment>Turns the flashlight on.</comment>
+            <returntype>void</returntype>
+        </method>
+        <method>
+            <name>OriLandscape</name>
+            <comment>Sets the camera orientation to landscape.</comment>
+            <returntype>void</returntype>
+        </method>
+        <method>
+            <name>StartPreview</name>
+            <comment>Starts displaying the preview images.</comment>
+            <returntype>void</returntype>
+        </method>
+        <method>
+            <name>CameraFront</name>
+            <comment>Use the front camera as primary.</comment>
+            <returntype>void</returntype>
+        </method>
+        <property>
+            <name>setISOValue</name>
+            <parameter>
+                <name>value</name>
+                <type>int</type>
+            </parameter>
+            <comment>Sets the iso value.
+ Note that this MIGHT not work (properly).</comment>
+        </property>
+        <property>
+            <name>Quality</name>
+            <parameter>
+                <name>quality</name>
+                <type>int</type>
+            </parameter>
+            <comment>Sets the quality of the JPEG file.
+ The range is between 1 to 100, with 100 being the best.</comment>
+        </property>
+        <property>
+            <name>getMaxZoom</name>
+            <returntype>int</returntype>
+            <comment>Returns the maximum zooming level.
+ 0 is no zooming supported.</comment>
+        </property>
+        <property>
+            <name>getSupportedFlashMode</name>
+            <returntype>java.util.List</returntype>
+            <comment>Returns a list of all supported flash modes.</comment>
+        </property>
+        <property>
+            <name>getSupportedAntibanding</name>
+            <returntype>java.util.List</returntype>
+            <comment>Returns a list of all supported antibandings.</comment>
+        </property>
+        <property>
+            <name>getMinExposureCompensation</name>
+            <returntype>int</returntype>
+            <comment>Returns the minimum exposure compensation.</comment>
+        </property>
+        <property>
+            <name>getSupportedFocusMode</name>
+            <returntype>java.util.List</returntype>
+            <comment>Returns a list of all supported focus modes.</comment>
+        </property>
+        <property>
+            <name>setWhiteBalance</name>
+            <parameter>
+                <name>Balance</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <comment>Sets the white balance.
+The following effects are: AUTO, CLOUDY_DAYLIGHT, DAYLIGHT,
+FLUORESCENT, INCANDESCENT, SHADE, TWILIGHT, WARM_FLUORESCENT.
+For example:
+Camera1.setEffect = "WARM_FLUORESCENT"</comment>
+        </property>
+        <property>
+            <name>getSupportedPictureSize</name>
+            <returntype>java.util.List</returntype>
+            <comment>Returns a list of all supported picture sizes.</comment>
+        </property>
+        <property>
+            <name>getCurrentFocusMode</name>
+            <returntype>java.lang.String</returntype>
+            <comment>Returns the current focus mode. (String)</comment>
+        </property>
+        <property>
+            <name>getCurrentSceneMode</name>
+            <returntype>java.lang.String</returntype>
+            <comment>Returns the current scene mode. (String)</comment>
+        </property>
+        <property>
+            <name>getSupportedColourEffect</name>
+            <returntype>java.util.List</returntype>
+            <comment>Returns a list of all supported colour effects.</comment>
+        </property>
+        <property>
+            <name>setSceneMode</name>
+            <parameter>
+                <name>SceneMode</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <comment>Sets the Scene Mode.
+ACTION: Take photos of fast moving objects., AUTO: Scene mode is off.
+BEACH: Take pictures on the beach
+CANDLELIGHT: Capture scenes lit by candles, FIREWORKS: Take pictures of fireworks.
+LANDSCAPE: Take pictures on distant objects., NIGHT: Take photos at night.
+PARTY: Indoor low-light shot., PORTRAIT: Take people pictures.
+SNOW: in the snow., STEADYPHOTO: Avoid blurry pictures (handshake).
+SUNSET: Take Sunset photos., THEATRE: Take photos in a theater.
+For example:
+Camera1.setScene = "BEACH"</comment>
+        </property>
+        <property>
+            <name>setExposureCompensation</name>
+            <parameter>
+                <name>value</name>
+                <type>int</type>
+            </parameter>
+            <comment>Sets the exposure compensation.
+ A technique for adjusting the exposure indicated by a photographic exposure meter.</comment>
+        </property>
+        <property>
+            <name>getCurrentColourEffect</name>
+            <returntype>java.lang.String</returntype>
+            <comment>Returns the current colour effect. (String)</comment>
+        </property>
+        <property>
+            <name>getCurrentFlashMode</name>
+            <returntype>java.lang.String</returntype>
+            <comment>Returns the current flash mode. (String)</comment>
+        </property>
+        <property>
+            <name>setFocusMode</name>
+            <parameter>
+                <name>Focusmode</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <comment>Sets the focus mode.
+MACRO: Close-up, INFINITY: Far distance.
+FIXED: If the camera has auto-focus, this mode can fix the focus.
+AUTO: Auto-focus mode, EDOF: Focusing is done digitally and continuously.
+For example:
+Camera1.setFocusMode = "MACRO"</comment>
+        </property>
+        <property>
+            <name>getCurrentPictureSize</name>
+            <returntype>android.hardware.Camera.Size</returntype>
+            <comment>Returns the current picture size. (Size)</comment>
+        </property>
+        <property>
+            <name>setZoom</name>
+            <parameter>
+                <name>value</name>
+                <type>int</type>
+            </parameter>
+            <comment>Sets the zooming level.</comment>
+        </property>
+        <property>
+            <name>getMaxExposureCompensation</name>
+            <returntype>int</returntype>
+            <comment>Returns the maximum exposure compensation.</comment>
+        </property>
+        <property>
+            <name>getSupportedSceneMode</name>
+            <returntype>java.util.List</returntype>
+            <comment>Returns a list of all supported scene modes.</comment>
+        </property>
+        <property>
+            <name>setAntibanding</name>
+            <parameter>
+                <name>Antibanding</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <comment>Sets the Antibanding.
+ANTIBANDING_50HZ: Sets the antibanding to 50Hz.
+ANTIBANDING_60HZ: Sets the antibanding to 60Hz.
+ANTIBANDING_AUTO: Sets the antibanding to automatic mode.
+ANTIBANDING_OFF: Sets the antibanding off.
+For example:
+Camera1.setAntibanding = "ANTIBANDING_AUTO"</comment>
+        </property>
+        <property>
+            <name>getSupportedWhiteBalance</name>
+            <returntype>java.util.List</returntype>
+            <comment>Returns a list of all supported white balances.</comment>
+        </property>
+        <property>
+            <name>getCurrentWhiteBalance</name>
+            <returntype>java.lang.String</returntype>
+            <comment>Returns the current white balance. (String)</comment>
+        </property>
+        <property>
+            <name>setColourEffect</name>
+            <parameter>
+                <name>Effect</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <comment>Sets the color effect of a picture.
+The following effects are: AQUA, BLACKBOARD, MONO,
+NEGATIVE, NONE, POSTERIZE, SEPIA, SOLARIZE, WHITEBOARD.
+For example:
+Camera1.setColourEffect = "SEPIA"</comment>
+        </property>
+        <property>
+            <name>getCurrentAntibanding</name>
+            <returntype>java.lang.String</returntype>
+            <comment>Returns the current antibanding. (String)</comment>
+        </property>
+    </class>
+    <version>2.0</version>
+    <author>XverhelstX</author>
+</root>

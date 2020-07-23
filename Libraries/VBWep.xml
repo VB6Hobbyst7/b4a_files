@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root>
+    <doclet-version-NOT-library-version>1.02</doclet-version-NOT-library-version>
+    <class>
+        <name>vb.connect.Mywifi.Mywifi</name>
+        <shortname>VBConnect</shortname>
+        <owner>process</owner>
+        <permission>android.permission.CHANGE_NETWORK_STATE</permission>
+        <permission>android.permission.WAKE_LOCK</permission>
+        <permission>android.permission.UPDATE_DEVICE_STATS</permission>
+        <permission>android.permission.ACCESS_NETWORK_STATE</permission>
+        <permission>android.permission.CHANGE_WIFI_STATE</permission>
+        <permission>android.permission.INTERNET</permission>
+        <permission>android.permission.ACCESS_WIFI_STATE</permission>
+        <method>
+            <name>cWEP</name>
+            <comment>Connect to the given WEP network ssid with the password.
+ No quotes or backslashes needed.
+wepSSID: 
+wepPASS: </comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>wepSSID</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>wepPASS</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+        <method>
+            <name>GetWifiList</name>
+            <comment>Return a List of the names of available WIFI Spots.</comment>
+            <returntype>anywheresoftware.b4a.objects.collections.List</returntype>
+        </method>
+        <method>
+            <name>weconnected</name>
+            <comment>If connected:
+ Returns a String  YES  
+ If not connected:
+ Returns a String  NO</comment>
+            <returntype>java.lang.String</returntype>
+        </method>
+        <method>
+            <name>intToIp</name>
+            <comment></comment>
+            <returntype>java.lang.String</returntype>
+            <parameter>
+                <name>i</name>
+                <type>int</type>
+            </parameter>
+        </method>
+        <method>
+            <name>RemoveAllSavedNetworks</name>
+            <comment>Removes all saved networks on device
+ Good when you want to reset wifi configurations
+ WARNING: Will remove all passwords of saved wifi locations</comment>
+            <returntype>void</returntype>
+        </method>
+        <method>
+            <name>readWepConfig</name>
+            <comment>readWepConfig()
+ displays info to the b4a debug log window</comment>
+            <returntype>void</returntype>
+        </method>
+        <property>
+            <name>mac</name>
+            <returntype>java.lang.String</returntype>
+            <comment>Return a wifi mac address as STRING</comment>
+        </property>
+        <property>
+            <name>BSSID</name>
+            <returntype>java.lang.String</returntype>
+            <comment>Return a wifi BSSID as STRING</comment>
+        </property>
+        <property>
+            <name>SupplicantState</name>
+            <returntype EnumType="true">android.net.wifi.SupplicantState</returntype>
+            <comment>Return a STATUS STATE
+ 
+ ASSOCIATED - Association completed.
+ ASSOCIATING - Trying to associate with an access point.
+ COMPLETED - All authentication completed.
+ DISCONNECTED - client is not associated,  likely to start looking for an access point 
+ DORMANT - An Android-added state that is reported when a client issues an explicit DISCONNECT command.
+ FOUR_WAY_HANDSHAKE - WPA 4-Way Key Handshake in progress.
+ GROUP_HANDSHAKE - WPA Group Key Handshake in progress.
+ INACTIVE - Inactive state.
+ INVALID - A pseudo-state that should normally never be seen. SCANNING - Scanning for a network.
+ UNINITIALIZED - No connection.</comment>
+        </property>
+        <property>
+            <name>IPADDRESS</name>
+            <returntype>java.lang.String</returntype>
+            <comment>Return a wifi IP ADDRESS as INT
+ (not sure if this works)</comment>
+        </property>
+    </class>
+    <version>1.0</version>
+    <author>VB1992</author>
+</root>

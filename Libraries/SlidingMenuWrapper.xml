@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root>
+    <doclet-version-NOT-library-version>1.05</doclet-version-NOT-library-version>
+    <class>
+        <name>anywheresoftware.b4a.objects.SlidingMenuWrapper</name>
+        <shortname>SlidingMenu</shortname>
+        <objectwrapper>com.jeremyfeinstein.slidingmenu.lib.SlidingMenu</objectwrapper>
+        <owner>activity</owner>
+        <method>
+            <name>ShowMenu</name>
+            <comment>Shows the left menu.</comment>
+            <returntype>void</returntype>
+        </method>
+        <method>
+            <name>Initialize</name>
+            <comment>Initializes the object and sets the subs that will handle the events (currently there are no events).</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>ba</name>
+                <type>anywheresoftware.b4a.BA</type>
+            </parameter>
+            <parameter>
+                <name>EventName</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+        <method>
+            <name>ShowSecondaryMenu</name>
+            <comment>Shows the right menu.</comment>
+            <returntype>void</returntype>
+        </method>
+        <method>
+            <name>HideMenus</name>
+            <comment>Hides the menus.</comment>
+            <returntype>void</returntype>
+        </method>
+        <method>
+            <name>IsInitialized</name>
+            <comment></comment>
+            <returntype>boolean</returntype>
+        </method>
+        <property>
+            <name>Menu</name>
+            <returntype>anywheresoftware.b4a.objects.PanelWrapper</returntype>
+            <comment>Returns the left menu panel.</comment>
+        </property>
+        <property>
+            <name>SecondaryMenu</name>
+            <returntype>anywheresoftware.b4a.objects.PanelWrapper</returntype>
+            <comment>Returns the right menu panel.</comment>
+        </property>
+        <property>
+            <name>SecondaryVisible</name>
+            <returntype>boolean</returntype>
+            <comment></comment>
+        </property>
+        <property>
+            <name>Visible</name>
+            <returntype>boolean</returntype>
+            <comment></comment>
+        </property>
+        <property>
+            <name>Mode</name>
+            <returntype>int</returntype>
+            <parameter>
+                <name>i</name>
+                <type>int</type>
+            </parameter>
+            <comment>Gets or sets the sliding menu mode. One of the following constants: LEFT, RIGHT or BOTH.</comment>
+        </property>
+        <property>
+            <name>BehindOffset</name>
+            <parameter>
+                <name>i</name>
+                <type>int</type>
+            </parameter>
+            <comment>Sets the offset between the menu and the screen.</comment>
+        </property>
+        <field>
+            <name>BOTH</name>
+            <comment></comment>
+            <returntype>int</returntype>
+        </field>
+        <field>
+            <name>RIGHT</name>
+            <comment></comment>
+            <returntype>int</returntype>
+        </field>
+        <field>
+            <name>LEFT</name>
+            <comment></comment>
+            <returntype>int</returntype>
+        </field>
+    </class>
+    <version>1.1</version>
+    <dependsOn>slidingmenu.aar</dependsOn>
+    <dependsOn>com.android.support:support-v4</dependsOn>
+</root>

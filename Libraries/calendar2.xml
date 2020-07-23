@@ -1,0 +1,250 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root>
+    <doclet-version-NOT-library-version>1.01</doclet-version-NOT-library-version>
+    <class>
+        <name>edsmith.calendar.Calendar</name>
+        <shortname>MyCalendar</shortname>
+        <owner>process</owner>
+        <permission>android.permission.READ_CALENDAR</permission>
+        <permission>android.permission.WRITE_CALENDAR</permission>
+        <method>
+            <name>Initialize</name>
+            <comment>Common initialisations</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>ba</name>
+                <type>anywheresoftware.b4a.BA</type>
+            </parameter>
+        </method>
+        <method>
+            <name>DeleteCalendarEntry</name>
+            <comment>Deletes the specified calendar entry
+entryID: </comment>
+            <returntype>int</returntype>
+            <parameter>
+                <name>entryID</name>
+                <type>int</type>
+            </parameter>
+        </method>
+        <method>
+            <name>ListofEventsWithDescKeywordBetweenDates</name>
+            <comment>Returns a 'List' of all events for the specified calendar between the specified
+ dates if the 'keyword' exists in the description
+calID: ID of the calendar to get the events from
+Keyword: String used in the search of the description
+StartTime: Beginning time of the search in milliseconds from epoch
+FinishTime: End time of the search in milliseconds from epoch
+Return type: @return:List of all events for calendar between dates</comment>
+            <returntype>anywheresoftware.b4a.objects.collections.List</returntype>
+            <parameter>
+                <name>calID</name>
+                <type>int</type>
+            </parameter>
+            <parameter>
+                <name>Keyword</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>StartTime</name>
+                <type>long</type>
+            </parameter>
+            <parameter>
+                <name>FinishTime</name>
+                <type>long</type>
+            </parameter>
+        </method>
+        <method>
+            <name>CreateEventWithReminder</name>
+            <comment>Creates a new calendar event with reminder in the selected calendar using it's ID
+CalID: Calendar ID as found in 'GetListOfAllCalendars'
+Title: Title for the Event
+Desc: Description of the Event
+Location: Location of the Event
+StartTime: Start Time of the Event in milliseconds from epoch
+EndTime: Finish Time in milliseconds from epoch
+ReminderTime: Time in minutes to trigger the reminder
+RRule: String containing the Recurring Rule, Pass null if no recurring see the following link for all the possibilities &lt;link&gt;iCalendar Details|http://tools.ietf.org/html/rfc2445#section-4.3.10&lt;/link&gt;
+AllDay: Set to 'True' if all day event. The start and finish time must be on a midnight boundary</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>CalID</name>
+                <type>int</type>
+            </parameter>
+            <parameter>
+                <name>Title</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>Desc</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>Location</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>StartTime</name>
+                <type>long</type>
+            </parameter>
+            <parameter>
+                <name>EndTime</name>
+                <type>long</type>
+            </parameter>
+            <parameter>
+                <name>ReminderTime</name>
+                <type>long</type>
+            </parameter>
+            <parameter>
+                <name>RRule</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>AllDay</name>
+                <type>boolean</type>
+            </parameter>
+        </method>
+        <method>
+            <name>CreateEvent</name>
+            <comment>Creates a new calendar event in the selected calendar using it's ID
+CalID: Calendar ID as found in 'GetListOfAllCalendars'
+Title: Title for the Event
+Desc: Description of the Event
+Location: Location of the Event
+StartTime: Start Time of the Event in milliseconds from epoch
+EndTime: Finish Time in milliseconds from epoch
+RRule: String containing the Recurring Rule, Pass null if no recurring
+AllDay: Set to 'True' if all day event. The start and finish time must be on a midnight boundary</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>CalID</name>
+                <type>int</type>
+            </parameter>
+            <parameter>
+                <name>Title</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>Desc</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>Location</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>StartTime</name>
+                <type>long</type>
+            </parameter>
+            <parameter>
+                <name>EndTime</name>
+                <type>long</type>
+            </parameter>
+            <parameter>
+                <name>RRule</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>AllDay</name>
+                <type>boolean</type>
+            </parameter>
+        </method>
+        <method>
+            <name>ListExtendedCalendarEntryDetails</name>
+            <comment>Get a list of the details for a calendar entry Including the Reminders and Attendees
+
+ Returns a Map with the following fields
+ hasAlarm
+ recurRule
+ duration
+ minutes
+ method
+ AttendeeName
+ AttendeeEmail
+ AttendeeStatus
+ The Attendee information can be repeated in groups of 3 depending on the number 
+ of attendees.
+ See &lt;link&gt;Google Developer|http://developer.android.com/guide/topics/providers/calendar-provider.html&lt;/link&gt;
+eventId: The Event ID</comment>
+            <returntype>anywheresoftware.b4a.objects.collections.Map</returntype>
+            <parameter>
+                <name>eventId</name>
+                <type>int</type>
+            </parameter>
+        </method>
+        <method>
+            <name>ListofEventsWithTitleKeywordBetweenDates</name>
+            <comment>Returns a 'List' of all events for the specified calendar between the specified
+ dates if the 'keyword' exists in the title
+calID: ID of the calendar to get the events from
+Keyword: String used in the search of the Title
+StartTime: Beginning time of the search in milliseconds from epoch
+FinishTime: End time of the search in milliseconds from epoch
+Return type: @return:List of all events for calendar between dates</comment>
+            <returntype>anywheresoftware.b4a.objects.collections.List</returntype>
+            <parameter>
+                <name>calID</name>
+                <type>int</type>
+            </parameter>
+            <parameter>
+                <name>Keyword</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>StartTime</name>
+                <type>long</type>
+            </parameter>
+            <parameter>
+                <name>FinishTime</name>
+                <type>long</type>
+            </parameter>
+        </method>
+        <method>
+            <name>GetListofEventsforCalendarBetweenDates</name>
+            <comment>Returns a 'List' of all events for the specified calendar between the 
+ specified dates
+calID: ID of the calendar to get the events from
+StartTime: Beginning time of the search in milliseconds from epoch
+FinishTime: End time of the search in milliseconds from epoch
+Return type: @return:List of all events for calendar between dates</comment>
+            <returntype>anywheresoftware.b4a.objects.collections.List</returntype>
+            <parameter>
+                <name>calID</name>
+                <type>int</type>
+            </parameter>
+            <parameter>
+                <name>StartTime</name>
+                <type>long</type>
+            </parameter>
+            <parameter>
+                <name>FinishTime</name>
+                <type>long</type>
+            </parameter>
+        </method>
+        <method>
+            <name>GetListofAllEventsforCalendar</name>
+            <comment>Returns a 'List' of all events for the specified calendar
+calID: ID of the calendar to get the events from
+Return type: @return:List of all events for calendar</comment>
+            <returntype>anywheresoftware.b4a.objects.collections.List</returntype>
+            <parameter>
+                <name>calID</name>
+                <type>int</type>
+            </parameter>
+        </method>
+        <method>
+            <name>GetListOfAllCalendars</name>
+            <comment>Returns a list of calendars and their ID in a Map, Index is the calendar ID. 
+ The first named calendar is normally the 'Default' calendar and it's name is the same as your email, the 
+ other calendars are either additional calendars created by you or calendars you subscribe to.
+Own: Set to 'True' if you want only 'owner' Calendars
+Return type: @return:A MAP containing the calendar name and ID</comment>
+            <returntype>anywheresoftware.b4a.objects.collections.Map</returntype>
+            <parameter>
+                <name>Own</name>
+                <type>boolean</type>
+            </parameter>
+        </method>
+    </class>
+    <version>1.8</version>
+    <author>Edward Smith</author>
+</root>

@@ -1,0 +1,236 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root>
+    <doclet-version-NOT-library-version>1.02</doclet-version-NOT-library-version>
+    <class>
+        <name>anywheresoftware.b4a.objects.SMB</name>
+        <shortname>SMB</shortname>
+        <comment>This library is based on &lt;link&gt;JCIFS|http://jcifs.samba.org/&lt;/link&gt; library.
+It provides access to Microsoft Windows network file system.
+See this &lt;link&gt;tutorial|http://www.basic4ppc.com/forum/basic4android-getting-started-tutorials/17179-android-smb-cifs-tutorial.html&lt;/link&gt;.</comment>
+        <owner>process</owner>
+        <event>DownloadCompleted (Url As String, RemoteFile As String, Success As Boolean)</event>
+        <event>UploadCompleted (Url As String, RemoteFile As String, Success As Boolean)</event>
+        <event>DeleteCompleted (Url As String, RemoteFile As String, Success As Boolean)</event>
+        <event>ListCompleted (Url As String, Success As Boolean, Entries() As SMBFile)</event>
+        <permission>android.permission.INTERNET</permission>
+        <method>
+            <name>DownloadFile2</name>
+            <comment>Similar to DownloadFile. Expects an OutputStream instead of the local file.</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>ba</name>
+                <type>anywheresoftware.b4a.BA</type>
+            </parameter>
+            <parameter>
+                <name>Url</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>RemoteFile</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>out</name>
+                <type>java.io.OutputStream</type>
+            </parameter>
+            <parameter>
+                <name>Close</name>
+                <type>boolean</type>
+            </parameter>
+        </method>
+        <method>
+            <name>Initialize</name>
+            <comment>Initializes the object.</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>EventName</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+        <method>
+            <name>DeleteFile</name>
+            <comment>Deletes a file or folder (including non-empty folders).
+The DeleteCompleted event will be raised when the process completes.
+Example: &lt;code&gt;SMB1.DeleteFile("smb://USER-PC/", "1.jpg")&lt;/code&gt;</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>ba</name>
+                <type>anywheresoftware.b4a.BA</type>
+            </parameter>
+            <parameter>
+                <name>Url</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>RemoteFile</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+        <method>
+            <name>DownloadFile</name>
+            <comment>Downloads a remote file and stores it in the specified path.
+ The DownloadCompleted event will be raised when the process completes.
+Example: &lt;code&gt;SMB1.DownloadFile("smb://USER-PC/Users/Public/", "1.jpg", File.DirRootExternal, "1.jpg")&lt;/code&gt;</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>ba</name>
+                <type>anywheresoftware.b4a.BA</type>
+            </parameter>
+            <parameter>
+                <name>Url</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>RemoteFile</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>LocalDir</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>LocalFile</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+        <method>
+            <name>ListFiles</name>
+            <comment>Lists all files and folders in the given remote path.
+FilterPattern - DOS filter pattern. Pass an empty string to list all files and folders.
+The ListCompleted event will be raised when the process completes.
+Example: &lt;code&gt;SMB1.ListFiles("smb://USER-PC/Users/Public/", "*.jpg")&lt;/code&gt;</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>ba</name>
+                <type>anywheresoftware.b4a.BA</type>
+            </parameter>
+            <parameter>
+                <name>Url</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>FilterPattern</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+        <method>
+            <name>UploadFile</name>
+            <comment>Uploads a local file.
+The UploadCompleted event will be raised when the process completes.
+Example: &lt;code&gt;SMB1.UploadFile(File.DirRootExternal, "1.jpg", "smb://USER-PC/", "1.jpg")&lt;/code&gt;</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>ba</name>
+                <type>anywheresoftware.b4a.BA</type>
+            </parameter>
+            <parameter>
+                <name>LocalDir</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>LocalFile</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>Url</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>RemoteFile</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+        <method>
+            <name>UploadFile2</name>
+            <comment>Similar to UploadFile. Expects an InputStream instead of the local file.</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>ba</name>
+                <type>anywheresoftware.b4a.BA</type>
+            </parameter>
+            <parameter>
+                <name>In</name>
+                <type>java.io.InputStream</type>
+            </parameter>
+            <parameter>
+                <name>Url</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>RemoteFile</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+        <method>
+            <name>Initialize2</name>
+            <comment>Initializes the object and sets the specified map of properties as explained on this page:
+&lt;link&gt;SMB properties|http://jcifs.samba.org/src/docs/api/overview-summary.html&lt;/link&gt;</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>EventName</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>Properties</name>
+                <type>anywheresoftware.b4a.objects.collections.Map</type>
+            </parameter>
+        </method>
+        <method>
+            <name>SetCredentials</name>
+            <comment>Sets the credentials that should be used to make the connection.</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>Username</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>Password</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>Domain</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+    </class>
+    <class>
+        <name>anywheresoftware.b4a.objects.SMB.SmbFileWrapper</name>
+        <shortname>SMBFile</shortname>
+        <comment>Stores the metadata for a file or folder entry retrieved by calling SMB.ListFiles.</comment>
+        <objectwrapper>jcifs.smb.SmbFile</objectwrapper>
+        <owner>process</owner>
+        <method>
+            <name>IsInitialized</name>
+            <comment></comment>
+            <returntype>boolean</returntype>
+        </method>
+        <property>
+            <name>Name</name>
+            <returntype>java.lang.String</returntype>
+            <comment>Gets the file name.</comment>
+        </property>
+        <property>
+            <name>Parent</name>
+            <returntype>java.lang.String</returntype>
+            <comment>Returns the Url of the file parent.</comment>
+        </property>
+        <property>
+            <name>LastModified</name>
+            <returntype>long</returntype>
+            <comment>Returns the last modified data.
+Example: &lt;code&gt;DateTime.Date(File.LastModified)&lt;/code&gt;</comment>
+        </property>
+        <property>
+            <name>Directory</name>
+            <returntype>boolean</returntype>
+            <comment>Returns true if this entry is a directory.</comment>
+        </property>
+        <property>
+            <name>Size</name>
+            <returntype>long</returntype>
+            <comment>Returns the file size.</comment>
+        </property>
+    </class>
+    <version>1.0</version>
+    <dependsOn>jcifs</dependsOn>
+</root>

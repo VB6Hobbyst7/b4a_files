@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root>
+    <doclet-version-NOT-library-version>1.05</doclet-version-NOT-library-version>
+    <class>
+        <name>com.uniquestudio.lowpoly.LowPoly</name>
+        <comment>Created by CoXier on 2016/9/14.</comment>
+        <owner>process</owner>
+        <method>
+            <name>getTriangles</name>
+            <comment></comment>
+            <returntype>int[]</returntype>
+            <parameter>
+                <name>pixels</name>
+                <type>int[]</type>
+            </parameter>
+            <parameter>
+                <name>width</name>
+                <type>int</type>
+            </parameter>
+            <parameter>
+                <name>height</name>
+                <type>int</type>
+            </parameter>
+            <parameter>
+                <name>pointNum</name>
+                <type>int</type>
+            </parameter>
+        </method>
+        <method>
+            <name>generate</name>
+            <comment>
+input: 
+blur: 
+Return type: @return:</comment>
+            <returntype>android.graphics.Bitmap</returntype>
+            <parameter>
+                <name>input</name>
+                <type>android.graphics.Bitmap</type>
+            </parameter>
+            <parameter>
+                <name>blur</name>
+                <type>int</type>
+            </parameter>
+        </method>
+    </class>
+    <class>
+        <name>de.donmanfred.LowPolyWrapper</name>
+        <shortname>LowPoly</shortname>
+        <objectwrapper>com.uniquestudio.lowpoly.LowPoly</objectwrapper>
+        <owner>process</owner>
+        <method>
+            <name>IsInitialized</name>
+            <comment></comment>
+            <returntype>boolean</returntype>
+        </method>
+        <method>
+            <name>Initialize</name>
+            <comment></comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>ba</name>
+                <type>anywheresoftware.b4a.BA</type>
+            </parameter>
+            <parameter>
+                <name>EventName</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+        <method>
+            <name>generate</name>
+            <comment></comment>
+            <returntype>android.graphics.Bitmap</returntype>
+            <parameter>
+                <name>input</name>
+                <type>android.graphics.Bitmap</type>
+            </parameter>
+            <parameter>
+                <name>blur</name>
+                <type>int</type>
+            </parameter>
+        </method>
+        <designerProperty>key:Checked, displayname:Checked, defaultvalue:False, fieldtype:Boolean</designerProperty>
+    </class>
+    <version>1.0</version>
+    <author>DonManfred (wrapper)</author>
+</root>

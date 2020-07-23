@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root>
+    <doclet-version-NOT-library-version>1.02</doclet-version-NOT-library-version>
+    <class>
+        <name>uk.co.martinpearman.b4a.activitymanager.RunningTaskInfo</name>
+        <shortname>RunningTaskInfo</shortname>
+        <objectwrapper>android.app.ActivityManager.RunningTaskInfo</objectwrapper>
+        <owner>process</owner>
+        <method>
+            <name>GetApplicationName</name>
+            <comment>Returns this running task's application name.
+ Will return "APPLICATION_NAME_NOT_FOUND" if a problem occurs trying to find the application name.</comment>
+            <returntype>java.lang.String</returntype>
+            <parameter>
+                <name>pBA</name>
+                <type>anywheresoftware.b4a.BA</type>
+            </parameter>
+        </method>
+        <method>
+            <name>GetPackageName</name>
+            <comment>Returns this running task's package name.</comment>
+            <returntype>java.lang.String</returntype>
+        </method>
+        <method>
+            <name>IsInitialized</name>
+            <comment></comment>
+            <returntype>boolean</returntype>
+        </method>
+    </class>
+    <class>
+        <name>uk.co.martinpearman.b4a.activitymanager.ActivityManager</name>
+        <shortname>ActivityManager</shortname>
+        <owner>process</owner>
+        <permission>android.permission.GET_TASKS</permission>
+        <permission>android.permission.KILL_BACKGROUND_PROCESSES</permission>
+        <method>
+            <name>KillBackgroundProcesses</name>
+            <comment>Have the system immediately kill all background processes associated with the given package name.</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>pBA</name>
+                <type>anywheresoftware.b4a.BA</type>
+            </parameter>
+            <parameter>
+                <name>PackageName</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+        <method>
+            <name>GetRunningTasks</name>
+            <comment>Returns an Array of RunningTaskInfo objects.
+ Each RunningTaskInfo object represents a task that the user has recently launched.</comment>
+            <returntype>uk.co.martinpearman.b4a.activitymanager.RunningTaskInfo[]</returntype>
+            <parameter>
+                <name>pBA</name>
+                <type>anywheresoftware.b4a.BA</type>
+            </parameter>
+        </method>
+        <method>
+            <name>GetLaunchIntentForLauncher</name>
+            <comment>Returns an Intent that will launch the device's default launcher/home screen application.
+ Starting this Intent will force any running application into the background.</comment>
+            <returntype>anywheresoftware.b4a.objects.IntentWrapper</returntype>
+        </method>
+        <method>
+            <name>GetLaunchIntentForPackage</name>
+            <comment>Returns an Intent that will start/restart the application identified by PackageName.
+ The Intent will ensure that the application is started afresh with no 'back' history.</comment>
+            <returntype>anywheresoftware.b4a.objects.IntentWrapper</returntype>
+            <parameter>
+                <name>PackageName</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+    </class>
+    <version>0.01</version>
+    <author>Martin Pearman</author>
+</root>

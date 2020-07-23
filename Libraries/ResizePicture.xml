@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root>
+    <doclet-version-NOT-library-version>1.04</doclet-version-NOT-library-version>
+    <class>
+        <name>com.devil.app.ResizePicture</name>
+        <shortname>ResizePicture</shortname>
+        <owner>process</owner>
+        <permission>android.permission.INTERNET</permission>
+        <method>
+            <name>resizeUrl</name>
+            <comment>Resize and Copy Image from URL to Destiny ;) - Joke NJDude
+ pathSourceUrl = URL where is original Image
+ imgSource = Name Image original
+ w = Width
+ h = Height
+ pathDestiny = Path where you want put new Image
+ imgDestiny = Name Image new
+ format = "png" or "jpeg"
+ ratio = "yes" if you want maintaing its aspect ratio, otherwise "no" and resize your w and h
+Example:&lt;code&gt;
+Dim pic As ResizePicture
+Dim nomepath As String = File.DirRootExternal 
+pic.resizeUrl("http://devil-app.eu/immagini_mie/","test.jpg", 250,150, File.DirRootExternal,"vedi","jpeg","yes")&lt;/code&gt;</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>ba</name>
+                <type>anywheresoftware.b4a.BA</type>
+            </parameter>
+            <parameter>
+                <name>pathSourceUrl</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>imgSource</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>w</name>
+                <type>int</type>
+            </parameter>
+            <parameter>
+                <name>h</name>
+                <type>int</type>
+            </parameter>
+            <parameter>
+                <name>pathDestiny</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>imgDestiny</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>format</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>Ratio</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+        <method>
+            <name>resize</name>
+            <comment>Resize Image
+ pathSource = Path where is original Image
+ imgSource = Name Image original
+ w = Width
+ h = Height
+ pathDestiny = Path where you want put new Image
+ imgDestiny = Name Image new
+ format = "png" or "jpeg"
+ ratio = "yes" if you want maintaing its aspect ratio, otherwise "no" and resize your w and h
+Example:&lt;code&gt;
+Dim pic As ResizePicture
+File.Copy(File.DirAssets, "test.jpg",File.DirRootExternal,"test.jpg")
+Dim nomepath As String = File.DirRootExternal 
+pic.resize( nomepath, "test.jpg", 600, 400, nomepath, "vedi","jpeg", "yes")&lt;/code&gt;</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>pathSource</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>imgSource</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>w</name>
+                <type>int</type>
+            </parameter>
+            <parameter>
+                <name>h</name>
+                <type>int</type>
+            </parameter>
+            <parameter>
+                <name>pathDestiny</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>imgDestiny</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>format</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>Ratio</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+    </class>
+    <version>1.1</version>
+    <author>DevilApp</author>
+</root>

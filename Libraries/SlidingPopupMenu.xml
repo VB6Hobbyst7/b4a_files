@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <doclet-version-NOT-library-version>1.00</doclet-version-NOT-library-version>
+  <dependsOn>ime</dependsOn>
+  <dependsOn>phone</dependsOn>
+  <dependsOn>javaobject</dependsOn>
+  <dependsOn>reflection</dependsOn>
+  <class>
+    <name>b4a.example.slidingpopupmenu</name>
+    <shortname>SlidingPopupMenu</shortname>
+    <owner>activity</owner>
+    <event>MenuItemClick(ItemID as Int)</event>
+    <event>Hide</event>
+    <event>Show</event>
+    <method>
+      <name>IsInitialized</name>
+      <comment>Tests whether the object has been initialized.</comment>
+      <returntype>boolean</returntype>
+    </method>
+    <method>
+      <name DesignerName="AddMenuItem">_addmenuitem</name>
+      <returntype>String</returntype>
+      <parameter>
+        <name>ItemID</name>
+        <type>String</type>
+      </parameter>
+      <parameter>
+        <name>Order</name>
+        <type>int</type>
+      </parameter>
+      <parameter>
+        <name>Title</name>
+        <type>String</type>
+      </parameter>
+    </method>
+    <method>
+      <name DesignerName="AddMenuItem2">_addmenuitem2</name>
+      <returntype>String</returntype>
+      <parameter>
+        <name>ItemID</name>
+        <type>String</type>
+      </parameter>
+      <parameter>
+        <name>Order</name>
+        <type>int</type>
+      </parameter>
+      <parameter>
+        <name>Title</name>
+        <type>String</type>
+      </parameter>
+      <parameter>
+        <name>Filename</name>
+        <type>String</type>
+      </parameter>
+    </method>
+    <method>
+      <name DesignerName="ChangeStatusColor">_changestatuscolor</name>
+      <returntype>String</returntype>
+      <parameter>
+        <name>Color</name>
+        <type>int</type>
+      </parameter>
+    </method>
+    <method>
+      <name DesignerName="ChangeStatusColorBase">_changestatuscolorbase</name>
+      <returntype>String</returntype>
+    </method>
+    <method>
+      <name DesignerName="Clear">_clear</name>
+      <returntype>String</returntype>
+    </method>
+    <method>
+      <name DesignerName="getStateMenu" HideFromIDE="true">_getstatemenu</name>
+      <returntype>boolean</returntype>
+    </method>
+    <method>
+      <name DesignerName="Hide">_hide</name>
+      <returntype>String</returntype>
+    </method>
+    <method>
+      <name DesignerName="Initialize">_initialize</name>
+      <comment>Initializes the object. You can add parameters to this method if needed.
+Add font to Files asset(filename is font.ttf)
+Author: www.iranapp.org
+</comment>
+      <returntype>String</returntype>
+      <parameter>
+        <name>ba</name>
+        <type>anywheresoftware.b4a.BA</type>
+      </parameter>
+      <parameter>
+        <name>Event</name>
+        <type>String</type>
+      </parameter>
+      <parameter>
+        <name>Mobule</name>
+        <type>Object</type>
+      </parameter>
+      <parameter>
+        <name>Parent</name>
+        <type>anywheresoftware.b4a.objects.PanelWrapper</type>
+      </parameter>
+      <parameter>
+        <name>CountItem</name>
+        <type>int</type>
+      </parameter>
+    </method>
+    <method>
+      <name DesignerName="setMainStatusbarColor" HideFromIDE="true">_setmainstatusbarcolor</name>
+      <returntype>String</returntype>
+      <parameter>
+        <name>Color</name>
+        <type>int</type>
+      </parameter>
+    </method>
+    <method>
+      <name DesignerName="SetStateListView">_setstatelistview</name>
+      <returntype>String</returntype>
+      <parameter>
+        <name>NormalColor</name>
+        <type>anywheresoftware.b4a.objects.drawable.ColorDrawable</type>
+      </parameter>
+      <parameter>
+        <name>PressColor</name>
+        <type>anywheresoftware.b4a.objects.drawable.ColorDrawable</type>
+      </parameter>
+    </method>
+    <method>
+      <name DesignerName="SetTransparentParentColor">_settransparentparentcolor</name>
+      <returntype>String</returntype>
+    </method>
+    <method>
+      <name DesignerName="Show">_show</name>
+      <returntype>String</returntype>
+    </method>
+    <property>
+      <name DesignerName="StateMenu">_statemenu</name>
+      <returntype>boolean</returntype>
+    </property>
+    <property>
+      <name DesignerName="MainStatusbarColor">_mainstatusbarcolor</name>
+      <returntype>void</returntype>
+      <parameter>
+        <name>Value</name>
+        <type>int</type>
+      </parameter>
+    </property>
+  </class>
+  <version>1</version>
+</root>

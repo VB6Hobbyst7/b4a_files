@@ -1,0 +1,278 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root>
+    <doclet-version-NOT-library-version>1.02</doclet-version-NOT-library-version>
+    <class>
+        <name>b4a.jk.ssh.Ssh2Wrapper</name>
+        <shortname>jkSSH2</shortname>
+        <owner>process</owner>
+        <event>LocalForwardingCreated (Success As Boolean, TunnelHost As String, TunnelLocalPort As Int)</event>
+        <event>CmdExecuted (Success As Boolean, Result As List, TaskId As Int)</event>
+        <event>FileDownloadCompleted (Success As Boolean, RemoteFile As String, LocalTargetDirectory As String, TaskId As Int)</event>
+        <event>FileUploadCompleted (Success As Boolean, LocalFile As String, RemoteTargetDirectory As String, Mode As String, TaskId As Int)</event>
+        <event>ConnectionLost (Reason As String)</event>
+        <permission>android.permission.INTERNET</permission>
+        <method>
+            <name>Initialize</name>
+            <comment>initializes the SSH object.
+ Example:
+ &lt;code&gt;
+ 		Dim SSH2 As jkSSH2
+ 
+ 		SSH2.initialize("myEvent", "mySshServer", 22, "myUsername", "myPassword")
+ &lt;/code&gt;</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>ba</name>
+                <type>anywheresoftware.b4a.BA</type>
+            </parameter>
+            <parameter>
+                <name>EventName</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>SshHost</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>SshPort</name>
+                <type>int</type>
+            </parameter>
+        </method>
+        <method>
+            <name>getFile</name>
+            <comment>Downloads a file using scp command. Raises FileDownloadCompleted event
+ Example:
+ &lt;code&gt;
+ 		Dim SSH2 As jkSSH2
+ 		SSH2.initialize("myEvent", "mySshServer", 22)
+ 		SSH2.authenticateWithPassword("myUsername", "myPassword")
+ 
+ 		SSH2.getFile("/tmp/myFile.txt", File.DirDefaultExternal, 10)
+ &lt;/code&gt;</comment>
+            <returntype>boolean</returntype>
+            <parameter>
+                <name>remoteFile</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>localTargetDirectory</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>TaskId</name>
+                <type>int</type>
+            </parameter>
+        </method>
+        <method>
+            <name>closeLocalPortForwarder</name>
+            <comment>Closes all local port forwarding tunnels.
+ Example:
+ &lt;code&gt;
+		Dim SSH2 As jkSSH2
+ 		SSH2.initialize("myEvent", "mySshServer", 22)
+ 		SSH2.authenticateWithPassword("myUsername", "myPassword")
+ 		SSH2.createLocalPortForwarder("127.0.0.1", 10688, 80)
+ 
+ 		SSH2.closeLocalPortForwarder()
+ &lt;/code&gt;</comment>
+            <returntype>void</returntype>
+        </method>
+        <method>
+            <name>IsConnected</name>
+            <comment>Checks if the SSH connection is established
+ Example:
+ &lt;code&gt;
+ 		Dim SSH2 As jkSSH2
+ 		SSH2.initialize("myEvent", "mySshServer", 22)
+ 		SH2.authenticateWithPassword("myUsername", "myPassword")
+ 
+ 		Log(SSH2.IsConnected())
+ &lt;/code&gt;</comment>
+            <returntype>boolean</returntype>
+        </method>
+        <method>
+            <name>authenticateWithNone</name>
+            <comment>Use authentication without password  
+ Example:
+ &lt;code&gt;
+ 		Dim SSH2 As jkSSH2
+ 		SSH2.initialize("myEvent", "mySshServer", 22)
+ 		
+ 		SSH2.authenticateWithNone("myUsername")
+ &lt;/code&gt;</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>Username</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+        <method>
+            <name>close</name>
+            <comment>Closes connection to SSH-Server.
+ Example:
+ &lt;code&gt;
+		Dim SSH2 As jkSSH2
+ 		SSH2.initialize("myEvent", "mySshServer", 22)
+ 		SSH2.authenticateWithPassword("myUsername", "myPassword")
+ 
+ 		SSH2.close
+ &lt;/code&gt;</comment>
+            <returntype>void</returntype>
+        </method>
+        <method>
+            <name>createLocalPortForwarder</name>
+            <comment>Creates a local port forwarding tunnel. Raises LocalForwardingCreated event on success
+ Example:
+ &lt;code&gt;
+		Dim SSH2 As jkSSH2
+ 		SSH2.initialize("myEvent", "mySshServer", 22)
+ 		SSH2.authenticateWithPassword("myUsername", "myPassword")
+ 
+ 		SSH2.createLocalPortForwarder("127.0.0.1", 10688, 80)
+ &lt;/code&gt;</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>TunnelHost</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>TunnelLocalPort</name>
+                <type>int</type>
+            </parameter>
+            <parameter>
+                <name>TunnelRemotePort</name>
+                <type>int</type>
+            </parameter>
+        </method>
+        <method>
+            <name>putFile</name>
+            <comment>Uploads a file using scp command. Raises FileUploadCompleted event
+ Example:
+ &lt;code&gt;
+ 		Dim SSH2 As jkSSH2
+ 		SSH2.initialize("myEvent", "mySshServer", 22)
+ 		SSH2.authenticateWithPassword("myUsername", "myPassword")
+ 
+ 		SSH2.putFile(File.DirDefaultExternal &amp; "/myFile.txt", "/tmp", "0755", 12)
+ &lt;/code&gt;</comment>
+            <returntype>boolean</returntype>
+            <parameter>
+                <name>localFile</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>remoteTargetDirectory</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>mode</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>TaskId</name>
+                <type>int</type>
+            </parameter>
+        </method>
+        <method>
+            <name>execCommand</name>
+            <comment>Executes a command on the remote machine. Raises CmdExecuted event
+ Example:
+ &lt;code&gt;
+		Dim SSH2 As jkSSH2
+ 		SSH2.initialize("myEvent", "mySshServer", 22)
+ 		SSH2.authenticateWithPassword("myUsername", "myPassword")
+ 
+ 		SSH2.execCommand("uname -a &amp;&amp; date &amp;&amp; uptime &amp;&amp; who")
+ &lt;/code&gt;</comment>
+            <returntype>boolean</returntype>
+            <parameter>
+                <name>cmd</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>TaskId</name>
+                <type>int</type>
+            </parameter>
+        </method>
+        <method>
+            <name>authenticateWithKey</name>
+            <comment>Use authentication with key file. If key file is encrypted then specify a password.
+ Example:
+ &lt;code&gt;
+ 		Dim SSH2 As jkSSH2
+ 		Dim myKey As String
+ 
+ 		SSH2.initialize("myEvent", "mySshServer", 22)
+ 		
+ 		myKey = File.ReadString(File.DirAssets, "myKey.pem")
+ 		SSH2.authenticateWithKey("myUsername", myKey, "myPassword")
+ &lt;/code&gt;</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>Username</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>pemKey</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>Password</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+        <method>
+            <name>IsInitialized</name>
+            <comment>Checks if the SSH object was initialized
+ Example:
+ &lt;code&gt;
+ 		Dim SSH2 As jkSSH2
+ 		SSH2.initialize("myEvent", "mySshServer", 22)
+ 		SH2.authenticateWithPassword("myUsername", "myPassword")
+ 
+ 		Log(SSH2.IsInitialized())
+ &lt;/code&gt;</comment>
+            <returntype>boolean</returntype>
+        </method>
+        <method>
+            <name>authenticateWithPassword</name>
+            <comment>Use authentication with username and password  
+ Example:
+ &lt;code&gt;
+ 		Dim SSH2 As jkSSH2
+ 		SSH2.initialize("myEvent", "mySshServer", 22)
+ 		
+ 		SSH2.authenticateWithPassword("myUsername", "myPassword")
+ &lt;/code&gt;</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>Username</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>Password</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+        <property>
+            <name>DebugOutput</name>
+            <parameter>
+                <name>status</name>
+                <type>boolean</type>
+            </parameter>
+            <comment>Enable/Disable output in B4A debug window
+ Default = true (Enabled)
+ Example:
+ &lt;code&gt;
+ 		Dim SSH2 As jkSSH2
+ 		SSH2.initialize("myEvent", "mySshServer", 22)
+ 		SH2.authenticateWithPassword("myUsername", "myPassword")
+ 
+ 		SSH2.setDebugOutput(false)
+ &lt;/code&gt;</comment>
+        </property>
+    </class>
+    <version>1.0</version>
+    <comment>jkSSH2 library allows to connect to a SSH2-Server.</comment>
+    <author>jk</author>
+</root>

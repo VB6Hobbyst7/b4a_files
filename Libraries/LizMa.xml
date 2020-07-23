@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root>
+    <doclet-version-NOT-library-version>1.00</doclet-version-NOT-library-version>
+    <class>
+        <name>esdaSO.LizMa.LizMa</name>
+        <shortname>LizMa</shortname>
+        <owner>process</owner>
+        <method>
+            <name>SetIMEI</name>
+            <comment>Setter-Methode fuer die IMEI-Nummer, da Basic4Android keinen parametrisierten Konstruktor aufrufen kann.</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>iMEI</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+        <method>
+            <name>GetCopyright</name>
+            <comment>Methode: GetCopyright - Rueckgabe des Copright-Inhabers</comment>
+            <returntype>java.lang.String</returntype>
+        </method>
+        <method>
+            <name>GetSerialCode</name>
+            <comment>Methode: GetSerialCode - Einsprung in die Klasse zur Berechnung des Lizenz-Codes</comment>
+            <returntype>java.lang.String</returntype>
+            <parameter>
+                <name>licences</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>programm</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>user</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>eMail</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>regDate</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+        <method>
+            <name>GetIMEI</name>
+            <comment>Getter-Methode fuer die IMEI-Rueckkgabe.</comment>
+            <returntype>java.lang.String</returntype>
+        </method>
+        <method>
+            <name>GetAuthor</name>
+            <comment>Methode: GetAuthor - Rueckgabe der Programmier-Namens</comment>
+            <returntype>java.lang.String</returntype>
+        </method>
+        <method>
+            <name>GetVersion</name>
+            <comment>Methode: GetVersion - Rueckgabe der Versions-Nummer</comment>
+            <returntype>java.lang.String</returntype>
+        </method>
+        <property>
+            <name>Password</name>
+            <returntype>java.lang.String</returntype>
+            <parameter>
+                <name>password</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <comment>Getter-Methode fuer die Password-Rueckgabe.</comment>
+        </property>
+        <property>
+            <name>PasswordFlag</name>
+            <returntype>boolean</returntype>
+            <parameter>
+                <name>Flag</name>
+                <type>boolean</type>
+            </parameter>
+            <comment>Getter-Methode fuer die Abfrage des Password-Flags.</comment>
+        </property>
+    </class>
+    <version>1.2</version>
+</root>

@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root>
+    <doclet-version-NOT-library-version>1.01</doclet-version-NOT-library-version>
+    <class>
+        <name>smith.ed.location2.FindLocation</name>
+        <shortname>ESLocation2</shortname>
+        <owner>process</owner>
+        <event>Locationchanged (Longitude As Double, Latitude As Double, Altitude As Double, Accuracy As Float, Bearing As Float, Provider As String, Speed As Float, Time As Long)</event>
+        <event>Providerdisabled (Provider As String)</event>
+        <event>Providerenabled (Provider As String)</event>
+        <event>Statuschanged (Provider As String, Status As Int)</event>
+        <event>Proximityenter ()</event>
+        <event>Proximityexit ()</event>
+        <permission>android.permission.ACCESS_FINE_LOCATION</permission>
+        <permission>android.permission.ACCESS_COARSE_LOCATION</permission>
+        <method>
+            <name>stopNetworkListening</name>
+            <comment>Stops Network Listener</comment>
+            <returntype>void</returntype>
+        </method>
+        <method>
+            <name>Initialize</name>
+            <comment>Common initialisations
+ Example:&lt;code&gt;
+ Dim MyLocation As ESLocation2
+ MyLocation.Initialize("Location")&lt;/code&gt;
+ Can raise the following Events
+ Locationchanged_Location
+ Providerdisabled_Location
+ Providerenabled_Location
+ Statuschanged_Location
+ Proximityenter_Location
+ Proximityexit_Location</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>ba</name>
+                <type>anywheresoftware.b4a.BA</type>
+            </parameter>
+            <parameter>
+                <name>EventName</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+        <method>
+            <name>EndProximityAlert</name>
+            <comment>Removes the ProximityAlert pending intent</comment>
+            <returntype>void</returntype>
+        </method>
+        <method>
+            <name>findLastLocation</name>
+            <comment>Returns the Last Known Location in a 'List' containing:
+ provider type
+ Time of fix
+ Latitude
+ Longitude
+ Accuracy
+ Pass null to get a 'List' of all providers details
+ providerType: This can be 'network', 'passive', 'gps' or null</comment>
+            <returntype>java.util.List</returntype>
+            <parameter>
+                <name>providerType</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+        <method>
+            <name>requestNetworkLocation</name>
+            <comment>Starts a Network Listener for position updates
+ See the following Android Dev site &lt;link&gt;requestLocationUpdates|http://developer.android.com/reference/android/location/LocationManager.html#requestLocationUpdates(java.lang.String, long, float, android.location.LocationListener)&lt;/link&gt; for details
+ mintime: minimum time interval between location updates, in milliseconds pass 0 for continuous updates
+ minDistance: minimum distance between location updates, in meters pass 0 for continuous updates</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>mintime</name>
+                <type>long</type>
+            </parameter>
+            <parameter>
+                <name>mindistance</name>
+                <type>float</type>
+            </parameter>
+        </method>
+        <method>
+            <name>stopGPSListening</name>
+            <comment>Stops GPS Listener</comment>
+            <returntype>void</returntype>
+        </method>
+        <method>
+            <name>requestGPSLocation</name>
+            <comment>Starts a GPS Listener for position updates
+ See the following Android Dev site &lt;link&gt;requestLocationUpdates|http://developer.android.com/reference/android/location/LocationManager.html#requestLocationUpdates(java.lang.String, long, float, android.location.LocationListener)&lt;/link&gt; for details
+ mintime: minimum time interval between location updates, in milliseconds pass 0 for continuous updates
+ minDistance: minimum distance between location updates, in meters pass 0 for continuous updates</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>mintime</name>
+                <type>long</type>
+            </parameter>
+            <parameter>
+                <name>mindistance</name>
+                <type>float</type>
+            </parameter>
+        </method>
+        <method>
+            <name>addProximityAlert</name>
+            <comment>Add Proximity Alert
+ This method uses both Network and GPS to trigger the Alert, if there is no GPS
+ fix then the Network fix will be used and will not be as accurate. This is a
+ function of Android and cannot be changed.
+ Radius: in meters
+ Lat: positive values for north
+ Long: negative values for west
+ Life: this is the life of the pending Intent in milliseconds, use -1 for no expiration</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>Radius</name>
+                <type>int</type>
+            </parameter>
+            <parameter>
+                <name>Lat</name>
+                <type>double</type>
+            </parameter>
+            <parameter>
+                <name>Long</name>
+                <type>double</type>
+            </parameter>
+            <parameter>
+                <name>Life</name>
+                <type>long</type>
+            </parameter>
+        </method>
+    </class>
+    <version>1.2</version>
+    <author>Edward Smith</author>
+</root>

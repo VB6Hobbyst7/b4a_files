@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root>
+    <doclet-version-NOT-library-version>1.05</doclet-version-NOT-library-version>
+    <class>
+        <name>heartratemonitorwrapper.heartratemonitorWrapper</name>
+        <shortname>HeartRateMonitor</shortname>
+        <objectwrapper>com.vanderbie.heart_rate_monitor.HeartRateMonitor</objectwrapper>
+        <owner>activity</owner>
+        <permission>android.hardware.camera</permission>
+        <permission>android.hardware.camera.flash</permission>
+        <permission>android.permission.CAMERA</permission>
+        <permission>android.permission.WAKE_LOCK</permission>
+        <permission>android.permission.INTERNET</permission>
+        <permission>android.permission.ACCESS_WIFI_STATE</permission>
+        <permission>android.permission.ACCESS_NETWORK_STATE</permission>
+        <method>
+            <name>IsInitialized</name>
+            <comment></comment>
+            <returntype>boolean</returntype>
+        </method>
+        <method>
+            <name>Initialize</name>
+            <comment></comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>paramBA</name>
+                <type>anywheresoftware.b4a.BA</type>
+            </parameter>
+            <parameter>
+                <name>paramString</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+        <method>
+            <name>startHeartRateMonitor</name>
+            <comment></comment>
+            <returntype>void</returntype>
+        </method>
+    </class>
+    <version>1.0</version>
+    <dependsOn>commons-collections4-4.0</dependsOn>
+    <dependsOn>commons-lang3-3.2.1</dependsOn>
+    <dependsOn>graphview-3.1</dependsOn>
+</root>

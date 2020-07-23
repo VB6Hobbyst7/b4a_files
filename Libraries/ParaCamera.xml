@@ -1,0 +1,404 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root>
+    <doclet-version-NOT-library-version>1.05</doclet-version-NOT-library-version>
+    <class>
+        <name>com.mindorks.paracamera.Camera</name>
+        <comment>Created by ali on 4/11/15.</comment>
+        <owner>process</owner>
+        <method>
+            <name>resizeAndGetCameraBitmapPath</name>
+            <comment>
+imageHeight: 
+Return type: @return:Bitmap path with approx desired height</comment>
+            <returntype>java.lang.String</returntype>
+            <parameter>
+                <name>imageHeight</name>
+                <type>int</type>
+            </parameter>
+        </method>
+        <method>
+            <name>resizeAndGetCameraBitmap</name>
+            <comment>
+imageHeight: 
+Return type: @return:Bitmap with approx desired height</comment>
+            <returntype>android.graphics.Bitmap</returntype>
+            <parameter>
+                <name>imageHeight</name>
+                <type>int</type>
+            </parameter>
+        </method>
+        <method>
+            <name>builder</name>
+            <comment>
+Return type: @return:create camera builder</comment>
+            <returntype>com.mindorks.paracamera.Camera.CameraBuilder</returntype>
+        </method>
+        <method>
+            <name>takePicture</name>
+            <comment>Initiate the existing camera apps</comment>
+            <returntype>void</returntype>
+        </method>
+        <method>
+            <name>deleteImage</name>
+            <comment>Deletes the saved camera image</comment>
+            <returntype>void</returntype>
+        </method>
+        <property>
+            <name>CameraBitmapPath</name>
+            <returntype>java.lang.String</returntype>
+            <comment></comment>
+        </property>
+        <property>
+            <name>CameraBitmap</name>
+            <returntype>android.graphics.Bitmap</returntype>
+            <comment></comment>
+        </property>
+        <field>
+            <name>IMAGE_PNG</name>
+            <comment></comment>
+            <returntype>java.lang.String</returntype>
+        </field>
+        <field>
+            <name>IMAGE_JPEG</name>
+            <comment></comment>
+            <returntype>java.lang.String</returntype>
+        </field>
+        <field>
+            <name>REQUEST_TAKE_PHOTO</name>
+            <comment>public variables to be used in the builder</comment>
+            <returntype>int</returntype>
+        </field>
+        <field>
+            <name>IMAGE_JPG</name>
+            <comment></comment>
+            <returntype>java.lang.String</returntype>
+        </field>
+    </class>
+    <class>
+        <name>com.mindorks.paracamera.Camera.CameraBuilder</name>
+        <comment>Camera builder declaration</comment>
+        <owner>process</owner>
+        <method>
+            <name>setName</name>
+            <comment></comment>
+            <returntype>com.mindorks.paracamera.Camera.CameraBuilder</returntype>
+            <parameter>
+                <name>imageName</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+        <method>
+            <name>setCompression</name>
+            <comment></comment>
+            <returntype>com.mindorks.paracamera.Camera.CameraBuilder</returntype>
+            <parameter>
+                <name>compression</name>
+                <type>int</type>
+            </parameter>
+        </method>
+        <method>
+            <name>setImageHeight</name>
+            <comment></comment>
+            <returntype>com.mindorks.paracamera.Camera.CameraBuilder</returntype>
+            <parameter>
+                <name>imageHeight</name>
+                <type>int</type>
+            </parameter>
+        </method>
+        <method>
+            <name>setDirectory</name>
+            <comment></comment>
+            <returntype>com.mindorks.paracamera.Camera.CameraBuilder</returntype>
+            <parameter>
+                <name>dirName</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+        <method>
+            <name>setImageFormat</name>
+            <comment></comment>
+            <returntype>com.mindorks.paracamera.Camera.CameraBuilder</returntype>
+            <parameter>
+                <name>imageFormat</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+    </class>
+    <class>
+        <name>com.mindorks.paracamera.Utils</name>
+        <comment>Created by janisharali on 28/07/16.</comment>
+        <owner>process</owner>
+        <method>
+            <name>saveBitmap</name>
+            <comment>
+bitmap: 
+filePath: 
+imageType: 
+compression: </comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>bitmap</name>
+                <type>android.graphics.Bitmap</type>
+            </parameter>
+            <parameter>
+                <name>filePath</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>imageType</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>compression</name>
+                <type>int</type>
+            </parameter>
+        </method>
+        <method>
+            <name>createImageFile</name>
+            <comment>
+context: 
+dirName: 
+fileName: 
+fileType: 
+Return type: @return:</comment>
+            <returntype>java.io.File</returntype>
+            <parameter>
+                <name>context</name>
+                <type>android.content.Context</type>
+            </parameter>
+            <parameter>
+                <name>dirName</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>fileName</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>fileType</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+        <method>
+            <name>decodeFile</name>
+            <comment>
+file: 
+requiredHeight: 
+Return type: @return:</comment>
+            <returntype>android.graphics.Bitmap</returntype>
+            <parameter>
+                <name>file</name>
+                <type>java.io.File</type>
+            </parameter>
+            <parameter>
+                <name>requiredHeight</name>
+                <type>int</type>
+            </parameter>
+        </method>
+        <method>
+            <name>createDir</name>
+            <comment>
+context: 
+dirName: 
+Return type: @return:</comment>
+            <returntype>java.io.File</returntype>
+            <parameter>
+                <name>context</name>
+                <type>android.content.Context</type>
+            </parameter>
+            <parameter>
+                <name>dirName</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+    </class>
+    <class>
+        <name>de.donmanfred.CameraBuilderWrapper</name>
+        <shortname>CameraBuilder</shortname>
+        <objectwrapper>com.mindorks.paracamera.Camera.CameraBuilder</objectwrapper>
+        <owner>activity</owner>
+        <method>
+            <name>setName</name>
+            <comment></comment>
+            <returntype>de.donmanfred.CameraBuilderWrapper</returntype>
+            <parameter>
+                <name>imageName</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+        <method>
+            <name>setImageHeight</name>
+            <comment></comment>
+            <returntype>de.donmanfred.CameraBuilderWrapper</returntype>
+            <parameter>
+                <name>imageHeight</name>
+                <type>int</type>
+            </parameter>
+        </method>
+        <method>
+            <name>setDirectory</name>
+            <comment></comment>
+            <returntype>de.donmanfred.CameraBuilderWrapper</returntype>
+            <parameter>
+                <name>dirName</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+        <method>
+            <name>IsInitialized</name>
+            <comment></comment>
+            <returntype>boolean</returntype>
+        </method>
+        <method>
+            <name>Initialize</name>
+            <comment></comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>ba</name>
+                <type>anywheresoftware.b4a.BA</type>
+            </parameter>
+            <parameter>
+                <name>EventName</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>builder</name>
+                <type>com.mindorks.paracamera.Camera.CameraBuilder</type>
+            </parameter>
+        </method>
+        <method>
+            <name>setCompression</name>
+            <comment></comment>
+            <returntype>de.donmanfred.CameraBuilderWrapper</returntype>
+            <parameter>
+                <name>compression</name>
+                <type>int</type>
+            </parameter>
+        </method>
+        <method>
+            <name>setImageFormat</name>
+            <comment></comment>
+            <returntype>de.donmanfred.CameraBuilderWrapper</returntype>
+            <parameter>
+                <name>imageFormat</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+        <field>
+            <name>IMAGE_PNG</name>
+            <comment></comment>
+            <returntype>java.lang.String</returntype>
+        </field>
+        <field>
+            <name>IMAGE_JPEG</name>
+            <comment></comment>
+            <returntype>java.lang.String</returntype>
+        </field>
+        <field>
+            <name>REQUEST_TAKE_PHOTO</name>
+            <comment>public variables to be used in the builder</comment>
+            <returntype>int</returntype>
+        </field>
+        <field>
+            <name>IMAGE_JPG</name>
+            <comment></comment>
+            <returntype>java.lang.String</returntype>
+        </field>
+    </class>
+    <class>
+        <name>de.donmanfred.ParaCamera</name>
+        <shortname>ParaCamera</shortname>
+        <objectwrapper>com.mindorks.paracamera.Camera</objectwrapper>
+        <owner>activity</owner>
+        <method>
+            <name>IsInitialized</name>
+            <comment></comment>
+            <returntype>boolean</returntype>
+        </method>
+        <method>
+            <name>Initialize</name>
+            <comment></comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>ba</name>
+                <type>anywheresoftware.b4a.BA</type>
+            </parameter>
+            <parameter>
+                <name>EventName</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+        <method>
+            <name>resizeAndGetCameraBitmapPath</name>
+            <comment>
+imageHeight: 
+Return type: @return:Bitmap path with approx desired height</comment>
+            <returntype>java.lang.String</returntype>
+            <parameter>
+                <name>imageHeight</name>
+                <type>int</type>
+            </parameter>
+        </method>
+        <method>
+            <name>resizeAndGetCameraBitmap</name>
+            <comment>
+imageHeight: 
+Return type: @return:Bitmap with approx desired height</comment>
+            <returntype>android.graphics.Bitmap</returntype>
+            <parameter>
+                <name>imageHeight</name>
+                <type>int</type>
+            </parameter>
+        </method>
+        <method>
+            <name>builder</name>
+            <comment>
+Return type: @return:create camera builder</comment>
+            <returntype>com.mindorks.paracamera.Camera.CameraBuilder</returntype>
+        </method>
+        <method>
+            <name>takePicture</name>
+            <comment>Initiate the existing camera apps</comment>
+            <returntype>void</returntype>
+        </method>
+        <method>
+            <name>deleteImage</name>
+            <comment>Deletes the saved camera image</comment>
+            <returntype>void</returntype>
+        </method>
+        <property>
+            <name>CameraBitmapPath</name>
+            <returntype>java.lang.String</returntype>
+            <comment></comment>
+        </property>
+        <property>
+            <name>CameraBitmap</name>
+            <returntype>android.graphics.Bitmap</returntype>
+            <comment></comment>
+        </property>
+        <field>
+            <name>IMAGE_PNG</name>
+            <comment></comment>
+            <returntype>java.lang.String</returntype>
+        </field>
+        <field>
+            <name>IMAGE_JPEG</name>
+            <comment></comment>
+            <returntype>java.lang.String</returntype>
+        </field>
+        <field>
+            <name>REQUEST_TAKE_PHOTO</name>
+            <comment>public variables to be used in the builder</comment>
+            <returntype>int</returntype>
+        </field>
+        <field>
+            <name>IMAGE_JPG</name>
+            <comment></comment>
+            <returntype>java.lang.String</returntype>
+        </field>
+        <designerProperty>key:Checked, displayname:Checked, defaultvalue:False, fieldtype:Boolean</designerProperty>
+    </class>
+    <version>1.0</version>
+    <author>DonManfred (wrapper)</author>
+    <dependsOn>com.android.support:support-v4</dependsOn>
+</root>

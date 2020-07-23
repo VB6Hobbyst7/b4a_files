@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root>
+    <doclet-version-NOT-library-version>1.01</doclet-version-NOT-library-version>
+    <class>
+        <name>anywheresoftware.b4a.objects.LicenseCheckerWrapper</name>
+        <shortname>LicenseChecker</shortname>
+        <comment>LicenseChecker allows you to add protection to your application and check whether the user is allowed to access your application.
+See the &lt;link&gt;tutorial|http://www.basic4ppc.com/forum/basic4android-getting-started-tutorials/11429-protect-your-android-application-licensing-library.html&lt;/link&gt; for more information.</comment>
+        <owner>process</owner>
+        <event>Allow</event>
+        <event>DontAllow</event>
+        <event>Error (ErrorCode As String)</event>
+        <permission>com.android.vending.CHECK_LICENSE</permission>
+        <method>
+            <name>Initialize</name>
+            <comment>Initializes the object.
+EventName - Sets the subs that will handle the events.
+DeviceId - A unique id that is used to encrypt the cached result.
+PublicKey - The publisher key as shown in your publisher account.
+Salt - A "random" array of bytes that is used during encryption / decryption.
+Example:&lt;code&gt;
+lc.Initialize("lc", PhoneId.GetDeviceId, PUBLIC_KEY, "kljsdflkj".GetBytes("UTF8"))&lt;/code&gt;</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>EventName</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>DeviceId</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>PublicKey</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>Salt</name>
+                <type>byte[]</type>
+            </parameter>
+        </method>
+        <method>
+            <name>CheckAccess</name>
+            <comment>Checks whether the user is allowed to access the application.
+One of the events will be raised when the result is available.</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>ba</name>
+                <type>anywheresoftware.b4a.BA</type>
+            </parameter>
+        </method>
+        <method>
+            <name>SetVariableAndValue</name>
+            <comment>The given value will be assigned to the given variable if the license check was successful.
+Preferably you should use this variable data in a later stage. This helps to prevent a hacker from hacking your application by removing the license check code.
+Variable - The name of a process global string variable (in the main activity).
+Value - The value that will be assigned to the variable if the check was successful.
+Example:&lt;code&gt;lc.SetVariableAndValue("NameOfSomeVariable", "Value")&lt;/code&gt;</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>Variable</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>Value</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+    </class>
+    <version>1.1</version>
+</root>

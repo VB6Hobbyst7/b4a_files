@@ -1,0 +1,1278 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root>
+    <doclet-version-NOT-library-version>1.03</doclet-version-NOT-library-version>
+    <class>
+        <name>it.giuseppe.salvi.notification.core.text.ToastTypeface</name>
+        <owner>process</owner>
+        <method>
+            <name>FontFromAssets</name>
+            <comment>Create a new typeface from the specified font data from assets.</comment>
+            <returntype>android.graphics.Typeface</returntype>
+            <parameter>
+                <name>file</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+        <method>
+            <name>FontFromFile</name>
+            <comment>Create a new typeface from the specified font data from sdcard.</comment>
+            <returntype>android.graphics.Typeface</returntype>
+            <parameter>
+                <name>file</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+        <field>
+            <name>DEFAULT_BOLD</name>
+            <comment>The default BOLD typeface object.</comment>
+            <returntype>android.graphics.Typeface</returntype>
+        </field>
+        <field>
+            <name>SERIF</name>
+            <comment>The NORMAL style of the default serif typeface.</comment>
+            <returntype>android.graphics.Typeface</returntype>
+        </field>
+        <field>
+            <name>MONOSPACE</name>
+            <comment>The NORMAL style of the default monospace typeface.</comment>
+            <returntype>android.graphics.Typeface</returntype>
+        </field>
+        <field>
+            <name>ITALIC</name>
+            <comment>The default ITALIC style int.</comment>
+            <returntype>int</returntype>
+        </field>
+        <field>
+            <name>SANS_SERIF</name>
+            <comment>The NORMAL style of the default sans serif typeface.</comment>
+            <returntype>android.graphics.Typeface</returntype>
+        </field>
+        <field>
+            <name>BOLD</name>
+            <comment>The default BOLD style int.</comment>
+            <returntype>int</returntype>
+        </field>
+        <field>
+            <name>BOLD_ITALIC</name>
+            <comment>The default BOLD ITALIC style int.</comment>
+            <returntype>int</returntype>
+        </field>
+        <field>
+            <name>NORMAL</name>
+            <comment>The default NORMAL style int.</comment>
+            <returntype>int</returntype>
+        </field>
+        <field>
+            <name>DEFAULT</name>
+            <comment>The default NORMAL typeface object.</comment>
+            <returntype>android.graphics.Typeface</returntype>
+        </field>
+    </class>
+    <class>
+        <name>it.giuseppe.salvi.notification.core.text.ToastTextTitleSize</name>
+        <owner>process</owner>
+        <field>
+            <name>LARGE</name>
+            <comment>Sets the size of the text or title of the notification}.</comment>
+            <returntype>int</returntype>
+        </field>
+        <field>
+            <name>MEDIUM</name>
+            <comment>Sets the size of the text or title of the notification.</comment>
+            <returntype>int</returntype>
+        </field>
+        <field>
+            <name>SMALL</name>
+            <comment>Sets the size of the text or title of the notification.</comment>
+            <returntype>int</returntype>
+        </field>
+        <field>
+            <name>NORMAL</name>
+            <comment>Sets the size of the text or title of the notification.</comment>
+            <returntype>int</returntype>
+        </field>
+        <field>
+            <name>VERY_LARGE</name>
+            <comment>Sets the size of the text or title of the notification.</comment>
+            <returntype>int</returntype>
+        </field>
+        <field>
+            <name>VERY_SMALL</name>
+            <comment>Sets the size of the text or title of the Toast.</comment>
+            <returntype>int</returntype>
+        </field>
+    </class>
+    <class>
+        <name>it.giuseppe.salvi.notification.core.library.ToastMessageShow</name>
+        <shortname>ToastMessageShow</shortname>
+        <owner>process</owner>
+        <event>DismissOnTouch</event>
+        <event>Done(Done As Boolean)</event>
+        <event>Click</event>
+        <event>LongClick</event>
+        <event>ButtonClick(Id As Int,Tag As Object)</event>
+        <event>ButtonLongClick(Id As Int,Tag As Object)</event>
+        <method>
+            <name>withDuration</name>
+            <comment>Set how long to show the view for.
+duration: </comment>
+            <returntype>it.giuseppe.salvi.notification.core.library.ToastMessageShow</returntype>
+            <parameter>
+                <name>duration</name>
+                <type>int</type>
+            </parameter>
+        </method>
+        <method>
+            <name>withBackGroundResources</name>
+            <comment>Create toast with background from res as Nine-patch or Xml.
+resources: </comment>
+            <returntype>it.giuseppe.salvi.notification.core.library.ToastMessageShow</returntype>
+            <parameter>
+                <name>resources</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+        <method>
+            <name>withStroke</name>
+            <comment>Set the stroke width and color for the backgrounds. 
+ 
+ &lt;strong&gt;stroke has no effect on BackGroundResources.&lt;/strong&gt;
+stroke: width
+stroke: color</comment>
+            <returntype>it.giuseppe.salvi.notification.core.library.ToastMessageShow</returntype>
+            <parameter>
+                <name>strokeWidth</name>
+                <type>int</type>
+            </parameter>
+            <parameter>
+                <name>strokeColor</name>
+                <type>java.lang.Object</type>
+            </parameter>
+        </method>
+        <method>
+            <name>withTextShadow</name>
+            <comment>Set shadow to the text.
+radius: 
+dx: 
+dy: 
+color: </comment>
+            <returntype>it.giuseppe.salvi.notification.core.library.ToastMessageShow</returntype>
+            <parameter>
+                <name>radius</name>
+                <type>float</type>
+            </parameter>
+            <parameter>
+                <name>dx</name>
+                <type>float</type>
+            </parameter>
+            <parameter>
+                <name>dy</name>
+                <type>float</type>
+            </parameter>
+            <parameter>
+                <name>color</name>
+                <type>java.lang.Object</type>
+            </parameter>
+        </method>
+        <method>
+            <name>withDividerColor</name>
+            <comment>Sets the color of the space between the text and the buttons in this notification.
+color: </comment>
+            <returntype>it.giuseppe.salvi.notification.core.library.ToastMessageShow</returntype>
+            <parameter>
+                <name>color</name>
+                <type>java.lang.Object</type>
+            </parameter>
+        </method>
+        <method>
+            <name>withIconToText</name>
+            <comment>Sets a bitmap to the toast with a specified position.
+icon: bitmap
+icon: position</comment>
+            <returntype>it.giuseppe.salvi.notification.core.library.ToastMessageShow</returntype>
+            <parameter>
+                <name>bitmap</name>
+                <type>android.graphics.Bitmap</type>
+            </parameter>
+            <parameter>
+                <name>iconTextPosition</name>
+                <type>int</type>
+            </parameter>
+        </method>
+        <method>
+            <name>withGradientCenter</name>
+            <comment>Sets the center location of the gradient.
+center: x
+center: y</comment>
+            <returntype>it.giuseppe.salvi.notification.core.library.ToastMessageShow</returntype>
+            <parameter>
+                <name>centerX</name>
+                <type>float</type>
+            </parameter>
+            <parameter>
+                <name>centerY</name>
+                <type>float</type>
+            </parameter>
+        </method>
+        <method>
+            <name>withTextStyle</name>
+            <comment>Sets the style in which the text should be displayed.
+style: </comment>
+            <returntype>it.giuseppe.salvi.notification.core.library.ToastMessageShow</returntype>
+            <parameter>
+                <name>textStyle</name>
+                <type>int</type>
+            </parameter>
+        </method>
+        <method>
+            <name>withButton</name>
+            <comment>Create toast with 1,2 or 3 buttons.
+text: 
+text1: 
+text2: </comment>
+            <returntype>it.giuseppe.salvi.notification.core.library.ToastMessageShow</returntype>
+            <parameter>
+                <name>text</name>
+                <type>java.lang.CharSequence</type>
+            </parameter>
+            <parameter>
+                <name>text1</name>
+                <type>java.lang.CharSequence</type>
+            </parameter>
+            <parameter>
+                <name>text2</name>
+                <type>java.lang.CharSequence</type>
+            </parameter>
+        </method>
+        <method>
+            <name>withCornerRadius</name>
+            <comment>Specify radius for the corners of the backgrounds.
+ 
+ &lt;strong&gt;radius has no effect on BackGroundResources.&lt;/strong&gt;
+corner: radius</comment>
+            <returntype>it.giuseppe.salvi.notification.core.library.ToastMessageShow</returntype>
+            <parameter>
+                <name>cornerRadius</name>
+                <type>int</type>
+            </parameter>
+        </method>
+        <method>
+            <name>withBackGroundColor</name>
+            <comment>Create toast with background color.
+color: </comment>
+            <returntype>it.giuseppe.salvi.notification.core.library.ToastMessageShow</returntype>
+            <parameter>
+                <name>color</name>
+                <type>java.lang.Object</type>
+            </parameter>
+        </method>
+        <method>
+            <name>withTextColor</name>
+            <comment>Set color to the text.
+ 
+ the color can be added as  String or Int {@value 0xFFFFFF00 or Colors.Yellow or "#FFFFFF00"}.
+color: </comment>
+            <returntype>it.giuseppe.salvi.notification.core.library.ToastMessageShow</returntype>
+            <parameter>
+                <name>color</name>
+                <type>java.lang.Object</type>
+            </parameter>
+        </method>
+        <method>
+            <name>withIconSize32x32</name>
+            <comment>Sets the icon 32px x 32px.</comment>
+            <returntype>it.giuseppe.salvi.notification.core.library.ToastMessageShow</returntype>
+        </method>
+        <method>
+            <name>withButtonTextColor</name>
+            <comment>Set button text color.
+color: </comment>
+            <returntype>it.giuseppe.salvi.notification.core.library.ToastMessageShow</returntype>
+            <parameter>
+                <name>color</name>
+                <type>java.lang.Object</type>
+            </parameter>
+        </method>
+        <method>
+            <name>withTitle</name>
+            <comment>Create toast with title.
+text: </comment>
+            <returntype>it.giuseppe.salvi.notification.core.library.ToastMessageShow</returntype>
+            <parameter>
+                <name>text</name>
+                <type>java.lang.CharSequence</type>
+            </parameter>
+        </method>
+        <method>
+            <name>withYOffset</name>
+            <comment>Sets the axis Y position for this toast.
+yOffset: </comment>
+            <returntype>it.giuseppe.salvi.notification.core.library.ToastMessageShow</returntype>
+            <parameter>
+                <name>yOffset</name>
+                <type>int</type>
+            </parameter>
+        </method>
+        <method>
+            <name>Initialize</name>
+            <comment>&lt;i&gt;&lt;b&gt;Initialize the Object&lt;/b&gt;&lt;/i&gt;</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>ba</name>
+                <type>anywheresoftware.b4a.BA</type>
+            </parameter>
+            <parameter>
+                <name>EventName</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+        <method>
+            <name>withGradientType</name>
+            <comment>Set type of gradient used by this drawable.
+type: </comment>
+            <returntype>it.giuseppe.salvi.notification.core.library.ToastMessageShow</returntype>
+            <parameter>
+                <name>type</name>
+                <type>int</type>
+            </parameter>
+        </method>
+        <method>
+            <name>withTitleShadow</name>
+            <comment>Set shadow to the title.
+radius: 
+dx: 
+dy: 
+color: </comment>
+            <returntype>it.giuseppe.salvi.notification.core.library.ToastMessageShow</returntype>
+            <parameter>
+                <name>radius</name>
+                <type>float</type>
+            </parameter>
+            <parameter>
+                <name>dx</name>
+                <type>float</type>
+            </parameter>
+            <parameter>
+                <name>dy</name>
+                <type>float</type>
+            </parameter>
+            <parameter>
+                <name>color</name>
+                <type>java.lang.Object</type>
+            </parameter>
+        </method>
+        <method>
+            <name>Show</name>
+            <comment>Show toast which the notification should appear on the screen.</comment>
+            <returntype>void</returntype>
+        </method>
+        <method>
+            <name>withDividerPadding</name>
+            <comment>Set padding, in pixels, of the top and bottom edge.
+padding: </comment>
+            <returntype>it.giuseppe.salvi.notification.core.library.ToastMessageShow</returntype>
+            <parameter>
+                <name>padding</name>
+                <type>int</type>
+            </parameter>
+        </method>
+        <method>
+            <name>withTitleSize</name>
+            <comment>Set size to the title.
+size: </comment>
+            <returntype>it.giuseppe.salvi.notification.core.library.ToastMessageShow</returntype>
+            <parameter>
+                <name>titleSize</name>
+                <type>int</type>
+            </parameter>
+        </method>
+        <method>
+            <name>create</name>
+            <comment>Create toast with text.
+text: </comment>
+            <returntype>it.giuseppe.salvi.notification.core.library.ToastMessageShow</returntype>
+            <parameter>
+                <name>text</name>
+                <type>java.lang.CharSequence</type>
+            </parameter>
+        </method>
+        <method>
+            <name>withTitleGravity</name>
+            <comment>Specifies how to align the text by the view's x- and/or y-axis when the text is smaller than the view.
+position: </comment>
+            <returntype>it.giuseppe.salvi.notification.core.library.ToastMessageShow</returntype>
+            <parameter>
+                <name>gravity</name>
+                <type>int</type>
+            </parameter>
+        </method>
+        <method>
+            <name>withTextPadding</name>
+            <comment>Set padding, in pixels, of the top and bottom edge.
+padding: </comment>
+            <returntype>it.giuseppe.salvi.notification.core.library.ToastMessageShow</returntype>
+            <parameter>
+                <name>padding</name>
+                <type>int</type>
+            </parameter>
+        </method>
+        <method>
+            <name>withTitleStyle</name>
+            <comment>Sets the style in which the text should be displayed.
+style: </comment>
+            <returntype>it.giuseppe.salvi.notification.core.library.ToastMessageShow</returntype>
+            <parameter>
+                <name>titleStyle</name>
+                <type>int</type>
+            </parameter>
+        </method>
+        <method>
+            <name>withIconSize256x256</name>
+            <comment>Sets the icon 256px x 256px.</comment>
+            <returntype>it.giuseppe.salvi.notification.core.library.ToastMessageShow</returntype>
+        </method>
+        <method>
+            <name>withDividerHeight</name>
+            <comment>Set divider height.
+height: </comment>
+            <returntype>it.giuseppe.salvi.notification.core.library.ToastMessageShow</returntype>
+            <parameter>
+                <name>height</name>
+                <type>int</type>
+            </parameter>
+        </method>
+        <method>
+            <name>withPaddingLeftRight</name>
+            <comment>Set padding, in pixels, of the left and right edge.
+padding: </comment>
+            <returntype>it.giuseppe.salvi.notification.core.library.ToastMessageShow</returntype>
+            <parameter>
+                <name>padding</name>
+                <type>int</type>
+            </parameter>
+        </method>
+        <method>
+            <name>withImageBitmap</name>
+            <comment>Set image bitmap to the text ( position = left,top,right,bottom).
+bitmap: 
+imagePosition: </comment>
+            <returntype>it.giuseppe.salvi.notification.core.library.ToastMessageShow</returntype>
+            <parameter>
+                <name>bitmap</name>
+                <type>android.graphics.Bitmap</type>
+            </parameter>
+            <parameter>
+                <name>imagePosition</name>
+                <type>int</type>
+            </parameter>
+        </method>
+        <method>
+            <name>withPaddingTopBottom</name>
+            <comment>Set padding, in pixels, of the top and bottom edge.
+padding: </comment>
+            <returntype>it.giuseppe.salvi.notification.core.library.ToastMessageShow</returntype>
+            <parameter>
+                <name>padding</name>
+                <type>int</type>
+            </parameter>
+        </method>
+        <method>
+            <name>withButtonTextSize</name>
+            <comment>Set button text size.
+size: </comment>
+            <returntype>it.giuseppe.salvi.notification.core.library.ToastMessageShow</returntype>
+            <parameter>
+                <name>size</name>
+                <type>int</type>
+            </parameter>
+        </method>
+        <method>
+            <name>withAnimation</name>
+            <comment>Sets the animation which the notification should appear on the screen.
+animation: </comment>
+            <returntype>it.giuseppe.salvi.notification.core.library.ToastMessageShow</returntype>
+            <parameter>
+                <name>animation</name>
+                <type>int</type>
+            </parameter>
+        </method>
+        <method>
+            <name>withOval</name>
+            <comment>Create oval toast.
+oval: </comment>
+            <returntype>it.giuseppe.salvi.notification.core.library.ToastMessageShow</returntype>
+            <parameter>
+                <name>oval</name>
+                <type>boolean</type>
+            </parameter>
+        </method>
+        <method>
+            <name>withTitleColor</name>
+            <comment>Set color to the title.
+ 
+ the color can be added as  String or Int {@value 0xFFFFFF00 or Colors.Yellow or "#FFFFFF00"}.
+color: </comment>
+            <returntype>it.giuseppe.salvi.notification.core.library.ToastMessageShow</returntype>
+            <parameter>
+                <name>color</name>
+                <type>java.lang.Object</type>
+            </parameter>
+        </method>
+        <method>
+            <name>withTitleTypeFace</name>
+            <comment>Sets the type face and style in which the text should be displayed. 
+ 
+ Note that not all Type face families actually have bold and italic variants, 
+ so you may need to use TextStyle(style) to get the appearance that you actually want.
+family: </comment>
+            <returntype>it.giuseppe.salvi.notification.core.library.ToastMessageShow</returntype>
+            <parameter>
+                <name>typeFace</name>
+                <type>android.graphics.Typeface</type>
+            </parameter>
+        </method>
+        <method>
+            <name>withGravity</name>
+            <comment>Placement of toast within the screen as per Gravity.
+gravity: </comment>
+            <returntype>it.giuseppe.salvi.notification.core.library.ToastMessageShow</returntype>
+            <parameter>
+                <name>gravity</name>
+                <type>int</type>
+            </parameter>
+        </method>
+        <method>
+            <name>withBackGroundGradient</name>
+            <comment>Create toast with background gradient.
+startColor: 
+endColor: </comment>
+            <returntype>it.giuseppe.salvi.notification.core.library.ToastMessageShow</returntype>
+            <parameter>
+                <name>startColor</name>
+                <type>java.lang.Object</type>
+            </parameter>
+            <parameter>
+                <name>endColor</name>
+                <type>java.lang.Object</type>
+            </parameter>
+        </method>
+        <method>
+            <name>withIconSize48x48</name>
+            <comment>Sets the icon 48px x 48px.</comment>
+            <returntype>it.giuseppe.salvi.notification.core.library.ToastMessageShow</returntype>
+        </method>
+        <method>
+            <name>withGradientRadius</name>
+            <comment>Specify radius for the corners of the gradient.
+gradient: radius</comment>
+            <returntype>it.giuseppe.salvi.notification.core.library.ToastMessageShow</returntype>
+            <parameter>
+                <name>radius</name>
+                <type>float</type>
+            </parameter>
+        </method>
+        <method>
+            <name>withBackGroundGradientArray</name>
+            <comment>Create toast with background gradient.
+arrayColor.: </comment>
+            <returntype>it.giuseppe.salvi.notification.core.library.ToastMessageShow</returntype>
+            <parameter>
+                <name>arrayColor</name>
+                <type>java.lang.Object[]</type>
+            </parameter>
+        </method>
+        <method>
+            <name>withImageAlpha</name>
+            <comment>Set alpha.
+ 
+ &lt;strong&gt;ImageAlpha has no effect on BackGroundResources.&lt;/strong&gt;
+alpha: </comment>
+            <returntype>it.giuseppe.salvi.notification.core.library.ToastMessageShow</returntype>
+            <parameter>
+                <name>alpha</name>
+                <type>int</type>
+            </parameter>
+        </method>
+        <method>
+            <name>Cancel</name>
+            <comment>Hide and remove the toast.</comment>
+            <returntype>void</returntype>
+        </method>
+        <method>
+            <name>withIconSize128x128</name>
+            <comment>Sets the icon 128px x 128px.</comment>
+            <returntype>it.giuseppe.salvi.notification.core.library.ToastMessageShow</returntype>
+        </method>
+        <method>
+            <name>withOrientation</name>
+            <comment>Changes the orientation of the gradient defined in this drawable.
+orientation: </comment>
+            <returntype>it.giuseppe.salvi.notification.core.library.ToastMessageShow</returntype>
+            <parameter>
+                <name>orientation</name>
+                <type EnumType="true">android.graphics.drawable.GradientDrawable.Orientation</type>
+            </parameter>
+        </method>
+        <method>
+            <name>withXOffset</name>
+            <comment>Sets the axis X position for this toast.
+xOffset: </comment>
+            <returntype>it.giuseppe.salvi.notification.core.library.ToastMessageShow</returntype>
+            <parameter>
+                <name>xOffset</name>
+                <type>int</type>
+            </parameter>
+        </method>
+        <method>
+            <name>withIconSize</name>
+            <comment>Sets the size to the icon.
+width,height: </comment>
+            <returntype>it.giuseppe.salvi.notification.core.library.ToastMessageShow</returntype>
+            <parameter>
+                <name>width</name>
+                <type>int</type>
+            </parameter>
+            <parameter>
+                <name>height</name>
+                <type>int</type>
+            </parameter>
+        </method>
+        <method>
+            <name>withIconSize64x64</name>
+            <comment>Sets the icon 64px x 64px.</comment>
+            <returntype>it.giuseppe.salvi.notification.core.library.ToastMessageShow</returntype>
+        </method>
+        <method>
+            <name>withButtonColor</name>
+            <comment>Set color to the buttons.
+color: </comment>
+            <returntype>it.giuseppe.salvi.notification.core.library.ToastMessageShow</returntype>
+            <parameter>
+                <name>color</name>
+                <type>int</type>
+            </parameter>
+        </method>
+        <method>
+            <name>withBackGroundImage</name>
+            <comment>Create toast with background image.
+bitmap: </comment>
+            <returntype>it.giuseppe.salvi.notification.core.library.ToastMessageShow</returntype>
+            <parameter>
+                <name>bitmap</name>
+                <type>android.graphics.Bitmap</type>
+            </parameter>
+        </method>
+        <method>
+            <name>withTextSize</name>
+            <comment>Set size to the text.
+size: </comment>
+            <returntype>it.giuseppe.salvi.notification.core.library.ToastMessageShow</returntype>
+            <parameter>
+                <name>textSize</name>
+                <type>int</type>
+            </parameter>
+        </method>
+        <method>
+            <name>withDividerToText</name>
+            <comment>Show or Hide the divider.
+show: </comment>
+            <returntype>it.giuseppe.salvi.notification.core.library.ToastMessageShow</returntype>
+            <parameter>
+                <name>show</name>
+                <type>boolean</type>
+            </parameter>
+        </method>
+        <method>
+            <name>withTextTypeFace</name>
+            <comment>Sets the type face and style in which the text should be displayed. 
+ 
+ Note that not all Type face families actually have bold and italic variants, 
+ so you may need to use TextStyle(style) to get the appearance that you actually want.
+family: </comment>
+            <returntype>it.giuseppe.salvi.notification.core.library.ToastMessageShow</returntype>
+            <parameter>
+                <name>typeFace</name>
+                <type>android.graphics.Typeface</type>
+            </parameter>
+        </method>
+        <method>
+            <name>withDither</name>
+            <comment>Set dither.
+ 
+ &lt;strong&gt;dither has no effect on BackGroundResources.&lt;/strong&gt;
+dither: </comment>
+            <returntype>it.giuseppe.salvi.notification.core.library.ToastMessageShow</returntype>
+            <parameter>
+                <name>dither</name>
+                <type>boolean</type>
+            </parameter>
+        </method>
+        <method>
+            <name>CancelAll</name>
+            <comment>Cancels/removes all showing pending toasts.</comment>
+            <returntype>void</returntype>
+        </method>
+        <method>
+            <name>withDividerToTitle</name>
+            <comment>Show or Hide the divider.
+show: </comment>
+            <returntype>it.giuseppe.salvi.notification.core.library.ToastMessageShow</returntype>
+            <parameter>
+                <name>show</name>
+                <type>boolean</type>
+            </parameter>
+        </method>
+        <method>
+            <name>withButtonStyle</name>
+            <comment>Sets a style for the buttons from res.
+resources: </comment>
+            <returntype>it.giuseppe.salvi.notification.core.library.ToastMessageShow</returntype>
+            <parameter>
+                <name>resources</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+        <method>
+            <name>withTextGravity</name>
+            <comment>Specifies how to align the text by the view's x- and/or y-axis when the text is smaller than the view.
+position: </comment>
+            <returntype>it.giuseppe.salvi.notification.core.library.ToastMessageShow</returntype>
+            <parameter>
+                <name>gravity</name>
+                <type>int</type>
+            </parameter>
+        </method>
+        <method>
+            <name>withImageButton</name>
+            <comment>Set image bitmap to the buttons ( position = left,top,right,bottom).
+bitmap: 
+bitmap2: 
+bitmap3: 
+iconPosition: 
+iconPosition2: 
+iconPosition3: </comment>
+            <returntype>it.giuseppe.salvi.notification.core.library.ToastMessageShow</returntype>
+            <parameter>
+                <name>bitmap</name>
+                <type>android.graphics.Bitmap</type>
+            </parameter>
+            <parameter>
+                <name>iconPosition</name>
+                <type>int</type>
+            </parameter>
+            <parameter>
+                <name>bitmap2</name>
+                <type>android.graphics.Bitmap</type>
+            </parameter>
+            <parameter>
+                <name>iconPosition2</name>
+                <type>int</type>
+            </parameter>
+            <parameter>
+                <name>bitmap3</name>
+                <type>android.graphics.Bitmap</type>
+            </parameter>
+            <parameter>
+                <name>iconPosition3</name>
+                <type>int</type>
+            </parameter>
+        </method>
+        <property>
+            <name>IconPosition</name>
+            <returntype>it.giuseppe.salvi.notification.core.utility.ToastIconPosition</returntype>
+            <comment>Gets the positions for icons.</comment>
+        </property>
+        <property>
+            <name>TextSize</name>
+            <returntype>it.giuseppe.salvi.notification.core.text.ToastTextTitleSize</returntype>
+            <comment>Gets the size for the text,title and button text.</comment>
+        </property>
+        <property>
+            <name>GradientType</name>
+            <returntype>it.giuseppe.salvi.notification.core.graphics.ToastGradientTypes</returntype>
+            <comment>Changes the type of the gradient defined in this drawable.</comment>
+        </property>
+        <property>
+            <name>Orientation</name>
+            <returntype>it.giuseppe.salvi.notification.core.utility.ToastOrientations</returntype>
+            <comment>Changes the orientation of the gradient defined in this drawable.</comment>
+        </property>
+        <property>
+            <name>LoadFontFromAssets</name>
+            <parameter>
+                <name>font</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <comment>Loads a new Type face from the specified font data for text and title.</comment>
+        </property>
+        <property>
+            <name>Gravity</name>
+            <returntype>it.giuseppe.salvi.notification.core.utility.ToastGravity</returntype>
+            <comment>Gets the gravity for the toast, text and title.</comment>
+        </property>
+        <property>
+            <name>Animation</name>
+            <returntype>it.giuseppe.salvi.notification.core.animation.ToastAnimation</returntype>
+            <comment>Gets the Animation for the toast.</comment>
+        </property>
+        <property>
+            <name>TypeFace</name>
+            <returntype>it.giuseppe.salvi.notification.core.text.ToastTypeface</returntype>
+            <comment>Gets the type face and style in which the text should be displayed. 
+ Note that not all Type face families actually have bold and italic variants, 
+ so you may need to use TextStyle(style) to get the appearance that you actually want.</comment>
+        </property>
+        <property>
+            <name>Duration</name>
+            <returntype>it.giuseppe.salvi.notification.core.utility.ToastDuration</returntype>
+            <comment>Gets the duration for the toast.</comment>
+        </property>
+        <property>
+            <name>LoadFontFromFile</name>
+            <parameter>
+                <name>font</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <comment>Loads a new Type face from the specified font data for text and title.</comment>
+        </property>
+        <property>
+            <name>Version</name>
+            <returntype>java.lang.String</returntype>
+            <comment>Return Author and Version of this library.</comment>
+        </property>
+    </class>
+    <class>
+        <name>it.giuseppe.salvi.notification.core.graphics.ToastGradientTypes</name>
+        <owner>process</owner>
+        <field>
+            <name>RING</name>
+            <comment>Shape is a ring.</comment>
+            <returntype>int</returntype>
+        </field>
+        <field>
+            <name>RECTANGLE</name>
+            <comment>Shape is a rectangle, possibly with rounded corners</comment>
+            <returntype>int</returntype>
+        </field>
+        <field>
+            <name>LINEAR_GRADIENT</name>
+            <comment>Gradient is linear (default.)</comment>
+            <returntype>int</returntype>
+        </field>
+        <field>
+            <name>LINE</name>
+            <comment>Shape is a line</comment>
+            <returntype>int</returntype>
+        </field>
+        <field>
+            <name>RADIAL_GRADIENT</name>
+            <comment>Gradient is circular.</comment>
+            <returntype>int</returntype>
+        </field>
+        <field>
+            <name>OVAL</name>
+            <comment>Shape is an ellipse</comment>
+            <returntype>int</returntype>
+        </field>
+    </class>
+    <class>
+        <name>it.giuseppe.salvi.notification.core.utility.ToastOrientations</name>
+        <owner>process</owner>
+        <field>
+            <name>BR_TL</name>
+            <comment>draw the gradient from the bottom-right to the top-left</comment>
+            <returntype EnumType="true">android.graphics.drawable.GradientDrawable.Orientation</returntype>
+        </field>
+        <field>
+            <name>RIGHT_LEFT</name>
+            <comment>draw the gradient from the right to the left</comment>
+            <returntype EnumType="true">android.graphics.drawable.GradientDrawable.Orientation</returntype>
+        </field>
+        <field>
+            <name>TR_BL</name>
+            <comment>draw the gradient from the top-right to the bottom-left</comment>
+            <returntype EnumType="true">android.graphics.drawable.GradientDrawable.Orientation</returntype>
+        </field>
+        <field>
+            <name>TOP_BOTTOM</name>
+            <comment>draw the gradient from the top to the bottom</comment>
+            <returntype EnumType="true">android.graphics.drawable.GradientDrawable.Orientation</returntype>
+        </field>
+        <field>
+            <name>TL_BR</name>
+            <comment>draw the gradient from the top-left to the bottom-right</comment>
+            <returntype EnumType="true">android.graphics.drawable.GradientDrawable.Orientation</returntype>
+        </field>
+        <field>
+            <name>BOTTOM_TOP</name>
+            <comment>draw the gradient from the bottom to the top</comment>
+            <returntype EnumType="true">android.graphics.drawable.GradientDrawable.Orientation</returntype>
+        </field>
+        <field>
+            <name>LEFT_RIGHT</name>
+            <comment>draw the gradient from the left to the right</comment>
+            <returntype EnumType="true">android.graphics.drawable.GradientDrawable.Orientation</returntype>
+        </field>
+        <field>
+            <name>BL_TR</name>
+            <comment>draw the gradient from the bottom-left to the top-right</comment>
+            <returntype EnumType="true">android.graphics.drawable.GradientDrawable.Orientation</returntype>
+        </field>
+    </class>
+    <class>
+        <name>it.giuseppe.salvi.notification.core.utility.ToastIconPosition</name>
+        <owner>process</owner>
+        <field>
+            <name>BOTTOM</name>
+            <comment>Set the icon on the bottom of the text.</comment>
+            <returntype>int</returntype>
+        </field>
+        <field>
+            <name>RIGHT</name>
+            <comment>Set the icon to the right of the text.</comment>
+            <returntype>int</returntype>
+        </field>
+        <field>
+            <name>TOP</name>
+            <comment>Set the icon on top of the text.</comment>
+            <returntype>int</returntype>
+        </field>
+        <field>
+            <name>LEFT</name>
+            <comment>Set the icon to the left of the text.</comment>
+            <returntype>int</returntype>
+        </field>
+    </class>
+    <class>
+        <name>it.giuseppe.salvi.notification.core.utility.ToastGravity</name>
+        <owner>process</owner>
+        <field>
+            <name>TOAST_CENTER</name>
+            <comment>Push the notification to the center of its container in vertical axis, not changing its size.</comment>
+            <returntype>int</returntype>
+        </field>
+        <field>
+            <name>TOAST_LEFT_TOP</name>
+            <comment>Push the notification to the left-top of its container in vertical axis, not changing its size.</comment>
+            <returntype>int</returntype>
+        </field>
+        <field>
+            <name>TEXT_LEFT</name>
+            <comment>Push Title or Text to the left of its container in horizontal axis, not changing its size.</comment>
+            <returntype>int</returntype>
+        </field>
+        <field>
+            <name>TEXT_RIGHT</name>
+            <comment>Push Title or Text to the right of its container in horizontal axis, not changing its size.</comment>
+            <returntype>int</returntype>
+        </field>
+        <field>
+            <name>TOAST_CENTER_TOP</name>
+            <comment>Push the notification to the center-top of its container in vertical axis, not changing its size.</comment>
+            <returntype>int</returntype>
+        </field>
+        <field>
+            <name>TOAST_LEFT_BOTTOM</name>
+            <comment>Push the notification to the left-bottom of its container in vertical axis, not changing its size.</comment>
+            <returntype>int</returntype>
+        </field>
+        <field>
+            <name>TOAST_RIGHT_TOP</name>
+            <comment>Push the notification to the right-top of its container in vertical axis, not changing its size.</comment>
+            <returntype>int</returntype>
+        </field>
+        <field>
+            <name>TOAST_RIGHT_BOTTOM</name>
+            <comment>Push the notification to the right-bottom of its container in vertical axis, not changing its size.</comment>
+            <returntype>int</returntype>
+        </field>
+        <field>
+            <name>TOAST_CENTER_BOTTOM</name>
+            <comment>Push the notification to the center-bottom of its container in vertical axis, not changing its size.</comment>
+            <returntype>int</returntype>
+        </field>
+        <field>
+            <name>TOAST_RIGHT_CENTER</name>
+            <comment>Push the notification to the right-center of its container in vertical axis, not changing its size.</comment>
+            <returntype>int</returntype>
+        </field>
+        <field>
+            <name>TOAST_LEFT_CENTER</name>
+            <comment>Push the notification to the left-center of its container in vertical axis, not changing its size.</comment>
+            <returntype>int</returntype>
+        </field>
+        <field>
+            <name>TEXT_CENTER</name>
+            <comment>Place the Title or Text in the center of its container in horizontal axis, not changing its size.</comment>
+            <returntype>int</returntype>
+        </field>
+    </class>
+    <class>
+        <name>it.giuseppe.salvi.notification.core.utility.ToastDuration</name>
+        <owner>process</owner>
+        <field>
+            <name>VERY_SHORT_DELAY</name>
+            <comment>Sets the duration to the notification.</comment>
+            <returntype>int</returntype>
+        </field>
+        <field>
+            <name>MEDIUM_DELAY</name>
+            <comment>Sets the duration to the notification.</comment>
+            <returntype>int</returntype>
+        </field>
+        <field>
+            <name>LENGTH_STICKY</name>
+            <comment>Show the notification for an undefined amount of time.</comment>
+            <returntype>int</returntype>
+        </field>
+        <field>
+            <name>VERY_LONG_DELAY</name>
+            <comment>Sets the duration to the notification.</comment>
+            <returntype>int</returntype>
+        </field>
+        <field>
+            <name>SHORT_DELAY</name>
+            <comment>Sets the duration to the notification.</comment>
+            <returntype>int</returntype>
+        </field>
+        <field>
+            <name>EXTRA_LONG_DELAY</name>
+            <comment>Sets the duration to the notification.</comment>
+            <returntype>int</returntype>
+        </field>
+        <field>
+            <name>LONG_DELAY</name>
+            <comment>Sets the duration to the notification.</comment>
+            <returntype>int</returntype>
+        </field>
+    </class>
+    <class>
+        <name>it.giuseppe.salvi.notification.core.animation.ToastAnimation</name>
+        <owner>process</owner>
+        <field>
+            <name>POPUP</name>
+            <comment>Set animation popup.</comment>
+            <returntype>int</returntype>
+        </field>
+        <field>
+            <name>SCALE</name>
+            <comment>Set animation scale.</comment>
+            <returntype>int</returntype>
+        </field>
+        <field>
+            <name>FLY</name>
+            <comment>Set animation flying.</comment>
+            <returntype>int</returntype>
+        </field>
+        <field>
+            <name>FADE</name>
+            <comment>Set animation fade.</comment>
+            <returntype>int</returntype>
+        </field>
+    </class>
+    <class>
+        <name>it.giuseppe.salvi.notification.core.ToastShow.ButtonID</name>
+        <owner>process</owner>
+        <field>
+            <name>BTN_ID_2</name>
+            <comment></comment>
+            <returntype>int</returntype>
+        </field>
+        <field>
+            <name>BTN_ID_1</name>
+            <comment></comment>
+            <returntype>int</returntype>
+        </field>
+        <field>
+            <name>BTN_ID_3</name>
+            <comment></comment>
+            <returntype>int</returntype>
+        </field>
+    </class>
+    <class>
+        <name>it.giuseppe.salvi.notification.core.ToastShow.ButtonTAG</name>
+        <owner>process</owner>
+        <method>
+            <name>values</name>
+            <comment></comment>
+            <returntype EnumType="true">it.giuseppe.salvi.notification.core.ToastShow.ButtonTAG[]</returntype>
+        </method>
+        <method>
+            <name>equals</name>
+            <comment></comment>
+            <returntype>boolean</returntype>
+            <parameter>
+                <name>arg0</name>
+                <type>java.lang.Object</type>
+            </parameter>
+        </method>
+        <method>
+            <name>name</name>
+            <comment></comment>
+            <returntype>java.lang.String</returntype>
+        </method>
+        <method>
+            <name>hashCode</name>
+            <comment></comment>
+            <returntype>int</returntype>
+        </method>
+        <method>
+            <name>ordinal</name>
+            <comment></comment>
+            <returntype>int</returntype>
+        </method>
+        <method>
+            <name>compareTo</name>
+            <comment></comment>
+            <returntype>int</returntype>
+            <parameter>
+                <name>arg0</name>
+                <type>E</type>
+            </parameter>
+        </method>
+        <method>
+            <name>toString</name>
+            <comment></comment>
+            <returntype>java.lang.String</returntype>
+        </method>
+        <method>
+            <name>valueOf</name>
+            <comment></comment>
+            <returntype EnumType="true">it.giuseppe.salvi.notification.core.ToastShow.ButtonTAG</returntype>
+            <parameter>
+                <name>name</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+        <property>
+            <name>DeclaringClass</name>
+            <returntype>java.lang.Class</returntype>
+            <comment></comment>
+        </property>
+    </class>
+    <class>
+        <name>it.giuseppe.salvi.notification.core.ToastShow.TypeBackGround</name>
+        <owner>process</owner>
+        <method>
+            <name>values</name>
+            <comment></comment>
+            <returntype EnumType="true">it.giuseppe.salvi.notification.core.ToastShow.TypeBackGround[]</returntype>
+        </method>
+        <method>
+            <name>equals</name>
+            <comment></comment>
+            <returntype>boolean</returntype>
+            <parameter>
+                <name>arg0</name>
+                <type>java.lang.Object</type>
+            </parameter>
+        </method>
+        <method>
+            <name>name</name>
+            <comment></comment>
+            <returntype>java.lang.String</returntype>
+        </method>
+        <method>
+            <name>hashCode</name>
+            <comment></comment>
+            <returntype>int</returntype>
+        </method>
+        <method>
+            <name>ordinal</name>
+            <comment></comment>
+            <returntype>int</returntype>
+        </method>
+        <method>
+            <name>compareTo</name>
+            <comment></comment>
+            <returntype>int</returntype>
+            <parameter>
+                <name>arg0</name>
+                <type>E</type>
+            </parameter>
+        </method>
+        <method>
+            <name>toString</name>
+            <comment></comment>
+            <returntype>java.lang.String</returntype>
+        </method>
+        <method>
+            <name>valueOf</name>
+            <comment></comment>
+            <returntype EnumType="true">it.giuseppe.salvi.notification.core.ToastShow.TypeBackGround</returntype>
+            <parameter>
+                <name>name</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+        <property>
+            <name>DeclaringClass</name>
+            <returntype>java.lang.Class</returntype>
+            <comment></comment>
+        </property>
+    </class>
+    <class>
+        <name>it.giuseppe.salvi.notification.core.ToastShow.InflateToast</name>
+        <owner>process</owner>
+        <method>
+            <name>values</name>
+            <comment></comment>
+            <returntype EnumType="true">it.giuseppe.salvi.notification.core.ToastShow.InflateToast[]</returntype>
+        </method>
+        <method>
+            <name>equals</name>
+            <comment></comment>
+            <returntype>boolean</returntype>
+            <parameter>
+                <name>arg0</name>
+                <type>java.lang.Object</type>
+            </parameter>
+        </method>
+        <method>
+            <name>name</name>
+            <comment></comment>
+            <returntype>java.lang.String</returntype>
+        </method>
+        <method>
+            <name>hashCode</name>
+            <comment></comment>
+            <returntype>int</returntype>
+        </method>
+        <method>
+            <name>ordinal</name>
+            <comment></comment>
+            <returntype>int</returntype>
+        </method>
+        <method>
+            <name>compareTo</name>
+            <comment></comment>
+            <returntype>int</returntype>
+            <parameter>
+                <name>arg0</name>
+                <type>E</type>
+            </parameter>
+        </method>
+        <method>
+            <name>toString</name>
+            <comment></comment>
+            <returntype>java.lang.String</returntype>
+        </method>
+        <method>
+            <name>valueOf</name>
+            <comment></comment>
+            <returntype EnumType="true">it.giuseppe.salvi.notification.core.ToastShow.InflateToast</returntype>
+            <parameter>
+                <name>name</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+        <property>
+            <name>DeclaringClass</name>
+            <returntype>java.lang.Class</returntype>
+            <comment></comment>
+        </property>
+    </class>
+    <version>2.1</version>
+    <comment></comment>
+    <author>Giuseppe Salvi</author>
+</root>

@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <doclet-version-NOT-library-version>1.00</doclet-version-NOT-library-version>
+  <dependsOn>reflection</dependsOn>
+  <class>
+    <name>b4a.example.listlineclear</name>
+    <shortname>ListLineClear</shortname>
+    <owner>process</owner>
+    <method>
+      <name>IsInitialized</name>
+      <comment>Tests whether the object has been initialized.</comment>
+      <returntype>boolean</returntype>
+    </method>
+    <method>
+      <name DesignerName="Clear">_clear</name>
+      <comment>baraye pak kardan Kol khat Ha!&lt;br /&gt;&lt;br /&gt;Mesal:&lt;br /&gt;Dim c As ListLineClear&lt;br /&gt;c.Clear(ListView1)&lt;br /&gt;&lt;br /&gt;BY: pejman nikravan&lt;br /&gt;</comment>
+      <returntype>String</returntype>
+      <parameter>
+        <name>ListViewName</name>
+        <type>anywheresoftware.b4a.objects.ListViewWrapper</type>
+      </parameter>
+    </method>
+    <method>
+      <name DesignerName="setLineSetting">_setlinesetting</name>
+      <comment>Tanzimat Rang va Ertefa baraye Khat Ha!&lt;br /&gt;&lt;br /&gt;Dim c As ListLineClear&lt;br /&gt;c.setLineSetting(ListView1,Colors.Red,10)&lt;br /&gt;&lt;br /&gt;BY: pejman nikravan&lt;br /&gt;</comment>
+      <returntype>String</returntype>
+      <parameter>
+        <name>ListViewName</name>
+        <type>anywheresoftware.b4a.objects.ListViewWrapper</type>
+      </parameter>
+      <parameter>
+        <name>Color</name>
+        <type>int</type>
+      </parameter>
+      <parameter>
+        <name>Height</name>
+        <type>int</type>
+      </parameter>
+    </method>
+  </class>
+  <version>1</version>
+</root>

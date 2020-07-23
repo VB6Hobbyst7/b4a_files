@@ -1,0 +1,198 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <doclet-version-NOT-library-version>1.00</doclet-version-NOT-library-version>
+  <dependsOn>encryption</dependsOn>
+  <dependsOn>stringutils</dependsOn>
+  <dependsOn>byteconverter</dependsOn>
+  <dependsOn>aes</dependsOn>
+  <class>
+    <name>b4a.example.encryptionrsa</name>
+    <shortname>EncryptionRSA</shortname>
+    <owner>process</owner>
+    <method>
+      <name>IsInitialized</name>
+      <comment>Tests whether the object has been initialized.</comment>
+      <returntype>boolean</returntype>
+    </method>
+    <method>
+      <name DesignerName="DecryptString">_decryptstring</name>
+      <comment>Decrypt data and return string
+</comment>
+      <returntype>String</returntype>
+      <parameter>
+        <name>Data</name>
+        <type>String</type>
+      </parameter>
+    </method>
+    <method>
+      <name DesignerName="EncryptString">_encryptstring</name>
+      <comment>Encrypt data and return base64code format
+</comment>
+      <returntype>String</returntype>
+      <parameter>
+        <name>Data</name>
+        <type>String</type>
+      </parameter>
+    </method>
+    <method>
+      <name DesignerName="GetKey">_getkey</name>
+      <comment>Return public key and private key
+</comment>
+      <returntype>anywheresoftware.b4a.objects.collections.Map</returntype>
+    </method>
+    <method>
+      <name DesignerName="Initialize">_initialize</name>
+      <comment>
+Keysize is : 512,1024,2024,4096
+If you load key from file so send false to GenerateKey argument
+Set GenerateKey to True for generate public and private key
+</comment>
+      <returntype>String</returntype>
+      <parameter>
+        <name>ba</name>
+        <type>anywheresoftware.b4a.BA</type>
+      </parameter>
+      <parameter>
+        <name>PublicKey</name>
+        <type>String</type>
+      </parameter>
+      <parameter>
+        <name>PrivateKey</name>
+        <type>String</type>
+      </parameter>
+      <parameter>
+        <name>KeySize</name>
+        <type>int</type>
+      </parameter>
+      <parameter>
+        <name>GenerateKey</name>
+        <type>boolean</type>
+      </parameter>
+    </method>
+  </class>
+  <class>
+    <name>b4a.example.encryptionaes</name>
+    <shortname>EncryptionAES</shortname>
+    <owner>process</owner>
+    <method>
+      <name>IsInitialized</name>
+      <comment>Tests whether the object has been initialized.</comment>
+      <returntype>boolean</returntype>
+    </method>
+    <method>
+      <name DesignerName="Decrypt">_decrypt</name>
+      <returntype>String</returntype>
+      <parameter>
+        <name>Data</name>
+        <type>String</type>
+      </parameter>
+    </method>
+    <method>
+      <name DesignerName="Encrypt">_encrypt</name>
+      <comment>Maximum string is 15 character
+</comment>
+      <returntype>String</returntype>
+      <parameter>
+        <name>Str</name>
+        <type>String</type>
+      </parameter>
+    </method>
+    <method>
+      <name DesignerName="Initialize">_initialize</name>
+      <comment>Create encryption and decryption 128 Bit
+</comment>
+      <returntype>String</returntype>
+      <parameter>
+        <name>ba</name>
+        <type>anywheresoftware.b4a.BA</type>
+      </parameter>
+      <parameter>
+        <name>Password</name>
+        <type>String</type>
+      </parameter>
+    </method>
+  </class>
+  <class>
+    <name>b4a.example.encryptiondesede</name>
+    <shortname>EncryptionDesede</shortname>
+    <owner>process</owner>
+    <method>
+      <name>IsInitialized</name>
+      <comment>Tests whether the object has been initialized.</comment>
+      <returntype>boolean</returntype>
+    </method>
+    <method>
+      <name DesignerName="Decrypt">_decrypt</name>
+      <returntype>String</returntype>
+      <parameter>
+        <name>Text</name>
+        <type>String</type>
+      </parameter>
+    </method>
+    <method>
+      <name DesignerName="Encrypt">_encrypt</name>
+      <returntype>String</returntype>
+      <parameter>
+        <name>Text</name>
+        <type>String</type>
+      </parameter>
+    </method>
+  </class>
+  <class>
+    <name>b4a.example.encryptioncoding</name>
+    <shortname>EncryptionCoding</shortname>
+    <owner>process</owner>
+    <method>
+      <name>IsInitialized</name>
+      <comment>Tests whether the object has been initialized.</comment>
+      <returntype>boolean</returntype>
+    </method>
+    <method>
+      <name DesignerName="Decode64">_decode64</name>
+      <returntype>String</returntype>
+      <parameter>
+        <name>str</name>
+        <type>String</type>
+      </parameter>
+    </method>
+    <method>
+      <name DesignerName="DecodeUrl">_decodeurl</name>
+      <returntype>String</returntype>
+      <parameter>
+        <name>url</name>
+        <type>String</type>
+      </parameter>
+    </method>
+    <method>
+      <name DesignerName="Encode64">_encode64</name>
+      <returntype>String</returntype>
+      <parameter>
+        <name>str</name>
+        <type>String</type>
+      </parameter>
+    </method>
+    <method>
+      <name DesignerName="EncodeUrl">_encodeurl</name>
+      <returntype>String</returntype>
+      <parameter>
+        <name>url</name>
+        <type>String</type>
+      </parameter>
+    </method>
+    <method>
+      <name DesignerName="GetMD5">_getmd5</name>
+      <comment>get md5 of string
+</comment>
+      <returntype>String</returntype>
+      <parameter>
+        <name>sStr</name>
+        <type>String</type>
+      </parameter>
+      <parameter>
+        <name>sOnlynumber</name>
+        <type>boolean</type>
+      </parameter>
+    </method>
+  </class>
+  <version>1</version>
+</root>

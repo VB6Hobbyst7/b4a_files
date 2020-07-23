@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <doclet-version-NOT-library-version>1.00</doclet-version-NOT-library-version>
+  <dependsOn includesSingletonModules="true">httputils2</dependsOn>
+  <dependsOn>json</dependsOn>
+  <dependsOn>http</dependsOn>
+  <dependsOn>stringutils</dependsOn>
+  <class>
+    <name>HSH.Weather.lib.hweather</name>
+    <shortname>HWeather</shortname>
+    <owner>process</owner>
+    <method>
+      <name DesignerName="CustomIcon">_customicon</name>
+      <comment>
+انتخاب آیکون سفارشی
+Example :
+&lt;code&gt;Dim w As HWeather
+نمایش ایکن شخصی
+w.CustomIcon(True)
+نمایش آیکن پیشفرض
+w.CustomIcon(False)&lt;/code&gt;
+
+</comment>
+      <returntype>String</returntype>
+      <parameter>
+        <name>cicon</name>
+        <type>boolean</type>
+      </parameter>
+    </method>
+    <method>
+      <name DesignerName="GetCityname">_getcityname</name>
+      <comment>
+دریافت نام شهر
+Example :
+&lt;code&gt;Dim w As HWeather
+Log(w.GetCityname &amp; "&lt;=نام شهر")&lt;/code&gt;
+
+</comment>
+      <returntype>String</returntype>
+    </method>
+    <method>
+      <name DesignerName="GetcloudsLevel">_getcloudslevel</name>
+      <comment>
+دریافت وضعیت تراکم ابری
+Example :
+&lt;code&gt;Dim w As HWeather
+Log(w.GetcloudsLevel &amp; "&lt;=تراکم ابری")&lt;/code&gt;
+
+</comment>
+      <returntype>String</returntype>
+    </method>
+    <method>
+      <name DesignerName="GetMaplocation">_getmaplocation</name>
+      <comment>
+دریافت طول و عرض جغرافیایی
+Example :
+&lt;code&gt;Dim w As HWeather
+Log(w.GetMaplocation.Get("lat") &amp; "&lt;=عرض جغرافیایی")
+Log(w.GetMaplocation.Get("lon") &amp; "&lt;=طول جغرافیایی")&lt;/code&gt;
+
+</comment>
+      <returntype>anywheresoftware.b4a.objects.collections.Map</returntype>
+    </method>
+    <method>
+      <name DesignerName="GetMyWeather">_getmyweather</name>
+      <comment>
+دریافت وضعیت و آیکون
+Example :
+&lt;code&gt;Dim w As HWeather
+imageview1.SetBackgroundImage(w.GetMyWeather.Get("icon"))
+Log(w.GetMyWeather.Get("mode") &amp; "&lt;=دریافت وضعیت")&lt;/code&gt;
+
+</comment>
+      <returntype>anywheresoftware.b4a.objects.collections.Map</returntype>
+    </method>
+    <method>
+      <name DesignerName="GetProcess">_getprocess</name>
+      <comment>
+اعلام دریافت کامل اطلاعات
+Example :
+&lt;code&gt;Dim w As HWeather
+If (w.GetProcess) Then
+...
+....
+.....
+End If&lt;/code&gt;
+
+</comment>
+      <returntype>boolean</returntype>
+    </method>
+    <method>
+      <name DesignerName="Getsys">_getsys</name>
+      <comment>
+دریافت وضعیت زمان
+Example :
+&lt;code&gt;Dim w As HWeather
+Log(w.Getsys.Get("sunrise") &amp; "&lt;=طلوع خورشید")
+Log(w.Getsys.Get("sunset") &amp; "&lt;=غروب خورشید")&lt;/code&gt;
+
+</comment>
+      <returntype>anywheresoftware.b4a.objects.collections.Map</returntype>
+    </method>
+    <method>
+      <name DesignerName="GetTemp">_gettemp</name>
+      <comment>
+دریافت مشخصات دما
+Example :
+&lt;code&gt;Dim w As HWeather
+Log(w.GetTemp.Get("humidity") &amp;" %" &amp; "&lt;=رطوبت")
+Log(w.GetTemp.Get("pressure") &amp;" hPa" &amp; "&lt;=فشار")
+Log( w.GetTemp.Get("temp")&amp;" °C" &amp; "&lt;=دما")
+Log(w.GetTemp.Get("temp_min") &amp;" °C" &amp; "&lt;=حداقل دما")
+Log(w.GetTemp.Get("temp_max") &amp;" °C" "&lt;=حداکثر دما")&lt;/code&gt;
+
+</comment>
+      <returntype>anywheresoftware.b4a.objects.collections.Map</returntype>
+    </method>
+    <method>
+      <name DesignerName="GetWind">_getwind</name>
+      <comment>
+دریافت وضعیت باد
+Example :
+&lt;code&gt;Dim w As HWeather
+Log(w.GetWind.Get("speed") &amp; "&lt;=سرعت")
+Log(w.GetWind.Get("deg") &amp; "&lt;=جهت")&lt;/code&gt;
+
+</comment>
+      <returntype>anywheresoftware.b4a.objects.collections.Map</returntype>
+    </method>
+    <method>
+      <name DesignerName="Initialize">_initialize</name>
+      <comment>
+مقداردهی اولیه
+مراجعه کنید http://home.openweathermap.org/users/sign_up به سایت API نکته اول : برای دریافت
+نکته دوم : مقدار دهی اولیه را در ابتدای بارگذاری اکتیویتی قرار دهید
+Example :
+&lt;code&gt;Dim w As weather
+w.Initialize("Rasht","Your API")&lt;/code&gt;
+تهیه شده در مرکز پاسخگویی سوالات برنامه نویسی
+www.Answercenter.ir
+</comment>
+      <returntype>String</returntype>
+      <parameter>
+        <name>ba</name>
+        <type>anywheresoftware.b4a.BA</type>
+      </parameter>
+      <parameter>
+        <name>Cityname</name>
+        <type>String</type>
+      </parameter>
+      <parameter>
+        <name>Api</name>
+        <type>String</type>
+      </parameter>
+    </method>
+  </class>
+  <version>2</version>
+  <author>H.Shafiee</author>
+</root>

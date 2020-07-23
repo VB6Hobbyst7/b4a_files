@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root>
+    <doclet-version-NOT-library-version>1.02</doclet-version-NOT-library-version>
+    <class>
+        <name>ir.blue_saffron.libs.BSFileChooser</name>
+        <shortname>BSFileChooser</shortname>
+        <owner>process</owner>
+        <event>result(FilePath As String)</event>
+        <method>
+            <name>Show</name>
+            <comment>Show all formats 
+ 
+ &lt;code&gt;Sub Process_Globals&lt;/code&gt;
+ &lt;code&gt;	Dim BSFileChooser1 as BSFileChooser&lt;/code&gt;
+ &lt;code&gt;End Sub&lt;/code&gt;
+ 
+ &lt;code&gt;Sub Button1_Click&lt;/code&gt;
+ &lt;code&gt;	BSFileChooser1.Show("mFile")&lt;/code&gt;
+ &lt;code&gt;End Sub&lt;/code&gt;
+ 
+ &lt;code&gt;Sub mFile_result(FilePath as String)&lt;/code&gt;
+ &lt;code&gt;	Log(FilePath)&lt;/code&gt;
+ &lt;code&gt;End Sub&lt;/code&gt;</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>ba</name>
+                <type>anywheresoftware.b4a.BA</type>
+            </parameter>
+            <parameter>
+                <name>EventName</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+        <method>
+            <name>ShowDirectoryPicker</name>
+            <comment>Show directory picker
+ 
+ &lt;code&gt;Sub Process_Globals&lt;/code&gt;
+ &lt;code&gt;	Dim BSFileChooser1 as BSFileChooser&lt;/code&gt;
+ &lt;code&gt;End Sub&lt;/code&gt;
+ 
+ &lt;code&gt;Sub Button1_Click&lt;/code&gt;
+ &lt;code&gt;	BSFileChooser1.ShowDirectoryPicker("mFile")&lt;/code&gt;
+ &lt;code&gt;End Sub&lt;/code&gt;
+ 
+ &lt;code&gt;Sub mFile_result(FilePath as String)&lt;/code&gt;
+ &lt;code&gt;	Log(FilePath)&lt;/code&gt;
+ &lt;code&gt;End Sub&lt;/code&gt;</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>ba</name>
+                <type>anywheresoftware.b4a.BA</type>
+            </parameter>
+            <parameter>
+                <name>EventName</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+        <method>
+            <name>About</name>
+            <comment>Author: Hossein Zaaferani
+ Version: 1.00
+ WebSite: &lt;a href="http://Blue-saffron.ir"&gt;Blue-saffron.ir&lt;/a&gt;</comment>
+            <returntype>java.lang.String</returntype>
+        </method>
+        <method>
+            <name>Show2</name>
+            <comment>Show custom format
+ 
+ &lt;code&gt;Sub Process_Globals&lt;/code&gt;
+ &lt;code&gt;	Dim BSFileChooser1 as BSFileChooser&lt;/code&gt;
+ &lt;code&gt;End Sub&lt;/code&gt;
+ 
+ &lt;code&gt;Sub Button1_Click&lt;/code&gt;
+ &lt;code&gt;	BSFileChooser1.Show2("mFile", "png")&lt;/code&gt;
+ &lt;code&gt;End Sub&lt;/code&gt;
+ 
+ &lt;code&gt;Sub mFile_result(FilePath as String)&lt;/code&gt;
+ &lt;code&gt;	Log(FilePath)&lt;/code&gt;
+ &lt;code&gt;End Sub&lt;/code&gt;</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>ba</name>
+                <type>anywheresoftware.b4a.BA</type>
+            </parameter>
+            <parameter>
+                <name>EventName</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>Format</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+        <method>
+            <name>Show3</name>
+            <comment>Show custom formats
+ 
+ &lt;code&gt;Sub Process_Globals&lt;/code&gt;
+ &lt;code&gt;	Dim BSFileChooser1 as BSFileChooser&lt;/code&gt;
+ &lt;code&gt;End Sub&lt;/code&gt;
+ 
+ &lt;code&gt;Sub Button1_Click&lt;/code&gt;
+ &lt;code&gt;	BSFileChooser1.Show3("mFile", Array As String("mp3", "jpg", "gif"))&lt;/code&gt;
+ &lt;code&gt;End Sub&lt;/code&gt;
+ 
+ &lt;code&gt;Sub mFile_result(FilePath as String)&lt;/code&gt;
+ &lt;code&gt;	Log(FilePath)&lt;/code&gt;
+ &lt;code&gt;End Sub&lt;/code&gt;</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>ba</name>
+                <type>anywheresoftware.b4a.BA</type>
+            </parameter>
+            <parameter>
+                <name>EventName</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>Formats</name>
+                <type>anywheresoftware.b4a.objects.collections.List</type>
+            </parameter>
+        </method>
+    </class>
+    <version>1.0</version>
+    <author>Hossein Zaaferani</author>
+</root>

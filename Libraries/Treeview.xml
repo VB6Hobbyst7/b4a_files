@@ -1,0 +1,317 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <doclet-version-NOT-library-version>1.00</doclet-version-NOT-library-version>
+  <dependsOn>stringutils</dependsOn>
+  <dependsOn>reflection</dependsOn>
+  <class>
+    <name>b4a.example.treeview</name>
+    <shortname>TreeView</shortname>
+    <owner>activity</owner>
+    <event>SelectedNode(Node As Map)</event>
+    <method>
+      <name>IsInitialized</name>
+      <comment>Tests whether the object has been initialized.</comment>
+      <returntype>boolean</returntype>
+    </method>
+    <method>
+      <name DesignerName="Build">_build</name>
+      <returntype>String</returntype>
+    </method>
+    <method>
+      <name DesignerName="Initialize">_initialize</name>
+      <comment>Author: www.iranapp.org
+
+Example:
+&lt;code&gt;
+Dim nodes As List
+nodes.Initialize
+nodes.Add(CreateMap("sID":"1","sName":"Main","sParent":"0"))
+nodes.Add(CreateMap("sID":"2","sName":"Sub Main","sParent":"1"))
+nodes.Add(CreateMap("sID":"3","sName":"Iranapp.org","sParent":"1"))
+
+Dim tv As TreeView
+tv.Initialize(Activity,Me,"SelectedNode",nodes)
+tv.SetListColor(Colors.White)
+tv.Build
+&lt;/code&gt;
+</comment>
+      <returntype>String</returntype>
+      <parameter>
+        <name>ba</name>
+        <type>anywheresoftware.b4a.BA</type>
+      </parameter>
+      <parameter>
+        <name>Panel</name>
+        <type>anywheresoftware.b4a.objects.PanelWrapper</type>
+      </parameter>
+      <parameter>
+        <name>Module</name>
+        <type>Object</type>
+      </parameter>
+      <parameter>
+        <name>Event</name>
+        <type>String</type>
+      </parameter>
+      <parameter>
+        <name>Nodes</name>
+        <type>anywheresoftware.b4a.objects.collections.List</type>
+      </parameter>
+    </method>
+    <method>
+      <name DesignerName="SetChildIcon">_setchildicon</name>
+      <comment>Choose icon from Desinger in FontAwsome section
+</comment>
+      <returntype>String</returntype>
+      <parameter>
+        <name>Icon</name>
+        <type>String</type>
+      </parameter>
+    </method>
+    <method>
+      <name DesignerName="SetListColor">_setlistcolor</name>
+      <returntype>String</returntype>
+      <parameter>
+        <name>Color</name>
+        <type>int</type>
+      </parameter>
+    </method>
+    <method>
+      <name DesignerName="SetOpenParentIcon">_setopenparenticon</name>
+      <comment>Choose icon from Desinger in FontAwsome section
+</comment>
+      <returntype>String</returntype>
+      <parameter>
+        <name>Icon</name>
+        <type>String</type>
+      </parameter>
+    </method>
+    <method>
+      <name DesignerName="SetParentIcon">_setparenticon</name>
+      <comment>Choose icon from Desinger in FontAwsome section
+</comment>
+      <returntype>String</returntype>
+      <parameter>
+        <name>Icon</name>
+        <type>String</type>
+      </parameter>
+    </method>
+  </class>
+  <class>
+    <name>b4a.example.customlistview</name>
+    <shortname>CustomListView</shortname>
+    <comment>Modified version of CustomListView with support for "pull to refresh" feature
+v1.01
+</comment>
+    <owner>activity</owner>
+    <method>
+      <name>IsInitialized</name>
+      <comment>Tests whether the object has been initialized.</comment>
+      <returntype>boolean</returntype>
+    </method>
+    <method>
+      <name DesignerName="Add">_add</name>
+      <comment>Adds a custom item.
+</comment>
+      <returntype>String</returntype>
+      <parameter>
+        <name>Pnl</name>
+        <type>anywheresoftware.b4a.objects.PanelWrapper</type>
+      </parameter>
+      <parameter>
+        <name>ItemHeight</name>
+        <type>int</type>
+      </parameter>
+      <parameter>
+        <name>Value</name>
+        <type>Object</type>
+      </parameter>
+    </method>
+    <method>
+      <name DesignerName="AddTextItem">_addtextitem</name>
+      <comment>Adds a text item. The item height will be adjusted based on the text.
+</comment>
+      <returntype>String</returntype>
+      <parameter>
+        <name>Text</name>
+        <type>String</type>
+      </parameter>
+      <parameter>
+        <name>Value</name>
+        <type>Object</type>
+      </parameter>
+    </method>
+    <method>
+      <name DesignerName="AddTopPanel">_addtoppanel</name>
+      <returntype>String</returntype>
+      <parameter>
+        <name>Pnl</name>
+        <type>anywheresoftware.b4a.objects.PanelWrapper</type>
+      </parameter>
+      <parameter>
+        <name>ItemHeight</name>
+        <type>int</type>
+      </parameter>
+    </method>
+    <method>
+      <name DesignerName="AsView">_asview</name>
+      <comment>Returns a view object that holds the list.
+</comment>
+      <returntype>anywheresoftware.b4a.objects.ConcreteViewWrapper</returntype>
+    </method>
+    <method>
+      <name DesignerName="Class_Globals">_class_globals</name>
+      <returntype>String</returntype>
+    </method>
+    <method>
+      <name DesignerName="Clear">_clear</name>
+      <comment>Clears all items.
+</comment>
+      <returntype>String</returntype>
+    </method>
+    <method>
+      <name DesignerName="GetItemFromView">_getitemfromview</name>
+      <comment>Returns the index of the item that holds the given view.
+</comment>
+      <returntype>String</returntype>
+      <parameter>
+        <name>v</name>
+        <type>anywheresoftware.b4a.objects.ConcreteViewWrapper</type>
+      </parameter>
+    </method>
+    <method>
+      <name DesignerName="GetPanel">_getpanel</name>
+      <comment>Returns the Panel stored at the specified index.
+</comment>
+      <returntype>anywheresoftware.b4a.objects.PanelWrapper</returntype>
+      <parameter>
+        <name>Index</name>
+        <type>int</type>
+      </parameter>
+    </method>
+    <method>
+      <name DesignerName="GetSize">_getsize</name>
+      <comment>Returns the number of items.
+</comment>
+      <returntype>int</returntype>
+    </method>
+    <method>
+      <name DesignerName="GetValue">_getvalue</name>
+      <comment>Returns the value stored at the specified index.
+</comment>
+      <returntype>Object</returntype>
+      <parameter>
+        <name>Index</name>
+        <type>int</type>
+      </parameter>
+    </method>
+    <method>
+      <name DesignerName="Initialize">_initialize</name>
+      <returntype>String</returntype>
+      <parameter>
+        <name>ba</name>
+        <type>anywheresoftware.b4a.BA</type>
+      </parameter>
+      <parameter>
+        <name>vCallback</name>
+        <type>Object</type>
+      </parameter>
+      <parameter>
+        <name>vEventName</name>
+        <type>String</type>
+      </parameter>
+    </method>
+    <method>
+      <name DesignerName="InsertAt">_insertat</name>
+      <comment>Adds a custom item at the specified index.
+</comment>
+      <returntype>String</returntype>
+      <parameter>
+        <name>Index</name>
+        <type>int</type>
+      </parameter>
+      <parameter>
+        <name>Pnl</name>
+        <type>anywheresoftware.b4a.objects.PanelWrapper</type>
+      </parameter>
+      <parameter>
+        <name>ItemHeight</name>
+        <type>int</type>
+      </parameter>
+      <parameter>
+        <name>Value</name>
+        <type>Object</type>
+      </parameter>
+    </method>
+    <method>
+      <name DesignerName="InsertAtTextItem">_insertattextitem</name>
+      <comment>Inserts a text item at the specified index.
+</comment>
+      <returntype>String</returntype>
+      <parameter>
+        <name>Index</name>
+        <type>int</type>
+      </parameter>
+      <parameter>
+        <name>Text</name>
+        <type>String</type>
+      </parameter>
+      <parameter>
+        <name>Value</name>
+        <type>Object</type>
+      </parameter>
+    </method>
+    <method>
+      <name DesignerName="JumpToItem">_jumptoitem</name>
+      <comment>Scrolls the list to the specified item.
+</comment>
+      <returntype>String</returntype>
+      <parameter>
+        <name>Index</name>
+        <type>int</type>
+      </parameter>
+    </method>
+    <method>
+      <name DesignerName="RemoveAt">_removeat</name>
+      <comment>Removes the item at the specified index.
+</comment>
+      <returntype>String</returntype>
+      <parameter>
+        <name>Index</name>
+        <type>int</type>
+      </parameter>
+    </method>
+    <method>
+      <name DesignerName="setColor" HideFromIDE="true">_setcolor</name>
+      <returntype>String</returntype>
+      <parameter>
+        <name>Color</name>
+        <type>int</type>
+      </parameter>
+    </method>
+    <method>
+      <name DesignerName="StopRefresh">_stoprefresh</name>
+      <returntype>String</returntype>
+    </method>
+    <property>
+      <name DesignerName="Color">_color</name>
+      <returntype>void</returntype>
+      <parameter>
+        <name>Value</name>
+        <type>int</type>
+      </parameter>
+    </property>
+    <field>
+      <name DesignerName="DefaultTextSize">_defaulttextsize</name>
+      <returntype>int</returntype>
+    </field>
+    <field>
+      <name DesignerName="DefaultTextColor">_defaulttextcolor</name>
+      <returntype>int</returntype>
+    </field>
+    <field>
+      <name DesignerName="DefaultTextBackgroundColor">_defaulttextbackgroundcolor</name>
+      <returntype>int</returntype>
+    </field>
+  </class>
+  <version>1</version>
+</root>

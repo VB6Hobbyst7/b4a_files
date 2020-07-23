@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <doclet-version-NOT-library-version>1.00</doclet-version-NOT-library-version>
+  <dependsOn>msos</dependsOn>
+  <class>
+    <name>b4a.example.osstats._pstat</name>
+    <shortname>PStat</shortname>
+    <owner>process</owner>
+    <method>
+      <name>Initialize</name>
+      <comment>Initializes the fields to their default value.</comment>
+      <returntype>void</returntype>
+    </method>
+    <field>
+      <name>IsInitialized</name>
+      <comment>Tests whether the object has been initialized.</comment>
+      <returntype>boolean</returntype>
+    </field>
+    <field>
+      <name>cpu</name>
+      <returntype>float</returntype>
+    </field>
+    <field>
+      <name>idle</name>
+      <returntype>float</returntype>
+    </field>
+  </class>
+  <class>
+    <name>b4a.example.osstats</name>
+    <shortname>OSStats</shortname>
+    <owner>activity</owner>
+    <permission>android.permission.GET_TASKS</permission>
+    <event>Update(CPUEfficiency() As Float, RAMUsage As Float)</event>
+    <method>
+      <name>IsInitialized</name>
+      <comment>Tests whether the object has been initialized.</comment>
+      <returntype>boolean</returntype>
+    </method>
+    <method>
+      <name DesignerName="EndStats">_endstats</name>
+      <comment>Stop collecting the stats
+Call this in Activity_Pause</comment>
+      <returntype>String</returntype>
+    </method>
+    <method>
+      <name DesignerName="getNumCores" HideFromIDE="true">_getnumcores</name>
+      <comment>Returns the number of CPU cores</comment>
+      <returntype>int</returntype>
+    </method>
+    <method>
+      <name DesignerName="Initialize">_initialize</name>
+      <comment>Initializes the object. 
+Interval is the gap to keep between capturing stats
+Buffer size is size of buffer to store stats (for graphing etc)
+Module is the parent object where the events will be delivered
+Eventname is th prefix of the events raised</comment>
+      <returntype>String</returntype>
+      <parameter>
+        <name>ba</name>
+        <type>anywheresoftware.b4a.BA</type>
+      </parameter>
+      <parameter>
+        <name>Interval</name>
+        <type>int</type>
+      </parameter>
+      <parameter>
+        <name>BufferSize</name>
+        <type>int</type>
+      </parameter>
+      <parameter>
+        <name>Module</name>
+        <type>Object</type>
+      </parameter>
+      <parameter>
+        <name>EventName</name>
+        <type>String</type>
+      </parameter>
+    </method>
+    <method>
+      <name DesignerName="StartStats">_startstats</name>
+      <comment>Start collecting stats
+The eventname_Update(CpuEfficientcy() as Float) will be raised</comment>
+      <returntype>String</returntype>
+    </method>
+    <field>
+      <name DesignerName="BufferCPU">_buffercpu</name>
+      <returntype>anywheresoftware.b4a.objects.collections.List[]</returntype>
+    </field>
+    <field>
+      <name DesignerName="BufferRAM">_bufferram</name>
+      <returntype>anywheresoftware.b4a.objects.collections.List</returntype>
+    </field>
+  </class>
+  <version>0.1</version>
+  <author>thedesolatesoul</author>
+</root>

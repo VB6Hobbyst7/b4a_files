@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root>
+    <doclet-version-NOT-library-version>1.02</doclet-version-NOT-library-version>
+    <class>
+        <name>vb.front.cam.fronty</name>
+        <shortname>CameraFront</shortname>
+        <comment>The camera object allows you to use the device back facing camera to take pictures and show preview images.
+Currently the camera orientation is always landscape. Usually you will want to force the application to also be in landscape mode (Project - Supported Orientations).
+Only one process can access the camera at any time. Therefore it is highly recommended to initialize the camera object in Activity_Resume and release it in Activity_Pause.
+A working example with explanations is available &lt;link&gt;here|http://www.basic4ppc.com/forum/basic4android-getting-started-tutorials/6891-take-pictures-internal-camera.html&lt;/link&gt;.</comment>
+        <owner>activity</owner>
+        <event>Ready (Success As Boolean)</event>
+        <event>PictureTaken (Data() As Byte)</event>
+        <permission>android.permission.CAMERA</permission>
+        <method>
+            <name>Rotate270</name>
+            <comment>rotates 270</comment>
+            <returntype>void</returntype>
+        </method>
+        <method>
+            <name>Initialize</name>
+            <comment>Initializes the camera.
+Panel - The preview images will be displayed on the panel.
+EventName - Events subs prefix.
+The Ready event will be raised when the camera has finished opening.</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>ba</name>
+                <type>anywheresoftware.b4a.BA</type>
+            </parameter>
+            <parameter>
+                <name>Panel</name>
+                <type>android.view.ViewGroup</type>
+            </parameter>
+            <parameter>
+                <name>EventName</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+        <method>
+            <name>SetExposureStong2</name>
+            <comment>Front camera is a little dark, so this helps
+ Boost Exposure Level to 2, should work on most phones</comment>
+            <returntype>void</returntype>
+        </method>
+        <method>
+            <name>Older1b</name>
+            <comment>Try front camera on Android version 2.2 and under
+  Behind the scenes we use: p.set("camera_id", 1);</comment>
+            <returntype>void</returntype>
+        </method>
+        <method>
+            <name>Older1a</name>
+            <comment>Try front camera on Android version 2.2 and under
+  Behind the scenes we use: p.set("camera-id", 1);</comment>
+            <returntype>void</returntype>
+        </method>
+        <method>
+            <name>SetExposureStong4</name>
+            <comment>Front camera is a little dark, so this helps
+ Boost Exposure Level to 4, might not work on all phones</comment>
+            <returntype>void</returntype>
+        </method>
+        <method>
+            <name>Older2b</name>
+            <comment>Try front camera on Android version 2.2 and under
+  Behind the scenes we use: p.set("camera-id", 2);</comment>
+            <returntype>void</returntype>
+        </method>
+        <method>
+            <name>StopPreview</name>
+            <comment>Stops displaying the preview images.</comment>
+            <returntype>void</returntype>
+        </method>
+        <method>
+            <name>Older2a</name>
+            <comment>Try front camera on Android version 2.2 and under
+  Behind the scenes we use: p.set("camera_id", 2);</comment>
+            <returntype>void</returntype>
+        </method>
+        <method>
+            <name>Rotate90</name>
+            <comment>rotates 90</comment>
+            <returntype>void</returntype>
+        </method>
+        <method>
+            <name>Rotate180</name>
+            <comment>rotates 180</comment>
+            <returntype>void</returntype>
+        </method>
+        <method>
+            <name>SetEffectNone</name>
+            <comment>Set Effects Color back to normal</comment>
+            <returntype>void</returntype>
+        </method>
+        <method>
+            <name>SetZoomIn</name>
+            <comment>SetZoomIn()   No need to pass it anything</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>zlevel</name>
+                <type>int</type>
+            </parameter>
+        </method>
+        <method>
+            <name>SetExposureStong6</name>
+            <comment>Front camera is a little dark, so this helps
+ Boost Exposure Level to 6, might not work on all phones</comment>
+            <returntype>void</returntype>
+        </method>
+        <method>
+            <name>Release</name>
+            <comment>Releases the camera object and allows other processes to access the camera.</comment>
+            <returntype>void</returntype>
+        </method>
+        <method>
+            <name>TakePicture</name>
+            <comment>Takes a picture. When the picture is ready, the PictureTaken event will be raised.
+ The preview images are stopped after calling this method. You can call StartPreview to restart the preview images.</comment>
+            <returntype>void</returntype>
+        </method>
+        <method>
+            <name>SetZoomOut</name>
+            <comment>SetZoomOut()   No need to pass it anything</comment>
+            <returntype>void</returntype>
+        </method>
+        <method>
+            <name>StartPreview</name>
+            <comment>Starts displaying the preview images.</comment>
+            <returntype>void</returntype>
+        </method>
+        <method>
+            <name>SetBlackWhite</name>
+            <comment>SetBlackWhite</comment>
+            <returntype>void</returntype>
+        </method>
+        <method>
+            <name>CameraCount</name>
+            <comment>returns an int of how many cameras you have example: 0,1,2</comment>
+            <returntype>int</returntype>
+        </method>
+        <method>
+            <name>SetSepia</name>
+            <comment>EFFECT_SEPIA</comment>
+            <returntype>void</returntype>
+        </method>
+    </class>
+    <version>1.0</version>
+</root>

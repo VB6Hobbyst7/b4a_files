@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root>
+    <doclet-version-NOT-library-version>1.04</doclet-version-NOT-library-version>
+    <class>
+        <name>com.fabanim.fabanim</name>
+        <shortname>FAB_Anim</shortname>
+        <owner>process</owner>
+        <method>
+            <name>GoAnimation</name>
+            <comment></comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>Goview</name>
+                <type>android.view.View</type>
+            </parameter>
+            <parameter>
+                <name>v</name>
+                <type>android.view.View</type>
+            </parameter>
+            <parameter>
+                <name>dur</name>
+                <type>int</type>
+            </parameter>
+            <parameter>
+                <name>vleft</name>
+                <type>int</type>
+            </parameter>
+            <parameter>
+                <name>vright</name>
+                <type>int</type>
+            </parameter>
+            <parameter>
+                <name>vtop</name>
+                <type>int</type>
+            </parameter>
+            <parameter>
+                <name>vbottom</name>
+                <type>int</type>
+            </parameter>
+            <parameter>
+                <name>height</name>
+                <type>int</type>
+            </parameter>
+            <parameter>
+                <name>width</name>
+                <type>int</type>
+            </parameter>
+        </method>
+    </class>
+    <version>1.1</version>
+    <author>Studiomjt.com(Mehdi Janbarari)</author>
+</root>

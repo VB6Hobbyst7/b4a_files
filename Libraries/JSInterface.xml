@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root>
+    <doclet-version-NOT-library-version>1.00</doclet-version-NOT-library-version>
+    <class>
+        <name>uk.co.martinpearman.b4a.jsinterface.JSInterface</name>
+        <shortname>JSInterface</shortname>
+        <owner>process</owner>
+        <method>
+            <name>addJSInterface</name>
+            <comment>Adds a new B4A javascript interface instance to a WebView instance.
+ Uses the WebView &lt;link&gt;addJavascriptInterface|http://developer.android.com/reference/android/webkit/WebView.html#addJavascriptInterface%28java.lang.Object,%20java.lang.String%29&lt;/link&gt; method.
+ 
+ aWebView - The WebView instance that you want to add the B4A javascript interface to.
+ 
+ jsNamespace - Javascript namespace, the namespace which you will use to access all B4A javascript interface methods.
+ 
+ B4A example of addJSInterface method:
+ &lt;code&gt;myJSInterfaceInstance.addJSInterface(myWebViewInstance, "B4A")&lt;/code&gt;
+ 
+ The B4A javascript interface contains an overloaded method named 'CallSub'. CallSub can be used to call a B4A Sub (using javascript) with either none, one, two or three String parameters.
+ Examples:
+ &lt;code&gt;myJSNamespace.CallSub("myB4ASubName");&lt;/code&gt;
+ &lt;code&gt;myJSNamespace.CallSub("myB4ASubName", "param 1");&lt;/code&gt;
+ &lt;code&gt;myJSNamespace.CallSub("myB4ASubName", "param 1", "param 2");&lt;/code&gt;
+ &lt;code&gt;myJSNamespace.CallSub("myB4ASubName", "param 1", "param 2", "param 3");&lt;/code&gt;
+ Example where jsNamespace is defined "B4A":
+ &lt;code&gt;B4A.CallSub("myB4ASubName");&lt;/code&gt;
+ 
+ If the B4A Sub returns a String then that String is returned to the calling javascript code.
+ Values (Strings) returned from the B4A javascript interface to javascript will always be of type Object, that is:
+ &lt;code&gt;typeof jsValueReturnedJSInterface&lt;/code&gt; will always be "object".
+ 
+ In some code this won't matter and javascript's internal type conversion will work for you, however there may be times when you need to explicitly convert an Object to a javascript String or Number type.
+ For example, let's say JSInterface returns an Object with the value "abcdef|qwerty" and that Object is assigned to a variable named "myValue".
+ If myValue was a String type then you could use the String type's split() method to convert the String into an Array, using the bar character as a separator:
+ &lt;code&gt;var myArray=myValue.split("|");&lt;/code&gt;
+ You will get a javascript error with this as the Object type has no split() method.
+ 
+ Solution: To convert an Object to a String type concatenate an empty String to the Object:
+ &lt;code&gt;var myValue=myValue+"";&lt;/code&gt;
+ myValue is now a javascript String type and it can use all native String methods such as split().
+ Note that the Object type's native toString() method will return an Object with the same value as the original Object - it will NOT convert the Object to a String type.
+ 
+ Conversion of Object types to javascript's Number type can be done using javascript's native methods: &lt;link&gt;parseInt()|http://www.w3schools.com/jsref/jsref_parseInt.asp&lt;/link&gt; and &lt;link&gt;parseFloat()|http://www.w3schools.com/jsref/jsref_parseFloat.asp&lt;/link&gt;</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>activity</name>
+                <type>anywheresoftware.b4a.BA</type>
+            </parameter>
+            <parameter>
+                <name>aWebView</name>
+                <type>android.webkit.WebView</type>
+            </parameter>
+            <parameter>
+                <name>jsNamespace</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+        <method>
+            <name>addConsoleInterface</name>
+            <comment>Adds a new &lt;link&gt;WebChromeClient|http://developer.android.com/reference/android/webkit/WebChromeClient.html&lt;/link&gt; instance to a WebView instance.
+ 
+ aWebView - The WebView instance that you want to add the WebChromeClient instance to.
+ 
+ The WebChromeClient will handle javascript console and error messages from the WebView, echoing them to logcat.
+ You can view the log entries in the B4A IDE or using the &lt;link&gt;B4A Log Viewer|http://www.basic4ppc.com/android/wiki/index.php/B4A_Log_Viewer&lt;/link&gt;.
+ 
+ It is NOT recommended to use the console in a production application.
+ Use it for development/debugging only.</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>aWebView</name>
+                <type>android.webkit.WebView</type>
+            </parameter>
+        </method>
+        <method>
+            <name>execJS</name>
+            <comment>Execute one or more javascript statements in a WebView.
+ execJS is a method intended to be called from your B4A code.
+ 
+ aWebView - The WebView instance in which to execute the javascript.
+ 
+ jsStatement - A String containing the javascript statement or (semi-colon separated) statement(s) to execute.
+ 
+ The javascript statement(s) will always be executed within the global scope of your web page.
+ Examples:
+ &lt;code&gt;myJSInterfaceInstance.execJS(myWebView, "location.href='http://google.com/'")&lt;/code&gt;
+ &lt;code&gt;myJSInterfaceInstance.execJS(myWebView, "document.body.style.backgroundColor='red';document.body.style.color='green'")&lt;/code&gt;</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>aWebView</name>
+                <type>android.webkit.WebView</type>
+            </parameter>
+            <parameter>
+                <name>jsStatement</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+    </class>
+    <version>1.3</version>
+    <author>Martin Pearman</author>
+</root>

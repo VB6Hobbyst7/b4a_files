@@ -1,0 +1,250 @@
+<HTML>
+<HEAD>
+<META http-equiv="Content-Type" content="text/html; charset=utf-8">
+<TITLE>
+Basic4android - Clocks
+</TITLE>
+<link rel="stylesheet" type="text/css" href="images/help.css" />
+
+</HEAD>
+
+<BODY BGCOLOR="white" leftmargin="50">
+<a name="top"/>
+<h1>Clocks</h1>
+
+</h5>This library contains several time related views. Presently they are Chronometer, <br/>DigitalClock and AnalogClock.
+<h4>List of types:</h4>
+<a href='#analogclock'>AnalogClock</a><br/><a href='#chronometer'>Chronometer</a><br/><a href='#digitalclock'>DigitalClock</a><br/>
+<hr/>
+<h3><u><a name='analogclock'>AnalogClock</a></u></h3>
+</h5>AnalogClock is, well, an analog clock. It is always displayed as a circle within<br/>the bounds of the view. It is based on a so View all the View properties and methods<br/>are available to tailor its appearance.<br/>This is an 'Activity Object', it cannot be declared under Sub Process_Globals.
+<br/>
+
+<h4>Events:</h4>
+None
+<h4>Members:</h4><br/>
+<img src='images/19.png'/>&nbsp;&nbsp;<span style="color: #000000;"><a href='#analogclock_background'><b>Background</b></a> </span><span style="color: #0000FF;">As</span><span style="color: #000000;"> android.graphics.drawable.Drawable</span><br/><br/>
+<img src='images/19.png'/>&nbsp;&nbsp;<span style="color: #000000;"><a href='#analogclock_color'><b>Color</b></a> </span><span style="color: #0000FF;">As</span><span style="color: #000000;"> </span><span style="color: #008B8B;">Int</span><span style="color: #000000;">  [write only]</span><br/><br/>
+<img src='images/19.png'/>&nbsp;&nbsp;<span style="color: #000000;"><a href='#analogclock_enabled'><b>Enabled</b></a> </span><span style="color: #0000FF;">As</span><span style="color: #000000;"> </span><span style="color: #008B8B;">Boolean</span><br/><br/>
+<img src='images/19.png'/>&nbsp;&nbsp;<span style="color: #000000;"><a href='#analogclock_height'><b>Height</b></a> </span><span style="color: #0000FF;">As</span><span style="color: #000000;"> </span><span style="color: #008B8B;">Int</span><br/><br/>
+<img src='images/15.png'/>&nbsp;&nbsp;<span style="color: #000000;"><a href='#analogclock_initialize'><b>Initialize</b></a> (arg1 </span><span style="color: #0000FF;">As</span><span style="color: #000000;"> </span><span style="color: #008B8B;">String</span><span style="color: #000000;">)</span><br/><br/>
+<img src='images/15.png'/>&nbsp;&nbsp;<span style="color: #000000;"><a href='#analogclock_invalidate'><b>Invalidate</b></a></span><br/><br/>
+<img src='images/15.png'/>&nbsp;&nbsp;<span style="color: #000000;"><a href='#analogclock_invalidate2'><b>Invalidate2</b></a> (arg0 </span><span style="color: #0000FF;">As</span><span style="color: #000000;"> android.graphics.Rect)</span><br/><br/>
+<img src='images/15.png'/>&nbsp;&nbsp;<span style="color: #000000;"><a href='#analogclock_invalidate3'><b>Invalidate3</b></a> (arg0 </span><span style="color: #0000FF;">As</span><span style="color: #000000;"> </span><span style="color: #008B8B;">Int</span><span style="color: #000000;">, arg1 </span><span style="color: #0000FF;">As</span><span style="color: #000000;"> </span><span style="color: #008B8B;">Int</span><span style="color: #000000;">, arg2 </span><span style="color: #0000FF;">As</span><span style="color: #000000;"> </span><span style="color: #008B8B;">Int</span><span style="color: #000000;">, arg3 </span><span style="color: #0000FF;">As</span><span style="color: #000000;"> </span><span style="color: #008B8B;">Int</span><span style="color: #000000;">)</span><br/><br/>
+<img src='images/15.png'/>&nbsp;&nbsp;<span style="color: #000000;"><a href='#analogclock_isinitialized'><b>IsInitialized</b></a> </span><span style="color: #0000FF;">As</span><span style="color: #000000;"> </span><span style="color: #008B8B;">Boolean</span><br/><br/>
+<img src='images/19.png'/>&nbsp;&nbsp;<span style="color: #000000;"><a href='#analogclock_left'><b>Left</b></a> </span><span style="color: #0000FF;">As</span><span style="color: #000000;"> </span><span style="color: #008B8B;">Int</span><br/><br/>
+<img src='images/15.png'/>&nbsp;&nbsp;<span style="color: #000000;"><a href='#analogclock_setbackgroundimage'><b>SetBackgroundImage</b></a> (arg0 </span><span style="color: #0000FF;">As</span><span style="color: #000000;"> android.graphics.Bitmap)</span><br/><br/>
+<img src='images/15.png'/>&nbsp;&nbsp;<span style="color: #000000;"><a href='#analogclock_setlayout'><b>SetLayout</b></a> (arg0 </span><span style="color: #0000FF;">As</span><span style="color: #000000;"> </span><span style="color: #008B8B;">Int</span><span style="color: #000000;">, arg1 </span><span style="color: #0000FF;">As</span><span style="color: #000000;"> </span><span style="color: #008B8B;">Int</span><span style="color: #000000;">, arg2 </span><span style="color: #0000FF;">As</span><span style="color: #000000;"> </span><span style="color: #008B8B;">Int</span><span style="color: #000000;">, arg3 </span><span style="color: #0000FF;">As</span><span style="color: #000000;"> </span><span style="color: #008B8B;">Int</span><span style="color: #000000;">)</span><br/><br/>
+<img src='images/19.png'/>&nbsp;&nbsp;<span style="color: #000000;"><a href='#analogclock_tag'><b>Tag</b></a> </span><span style="color: #0000FF;">As</span><span style="color: #000000;"> </span><span style="color: #008B8B;">Object</span><br/><br/>
+<img src='images/19.png'/>&nbsp;&nbsp;<span style="color: #000000;"><a href='#analogclock_top'><b>Top</b></a> </span><span style="color: #0000FF;">As</span><span style="color: #000000;"> </span><span style="color: #008B8B;">Int</span><br/><br/>
+<img src='images/19.png'/>&nbsp;&nbsp;<span style="color: #000000;"><a href='#analogclock_version'><b>Version</b></a> </span><span style="color: #0000FF;">As</span><span style="color: #000000;"> </span><span style="color: #008B8B;">Double</span><span style="color: #000000;">  [read only]</span><br/><br/>
+<img src='images/19.png'/>&nbsp;&nbsp;<span style="color: #000000;"><a href='#analogclock_visible'><b>Visible</b></a> </span><span style="color: #0000FF;">As</span><span style="color: #000000;"> </span><span style="color: #008B8B;">Boolean</span><br/><br/>
+<img src='images/19.png'/>&nbsp;&nbsp;<span style="color: #000000;"><a href='#analogclock_width'><b>Width</b></a> </span><span style="color: #0000FF;">As</span><span style="color: #000000;"> </span><span style="color: #008B8B;">Int</span><br/><br/>
+
+<h4>Members description:</h4>
+<a name='analogclock_background'/>
+<h5><img src='images/19.png'/>
+<span style="color: #000000;">Background </span><span style="color: #0000FF;">As</span><span style="color: #000000;"> android.graphics.drawable.Drawable</span></h5><a name='analogclock_color'/>
+<h5><img src='images/19.png'/>
+<span style="color: #000000;">Color </span><span style="color: #0000FF;">As</span><span style="color: #000000;"> </span><span style="color: #008B8B;">Int</span><span style="color: #000000;">  [write only]</span></h5><a name='analogclock_enabled'/>
+<h5><img src='images/19.png'/>
+<span style="color: #000000;">Enabled </span><span style="color: #0000FF;">As</span><span style="color: #000000;"> </span><span style="color: #008B8B;">Boolean</span></h5><a name='analogclock_height'/>
+<h5><img src='images/19.png'/>
+<span style="color: #000000;">Height </span><span style="color: #0000FF;">As</span><span style="color: #000000;"> </span><span style="color: #008B8B;">Int</span></h5><a name='analogclock_initialize'/>
+<h5><img src='images/15.png'/>
+<span style="color: #000000;">Initialize (arg1 </span><span style="color: #0000FF;">As</span><span style="color: #000000;"> </span><span style="color: #008B8B;">String</span><span style="color: #000000;">)</span></h5><a name='analogclock_invalidate'/>
+<h5><img src='images/15.png'/>
+<span style="color: #000000;">Invalidate</span></h5><a name='analogclock_invalidate2'/>
+<h5><img src='images/15.png'/>
+<span style="color: #000000;">Invalidate2 (arg0 </span><span style="color: #0000FF;">As</span><span style="color: #000000;"> android.graphics.Rect)</span></h5><a name='analogclock_invalidate3'/>
+<h5><img src='images/15.png'/>
+<span style="color: #000000;">Invalidate3 (arg0 </span><span style="color: #0000FF;">As</span><span style="color: #000000;"> </span><span style="color: #008B8B;">Int</span><span style="color: #000000;">, arg1 </span><span style="color: #0000FF;">As</span><span style="color: #000000;"> </span><span style="color: #008B8B;">Int</span><span style="color: #000000;">, arg2 </span><span style="color: #0000FF;">As</span><span style="color: #000000;"> </span><span style="color: #008B8B;">Int</span><span style="color: #000000;">, arg3 </span><span style="color: #0000FF;">As</span><span style="color: #000000;"> </span><span style="color: #008B8B;">Int</span><span style="color: #000000;">)</span></h5><a name='analogclock_isinitialized'/>
+<h5><img src='images/15.png'/>
+<span style="color: #000000;">IsInitialized </span><span style="color: #0000FF;">As</span><span style="color: #000000;"> </span><span style="color: #008B8B;">Boolean</span></h5><a name='analogclock_left'/>
+<h5><img src='images/19.png'/>
+<span style="color: #000000;">Left </span><span style="color: #0000FF;">As</span><span style="color: #000000;"> </span><span style="color: #008B8B;">Int</span></h5><a name='analogclock_setbackgroundimage'/>
+<h5><img src='images/15.png'/>
+<span style="color: #000000;">SetBackgroundImage (arg0 </span><span style="color: #0000FF;">As</span><span style="color: #000000;"> android.graphics.Bitmap)</span></h5><a name='analogclock_setlayout'/>
+<h5><img src='images/15.png'/>
+<span style="color: #000000;">SetLayout (arg0 </span><span style="color: #0000FF;">As</span><span style="color: #000000;"> </span><span style="color: #008B8B;">Int</span><span style="color: #000000;">, arg1 </span><span style="color: #0000FF;">As</span><span style="color: #000000;"> </span><span style="color: #008B8B;">Int</span><span style="color: #000000;">, arg2 </span><span style="color: #0000FF;">As</span><span style="color: #000000;"> </span><span style="color: #008B8B;">Int</span><span style="color: #000000;">, arg3 </span><span style="color: #0000FF;">As</span><span style="color: #000000;"> </span><span style="color: #008B8B;">Int</span><span style="color: #000000;">)</span></h5><a name='analogclock_tag'/>
+<h5><img src='images/19.png'/>
+<span style="color: #000000;">Tag </span><span style="color: #0000FF;">As</span><span style="color: #000000;"> </span><span style="color: #008B8B;">Object</span></h5><a name='analogclock_top'/>
+<h5><img src='images/19.png'/>
+<span style="color: #000000;">Top </span><span style="color: #0000FF;">As</span><span style="color: #000000;"> </span><span style="color: #008B8B;">Int</span></h5><a name='analogclock_version'/>
+<h5><img src='images/19.png'/>
+<span style="color: #000000;">Version </span><span style="color: #0000FF;">As</span><span style="color: #000000;"> </span><span style="color: #008B8B;">Double</span><span style="color: #000000;">  [read only]</span></h5>Returns the version of the library.<a name='analogclock_visible'/>
+<h5><img src='images/19.png'/>
+<span style="color: #000000;">Visible </span><span style="color: #0000FF;">As</span><span style="color: #000000;"> </span><span style="color: #008B8B;">Boolean</span></h5><a name='analogclock_width'/>
+<h5><img src='images/19.png'/>
+<span style="color: #000000;">Width </span><span style="color: #0000FF;">As</span><span style="color: #000000;"> </span><span style="color: #008B8B;">Int</span></h5><hr/>
+<h3><u><a name='chronometer'>Chronometer</a></u></h3>
+</h5>Chronometer is a view that counts up from zero when started. It is based on a TextView<br/>so all the TextView properties and methods are available to tailor its appearance.<br/>This is an 'Activity Object', it cannot be declared under Sub Process_Globals.
+<br/>
+
+<h4>Events:</h4>
+Tick 'The Chronometer value has changed<br/>
+<h4>Members:</h4><br/>
+<img src='images/19.png'/>&nbsp;&nbsp;<span style="color: #000000;"><a href='#chronometer_background'><b>Background</b></a> </span><span style="color: #0000FF;">As</span><span style="color: #000000;"> android.graphics.drawable.Drawable</span><br/><br/>
+<img src='images/19.png'/>&nbsp;&nbsp;<span style="color: #000000;"><a href='#chronometer_basetime'><b>BaseTime</b></a> </span><span style="color: #0000FF;">As</span><span style="color: #000000;"> </span><span style="color: #008B8B;">Long</span><br/><br/>
+<img src='images/19.png'/>&nbsp;&nbsp;<span style="color: #000000;"><a href='#chronometer_color'><b>Color</b></a> </span><span style="color: #0000FF;">As</span><span style="color: #000000;"> </span><span style="color: #008B8B;">Int</span><span style="color: #000000;">  [write only]</span><br/><br/>
+<img src='images/19.png'/>&nbsp;&nbsp;<span style="color: #000000;"><a href='#chronometer_enabled'><b>Enabled</b></a> </span><span style="color: #0000FF;">As</span><span style="color: #000000;"> </span><span style="color: #008B8B;">Boolean</span><br/><br/>
+<img src='images/19.png'/>&nbsp;&nbsp;<span style="color: #000000;"><a href='#chronometer_format'><b>Format</b></a> </span><span style="color: #0000FF;">As</span><span style="color: #000000;"> </span><span style="color: #008B8B;">String</span><br/><br/>
+<img src='images/15.png'/>&nbsp;&nbsp;<span style="color: #000000;"><a href='#chronometer_getelapsedrealtime'><b>GetElapsedRealTime</b></a> </span><span style="color: #0000FF;">As</span><span style="color: #000000;"> </span><span style="color: #008B8B;">Long</span><br/><br/>
+<img src='images/19.png'/>&nbsp;&nbsp;<span style="color: #000000;"><a href='#chronometer_gravity'><b>Gravity</b></a> </span><span style="color: #0000FF;">As</span><span style="color: #000000;"> </span><span style="color: #008B8B;">Int</span><br/><br/>
+<img src='images/19.png'/>&nbsp;&nbsp;<span style="color: #000000;"><a href='#chronometer_height'><b>Height</b></a> </span><span style="color: #0000FF;">As</span><span style="color: #000000;"> </span><span style="color: #008B8B;">Int</span><br/><br/>
+<img src='images/15.png'/>&nbsp;&nbsp;<span style="color: #000000;"><a href='#chronometer_initialize'><b>Initialize</b></a> (arg1 </span><span style="color: #0000FF;">As</span><span style="color: #000000;"> </span><span style="color: #008B8B;">String</span><span style="color: #000000;">)</span><br/><br/>
+<img src='images/15.png'/>&nbsp;&nbsp;<span style="color: #000000;"><a href='#chronometer_invalidate'><b>Invalidate</b></a></span><br/><br/>
+<img src='images/15.png'/>&nbsp;&nbsp;<span style="color: #000000;"><a href='#chronometer_invalidate2'><b>Invalidate2</b></a> (arg0 </span><span style="color: #0000FF;">As</span><span style="color: #000000;"> android.graphics.Rect)</span><br/><br/>
+<img src='images/15.png'/>&nbsp;&nbsp;<span style="color: #000000;"><a href='#chronometer_invalidate3'><b>Invalidate3</b></a> (arg0 </span><span style="color: #0000FF;">As</span><span style="color: #000000;"> </span><span style="color: #008B8B;">Int</span><span style="color: #000000;">, arg1 </span><span style="color: #0000FF;">As</span><span style="color: #000000;"> </span><span style="color: #008B8B;">Int</span><span style="color: #000000;">, arg2 </span><span style="color: #0000FF;">As</span><span style="color: #000000;"> </span><span style="color: #008B8B;">Int</span><span style="color: #000000;">, arg3 </span><span style="color: #0000FF;">As</span><span style="color: #000000;"> </span><span style="color: #008B8B;">Int</span><span style="color: #000000;">)</span><br/><br/>
+<img src='images/15.png'/>&nbsp;&nbsp;<span style="color: #000000;"><a href='#chronometer_isinitialized'><b>IsInitialized</b></a> </span><span style="color: #0000FF;">As</span><span style="color: #000000;"> </span><span style="color: #008B8B;">Boolean</span><br/><br/>
+<img src='images/19.png'/>&nbsp;&nbsp;<span style="color: #000000;"><a href='#chronometer_left'><b>Left</b></a> </span><span style="color: #0000FF;">As</span><span style="color: #000000;"> </span><span style="color: #008B8B;">Int</span><br/><br/>
+<img src='images/15.png'/>&nbsp;&nbsp;<span style="color: #000000;"><a href='#chronometer_setbackgroundimage'><b>SetBackgroundImage</b></a> (arg0 </span><span style="color: #0000FF;">As</span><span style="color: #000000;"> android.graphics.Bitmap)</span><br/><br/>
+<img src='images/15.png'/>&nbsp;&nbsp;<span style="color: #000000;"><a href='#chronometer_setlayout'><b>SetLayout</b></a> (arg0 </span><span style="color: #0000FF;">As</span><span style="color: #000000;"> </span><span style="color: #008B8B;">Int</span><span style="color: #000000;">, arg1 </span><span style="color: #0000FF;">As</span><span style="color: #000000;"> </span><span style="color: #008B8B;">Int</span><span style="color: #000000;">, arg2 </span><span style="color: #0000FF;">As</span><span style="color: #000000;"> </span><span style="color: #008B8B;">Int</span><span style="color: #000000;">, arg3 </span><span style="color: #0000FF;">As</span><span style="color: #000000;"> </span><span style="color: #008B8B;">Int</span><span style="color: #000000;">)</span><br/><br/>
+<img src='images/15.png'/>&nbsp;&nbsp;<span style="color: #000000;"><a href='#chronometer_start'><b>Start</b></a></span><br/><br/>
+<img src='images/15.png'/>&nbsp;&nbsp;<span style="color: #000000;"><a href='#chronometer_stop'><b>Stop</b></a></span><br/><br/>
+<img src='images/19.png'/>&nbsp;&nbsp;<span style="color: #000000;"><a href='#chronometer_tag'><b>Tag</b></a> </span><span style="color: #0000FF;">As</span><span style="color: #000000;"> </span><span style="color: #008B8B;">Object</span><br/><br/>
+<img src='images/19.png'/>&nbsp;&nbsp;<span style="color: #000000;"><a href='#chronometer_text'><b>Text</b></a> </span><span style="color: #0000FF;">As</span><span style="color: #000000;"> </span><span style="color: #008B8B;">String</span><br/><br/>
+<img src='images/19.png'/>&nbsp;&nbsp;<span style="color: #000000;"><a href='#chronometer_textcolor'><b>TextColor</b></a> </span><span style="color: #0000FF;">As</span><span style="color: #000000;"> </span><span style="color: #008B8B;">Int</span><br/><br/>
+<img src='images/19.png'/>&nbsp;&nbsp;<span style="color: #000000;"><a href='#chronometer_textsize'><b>TextSize</b></a> </span><span style="color: #0000FF;">As</span><span style="color: #000000;"> </span><span style="color: #008B8B;">Float</span><br/><br/>
+<img src='images/19.png'/>&nbsp;&nbsp;<span style="color: #000000;"><a href='#chronometer_top'><b>Top</b></a> </span><span style="color: #0000FF;">As</span><span style="color: #000000;"> </span><span style="color: #008B8B;">Int</span><br/><br/>
+<img src='images/19.png'/>&nbsp;&nbsp;<span style="color: #008B8B;"><a href='#chronometer_typeface'><b>Typeface</b></a></span><span style="color: #000000;"> </span><span style="color: #0000FF;">As</span><span style="color: #000000;"> android.graphics.Typeface</span><br/><br/>
+<img src='images/19.png'/>&nbsp;&nbsp;<span style="color: #000000;"><a href='#chronometer_version'><b>Version</b></a> </span><span style="color: #0000FF;">As</span><span style="color: #000000;"> </span><span style="color: #008B8B;">Double</span><span style="color: #000000;">  [read only]</span><br/><br/>
+<img src='images/19.png'/>&nbsp;&nbsp;<span style="color: #000000;"><a href='#chronometer_visible'><b>Visible</b></a> </span><span style="color: #0000FF;">As</span><span style="color: #000000;"> </span><span style="color: #008B8B;">Boolean</span><br/><br/>
+<img src='images/19.png'/>&nbsp;&nbsp;<span style="color: #000000;"><a href='#chronometer_width'><b>Width</b></a> </span><span style="color: #0000FF;">As</span><span style="color: #000000;"> </span><span style="color: #008B8B;">Int</span><br/><br/>
+
+<h4>Members description:</h4>
+<a name='chronometer_background'/>
+<h5><img src='images/19.png'/>
+<span style="color: #000000;">Background </span><span style="color: #0000FF;">As</span><span style="color: #000000;"> android.graphics.drawable.Drawable</span></h5><a name='chronometer_basetime'/>
+<h5><img src='images/19.png'/>
+<span style="color: #000000;">BaseTime </span><span style="color: #0000FF;">As</span><span style="color: #000000;"> </span><span style="color: #008B8B;">Long</span></h5>Gets or sets the base or zero time in milliseconds from which the Chronometer measures time <br/>against the system clock elapsed real time. Normally this should be set to ElapsedRealTime<br/>before starting the Chronometer so it counts from zero. If the Chronometer value is to be<br/>maintained across activity pause and resume the value used when the Chronometer was started<br/>should be saved on Pause and restored to BaseTime on resume.<a name='chronometer_color'/>
+<h5><img src='images/19.png'/>
+<span style="color: #000000;">Color </span><span style="color: #0000FF;">As</span><span style="color: #000000;"> </span><span style="color: #008B8B;">Int</span><span style="color: #000000;">  [write only]</span></h5><a name='chronometer_enabled'/>
+<h5><img src='images/19.png'/>
+<span style="color: #000000;">Enabled </span><span style="color: #0000FF;">As</span><span style="color: #000000;"> </span><span style="color: #008B8B;">Boolean</span></h5><a name='chronometer_format'/>
+<h5><img src='images/19.png'/>
+<span style="color: #000000;">Format </span><span style="color: #0000FF;">As</span><span style="color: #000000;"> </span><span style="color: #008B8B;">String</span></h5>Gets or sets the format string used for display. The Chronometer will display this string,<br/>with the first "%s" replaced by the current timer value in "MM:SS" or "H:MM:SS" form.<br/>If the format string is null, or if you never call setFormat(), the Chronometer will simply<br/>display the timer value in "MM:SS" or "H:MM:SS" form.<a name='chronometer_getelapsedrealtime'/>
+<h5><img src='images/15.png'/>
+<span style="color: #000000;">GetElapsedRealTime </span><span style="color: #0000FF;">As</span><span style="color: #000000;"> </span><span style="color: #008B8B;">Long</span></h5>This is the time in milliseconds from since the system was booted, including deep sleep.<a name='chronometer_gravity'/>
+<h5><img src='images/19.png'/>
+<span style="color: #000000;">Gravity </span><span style="color: #0000FF;">As</span><span style="color: #000000;"> </span><span style="color: #008B8B;">Int</span></h5><a name='chronometer_height'/>
+<h5><img src='images/19.png'/>
+<span style="color: #000000;">Height </span><span style="color: #0000FF;">As</span><span style="color: #000000;"> </span><span style="color: #008B8B;">Int</span></h5><a name='chronometer_initialize'/>
+<h5><img src='images/15.png'/>
+<span style="color: #000000;">Initialize (arg1 </span><span style="color: #0000FF;">As</span><span style="color: #000000;"> </span><span style="color: #008B8B;">String</span><span style="color: #000000;">)</span></h5><a name='chronometer_invalidate'/>
+<h5><img src='images/15.png'/>
+<span style="color: #000000;">Invalidate</span></h5><a name='chronometer_invalidate2'/>
+<h5><img src='images/15.png'/>
+<span style="color: #000000;">Invalidate2 (arg0 </span><span style="color: #0000FF;">As</span><span style="color: #000000;"> android.graphics.Rect)</span></h5><a name='chronometer_invalidate3'/>
+<h5><img src='images/15.png'/>
+<span style="color: #000000;">Invalidate3 (arg0 </span><span style="color: #0000FF;">As</span><span style="color: #000000;"> </span><span style="color: #008B8B;">Int</span><span style="color: #000000;">, arg1 </span><span style="color: #0000FF;">As</span><span style="color: #000000;"> </span><span style="color: #008B8B;">Int</span><span style="color: #000000;">, arg2 </span><span style="color: #0000FF;">As</span><span style="color: #000000;"> </span><span style="color: #008B8B;">Int</span><span style="color: #000000;">, arg3 </span><span style="color: #0000FF;">As</span><span style="color: #000000;"> </span><span style="color: #008B8B;">Int</span><span style="color: #000000;">)</span></h5><a name='chronometer_isinitialized'/>
+<h5><img src='images/15.png'/>
+<span style="color: #000000;">IsInitialized </span><span style="color: #0000FF;">As</span><span style="color: #000000;"> </span><span style="color: #008B8B;">Boolean</span></h5><a name='chronometer_left'/>
+<h5><img src='images/19.png'/>
+<span style="color: #000000;">Left </span><span style="color: #0000FF;">As</span><span style="color: #000000;"> </span><span style="color: #008B8B;">Int</span></h5><a name='chronometer_setbackgroundimage'/>
+<h5><img src='images/15.png'/>
+<span style="color: #000000;">SetBackgroundImage (arg0 </span><span style="color: #0000FF;">As</span><span style="color: #000000;"> android.graphics.Bitmap)</span></h5><a name='chronometer_setlayout'/>
+<h5><img src='images/15.png'/>
+<span style="color: #000000;">SetLayout (arg0 </span><span style="color: #0000FF;">As</span><span style="color: #000000;"> </span><span style="color: #008B8B;">Int</span><span style="color: #000000;">, arg1 </span><span style="color: #0000FF;">As</span><span style="color: #000000;"> </span><span style="color: #008B8B;">Int</span><span style="color: #000000;">, arg2 </span><span style="color: #0000FF;">As</span><span style="color: #000000;"> </span><span style="color: #008B8B;">Int</span><span style="color: #000000;">, arg3 </span><span style="color: #0000FF;">As</span><span style="color: #000000;"> </span><span style="color: #008B8B;">Int</span><span style="color: #000000;">)</span></h5><a name='chronometer_start'/>
+<h5><img src='images/15.png'/>
+<span style="color: #000000;">Start</span></h5>Start the Chronometer counting.<a name='chronometer_stop'/>
+<h5><img src='images/15.png'/>
+<span style="color: #000000;">Stop</span></h5>Stop the Chronometer counting.<a name='chronometer_tag'/>
+<h5><img src='images/19.png'/>
+<span style="color: #000000;">Tag </span><span style="color: #0000FF;">As</span><span style="color: #000000;"> </span><span style="color: #008B8B;">Object</span></h5><a name='chronometer_text'/>
+<h5><img src='images/19.png'/>
+<span style="color: #000000;">Text </span><span style="color: #0000FF;">As</span><span style="color: #000000;"> </span><span style="color: #008B8B;">String</span></h5><a name='chronometer_textcolor'/>
+<h5><img src='images/19.png'/>
+<span style="color: #000000;">TextColor </span><span style="color: #0000FF;">As</span><span style="color: #000000;"> </span><span style="color: #008B8B;">Int</span></h5><a name='chronometer_textsize'/>
+<h5><img src='images/19.png'/>
+<span style="color: #000000;">TextSize </span><span style="color: #0000FF;">As</span><span style="color: #000000;"> </span><span style="color: #008B8B;">Float</span></h5><a name='chronometer_top'/>
+<h5><img src='images/19.png'/>
+<span style="color: #000000;">Top </span><span style="color: #0000FF;">As</span><span style="color: #000000;"> </span><span style="color: #008B8B;">Int</span></h5><a name='chronometer_typeface'/>
+<h5><img src='images/19.png'/>
+<span style="color: #008B8B;">Typeface</span><span style="color: #000000;"> </span><span style="color: #0000FF;">As</span><span style="color: #000000;"> android.graphics.Typeface</span></h5><a name='chronometer_version'/>
+<h5><img src='images/19.png'/>
+<span style="color: #000000;">Version </span><span style="color: #0000FF;">As</span><span style="color: #000000;"> </span><span style="color: #008B8B;">Double</span><span style="color: #000000;">  [read only]</span></h5>Returns the version of the library.<a name='chronometer_visible'/>
+<h5><img src='images/19.png'/>
+<span style="color: #000000;">Visible </span><span style="color: #0000FF;">As</span><span style="color: #000000;"> </span><span style="color: #008B8B;">Boolean</span></h5><a name='chronometer_width'/>
+<h5><img src='images/19.png'/>
+<span style="color: #000000;">Width </span><span style="color: #0000FF;">As</span><span style="color: #000000;"> </span><span style="color: #008B8B;">Int</span></h5><hr/>
+<h3><u><a name='digitalclock'>DigitalClock</a></u></h3>
+</h5>DigitalClock is, well, a digital clock. It is based on a TextView so all the TextView<br/>properties and methods are available to tailor its appearance.<br/>This is an 'Activity Object', it cannot be declared under Sub Process_Globals.
+<br/>
+
+<h4>Events:</h4>
+None
+<h4>Members:</h4><br/>
+<img src='images/19.png'/>&nbsp;&nbsp;<span style="color: #000000;"><a href='#digitalclock_background'><b>Background</b></a> </span><span style="color: #0000FF;">As</span><span style="color: #000000;"> android.graphics.drawable.Drawable</span><br/><br/>
+<img src='images/19.png'/>&nbsp;&nbsp;<span style="color: #000000;"><a href='#digitalclock_color'><b>Color</b></a> </span><span style="color: #0000FF;">As</span><span style="color: #000000;"> </span><span style="color: #008B8B;">Int</span><span style="color: #000000;">  [write only]</span><br/><br/>
+<img src='images/19.png'/>&nbsp;&nbsp;<span style="color: #000000;"><a href='#digitalclock_enabled'><b>Enabled</b></a> </span><span style="color: #0000FF;">As</span><span style="color: #000000;"> </span><span style="color: #008B8B;">Boolean</span><br/><br/>
+<img src='images/19.png'/>&nbsp;&nbsp;<span style="color: #000000;"><a href='#digitalclock_gravity'><b>Gravity</b></a> </span><span style="color: #0000FF;">As</span><span style="color: #000000;"> </span><span style="color: #008B8B;">Int</span><br/><br/>
+<img src='images/19.png'/>&nbsp;&nbsp;<span style="color: #000000;"><a href='#digitalclock_height'><b>Height</b></a> </span><span style="color: #0000FF;">As</span><span style="color: #000000;"> </span><span style="color: #008B8B;">Int</span><br/><br/>
+<img src='images/15.png'/>&nbsp;&nbsp;<span style="color: #000000;"><a href='#digitalclock_initialize'><b>Initialize</b></a> (arg1 </span><span style="color: #0000FF;">As</span><span style="color: #000000;"> </span><span style="color: #008B8B;">String</span><span style="color: #000000;">)</span><br/><br/>
+<img src='images/15.png'/>&nbsp;&nbsp;<span style="color: #000000;"><a href='#digitalclock_invalidate'><b>Invalidate</b></a></span><br/><br/>
+<img src='images/15.png'/>&nbsp;&nbsp;<span style="color: #000000;"><a href='#digitalclock_invalidate2'><b>Invalidate2</b></a> (arg0 </span><span style="color: #0000FF;">As</span><span style="color: #000000;"> android.graphics.Rect)</span><br/><br/>
+<img src='images/15.png'/>&nbsp;&nbsp;<span style="color: #000000;"><a href='#digitalclock_invalidate3'><b>Invalidate3</b></a> (arg0 </span><span style="color: #0000FF;">As</span><span style="color: #000000;"> </span><span style="color: #008B8B;">Int</span><span style="color: #000000;">, arg1 </span><span style="color: #0000FF;">As</span><span style="color: #000000;"> </span><span style="color: #008B8B;">Int</span><span style="color: #000000;">, arg2 </span><span style="color: #0000FF;">As</span><span style="color: #000000;"> </span><span style="color: #008B8B;">Int</span><span style="color: #000000;">, arg3 </span><span style="color: #0000FF;">As</span><span style="color: #000000;"> </span><span style="color: #008B8B;">Int</span><span style="color: #000000;">)</span><br/><br/>
+<img src='images/15.png'/>&nbsp;&nbsp;<span style="color: #000000;"><a href='#digitalclock_isinitialized'><b>IsInitialized</b></a> </span><span style="color: #0000FF;">As</span><span style="color: #000000;"> </span><span style="color: #008B8B;">Boolean</span><br/><br/>
+<img src='images/19.png'/>&nbsp;&nbsp;<span style="color: #000000;"><a href='#digitalclock_left'><b>Left</b></a> </span><span style="color: #0000FF;">As</span><span style="color: #000000;"> </span><span style="color: #008B8B;">Int</span><br/><br/>
+<img src='images/15.png'/>&nbsp;&nbsp;<span style="color: #000000;"><a href='#digitalclock_setbackgroundimage'><b>SetBackgroundImage</b></a> (arg0 </span><span style="color: #0000FF;">As</span><span style="color: #000000;"> android.graphics.Bitmap)</span><br/><br/>
+<img src='images/15.png'/>&nbsp;&nbsp;<span style="color: #000000;"><a href='#digitalclock_setlayout'><b>SetLayout</b></a> (arg0 </span><span style="color: #0000FF;">As</span><span style="color: #000000;"> </span><span style="color: #008B8B;">Int</span><span style="color: #000000;">, arg1 </span><span style="color: #0000FF;">As</span><span style="color: #000000;"> </span><span style="color: #008B8B;">Int</span><span style="color: #000000;">, arg2 </span><span style="color: #0000FF;">As</span><span style="color: #000000;"> </span><span style="color: #008B8B;">Int</span><span style="color: #000000;">, arg3 </span><span style="color: #0000FF;">As</span><span style="color: #000000;"> </span><span style="color: #008B8B;">Int</span><span style="color: #000000;">)</span><br/><br/>
+<img src='images/19.png'/>&nbsp;&nbsp;<span style="color: #000000;"><a href='#digitalclock_tag'><b>Tag</b></a> </span><span style="color: #0000FF;">As</span><span style="color: #000000;"> </span><span style="color: #008B8B;">Object</span><br/><br/>
+<img src='images/19.png'/>&nbsp;&nbsp;<span style="color: #000000;"><a href='#digitalclock_text'><b>Text</b></a> </span><span style="color: #0000FF;">As</span><span style="color: #000000;"> </span><span style="color: #008B8B;">String</span><br/><br/>
+<img src='images/19.png'/>&nbsp;&nbsp;<span style="color: #000000;"><a href='#digitalclock_textcolor'><b>TextColor</b></a> </span><span style="color: #0000FF;">As</span><span style="color: #000000;"> </span><span style="color: #008B8B;">Int</span><br/><br/>
+<img src='images/19.png'/>&nbsp;&nbsp;<span style="color: #000000;"><a href='#digitalclock_textsize'><b>TextSize</b></a> </span><span style="color: #0000FF;">As</span><span style="color: #000000;"> </span><span style="color: #008B8B;">Float</span><br/><br/>
+<img src='images/19.png'/>&nbsp;&nbsp;<span style="color: #000000;"><a href='#digitalclock_top'><b>Top</b></a> </span><span style="color: #0000FF;">As</span><span style="color: #000000;"> </span><span style="color: #008B8B;">Int</span><br/><br/>
+<img src='images/19.png'/>&nbsp;&nbsp;<span style="color: #008B8B;"><a href='#digitalclock_typeface'><b>Typeface</b></a></span><span style="color: #000000;"> </span><span style="color: #0000FF;">As</span><span style="color: #000000;"> android.graphics.Typeface</span><br/><br/>
+<img src='images/19.png'/>&nbsp;&nbsp;<span style="color: #000000;"><a href='#digitalclock_version'><b>Version</b></a> </span><span style="color: #0000FF;">As</span><span style="color: #000000;"> </span><span style="color: #008B8B;">Double</span><span style="color: #000000;">  [read only]</span><br/><br/>
+<img src='images/19.png'/>&nbsp;&nbsp;<span style="color: #000000;"><a href='#digitalclock_visible'><b>Visible</b></a> </span><span style="color: #0000FF;">As</span><span style="color: #000000;"> </span><span style="color: #008B8B;">Boolean</span><br/><br/>
+<img src='images/19.png'/>&nbsp;&nbsp;<span style="color: #000000;"><a href='#digitalclock_width'><b>Width</b></a> </span><span style="color: #0000FF;">As</span><span style="color: #000000;"> </span><span style="color: #008B8B;">Int</span><br/><br/>
+
+<h4>Members description:</h4>
+<a name='digitalclock_background'/>
+<h5><img src='images/19.png'/>
+<span style="color: #000000;">Background </span><span style="color: #0000FF;">As</span><span style="color: #000000;"> android.graphics.drawable.Drawable</span></h5><a name='digitalclock_color'/>
+<h5><img src='images/19.png'/>
+<span style="color: #000000;">Color </span><span style="color: #0000FF;">As</span><span style="color: #000000;"> </span><span style="color: #008B8B;">Int</span><span style="color: #000000;">  [write only]</span></h5><a name='digitalclock_enabled'/>
+<h5><img src='images/19.png'/>
+<span style="color: #000000;">Enabled </span><span style="color: #0000FF;">As</span><span style="color: #000000;"> </span><span style="color: #008B8B;">Boolean</span></h5><a name='digitalclock_gravity'/>
+<h5><img src='images/19.png'/>
+<span style="color: #000000;">Gravity </span><span style="color: #0000FF;">As</span><span style="color: #000000;"> </span><span style="color: #008B8B;">Int</span></h5><a name='digitalclock_height'/>
+<h5><img src='images/19.png'/>
+<span style="color: #000000;">Height </span><span style="color: #0000FF;">As</span><span style="color: #000000;"> </span><span style="color: #008B8B;">Int</span></h5><a name='digitalclock_initialize'/>
+<h5><img src='images/15.png'/>
+<span style="color: #000000;">Initialize (arg1 </span><span style="color: #0000FF;">As</span><span style="color: #000000;"> </span><span style="color: #008B8B;">String</span><span style="color: #000000;">)</span></h5><a name='digitalclock_invalidate'/>
+<h5><img src='images/15.png'/>
+<span style="color: #000000;">Invalidate</span></h5><a name='digitalclock_invalidate2'/>
+<h5><img src='images/15.png'/>
+<span style="color: #000000;">Invalidate2 (arg0 </span><span style="color: #0000FF;">As</span><span style="color: #000000;"> android.graphics.Rect)</span></h5><a name='digitalclock_invalidate3'/>
+<h5><img src='images/15.png'/>
+<span style="color: #000000;">Invalidate3 (arg0 </span><span style="color: #0000FF;">As</span><span style="color: #000000;"> </span><span style="color: #008B8B;">Int</span><span style="color: #000000;">, arg1 </span><span style="color: #0000FF;">As</span><span style="color: #000000;"> </span><span style="color: #008B8B;">Int</span><span style="color: #000000;">, arg2 </span><span style="color: #0000FF;">As</span><span style="color: #000000;"> </span><span style="color: #008B8B;">Int</span><span style="color: #000000;">, arg3 </span><span style="color: #0000FF;">As</span><span style="color: #000000;"> </span><span style="color: #008B8B;">Int</span><span style="color: #000000;">)</span></h5><a name='digitalclock_isinitialized'/>
+<h5><img src='images/15.png'/>
+<span style="color: #000000;">IsInitialized </span><span style="color: #0000FF;">As</span><span style="color: #000000;"> </span><span style="color: #008B8B;">Boolean</span></h5><a name='digitalclock_left'/>
+<h5><img src='images/19.png'/>
+<span style="color: #000000;">Left </span><span style="color: #0000FF;">As</span><span style="color: #000000;"> </span><span style="color: #008B8B;">Int</span></h5><a name='digitalclock_setbackgroundimage'/>
+<h5><img src='images/15.png'/>
+<span style="color: #000000;">SetBackgroundImage (arg0 </span><span style="color: #0000FF;">As</span><span style="color: #000000;"> android.graphics.Bitmap)</span></h5><a name='digitalclock_setlayout'/>
+<h5><img src='images/15.png'/>
+<span style="color: #000000;">SetLayout (arg0 </span><span style="color: #0000FF;">As</span><span style="color: #000000;"> </span><span style="color: #008B8B;">Int</span><span style="color: #000000;">, arg1 </span><span style="color: #0000FF;">As</span><span style="color: #000000;"> </span><span style="color: #008B8B;">Int</span><span style="color: #000000;">, arg2 </span><span style="color: #0000FF;">As</span><span style="color: #000000;"> </span><span style="color: #008B8B;">Int</span><span style="color: #000000;">, arg3 </span><span style="color: #0000FF;">As</span><span style="color: #000000;"> </span><span style="color: #008B8B;">Int</span><span style="color: #000000;">)</span></h5><a name='digitalclock_tag'/>
+<h5><img src='images/19.png'/>
+<span style="color: #000000;">Tag </span><span style="color: #0000FF;">As</span><span style="color: #000000;"> </span><span style="color: #008B8B;">Object</span></h5><a name='digitalclock_text'/>
+<h5><img src='images/19.png'/>
+<span style="color: #000000;">Text </span><span style="color: #0000FF;">As</span><span style="color: #000000;"> </span><span style="color: #008B8B;">String</span></h5><a name='digitalclock_textcolor'/>
+<h5><img src='images/19.png'/>
+<span style="color: #000000;">TextColor </span><span style="color: #0000FF;">As</span><span style="color: #000000;"> </span><span style="color: #008B8B;">Int</span></h5><a name='digitalclock_textsize'/>
+<h5><img src='images/19.png'/>
+<span style="color: #000000;">TextSize </span><span style="color: #0000FF;">As</span><span style="color: #000000;"> </span><span style="color: #008B8B;">Float</span></h5><a name='digitalclock_top'/>
+<h5><img src='images/19.png'/>
+<span style="color: #000000;">Top </span><span style="color: #0000FF;">As</span><span style="color: #000000;"> </span><span style="color: #008B8B;">Int</span></h5><a name='digitalclock_typeface'/>
+<h5><img src='images/19.png'/>
+<span style="color: #008B8B;">Typeface</span><span style="color: #000000;"> </span><span style="color: #0000FF;">As</span><span style="color: #000000;"> android.graphics.Typeface</span></h5><a name='digitalclock_version'/>
+<h5><img src='images/19.png'/>
+<span style="color: #000000;">Version </span><span style="color: #0000FF;">As</span><span style="color: #000000;"> </span><span style="color: #008B8B;">Double</span><span style="color: #000000;">  [read only]</span></h5>Returns the version of the library.<a name='digitalclock_visible'/>
+<h5><img src='images/19.png'/>
+<span style="color: #000000;">Visible </span><span style="color: #0000FF;">As</span><span style="color: #000000;"> </span><span style="color: #008B8B;">Boolean</span></h5><a name='digitalclock_width'/>
+<h5><img src='images/19.png'/>
+<span style="color: #000000;">Width </span><span style="color: #0000FF;">As</span><span style="color: #000000;"> </span><span style="color: #008B8B;">Int</span></h5>
+<hr/>
+<a href="#top">Top</a>
+</body>
+</html>

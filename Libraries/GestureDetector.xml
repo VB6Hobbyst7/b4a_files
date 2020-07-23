@@ -1,0 +1,399 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root>
+    <doclet-version-NOT-library-version>1.05</doclet-version-NOT-library-version>
+    <class>
+        <name>flm.b4a.gesturedetector.GestureDetectorForB4A</name>
+        <shortname>GestureDetector</shortname>
+        <owner>process</owner>
+        <event>onTouch(Action As Int, X As Float, Y As Float, MotionEvent As Object) As Boolean</event>
+        <event>onPointerDown(ptrIndex As Int, PID As Int, MotionEvent As Object)</event>
+        <event>onPointerUp(ptrIndex As Int, PID As Int, MotionEvent As Object)</event>
+        <event>onDown(X As Float, Y As Float, MotionEvent As Object)</event>
+        <event>onSingleTapUp(X As Float, Y As Float, MotionEvent As Object)</event>
+        <event>onSingleTapConfirmed(X As Float, Y As Float, MotionEvent As Object)</event>
+        <event>onDoubleTap(X As Float, Y As Float, MotionEvent As Object)</event>
+        <event>onShowPress(X As Float, Y As Float, MotionEvent As Object)</event>
+        <event>onLongPress(X As Float, Y As Float, MotionEvent As Object)</event>
+        <event>onDrag(deltaX As Float, deltaY As Float, MotionEvent As Object)</event>
+        <event>onScroll(distanceX As Float, distanceY As Float, MotionEvent1 As Object, MotionEvent2 As Object)</event>
+        <event>onFling(velocityX As Float, velocityY As Float, MotionEvent1 As Object, MotionEvent2 As Object)</event>
+        <event>onPinchOpen(NewDistance As Float, PreviousDistance As Float, MotionEvent As Object)</event>
+        <event>onPinchClose(NewDistance As Float, PreviousDistance As Float, MotionEvent As Object)</event>
+        <event>onRotation(Degrees As Double, MotionEvent As Object)</event>
+        <method>
+            <name>getTouchMinor</name>
+            <comment>Returns the length of the minor axis of an ellipse that describes the touch area at the point of contact for the given pointer index.
+minSDK = 9</comment>
+            <returntype>float</returntype>
+            <parameter>
+                <name>ev</name>
+                <type>android.view.MotionEvent</type>
+            </parameter>
+            <parameter>
+                <name>ptrIndex</name>
+                <type>int</type>
+            </parameter>
+        </method>
+        <method>
+            <name>getXPrecision</name>
+            <comment>Returns the precision of the X coordinates being reported. You can multiply this number with getX to find the actual hardware value of the X coordinate.</comment>
+            <returntype>float</returntype>
+            <parameter>
+                <name>ev</name>
+                <type>android.view.MotionEvent</type>
+            </parameter>
+        </method>
+        <method>
+            <name>EnableLongPress</name>
+            <comment>Sets whether longpress is enabled. If this is enabled, when a user presses and holds down, you get a longpress event and nothing further. If it's disabled, the user can press and hold down and then later move their finger and you will get scroll events. By default longpress is enabled.</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>Enabled</name>
+                <type>boolean</type>
+            </parameter>
+        </method>
+        <method>
+            <name>IgnoreHeightForPinch</name>
+            <comment>Sets whether the height is ignored when the distance is computed to detect a pinch gesture.</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>Ignored</name>
+                <type>boolean</type>
+            </parameter>
+        </method>
+        <method>
+            <name>IgnoreWidthForPinch</name>
+            <comment>Sets whether the width is ignored when the distance is computed to detect a pinch gesture.</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>Ignored</name>
+                <type>boolean</type>
+            </parameter>
+        </method>
+        <method>
+            <name>getAction</name>
+            <comment>Returns the Action value from the given MotionEvent.</comment>
+            <returntype>int</returntype>
+            <parameter>
+                <name>ev</name>
+                <type>android.view.MotionEvent</type>
+            </parameter>
+        </method>
+        <method>
+            <name>CreateMotionEvent</name>
+            <comment>Creates a MotionEvent to be used with PassTouchEventTo.
+downTime: The time (in ms) when the user originally pressed down to start a stream of position events.
+eventTime: The time (in ms) when this specific event was generated.
+Action: The kind of action being performed. One of the ACTION constants.
+X: The X coordinate of this event.
+Y: The Y coordinate of this event.</comment>
+            <returntype>java.lang.Object</returntype>
+            <parameter>
+                <name>downTime</name>
+                <type>long</type>
+            </parameter>
+            <parameter>
+                <name>eventTime</name>
+                <type>long</type>
+            </parameter>
+            <parameter>
+                <name>Action</name>
+                <type>int</type>
+            </parameter>
+            <parameter>
+                <name>X</name>
+                <type>float</type>
+            </parameter>
+            <parameter>
+                <name>Y</name>
+                <type>float</type>
+            </parameter>
+        </method>
+        <method>
+            <name>getPointerCount</name>
+            <comment>Returns the number of pointers contained in the given event.</comment>
+            <returntype>int</returntype>
+            <parameter>
+                <name>ev</name>
+                <type>android.view.MotionEvent</type>
+            </parameter>
+        </method>
+        <method>
+            <name>getHistorySize</name>
+            <comment>Returns the number of historical points in the given event. These are movements that have occurred between this event and the previous event.
+This only applies to ACTION_MOVE events. All other actions will have a size of 0.</comment>
+            <returntype>int</returntype>
+            <parameter>
+                <name>ev</name>
+                <type>android.view.MotionEvent</type>
+            </parameter>
+        </method>
+        <method>
+            <name>getHistoricalX</name>
+            <comment>Returns a historical X coordinate that occurred between this event and the previous event for the given pointer.
+Only applies to ACTION_MOVE events.</comment>
+            <returntype>float</returntype>
+            <parameter>
+                <name>ev</name>
+                <type>android.view.MotionEvent</type>
+            </parameter>
+            <parameter>
+                <name>ptrIndex</name>
+                <type>int</type>
+            </parameter>
+            <parameter>
+                <name>pos</name>
+                <type>int</type>
+            </parameter>
+        </method>
+        <method>
+            <name>getHistoricalPressure</name>
+            <comment>Returns a historical pressure coordinate that occurred between this event and the previous event for the given pointer.
+Only applies to ACTION_MOVE events.</comment>
+            <returntype>float</returntype>
+            <parameter>
+                <name>ev</name>
+                <type>android.view.MotionEvent</type>
+            </parameter>
+            <parameter>
+                <name>ptrIndex</name>
+                <type>int</type>
+            </parameter>
+            <parameter>
+                <name>pos</name>
+                <type>int</type>
+            </parameter>
+        </method>
+        <method>
+            <name>getHistoricalY</name>
+            <comment>Returns a historical Y coordinate that occurred between this event and the previous event for the given pointer.
+Only applies to ACTION_MOVE events.</comment>
+            <returntype>float</returntype>
+            <parameter>
+                <name>ev</name>
+                <type>android.view.MotionEvent</type>
+            </parameter>
+            <parameter>
+                <name>ptrIndex</name>
+                <type>int</type>
+            </parameter>
+            <parameter>
+                <name>pos</name>
+                <type>int</type>
+            </parameter>
+        </method>
+        <method>
+            <name>getPointerIndex</name>
+            <comment>Returns the pointer index for the given PID
+The PID (Pointer ID) is the pointer unique identifier sent back by the onPointerUp/Down functions.</comment>
+            <returntype>int</returntype>
+            <parameter>
+                <name>ev</name>
+                <type>android.view.MotionEvent</type>
+            </parameter>
+            <parameter>
+                <name>PID</name>
+                <type>int</type>
+            </parameter>
+        </method>
+        <method>
+            <name>getSize</name>
+            <comment>Returns the Size value from the given MotionEvent.
+Set ptrIndex to 0 for the first pointer, to 1 for the second pointer, and so on.</comment>
+            <returntype>float</returntype>
+            <parameter>
+                <name>ev</name>
+                <type>android.view.MotionEvent</type>
+            </parameter>
+            <parameter>
+                <name>ptrIndex</name>
+                <type>int</type>
+            </parameter>
+        </method>
+        <method>
+            <name>getX</name>
+            <comment>Returns the X value from the given MotionEvent.
+Set ptrIndex to 0 for the first pointer, to 1 for the second pointer, and so on.</comment>
+            <returntype>float</returntype>
+            <parameter>
+                <name>ev</name>
+                <type>android.view.MotionEvent</type>
+            </parameter>
+            <parameter>
+                <name>ptrIndex</name>
+                <type>int</type>
+            </parameter>
+        </method>
+        <method>
+            <name>getPressure</name>
+            <comment>Returns the Pressure value from the given MotionEvent.
+Set ptrIndex to 0 for the first pointer, to 1 for the second pointer, and so on.</comment>
+            <returntype>float</returntype>
+            <parameter>
+                <name>ev</name>
+                <type>android.view.MotionEvent</type>
+            </parameter>
+            <parameter>
+                <name>ptrIndex</name>
+                <type>int</type>
+            </parameter>
+        </method>
+        <method>
+            <name>getY</name>
+            <comment>Returns the Y value from the given MotionEvent.
+Set ptrIndex to 0 for the first pointer, to 1 for the second pointer, and so on.</comment>
+            <returntype>float</returntype>
+            <parameter>
+                <name>ev</name>
+                <type>android.view.MotionEvent</type>
+            </parameter>
+            <parameter>
+                <name>ptrIndex</name>
+                <type>int</type>
+            </parameter>
+        </method>
+        <method>
+            <name>getHistoricalSize</name>
+            <comment>Returns a historical size coordinate that occurred between this event and the previous event for the given pointer.
+Only applies to ACTION_MOVE events.</comment>
+            <returntype>float</returntype>
+            <parameter>
+                <name>ev</name>
+                <type>android.view.MotionEvent</type>
+            </parameter>
+            <parameter>
+                <name>ptrIndex</name>
+                <type>int</type>
+            </parameter>
+            <parameter>
+                <name>pos</name>
+                <type>int</type>
+            </parameter>
+        </method>
+        <method>
+            <name>SetOnGestureListener</name>
+            <comment>Sets the listeners for the following events:
+&lt;U&gt;onTouch&lt;/U&gt;: notified whenever a MotionEvent occurs.
+  Handler: Sub MyView_onTouch(Action As Int, X As Float, Y As Float, MotionEvent As Object) As Boolean
+&lt;U&gt;onPointerDown&lt;/U&gt;: notified when a non-primary pointer has gone down.
+  Handler: Sub MyView_onPointerDown(ptrIndex As Int, PID As Int, MotionEvent As Object)
+&lt;U&gt;onPointerUp&lt;/U&gt;: notified when a non-primary pointer has gone up.
+  Handler: Sub MyView_onPointerUp(ptrIndex As Int, PID As Int, MotionEvent As Object)
+&lt;U&gt;onDown&lt;/U&gt;: notified when a tap occurs with the down MotionEvent that triggered it. This will be triggered immediately for every down event. All other events should be preceded by this.
+  Handler: Sub MyView_onDown(X As Float, Y As Float, MotionEvent As Object)
+&lt;U&gt;onSingleTapUp&lt;/U&gt;: notified when a tap occurs with the up MotionEvent that triggered it.
+  Handler: Sub MyView_onSingleTapUp(X As Float, Y As Float, MotionEvent As Object)
+&lt;U&gt;onSingleTapConfirmed&lt;/U&gt;: notified when a single-tap occurs. Unlike onSingleTapUp, this will only be called after the detector is confident that the user's first tap is not followed by a second tap leading to a double-tap gesture.
+  Handler: Sub MyView_onSingleTapConfirmed(X As Float, Y As Float, MotionEvent As Object)
+&lt;U&gt;onDoubleTap&lt;/U&gt;: notified when a double-tap occurs.
+  Handler: Sub MyView_onDoubleTap(X As Float, Y As Float, MotionEvent As Object)
+&lt;U&gt;onShowPress&lt;/U&gt;: the user has performed a down MotionEvent and not performed a move or up yet. This event is commonly used to provide visual feedback to the user to let them know that their action has been recognized i.e. highlight an element.
+  Handler: Sub MyView_onShowPress(X As Float, Y As Float, MotionEvent As Object)
+&lt;U&gt;onLongPress&lt;/U&gt;: notified when a long press occurs with the initial on down MotionEvent that triggered it.
+  Handler: Sub MyView_onLongPress(X As Float, Y As Float, MotionEvent As Object)
+&lt;U&gt;onDrag&lt;/U&gt;: notified when a drag occurs with the move MotionEvent that triggered it. To move the dragged view, add deltaX to its Left and deltaY to its Top.
+  Handler: Sub MyView_onDrag(deltaX As Float, deltaY As Float, MotionEvent As Object)
+&lt;U&gt;onScroll&lt;/U&gt;: notified when a scroll occurs with the initial on down MotionEvent and the current move MotionEvent. The distance in x and y is also supplied.
+  Handler: Sub MyView_onScroll(distanceX As Float, distanceY As Float, MotionEvent1 As Object, MotionEvent2 As Object)
+&lt;U&gt;onFling&lt;/U&gt;: notified when a fling occurs with the initial on down MotionEvent and the matching up MotionEvent. The calculated velocity is supplied along the x and y axis in pixels per second.
+  Handler: Sub MyView_onFling(velocityX As Float, velocityY As Float, MotionEvent1 As Object, MotionEvent2 As Object)
+&lt;U&gt;onPinchOpen&lt;/U&gt;: notified when the distance increases between two pointers.
+  Handler: Sub MyView_onPinchOpen(NewDistance As Float, PreviousDistance As Float, MotionEvent As Object)
+&lt;U&gt;onPinchClose&lt;/U&gt;: notified when the distance decreases between two pointers.
+  Handler: Sub MyView_onPinchClose(NewDistance As Float, PreviousDistance As Float, MotionEvent As Object)
+&lt;U&gt;onRotation&lt;/U&gt;: notified when the angle varies between two pointers. The returned angle ranges from -180 to +180 degrees.
+  Handler: Sub MyView_onRotation(Degrees As Double, MotionEvent As Object)</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>ba</name>
+                <type>anywheresoftware.b4a.BA</type>
+            </parameter>
+            <parameter>
+                <name>view</name>
+                <type>android.view.View</type>
+            </parameter>
+            <parameter>
+                <name>eventPrefix</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+        <method>
+            <name>getTouchMajor</name>
+            <comment>Returns the length of the major axis of an ellipse that describes the touch area at the point of contact for the given pointer index.
+minSDK = 9</comment>
+            <returntype>float</returntype>
+            <parameter>
+                <name>ev</name>
+                <type>android.view.MotionEvent</type>
+            </parameter>
+            <parameter>
+                <name>ptrIndex</name>
+                <type>int</type>
+            </parameter>
+        </method>
+        <method>
+            <name>getYPrecision</name>
+            <comment>Returns the precision of the Y coordinates being reported. You can multiply this number with getY to find the actual hardware value of the Y coordinate.</comment>
+            <returntype>float</returntype>
+            <parameter>
+                <name>ev</name>
+                <type>android.view.MotionEvent</type>
+            </parameter>
+        </method>
+        <method>
+            <name>RemoveGestureListener</name>
+            <comment>Removes all gesture listeners for the currently bound view.</comment>
+            <returntype>void</returntype>
+        </method>
+        <method>
+            <name>getPID</name>
+            <comment>Returns the PID for the given pointer index.
+0 is the first pointer index.</comment>
+            <returntype>int</returntype>
+            <parameter>
+                <name>ev</name>
+                <type>android.view.MotionEvent</type>
+            </parameter>
+            <parameter>
+                <name>ptrIndex</name>
+                <type>int</type>
+            </parameter>
+        </method>
+        <method>
+            <name>PassTouchEventTo</name>
+            <comment>Passes the given motion event down to the target view.
+Returns True if the event was handled by the view, False otherwise.</comment>
+            <returntype>boolean</returntype>
+            <parameter>
+                <name>ev</name>
+                <type>android.view.MotionEvent</type>
+            </parameter>
+            <parameter>
+                <name>Target</name>
+                <type>android.view.View</type>
+            </parameter>
+        </method>
+        <field>
+            <name>ACTION_MOVE</name>
+            <comment></comment>
+            <returntype>int</returntype>
+        </field>
+        <field>
+            <name>ACTION_CANCEL</name>
+            <comment></comment>
+            <returntype>int</returntype>
+        </field>
+        <field>
+            <name>ACTION_DOWN</name>
+            <comment></comment>
+            <returntype>int</returntype>
+        </field>
+        <field>
+            <name>ACTION_UP</name>
+            <comment></comment>
+            <returntype>int</returntype>
+        </field>
+    </class>
+    <version>2.3</version>
+    <author>Fr\u00e9d\u00e9ric Leneuf-Magaud</author>
+</root>

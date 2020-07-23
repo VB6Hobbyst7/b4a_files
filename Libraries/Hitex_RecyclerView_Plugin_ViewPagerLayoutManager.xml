@@ -1,0 +1,272 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root>
+    <doclet-version-NOT-library-version>1.05</doclet-version-NOT-library-version>
+    <class>
+        <name>ir.hitex.layoutmanagers.Hitex_RecyclerView_Plugin_ViewPagerLayoutManager</name>
+        <shortname>Hitex_RecyclerView_Plugin_ViewPagerLayoutManager</shortname>
+        <objectwrapper>com.leochuan.ViewPagerLayoutManager</objectwrapper>
+        <owner>activity</owner>
+        <event>onPageSelected (Position As Int)</event>
+        <method>
+            <name>Apply</name>
+            <comment>&lt;b&gt;Don't forget to apply&lt;/b&gt;
+
+ If you need '&lt;b&gt;onPageSelected (Position As Int)&lt;/b&gt;' event set '&lt;b&gt;Snap&lt;/b&gt;' &lt;b&gt;true&lt;/b&gt; .</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>Snap</name>
+                <type>boolean</type>
+            </parameter>
+        </method>
+        <method>
+            <name>SetGalleryLayoutManager</name>
+            <comment>Example : &lt;code&gt;
+ VPLM.SetGalleryLayoutManager(-50,30,False,False)
+ &lt;/code&gt;</comment>
+            <returntype>ir.hitex.layoutmanagers.Hitex_ViewPagerLayoutManager</returntype>
+            <parameter>
+                <name>ItemSpace</name>
+                <type>int</type>
+            </parameter>
+            <parameter>
+                <name>Angle</name>
+                <type>float</type>
+            </parameter>
+            <parameter>
+                <name>FlipRotate</name>
+                <type>boolean</type>
+            </parameter>
+            <parameter>
+                <name>RotateFromEdge</name>
+                <type>boolean</type>
+            </parameter>
+        </method>
+        <method>
+            <name>SetCarouselLayoutManager</name>
+            <comment>Example : &lt;code&gt;
+ VPLM.SetCarouselLayoutManager(100dip,0.2f).Infinite = True
+ &lt;/code&gt;</comment>
+            <returntype>ir.hitex.layoutmanagers.Hitex_ViewPagerLayoutManager</returntype>
+            <parameter>
+                <name>ItemSpace</name>
+                <type>int</type>
+            </parameter>
+            <parameter>
+                <name>MinScale</name>
+                <type>float</type>
+            </parameter>
+        </method>
+        <method>
+            <name>IsInitialized</name>
+            <comment></comment>
+            <returntype>boolean</returntype>
+        </method>
+        <method>
+            <name>Initialize</name>
+            <comment>Created By Sadeq Nameni (Hitexroid)
+
+ &lt;b&gt;Require 'Hitex_RecyclerView' version 7.2 or above&lt;/b&gt;
+
+ Example : &lt;code&gt;
+ VPLM.Initialize("VPLM",LV)
+ VPLM.SetScaleLayoutManager(10dip)
+ VPLM.Apply(True)
+ &lt;/code&gt;</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>ba</name>
+                <type>anywheresoftware.b4a.BA</type>
+            </parameter>
+            <parameter>
+                <name>EventName</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>LV</name>
+                <type>wir.hitex.recycler.Hitex_LayoutView</type>
+            </parameter>
+        </method>
+        <method>
+            <name>SetCircleScaleLayoutManager</name>
+            <comment>ZAlignment :
+
+ Example : &lt;code&gt;
+ VPLM.SetCircleScaleLayoutManager(30, False, "CENTER_ON_TOP")
+ &lt;/code&gt;
+
+ &lt;code&gt;LEFT_ON_TOP&lt;/code&gt;
+ &lt;code&gt;RIGHT_ON_TOP&lt;/code&gt;
+ &lt;code&gt;CENTER_ON_TOP&lt;/code&gt;</comment>
+            <returntype>ir.hitex.layoutmanagers.Hitex_ViewPagerLayoutManager</returntype>
+            <parameter>
+                <name>AngleInterval</name>
+                <type>int</type>
+            </parameter>
+            <parameter>
+                <name>FlipRotate</name>
+                <type>boolean</type>
+            </parameter>
+            <parameter>
+                <name>ZAlignment</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+        <method>
+            <name>SetScaleLayoutManager</name>
+            <comment>Example : &lt;code&gt;
+ VPLM.SetScaleLayoutManager(10dip)
+ &lt;/code&gt;</comment>
+            <returntype>ir.hitex.layoutmanagers.Hitex_ViewPagerLayoutManager</returntype>
+            <parameter>
+                <name>ItemSpace</name>
+                <type>int</type>
+            </parameter>
+        </method>
+        <method>
+            <name>SetRotateLayoutManager</name>
+            <comment>Example : &lt;code&gt;
+ VPLM.SetRotateLayoutManager(10dip,45,True)
+ &lt;/code&gt;</comment>
+            <returntype>ir.hitex.layoutmanagers.Hitex_ViewPagerLayoutManager</returntype>
+            <parameter>
+                <name>ItemSpace</name>
+                <type>int</type>
+            </parameter>
+            <parameter>
+                <name>Angle</name>
+                <type>float</type>
+            </parameter>
+            <parameter>
+                <name>ReverseRotate</name>
+                <type>boolean</type>
+            </parameter>
+        </method>
+        <method>
+            <name>SetCircleLayoutManager</name>
+            <comment>ZAlignment :
+
+ Example : &lt;code&gt;
+ VPLM.SetCircleLayoutManager(30, "LEFT_ON_TOP")
+ &lt;/code&gt;
+
+ &lt;code&gt;LEFT_ON_TOP&lt;/code&gt;
+ &lt;code&gt;RIGHT_ON_TOP&lt;/code&gt;
+ &lt;code&gt;CENTER_ON_TOP&lt;/code&gt;</comment>
+            <returntype>ir.hitex.layoutmanagers.Hitex_ViewPagerLayoutManager</returntype>
+            <parameter>
+                <name>AngleInterval</name>
+                <type>int</type>
+            </parameter>
+            <parameter>
+                <name>ZAlignment</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+    </class>
+    <class>
+        <name>ir.hitex.layoutmanagers.Hitex_ViewPagerLayoutManager</name>
+        <shortname>ViewPagerLayoutManager</shortname>
+        <objectwrapper>com.leochuan.ViewPagerLayoutManager</objectwrapper>
+        <owner>process</owner>
+        <method>
+            <name>GetOffsetToPosition</name>
+            <comment></comment>
+            <returntype>int</returntype>
+            <parameter>
+                <name>Position</name>
+                <type>int</type>
+            </parameter>
+        </method>
+        <method>
+            <name>IsInitialized</name>
+            <comment></comment>
+            <returntype>boolean</returntype>
+        </method>
+        <property>
+            <name>RecycleChildrenOnDetach</name>
+            <returntype>boolean</returntype>
+            <parameter>
+                <name>RecycleChildrenOnDetach</name>
+                <type>boolean</type>
+            </parameter>
+            <comment></comment>
+        </property>
+        <property>
+            <name>ReverseLayout</name>
+            <returntype>boolean</returntype>
+            <parameter>
+                <name>ReverseLayout</name>
+                <type>boolean</type>
+            </parameter>
+            <comment></comment>
+        </property>
+        <property>
+            <name>CurrentPosition</name>
+            <returntype>int</returntype>
+            <comment></comment>
+        </property>
+        <property>
+            <name>OffsetToCenter</name>
+            <returntype>int</returntype>
+            <comment></comment>
+        </property>
+        <property>
+            <name>Infinite</name>
+            <returntype>boolean</returntype>
+            <parameter>
+                <name>Enable</name>
+                <type>boolean</type>
+            </parameter>
+            <comment></comment>
+        </property>
+        <property>
+            <name>DistanceToBottom</name>
+            <returntype>int</returntype>
+            <parameter>
+                <name>DistanceToBottom</name>
+                <type>int</type>
+            </parameter>
+            <comment></comment>
+        </property>
+        <property>
+            <name>Orientation</name>
+            <returntype>int</returntype>
+            <parameter>
+                <name>Orientation</name>
+                <type>int</type>
+            </parameter>
+            <comment>0 : Horizontal
+ 1 : Vertical</comment>
+        </property>
+        <property>
+            <name>SmoothScrollbarEnabled</name>
+            <returntype>boolean</returntype>
+            <parameter>
+                <name>Enable</name>
+                <type>boolean</type>
+            </parameter>
+            <comment></comment>
+        </property>
+        <property>
+            <name>MaxVisibleItemCount</name>
+            <returntype>int</returntype>
+            <parameter>
+                <name>MaxVisibleItemCount</name>
+                <type>int</type>
+            </parameter>
+            <comment></comment>
+        </property>
+        <property>
+            <name>EnableBringCenterToFront</name>
+            <returntype>boolean</returntype>
+            <parameter>
+                <name>BringCenterToTop</name>
+                <type>boolean</type>
+            </parameter>
+            <comment></comment>
+        </property>
+    </class>
+    <version>1.0</version>
+    <author>Sadeq Nameni (Hitexroid)</author>
+    <dependsOn>Hitex_RecyclerView</dependsOn>
+</root>

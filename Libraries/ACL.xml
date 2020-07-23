@@ -1,0 +1,886 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root>
+    <doclet-version-NOT-library-version>1.00</doclet-version-NOT-library-version>
+    <class>
+        <name>xvs.ACL.ACL</name>
+        <shortname>AdvancedCamera</shortname>
+        <comment>The new, improved camera library has a lot of new functions! These include:
+ flashlight, scene modes, orientations, front- and back camera, picture size,
+ white balance and a lot more! Only one process can access the camera at any
+ time. Therefore it is highly recommended to initialize the camera object in
+ Activity_Resume and release it in Activity_Pause. A working example with
+ explanations is available
+ &lt;link&gt;here|http://www.basic4ppc.com/forum/basic4android
+ -getting-started-tutorials/6891-take-pictures-internal-camera.html&lt;/link&gt;.</comment>
+        <owner>activity</owner>
+        <event>Ready (Success As Boolean)</event>
+        <event>PictureTaken (Data() As Byte)</event>
+        <permission>android.permission.CAMERA</permission>
+        <permission>android.permission.WRITE_EXTERNAL_STORAGE</permission>
+        <permission>android.permission.RECORD_AUDIO</permission>
+        <permission>android.permission.FLASHLIGHT</permission>
+        <permission>android.permission.RECORD_VIDEO</permission>
+        <permission>android.permission.WRITE_SECURE_SETTINGS</permission>
+        <permission>android.permission.BLUETOOTH</permission>
+        <permission>android.permission.BLUETOOTH_ADMIN</permission>
+        <permission>android.permission.INTERNET</permission>
+        <method>
+            <name>setResolution</name>
+            <comment>Sets the dimensions for preview pictures. The sides of width and height are based on camera orientation. 
+ That is, the preview size is the size before it is rotated by display orientation. So applications need 
+ to consider the display orientation while setting preview size. For example, suppose the camera supports 
+ both 480x320 and 320x480 preview sizes. The application wants a 3:2 preview ratio. If the display orientation 
+ is set to 0 or 180, preview size should be set to 480x320. If the display orientation is set to 90 or 270, 
+ preview size should be set to 320x480. The display orientation should also be considered while setting picture 
+ size and thumbnail size.</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>width</name>
+                <type>int</type>
+            </parameter>
+            <parameter>
+                <name>height</name>
+                <type>int</type>
+            </parameter>
+        </method>
+        <method>
+            <name>uploadFrame</name>
+            <comment>Encodes a bytearray image with Base64 and uploads it to a web client that supports PHP.
+WebClient: a string referring to your base.php file (http://IP:Port/base.php)
+ e.g. "http://192.168.1.100/android/base.php, "http://www.mywebsite.com/index.php
+ 
+ PHPProtect is a small password protection to check on your websserver
+ Webserver: "image" = frame
+ Webserver: "PHPProtect" = FrameProtect</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>PHPProtect</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>Frame</name>
+                <type>byte[]</type>
+            </parameter>
+            <parameter>
+                <name>WebClient</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+        <method>
+            <name>OriPortraitAPI8</name>
+            <comment>Sets the camera orientation to portrait.
+ API Level 8 and down</comment>
+            <returntype>void</returntype>
+        </method>
+        <method>
+            <name>StopPreview</name>
+            <comment>Stops displaying the preview images.</comment>
+            <returntype>void</returntype>
+        </method>
+        <method>
+            <name>LEDenable</name>
+            <comment>Enable true or false the Motorola Droid LED.
+tf: </comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>tf</name>
+                <type>boolean</type>
+            </parameter>
+        </method>
+        <method>
+            <name>removeGPSData</name>
+            <comment>Removes the attached GPS Data.</comment>
+            <returntype>void</returntype>
+        </method>
+        <method>
+            <name>AppTrial</name>
+            <comment>A trial for your app.
+ Sends a HTTP POST method to the webserver.
+ FrameProtect = Small Password Protection
+ WebServer = URL to listening PHP file
+ IMEI = The Device IMEI
+ Period = the amount that the app can be opened.
+ 
+ Listen on Webserver for:
+ "PHPProtect"
+ "IMEI"
+ "TrialPeriod"</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>FrameProtect</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>WebServer</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>IMEI</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>Period</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+        <method>
+            <name>FlashAuto</name>
+            <comment>Enables the flashlight to turn on automatically.</comment>
+            <returntype>void</returntype>
+        </method>
+        <method>
+            <name>CameraBack</name>
+            <comment>Use the back camera as primary.
+ Old</comment>
+            <returntype>void</returntype>
+        </method>
+        <method>
+            <name>PictureSize</name>
+            <comment>Sets the size of the picture in pixels.</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>width</name>
+                <type>int</type>
+            </parameter>
+            <parameter>
+                <name>height</name>
+                <type>int</type>
+            </parameter>
+        </method>
+        <method>
+            <name>isZoomSupported</name>
+            <comment>Returns a true or false statement when zooming is supported or not.
+Return type: @return:</comment>
+            <returntype>boolean</returntype>
+        </method>
+        <method>
+            <name>pose</name>
+            <comment>Returns the face's pose. 
+ That is, the rotations around either the X, Y or Z axis 
+ (the positions in 3-dimensional Euclidean space).
+ Euler:
+ EULER_X, EULER_Y or EULER_Z</comment>
+            <returntype>float</returntype>
+            <parameter>
+                <name>euler</name>
+                <type>int</type>
+            </parameter>
+        </method>
+        <method>
+            <name>DroidLED</name>
+            <comment>Do not use this</comment>
+            <returntype>void</returntype>
+        </method>
+        <method>
+            <name>CameraFront2</name>
+            <comment>Use the front camera as primary.</comment>
+            <returntype>void</returntype>
+        </method>
+        <method>
+            <name>FlashOn</name>
+            <comment>Turns the flashlight on.</comment>
+            <returntype>void</returntype>
+        </method>
+        <method>
+            <name>openFrontFacingCameraGingerbread</name>
+            <comment>Since api 2.3
+Return type: @return:</comment>
+            <returntype>void</returntype>
+        </method>
+        <method>
+            <name>rCPKey</name>
+            <comment>Read Camera Parameter Key
+ With this you can read parameters from the camera.
+k: 
+Return type: @return:</comment>
+            <returntype>java.lang.String</returntype>
+            <parameter>
+                <name>k</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+        <method>
+            <name>setZoomOut</name>
+            <comment>Zooms out. (is possible not to work on some devices.)</comment>
+            <returntype>void</returntype>
+        </method>
+        <method>
+            <name>isLEDEnabled</name>
+            <comment>Checks if the Motorola droid LED is enabled.
+Return type: @return:</comment>
+            <returntype>boolean</returntype>
+        </method>
+        <method>
+            <name>StartPreview</name>
+            <comment>Starts displaying the preview images.</comment>
+            <returntype>void</returntype>
+        </method>
+        <method>
+            <name>setPreviewFpsRange</name>
+            <comment>Sets the supported Preview FPS Range.a list of supported preview fps ranges. 
+ This method returns a list with at least one element. 
+ Every element is an int array of two values - minimum fps and maximum fps. 
+ The list is sorted from small to large (first by maximum fps and then minimum fps).</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>min</name>
+                <type>int</type>
+            </parameter>
+            <parameter>
+                <name>max</name>
+                <type>int</type>
+            </parameter>
+        </method>
+        <method>
+            <name>rotateBitmap2</name>
+            <comment>Rotates a bitmap (from a byte array) with x degrees and returns a new one.
+bitmap: 
+degrees: 
+Return type: @return:</comment>
+            <returntype>android.graphics.Bitmap</returntype>
+            <parameter>
+                <name>data</name>
+                <type>byte[]</type>
+            </parameter>
+            <parameter>
+                <name>degrees</name>
+                <type>int</type>
+            </parameter>
+        </method>
+        <method>
+            <name>wsCPKey</name>
+            <comment>Write String Camera Parameter Key
+ With this you can write string parameters to the camera.
+k: 
+Return type: @return:</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>k</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>v</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+        <method>
+            <name>OriLandscapeAPI8</name>
+            <comment>Sets the camera orientation to landscape.
+ API Level 8 and down</comment>
+            <returntype>void</returntype>
+        </method>
+        <method>
+            <name>decodeYUV420SP</name>
+            <comment>Converts raw data to jpg.</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>rgb</name>
+                <type>int[]</type>
+            </parameter>
+            <parameter>
+                <name>yuv420sp</name>
+                <type>byte[]</type>
+            </parameter>
+            <parameter>
+                <name>width</name>
+                <type>int</type>
+            </parameter>
+            <parameter>
+                <name>height</name>
+                <type>int</type>
+            </parameter>
+        </method>
+        <method>
+            <name>Initialize</name>
+            <comment>Initializes the camera.
+Panel - The preview images will be displayed on the panel.
+EventName - Events subs prefix.
+The Ready event will be raised when the camera has finished opening.</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>ba</name>
+                <type>anywheresoftware.b4a.BA</type>
+            </parameter>
+            <parameter>
+                <name>Panel</name>
+                <type>android.view.ViewGroup</type>
+            </parameter>
+            <parameter>
+                <name>EventName</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+        <method>
+            <name>FlashTorch</name>
+            <comment>Turns the flashlight on (Torch Mode).</comment>
+            <returntype>void</returntype>
+        </method>
+        <method>
+            <name>FlashOff</name>
+            <comment>Turns the flashlight off.</comment>
+            <returntype>void</returntype>
+        </method>
+        <method>
+            <name>wiCPKey</name>
+            <comment>Write Integer Camera Parameter Key
+ With this you can write integer parameters to the camera.
+k: 
+Return type: @return:</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>k</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>v</name>
+                <type>java.lang.Integer</type>
+            </parameter>
+        </method>
+        <method>
+            <name>OriPortrait</name>
+            <comment>Sets the camera orientation to portrait.</comment>
+            <returntype>void</returntype>
+        </method>
+        <method>
+            <name>toggleFlashLight</name>
+            <comment>Attempts to set camera flash torch/flashlight mode on/off
+ HACK around
+isOn: true = on, false = off
+Return type: @return:boolean whether or not we were able to set it
+ If you have a Samsung, and you toggle the flash off, you will have to reinitialize your camera.</comment>
+            <returntype>void</returntype>
+        </method>
+        <method>
+            <name>getSupportedPictureSizeHeight</name>
+            <comment>Returns the supported picture height of the given index.
+ You can call getSupportedPictureSize to get the size of the list.
+ This way you can extract the index of the supported sizes
+Return type: @return:</comment>
+            <returntype>int</returntype>
+            <parameter>
+                <name>index</name>
+                <type>int</type>
+            </parameter>
+        </method>
+        <method>
+            <name>currentFrame</name>
+            <comment>Returns current frame.</comment>
+            <returntype>byte[]</returntype>
+        </method>
+        <method>
+            <name>onPreviewFrame</name>
+            <comment></comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>data</name>
+                <type>byte[]</type>
+            </parameter>
+            <parameter>
+                <name>camera</name>
+                <type>android.hardware.Camera</type>
+            </parameter>
+        </method>
+        <method>
+            <name>getPictureOnCurrentFrame</name>
+            <comment>Gets the picture on the current frame.
+ Width: the width of the picture.
+ Height: the height of the picture
+ Quality: the quality of the jpeg image.
+ Calls _PreviewTaken when finished.</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>Width</name>
+                <type>int</type>
+            </parameter>
+            <parameter>
+                <name>Height</name>
+                <type>int</type>
+            </parameter>
+            <parameter>
+                <name>Quality</name>
+                <type>int</type>
+            </parameter>
+        </method>
+        <method>
+            <name>Release</name>
+            <comment>Releases the camera object and allows other processes to access the
+ camera.</comment>
+            <returntype>void</returntype>
+        </method>
+        <method>
+            <name>TakePicture</name>
+            <comment>Takes a picture. When the picture is ready, the PictureTaken event will
+ be raised. You should not call TakePicture while another picture is
+ currently taken. The preview images are stopped after calling this
+ method. You can call StartPreview to restart the preview images.</comment>
+            <returntype>void</returntype>
+        </method>
+        <method>
+            <name>setZoomIn</name>
+            <comment>Zooms in. (is possible not to work on some devices.)</comment>
+            <returntype>void</returntype>
+        </method>
+        <method>
+            <name>rotateBitmap</name>
+            <comment>Rotates a bitmap with x degrees and returns a new one (rotated.)
+bitmap: 
+degrees: 
+Return type: @return:</comment>
+            <returntype>android.graphics.Bitmap</returntype>
+            <parameter>
+                <name>bitmap</name>
+                <type>android.graphics.Bitmap</type>
+            </parameter>
+            <parameter>
+                <name>degrees</name>
+                <type>int</type>
+            </parameter>
+        </method>
+        <method>
+            <name>reconnect</name>
+            <comment>Reconnects the camera.</comment>
+            <returntype>void</returntype>
+        </method>
+        <method>
+            <name>setZoom</name>
+            <comment>Sets the zooming level.
+ Set zoom to 2x if available. This helps encourage the user to pull back.
+ Some devices like the Behold have a zoom parameter
+ Most devices, like the Hero, appear to expose this zoom parameter.
+ (I think) This means 2.0x
+ e.g zoom(2,"2.0","20")
+ I got thix from the ZXing App</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>value</name>
+                <type>int</type>
+            </parameter>
+            <parameter>
+                <name>Zoom</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>Zoom2</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+        <method>
+            <name>OriLandscape</name>
+            <comment>Sets the camera orientation to landscape.</comment>
+            <returntype>void</returntype>
+        </method>
+        <method>
+            <name>detectFaces</name>
+            <comment>Detect faces in a picture.
+ It makes a red rectangle around the face.
+ Filename = the name of the file that will be saved with the rectangles on the SD Card.
+ Bitmap = mutable or immutable bitmap image
+ Width = bitmap width
+ Height = bitmap height
+ maxFaces = the maximum amount of faces to look for.
+ Dim btmp As Bitmap
+ btmp.Initialize(File.DirRootExternal,"faces_2004W_comp1.jpg")
+ Camera1.detectFaces("detectedFace",btmp,btmp.Width,btmp.Height,43)</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>Dir</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>Filename</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>bitmap</name>
+                <type>android.graphics.Bitmap</type>
+            </parameter>
+            <parameter>
+                <name>Width</name>
+                <type>int</type>
+            </parameter>
+            <parameter>
+                <name>Height</name>
+                <type>int</type>
+            </parameter>
+            <parameter>
+                <name>maxFaces</name>
+                <type>int</type>
+            </parameter>
+        </method>
+        <method>
+            <name>getSupportedPictureSizeWidth</name>
+            <comment>Returns the supported picture width of the given index.
+ You can call getSupportedPictureSize to get the size of the list.
+ This way you can extract the index of the supported sizes
+Return type: @return:</comment>
+            <returntype>int</returntype>
+            <parameter>
+                <name>index</name>
+                <type>int</type>
+            </parameter>
+        </method>
+        <method>
+            <name>TakePicture2</name>
+            <comment>Takes a picture and rotates it. When the picture is ready, the PictureTaken2 event will
+ be raised. You should not call TakePicture while another picture is
+ currently taken. The preview images are stopped after calling this
+ method. You can call StartPreview to restart the preview images.
+ 
+ degrees: the amount of degrees the bitmap should be turned.
+ asBitmap: whether you want to retrieve the bitmap (true) or bytearray (false).</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>degrees</name>
+                <type>float</type>
+            </parameter>
+        </method>
+        <method>
+            <name>CameraBack2</name>
+            <comment>Use the back camera as primary.</comment>
+            <returntype>void</returntype>
+        </method>
+        <method>
+            <name>CameraFront</name>
+            <comment>Use the front camera as primary.
+Return type: @return:</comment>
+            <returntype>void</returntype>
+        </method>
+        <property>
+            <name>isDecoding</name>
+            <returntype>boolean</returntype>
+            <comment>returns true if frame is decoding.</comment>
+        </property>
+        <property>
+            <name>CurrentAntibanding</name>
+            <returntype>java.lang.String</returntype>
+            <comment>Returns the current antibanding. (String)</comment>
+        </property>
+        <property>
+            <name>SupportedSceneMode</name>
+            <returntype>java.util.List</returntype>
+            <comment>Returns a list of all supported scene modes.</comment>
+        </property>
+        <property>
+            <name>AvailableFrame</name>
+            <returntype>boolean</returntype>
+            <comment>If there is an available frame.</comment>
+        </property>
+        <property>
+            <name>Quality</name>
+            <parameter>
+                <name>quality</name>
+                <type>int</type>
+            </parameter>
+            <comment>Sets the quality of the JPEG file. The range is between 1 to 100, with
+ 100 being the best.</comment>
+        </property>
+        <property>
+            <name>GPSLongitude</name>
+            <parameter>
+                <name>Longitude</name>
+                <type>java.lang.Double</type>
+            </parameter>
+            <comment>Sets GPS longitude coordinate. This will be stored in JPEG EXIF header.</comment>
+        </property>
+        <property>
+            <name>FaceMidPointY</name>
+            <returntype>float</returntype>
+            <comment>Returns the midpoint of the eyes on the y-axis.
+ Given by the last found face.</comment>
+        </property>
+        <property>
+            <name>FaceConfidence</name>
+            <returntype>float</returntype>
+            <comment>Returns a confidence factor between 0 and 1. 
+ This indicates how certain what has been found is actually a face. 
+ A confidence factor above 0.3 is usually good enough.
+ Given by the last found face.</comment>
+        </property>
+        <property>
+            <name>SupportedPictureFormats</name>
+            <returntype>java.util.List</returntype>
+            <comment>Returns a list of all supported Picture Formats.</comment>
+        </property>
+        <property>
+            <name>FocalLength</name>
+            <returntype>float</returntype>
+            <comment>Gets the focal length (in millimeter) of the camera.
+ Returns the focal length. This method will always return a valid value.</comment>
+        </property>
+        <property>
+            <name>SupportedFlashMode</name>
+            <returntype>java.util.List</returntype>
+            <comment>Returns a list of all supported flash modes.</comment>
+        </property>
+        <property>
+            <name>FaceMidPointX</name>
+            <returntype>float</returntype>
+            <comment>Returns the midpoint of the eyes on the x-axis.
+ Given by the last found face.</comment>
+        </property>
+        <property>
+            <name>CurrentFocusMode</name>
+            <returntype>java.lang.String</returntype>
+            <comment>Returns the current focus mode. (String)</comment>
+        </property>
+        <property>
+            <name>SupportedFocusMode</name>
+            <returntype>java.util.List</returntype>
+            <comment>Returns a list of all supported focus modes.</comment>
+        </property>
+        <property>
+            <name>SupportedPictureSize</name>
+            <returntype>int</returntype>
+            <comment>Returns the size of the supported pictures off the device.
+ e.g returns 4 when 4 sizes are supported.</comment>
+        </property>
+        <property>
+            <name>MinExposureCompensation</name>
+            <returntype>int</returntype>
+            <comment>Returns the minimum exposure compensation.</comment>
+        </property>
+        <property>
+            <name>SupportedWhiteBalance</name>
+            <returntype>java.util.List</returntype>
+            <comment>Returns a list of all supported white balances.</comment>
+        </property>
+        <property>
+            <name>FaceFound</name>
+            <returntype>int</returntype>
+            <comment>Returns all found faces on the picture
+ Given by the last found face.</comment>
+        </property>
+        <property>
+            <name>VerticalViewAngle</name>
+            <returntype>float</returntype>
+            <comment>Gets the vertical angle of view in degrees.
+ Returns vertical angle of view. This method will always return a valid value.</comment>
+        </property>
+        <property>
+            <name>SupportedAntibanding</name>
+            <returntype>java.util.List</returntype>
+            <comment>Returns a list of all supported antibandings.</comment>
+        </property>
+        <property>
+            <name>CurrentSceneMode</name>
+            <returntype>java.lang.String</returntype>
+            <comment>Returns the current scene mode. (String)</comment>
+        </property>
+        <property>
+            <name>MaxZoom</name>
+            <returntype>int</returntype>
+            <comment>Returns the maximum zooming level. 0 is no zooming supported.</comment>
+        </property>
+        <property>
+            <name>GPSAltitude</name>
+            <parameter>
+                <name>Altitude</name>
+                <type>java.lang.Double</type>
+            </parameter>
+            <comment>Sets GPS altitude.</comment>
+        </property>
+        <property>
+            <name>CurrentPictureSizeHeight</name>
+            <returntype>int</returntype>
+            <comment>Returns the current picture size. (Size)</comment>
+        </property>
+        <property>
+            <name>ISOValue</name>
+            <parameter>
+                <name>value</name>
+                <type>int</type>
+            </parameter>
+            <comment>Sets the iso value. Note that this MIGHT not work (properly).</comment>
+        </property>
+        <property>
+            <name>GPSTimeStamp</name>
+            <parameter>
+                <name>timestamp</name>
+                <type>long</type>
+            </parameter>
+            <comment>Sets GPS timestamp. This will be stored in JPEG EXIF header.
+ 
+ timestamp	GPS timestamp (UTC in seconds since January 1, 1970).</comment>
+        </property>
+        <property>
+            <name>FaceEyesDistance</name>
+            <returntype>float</returntype>
+            <comment>Returns the distance between the eyes.
+ Given by the last found face.</comment>
+        </property>
+        <property>
+            <name>WhiteBalance</name>
+            <parameter>
+                <name>Balance</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <comment>Sets the white balance. The following effects are: AUTO, CLOUDY_DAYLIGHT,
+ DAYLIGHT, FLUORESCENT, INCANDESCENT, SHADE, TWILIGHT, WARM_FLUORESCENT.
+ For example: Camera1.setEffect = "WARM_FLUORESCENT"</comment>
+        </property>
+        <property>
+            <name>HorizontalViewAngle</name>
+            <returntype>float</returntype>
+            <comment>Gets the horizontal angle of view in degrees.
+ Returns horizontal angle of view. This method will always return a valid value.</comment>
+        </property>
+        <property>
+            <name>MaxExposureCompensation</name>
+            <returntype>int</returntype>
+            <comment>Returns the maximum exposure compensation.</comment>
+        </property>
+        <property>
+            <name>CurrentColourEffect</name>
+            <returntype>java.lang.String</returntype>
+            <comment>Returns the current colour effect. (String)</comment>
+        </property>
+        <property>
+            <name>Antibanding</name>
+            <parameter>
+                <name>Antibanding</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <comment>Sets the Antibanding. ANTIBANDING_50HZ: Sets the antibanding to 50Hz.
+ ANTIBANDING_60HZ: Sets the antibanding to 60Hz. ANTIBANDING_AUTO: Sets
+ the antibanding to automatic mode. ANTIBANDING_OFF: Sets the antibanding
+ off. For example: Camera1.setAntibanding = "ANTIBANDING_AUTO"</comment>
+        </property>
+        <property>
+            <name>SupportedColourEffect</name>
+            <returntype>java.util.List</returntype>
+            <comment>Returns a list of all supported colour effects.</comment>
+        </property>
+        <property>
+            <name>ColourEffect</name>
+            <parameter>
+                <name>Effect</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <comment>Sets the color effect of a picture. The following effects are: AQUA,
+ BLACKBOARD, MONO, NEGATIVE, NONE, POSTERIZE, SEPIA, SOLARIZE, WHITEBOARD.
+ For example: Camera1.setColourEffect = "SEPIA"</comment>
+        </property>
+        <property>
+            <name>ExposureCompensation</name>
+            <returntype>int</returntype>
+            <parameter>
+                <name>value</name>
+                <type>int</type>
+            </parameter>
+            <comment>Gets the exposure compensation. A technique for adjusting the exposure
+ indicated by a photographic exposure meter.</comment>
+        </property>
+        <property>
+            <name>CurrentFlashMode</name>
+            <returntype>java.lang.String</returntype>
+            <comment>Returns the current flash mode. (String)</comment>
+        </property>
+        <property>
+            <name>PreviewFrameRate</name>
+            <returntype>int</returntype>
+            <parameter>
+                <name>fps</name>
+                <type>int</type>
+            </parameter>
+            <comment>Gets or sets the current Preview frame rate.</comment>
+        </property>
+        <property>
+            <name>ParmStr</name>
+            <returntype>java.lang.String</returntype>
+            <parameter>
+                <name>s</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <comment></comment>
+        </property>
+        <property>
+            <name>SupportedPreviewFpsRange</name>
+            <returntype>java.util.List</returntype>
+            <comment>Gets the supported Preview FPS Range.a list of supported preview fps ranges. 
+ This method returns a list with at least one element. 
+ Every element is an int array of two values - minimum fps and maximum fps. 
+ The list is sorted from small to large (first by maximum fps and then minimum fps).</comment>
+        </property>
+        <property>
+            <name>FocusMode</name>
+            <parameter>
+                <name>Focusmode</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <comment>Sets the focus mode. MACRO: Close-up, INFINITY: Far distance. FIXED: If
+ the camera has auto-focus, this mode can fix the focus. AUTO: Auto-focus
+ mode, EDOF: Focusing is done digitally and continuously. For example:
+ Camera1.setFocusMode = "MACRO"</comment>
+        </property>
+        <property>
+            <name>CurrentPictureSizeWidth</name>
+            <returntype>int</returntype>
+            <comment>Returns the current picture size width. (Size)</comment>
+        </property>
+        <property>
+            <name>CurrentWhiteBalance</name>
+            <returntype>java.lang.String</returntype>
+            <comment>Returns the current white balance. (String)</comment>
+        </property>
+        <property>
+            <name>SupportedPreviewFrameRates</name>
+            <returntype>java.util.List</returntype>
+            <comment>Gets the supported Preview frame rate.</comment>
+        </property>
+        <property>
+            <name>GPSLatitude</name>
+            <parameter>
+                <name>Latitude</name>
+                <type>java.lang.Double</type>
+            </parameter>
+            <comment>Sets GPS latitude coordinate. This will be stored in JPEG EXIF header.</comment>
+        </property>
+        <property>
+            <name>SceneMode</name>
+            <parameter>
+                <name>SceneMode</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <comment>Sets the Scene Mode. ACTION: Take photos of fast moving objects., AUTO:
+ Scene mode is off. BEACH: Take pictures on the beach CANDLELIGHT: Capture
+ scenes lit by candles, FIREWORKS: Take pictures of fireworks. LANDSCAPE:
+ Take pictures on distant objects., NIGHT: Take photos at night. PARTY:
+ Indoor low-light shot., PORTRAIT: Take people pictures. SNOW: in the
+ snow., STEADYPHOTO: Avoid blurry pictures (handshake). SUNSET: Take
+ Sunset photos., THEATRE: Take photos in a theater. For example:
+ Camera1.setScene = "BEACH"</comment>
+        </property>
+        <property>
+            <name>PreviewFormat</name>
+            <returntype>int</returntype>
+            <comment>Returns the image format for preview frames got from Camera.PreviewCallback.</comment>
+        </property>
+        <field>
+            <name>mIsFlashlightOn</name>
+            <comment></comment>
+            <returntype>boolean</returntype>
+        </field>
+        <field>
+            <name>FrameProtect</name>
+            <comment></comment>
+            <returntype>java.lang.String</returntype>
+        </field>
+        <field>
+            <name>EULER_Z</name>
+            <comment></comment>
+            <returntype>int</returntype>
+        </field>
+        <field>
+            <name>EULER_Y</name>
+            <comment></comment>
+            <returntype>int</returntype>
+        </field>
+        <field>
+            <name>EULER_X</name>
+            <comment></comment>
+            <returntype>int</returntype>
+        </field>
+    </class>
+    <version>4.6</version>
+    <author>XverhelstX</author>
+</root>

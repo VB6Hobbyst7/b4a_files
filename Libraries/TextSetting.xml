@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <doclet-version-NOT-library-version>1.00</doclet-version-NOT-library-version>
+  <dependsOn>reflection</dependsOn>
+  <dependsOn>stringutils</dependsOn>
+  <dependsOn>textsetting</dependsOn>
+  <class>
+    <name>com.persiancg.calculator.textsetting</name>
+    <shortname>TextSetting</shortname>
+    <owner>process</owner>
+    <method>
+      <name>IsInitialized</name>
+      <comment>Tests whether the object has been initialized.</comment>
+      <returntype>boolean</returntype>
+    </method>
+    <method>
+      <name DesignerName="Class_Globals">_class_globals</name>
+      <returntype>String</returntype>
+    </method>
+    <method>
+      <name DesignerName="Initialize">_initialize</name>
+      <returntype>String</returntype>
+      <parameter>
+        <name>ba</name>
+        <type>anywheresoftware.b4a.BA</type>
+      </parameter>
+    </method>
+    <method>
+      <name DesignerName="LabelDesign">_labeldesign</name>
+      <comment>With this parameter you can quick choose the font, font size an color of the font for Label
+Example&lt;br /&gt;
+&lt;code&gt;Dim myLabel As Label&lt;/code&gt;
+&lt;code&gt;Dim ts As TextSetting&lt;/code&gt;
+&lt;code&gt;lbl.LabelDesign(myLable,22,"Red","byekan")&lt;/code&gt;
+Supported Color: &lt;b&gt;Red,Blue,Green,Black,White,Yellow,Gray,DarkGray,LightGray,Cyan,Magenta,Transparent.&lt;/b&gt; &lt;br /&gt; you can write Null for skip this Argument
+&lt;br /&gt;
+Library By: Mohammad Sabaeian(Persiancg.ir)</comment>
+      <returntype>String</returntype>
+      <parameter>
+        <name>WhichLabel</name>
+        <type>anywheresoftware.b4a.objects.LabelWrapper</type>
+      </parameter>
+      <parameter>
+        <name>FontSize</name>
+        <type>int</type>
+      </parameter>
+      <parameter>
+        <name>FontColor</name>
+        <type>String</type>
+      </parameter>
+      <parameter>
+        <name>fontName</name>
+        <type>String</type>
+      </parameter>
+    </method>
+    <method>
+      <name DesignerName="LongText">_longtext</name>
+      <comment>With this parameter you can use the &lt;b&gt;Long Text&lt;/b&gt; in your label
+&lt;b&gt;Example&lt;/b&gt;
+&lt;br /&gt;&lt;code&gt;Dim Label1 As Label &lt;/code&gt;&lt;br /&gt;&lt;code&gt;Dim ts As TextSetting&lt;/code&gt;&lt;br /&gt;&lt;code&gt;Dim sc As ScrollView&lt;/code&gt;
+&lt;code&gt;sc.Panel.AddView(lbl,0,0,100%x,100%y)&lt;/code&gt;&lt;br /&gt;&lt;code&gt;Label1.Text = &lt;/code&gt;&lt;b&gt;"You Can Write Your Long Text Here Or Use An String Variable"&lt;/b&gt;
+&lt;code&gt;ts.LongText(Label1,matn,22,sc,1.5)&lt;/code&gt;
+&lt;br /&gt;
+Library By: Mohammad Sabaeian(Persiancg.ir)</comment>
+      <returntype>String</returntype>
+      <parameter>
+        <name>WhichLabel</name>
+        <type>anywheresoftware.b4a.objects.LabelWrapper</type>
+      </parameter>
+      <parameter>
+        <name>Text</name>
+        <type>String</type>
+      </parameter>
+      <parameter>
+        <name>FontSize</name>
+        <type>int</type>
+      </parameter>
+      <parameter>
+        <name>WhichScrollView</name>
+        <type>anywheresoftware.b4a.objects.ScrollViewWrapper</type>
+      </parameter>
+      <parameter>
+        <name>LineHeight</name>
+        <type>int</type>
+      </parameter>
+    </method>
+  </class>
+  <version>1</version>
+</root>

@@ -1,0 +1,458 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <doclet-version-NOT-library-version>1.00</doclet-version-NOT-library-version>
+  <dependsOn>stringutils</dependsOn>
+  <dependsOn>richstring</dependsOn>
+  <dependsOn>javaobject</dependsOn>
+  <class>
+    <name>com.smartstring.arminkh.smartstring</name>
+    <shortname>SmartString</shortname>
+    <owner>activity</owner>
+    <method>
+      <name>IsInitialized</name>
+      <comment>Tests whether the object has been initialized.</comment>
+      <returntype>boolean</returntype>
+    </method>
+    <method>
+      <name DesignerName="Ellipsize">_v5</name>
+      <comment>Cut your text with given mode without changing size if the text is longer than maximum size 
+EllipSizeMode : Cut your text with choosen mode
+Can Be "Start" or "Middle" or "End" or "Marquee"
+MarqueeRepeatLimit:If you choose "Marquee" mode then you can choose  Marquee repeat count
+set -1 for repeat indefinitely or  for stop marquee
+--------------------------------------------------------------
+Example:
+Dim SmartString1 as SmartString
+SmartString1.Initialize
+SmartString1.Ellipsize(Label1,"Marquee",-1)</comment>
+      <returntype>String</returntype>
+      <parameter>
+        <name>TargetView</name>
+        <type>Object</type>
+      </parameter>
+      <parameter>
+        <name>EllipSizeMode</name>
+        <type>String</type>
+      </parameter>
+      <parameter>
+        <name>MarqueeRepeatLimit</name>
+        <type>int</type>
+      </parameter>
+    </method>
+    <method>
+      <name DesignerName="Initialize">_initialize</name>
+      <returntype>String</returntype>
+      <parameter>
+        <name>ba</name>
+        <type>anywheresoftware.b4a.BA</type>
+      </parameter>
+    </method>
+    <method>
+      <name DesignerName="MultiLine1">_vv1</name>
+      <comment>Limit the number of line with given number (increase and decrease as Long As the height of the text Is Not greater than the height of the view)
+Font : Enter your font name(in Asset) or left this option blank(default font will be applied)
+BaseTextSize : is your text size in base layout
+MaxLineCount: the number of line can not be longer than your given number
+LineSpaceRate: the space betwenn lines(enter 0 to set current size)
+--------------------------------------------------------------
+Example:
+Dim SmartString1 as SmartString
+SmartString1.Initialize
+SmartString1.MultiLine1(Activity,Label1,"Roboto.ttf",13,4,0.5)</comment>
+      <returntype>String</returntype>
+      <parameter>
+        <name>Activity</name>
+        <type>anywheresoftware.b4a.objects.ActivityWrapper</type>
+      </parameter>
+      <parameter>
+        <name>TargetView</name>
+        <type>Object</type>
+      </parameter>
+      <parameter>
+        <name>Font</name>
+        <type>String</type>
+      </parameter>
+      <parameter>
+        <name>BaseTextSize</name>
+        <type>double</type>
+      </parameter>
+      <parameter>
+        <name>MaxLineCount</name>
+        <type>int</type>
+      </parameter>
+      <parameter>
+        <name>LineSpaceRate</name>
+        <type>float</type>
+      </parameter>
+    </method>
+    <method>
+      <name DesignerName="MultiLine2">_vv2</name>
+      <comment>fit your text in view as Long As the height of the text Is Not greater than the height of the view
+Font : Enter your font name(in Asset) or left this option blank(default font will be applied)
+BaseTextSize : is your text size in base layout
+CanBeLarger: Select False if you dont want to fit your text if your text is smaller than maximum 
+LineSpaceRate: the space betwenn lines(enter 0 to set current size)
+--------------------------------------------------------------
+Example:
+Dim SmartString1 as SmartString
+SmartString1.Initialize
+SmartString1.MultiLine2(Activity,Label1,"Roboto.ttf",13,True,0)</comment>
+      <returntype>String</returntype>
+      <parameter>
+        <name>Activity</name>
+        <type>anywheresoftware.b4a.objects.ActivityWrapper</type>
+      </parameter>
+      <parameter>
+        <name>TargetView</name>
+        <type>Object</type>
+      </parameter>
+      <parameter>
+        <name>Font</name>
+        <type>String</type>
+      </parameter>
+      <parameter>
+        <name>BaseTextSize</name>
+        <type>double</type>
+      </parameter>
+      <parameter>
+        <name>CanBeLarger</name>
+        <type>boolean</type>
+      </parameter>
+      <parameter>
+        <name>LineSpaceRate</name>
+        <type>float</type>
+      </parameter>
+    </method>
+    <method>
+      <name DesignerName="RichString1">_vv3</name>
+      <comment>by using this option you can set Underscore,Strikethrough,Subscript,Superscript to selected part of the text
+Mode: you can enter 1 for Underscore,2 for Strikethrough,3 for Subscript,4 for Superscript
+--------------------------------------------------------------
+Example:
+Dim SmartString1 as SmartString
+SmartString1.Initialize
+SmartString1.RichString1(Label1,1,0,4)</comment>
+      <returntype>String</returntype>
+      <parameter>
+        <name>TargetView</name>
+        <type>Object</type>
+      </parameter>
+      <parameter>
+        <name>Mode</name>
+        <type>int</type>
+      </parameter>
+      <parameter>
+        <name>FirstIndex</name>
+        <type>int</type>
+      </parameter>
+      <parameter>
+        <name>LastIndex</name>
+        <type>int</type>
+      </parameter>
+    </method>
+    <method>
+      <name DesignerName="RichString2">_vv4</name>
+      <comment>by using this option you can set RelativeSize,ScaleX to selected part of the text
+Mode: you can enter 1 for RelativeSize,2 for ScaleX
+RateOfScale: Scale your selected part of the text with this scale rate
+--------------------------------------------------------------
+Example:
+Dim SmartString1 as SmartString
+SmartString1.Initialize
+SmartString1.RichString2(Label1,1,1.5,0,4)</comment>
+      <returntype>String</returntype>
+      <parameter>
+        <name>TargetView</name>
+        <type>Object</type>
+      </parameter>
+      <parameter>
+        <name>Mode</name>
+        <type>int</type>
+      </parameter>
+      <parameter>
+        <name>RateOfScale</name>
+        <type>double</type>
+      </parameter>
+      <parameter>
+        <name>FirstIndex</name>
+        <type>int</type>
+      </parameter>
+      <parameter>
+        <name>LastIndex</name>
+        <type>int</type>
+      </parameter>
+    </method>
+    <method>
+      <name DesignerName="RichString3">_vv5</name>
+      <comment>by using this option you can change textcolor,backcolor in selected part of the text
+Mode: you can enter 1 for Change text color,2 for back color
+A,B,C Are RGB color number
+--------------------------------------------------------------
+Example:
+Dim SmartString1 as SmartString
+SmartString1.Initialize
+SmartString1.RichString3(Label1,1,Colors.Red,0,4)</comment>
+      <returntype>String</returntype>
+      <parameter>
+        <name>TargetView</name>
+        <type>Object</type>
+      </parameter>
+      <parameter>
+        <name>Mode</name>
+        <type>int</type>
+      </parameter>
+      <parameter>
+        <name>Color</name>
+        <type>int</type>
+      </parameter>
+      <parameter>
+        <name>FirstIndex</name>
+        <type>int</type>
+      </parameter>
+      <parameter>
+        <name>LastIndex</name>
+        <type>int</type>
+      </parameter>
+    </method>
+    <method>
+      <name DesignerName="RichString4">_vv6</name>
+      <comment>by using this option you can change Style,Typeface in part of the text
+Mode: you can enter 1 for Style,2 for Typeface
+StyleOrTypeFamily: You can enter style for style mode or TypeFaceFamily for typeface mode
+Style can be STYLE_BOLD,STYLE_BOLD_ITALIC,STYLE_ITALIC,STYLE_NORMAL
+Typeface example are monospace,serif,sans-serif
+--------------------------------------------------------------
+Example1:
+Dim SmartString1 as SmartString
+SmartString1.Initialize
+SmartString1.RichString4(Label1,1,"STYLE_BOLD",0,4)
+--------------------------------------------------------------
+Example2:
+Dim SmartString1 as SmartString
+SmartString1.Initialize
+SmartString1.RichString4(Label1,2,"monospace",0,4)</comment>
+      <returntype>String</returntype>
+      <parameter>
+        <name>TargetView</name>
+        <type>Object</type>
+      </parameter>
+      <parameter>
+        <name>Mode</name>
+        <type>int</type>
+      </parameter>
+      <parameter>
+        <name>StyleOrTypeFamily</name>
+        <type>String</type>
+      </parameter>
+      <parameter>
+        <name>FirstIndex</name>
+        <type>int</type>
+      </parameter>
+      <parameter>
+        <name>LastIndex</name>
+        <type>int</type>
+      </parameter>
+    </method>
+    <method>
+      <name DesignerName="SetExactLineNumber">_vv7</name>
+      <comment>Set your text to given line number without changing text size 
+LineCount: Cut your string if be larger than given number of line
+EllipsizeModeIfNeeded : ellipsize your text if be longer than maximum size
+MarqueeRepeatLimitIfNeeded: If you choose marquee mode for ellipsize then you can limit marquee repeat count
+--------------------------------------------------------------
+Example:
+Dim SmartString1 as SmartString
+SmartString1.Initialize
+SmartString1.Ellipsize(Label1,2,"End",0)</comment>
+      <returntype>String</returntype>
+      <parameter>
+        <name>TargetView</name>
+        <type>Object</type>
+      </parameter>
+      <parameter>
+        <name>LineCount</name>
+        <type>int</type>
+      </parameter>
+      <parameter>
+        <name>EllipsizeModeIfNeeded</name>
+        <type>String</type>
+      </parameter>
+      <parameter>
+        <name>MarqueeRepeatLimitIfNeeded</name>
+        <type>int</type>
+      </parameter>
+    </method>
+    <method>
+      <name DesignerName="SetLineSpace">_vv0</name>
+      <comment>by using this option you can change the spaces between lines
+Multiplier = Multiplier factor of spacing
+--------------------------------------------------------------
+Example:
+Dim SmartString1 as SmartString
+SmartString1.Initialize
+SmartString1.SetLineSpace(Label1,1.5)</comment>
+      <returntype>String</returntype>
+      <parameter>
+        <name>TargetView</name>
+        <type>Object</type>
+      </parameter>
+      <parameter>
+        <name>Multiplier</name>
+        <type>float</type>
+      </parameter>
+    </method>
+    <method>
+      <name DesignerName="SetManualSize">_vvv1</name>
+      <comment>Scale Your text with given rate
+BaseLayoutScale=Your base layout density(dot per inche)/160 for example: if your base layout has 320dpi then your scale will be 320/160=2
+Font : Enter your font name(in Asset) or left this option blank(default font will be applied)
+BaseTextSize : is your text size in base layout
+RateOfScale: your text will be scaled with this rate
+Enter 0 if you dont want to changing your text size in any device
+--------------------------------------------------------------
+Example:
+Dim SmartString1 as SmartString
+SmartString1.Initialize
+SmartString1.SetManualSize(Label1,320,480,1,"Roboto.ttf",13,0.3)</comment>
+      <returntype>String</returntype>
+      <parameter>
+        <name>TargetView</name>
+        <type>Object</type>
+      </parameter>
+      <parameter>
+        <name>BaseLayoutWidth</name>
+        <type>double</type>
+      </parameter>
+      <parameter>
+        <name>BaseLayoutHeight</name>
+        <type>double</type>
+      </parameter>
+      <parameter>
+        <name>BaseLayoutScale</name>
+        <type>double</type>
+      </parameter>
+      <parameter>
+        <name>Font</name>
+        <type>String</type>
+      </parameter>
+      <parameter>
+        <name>BaseTextSize</name>
+        <type>double</type>
+      </parameter>
+      <parameter>
+        <name>RateOfScale</name>
+        <type>double</type>
+      </parameter>
+    </method>
+    <method>
+      <name DesignerName="SetPadding">_vvv2</name>
+      <comment>Padding set your text space from left and top and right and bottom of the view to given numbers
+--------------------------------------------------------------
+Example:
+Dim SmartString1 as SmartString
+SmartString1.Initialize
+SmartString1.Padding(Label1,0,0,0,0)</comment>
+      <returntype>String</returntype>
+      <parameter>
+        <name>TargetView</name>
+        <type>Object</type>
+      </parameter>
+      <parameter>
+        <name>Left</name>
+        <type>int</type>
+      </parameter>
+      <parameter>
+        <name>Top</name>
+        <type>int</type>
+      </parameter>
+      <parameter>
+        <name>Right</name>
+        <type>int</type>
+      </parameter>
+      <parameter>
+        <name>Bottom</name>
+        <type>int</type>
+      </parameter>
+    </method>
+    <method>
+      <name DesignerName="SetSameStyle">_vvv3</name>
+      <comment>You can Set any changes on a view and apply that textsize and font to same viewes with same height and width
+This option is for decrease cpu , ram , battery usage with reduce calculates
+--------------------------------------------------------------
+Example:
+Dim SmartString1 as SmartString
+SmartString1.Initialize
+SmartString1.SingleLine2(Label1,"Roboto.ttf)
+SmartString1.SetSameStyle(Label1,Label2)
+SmartString1.SetSameStyle(Label1,Label3)
+SmartString1.SetSameStyle(Label1,Label4)</comment>
+      <returntype>String</returntype>
+      <parameter>
+        <name>BaseView</name>
+        <type>Object</type>
+      </parameter>
+      <parameter>
+        <name>TargetView</name>
+        <type>Object</type>
+      </parameter>
+    </method>
+    <method>
+      <name DesignerName="SingleLine1">_vvv4</name>
+      <comment>Tries to increase or decrease the single line text size and preserve the aspect ratio as Long As the height of the text Is Not greater than the height of the view
+ViewWidth is base width of the view in your base layout
+Font : Enter your font name(in Asset) or left this option blank(default font will be applied)
+BaseTextSize : is your text size in base layout(your text in the base layout should not be longer than one line)
+--------------------------------------------------------------
+Example:
+Dim SmartString1 as SmartString
+SmartString1.Initialize
+SmartString1.SingleLine1(Activity,TargetView,Label1,150dip,"Roboto.ttf",13)</comment>
+      <returntype>String</returntype>
+      <parameter>
+        <name>Activity</name>
+        <type>anywheresoftware.b4a.objects.ActivityWrapper</type>
+      </parameter>
+      <parameter>
+        <name>TargetView</name>
+        <type>Object</type>
+      </parameter>
+      <parameter>
+        <name>ViewWidth</name>
+        <type>int</type>
+      </parameter>
+      <parameter>
+        <name>Font</name>
+        <type>String</type>
+      </parameter>
+      <parameter>
+        <name>BaseTextSize</name>
+        <type>double</type>
+      </parameter>
+    </method>
+    <method>
+      <name DesignerName="SingleLine2">_vvv5</name>
+      <comment>Tries to fit your text in view as Long As the height of the text Is Not greater than the height of the view
+Font : Enter your font name(in Asset) or left this option blank(default font will be applied)
+--------------------------------------------------------------
+Example:
+Dim SmartString1 as SmartString
+SmartString1.Initialize
+SmartString1.SingleLine2(Activity,Label1,"Roboto.ttf")</comment>
+      <returntype>String</returntype>
+      <parameter>
+        <name>Activity</name>
+        <type>anywheresoftware.b4a.objects.ActivityWrapper</type>
+      </parameter>
+      <parameter>
+        <name>TargetView</name>
+        <type>Object</type>
+      </parameter>
+      <parameter>
+        <name>Font</name>
+        <type>String</type>
+      </parameter>
+    </method>
+  </class>
+  <version>1.2</version>
+  <author>ArminKH</author>
+</root>

@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <doclet-version-NOT-library-version>1.00</doclet-version-NOT-library-version>
+  <dependsOn>teameightjustifysupport</dependsOn>
+  <class>
+    <name>ir.TeamEight.Justify.teameightjustify._textstorer</name>
+    <shortname>TextStorer</shortname>
+    <owner>process</owner>
+    <method>
+      <name>Initialize</name>
+      <comment>Initializes the fields to their default value.</comment>
+      <returntype>void</returntype>
+    </method>
+    <field>
+      <name>IsInitialized</name>
+      <comment>Tests whether the object has been initialized.</comment>
+      <returntype>boolean</returntype>
+    </field>
+    <field>
+      <name>LineCount</name>
+      <returntype>int</returntype>
+    </field>
+    <field>
+      <name>TextByLine</name>
+      <returntype>String[]</returntype>
+    </field>
+  </class>
+  <class>
+    <name>ir.TeamEight.Justify.teameightjustify</name>
+    <shortname>TeamEightJustify</shortname>
+    <owner>process</owner>
+    <method>
+      <name>IsInitialized</name>
+      <comment>Tests whether the object has been initialized.</comment>
+      <returntype>boolean</returntype>
+    </method>
+    <method>
+      <name DesignerName="About">_v5</name>
+      <comment>About library
+</comment>
+      <returntype>String</returntype>
+    </method>
+    <method>
+      <name DesignerName="Initialize">_initialize</name>
+      <returntype>String</returntype>
+      <parameter>
+        <name>ba</name>
+        <type>anywheresoftware.b4a.BA</type>
+      </parameter>
+    </method>
+    <method>
+      <name DesignerName="JustifyByAddSpace">_vv2</name>
+      <comment>This function distribute space between words and return justified text
+TextView: Target view name which is a text view
+Text:the text which you want to justify it in a text view
+EligibleLineIsLargerThan: Enter a value between 0 to 1 (0% to 100%)
+By using this option if (line width / viewwidth) is less than EligibleLineIsLargerThan then line will not be justified
+JustifyLastLine: Enter false if you don't want to justify last line
+-----------------------------------------------------------------------------------------
+Example:
+Dim Justify as TeamEightJustify
+   Justify.Initialize
+   Label1.Text = Justify.JustifyByAddSpace(Label1,Label1.Text,False,0.75)
+</comment>
+      <returntype>String</returntype>
+      <parameter>
+        <name>TextView</name>
+        <type>anywheresoftware.b4a.objects.ConcreteViewWrapper</type>
+      </parameter>
+      <parameter>
+        <name>Text</name>
+        <type>String</type>
+      </parameter>
+      <parameter>
+        <name>JustifyLastLine</name>
+        <type>boolean</type>
+      </parameter>
+      <parameter>
+        <name>EligibleLineIsLargerThan</name>
+        <type>float</type>
+      </parameter>
+    </method>
+    <method>
+      <name DesignerName="JustifyByExtendWords">_vv3</name>
+      <comment>This function streches the words for ***PERSIAN*** and arabic texts and return justified text
+note: this function is specially written for IRANIAN writing language so we don't warranty accurate for arabic texts
+TextView: Target view name which is a text view
+Text:the text which you want to justify it in a text view
+CheckPriority: Observes priority over each letters of the words and selects the most prefreed one to extend
+Enter True if you want TO check priority or false to extend first possible letter in each word
+EligibleLineIsLargerThan: Enter a value between 0 to 1 (0% to 100%)
+By using this option if (line width / viewwidth) is less than EligibleLineIsLargerThan then line will not be justified
+JustifyLastLine: Enter false if you don't want to justify last line
+-----------------------------------------------------------------------------------------
+Example:
+Dim Justify as TeamEightJustify
+   Justify.Initialize
+   Label1.Text = Justify.JustifyByExtendWords(Label1,Label1.Text,False,0.75,True)
+</comment>
+      <returntype>String</returntype>
+      <parameter>
+        <name>TextView</name>
+        <type>anywheresoftware.b4a.objects.ConcreteViewWrapper</type>
+      </parameter>
+      <parameter>
+        <name>Text</name>
+        <type>String</type>
+      </parameter>
+      <parameter>
+        <name>JustifyLastLine</name>
+        <type>boolean</type>
+      </parameter>
+      <parameter>
+        <name>EligibleLineIsLargerThan</name>
+        <type>float</type>
+      </parameter>
+      <parameter>
+        <name>CheckPriority</name>
+        <type>boolean</type>
+      </parameter>
+    </method>
+    <method>
+      <name DesignerName="Version">_vvv3</name>
+      <comment>Return library version
+</comment>
+      <returntype>float</returntype>
+    </method>
+    <field>
+      <name DesignerName="JustifyDuration">_vvv6</name>
+      <returntype>String</returntype>
+    </field>
+    <field>
+      <name DesignerName="JustifyReport">_vvv7</name>
+      <returntype>String</returntype>
+    </field>
+  </class>
+  <version>1</version>
+  <author>Team Eight</author>
+</root>

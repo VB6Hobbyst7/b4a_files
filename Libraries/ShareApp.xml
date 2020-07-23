@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root>
+    <doclet-version-NOT-library-version>1.02</doclet-version-NOT-library-version>
+    <class>
+        <name>anywheresoftware.b4a.student.ShareApp</name>
+        <shortname>ShareApp</shortname>
+        <owner>process</owner>
+        <method>
+            <name>ShareApps</name>
+            <comment>Share Current App
+StartActivity(ShareApps("Share my app"))
+Visit out website : iranapp.org</comment>
+            <returntype>android.content.Intent</returntype>
+            <parameter>
+                <name>ba</name>
+                <type>anywheresoftware.b4a.BA</type>
+            </parameter>
+            <parameter>
+                <name>Subject</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+    </class>
+    <version>1.0</version>
+</root>

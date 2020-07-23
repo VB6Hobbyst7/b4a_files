@@ -1,0 +1,430 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root>
+    <doclet-version-NOT-library-version>1.02</doclet-version-NOT-library-version>
+    <class>
+        <name>derez.libs.Astro</name>
+        <shortname>Astro</shortname>
+        <comment>The library provides data about the Sun and the Moon
+ like the times of Sunrise, Sunset, Moon rise and Moon set,
+ and more, according to place and date.
+ for the phase of the moon there are two algorithms, one is based on the 
+ day of the moon month in the Hebrew Calendar, the other on the Julian calendar.
+ The Sunrise and Sunset times vary according to the value of Zenith angle. 
+ The following conventions are in use:
+ 		Official       90.8333 (90° 50')
+ 		Civil -        96°
+ 		Nautical -     102°
+ 		Astronomical - 108°
+ The values can be used by their names to be selected 
+ using the method Zenith.
+ The library uses the Official value as default, 
+  
+ The rise an set results were checked against this site
+ &lt;link&gt;Sun &amp; Moon Tables | http://aa.usno.navy.mil/data/docs/RS_OneYear.php&lt;/link&gt;
+ and found accurate within one minute difference.</comment>
+        <owner>process</owner>
+        <method>
+            <name>GetMoonData</name>
+            <comment>Returns an array of 5 doubles:
+ - Moon's phase in radians.
+ - Moon's Age in days
+ - Moon's angular diameter in arcminutes
+ - Moon's elongation in radians
+ - Moon's brightness</comment>
+            <returntype>double[]</returntype>
+            <parameter>
+                <name>day</name>
+                <type>int</type>
+            </parameter>
+            <parameter>
+                <name>month</name>
+                <type>int</type>
+            </parameter>
+            <parameter>
+                <name>year</name>
+                <type>int</type>
+            </parameter>
+            <parameter>
+                <name>hour</name>
+                <type>int</type>
+            </parameter>
+            <parameter>
+                <name>minute</name>
+                <type>int</type>
+            </parameter>
+            <parameter>
+                <name>deltahour</name>
+                <type>double</type>
+            </parameter>
+        </method>
+        <method>
+            <name>GetMoonLong2</name>
+            <comment>Returns the Moon's Ecliptical Longitude, using Julian day as parameter.</comment>
+            <returntype>double</returntype>
+            <parameter>
+                <name>julianday</name>
+                <type>double</type>
+            </parameter>
+        </method>
+        <method>
+            <name>GetMoonLong</name>
+            <comment>Returns the Moon's Ecliptical Longitude.</comment>
+            <returntype>double</returntype>
+            <parameter>
+                <name>day</name>
+                <type>int</type>
+            </parameter>
+            <parameter>
+                <name>month</name>
+                <type>int</type>
+            </parameter>
+            <parameter>
+                <name>year</name>
+                <type>int</type>
+            </parameter>
+            <parameter>
+                <name>hour</name>
+                <type>int</type>
+            </parameter>
+            <parameter>
+                <name>minute</name>
+                <type>int</type>
+            </parameter>
+            <parameter>
+                <name>deltahour</name>
+                <type>double</type>
+            </parameter>
+        </method>
+        <method>
+            <name>GetMoonDistance2</name>
+            <comment>Returns the Moon's distance in Km, using Julian day as parameter.</comment>
+            <returntype>double</returntype>
+            <parameter>
+                <name>julianday</name>
+                <type>double</type>
+            </parameter>
+        </method>
+        <method>
+            <name>Moon</name>
+            <comment>Returns the Moonrise and Moonset times in an array of two strings.
+ If there is no rise or set at the specified date, 
+ the returned string is "--:--".</comment>
+            <returntype>java.lang.String[]</returntype>
+            <parameter>
+                <name>day</name>
+                <type>int</type>
+            </parameter>
+            <parameter>
+                <name>month</name>
+                <type>int</type>
+            </parameter>
+            <parameter>
+                <name>year</name>
+                <type>int</type>
+            </parameter>
+            <parameter>
+                <name>latitude</name>
+                <type>double</type>
+            </parameter>
+            <parameter>
+                <name>longitude</name>
+                <type>double</type>
+            </parameter>
+            <parameter>
+                <name>deltahour</name>
+                <type>double</type>
+            </parameter>
+        </method>
+        <method>
+            <name>HebMoonPhase</name>
+            <comment>Returns the phase of the moon as per the Hebrew calendar moon month.</comment>
+            <returntype>int</returntype>
+            <parameter>
+                <name>day</name>
+                <type>int</type>
+            </parameter>
+            <parameter>
+                <name>month</name>
+                <type>int</type>
+            </parameter>
+            <parameter>
+                <name>year</name>
+                <type>int</type>
+            </parameter>
+        </method>
+        <method>
+            <name>Julianday</name>
+            <comment>Returns the Julian Day.
+ deltahour is the local time offset.</comment>
+            <returntype>double</returntype>
+            <parameter>
+                <name>day</name>
+                <type>int</type>
+            </parameter>
+            <parameter>
+                <name>month</name>
+                <type>int</type>
+            </parameter>
+            <parameter>
+                <name>year</name>
+                <type>int</type>
+            </parameter>
+            <parameter>
+                <name>hour</name>
+                <type>int</type>
+            </parameter>
+            <parameter>
+                <name>minute</name>
+                <type>int</type>
+            </parameter>
+            <parameter>
+                <name>deltahour</name>
+                <type>double</type>
+            </parameter>
+        </method>
+        <method>
+            <name>GetMoonLat2</name>
+            <comment>Returns the Moon's Latitude, using Julian day as parameter.</comment>
+            <returntype>double</returntype>
+            <parameter>
+                <name>julianday</name>
+                <type>double</type>
+            </parameter>
+        </method>
+        <method>
+            <name>GetMoonDistance</name>
+            <comment>Returns the Moon's distance in Km.</comment>
+            <returntype>double</returntype>
+            <parameter>
+                <name>day</name>
+                <type>int</type>
+            </parameter>
+            <parameter>
+                <name>month</name>
+                <type>int</type>
+            </parameter>
+            <parameter>
+                <name>year</name>
+                <type>int</type>
+            </parameter>
+            <parameter>
+                <name>hour</name>
+                <type>int</type>
+            </parameter>
+            <parameter>
+                <name>minute</name>
+                <type>int</type>
+            </parameter>
+            <parameter>
+                <name>deltahour</name>
+                <type>double</type>
+            </parameter>
+        </method>
+        <method>
+            <name>GetSunData2</name>
+            <comment>Returns an array of 3 doubles:
+ - Sun's distance in Astronomical Units AU.
+ (1 Astronomical Unit = 149,598,000 kilometers)
+ - The Sun's angular diameter
+ - The sun's brightness (magnitude)
+  using Julian Day as parameter.</comment>
+            <returntype>double[]</returntype>
+            <parameter>
+                <name>julianday</name>
+                <type>double</type>
+            </parameter>
+        </method>
+        <method>
+            <name>GetSunLong</name>
+            <comment>Returns the ECLIPTICAL LONGITUDE of the sun.</comment>
+            <returntype>double</returntype>
+            <parameter>
+                <name>day</name>
+                <type>int</type>
+            </parameter>
+            <parameter>
+                <name>month</name>
+                <type>int</type>
+            </parameter>
+            <parameter>
+                <name>year</name>
+                <type>int</type>
+            </parameter>
+            <parameter>
+                <name>hour</name>
+                <type>int</type>
+            </parameter>
+            <parameter>
+                <name>minute</name>
+                <type>int</type>
+            </parameter>
+            <parameter>
+                <name>deltahour</name>
+                <type>double</type>
+            </parameter>
+        </method>
+        <method>
+            <name>GetSunData</name>
+            <comment>Returns an array of 3 doubles:
+ - Sun's distance in Astronomical Units AU 
+ (1 Astronomical Unit = 149,598,000 kilometers)
+ - The Sun's angular diameter
+ - The sun's brightness (magnitude)</comment>
+            <returntype>double[]</returntype>
+            <parameter>
+                <name>day</name>
+                <type>int</type>
+            </parameter>
+            <parameter>
+                <name>month</name>
+                <type>int</type>
+            </parameter>
+            <parameter>
+                <name>year</name>
+                <type>int</type>
+            </parameter>
+            <parameter>
+                <name>hour</name>
+                <type>int</type>
+            </parameter>
+            <parameter>
+                <name>minute</name>
+                <type>int</type>
+            </parameter>
+            <parameter>
+                <name>deltahour</name>
+                <type>double</type>
+            </parameter>
+        </method>
+        <method>
+            <name>Sun</name>
+            <comment>Returns the Sunrise and Sunset times in an array of two strings.
+ At Latitudes greater then 65 or smaller then -65 there are cases that 
+ there is no sunrise and sunset. The result in this case is "--:--"</comment>
+            <returntype>java.lang.String[]</returntype>
+            <parameter>
+                <name>day</name>
+                <type>int</type>
+            </parameter>
+            <parameter>
+                <name>month</name>
+                <type>int</type>
+            </parameter>
+            <parameter>
+                <name>year</name>
+                <type>int</type>
+            </parameter>
+            <parameter>
+                <name>latitude</name>
+                <type>double</type>
+            </parameter>
+            <parameter>
+                <name>longitude</name>
+                <type>double</type>
+            </parameter>
+            <parameter>
+                <name>deltahour</name>
+                <type>double</type>
+            </parameter>
+        </method>
+        <method>
+            <name>GetMoonLat</name>
+            <comment>Returns the Moon's Latitude.</comment>
+            <returntype>double</returntype>
+            <parameter>
+                <name>day</name>
+                <type>int</type>
+            </parameter>
+            <parameter>
+                <name>month</name>
+                <type>int</type>
+            </parameter>
+            <parameter>
+                <name>year</name>
+                <type>int</type>
+            </parameter>
+            <parameter>
+                <name>hour</name>
+                <type>int</type>
+            </parameter>
+            <parameter>
+                <name>minute</name>
+                <type>int</type>
+            </parameter>
+            <parameter>
+                <name>deltahour</name>
+                <type>double</type>
+            </parameter>
+        </method>
+        <method>
+            <name>Julianday2</name>
+            <comment>Returns the Julian Day using DateTime parameter.
+ datetime is the local time in DateTime ticks.
+ deltahour is the local time offset.</comment>
+            <returntype>double</returntype>
+            <parameter>
+                <name>datetime</name>
+                <type>long</type>
+            </parameter>
+            <parameter>
+                <name>deltahour</name>
+                <type>double</type>
+            </parameter>
+        </method>
+        <method>
+            <name>GetSunLong2</name>
+            <comment>Returns the ECLIPTICAL LONGITUDE of the sun using Julian Day as parameter.</comment>
+            <returntype>double</returntype>
+            <parameter>
+                <name>julianday</name>
+                <type>double</type>
+            </parameter>
+        </method>
+        <method>
+            <name>GetMoonData2</name>
+            <comment>Returns an array of 5 doubles:
+ - Moon's phase in radians.
+ - Moon's Age in days
+ - Moon's angular diameter in arcminutes
+ - Moon's elongation in radians
+ - Moon's brightness
+  using Julian Day as parameter.</comment>
+            <returntype>double[]</returntype>
+            <parameter>
+                <name>julianday</name>
+                <type>double</type>
+            </parameter>
+        </method>
+        <property>
+            <name>Zenith</name>
+            <returntype>double</returntype>
+            <parameter>
+                <name>value</name>
+                <type>double</type>
+            </parameter>
+            <comment>Gets and sets the value of zenith.</comment>
+        </property>
+        <field>
+            <name>OFFICIAL</name>
+            <comment></comment>
+            <returntype>double</returntype>
+        </field>
+        <field>
+            <name>CIVIL</name>
+            <comment></comment>
+            <returntype>double</returntype>
+        </field>
+        <field>
+            <name>ASTRONOMICAL</name>
+            <comment></comment>
+            <returntype>double</returntype>
+        </field>
+        <field>
+            <name>NAUTICAL</name>
+            <comment></comment>
+            <returntype>double</returntype>
+        </field>
+    </class>
+    <version>1.23</version>
+    <author>Derez</author>
+</root>

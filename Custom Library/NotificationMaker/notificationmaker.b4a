@@ -1,0 +1,83 @@
+﻿Build1=Default,b4a.example
+File1=3.jpg
+File2=alert.png
+File3=f1.bal
+FileGroup1=Default Group
+FileGroup2=Default Group
+FileGroup3=Default Group
+Group=Default Group
+IconFile=
+Library1=core
+Library2=notificationbuilder
+ManifestCode='This code will be applied to the manifest file during compilation.~\n~'You do not need to modify it in most cases.~\n~'See this link for for more information: https://www.b4x.com/forum/showthread.php?p=78136~\n~AddManifestText(~\n~<uses-sdk android:minSdkVersion="5" android:targetSdkVersion="19"/>~\n~<supports-screens android:largeScreens="true" ~\n~    android:normalScreens="true" ~\n~    android:smallScreens="true" ~\n~    android:anyDensity="true"/>)~\n~SetApplicationAttribute(android:icon, "@drawable/icon")~\n~SetApplicationAttribute(android:label, "$LABEL$")~\n~'End of default text.~\n~
+Module1=Starter
+Module2=NotificationMaker
+NumberOfFiles=3
+NumberOfLibraries=2
+NumberOfModules=2
+Version=7.8
+@EndOfDesignText@
+#Region  Project Attributes 
+	#ApplicationLabel: B4A Example
+	#VersionCode: 1
+	#VersionName: 
+	#AdditionalRes: ../notificationbuilder
+	'SupportedOrientations possible values: unspecified, landscape or portrait.
+	#SupportedOrientations: unspecified
+	#CanInstallToExternalStorage: False
+#End Region
+
+#Region  Activity Attributes 
+	#FullScreen: False
+	#IncludeTitle: True
+#End Region
+
+Sub Process_Globals
+	'These global variables will be declared once when the application starts.
+	'These variables can be accessed from all modules.
+
+End Sub
+
+Sub Globals
+	'These global variables will be redeclared each time the activity is created.
+	'These variables can only be accessed from this module.
+
+End Sub
+
+Sub Activity_Create(FirstTime As Boolean)
+	'Do not forget to load the layout file created with the visual designer. For example:
+	'Activity.LoadLayout("Layout1")
+
+End Sub
+
+Sub Activity_Click
+	
+	Dim int1 As Intent
+	int1.Initialize(int1.ACTION_VIEW,"https://www.google.com")
+	
+	Dim n As NotificationMaker
+	n.Initialize
+	n.SmallIcon("icon")
+'	n.AddAction("alert","Goto",1,Me)
+'	n.AddProgress(100,10,False)
+'	n.SmallIcon("icon").SetIntent(int1).ShowTime.AutoCancel.SetDeleteService(Starter).ShowInbox("Alert","My message in inbox","",Array As String("Hello for your","hello for all","yeeeeeeeeeeeees"),"",1)
+ 
+End Sub
+
+Sub Activity_Resume
+
+	If Activity.GetStartingIntent.IsInitialized Then
+		If Activity.GetStartingIntent.HasExtra("Notification_Action_Tag") Then
+			Dim tag As Object
+			tag	=	Activity.GetStartingIntent.GetExtra("Notification_Action_Tag")
+			Dim n As NotificationMaker
+			n.Initialize
+			n.Cancel(tag)
+		End If
+	End If
+	
+End Sub
+
+Sub Activity_Pause (UserClosed As Boolean)
+
+End Sub

@@ -1,0 +1,38 @@
+// OnTcpStart
+// This script is executed when a TCP port is opened.
+
+// $listeningPort is the port you specified in "ports" list
+// $redirectPort is assigned at runtime when the tcp server is started. First port start at 9000 and is incremented for each server
+// $isForward : true if is just port forwarding. False if it's reverse tethering
+// $isSocks5 : if reverse tethering, indicate if socks5 must be used.
+// $isAtRunTime : server is created at run time (global redirect)
+// all theses variables are read only
+
+// Note : -i "interface" Can't be used with OUTPUT    
+
+//$LogI --------- Script : Tcp port start : $listeningPort / $redirectPort
+
+if $isForward  then
+   return
+fi
+
+if $isAtRunTime then 
+   return
+fi
+
+// reverse tethering
+// send specific tcp port (80,443,...) to TETHER chain
+
+if $isSocks5 = false then
+   // send tcp connection to the tunnel (9000+)
+   $iptables -t nat -A TETHER -o $myInterface -p tcp --dport $listeningPort -j REDIRECT --to $redirectPort  
+else
+   // Socks5 mode : redirection is done on redsocks client port : 42002
+   // redsocks will communicate with Proxyserver (port 42003 that return the tunnel port (9000+)
+   $iptables -t nat -A TETHER -o $myInterface -p tcp --dport $listeningPort -j REDIRECT --to 42002
+fi
+
+
+
+
+

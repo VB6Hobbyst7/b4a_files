@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root>
+    <doclet-version-NOT-library-version>1.02</doclet-version-NOT-library-version>
+    <class>
+        <name>uk.co.martinpearman.b4a.videoviewextras.VideoViewRelativeLayout</name>
+        <shortname>VideoViewRelativeLayout</shortname>
+        <objectwrapper>android.widget.RelativeLayout</objectwrapper>
+        <owner>activity</owner>
+        <method>
+            <name>Initialize</name>
+            <comment>Initialize the VideoViewRelativeLayout.
+ VideoViewRelativeLayout is now a RelativeLayout with Width and Height both set to the Android constant MATCH_PARENT.
+ (MATCH_PARENT is the same as FILL_PARENT but FILL_PARENT is now deprecated).</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>pBA</name>
+                <type>anywheresoftware.b4a.BA</type>
+            </parameter>
+        </method>
+        <method>
+            <name>SetVideoView</name>
+            <comment>Add a VideoView to the RelativeLayout.
+ The VideoView Width and Height are both set to the Android constant MATCH_PARENT.
+ Additionally the VideoView Layout Align is set to ALIGN_PARENT_BOTTOM, ALIGN_PARENT_LEFT, ALIGN_PARENT_RIGHT and ALIGN_PARENT_TOP.</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>VideoView1</name>
+                <type>android.widget.VideoView</type>
+            </parameter>
+        </method>
+        <method>
+            <name>IsInitialized</name>
+            <comment></comment>
+            <returntype>boolean</returntype>
+        </method>
+    </class>
+    <version>1.0</version>
+    <author>Martin Pearman</author>
+</root>

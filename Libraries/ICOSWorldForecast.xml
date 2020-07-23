@@ -1,0 +1,1044 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root>
+    <doclet-version-NOT-library-version>1.01</doclet-version-NOT-library-version>
+    <class>
+        <name>it.giuseppe.salvi.icos.library.weather.forecast.provider.ICOSForecastWrapper</name>
+        <owner>process</owner>
+        <permission>android.permission.INTERNET</permission>
+    </class>
+    <class>
+        <name>it.giuseppe.salvi.icos.library.weather.ICOSWorldForecastWrapper</name>
+        <shortname>ICOSWorldForecast</shortname>
+        <owner>process</owner>
+        <permission>android.permission.INTERNET</permission>
+        <method>
+            <name>Initialize</name>
+            <comment>Initilize the object</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>ba</name>
+                <type>anywheresoftware.b4a.BA</type>
+            </parameter>
+            <parameter>
+                <name>EventName</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+        <method>
+            <name>StringFormat</name>
+            <comment>Return Formatted String
+ 
+ example:
+ 
+ Label1.Text=StringFormat("Lat: %1$s - Long: %2$s ",Latitude,Longitude)</comment>
+            <returntype>java.lang.String</returntype>
+            <parameter>
+                <name>format</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>object</name>
+                <type>java.lang.Object</type>
+            </parameter>
+            <parameter>
+                <name>object1</name>
+                <type>java.lang.Object</type>
+            </parameter>
+        </method>
+        <method>
+            <name>GetList</name>
+            <comment>Set the City Name you wish to get the weather
+ 
+ example:
+ 
+ Dim a As ICOSWorldForecast
+ Dim l As List
+ Dim lv1 As ListView
+ 
+ l = a.GetList("Los Angeles")
+ 
+ For n = 0 To l.Size-1
+ lv1.AddSingleLine(l.Get(n))
+ Next
+ 
+ Sub lv1_ItemClick (Position As Int, Value As Object)
+ ics.CityName = lv1.GetItem(Position)
+ lv1.Clear
+ End Sub</comment>
+            <returntype>java.util.ArrayList</returntype>
+            <parameter>
+                <name>mCity</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+        <method>
+            <name>FCTempMinFahrenheit</name>
+            <comment>Return Day and night max temperature in Fahrenheit
+ 
+ example:
+ 
+ Dim a As ICOSWorldForecast
+ 
+ Label1.Text=a.FCTempMinFahrenheit(0)</comment>
+            <returntype>java.lang.String</returntype>
+            <parameter>
+                <name>index</name>
+                <type>int</type>
+            </parameter>
+        </method>
+        <method>
+            <name>FCTempMaxCelsius</name>
+            <comment>Return Day and night max temperature in Celcius
+ 
+ example:
+ 
+ Dim a As ICOSWorldForecast
+ 
+ Label1.Text=a.FCTempMaxCelsius(0)</comment>
+            <returntype>java.lang.String</returntype>
+            <parameter>
+                <name>index</name>
+                <type>int</type>
+            </parameter>
+        </method>
+        <method>
+            <name>FCWinddirection</name>
+            <comment>Return Compass Wind direction
+ 
+ example:
+ 
+ Dim a As ICOSWorldForecast
+ 
+ Label1.Text=a.FCWinddirection(0)</comment>
+            <returntype>java.lang.String</returntype>
+            <parameter>
+                <name>index</name>
+                <type>int</type>
+            </parameter>
+        </method>
+        <method>
+            <name>Full5DayName</name>
+            <comment>Return Full name of the day  ( Monday )
+ 
+ example:
+ 
+ Dim a As ICOSWorldForecast
+ 
+ Label1.Text=a.Full5DayName(0)   ' 0 = today    -   1 = tomorrow etc etc</comment>
+            <returntype>java.lang.String</returntype>
+            <parameter>
+                <name>day</name>
+                <type>int</type>
+            </parameter>
+        </method>
+        <method>
+            <name>FCTempMaxFahrenheit</name>
+            <comment>Return Day and night max temperature in Fahrenheit
+ 
+ example:
+ 
+ Dim a As ICOSWorldForecast
+ 
+ Label1.Text=a.FCTempMaxFahrenheit(0)</comment>
+            <returntype>java.lang.String</returntype>
+            <parameter>
+                <name>index</name>
+                <type>int</type>
+            </parameter>
+        </method>
+        <method>
+            <name>FCDate</name>
+            <comment>Return Date for which the weather is forecasted
+ 
+ example:
+ 
+ Dim a As ICOSWorldForecast
+ 
+ Label1.Text=a.FCDate(0)</comment>
+            <returntype>java.lang.String</returntype>
+            <parameter>
+                <name>index</name>
+                <type>int</type>
+            </parameter>
+        </method>
+        <method>
+            <name>FCIcon</name>
+            <comment>Return Weather symbol image
+ 
+ example:
+ 
+ Dim a As ICOSWorldForecast
+ 
+ Image1.SetBackgroundImage=a.FCWeatherIcon(0)</comment>
+            <returntype>android.graphics.Bitmap</returntype>
+            <parameter>
+                <name>index</name>
+                <type>int</type>
+            </parameter>
+        </method>
+        <method>
+            <name>FCPrecipitationMM</name>
+            <comment>Return Precipitation amount in millimeter
+ 
+ example:
+ 
+ Dim a As ICOSWorldForecast
+ 
+ Label1.Text=a.FCPrecipitationMM(0)</comment>
+            <returntype>java.lang.String</returntype>
+            <parameter>
+                <name>index</name>
+                <type>int</type>
+            </parameter>
+        </method>
+        <method>
+            <name>FCWeatherDesc</name>
+            <comment>Return Weather description
+ 
+ example:
+ 
+ Dim a As ICOSWorldForecast
+ 
+ Label1.Text=a.FCWeatherDesc(0)</comment>
+            <returntype>java.lang.String</returntype>
+            <parameter>
+                <name>index</name>
+                <type>int</type>
+            </parameter>
+        </method>
+        <method>
+            <name>FCTempMinCelsius</name>
+            <comment>Return Day and night min temperature in Celcius
+ 
+ example:
+ 
+ Dim a As ICOSWorldForecast
+ 
+ Label1.Text=a.FCTempMinCelsius(0)</comment>
+            <returntype>java.lang.String</returntype>
+            <parameter>
+                <name>index</name>
+                <type>int</type>
+            </parameter>
+        </method>
+        <method>
+            <name>FCWindspeedKmph</name>
+            <comment>Return Wind speed in kilometer per hour
+ 
+ example:
+ 
+ Dim a As ICOSWorldForecast
+ 
+ Label1.Text=a.FCWindspeedKmph(0)</comment>
+            <returntype>java.lang.String</returntype>
+            <parameter>
+                <name>index</name>
+                <type>int</type>
+            </parameter>
+        </method>
+        <method>
+            <name>FCWinddirDegree</name>
+            <comment>Return Wind direction in degree
+ 
+ example:
+ 
+ Dim a As ICOSWorldForecast
+ 
+ Label1.Text=a.FCWinddirDegree(0)</comment>
+            <returntype>java.lang.String</returntype>
+            <parameter>
+                <name>index</name>
+                <type>int</type>
+            </parameter>
+        </method>
+        <method>
+            <name>FCWindspeedMiles</name>
+            <comment>Return Wind speed in Miles per hour
+ 
+ example:
+ 
+ Dim a As ICOSWorldForecast
+ 
+ Label1.Text=a.FCWindspeedMiles(0)</comment>
+            <returntype>java.lang.String</returntype>
+            <parameter>
+                <name>index</name>
+                <type>int</type>
+            </parameter>
+        </method>
+        <method>
+            <name>FCWinddir16Point</name>
+            <comment>Return 16-Point compass wind direction
+ 
+ example:
+ 
+ Dim a As ICOSWorldForecast
+ 
+ Label1.Text=a.FCWinddir16Point(0)</comment>
+            <returntype>java.lang.String</returntype>
+            <parameter>
+                <name>index</name>
+                <type>int</type>
+            </parameter>
+        </method>
+        <method>
+            <name>Short5DayName</name>
+            <comment>Return Short name of the day  ( Mon )
+ 
+ example:
+ 
+ Dim a As ICOSWorldForecast
+ 
+ Label1.Text=a.Short5DayName(0)   ' 0 = today    -   1 = tomorrow etc etc</comment>
+            <returntype>java.lang.String</returntype>
+            <parameter>
+                <name>day</name>
+                <type>int</type>
+            </parameter>
+        </method>
+        <property>
+            <name>CCObservationTime</name>
+            <returntype>java.lang.String</returntype>
+            <comment>Return Observation time (UTC)
+ 
+ example:
+ 
+ Dim a As ICOSWorldForecast
+ 
+ Label1.Text=a.CCObservationTime</comment>
+        </property>
+        <property>
+            <name>CCLocalObsDateTime</name>
+            <returntype>java.lang.String</returntype>
+            <comment>Return Local Observation date and time
+ 
+ example:
+ 
+ Dim a As ICOSWorldForecast
+ 
+ Label1.Text=a.CCLocalObsDateTime</comment>
+        </property>
+        <property>
+            <name>CityName</name>
+            <parameter>
+                <name>City</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <comment>Set City you wish to get the weather
+ 
+ example:
+ 
+ Dim a As ICOSWorldForecast
+ 
+ a.CityName="New York"</comment>
+        </property>
+        <property>
+            <name>CCPressure</name>
+            <returntype>java.lang.String</returntype>
+            <comment>Return Atmospheric pressure in Milibars
+ 
+ example:
+ 
+ Dim a As ICOSWorldForecast
+ 
+ Label1.Text=a.CCPressure</comment>
+        </property>
+        <property>
+            <name>CCTempCelsius</name>
+            <returntype>java.lang.String</returntype>
+            <comment>Return Temperature in Celsius
+ 
+ example:
+ 
+ Dim a As ICOSWorldForecast
+ 
+ Label1.Text=a.CCTempCelsius</comment>
+        </property>
+        <property>
+            <name>CCWeatherDescription</name>
+            <returntype>java.lang.String</returntype>
+            <comment>Return Weather Description
+ 
+ example:
+ 
+ Dim a As ICOSWorldForecast
+ 
+ Label1.Text=a.CCWeatherDescription</comment>
+        </property>
+        <property>
+            <name>CCCloudCover</name>
+            <returntype>java.lang.String</returntype>
+            <comment>Return Cloud Cover in %
+ 
+ example:
+ 
+ Dim a As ICOSWorldForecast
+ 
+ Label1.Text=a.CCCloudCover</comment>
+        </property>
+        <property>
+            <name>ApiKey</name>
+            <parameter>
+                <name>Key</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <comment>Set your personal ApiKey
+ 
+ example:
+ 
+ Dim a As ICOSWorldForecast
+ 
+ a.ApiKey="XXXXXXXXXXXXXXXXXXXXXXXXXXXX"</comment>
+        </property>
+        <property>
+            <name>Region</name>
+            <returntype>java.lang.String</returntype>
+            <comment>Return Name of the Region
+ 
+ example:
+ 
+ Dim a As ICOSWorldForecast
+ 
+ Label1.Text=a.Region</comment>
+        </property>
+        <property>
+            <name>AreaName</name>
+            <returntype>java.lang.String</returntype>
+            <comment>Return Name of the city
+ 
+ example:
+ 
+ Dim a As ICOSWorldForecast
+ 
+ Label1.Text=a.AreaName</comment>
+        </property>
+        <property>
+            <name>CurrentDate</name>
+            <returntype>java.lang.String</returntype>
+            <comment>Return Current Day,Month,Year ( Friday, 28 September, 2012 )
+ 
+ example:
+ 
+ Dim a As ICOSWorldForecast
+ 
+ Label1.Text=a.CurrentDate</comment>
+        </property>
+        <property>
+            <name>Latitude</name>
+            <returntype>java.lang.Object</returntype>
+            <comment>Return Latitude of the city
+ 
+ example:
+ 
+ Dim a As ICOSWorldForecast
+ 
+ Label1.Text=a.Latitude</comment>
+        </property>
+        <property>
+            <name>CCVisibility</name>
+            <returntype>java.lang.String</returntype>
+            <comment>Return Visibility kilometers per hour
+ 
+ example:
+ 
+ Dim a As ICOSWorldForecast
+ 
+ Label1.Text=a.CCVisibility</comment>
+        </property>
+        <property>
+            <name>TimeZone</name>
+            <returntype>java.lang.String</returntype>
+            <comment>Return local date and time
+ 
+ example:
+ 
+ Dim a As ICOSWorldForecast
+ 
+ Label1.Text=a.Timezone</comment>
+        </property>
+        <property>
+            <name>Version</name>
+            <returntype>double</returntype>
+            <comment>Return the version of this library</comment>
+        </property>
+        <property>
+            <name>CCHumidity</name>
+            <returntype>java.lang.String</returntype>
+            <comment>Return Humidity in %
+ 
+ example:
+ 
+ Dim a As ICOSWorldForecast
+ 
+ Label1.Text=a.CCHumidity</comment>
+        </property>
+        <property>
+            <name>CCWindspeedMiles</name>
+            <returntype>java.lang.String</returntype>
+            <comment>Return Wind speed in Miles per hour
+ 
+ example:
+ 
+ Dim a As ICOSWorldForecast
+ 
+ Label1.Text=a.CCWindspeedMiles</comment>
+        </property>
+        <property>
+            <name>CCIcon</name>
+            <returntype>android.graphics.Bitmap</returntype>
+            <comment>Return Weather symbol image
+ 
+ example:
+ 
+ Dim a As ICOSWorldForecast
+ 
+ Image1.SetBackgroundImage=a.CCWeatherIcon</comment>
+        </property>
+        <property>
+            <name>CCWindspeedKmph</name>
+            <returntype>java.lang.String</returntype>
+            <comment>Return Wind speed in kilometer per hour
+ 
+ example:
+ 
+ Dim a As ICOSWorldForecast
+ 
+ Label1.Text=a.CCWindspeedKmph</comment>
+        </property>
+        <property>
+            <name>CCTempFahrenheit</name>
+            <returntype>java.lang.String</returntype>
+            <comment>Return Temperature in Fahrenheit
+ 
+ example:
+ 
+ Dim a As ICOSWorldForecast
+ 
+ Label1.Text=a.CCTempFahrenheit</comment>
+        </property>
+        <property>
+            <name>CCPrecipitationMM</name>
+            <returntype>java.lang.String</returntype>
+            <comment>Return Precipitation Amount in Millimeter
+ 
+ example:
+ 
+ Dim a As ICOSWorldForecast
+ 
+ Label1.Text=a.PrecipitationMM</comment>
+        </property>
+        <property>
+            <name>Country</name>
+            <returntype>java.lang.String</returntype>
+            <comment>Return Name of the Country
+ 
+ example:
+ 
+ Dim a As ICOSWorldForecast
+ 
+ Label1.Text=a.Country</comment>
+        </property>
+        <property>
+            <name>CurrentTime</name>
+            <returntype>java.lang.String</returntype>
+            <comment>Return Current time ( 02.09 PM )
+ 
+ example:
+ 
+ Dim a As ICOSWorldForecast
+ 
+ Label1.Text=a.CurrentTime</comment>
+        </property>
+        <property>
+            <name>CCWinddirDegree</name>
+            <returntype>java.lang.String</returntype>
+            <comment>Return Wind direction in degree
+ 
+ example:
+ 
+ Dim a As ICOSWorldForecast
+ 
+ Label1.Text=a.CCWinddirDegree</comment>
+        </property>
+        <property>
+            <name>Population</name>
+            <returntype>java.lang.String</returntype>
+            <comment>Return Population of the city
+ 
+ example:
+ 
+ Dim a As ICOSWorldForecast
+ 
+ Label1.Text=a.Population</comment>
+        </property>
+        <property>
+            <name>Longitude</name>
+            <returntype>java.lang.Object</returntype>
+            <comment>Return Longitude of the city
+ 
+ example:
+ 
+ Dim a As ICOSWorldForecast
+ 
+ Label1.Text=a.Longitude</comment>
+        </property>
+        <property>
+            <name>LatAndLong</name>
+            <parameter>
+                <name>LatLong</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <comment>Set Lat and Long  you wish to get the weather
+ 
+ example:
+ 
+ Dim a As ICOSWorldForecast
+ 
+ a.LatAndLong="40.714,-74.006"</comment>
+        </property>
+        <property>
+            <name>CCWinddir16Point</name>
+            <returntype>java.lang.String</returntype>
+            <comment>Return 16-Point wind direction compass
+ 
+ example:
+ 
+ Dim a As ICOSWorldForecast
+ 
+ Label1.Text=a.CCWinddir16Point</comment>
+        </property>
+    </class>
+    <class>
+        <name>it.giuseppe.salvi.icos.library.weather.ICOSForecastConditionWrapper</name>
+        <owner>process</owner>
+        <property>
+            <name>Weathers</name>
+            <returntype>java.util.ArrayList</returntype>
+            <parameter>
+                <name>weathers</name>
+                <type>java.util.ArrayList</type>
+            </parameter>
+            <comment></comment>
+        </property>
+        <property>
+            <name>Current</name>
+            <returntype>it.giuseppe.salvi.icos.library.weather.forecastandcondition.ICOSCurrentConditionWrapper</returntype>
+            <parameter>
+                <name>current</name>
+                <type>it.giuseppe.salvi.icos.library.weather.forecastandcondition.ICOSCurrentConditionWrapper</type>
+            </parameter>
+            <comment></comment>
+        </property>
+    </class>
+    <class>
+        <name>it.giuseppe.salvi.icos.library.weather.forecastandcondition.ICOSForecastWeatherWrapper</name>
+        <owner>process</owner>
+        <property>
+            <name>WeatherIconUrl</name>
+            <returntype>java.lang.String</returntype>
+            <parameter>
+                <name>weatherIconUrl</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <comment></comment>
+        </property>
+        <property>
+            <name>WindspeedKmph</name>
+            <returntype>java.lang.String</returntype>
+            <parameter>
+                <name>windspeedKmph</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <comment></comment>
+        </property>
+        <property>
+            <name>TempMinF</name>
+            <returntype>java.lang.String</returntype>
+            <parameter>
+                <name>tempMinF</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <comment></comment>
+        </property>
+        <property>
+            <name>WinddirDegree</name>
+            <returntype>java.lang.String</returntype>
+            <parameter>
+                <name>winddirDegree</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <comment></comment>
+        </property>
+        <property>
+            <name>WeatherDesc</name>
+            <returntype>java.lang.String</returntype>
+            <parameter>
+                <name>weatherDesc</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <comment></comment>
+        </property>
+        <property>
+            <name>TempMinC</name>
+            <returntype>java.lang.String</returntype>
+            <parameter>
+                <name>tempMinC</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <comment></comment>
+        </property>
+        <property>
+            <name>TempMaxC</name>
+            <returntype>java.lang.String</returntype>
+            <parameter>
+                <name>tempMaxC</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <comment></comment>
+        </property>
+        <property>
+            <name>Date</name>
+            <returntype>java.lang.String</returntype>
+            <parameter>
+                <name>date</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <comment></comment>
+        </property>
+        <property>
+            <name>WindspeedMiles</name>
+            <returntype>java.lang.String</returntype>
+            <parameter>
+                <name>windspeedMiles</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <comment></comment>
+        </property>
+        <property>
+            <name>Winddirection</name>
+            <returntype>java.lang.String</returntype>
+            <parameter>
+                <name>winddirection</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <comment></comment>
+        </property>
+        <property>
+            <name>Winddir16Point</name>
+            <returntype>java.lang.String</returntype>
+            <parameter>
+                <name>winddir16Point</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <comment></comment>
+        </property>
+        <property>
+            <name>TempMaxF</name>
+            <returntype>java.lang.String</returntype>
+            <parameter>
+                <name>tempMaxF</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <comment></comment>
+        </property>
+        <property>
+            <name>PrecipMM</name>
+            <returntype>java.lang.String</returntype>
+            <parameter>
+                <name>precipMM</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <comment></comment>
+        </property>
+        <property>
+            <name>WeatherCode</name>
+            <returntype>java.lang.String</returntype>
+            <parameter>
+                <name>weatherCode</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <comment></comment>
+        </property>
+    </class>
+    <class>
+        <name>it.giuseppe.salvi.icos.library.weather.forecastandcondition.ICOSFindLocationWrapper</name>
+        <owner>process</owner>
+        <property>
+            <name>Region</name>
+            <returntype>java.lang.String</returntype>
+            <parameter>
+                <name>region</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <comment></comment>
+        </property>
+        <property>
+            <name>Timezone</name>
+            <returntype>java.lang.String</returntype>
+            <parameter>
+                <name>timezone</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <comment></comment>
+        </property>
+        <property>
+            <name>AreaName</name>
+            <returntype>java.lang.String</returntype>
+            <parameter>
+                <name>areaName</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <comment></comment>
+        </property>
+        <property>
+            <name>Population</name>
+            <returntype>java.lang.String</returntype>
+            <parameter>
+                <name>population</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <comment></comment>
+        </property>
+        <property>
+            <name>Latitude</name>
+            <returntype>java.lang.String</returntype>
+            <parameter>
+                <name>latitude</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <comment></comment>
+        </property>
+        <property>
+            <name>Longitude</name>
+            <returntype>java.lang.String</returntype>
+            <parameter>
+                <name>longitude</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <comment></comment>
+        </property>
+        <property>
+            <name>Country</name>
+            <returntype>java.lang.String</returntype>
+            <parameter>
+                <name>country</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <comment></comment>
+        </property>
+    </class>
+    <class>
+        <name>it.giuseppe.salvi.icos.library.weather.forecastandcondition.ICOSCurrentConditionWrapper</name>
+        <owner>process</owner>
+        <property>
+            <name>Observation_time</name>
+            <returntype>java.lang.String</returntype>
+            <parameter>
+                <name>observation_time</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <comment></comment>
+        </property>
+        <property>
+            <name>WeatherIconUrl</name>
+            <returntype>java.lang.String</returntype>
+            <parameter>
+                <name>weatherIconUrl</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <comment></comment>
+        </property>
+        <property>
+            <name>WindspeedKmph</name>
+            <returntype>java.lang.String</returntype>
+            <parameter>
+                <name>windspeedKmph</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <comment></comment>
+        </property>
+        <property>
+            <name>Cloudcover</name>
+            <returntype>java.lang.String</returntype>
+            <parameter>
+                <name>cloudcover</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <comment></comment>
+        </property>
+        <property>
+            <name>WinddirDegree</name>
+            <returntype>java.lang.String</returntype>
+            <parameter>
+                <name>winddirDegree</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <comment></comment>
+        </property>
+        <property>
+            <name>WeatherDesc</name>
+            <returntype>java.lang.String</returntype>
+            <parameter>
+                <name>weatherDesc</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <comment></comment>
+        </property>
+        <property>
+            <name>Temp_F</name>
+            <returntype>java.lang.String</returntype>
+            <parameter>
+                <name>temp_F</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <comment></comment>
+        </property>
+        <property>
+            <name>Humidity</name>
+            <returntype>java.lang.String</returntype>
+            <parameter>
+                <name>humidity</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <comment></comment>
+        </property>
+        <property>
+            <name>Temp_C</name>
+            <returntype>java.lang.String</returntype>
+            <parameter>
+                <name>temp_C</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <comment></comment>
+        </property>
+        <property>
+            <name>Country</name>
+            <returntype>java.lang.String</returntype>
+            <parameter>
+                <name>country</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <comment></comment>
+        </property>
+        <property>
+            <name>Region</name>
+            <returntype>java.lang.String</returntype>
+            <parameter>
+                <name>region</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <comment></comment>
+        </property>
+        <property>
+            <name>Winddir16Point</name>
+            <returntype>java.lang.String</returntype>
+            <parameter>
+                <name>winddir16Point</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <comment></comment>
+        </property>
+        <property>
+            <name>WindspeedMiles</name>
+            <returntype>java.lang.String</returntype>
+            <parameter>
+                <name>windspeedMiles</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <comment></comment>
+        </property>
+        <property>
+            <name>LocalObsDateTime</name>
+            <returntype>java.lang.String</returntype>
+            <parameter>
+                <name>localObsDateTime</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <comment></comment>
+        </property>
+        <property>
+            <name>PrecipMM</name>
+            <returntype>java.lang.String</returntype>
+            <parameter>
+                <name>precipMM</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <comment></comment>
+        </property>
+        <property>
+            <name>AreaName</name>
+            <returntype>java.lang.String</returntype>
+            <parameter>
+                <name>areaName</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <comment></comment>
+        </property>
+        <property>
+            <name>Timezone</name>
+            <returntype>java.lang.String</returntype>
+            <parameter>
+                <name>timezone</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <comment></comment>
+        </property>
+        <property>
+            <name>WeatherCode</name>
+            <returntype>java.lang.String</returntype>
+            <parameter>
+                <name>weatherCode</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <comment></comment>
+        </property>
+        <property>
+            <name>Latitude</name>
+            <returntype>java.lang.String</returntype>
+            <parameter>
+                <name>latitude</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <comment></comment>
+        </property>
+        <property>
+            <name>Population</name>
+            <returntype>java.lang.String</returntype>
+            <parameter>
+                <name>population</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <comment></comment>
+        </property>
+        <property>
+            <name>Visibility</name>
+            <returntype>java.lang.String</returntype>
+            <parameter>
+                <name>visibility</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <comment></comment>
+        </property>
+        <property>
+            <name>Longitude</name>
+            <returntype>java.lang.String</returntype>
+            <parameter>
+                <name>longitude</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <comment></comment>
+        </property>
+        <property>
+            <name>Pressure</name>
+            <returntype>java.lang.String</returntype>
+            <parameter>
+                <name>pressure</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <comment></comment>
+        </property>
+    </class>
+    <version>2.61</version>
+    <comment></comment>
+    <author>Giuseppe Salvi</author>
+</root>

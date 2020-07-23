@@ -1,0 +1,252 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root>
+    <doclet-version-NOT-library-version>1.02</doclet-version-NOT-library-version>
+    <class>
+        <name>com.rootsoft.audiorecorder.AudioRecorder</name>
+        <shortname>AudioRecorder</shortname>
+        <owner>process</owner>
+        <permission>android.permission.WRITE_EXTERNAL_STORAGE</permission>
+        <permission>android.permission.RECORD_AUDIO</permission>
+        <method>
+            <name>isRecording</name>
+            <comment>Returns a boolean with true if the recorder is currently recording.
+Return type: @return:</comment>
+            <returntype>boolean</returntype>
+        </method>
+        <method>
+            <name>Initialize</name>
+            <comment>Initializes AudioRecorder Library.</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>ba</name>
+                <type>anywheresoftware.b4a.BA</type>
+            </parameter>
+        </method>
+        <method>
+            <name>stop</name>
+            <comment>Stops recording. 
+ Call this after start(). 
+ Once recording is stopped, you will have to configure it again as if it has just been constructed.</comment>
+            <returntype>void</returntype>
+        </method>
+        <method>
+            <name>start</name>
+            <comment>Begins capturing and encoding data to the file specified with setOutputFile(). 
+ Call this after prepare().</comment>
+            <returntype>void</returntype>
+        </method>
+        <method>
+            <name>prepare</name>
+            <comment>Prepares the recorder to begin capturing and encoding data. 
+ This method must be called after setting up the desired audio and video sources, encoders, file format, etc., but before start().</comment>
+            <returntype>void</returntype>
+        </method>
+        <method>
+            <name>setOutputFile</name>
+            <comment>Sets the path of the output file to be produced. 
+ Call this after setOutputFormat() but before prepare().
+Dir: The pathname to the directory
+Filename: The filename you wish to save for.</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>Dir</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>Filename</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+        <property>
+            <name>AudioMaxAmplitude</name>
+            <returntype>int</returntype>
+            <comment>Gets the maximum amplitude.</comment>
+        </property>
+        <property>
+            <name>OutputFormat</name>
+            <parameter>
+                <name>OutputFormat</name>
+                <type>int</type>
+            </parameter>
+            <comment>Sets the format of the output file produced during recording. 
+ Call this after setAudioSource()/setVideoSource() but before prepare().
+ It is recommended to always use 3GP format when using the H.263 video encoder and AMR audio encoder. 
+ Using an MPEG-4 container format may confuse some desktop players.</comment>
+        </property>
+        <property>
+            <name>AudioSourceMax</name>
+            <returntype>int</returntype>
+            <comment>Gets the maximum value for audio sources.</comment>
+        </property>
+        <property>
+            <name>AudioEncoder</name>
+            <parameter>
+                <name>audio_encoder</name>
+                <type>int</type>
+            </parameter>
+            <comment>Sets the audio encoder to be used for recording. 
+ If this method is not called, the output file will not contain an audio track. 
+ Call this after setOutputFormat() but before prepare().</comment>
+        </property>
+        <property>
+            <name>AudioChannels</name>
+            <parameter>
+                <name>numChannels</name>
+                <type>int</type>
+            </parameter>
+            <comment>Sets the number of audio channels for recording. 
+ Call this method before prepare(). 
+ Prepare() may perform additional checks on the parameter to make sure whether the specified number of audio channels are applicable.
+ API Level 8</comment>
+        </property>
+        <property>
+            <name>MaxDuration</name>
+            <parameter>
+                <name>ms</name>
+                <type>int</type>
+            </parameter>
+            <comment>Sets the maximum duration (in ms) of the recording session. 
+ Call this after setOutFormat() but before prepare().</comment>
+        </property>
+        <property>
+            <name>AudioSamplingRate</name>
+            <parameter>
+                <name>samplingRate</name>
+                <type>int</type>
+            </parameter>
+            <comment>Sets the audio sampling rate for recording. 
+ Call this method before prepare(). 
+ API Level 8
+ Prepare() may perform additional checks on the parameter to make sure whether the specified audio sampling rate is applicable. 
+ The sampling rate really depends on the format for the audio recording, as well as the capabilities of the platform. 
+ For instance, the sampling rate supported by AAC audio coding standard ranges from 8 to 96 kHz, the sampling 
+ rate supported by AMRNB is 8kHz, and the sampling rate supported by AMRWB is 16kHz. Please consult with the related audio coding 
+ standard for the supported audio sampling rate.</comment>
+        </property>
+        <property>
+            <name>AudioSource</name>
+            <parameter>
+                <name>audio_source</name>
+                <type>int</type>
+            </parameter>
+            <comment>Sets the audio source to be used for recording. 
+ If this method is not called, the output file will not contain an audio track. 
+ The source needs to be specified before setting recording-parameters or encoders. 
+ Call this only before setOutputFormat().</comment>
+        </property>
+        <property>
+            <name>AudioEncodingBitRate</name>
+            <parameter>
+                <name>bitRate</name>
+                <type>int</type>
+            </parameter>
+            <comment>Sets the audio encoding bit rate for recording. 
+ API Level 8
+ Call this method before prepare(). 
+ Prepare() may perform additional checks on the parameter to make sure whether the specified bit rate is applicable, 
+ and sometimes the passed bitRate will be clipped internally to ensure the audio recording can proceed smoothly based 
+ on the capabilities of the platform.</comment>
+        </property>
+        <property>
+            <name>MaxFileSize</name>
+            <parameter>
+                <name>bytes</name>
+                <type>long</type>
+            </parameter>
+            <comment>Sets the maximum filesize (in bytes) of the recording session. 
+ Call this after setOutFormat() but before prepare().</comment>
+        </property>
+        <field>
+            <name>AS_VOICE_CALL</name>
+            <comment></comment>
+            <returntype>int</returntype>
+        </field>
+        <field>
+            <name>AE_AAC</name>
+            <comment></comment>
+            <returntype>int</returntype>
+        </field>
+        <field>
+            <name>AS_VOICE_UPLINK</name>
+            <comment></comment>
+            <returntype>int</returntype>
+        </field>
+        <field>
+            <name>AS_CAMCORDER</name>
+            <comment></comment>
+            <returntype>int</returntype>
+        </field>
+        <field>
+            <name>AE_DEFAULT</name>
+            <comment></comment>
+            <returntype>int</returntype>
+        </field>
+        <field>
+            <name>AS_VOICE_DOWNLINK</name>
+            <comment></comment>
+            <returntype>int</returntype>
+        </field>
+        <field>
+            <name>OF_THREE_GPP</name>
+            <comment></comment>
+            <returntype>int</returntype>
+        </field>
+        <field>
+            <name>OF_RAW_AMR</name>
+            <comment></comment>
+            <returntype>int</returntype>
+        </field>
+        <field>
+            <name>AE_AMR_NB</name>
+            <comment></comment>
+            <returntype>int</returntype>
+        </field>
+        <field>
+            <name>AS_DEFAULT</name>
+            <comment></comment>
+            <returntype>int</returntype>
+        </field>
+        <field>
+            <name>AS_VOICE_RECOGNITION</name>
+            <comment></comment>
+            <returntype>int</returntype>
+        </field>
+        <field>
+            <name>OF_AMR_WB</name>
+            <comment></comment>
+            <returntype>int</returntype>
+        </field>
+        <field>
+            <name>AS_MIC</name>
+            <comment></comment>
+            <returntype>int</returntype>
+        </field>
+        <field>
+            <name>AE_AMR_WB</name>
+            <comment></comment>
+            <returntype>int</returntype>
+        </field>
+        <field>
+            <name>OF_MPEG_4</name>
+            <comment></comment>
+            <returntype>int</returntype>
+        </field>
+        <field>
+            <name>OF_DEFAULT</name>
+            <comment></comment>
+            <returntype>int</returntype>
+        </field>
+        <field>
+            <name>AS_VOICE_COMMUNICATION</name>
+            <comment></comment>
+            <returntype>int</returntype>
+        </field>
+        <field>
+            <name>OF_AMR_NB</name>
+            <comment></comment>
+            <returntype>int</returntype>
+        </field>
+    </class>
+    <version>2.1</version>
+    <author>XverhelstX</author>
+</root>

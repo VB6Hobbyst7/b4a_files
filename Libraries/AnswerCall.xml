@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root>
+    <doclet-version-NOT-library-version>1.00</doclet-version-NOT-library-version>
+    <class>
+        <name>com.rootsoft.answercall.AnswerCall</name>
+        <shortname>AnswerCall</shortname>
+        <owner>process</owner>
+        <permission>android.permission.ACCESS_COARSE_LOCATION</permission>
+        <permission>android.permission.ACCESS_NETWORK_STATE</permission>
+        <permission>android.permission.CHANGE_NETWORK_STATE</permission>
+        <permission>android.permission.ACCESS_COARSE_UPDATES</permission>
+        <permission>android.permission.READ_PHONE_STATE</permission>
+        <method>
+            <name>Initialize</name>
+            <comment>Initializes the BroadcastReceiver.
+ EventName - Events subs prefix.</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>ba</name>
+                <type>anywheresoftware.b4a.BA</type>
+            </parameter>
+            <parameter>
+                <name>EventName</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+        <method>
+            <name>HookUpPhone</name>
+            <comment>Hooks up the phone.</comment>
+            <returntype>void</returntype>
+        </method>
+        <method>
+            <name>LetPhoneRing</name>
+            <comment>Let the phone ring for a set delay</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>Delay</name>
+                <type>int</type>
+            </parameter>
+        </method>
+        <method>
+            <name>disableSpeakerphone</name>
+            <comment>disable the speaker phones.</comment>
+            <returntype>void</returntype>
+        </method>
+        <method>
+            <name>isRinging</name>
+            <comment>Boolean if the phone is still ringing.
+Return type: @return:</comment>
+            <returntype>boolean</returntype>
+        </method>
+        <method>
+            <name>enableSpeakerphone</name>
+            <comment>Enables the speaker phones.</comment>
+            <returntype>void</returntype>
+        </method>
+        <method>
+            <name>AnswerPhone</name>
+            <comment>Answers the phone</comment>
+            <returntype>void</returntype>
+        </method>
+    </class>
+    <version>1.1</version>
+    <author>XverhelstX</author>
+</root>

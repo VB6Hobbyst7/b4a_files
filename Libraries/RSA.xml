@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <doclet-version-NOT-library-version>1.00</doclet-version-NOT-library-version>
+  <dependsOn>byteconverter</dependsOn>
+  <dependsOn>encryption</dependsOn>
+  <dependsOn includesSingletonModules="true">httputils2</dependsOn>
+  <dependsOn>json</dependsOn>
+  <dependsOn>randomaccessfile</dependsOn>
+  <dependsOn>stringutils</dependsOn>
+  <dependsOn>http</dependsOn>
+  <class>
+    <name>RSA.example.rsa</name>
+    <shortname>RSA</shortname>
+    <owner>process</owner>
+    <method>
+      <name>IsInitialized</name>
+      <comment>Tests whether the object has been initialized.</comment>
+      <returntype>boolean</returntype>
+    </method>
+    <method>
+      <name DesignerName="DecryptString">_decryptstring</name>
+      <returntype>String</returntype>
+      <parameter>
+        <name>Data</name>
+        <type>String</type>
+      </parameter>
+    </method>
+    <method>
+      <name DesignerName="EncryptString">_encryptstring</name>
+      <returntype>String</returntype>
+      <parameter>
+        <name>Data</name>
+        <type>String</type>
+      </parameter>
+    </method>
+    <method>
+      <name DesignerName="Initialize">_initialize</name>
+      <returntype>String</returntype>
+      <parameter>
+        <name>ba</name>
+        <type>anywheresoftware.b4a.BA</type>
+      </parameter>
+      <parameter>
+        <name>sPublicKey</name>
+        <type>String</type>
+      </parameter>
+      <parameter>
+        <name>sPrivateKey</name>
+        <type>String</type>
+      </parameter>
+      <parameter>
+        <name>sKeySize</name>
+        <type>int</type>
+      </parameter>
+    </method>
+    <field>
+      <name DesignerName="KEY_SIZE_512">_key_size_512</name>
+      <returntype>int</returntype>
+    </field>
+    <field>
+      <name DesignerName="KEY_SIZE_1024">_key_size_1024</name>
+      <returntype>int</returntype>
+    </field>
+    <field>
+      <name DesignerName="KEY_SIZE_2024">_key_size_2024</name>
+      <returntype>int</returntype>
+    </field>
+    <field>
+      <name DesignerName="KEY_SIZE_4096">_key_size_4096</name>
+      <returntype>int</returntype>
+    </field>
+  </class>
+  <version>1</version>
+</root>

@@ -1,0 +1,4 @@
+adb shell 
+su 
+mount -o rw,remount rootfs / 
+chmod 777 /mnt/sdcard 

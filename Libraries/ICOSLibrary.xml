@@ -1,0 +1,5588 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root>
+    <doclet-version-NOT-library-version>1.01</doclet-version-NOT-library-version>
+    <class>
+        <name>anywheresoftware.b4a.giuseppe.salvi.icos.library.SimpleListAdapter2</name>
+        <owner>process</owner>
+        <method>
+            <name>notifyDataSetInvalidated</name>
+            <comment></comment>
+            <returntype>void</returntype>
+        </method>
+        <method>
+            <name>areAllItemsEnabled</name>
+            <comment></comment>
+            <returntype>boolean</returntype>
+        </method>
+        <method>
+            <name>notifyDataSetChanged</name>
+            <comment></comment>
+            <returntype>void</returntype>
+        </method>
+        <method>
+            <name>hasStableIds</name>
+            <comment></comment>
+            <returntype>boolean</returntype>
+        </method>
+        <method>
+            <name>getItemViewType</name>
+            <comment></comment>
+            <returntype>int</returntype>
+            <parameter>
+                <name>position</name>
+                <type>int</type>
+            </parameter>
+        </method>
+        <method>
+            <name>getView</name>
+            <comment></comment>
+            <returntype>android.view.View</returntype>
+            <parameter>
+                <name>position</name>
+                <type>int</type>
+            </parameter>
+            <parameter>
+                <name>convertView</name>
+                <type>android.view.View</type>
+            </parameter>
+            <parameter>
+                <name>parent</name>
+                <type>android.view.ViewGroup</type>
+            </parameter>
+        </method>
+        <method>
+            <name>getDropDownView</name>
+            <comment></comment>
+            <returntype>android.view.View</returntype>
+            <parameter>
+                <name>arg0</name>
+                <type>int</type>
+            </parameter>
+            <parameter>
+                <name>arg1</name>
+                <type>android.view.View</type>
+            </parameter>
+            <parameter>
+                <name>arg2</name>
+                <type>android.view.ViewGroup</type>
+            </parameter>
+        </method>
+        <method>
+            <name>registerDataSetObserver</name>
+            <comment></comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>arg0</name>
+                <type>android.database.DataSetObserver</type>
+            </parameter>
+        </method>
+        <method>
+            <name>isEnabled</name>
+            <comment></comment>
+            <returntype>boolean</returntype>
+            <parameter>
+                <name>arg0</name>
+                <type>int</type>
+            </parameter>
+        </method>
+        <method>
+            <name>getItemId</name>
+            <comment></comment>
+            <returntype>long</returntype>
+            <parameter>
+                <name>position</name>
+                <type>int</type>
+            </parameter>
+        </method>
+        <method>
+            <name>isEmpty</name>
+            <comment></comment>
+            <returntype>boolean</returntype>
+        </method>
+        <method>
+            <name>getItem</name>
+            <comment></comment>
+            <returntype>java.lang.Object</returntype>
+            <parameter>
+                <name>position</name>
+                <type>int</type>
+            </parameter>
+        </method>
+        <method>
+            <name>unregisterDataSetObserver</name>
+            <comment></comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>arg0</name>
+                <type>android.database.DataSetObserver</type>
+            </parameter>
+        </method>
+        <property>
+            <name>Count</name>
+            <returntype>int</returntype>
+            <comment></comment>
+        </property>
+        <property>
+            <name>ViewTypeCount</name>
+            <returntype>int</returntype>
+            <comment></comment>
+        </property>
+        <field>
+            <name>TwoLines</name>
+            <comment></comment>
+            <returntype>anywheresoftware.b4a.giuseppe.salvi.icos.library.SimpleListAdapter2.TwoLinesLayout</returntype>
+        </field>
+        <field>
+            <name>items</name>
+            <comment></comment>
+            <returntype>java.util.ArrayList</returntype>
+        </field>
+        <field>
+            <name>dummyParent</name>
+            <comment></comment>
+            <returntype>anywheresoftware.b4a.BALayout</returntype>
+        </field>
+        <field>
+            <name>TwoLinesAndBitmap</name>
+            <comment></comment>
+            <returntype>anywheresoftware.b4a.giuseppe.salvi.icos.library.SimpleListAdapter2.TwoLinesAndBitmapLayout</returntype>
+        </field>
+        <field>
+            <name>SingleLine</name>
+            <comment></comment>
+            <returntype>anywheresoftware.b4a.giuseppe.salvi.icos.library.SimpleListAdapter2.SingleLineLayout</returntype>
+        </field>
+    </class>
+    <class>
+        <name>anywheresoftware.b4a.giuseppe.salvi.icos.library.SimpleListAdapter2.SingleLineLayout</name>
+        <owner>process</owner>
+        <property>
+            <name>ItemHeight</name>
+            <returntype>int</returntype>
+            <parameter>
+                <name>Height</name>
+                <type>int</type>
+            </parameter>
+            <comment></comment>
+        </property>
+        <field>
+            <name>Background</name>
+            <comment></comment>
+            <returntype>android.graphics.drawable.Drawable</returntype>
+        </field>
+        <field>
+            <name>Label</name>
+            <comment></comment>
+            <returntype>anywheresoftware.b4a.objects.LabelWrapper</returntype>
+        </field>
+    </class>
+    <class>
+        <name>anywheresoftware.b4a.giuseppe.salvi.icos.library.SimpleListAdapter2.TwoLinesAndBitmapLayout</name>
+        <owner>process</owner>
+        <property>
+            <name>ItemHeight</name>
+            <returntype>int</returntype>
+            <parameter>
+                <name>Height</name>
+                <type>int</type>
+            </parameter>
+            <comment></comment>
+        </property>
+        <field>
+            <name>Background</name>
+            <comment></comment>
+            <returntype>android.graphics.drawable.Drawable</returntype>
+        </field>
+        <field>
+            <name>Label</name>
+            <comment></comment>
+            <returntype>anywheresoftware.b4a.objects.LabelWrapper</returntype>
+        </field>
+        <field>
+            <name>ImageView</name>
+            <comment></comment>
+            <returntype>anywheresoftware.b4a.objects.ImageViewWrapper</returntype>
+        </field>
+        <field>
+            <name>SecondLabel</name>
+            <comment></comment>
+            <returntype>anywheresoftware.b4a.objects.LabelWrapper</returntype>
+        </field>
+    </class>
+    <class>
+        <name>anywheresoftware.b4a.giuseppe.salvi.icos.library.SimpleListAdapter2.TwoLinesLayout</name>
+        <owner>process</owner>
+        <property>
+            <name>ItemHeight</name>
+            <returntype>int</returntype>
+            <parameter>
+                <name>Height</name>
+                <type>int</type>
+            </parameter>
+            <comment></comment>
+        </property>
+        <field>
+            <name>Background</name>
+            <comment></comment>
+            <returntype>android.graphics.drawable.Drawable</returntype>
+        </field>
+        <field>
+            <name>Label</name>
+            <comment></comment>
+            <returntype>anywheresoftware.b4a.objects.LabelWrapper</returntype>
+        </field>
+        <field>
+            <name>SecondLabel</name>
+            <comment></comment>
+            <returntype>anywheresoftware.b4a.objects.LabelWrapper</returntype>
+        </field>
+    </class>
+    <class>
+        <name>anywheresoftware.b4a.giuseppe.salvi.icos.library.SimpleListAdapter</name>
+        <owner>process</owner>
+        <method>
+            <name>notifyDataSetInvalidated</name>
+            <comment></comment>
+            <returntype>void</returntype>
+        </method>
+        <method>
+            <name>areAllItemsEnabled</name>
+            <comment></comment>
+            <returntype>boolean</returntype>
+        </method>
+        <method>
+            <name>notifyDataSetChanged</name>
+            <comment></comment>
+            <returntype>void</returntype>
+        </method>
+        <method>
+            <name>hasStableIds</name>
+            <comment></comment>
+            <returntype>boolean</returntype>
+        </method>
+        <method>
+            <name>getItemViewType</name>
+            <comment></comment>
+            <returntype>int</returntype>
+            <parameter>
+                <name>position</name>
+                <type>int</type>
+            </parameter>
+        </method>
+        <method>
+            <name>getView</name>
+            <comment></comment>
+            <returntype>android.view.View</returntype>
+            <parameter>
+                <name>position</name>
+                <type>int</type>
+            </parameter>
+            <parameter>
+                <name>convertView</name>
+                <type>android.view.View</type>
+            </parameter>
+            <parameter>
+                <name>parent</name>
+                <type>android.view.ViewGroup</type>
+            </parameter>
+        </method>
+        <method>
+            <name>getDropDownView</name>
+            <comment></comment>
+            <returntype>android.view.View</returntype>
+            <parameter>
+                <name>arg0</name>
+                <type>int</type>
+            </parameter>
+            <parameter>
+                <name>arg1</name>
+                <type>android.view.View</type>
+            </parameter>
+            <parameter>
+                <name>arg2</name>
+                <type>android.view.ViewGroup</type>
+            </parameter>
+        </method>
+        <method>
+            <name>registerDataSetObserver</name>
+            <comment></comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>arg0</name>
+                <type>android.database.DataSetObserver</type>
+            </parameter>
+        </method>
+        <method>
+            <name>isEnabled</name>
+            <comment></comment>
+            <returntype>boolean</returntype>
+            <parameter>
+                <name>arg0</name>
+                <type>int</type>
+            </parameter>
+        </method>
+        <method>
+            <name>getItemId</name>
+            <comment></comment>
+            <returntype>long</returntype>
+            <parameter>
+                <name>position</name>
+                <type>int</type>
+            </parameter>
+        </method>
+        <method>
+            <name>isEmpty</name>
+            <comment></comment>
+            <returntype>boolean</returntype>
+        </method>
+        <method>
+            <name>getItem</name>
+            <comment></comment>
+            <returntype>java.lang.Object</returntype>
+            <parameter>
+                <name>position</name>
+                <type>int</type>
+            </parameter>
+        </method>
+        <method>
+            <name>unregisterDataSetObserver</name>
+            <comment></comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>arg0</name>
+                <type>android.database.DataSetObserver</type>
+            </parameter>
+        </method>
+        <property>
+            <name>Count</name>
+            <returntype>int</returntype>
+            <comment></comment>
+        </property>
+        <property>
+            <name>ViewTypeCount</name>
+            <returntype>int</returntype>
+            <comment></comment>
+        </property>
+        <field>
+            <name>TwoLines</name>
+            <comment></comment>
+            <returntype>anywheresoftware.b4a.giuseppe.salvi.icos.library.SimpleListAdapter.TwoLinesLayout</returntype>
+        </field>
+        <field>
+            <name>items</name>
+            <comment></comment>
+            <returntype>java.util.ArrayList</returntype>
+        </field>
+        <field>
+            <name>dummyParent</name>
+            <comment></comment>
+            <returntype>anywheresoftware.b4a.BALayout</returntype>
+        </field>
+        <field>
+            <name>TwoLinesAndBitmap</name>
+            <comment></comment>
+            <returntype>anywheresoftware.b4a.giuseppe.salvi.icos.library.SimpleListAdapter.TwoLinesAndBitmapLayout</returntype>
+        </field>
+        <field>
+            <name>SingleLine</name>
+            <comment></comment>
+            <returntype>anywheresoftware.b4a.giuseppe.salvi.icos.library.SimpleListAdapter.SingleLineLayout</returntype>
+        </field>
+    </class>
+    <class>
+        <name>anywheresoftware.b4a.giuseppe.salvi.icos.library.SimpleListAdapter.SingleLineLayout</name>
+        <owner>process</owner>
+        <property>
+            <name>ItemHeight</name>
+            <returntype>int</returntype>
+            <parameter>
+                <name>Height</name>
+                <type>int</type>
+            </parameter>
+            <comment></comment>
+        </property>
+        <field>
+            <name>Background</name>
+            <comment></comment>
+            <returntype>android.graphics.drawable.Drawable</returntype>
+        </field>
+        <field>
+            <name>Label</name>
+            <comment></comment>
+            <returntype>anywheresoftware.b4a.objects.LabelWrapper</returntype>
+        </field>
+    </class>
+    <class>
+        <name>anywheresoftware.b4a.giuseppe.salvi.icos.library.SimpleListAdapter.TwoLinesAndBitmapLayout</name>
+        <owner>process</owner>
+        <property>
+            <name>ItemHeight</name>
+            <returntype>int</returntype>
+            <parameter>
+                <name>Height</name>
+                <type>int</type>
+            </parameter>
+            <comment></comment>
+        </property>
+        <field>
+            <name>Background</name>
+            <comment></comment>
+            <returntype>android.graphics.drawable.Drawable</returntype>
+        </field>
+        <field>
+            <name>Label</name>
+            <comment></comment>
+            <returntype>anywheresoftware.b4a.objects.LabelWrapper</returntype>
+        </field>
+        <field>
+            <name>ImageView</name>
+            <comment></comment>
+            <returntype>anywheresoftware.b4a.objects.ImageViewWrapper</returntype>
+        </field>
+        <field>
+            <name>SecondLabel</name>
+            <comment></comment>
+            <returntype>anywheresoftware.b4a.objects.LabelWrapper</returntype>
+        </field>
+    </class>
+    <class>
+        <name>anywheresoftware.b4a.giuseppe.salvi.icos.library.SimpleListAdapter.TwoLinesLayout</name>
+        <owner>process</owner>
+        <property>
+            <name>ItemHeight</name>
+            <returntype>int</returntype>
+            <parameter>
+                <name>Height</name>
+                <type>int</type>
+            </parameter>
+            <comment></comment>
+        </property>
+        <field>
+            <name>Background</name>
+            <comment></comment>
+            <returntype>android.graphics.drawable.Drawable</returntype>
+        </field>
+        <field>
+            <name>Label</name>
+            <comment></comment>
+            <returntype>anywheresoftware.b4a.objects.LabelWrapper</returntype>
+        </field>
+        <field>
+            <name>SecondLabel</name>
+            <comment></comment>
+            <returntype>anywheresoftware.b4a.objects.LabelWrapper</returntype>
+        </field>
+    </class>
+    <class>
+        <name>giuseppe.salvi.icos.library.TTs</name>
+        <shortname>ICOSTextToSpeech</shortname>
+        <objectwrapper>android.speech.tts.TextToSpeech</objectwrapper>
+        <owner>activity</owner>
+        <permission>android.permission.READ_SMS</permission>
+        <permission>android.permission.RECEIVE_SMS</permission>
+        <permission>android.permission.WRITE_SMS</permission>
+        <permission>android.permission.ACCESS_LOCATION_EXTRA_COMMANDS</permission>
+        <permission>jp.co.c_lis.permission.CHANGE_LOCALE</permission>
+        <method>
+            <name>GoLanguageSettings</name>
+            <comment>Examples:
+ Dim tts As ICOSTextToSpeech
+ Dim b1 As Button
+ 
+ Sub b1_Click
+ tts.LanguageSettings
+ End Sub
+ 
+ Goes into the language setting to check if it has changed the language you've chosen</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>ba</name>
+                <type>anywheresoftware.b4a.BA</type>
+            </parameter>
+        </method>
+        <method>
+            <name>AddSpeaking</name>
+            <comment>Examples:
+ Dim tts As ICOSTextToSpeech
+ Dim b1 As Button
+ 
+ Sub b1_Click
+ tts.AddSpeaking="bla bla bla"
+ End Sub
+ 
+ Add the second text to speaking</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>ba</name>
+                <type>anywheresoftware.b4a.BA</type>
+            </parameter>
+            <parameter>
+                <name>txt2</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+        <method>
+            <name>GetEngineByPackageName</name>
+            <comment>Examples:
+ Dim tts As ICOSTextToSpeech
+ Dim b1 As Button
+ 
+ Sub b1_Click
+ tts.GetEngineByPackageName
+ End Sub
+ 
+ Return the current Engine Package Name</comment>
+            <returntype>java.lang.String</returntype>
+            <parameter>
+                <name>ba</name>
+                <type>anywheresoftware.b4a.BA</type>
+            </parameter>
+        </method>
+        <method>
+            <name>RateToSpeak</name>
+            <comment>Examples:
+ Dim tts As ICOSTextToSpeech
+ Dim b1 As Button
+ 
+ Sub b1_Click
+ tts.RateToSpeak=3.5
+ End Sub
+ 
+ Set the rate for the speaking</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>ba</name>
+                <type>anywheresoftware.b4a.BA</type>
+            </parameter>
+            <parameter>
+                <name>mRate</name>
+                <type>float</type>
+            </parameter>
+        </method>
+        <method>
+            <name>ShutDown</name>
+            <comment>Examples:
+ Dim tts As ICOSTextToSpeech
+ Dim b1 As Button
+ 
+ Sub b1_Click
+ tts.ShutDown
+ End Sub
+ 
+ Release the ICOSTextToSpeech.</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>ba</name>
+                <type>anywheresoftware.b4a.BA</type>
+            </parameter>
+        </method>
+        <method>
+            <name>StopToSpeak</name>
+            <comment>Examples:
+ Dim tts As ICOSTextToSpeech
+ Dim b1 As Button
+ 
+ Sub b1_Click
+ tts.StopToSpeak
+ End Sub
+ 
+ Stop the ICOSTextToSpeech.</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>ba</name>
+                <type>anywheresoftware.b4a.BA</type>
+            </parameter>
+        </method>
+        <method>
+            <name>ChangeDefaultLanguage</name>
+            <comment>Examples:
+ Dim tts As ICOSTextToSpeech
+ Dim b1 As Button
+ 
+ Sub b1_Click
+ tts.ChangeDefaultLanguage
+ End Sub
+ 
+ Programmatically change the default language of your phone with that choice yourself</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>ba</name>
+                <type>anywheresoftware.b4a.BA</type>
+            </parameter>
+        </method>
+        <method>
+            <name>Speaking</name>
+            <comment>Examples:
+ Dim tts As ICOSTextToSpeech
+ Dim b1 As Button
+ 
+ Sub b1_Click
+ tts.Speaking="bla bla bla"
+ End Sub
+ 
+ Speak the first text</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>ba</name>
+                <type>anywheresoftware.b4a.BA</type>
+            </parameter>
+            <parameter>
+                <name>txt</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+        <method>
+            <name>WriteAndSpeakText</name>
+            <comment>Examples:
+ Dim tts As ICOSTextToSpeech
+ Dim b1 As Button
+ 
+ Sub b1_Click
+ tts.WriteAndSpeakText
+ End Sub</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>ba</name>
+                <type>anywheresoftware.b4a.BA</type>
+            </parameter>
+        </method>
+        <method>
+            <name>SetEngineByPackageName</name>
+            <comment>Examples:
+ Dim tts As ICOSTextToSpeech
+ Dim b1 As Button
+ 
+ Sub b1_Click
+ tts.SetEngineByPackageName="com.ivona.tts"
+ End Sub
+ 
+ Set Engine PackageName</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>ba</name>
+                <type>anywheresoftware.b4a.BA</type>
+            </parameter>
+            <parameter>
+                <name>EnginePackageName</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+        <method>
+            <name>InitializeTTs</name>
+            <comment>Examples:
+ Dim tts As ICOSTextToSpeech
+ 
+ tts.InitializeTextToSpeech("tts")</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>ba</name>
+                <type>anywheresoftware.b4a.BA</type>
+            </parameter>
+            <parameter>
+                <name>EventName</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>DefLang</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+        <method>
+            <name>ReadAndSpeakSMS</name>
+            <comment>Examples:
+ Dim tts As ICOSTextToSpeech
+ Dim b1 As Button
+ 
+ Sub b1_Click
+ tts.ReadAndSpeakSMS
+ End Sub</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>ba</name>
+                <type>anywheresoftware.b4a.BA</type>
+            </parameter>
+        </method>
+        <method>
+            <name>PitchToSpeak</name>
+            <comment>Examples:
+ Dim tts As ICOSTextToSpeech
+ Dim b1 As Button
+ 
+ Sub b1_Click
+ tts.PitchToSpeak=3.5
+ End Sub
+ 
+ Set the pitch for the speaking</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>ba</name>
+                <type>anywheresoftware.b4a.BA</type>
+            </parameter>
+            <parameter>
+                <name>mPitch</name>
+                <type>float</type>
+            </parameter>
+        </method>
+        <method>
+            <name>SetLanguageToSpeak</name>
+            <comment>Examples:
+ Dim tts As ICOSTextToSpeech
+ Dim b1 As Button
+ 
+ Sub b1_Click
+ tts.SetLanguageToSpeak
+ End Sub
+ 
+ Set the language</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>ba</name>
+                <type>anywheresoftware.b4a.BA</type>
+            </parameter>
+        </method>
+        <method>
+            <name>IsInitialized</name>
+            <comment></comment>
+            <returntype>boolean</returntype>
+        </method>
+        <property>
+            <name>Version</name>
+            <returntype>double</returntype>
+            <comment>Return the version of this library</comment>
+        </property>
+    </class>
+    <class>
+        <name>giuseppe.salvi.icos.library.TTs.StringCryptor</name>
+        <owner>process</owner>
+        <method>
+            <name>decrypt</name>
+            <comment></comment>
+            <returntype>java.lang.String</returntype>
+            <parameter>
+                <name>password</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>encryptedData</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+        <method>
+            <name>encrypt</name>
+            <comment></comment>
+            <returntype>java.lang.String</returntype>
+            <parameter>
+                <name>password</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>data</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+        <method>
+            <name>generateKey</name>
+            <comment></comment>
+            <returntype>byte[]</returntype>
+            <parameter>
+                <name>seed</name>
+                <type>byte[]</type>
+            </parameter>
+        </method>
+    </class>
+    <class>
+        <name>giuseppe.salvi.icos.library.TTs.MyClassInfo</name>
+        <owner>process</owner>
+        <property>
+            <name>LanguageCountry</name>
+            <returntype>java.lang.String</returntype>
+            <comment></comment>
+        </property>
+        <property>
+            <name>Language</name>
+            <returntype>java.lang.String</returntype>
+            <comment></comment>
+        </property>
+        <property>
+            <name>Locale</name>
+            <returntype>java.util.Locale</returntype>
+            <comment></comment>
+        </property>
+        <property>
+            <name>LanguageTag</name>
+            <returntype>java.lang.String</returntype>
+            <comment></comment>
+        </property>
+    </class>
+    <class>
+        <name>giuseppe.salvi.icos.library.MainClass</name>
+        <owner>process</owner>
+    </class>
+    <class>
+        <name>giuseppe.salvi.icos.library.ICOSWeather</name>
+        <shortname>ICOSGoogleWeather</shortname>
+        <owner>activity</owner>
+        <permission>android.permission.INTERNET</permission>
+        <method>
+            <name>ForecastConditions</name>
+            <comment>Dim ics As ICOSGoogleWeather
+ Dim lb As Label
+ 
+ SetCityName="NewYork"
+ lb.Text=ForecastConditions(0)  -  between 0 and 3
+ 
+ Return Day Of Week + Condition + Low Temp. + High Temp.</comment>
+            <returntype>java.lang.String</returntype>
+            <parameter>
+                <name>pos</name>
+                <type>int</type>
+            </parameter>
+        </method>
+        <method>
+            <name>Initialize</name>
+            <comment>Dim ics As ICOSGoogleWeather
+ 
+ Initialize("ics") 
+ 
+ Initilize the object</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>ba</name>
+                <type>anywheresoftware.b4a.BA</type>
+            </parameter>
+            <parameter>
+                <name>EventName</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+        <method>
+            <name>GetLowTemp</name>
+            <comment>Dim ics As ICOSGoogleWeather
+ Dim lb As Label
+ 
+ SetCityName="NewYork"
+ lb.Text=GetLowTemp(0)  -  between 0 and 3
+ 
+ Return the Low Temperature</comment>
+            <returntype>java.lang.String</returntype>
+            <parameter>
+                <name>pos</name>
+                <type>int</type>
+            </parameter>
+        </method>
+        <method>
+            <name>GetCondition</name>
+            <comment>Dim ics As ICOSGoogleWeather
+ Dim lb As Label
+ 
+ SetCityName="NewYork"
+ lb.Text=GetCondition(0)  -  between 0 and 3
+ 
+ Return Condition</comment>
+            <returntype>java.lang.String</returntype>
+            <parameter>
+                <name>pos</name>
+                <type>int</type>
+            </parameter>
+        </method>
+        <method>
+            <name>GetDayOfWeek</name>
+            <comment>Dim ics As ICOSGoogleWeather
+ Dim lb As Label
+ 
+ SetCityName="NewYork"
+ lb.Text=GetDayOfWeek(0)  -  between 0 and 3
+ 
+ Return Day Of Week</comment>
+            <returntype>java.lang.String</returntype>
+            <parameter>
+                <name>pos</name>
+                <type>int</type>
+            </parameter>
+        </method>
+        <method>
+            <name>GetIconConditions</name>
+            <comment>Dim ics As ICOSGoogleWeather
+ Dim img As ImageView
+ 
+ SetCityName="NewYork"
+ img.SetBackgroundImage=GetIconConditions(0)  -  between 0 and 3
+ 
+ Display Icon condition</comment>
+            <returntype>java.lang.String</returntype>
+            <parameter>
+                <name>pos</name>
+                <type>int</type>
+            </parameter>
+        </method>
+        <method>
+            <name>GetHighTemp</name>
+            <comment>Dim ics As ICOSGoogleWeather
+ Dim lb As Label
+ 
+ SetCityName="NewYork"
+ lb.Text=GetHighTemp(0)  -  between 0 and 3
+ 
+ Return the High Temperature</comment>
+            <returntype>java.lang.String</returntype>
+            <parameter>
+                <name>pos</name>
+                <type>int</type>
+            </parameter>
+        </method>
+        <property>
+            <name>CurrentWindCondition</name>
+            <returntype>java.lang.String</returntype>
+            <comment>Dim ics As ICOSGoogleWeather
+ Dim lb As Label
+ 
+ SetCityName="NewYork"
+ lb.Text=getCurrentWindCondition
+ 
+ Return Current Wind Condition</comment>
+        </property>
+        <property>
+            <name>CityName</name>
+            <returntype>java.lang.String</returntype>
+            <comment>Dim ics As ICOSGoogleWeather
+ Dim lb As Label
+ 
+ SetCityName="NewYork"
+ lb.Text=CityInformation
+ 
+ Return Forecast City Name</comment>
+        </property>
+        <property>
+            <name>CurrentHumidity</name>
+            <returntype>java.lang.String</returntype>
+            <comment>Dim ics As ICOSGoogleWeather
+ Dim lb As Label
+ 
+ SetCityName="NewYork"
+ lb.Text=CurrentHumidity
+ 
+ Return Current Humidity</comment>
+        </property>
+        <property>
+            <name>CurrentForecastConditions</name>
+            <returntype>java.lang.String</returntype>
+            <comment>Dim ics As ICOSGoogleWeather
+ Dim lb As Label
+ 
+ SetCityName="NewYork"
+ lb.Text=CurrentForecastConditions
+ 
+ Return CurrentCondition + Temp F + Temp C + Humidity + Wind Condition</comment>
+        </property>
+        <property>
+            <name>ForecastDate</name>
+            <returntype>java.lang.String</returntype>
+            <comment>Dim ics As ICOSGoogleWeather
+ Dim lb As Label
+ 
+ SetCityName="NewYork"
+ lb.Text=ForecastDate
+ 
+ Return Forecast Date</comment>
+        </property>
+        <property>
+            <name>PostalCode</name>
+            <returntype>java.lang.String</returntype>
+            <comment>Dim ics As ICOSGoogleWeather
+ Dim lb As Label
+ 
+ SetCityName="NewYork"
+ lb.Text=PostalCode
+ 
+ Return Forecast Postal Code</comment>
+        </property>
+        <property>
+            <name>CurrentTempC</name>
+            <returntype>java.lang.String</returntype>
+            <comment>Dim ics As ICOSGoogleWeather
+ Dim lb As Label
+ 
+ SetCityName="NewYork"
+ lb.Text=CurrentTempC
+ 
+ Return Current Celsius</comment>
+        </property>
+        <property>
+            <name>CurrentIconConditions</name>
+            <returntype>java.lang.String</returntype>
+            <comment>Dim ics As ICOSGoogleWeather
+ Dim img As ImageView
+ 
+ SetCityName="NewYork"
+ img.SetBackgroundImage=CurrentIconConditions
+ 
+ Display Current Icon For Condition</comment>
+        </property>
+        <property>
+            <name>SetCityName</name>
+            <parameter>
+                <name>CityName</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <comment>Dim ics As ICOSGoogleWeather
+ Dim img As ImageView
+ 
+ SetCityName="NewYork"
+ 
+ Set City Name to be loaded</comment>
+        </property>
+        <property>
+            <name>CurrentTempF</name>
+            <returntype>java.lang.String</returntype>
+            <comment>Dim ics As ICOSGoogleWeather
+ Dim lb As Label
+ 
+ SetCityName="NewYork"
+ lb.Text=getCurrentTempF
+ 
+ Return Current Fahrenheit</comment>
+        </property>
+        <property>
+            <name>CurrentForecastInformation</name>
+            <returntype>java.lang.String</returntype>
+            <comment>Dim ics As ICOSGoogleWeather
+ Dim lb As Label
+ 
+ SetCityName="NewYork"
+ lb.Text=CurrentForecastInformation
+ 
+ Return ForecastInformation (city , postal code , forecast date , current date time , unit system)</comment>
+        </property>
+        <property>
+            <name>Version</name>
+            <returntype>double</returntype>
+            <comment>Return the version of this library</comment>
+        </property>
+        <property>
+            <name>CurrentCondition</name>
+            <returntype>java.lang.String</returntype>
+            <comment>Dim ics As ICOSGoogleWeather
+ Dim lb As Label
+ 
+ SetCityName="NewYork"
+ lb.Text=CurrentCondition
+ 
+ Return CurrentCondition</comment>
+        </property>
+        <property>
+            <name>UnitSystem</name>
+            <returntype>java.lang.String</returntype>
+            <comment>Dim ics As ICOSGoogleWeather
+ Dim lb As Label
+ 
+ SetCityName="NewYork"
+ lb.Text=UnitSystem
+ 
+ Return Forecast Current Unit System</comment>
+        </property>
+        <property>
+            <name>CurrentDateTime</name>
+            <returntype>java.lang.String</returntype>
+            <comment>Dim ics As ICOSGoogleWeather
+ Dim lb As Label
+ 
+ SetCityName="NewYork"
+ lb.Text=CurrentDateTime
+ 
+ Return Forecast Current Date Time</comment>
+        </property>
+    </class>
+    <class>
+        <name>giuseppe.salvi.icos.library.ICOSTitleBarAnimation</name>
+        <shortname>ICOSTitleBarAnimation</shortname>
+        <objectwrapper>android.view.animation.Animation</objectwrapper>
+        <owner>activity</owner>
+        <event>animationend</event>
+        <method>
+            <name>StopAnimTitleBar</name>
+            <comment>Stop the animation</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>ba</name>
+                <type>anywheresoftware.b4a.BA</type>
+            </parameter>
+        </method>
+        <method>
+            <name>InfinitySlideReverseTitleBar</name>
+            <comment>Example:
+ Dim anim As ICOSAnimation
+ Dim Button1 As Button
+ 
+ Sub b1_Click
+ anim.InfinitySlideReverseTitleBar("anim",600,2)
+ anim.StartAnimTitleBar
+ End Sub</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>ba</name>
+                <type>anywheresoftware.b4a.BA</type>
+            </parameter>
+            <parameter>
+                <name>EventName</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>SlideValue</name>
+                <type>float</type>
+            </parameter>
+            <parameter>
+                <name>Duration</name>
+                <type>long</type>
+            </parameter>
+        </method>
+        <method>
+            <name>AutoRepeat</name>
+            <comment>Set repeat infinity automatically</comment>
+            <returntype>void</returntype>
+        </method>
+        <method>
+            <name>StartAnimTitleBar</name>
+            <comment>anim.StartAnimTitleBar</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>ba</name>
+                <type>anywheresoftware.b4a.BA</type>
+            </parameter>
+        </method>
+        <method>
+            <name>FadeInTitleBar</name>
+            <comment>Example:
+ Dim anim As ICOSAnimation
+ Dim ImageView1 As ImageView
+ Dim Button1 As Button
+ 
+ Sub b1_Click
+ anim.FadeInTitleBar("anim",2)
+ anim.StartAnimTitleBar
+ End Sub</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>ba</name>
+                <type>anywheresoftware.b4a.BA</type>
+            </parameter>
+            <parameter>
+                <name>EventName</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>Duration</name>
+                <type>long</type>
+            </parameter>
+        </method>
+        <method>
+            <name>SlideTitleBarFromRightToLeft</name>
+            <comment>Example:
+ Dim anim As ICOSAnimation
+ Dim Button1 As Button
+ 
+ Sub b1_Click
+ anim.SlideTitleBarFromRightToLeft("anim",600,2)
+ anim.StartAnimTitleBar
+ End Sub</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>ba</name>
+                <type>anywheresoftware.b4a.BA</type>
+            </parameter>
+            <parameter>
+                <name>EventName</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>SlideValue</name>
+                <type>float</type>
+            </parameter>
+            <parameter>
+                <name>Duration</name>
+                <type>long</type>
+            </parameter>
+        </method>
+        <method>
+            <name>FadeOutTitleBar</name>
+            <comment>Example:
+ Dim anim As ICOSAnimation
+ Dim ImageView1 As ImageView
+ Dim Button1 As Button
+ 
+ Sub b1_Click
+ anim.FadeOutTitleBar("anim",2)
+ anim.StartAnimTitleBar
+ End Sub</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>ba</name>
+                <type>anywheresoftware.b4a.BA</type>
+            </parameter>
+            <parameter>
+                <name>EventName</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>Duration</name>
+                <type>long</type>
+            </parameter>
+        </method>
+        <method>
+            <name>InfinitySlideTitleBar</name>
+            <comment>Example:
+ Dim anim As ICOSAnimation
+ Dim Button1 As Button
+ 
+ Sub b1_Click
+ anim.SlideInfinityTitleBar("anim",600,2)
+ anim.StartAnimTitleBar
+ End Sub</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>ba</name>
+                <type>anywheresoftware.b4a.BA</type>
+            </parameter>
+            <parameter>
+                <name>EventName</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>SlideValue</name>
+                <type>float</type>
+            </parameter>
+            <parameter>
+                <name>Duration</name>
+                <type>long</type>
+            </parameter>
+        </method>
+        <method>
+            <name>ScaleTitleBarToRight</name>
+            <comment>Example:
+ Dim anim As ICOSAnimation
+ Dim Button1 As Button
+ 
+ Sub b1_Click
+ anim.SaleTitleBarToRight("anim",2)
+ anim.StartAnimTitleBar
+ End Sub</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>ba</name>
+                <type>anywheresoftware.b4a.BA</type>
+            </parameter>
+            <parameter>
+                <name>EventName</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>Duration</name>
+                <type>long</type>
+            </parameter>
+        </method>
+        <method>
+            <name>ScaleTitleBarFromCentreToLeftRight</name>
+            <comment>Example:
+ Dim anim As ICOSAnimation
+ Dim Button1 As Button
+ 
+ Sub b1_Click
+ anim.SaleTitleBarFromCentreToLeftRight("anim",2)
+ anim.StartAnimTitleBar
+ End Sub</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>ba</name>
+                <type>anywheresoftware.b4a.BA</type>
+            </parameter>
+            <parameter>
+                <name>EventName</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>Duration</name>
+                <type>long</type>
+            </parameter>
+        </method>
+        <method>
+            <name>Flip3DTitleBar</name>
+            <comment>Direction -&gt; FLIP_HORIZONTAL = 1
+ Direction -&gt; FLIP_VERTICAL	= 2
+ Example:
+ Dim anim As ICOSAnimation
+ Dim ImageView1 As ImageView
+ Dim Button1 As Button
+ 
+ Sub b1_Click
+ anim.Flip3DTitleBar("anim",ImageView1,180,3,anim.FLIP_HORIZONTAL)
+ anim.StartAnim(ImageView1)
+ End Sub</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>ba</name>
+                <type>anywheresoftware.b4a.BA</type>
+            </parameter>
+            <parameter>
+                <name>EventName</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>Degrees</name>
+                <type>float</type>
+            </parameter>
+            <parameter>
+                <name>Duration</name>
+                <type>long</type>
+            </parameter>
+            <parameter>
+                <name>Direction</name>
+                <type>int</type>
+            </parameter>
+        </method>
+        <method>
+            <name>InfinityFadeTitleBar</name>
+            <comment>Example:
+ Dim anim As ICOSAnimation
+ Dim ImageView1 As ImageView
+ Dim Button1 As Button
+ 
+ Sub b1_Click
+ anim.InfiniteFadeTitleBar("anim",2)
+ anim.StartAnimTitleBar
+ End Sub</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>ba</name>
+                <type>anywheresoftware.b4a.BA</type>
+            </parameter>
+            <parameter>
+                <name>EventName</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>Duration</name>
+                <type>long</type>
+            </parameter>
+        </method>
+        <method>
+            <name>ScaleTitleBarToLeft</name>
+            <comment>Example:
+ Dim anim As ICOSAnimation
+ Dim Button1 As Button
+ 
+ Sub b1_Click
+ anim.SaleTitleBarToLeft("anim",2)
+ anim.StartAnimTitleBar
+ End Sub</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>ba</name>
+                <type>anywheresoftware.b4a.BA</type>
+            </parameter>
+            <parameter>
+                <name>EventName</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>Duration</name>
+                <type>long</type>
+            </parameter>
+        </method>
+        <method>
+            <name>ScaleTitleBarFromLeftRightToCentre</name>
+            <comment>Example:
+ Dim anim As ICOSAnimation
+ Dim Button1 As Button
+ 
+ Sub b1_Click
+ anim.ScaleTitleBarFromLeftRightToCentre("anim",2)
+ anim.StartAnimTitleBar
+ End Sub</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>ba</name>
+                <type>anywheresoftware.b4a.BA</type>
+            </parameter>
+            <parameter>
+                <name>EventName</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>Duration</name>
+                <type>long</type>
+            </parameter>
+        </method>
+        <method>
+            <name>SlideTitleBarFromLeftToRight</name>
+            <comment>Example:
+ Dim anim As ICOSAnimation
+ Dim Button1 As Button
+ 
+ Sub b1_Click
+ anim.SlideTitleBarFromLeftToRight("anim",600,2)
+ anim.StartAnimTitleBar
+ End Sub</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>ba</name>
+                <type>anywheresoftware.b4a.BA</type>
+            </parameter>
+            <parameter>
+                <name>EventName</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>SlideValue</name>
+                <type>float</type>
+            </parameter>
+            <parameter>
+                <name>Duration</name>
+                <type>long</type>
+            </parameter>
+        </method>
+        <method>
+            <name>AutoReverse</name>
+            <comment>Set reverse automatically</comment>
+            <returntype>void</returntype>
+        </method>
+        <method>
+            <name>IsInitialized</name>
+            <comment></comment>
+            <returntype>boolean</returntype>
+        </method>
+        <property>
+            <name>StartAnimAtTime</name>
+            <parameter>
+                <name>Seconds</name>
+                <type>long</type>
+            </parameter>
+            <comment>Example:
+ Dim anim As ICOSAnimation
+ Dim ImageView1 As ImageView
+ Dim Button1 As Button
+ 
+ Sub b1_Click
+ anim.StartAnimAtTime=5000 The Animation Will start after 5 seconds
+ anim.FadeOut(2)
+ anim.StartAnim(ImageView1)
+ End Sub</comment>
+        </property>
+        <property>
+            <name>Version</name>
+            <returntype>double</returntype>
+            <comment>Return the version of this library</comment>
+        </property>
+        <field>
+            <name>FLIP_VERTICAL</name>
+            <comment></comment>
+            <returntype>int</returntype>
+        </field>
+        <field>
+            <name>FLIP_HORIZONTAL</name>
+            <comment></comment>
+            <returntype>int</returntype>
+        </field>
+    </class>
+    <class>
+        <name>giuseppe.salvi.icos.library.ICOSStrings</name>
+        <shortname>ICOSStrings</shortname>
+        <owner>activity</owner>
+        <method>
+            <name>ExtractVAT</name>
+            <comment>Dim s As ICOSString
+ Dim label1 As Label
+ Example:
+ Label1.text=s.ExtractVAT(100,15)
+ Result is 86.9565</comment>
+            <returntype>double</returntype>
+            <parameter>
+                <name>Value</name>
+                <type>int</type>
+            </parameter>
+            <parameter>
+                <name>Vat</name>
+                <type>float</type>
+            </parameter>
+        </method>
+        <method>
+            <name>StrLeft</name>
+            <comment>Dim s As ICOSString
+ Dim label1 As Label
+ Example:
+ Label1.text=s.StrLeft$("Hello Basic4Android" , 5)
+ "Hello"</comment>
+            <returntype>java.lang.String</returntype>
+            <parameter>
+                <name>text</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>value</name>
+                <type>int</type>
+            </parameter>
+        </method>
+        <method>
+            <name>Mid</name>
+            <comment>Dim s As ICOSString
+ Dim label1 As Label
+ Example:
+ Label1.text=s.Mid$("Hello Basic4Android" , 7 , 13)
+ "BasicAndroid"</comment>
+            <returntype>java.lang.String</returntype>
+            <parameter>
+                <name>text</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>value1</name>
+                <type>int</type>
+            </parameter>
+            <parameter>
+                <name>value2</name>
+                <type>int</type>
+            </parameter>
+        </method>
+        <method>
+            <name>StrRight</name>
+            <comment>Dim s As ICOSString
+ Dim label1 As Label
+ Example:
+ Label1.text=s.StrRight$("Hello Basic4Android" , 7)
+ "Android"</comment>
+            <returntype>java.lang.String</returntype>
+            <parameter>
+                <name>text</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>value</name>
+                <type>int</type>
+            </parameter>
+        </method>
+        <method>
+            <name>CalculatesVAT</name>
+            <comment>Dim s As ICOSString
+ Dim label1 As Label
+ Example:
+ Label1.text=s.CalculatesVAT(100,15)
+ Result is 115</comment>
+            <returntype>int</returntype>
+            <parameter>
+                <name>Value</name>
+                <type>int</type>
+            </parameter>
+            <parameter>
+                <name>Vat</name>
+                <type>int</type>
+            </parameter>
+        </method>
+        <property>
+            <name>Version</name>
+            <returntype>double</returntype>
+            <comment>Return the version of this library</comment>
+        </property>
+    </class>
+    <class>
+        <name>giuseppe.salvi.icos.library.ICOSSlideAnimation</name>
+        <shortname>ICOSSlideAnimation</shortname>
+        <objectwrapper>android.view.animation.Animation</objectwrapper>
+        <owner>activity</owner>
+        <event>animationend</event>
+        <method>
+            <name>SlideFromBottom</name>
+            <comment>Example:
+ Dim anim As ICOSAnimation
+ Dim ImageView1 As ImageView
+ Dim Button1 As Button
+ 
+ Sub b1_Click
+ anim.SlideFromBottom("anim",600,2)
+ anim.StartAnim(ImageView1)
+ End Sub</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>ba</name>
+                <type>anywheresoftware.b4a.BA</type>
+            </parameter>
+            <parameter>
+                <name>EventName</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>SlideValue</name>
+                <type>float</type>
+            </parameter>
+            <parameter>
+                <name>Duration</name>
+                <type>long</type>
+            </parameter>
+        </method>
+        <method>
+            <name>SlideFromLeftToRight</name>
+            <comment>Example:
+ Dim anim As ICOSAnimation
+ Dim ImageView1 As ImageView
+ Dim Button1 As Button
+ 
+ Sub b1_Click
+ anim.SlideFromLeftToRight("anim",600,2)
+ anim.StartAnim(ImageView1)
+ End Sub</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>ba</name>
+                <type>anywheresoftware.b4a.BA</type>
+            </parameter>
+            <parameter>
+                <name>EventName</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>SlideValue</name>
+                <type>float</type>
+            </parameter>
+            <parameter>
+                <name>Duration</name>
+                <type>long</type>
+            </parameter>
+        </method>
+        <method>
+            <name>SlideFromTopToBottom</name>
+            <comment>Example:
+ Dim anim As ICOSAnimation
+ Dim ImageView1 As ImageView
+ Dim Button1 As Button
+ 
+ Sub b1_Click
+ anim.SlideFromTopToBottom("anim",600,2)
+ anim.StartAnim(ImageView1)
+ End Sub</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>ba</name>
+                <type>anywheresoftware.b4a.BA</type>
+            </parameter>
+            <parameter>
+                <name>EventName</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>SlideValue</name>
+                <type>float</type>
+            </parameter>
+            <parameter>
+                <name>Duration</name>
+                <type>long</type>
+            </parameter>
+        </method>
+        <method>
+            <name>SlideFadeFromTop</name>
+            <comment>Example:
+ Dim anim As ICOSAnimation
+ Dim ImageView1 As ImageView
+ Dim Button1 As Button
+ 
+ Sub b1_Click
+ anim.SlideFadeFromTop("anim",600,2)
+ anim.StartAnim(ImageView1)
+ End Sub</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>ba</name>
+                <type>anywheresoftware.b4a.BA</type>
+            </parameter>
+            <parameter>
+                <name>EventName</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>SlideValue</name>
+                <type>float</type>
+            </parameter>
+            <parameter>
+                <name>Duration</name>
+                <type>long</type>
+            </parameter>
+        </method>
+        <method>
+            <name>SlideFromRightToLeft</name>
+            <comment>Example:
+ Dim anim As ICOSAnimation
+ Dim ImageView1 As ImageView
+ Dim Button1 As Button
+ 
+ Sub b1_Click
+ anim.SlideFromRightToLeft("anim",600,2)
+ anim.StartAnim(ImageView1)
+ End Sub</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>ba</name>
+                <type>anywheresoftware.b4a.BA</type>
+            </parameter>
+            <parameter>
+                <name>EventName</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>SlideValue</name>
+                <type>float</type>
+            </parameter>
+            <parameter>
+                <name>Duration</name>
+                <type>long</type>
+            </parameter>
+        </method>
+        <method>
+            <name>SlideFadeToRight</name>
+            <comment>Example:
+ Dim anim As ICOSAnimation
+ Dim ImageView1 As ImageView
+ Dim Button1 As Button
+ 
+ Sub b1_Click
+ anim.SlideFadeToRight("anim",600,2)
+ anim.StartAnim(ImageView1)
+ End Sub</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>ba</name>
+                <type>anywheresoftware.b4a.BA</type>
+            </parameter>
+            <parameter>
+                <name>EventName</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>SlideValue</name>
+                <type>float</type>
+            </parameter>
+            <parameter>
+                <name>Duration</name>
+                <type>long</type>
+            </parameter>
+        </method>
+        <method>
+            <name>SlideToBottom</name>
+            <comment>Example:
+ Dim anim As ICOSAnimation
+ Dim ImageView1 As ImageView
+ Dim Button1 As Button
+ 
+ Sub b1_Click
+ anim.SlideToBottom("anim",600,2)
+ anim.StartAnim(ImageView1)
+ End Sub</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>ba</name>
+                <type>anywheresoftware.b4a.BA</type>
+            </parameter>
+            <parameter>
+                <name>EventName</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>SlideValue</name>
+                <type>float</type>
+            </parameter>
+            <parameter>
+                <name>Duration</name>
+                <type>long</type>
+            </parameter>
+        </method>
+        <method>
+            <name>AutoReverse</name>
+            <comment>Set reverse automatically</comment>
+            <returntype>void</returntype>
+        </method>
+        <method>
+            <name>StopAnin</name>
+            <comment>Stop the animation</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>view</name>
+                <type>android.view.View</type>
+            </parameter>
+        </method>
+        <method>
+            <name>SlideToLeft</name>
+            <comment>Example:
+ Dim anim As ICOSAnimation
+ Dim ImageView1 As ImageView
+ Dim Button1 As Button
+ 
+ Sub b1_Click
+ anim.SlideToLeft(600,2)
+ anim.StartAnim(ImageView1)
+ End Sub</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>ba</name>
+                <type>anywheresoftware.b4a.BA</type>
+            </parameter>
+            <parameter>
+                <name>EventName</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>SlideValue</name>
+                <type>float</type>
+            </parameter>
+            <parameter>
+                <name>Duration</name>
+                <type>long</type>
+            </parameter>
+        </method>
+        <method>
+            <name>IsInitialized</name>
+            <comment></comment>
+            <returntype>boolean</returntype>
+        </method>
+        <method>
+            <name>SlideFadeToTop</name>
+            <comment>Example:
+ Dim anim As ICOSAnimation
+ Dim ImageView1 As ImageView
+ Dim Button1 As Button
+ 
+ Sub b1_Click
+ anim.SlideFadeToTop("anim",600,2)
+ anim.StartAnim(ImageView1)
+ End Sub</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>ba</name>
+                <type>anywheresoftware.b4a.BA</type>
+            </parameter>
+            <parameter>
+                <name>EventName</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>SlideValue</name>
+                <type>float</type>
+            </parameter>
+            <parameter>
+                <name>Duration</name>
+                <type>long</type>
+            </parameter>
+        </method>
+        <method>
+            <name>SlideFromBottomToTop</name>
+            <comment>Example:
+ Dim anim As ICOSAnimation
+ Dim ImageView1 As ImageView
+ Dim Button1 As Button
+ 
+ Sub b1_Click
+ anim.SlideFromBottomToTop("anim",600,2)
+ anim.StartAnim(ImageView1)
+ End Sub</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>ba</name>
+                <type>anywheresoftware.b4a.BA</type>
+            </parameter>
+            <parameter>
+                <name>EventName</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>SlideValue</name>
+                <type>float</type>
+            </parameter>
+            <parameter>
+                <name>Duration</name>
+                <type>long</type>
+            </parameter>
+        </method>
+        <method>
+            <name>AutoRepeat</name>
+            <comment>Set repeat infinity automatically</comment>
+            <returntype>void</returntype>
+        </method>
+        <method>
+            <name>SlideToRight</name>
+            <comment>Example:
+ Dim anim As ICOSAnimation
+ Dim ImageView1 As ImageView
+ Dim Button1 As Button
+ 
+ Sub b1_Click
+ anim.SlideToRight("anim",600,2)
+ anim.StartAnim(ImageView1)
+ End Sub</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>ba</name>
+                <type>anywheresoftware.b4a.BA</type>
+            </parameter>
+            <parameter>
+                <name>EventName</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>SlideValue</name>
+                <type>float</type>
+            </parameter>
+            <parameter>
+                <name>Duration</name>
+                <type>long</type>
+            </parameter>
+        </method>
+        <method>
+            <name>SlideFadeFromBottom</name>
+            <comment>Example:
+ Dim anim As ICOSAnimation
+ Dim ImageView1 As ImageView
+ Dim Button1 As Button
+ 
+ Sub b1_Click
+ anim.SlideFadeFromBottom("anim",600,2)
+ anim.StartAnim(ImageView1)
+ End Sub</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>ba</name>
+                <type>anywheresoftware.b4a.BA</type>
+            </parameter>
+            <parameter>
+                <name>EventName</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>SlideValue</name>
+                <type>float</type>
+            </parameter>
+            <parameter>
+                <name>Duration</name>
+                <type>long</type>
+            </parameter>
+        </method>
+        <method>
+            <name>SlideToTop</name>
+            <comment>Example:
+ Dim anim As ICOSAnimation
+ Dim ImageView1 As ImageView
+ Dim Button1 As Button
+ 
+ Sub b1_Click
+ anim.SlideToTop("anim",600,2)
+ anim.StartAnim(ImageView1)
+ End Sub</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>ba</name>
+                <type>anywheresoftware.b4a.BA</type>
+            </parameter>
+            <parameter>
+                <name>EventName</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>SlideValue</name>
+                <type>float</type>
+            </parameter>
+            <parameter>
+                <name>Duration</name>
+                <type>long</type>
+            </parameter>
+        </method>
+        <method>
+            <name>SlideFadeToLeft</name>
+            <comment>Example:
+ Dim anim As ICOSAnimation
+ Dim ImageView1 As ImageView
+ Dim Button1 As Button
+ 
+ Sub b1_Click
+ anim.SlideFadeToLeft("anim",600,2)
+ anim.StartAnim(ImageView1)
+ End Sub</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>ba</name>
+                <type>anywheresoftware.b4a.BA</type>
+            </parameter>
+            <parameter>
+                <name>EventName</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>SlideValue</name>
+                <type>float</type>
+            </parameter>
+            <parameter>
+                <name>Duration</name>
+                <type>long</type>
+            </parameter>
+        </method>
+        <method>
+            <name>SlideFadeToBottom</name>
+            <comment>Example:
+ Dim anim As ICOSAnimation
+ Dim ImageView1 As ImageView
+ Dim Button1 As Button
+ 
+ Sub b1_Click
+ anim.SlideFadeToBottom("anim",600,2)
+ anim.StartAnim(ImageView1)
+ End Sub</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>ba</name>
+                <type>anywheresoftware.b4a.BA</type>
+            </parameter>
+            <parameter>
+                <name>EventName</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>SlideValue</name>
+                <type>float</type>
+            </parameter>
+            <parameter>
+                <name>Duration</name>
+                <type>long</type>
+            </parameter>
+        </method>
+        <method>
+            <name>SlideFromLeft</name>
+            <comment>Example:
+ Dim anim As ICOSAnimation
+ Dim ImageView1 As ImageView
+ Dim Button1 As Button
+ 
+ Sub b1_Click
+ anim.SlideFromLeft("anim",600,2)
+ anim.StartAnim(ImageView1)
+ End Sub</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>ba</name>
+                <type>anywheresoftware.b4a.BA</type>
+            </parameter>
+            <parameter>
+                <name>EventName</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>SlideValue</name>
+                <type>float</type>
+            </parameter>
+            <parameter>
+                <name>Duration</name>
+                <type>long</type>
+            </parameter>
+        </method>
+        <method>
+            <name>SlideFadeFromRight</name>
+            <comment>Example:
+ Dim anim As ICOSAnimation
+ Dim ImageView1 As ImageView
+ Dim Button1 As Button
+ 
+ Sub b1_Click
+ anim.SlideFadeFromRight("anim",600,2)
+ anim.StartAnim(ImageView1)
+ End Sub</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>ba</name>
+                <type>anywheresoftware.b4a.BA</type>
+            </parameter>
+            <parameter>
+                <name>EventName</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>SlideValue</name>
+                <type>float</type>
+            </parameter>
+            <parameter>
+                <name>Duration</name>
+                <type>long</type>
+            </parameter>
+        </method>
+        <method>
+            <name>SlideFromRight</name>
+            <comment>Example:
+ Dim anim As ICOSAnimation
+ Dim ImageView1 As ImageView
+ Dim Button1 As Button
+ 
+ Sub b1_Click
+ anim.SlideFromRightToLeft(600,2)
+ anim.StartAnim(ImageView1)
+ End Sub</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>ba</name>
+                <type>anywheresoftware.b4a.BA</type>
+            </parameter>
+            <parameter>
+                <name>EventName</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>SlideValue</name>
+                <type>float</type>
+            </parameter>
+            <parameter>
+                <name>Duration</name>
+                <type>long</type>
+            </parameter>
+        </method>
+        <method>
+            <name>StartAnim</name>
+            <comment>anim.StartAnim  --  ( Not for titlebar )</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>view</name>
+                <type>android.view.View</type>
+            </parameter>
+        </method>
+        <method>
+            <name>SlideFromTop</name>
+            <comment>Example:
+ Dim anim As ICOSAnimation
+ Dim ImageView1 As ImageView
+ Dim Button1 As Button
+ 
+ Sub b1_Click
+ anim.SlideFromTop("anim",600,2)
+ anim.StartAnim(ImageView1)
+ End Sub</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>ba</name>
+                <type>anywheresoftware.b4a.BA</type>
+            </parameter>
+            <parameter>
+                <name>EventName</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>SlideValue</name>
+                <type>float</type>
+            </parameter>
+            <parameter>
+                <name>Duration</name>
+                <type>long</type>
+            </parameter>
+        </method>
+        <method>
+            <name>SlideFadeFromLeft</name>
+            <comment>Example:
+ Dim anim As ICOSAnimation
+ Dim ImageView1 As ImageView
+ Dim Button1 As Button
+ 
+ Sub b1_Click
+ anim.SlideFadeFromLeft("anim",600,2)
+ anim.StartAnim(ImageView1)
+ End Sub</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>ba</name>
+                <type>anywheresoftware.b4a.BA</type>
+            </parameter>
+            <parameter>
+                <name>EventName</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>SlideValue</name>
+                <type>float</type>
+            </parameter>
+            <parameter>
+                <name>Duration</name>
+                <type>long</type>
+            </parameter>
+        </method>
+        <property>
+            <name>StartAnimAtTime</name>
+            <parameter>
+                <name>Seconds</name>
+                <type>long</type>
+            </parameter>
+            <comment>Example:
+ Dim anim As ICOSAnimation
+ Dim ImageView1 As ImageView
+ Dim Button1 As Button
+ 
+ Sub b1_Click
+ anim.StartAnimAtTime=5 The Animation Will start after 5 seconds
+ anim.FadeOut(2)
+ anim.StartAnim(ImageView1)
+ End Sub</comment>
+        </property>
+        <property>
+            <name>Version</name>
+            <returntype>double</returntype>
+            <comment>Return the version of this library</comment>
+        </property>
+    </class>
+    <class>
+        <name>giuseppe.salvi.icos.library.ICOSSeekBar</name>
+        <shortname>ICOSSeekBar</shortname>
+        <objectwrapper>android.view.View</objectwrapper>
+        <owner>activity</owner>
+        <event>ValueChanged(Value As Int , FromUser As Boolean)</event>
+        <event>VolumeChanged(Volume As Int , FromUser As Boolean)</event>
+        <method>
+            <name>InitializeVolumeBar</name>
+            <comment>You have to use this with MediaPlayer or ICOSMusicPlayer
+ 
+ Example:
+ Dim ics As ICOSSeekBar
+ 
+ Sub Activity_Create(FirstTime As Boolean)
+ ics.InitializeVolumeBar("ics")
+ ics.ProgressBitmap=LoadBitmap(File.DirAssets,"somefile.png")
+ ics.CursorBitmap=LoadBitmap(File.DirAssets,"somefile.png")
+ Activity.AddView(ics,115,500,350,35)
+ End Sub</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>ba</name>
+                <type>anywheresoftware.b4a.BA</type>
+            </parameter>
+            <parameter>
+                <name>EventName</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+        <method>
+            <name>BringToFront</name>
+            <comment>Send this view to front</comment>
+            <returntype>void</returntype>
+        </method>
+        <method>
+            <name>InitializeProgressBar</name>
+            <comment>Example:
+ Dim ics As ICOSSeekBar
+ 
+ Sub Activity_Create(FirstTime As Boolean)
+ ics.InitializeProgressBar("ics")
+ Activity.AddView(ics,115,500,350,35)
+ End Sub</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>ba</name>
+                <type>anywheresoftware.b4a.BA</type>
+            </parameter>
+            <parameter>
+                <name>EventName</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+        <method>
+            <name>RemoveView</name>
+            <comment>Remove this View</comment>
+            <returntype>void</returntype>
+        </method>
+        <method>
+            <name>InitializeSeekBar</name>
+            <comment>Example:
+ Dim ics As ICOSSeekBar
+ 
+ Sub Activity_Create(FirstTime As Boolean)
+ ics.InitializeSeekBar("ics")
+ ics.ProgressBitmap=LoadBitmap(File.DirAssets,"somefile.png")
+ ics.CursorBitmap=LoadBitmap(File.DirAssets,"somefile.png")
+ Activity.AddView(ics,115,500,350,35)
+ End Sub</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>ba</name>
+                <type>anywheresoftware.b4a.BA</type>
+            </parameter>
+            <parameter>
+                <name>EventName</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+        <method>
+            <name>SendToBack</name>
+            <comment>Send this view to back</comment>
+            <returntype>void</returntype>
+        </method>
+        <method>
+            <name>IsInitialized</name>
+            <comment></comment>
+            <returntype>boolean</returntype>
+        </method>
+        <property>
+            <name>ProgressBarMax</name>
+            <parameter>
+                <name>value</name>
+                <type>int</type>
+            </parameter>
+            <comment>This is part of InitializeProgressBar ( You'll find it in ICOSSeekBar )
+ 
+ Set the Max value of ProgressBarMax</comment>
+        </property>
+        <property>
+            <name>Enabled</name>
+            <returntype>boolean</returntype>
+            <comment></comment>
+        </property>
+        <property>
+            <name>Value</name>
+            <returntype>int</returntype>
+            <parameter>
+                <name>value</name>
+                <type>int</type>
+            </parameter>
+            <comment>This is part of InitializeSeekBar or InitializeVolumeBar ( You'll find it in ICOSSeekBar )
+ 
+ return progress Value</comment>
+        </property>
+        <property>
+            <name>Visible</name>
+            <returntype>boolean</returntype>
+            <parameter>
+                <name>Visible</name>
+                <type>boolean</type>
+            </parameter>
+            <comment></comment>
+        </property>
+        <property>
+            <name>CursorBitmap</name>
+            <parameter>
+                <name>bmp</name>
+                <type>android.graphics.Bitmap</type>
+            </parameter>
+            <comment>This is part of InitializeSeekBar or InitializeVolumeBar ( You'll find it in ICOSSeekBar )
+ 
+ Example:
+ 
+ ics.CursorBitmap=LoadBitmap(File.DirAssets,"somefile.png")</comment>
+        </property>
+        <property>
+            <name>ProgressBitmap</name>
+            <parameter>
+                <name>bmp</name>
+                <type>android.graphics.Bitmap</type>
+            </parameter>
+            <comment>This is part of InitializeSeekBar or InitializeVolumeBar ( You'll find it in ICOSSeekBar )
+ 
+ Example:
+ 
+ ics.ProgressBitmap=LoadBitmap(File.DirAssets,"somefile.png")</comment>
+        </property>
+        <property>
+            <name>StreamVolume</name>
+            <returntype>int</returntype>
+            <parameter>
+                <name>Value</name>
+                <type>int</type>
+            </parameter>
+            <comment>return the value of Volume ( the value is between 0 to 15)</comment>
+        </property>
+        <property>
+            <name>Enable</name>
+            <parameter>
+                <name>Enable</name>
+                <type>boolean</type>
+            </parameter>
+            <comment></comment>
+        </property>
+        <property>
+            <name>Max</name>
+            <returntype>int</returntype>
+            <parameter>
+                <name>value</name>
+                <type>int</type>
+            </parameter>
+            <comment>This is part of InitializeSeekBar or InitializeVolumeBar ( You'll find it in ICOSSeekBar )
+ 
+ return Max Value</comment>
+        </property>
+        <property>
+            <name>ProgressBarValue</name>
+            <parameter>
+                <name>value</name>
+                <type>int</type>
+            </parameter>
+            <comment>This is part of InitializeProgressBar ( You'll find it in ICOSSeekBar)
+ 
+ Set the value of ProgressBarValue</comment>
+        </property>
+        <property>
+            <name>Version</name>
+            <returntype>double</returntype>
+            <comment>Return the version of this library</comment>
+        </property>
+    </class>
+    <class>
+        <name>giuseppe.salvi.icos.library.ICOSScaleAnimation</name>
+        <shortname>ICOSScaleAnimation</shortname>
+        <objectwrapper>android.view.animation.Animation</objectwrapper>
+        <owner>activity</owner>
+        <event>animationend</event>
+        <method>
+            <name>ScaleFromRightToLeftBack</name>
+            <comment>Example:
+ Dim anim As ICOSAnimation
+ Dim ImageView1 As ImageView
+ Dim b1 As Button
+ 
+ Sub b1_Click
+ anim.ScaleFromRightToLeftBack("anim",2000)
+ anim.StartAnim(ImageView1)
+ End Sub</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>ba</name>
+                <type>anywheresoftware.b4a.BA</type>
+            </parameter>
+            <parameter>
+                <name>EventName</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>Duration</name>
+                <type>long</type>
+            </parameter>
+        </method>
+        <method>
+            <name>ScaleFromTopBottomToCenter</name>
+            <comment>Example:
+ Dim anim As ICOSAnimation
+ Dim ImageView1 As ImageView
+ Dim b1 As Button
+ 
+ Sub b1_Click
+ anim.ScaleFromTopBottomToCenter("anim",2000)
+ anim.StartAnim(ImageView1)
+ End Sub</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>ba</name>
+                <type>anywheresoftware.b4a.BA</type>
+            </parameter>
+            <parameter>
+                <name>EventName</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>Duration</name>
+                <type>long</type>
+            </parameter>
+        </method>
+        <method>
+            <name>ScaleToBottom</name>
+            <comment>Example:
+ Dim anim As ICOSAnimation
+ Dim ImageView1 As ImageView
+ Dim b1 As Button
+ 
+ Sub b1_Click
+ anim.ScaleToBottom("anim",2000)
+ anim.StartAnim(ImageView1)
+ End Sub</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>ba</name>
+                <type>anywheresoftware.b4a.BA</type>
+            </parameter>
+            <parameter>
+                <name>EventName</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>Duration</name>
+                <type>long</type>
+            </parameter>
+        </method>
+        <method>
+            <name>ScaleFromCenterToTopBottom</name>
+            <comment>Example:
+ Dim anim As ICOSAnimation
+ Dim ImageView1 As ImageView
+ Dim b1 As Button
+ 
+ Sub b1_Click
+ anim.ScaleFromCenterToTopBottom("anim",2000)
+ anim.StartAnim(ImageView1)
+ End Sub</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>ba</name>
+                <type>anywheresoftware.b4a.BA</type>
+            </parameter>
+            <parameter>
+                <name>EventName</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>Duration</name>
+                <type>long</type>
+            </parameter>
+        </method>
+        <method>
+            <name>ScaleFromRight</name>
+            <comment>Example:
+ Dim anim As ICOSAnimation
+ Dim ImageView1 As ImageView
+ Dim b1 As Button
+ 
+ Sub b1_Click
+ anim.ScaleFromRight("anim",2000)
+ anim.StartAnim(ImageView1)
+ End Sub</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>ba</name>
+                <type>anywheresoftware.b4a.BA</type>
+            </parameter>
+            <parameter>
+                <name>EventName</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>Duration</name>
+                <type>long</type>
+            </parameter>
+        </method>
+        <method>
+            <name>ScaleFromCenterToLeftRightBack</name>
+            <comment>Example:
+ Dim anim As ICOSAnimation
+ Dim ImageView1 As ImageView
+ Dim b1 As Button
+ 
+ Sub b1_Click
+ anim.ScaleFromCenterToLeftRightBack("anim",2000)
+ anim.StartAnim(ImageView1)
+ End Sub</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>ba</name>
+                <type>anywheresoftware.b4a.BA</type>
+            </parameter>
+            <parameter>
+                <name>EventName</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>Duration</name>
+                <type>long</type>
+            </parameter>
+        </method>
+        <method>
+            <name>ScaleFromLeft</name>
+            <comment>Example:
+ Dim anim As ICOSAnimation
+ Dim ImageView1 As ImageView
+ Dim b1 As Button
+ 
+ Sub b1_Click
+ anim.ScaleFromLeft("anim",2000)
+ anim.StartAnim(ImageView1)
+ End Sub</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>ba</name>
+                <type>anywheresoftware.b4a.BA</type>
+            </parameter>
+            <parameter>
+                <name>EventName</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>Duration</name>
+                <type>long</type>
+            </parameter>
+        </method>
+        <method>
+            <name>ScaleFromTopToBottomBack</name>
+            <comment>Example:
+ Dim anim As ICOSAnimation
+ Dim ImageView1 As ImageView
+ Dim b1 As Button
+ 
+ Sub b1_Click
+ anim.ScaleFromTopToBottomBack("anim",2000)
+ anim.StartAnim(ImageView1)
+ End Sub</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>ba</name>
+                <type>anywheresoftware.b4a.BA</type>
+            </parameter>
+            <parameter>
+                <name>EventName</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>Duration</name>
+                <type>long</type>
+            </parameter>
+        </method>
+        <method>
+            <name>ScaleToRight</name>
+            <comment>Example:
+ Dim anim As ICOSAnimation
+ Dim ImageView1 As ImageView
+ Dim b1 As Button
+ 
+ Sub b1_Click
+ anim.ScaleToRight("anim",2000)
+ anim.StartAnim(ImageView1)
+ End Sub</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>ba</name>
+                <type>anywheresoftware.b4a.BA</type>
+            </parameter>
+            <parameter>
+                <name>EventName</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>Duration</name>
+                <type>long</type>
+            </parameter>
+        </method>
+        <method>
+            <name>ScaleCenterIn</name>
+            <comment>Example:
+ Dim anim As ICOSAnimation
+ Dim ImageView1 As ImageView
+ Dim b1 As Button
+ 
+ Sub b1_Click
+ anim.ScaleCenterIn("anim",2000)
+ anim.StartAnim(ImageView1)
+ End Sub</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>ba</name>
+                <type>anywheresoftware.b4a.BA</type>
+            </parameter>
+            <parameter>
+                <name>EventName</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>Duration</name>
+                <type>long</type>
+            </parameter>
+        </method>
+        <method>
+            <name>ScaleFromBottom</name>
+            <comment>Example:
+ Dim anim As ICOSAnimation
+ Dim ImageView1 As ImageView
+ Dim b1 As Button
+ 
+ Sub b1_Click
+ anim.ScaleFromBottom("anim",2000)
+ anim.StartAnim(ImageView1)
+ End Sub</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>ba</name>
+                <type>anywheresoftware.b4a.BA</type>
+            </parameter>
+            <parameter>
+                <name>EventName</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>Duration</name>
+                <type>long</type>
+            </parameter>
+        </method>
+        <method>
+            <name>AutoReverse</name>
+            <comment>Set reverse automatically</comment>
+            <returntype>void</returntype>
+        </method>
+        <method>
+            <name>StopAnin</name>
+            <comment>Stop the animation</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>view</name>
+                <type>android.view.View</type>
+            </parameter>
+        </method>
+        <method>
+            <name>IsInitialized</name>
+            <comment></comment>
+            <returntype>boolean</returntype>
+        </method>
+        <method>
+            <name>ScaleToLeft</name>
+            <comment>Example:
+ Dim anim As ICOSAnimation
+ Dim ImageView1 As ImageView
+ Dim b1 As Button
+ 
+ Sub b1_Click
+ anim.ScaleToLeft("anim",2000)
+ anim.StartAnim(ImageView1)
+ End Sub</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>ba</name>
+                <type>anywheresoftware.b4a.BA</type>
+            </parameter>
+            <parameter>
+                <name>EventName</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>Duration</name>
+                <type>long</type>
+            </parameter>
+        </method>
+        <method>
+            <name>ScaleCenterOut</name>
+            <comment>Example:
+ Dim anim As ICOSAnimation
+ Dim ImageView1 As ImageView
+ Dim b1 As Button
+ 
+ Sub b1_Click
+ anim.ScaleCenterOut("anim",2000)
+ anim.StartAnim(ImageView1)
+ End Sub</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>ba</name>
+                <type>anywheresoftware.b4a.BA</type>
+            </parameter>
+            <parameter>
+                <name>EventName</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>Duration</name>
+                <type>long</type>
+            </parameter>
+        </method>
+        <method>
+            <name>AutoRepeat</name>
+            <comment>Set repeat infinity automatically</comment>
+            <returntype>void</returntype>
+        </method>
+        <method>
+            <name>ScaleFromTop</name>
+            <comment>Example:
+ Dim anim As ICOSAnimation
+ Dim ImageView1 As ImageView
+ Dim b1 As Button
+ 
+ Sub b1_Click
+ anim.ScaleFromTop("anim",2000)
+ anim.StartAnim(ImageView1)
+ End Sub</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>ba</name>
+                <type>anywheresoftware.b4a.BA</type>
+            </parameter>
+            <parameter>
+                <name>EventName</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>Duration</name>
+                <type>long</type>
+            </parameter>
+        </method>
+        <method>
+            <name>ScaleToTop</name>
+            <comment>Example:
+ Dim anim As ICOSAnimation
+ Dim ImageView1 As ImageView
+ Dim b1 As Button
+ 
+ Sub b1_Click
+ anim.ScaleToTop("anim",2000)
+ anim.StartAnim(ImageView1)
+ End Sub</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>ba</name>
+                <type>anywheresoftware.b4a.BA</type>
+            </parameter>
+            <parameter>
+                <name>EventName</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>Duration</name>
+                <type>long</type>
+            </parameter>
+        </method>
+        <method>
+            <name>ScaleFromBottomToTopBack</name>
+            <comment>Example:
+ Dim anim As ICOSAnimation
+ Dim ImageView1 As ImageView
+ Dim b1 As Button
+ 
+ Sub b1_Click
+ anim.ScaleFromBottomToTopBack("anim",2000)
+ anim.StartAnim(ImageView1)
+ End Sub</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>ba</name>
+                <type>anywheresoftware.b4a.BA</type>
+            </parameter>
+            <parameter>
+                <name>EventName</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>Duration</name>
+                <type>long</type>
+            </parameter>
+        </method>
+        <method>
+            <name>ScaleFromLeftToRightBack</name>
+            <comment>Example:
+ Dim anim As ICOSAnimation
+ Dim ImageView1 As ImageView
+ Dim b1 As Button
+ 
+ Sub b1_Click
+ anim.ScaleFromLeftToRightBack("anim",2000)
+ anim.StartAnim(ImageView1)
+ End Sub</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>ba</name>
+                <type>anywheresoftware.b4a.BA</type>
+            </parameter>
+            <parameter>
+                <name>EventName</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>Duration</name>
+                <type>long</type>
+            </parameter>
+        </method>
+        <method>
+            <name>StartAnim</name>
+            <comment>anim.StartAnim  --  ( Not for titlebar )</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>view</name>
+                <type>android.view.View</type>
+            </parameter>
+        </method>
+        <method>
+            <name>ScaleFromCenterToLeftRight</name>
+            <comment>Example:
+ Dim anim As ICOSAnimation
+ Dim ImageView1 As ImageView
+ Dim b1 As Button
+ 
+ Sub b1_Click
+ anim.ScaleFromCenterToLeftRight("anim",2000)
+ anim.StartAnim(ImageView1)
+ End Sub</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>ba</name>
+                <type>anywheresoftware.b4a.BA</type>
+            </parameter>
+            <parameter>
+                <name>EventName</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>Duration</name>
+                <type>long</type>
+            </parameter>
+        </method>
+        <method>
+            <name>ScaleFromCenterToTopBottomBack</name>
+            <comment>Example:
+ Dim anim As ICOSAnimation
+ Dim ImageView1 As ImageView
+ Dim b1 As Button
+ 
+ Sub b1_Click
+ anim.ScaleFromCenterToTopBottomBack("anim",2000)
+ anim.StartAnim(ImageView1)
+ End Sub</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>ba</name>
+                <type>anywheresoftware.b4a.BA</type>
+            </parameter>
+            <parameter>
+                <name>EventName</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>Duration</name>
+                <type>long</type>
+            </parameter>
+        </method>
+        <method>
+            <name>ScaleFromLeftRightToCenter</name>
+            <comment>Example:
+ Dim anim As ICOSAnimation
+ Dim ImageView1 As ImageView
+ Dim b1 As Button
+ 
+ Sub b1_Click
+ anim.ScaleFromLeftRightToCenter("anim",2000)
+ anim.StartAnim(ImageView1)
+ End Sub</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>ba</name>
+                <type>anywheresoftware.b4a.BA</type>
+            </parameter>
+            <parameter>
+                <name>EventName</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>Duration</name>
+                <type>long</type>
+            </parameter>
+        </method>
+        <property>
+            <name>StartAnimAtTime</name>
+            <parameter>
+                <name>Duration</name>
+                <type>long</type>
+            </parameter>
+            <comment>Example:
+ Dim anim As ICOSAnimation
+ Dim ImageView1 As ImageView
+ Dim b1 As Button
+ 
+ Sub b1_Click
+ anim.StartAnimAtTime=5000 The Animation Will start after 5 seconds
+ anim.FadeOut(2000)
+ anim.StartAnim(ImageView1)
+ End Sub</comment>
+        </property>
+        <property>
+            <name>Version</name>
+            <returntype>double</returntype>
+            <comment>Return the version of this library</comment>
+        </property>
+    </class>
+    <class>
+        <name>giuseppe.salvi.icos.library.ICOSRotateAnimation</name>
+        <shortname>ICOSRotateAnimation</shortname>
+        <objectwrapper>android.view.animation.Animation</objectwrapper>
+        <owner>activity</owner>
+        <event>animationend</event>
+        <method>
+            <name>RotateSlideFromTop</name>
+            <comment>Example:
+ Dim anim As ICOSAnimation
+ Dim ImageView1 As ImageView
+ Dim Button1 As Button
+ 
+ Sub b1_Click
+ anim.RotateSlideFromTop("anim",360,600,2)
+ anim.StartAnim(ImageView1)
+ End Sub</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>ba</name>
+                <type>anywheresoftware.b4a.BA</type>
+            </parameter>
+            <parameter>
+                <name>EventName</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>RotateDegrees</name>
+                <type>float</type>
+            </parameter>
+            <parameter>
+                <name>SlideValue</name>
+                <type>float</type>
+            </parameter>
+            <parameter>
+                <name>Duration</name>
+                <type>long</type>
+            </parameter>
+        </method>
+        <method>
+            <name>RotateScaleCenterOut</name>
+            <comment>Example:
+ Dim anim As ICOSAnimation
+ Dim ImageView1 As ImageView
+ Dim Button1 As Button
+ 
+ Sub b1_Click
+ anim.RotateScaleCentreOut("anim",360,2)
+ anim.StartAnim(ImageView1)
+ End Sub</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>ba</name>
+                <type>anywheresoftware.b4a.BA</type>
+            </parameter>
+            <parameter>
+                <name>EventName</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>Duration</name>
+                <type>long</type>
+            </parameter>
+        </method>
+        <method>
+            <name>RotateSlideFromBottom</name>
+            <comment>Example:
+ Dim anim As ICOSAnimation
+ Dim ImageView1 As ImageView
+ Dim Button1 As Button
+ 
+ Sub b1_Click
+ anim.RotateSlideFromBottom("anim",360,600,2)
+ anim.StartAnim(ImageView1)
+ End Sub</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>ba</name>
+                <type>anywheresoftware.b4a.BA</type>
+            </parameter>
+            <parameter>
+                <name>EventName</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>RotateDegrees</name>
+                <type>float</type>
+            </parameter>
+            <parameter>
+                <name>SlideValue</name>
+                <type>float</type>
+            </parameter>
+            <parameter>
+                <name>Duration</name>
+                <type>long</type>
+            </parameter>
+        </method>
+        <method>
+            <name>RotateCentre</name>
+            <comment>Example:
+ Dim anim As ICOSAnimation
+ Dim ImageView1 As ImageView
+ Dim Button1 As Button
+ 
+ Sub b1_Click
+ anim.RotateCentre("anim",360,2)
+ anim.StartAnim(ImageView1)
+ End Sub</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>ba</name>
+                <type>anywheresoftware.b4a.BA</type>
+            </parameter>
+            <parameter>
+                <name>EventName</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>RotateDegrees</name>
+                <type>float</type>
+            </parameter>
+            <parameter>
+                <name>Duration</name>
+                <type>long</type>
+            </parameter>
+        </method>
+        <method>
+            <name>RotateCentreReverse</name>
+            <comment>Example:
+ Dim anim As ICOSAnimation
+ Dim ImageView1 As ImageView
+ Dim Button1 As Button
+ 
+ Sub b1_Click
+ anim.RotateCentreReverse("anim",360,2)
+ anim.StartAnim(ImageView1)
+ End Sub</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>ba</name>
+                <type>anywheresoftware.b4a.BA</type>
+            </parameter>
+            <parameter>
+                <name>EventName</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>RotateDegrees</name>
+                <type>float</type>
+            </parameter>
+            <parameter>
+                <name>Duration</name>
+                <type>long</type>
+            </parameter>
+        </method>
+        <method>
+            <name>Rotate</name>
+            <comment>Example:
+ Dim anim As ICOSAnimation
+ Dim ImageView1 As ImageView
+ Dim Button1 As Button
+ 
+ Sub b1_Click
+ anim.Rotate("anim",0,360,2)
+ anim.StartAnim(ImageView1)
+ End Sub</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>ba</name>
+                <type>anywheresoftware.b4a.BA</type>
+            </parameter>
+            <parameter>
+                <name>EventName</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>FromDegrees</name>
+                <type>float</type>
+            </parameter>
+            <parameter>
+                <name>ToDegrees</name>
+                <type>float</type>
+            </parameter>
+            <parameter>
+                <name>Duration</name>
+                <type>long</type>
+            </parameter>
+        </method>
+        <method>
+            <name>RotateSlideToRight</name>
+            <comment>Example:
+ Dim anim As ICOSAnimation
+ Dim ImageView1 As ImageView
+ Dim Button1 As Button
+ 
+ Sub b1_Click
+ anim.RotateSlideToRight("anim",360,600,2)
+ anim.StartAnim(ImageView1)
+ End Sub</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>ba</name>
+                <type>anywheresoftware.b4a.BA</type>
+            </parameter>
+            <parameter>
+                <name>EventName</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>RotateDegrees</name>
+                <type>float</type>
+            </parameter>
+            <parameter>
+                <name>SlideValue</name>
+                <type>float</type>
+            </parameter>
+            <parameter>
+                <name>Duration</name>
+                <type>long</type>
+            </parameter>
+        </method>
+        <method>
+            <name>AutoReverse</name>
+            <comment>Set reverse automatically</comment>
+            <returntype>void</returntype>
+        </method>
+        <method>
+            <name>StopAnin</name>
+            <comment>Stop the animation</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>view</name>
+                <type>android.view.View</type>
+            </parameter>
+        </method>
+        <method>
+            <name>RotateSlideToTop</name>
+            <comment>Example:
+ Dim anim As ICOSAnimation
+ Dim ImageView1 As ImageView
+ Dim Button1 As Button
+ 
+ Sub b1_Click
+ anim.RotateSlideToTop("anim",360,600,2)
+ anim.StartAnim(ImageView1)
+ End Sub</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>ba</name>
+                <type>anywheresoftware.b4a.BA</type>
+            </parameter>
+            <parameter>
+                <name>EventName</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>RotateDegrees</name>
+                <type>float</type>
+            </parameter>
+            <parameter>
+                <name>SlideValue</name>
+                <type>float</type>
+            </parameter>
+            <parameter>
+                <name>Duration</name>
+                <type>long</type>
+            </parameter>
+        </method>
+        <method>
+            <name>IsInitialized</name>
+            <comment></comment>
+            <returntype>boolean</returntype>
+        </method>
+        <method>
+            <name>RotateScaleCenterIn</name>
+            <comment>Example:
+ Dim anim As ICOSAnimation
+ Dim ImageView1 As ImageView
+ Dim Button1 As Button
+ 
+ Sub b1_Click
+ anim.RotateScaleCentreIn("anim",2)
+ anim.StartAnim(ImageView1)
+ End Sub</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>ba</name>
+                <type>anywheresoftware.b4a.BA</type>
+            </parameter>
+            <parameter>
+                <name>EventName</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>Duration</name>
+                <type>long</type>
+            </parameter>
+        </method>
+        <method>
+            <name>RotateSlideFromLeft</name>
+            <comment>Example:
+ Dim anim As ICOSAnimation
+ Dim ImageView1 As ImageView
+ Dim Button1 As Button
+ 
+ Sub b1_Click
+ anim.RotateSlideFromLeft("anim",360,600,2)
+ anim.StartAnim(ImageView1)
+ End Sub</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>ba</name>
+                <type>anywheresoftware.b4a.BA</type>
+            </parameter>
+            <parameter>
+                <name>EventName</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>RotateDegrees</name>
+                <type>float</type>
+            </parameter>
+            <parameter>
+                <name>SlideValue</name>
+                <type>float</type>
+            </parameter>
+            <parameter>
+                <name>Duration</name>
+                <type>long</type>
+            </parameter>
+        </method>
+        <method>
+            <name>InfinityRotateCentreReverse</name>
+            <comment>Example:
+ Dim anim As ICOSAnimation
+ Dim ImageView1 As ImageView
+ Dim Button1 As Button
+ 
+ Sub b1_Click
+ anim.InfinityRotateCentreReverse("anim",360,2)
+ anim.StartAnim(ImageView1)
+ End Sub</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>ba</name>
+                <type>anywheresoftware.b4a.BA</type>
+            </parameter>
+            <parameter>
+                <name>EventName</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>RotateDegrees</name>
+                <type>float</type>
+            </parameter>
+            <parameter>
+                <name>Duration</name>
+                <type>long</type>
+            </parameter>
+        </method>
+        <method>
+            <name>AutoRepeat</name>
+            <comment>Set repeat infinity automatically</comment>
+            <returntype>void</returntype>
+        </method>
+        <method>
+            <name>InfinityRotateCentre</name>
+            <comment>Example:
+ Dim anim As ICOSAnimation
+ Dim ImageView1 As ImageView
+ Dim Button1 As Button
+ 
+ Sub b1_Click
+ anim.InfinityRotateCentre("anim",360,2)
+ anim.StartAnim(ImageView1)
+ End Sub</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>ba</name>
+                <type>anywheresoftware.b4a.BA</type>
+            </parameter>
+            <parameter>
+                <name>EventName</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>RotateDegrees</name>
+                <type>float</type>
+            </parameter>
+            <parameter>
+                <name>Duration</name>
+                <type>long</type>
+            </parameter>
+        </method>
+        <method>
+            <name>RotateSlideToLeft</name>
+            <comment>Example:
+ Dim anim As ICOSAnimation
+ Dim ImageView1 As ImageView
+ Dim Button1 As Button
+ 
+ Sub b1_Click
+ anim.RotateSlideToLeft("anim",360,600,2)
+ anim.StartAnim(ImageView1)
+ End Sub</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>ba</name>
+                <type>anywheresoftware.b4a.BA</type>
+            </parameter>
+            <parameter>
+                <name>EventName</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>RotateDegrees</name>
+                <type>float</type>
+            </parameter>
+            <parameter>
+                <name>SlideValue</name>
+                <type>float</type>
+            </parameter>
+            <parameter>
+                <name>Duration</name>
+                <type>long</type>
+            </parameter>
+        </method>
+        <method>
+            <name>RotateSlideFromRight</name>
+            <comment>Example:
+ Dim anim As ICOSAnimation
+ Dim ImageView1 As ImageView
+ Dim Button1 As Button
+ 
+ Sub b1_Click
+ anim.RotateSlideFromRight("anim",360,600,2)
+ anim.StartAnim(ImageView1)
+ End Sub</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>ba</name>
+                <type>anywheresoftware.b4a.BA</type>
+            </parameter>
+            <parameter>
+                <name>EventName</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>RotateDegrees</name>
+                <type>float</type>
+            </parameter>
+            <parameter>
+                <name>SlideValue</name>
+                <type>float</type>
+            </parameter>
+            <parameter>
+                <name>Duration</name>
+                <type>long</type>
+            </parameter>
+        </method>
+        <method>
+            <name>RotateSlideToBottom</name>
+            <comment>Example:
+ Dim anim As ICOSAnimation
+ Dim ImageView1 As ImageView
+ Dim Button1 As Button
+ 
+ Sub b1_Click
+ anim.RotateSlideToBottom("anim",360,600,2)
+ anim.StartAnim(ImageView1)
+ End Sub</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>ba</name>
+                <type>anywheresoftware.b4a.BA</type>
+            </parameter>
+            <parameter>
+                <name>EventName</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>RotateDegrees</name>
+                <type>float</type>
+            </parameter>
+            <parameter>
+                <name>SlideValue</name>
+                <type>float</type>
+            </parameter>
+            <parameter>
+                <name>Duration</name>
+                <type>long</type>
+            </parameter>
+        </method>
+        <method>
+            <name>StartAnim</name>
+            <comment>anim.StartAnim</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>view</name>
+                <type>android.view.View</type>
+            </parameter>
+        </method>
+        <property>
+            <name>StartAnimAtTime</name>
+            <parameter>
+                <name>Seconds</name>
+                <type>long</type>
+            </parameter>
+            <comment>Example:
+ Dim anim As ICOSAnimation
+ Dim ImageView1 As ImageView
+ Dim Button1 As Button
+ 
+ Sub b1_Click
+ anim.StartAnimAtTime=5000 The Animation Will start after 5 seconds
+ anim.FadeOut(2)
+ anim.StartAnim(ImageView1)
+ End Sub</comment>
+        </property>
+        <property>
+            <name>Version</name>
+            <returntype>double</returntype>
+            <comment>Return the version of this library</comment>
+        </property>
+    </class>
+    <class>
+        <name>giuseppe.salvi.icos.library.ICOSPhone</name>
+        <shortname>ICOSPhone</shortname>
+        <owner>activity</owner>
+        <permission>android.permission.ACCESS_NETWORK_STATE</permission>
+        <permission>android.permission.ACCESS_LOCATION</permission>
+        <permission>android.permission.ACCESS_GPS</permission>
+        <permission>android.permission.ACCESS_ASSISTED_GPS</permission>
+        <permission>android.permission.ACCESS_CELL_ID</permission>
+        <permission>android.permission.ACCESS_COARSE_LOCATION</permission>
+        <permission>android.permission.ACCESS_CHECKIN_PROPERTIES</permission>
+        <permission>android.permission.ACCESS_LOCATION_EXTRA_COMMANDS</permission>
+        <permission>android.permission.ACCESS_FINE_LOCATION</permission>
+        <permission>android.permission.ACCESS_WIFI_STATE</permission>
+        <permission>android.permission.BLUETOOTH_ADMIN</permission>
+        <permission>android.permission.BLUETOOTH</permission>
+        <permission>android.permission.BOOT_COMPLETED</permission>
+        <permission>android.permission.CALL_PHONE</permission>
+        <permission>android.permission.CALL_PRIVILEGED</permission>
+        <permission>android.permission.CAMERA</permission>
+        <permission>android.permission.CHANGE_WIFI_STATE</permission>
+        <permission>android.permission.FLASHLIGHT</permission>
+        <permission>android.permission-group.HARDWARE_CONTROLS</permission>
+        <permission>android.permission.HARDWARE_TEST</permission>
+        <permission>android.permission.INTERNET</permission>
+        <permission>android.permission.MODIFY_PHONE_STATE</permission>
+        <permission>android.permission.PROCESS_OUTGOING_CALLS</permission>
+        <permission>android.permission.READ_PHONE_STATE</permission>
+        <permission>android.permission.RECEIVE_SMS</permission>
+        <permission>android.permission.READ_SMS</permission>
+        <permission>android.permission.RECEIVE_BOOT_COMPLETED</permission>
+        <permission>android.permission.SEND_SMS</permission>
+        <permission>android.permission.SET_WALLPAPER</permission>
+        <permission>android.permission.UPDATE_DEVICE_STATS</permission>
+        <permission>android.permission.WAKE_LOCK</permission>
+        <permission>android.permission.WRITE_SETTINGS</permission>
+        <permission>android.permission.WRITE_SECURE_SETTINGS</permission>
+        <permission>android.permission.WRITE_SMS</permission>
+        <method>
+            <name>Initialize</name>
+            <comment>Initialize the Object.
+ Example:
+ Dim ph As ICOSPhone
+ ph.Initialize("ph")</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>ba</name>
+                <type>anywheresoftware.b4a.BA</type>
+            </parameter>
+            <parameter>
+                <name>EventName</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+        <method>
+            <name>Farenheit</name>
+            <comment>Example:
+ Dim ph As ICOSPhone
+ dim Label1 As Label
+ Label1.Text=ph.TempFarenheit
+ Return the degrees in Farenheit of your Battery</comment>
+            <returntype>java.lang.String</returntype>
+        </method>
+        <method>
+            <name>MakeCall</name>
+            <comment>Examples:
+ Dim Button1 As Button
+ Dim ph As ICOSPhone
+ 
+ Sub Button1_Click
+ ph.MakeCall
+ End Sub</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>ba</name>
+                <type>anywheresoftware.b4a.BA</type>
+            </parameter>
+            <parameter>
+                <name>Call</name>
+                <type>android.graphics.Bitmap</type>
+            </parameter>
+        </method>
+        <method>
+            <name>StartCamera</name>
+            <comment>Examples:
+ Dim Button1 As Button
+ Dim ph As ICOSPhone
+ 
+ Sub Button1_Click
+ ph.StartCamera
+ End Sub
+ Start On the Camera</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>ba</name>
+                <type>anywheresoftware.b4a.BA</type>
+            </parameter>
+        </method>
+        <method>
+            <name>LedOnOff</name>
+            <comment>Example:
+ Dim ph As ICOSPhone
+ ph.LedOnOff
+ Flash Mode On
+ 
+ This W'll turn Flash Mode  ON or OFF if is supported.</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>ba</name>
+                <type>anywheresoftware.b4a.BA</type>
+            </parameter>
+            <parameter>
+                <name>LedOn</name>
+                <type>android.graphics.Bitmap</type>
+            </parameter>
+            <parameter>
+                <name>LedOff</name>
+                <type>android.graphics.Bitmap</type>
+            </parameter>
+        </method>
+        <method>
+            <name>GetDisplayMetricsWidth</name>
+            <comment>Example:
+ Dim ph As ICOSPhone
+ ph.GetDisplayWidth
+ return the Display Width in pixel (ex. 600)</comment>
+            <returntype>int</returntype>
+            <parameter>
+                <name>ba</name>
+                <type>anywheresoftware.b4a.BA</type>
+            </parameter>
+        </method>
+        <method>
+            <name>GetDisplayMetricsHeight</name>
+            <comment>Example:
+ Dim ph As ICOSPhone
+ ph.GetDisplayHeight
+ return the DisplayHeight in pixel (ex. 1024)</comment>
+            <returntype>int</returntype>
+            <parameter>
+                <name>ba</name>
+                <type>anywheresoftware.b4a.BA</type>
+            </parameter>
+        </method>
+        <method>
+            <name>WiFiOnOff</name>
+            <comment>Examples:
+ Dim Button1 As Button
+ Dim ph As ICOSPhone
+ 
+ Sub Button1_Click
+ ph.EnableDisableWiFi
+ End Sub
+ Enable / Disable your WIFI</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>ba</name>
+                <type>anywheresoftware.b4a.BA</type>
+            </parameter>
+            <parameter>
+                <name>WiFiOn</name>
+                <type>android.graphics.Bitmap</type>
+            </parameter>
+            <parameter>
+                <name>WiFiOff</name>
+                <type>android.graphics.Bitmap</type>
+            </parameter>
+        </method>
+        <method>
+            <name>Celsius</name>
+            <comment>Example:
+ Dim ph As ICOSPhone
+ dim Label1 As Label
+ Label1.Text=ph.TempCelsius
+ Return the degrees in Celsius of your Battery</comment>
+            <returntype>java.lang.String</returntype>
+        </method>
+        <method>
+            <name>OpenWiFiSettings</name>
+            <comment>Examples:
+ Dim Button1 As Button
+ Dim ph As ICOSPhone
+ 
+ Sub Button1_Click
+ ph.OpenWifiSettings
+ End Sub
+ Open WiFi Settings</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>ba</name>
+                <type>anywheresoftware.b4a.BA</type>
+            </parameter>
+        </method>
+        <method>
+            <name>BluetoothOnOff</name>
+            <comment>Examples:
+ Dim Button1 As Button
+ Dim ph As ICOSPhone
+ 
+ Sub Button1_Click
+ ph.EnableDisableBluetooth
+ End Sub
+ Enable or Disable BlueTooth</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>ba</name>
+                <type>anywheresoftware.b4a.BA</type>
+            </parameter>
+            <parameter>
+                <name>BTooth</name>
+                <type>android.graphics.Bitmap</type>
+            </parameter>
+        </method>
+        <method>
+            <name>Level</name>
+            <comment>Example:
+ Dim ph As ICOSPhone
+ Dim Pb As ProgressBar
+ Dim Button1 As Button
+ 
+ Sub Button1_Click
+ pb.Progress=Level
+ End Sub
+ Return the amount of level of your Battery</comment>
+            <returntype>float</returntype>
+        </method>
+        <method>
+            <name>GPSOnOff</name>
+            <comment>Example:
+ Dim ph As ICOSPhone
+ ph.GPSOnOff
+ W'll start GPS On or Off</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>ba</name>
+                <type>anywheresoftware.b4a.BA</type>
+            </parameter>
+            <parameter>
+                <name>Gps</name>
+                <type>android.graphics.Bitmap</type>
+            </parameter>
+        </method>
+        <method>
+            <name>OpenGpsSetting</name>
+            <comment>Examples:
+ Dim Button1 As Button
+ Dim ph As ICOSPhone
+ 
+ Sub Button1_Click
+ ph.OpenGpsSetting
+ End Sub
+ Open Gps Setting</comment>
+            <returntype>void</returntype>
+        </method>
+        <property>
+            <name>AccessWiFiState</name>
+            <returntype>java.lang.String</returntype>
+            <comment>Example:
+ Dim ph As ICOSPhone
+ ph.AccessWiFiState
+ return the AccessWiFiState</comment>
+        </property>
+        <property>
+            <name>SimCardNumber</name>
+            <returntype>java.lang.String</returntype>
+            <comment>Example:
+ Dim ph As ICOSPhone
+ ph.SimCardNumber
+ return the SimCardNumber</comment>
+        </property>
+        <property>
+            <name>AvailMemory</name>
+            <returntype>java.lang.String</returntype>
+            <comment>Examples:
+ Dim Button1 As Button
+ Dim Label1 As Label
+ Dim ph As ICOSPhone
+ 
+ Sub Button1_Click
+ label1.Text=ph.AvailMemory
+ End Sub
+ Return Avail Memory</comment>
+        </property>
+        <property>
+            <name>Brightness</name>
+            <parameter>
+                <name>Brightness</name>
+                <type>float</type>
+            </parameter>
+            <comment>Example:
+ Dim ph As ICOSPhone
+ ph.Brightness
+ W'll set the Brightness of your screen</comment>
+        </property>
+        <property>
+            <name>OSVersion</name>
+            <returntype>java.lang.String</returntype>
+            <comment>Examples:
+ Dim Button1 As Button
+ Dim Label1 As Label
+ Dim ph As ICOSPhone
+ 
+ Sub Button1_Click
+ label1.Text=ph.OSVersion
+ End Sub
+ Display OSVersion of your device</comment>
+        </property>
+        <property>
+            <name>TotalMemory</name>
+            <returntype>java.lang.String</returntype>
+            <comment>Examples:
+ Dim Button1 As Button
+ Dim Label1 As Label
+ Dim ph As ICOSPhone
+ 
+ Sub Button1_Click
+ label1.Text=ph.TotalMemory
+ End Sub
+ Return Total Memory</comment>
+        </property>
+        <property>
+            <name>DeviceModel</name>
+            <returntype>java.lang.String</returntype>
+            <comment>Examples:
+ Dim Button1 As Button
+ Dim Label1 As Label
+ Dim ph As ICOSPhone
+ 
+ Sub Button1_Click
+ label1.Text=ph.DeviceModel
+ End Sub
+ Display the model of your device</comment>
+        </property>
+        <property>
+            <name>MacAddres</name>
+            <returntype>java.lang.String</returntype>
+            <comment>Example:
+ Dim ph As ICOSPhone
+ ph.MacAddres
+ return the MacAddres</comment>
+        </property>
+        <property>
+            <name>BlueToothSerial</name>
+            <returntype>java.lang.String</returntype>
+            <comment>Example:
+ Dim ph As ICOSPhone
+ ph.BlueToothSerial
+ If the Bluetooth is on w'll return the serial</comment>
+        </property>
+        <property>
+            <name>NetworkOperatorName</name>
+            <returntype>java.lang.String</returntype>
+            <comment>Examples:
+ Dim Button1 As Button
+ Dim Label1 As Label
+ Dim ph As ICOSPhone
+ 
+ Sub Button1_Click
+ label1.Text=ph.NetworkOperatorName
+ End Sub
+ Display the name of your NetworkOperator</comment>
+        </property>
+        <property>
+            <name>IPAddress</name>
+            <returntype>java.lang.String</returntype>
+            <comment>Examples:
+ Dim Button1 As Button
+ Dim Label1 As Label
+ Dim ph As ICOSPhone
+ 
+ Sub Button1_Click
+ label1.Text=ph.IPAddress
+ End Sub
+ Display your IP-Address</comment>
+        </property>
+        <property>
+            <name>UsedMemory</name>
+            <returntype>java.lang.String</returntype>
+            <comment>Examples:
+ Dim Button1 As Button
+ Dim Label1 As Label
+ Dim ph As ICOSPhone
+ 
+ Sub Button1_Click
+ label1.Text=ph.UsedMemory
+ End Sub
+ Return Used Memory</comment>
+        </property>
+        <property>
+            <name>Version</name>
+            <returntype>double</returntype>
+            <comment>Return The Version Of this Library</comment>
+        </property>
+    </class>
+    <class>
+        <name>giuseppe.salvi.icos.library.ICOSMusicPlayer</name>
+        <shortname>ICOSMusicPlayer</shortname>
+        <owner>process</owner>
+        <event>Complete</event>
+        <method>
+            <name>Initialize</name>
+            <comment>Initialize the Object.
+ You Should Initialize Before Load Any Sounds.
+ Example:
+ Dim mp as ICOSMusicPlayer
+ mp.Initialize("mp")</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>ba</name>
+                <type>anywheresoftware.b4a.BA</type>
+            </parameter>
+            <parameter>
+                <name>EventName</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+        <method>
+            <name>PlayMusicFromFile</name>
+            <comment>Load any media file and Play. 
+ Example:
+ Dim Label1 as Label
+ Label1.Text = mp.PlayMusicFromFile("sdcard/media/somefile.mp3",mp.Get_Title)
+ or
+ mp.PlayMusicFromFile("sdcard/media/somefile.mp3",0,True)
+ type is any information about any media file, type 0 = null.</comment>
+            <returntype>java.lang.String</returntype>
+            <parameter>
+                <name>FileName</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>type</name>
+                <type>int</type>
+            </parameter>
+        </method>
+        <method>
+            <name>IsPlaying</name>
+            <comment>Return true if ICOSMusicPlayer is currently playig</comment>
+            <returntype>boolean</returntype>
+        </method>
+        <method>
+            <name>Play</name>
+            <comment>Play or resume the media you loaded before</comment>
+            <returntype>void</returntype>
+        </method>
+        <method>
+            <name>PlayMusicFromAsset</name>
+            <comment>Load any media file and Play. 
+ Example:
+ Dim Label1 as Label
+ Label1.Text = mp.PlayMusicFromFile("sdcard/media/somefile.mp3",mp.Get_Title)
+ or
+ mp.PlayMusicFromFile("somefile.mp3",0,True)
+ type is any information about any media file, type 0 = null.</comment>
+            <returntype>java.lang.String</returntype>
+            <parameter>
+                <name>FileName</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>type</name>
+                <type>int</type>
+            </parameter>
+        </method>
+        <method>
+            <name>ConvertTimeToSeconds</name>
+            <comment>Give you the real length in MM:SS
+ Example:
+ Sub Process_Globals
+ Dim timer1 As Timer
+ Dim mp As ICOSMusicPlayer
+ End Sub
+ 
+ Sub Globals
+ Dim label1 As Label
+ End Sub
+ 
+ Sub Activity_Create(FirstTime As Boolean)
+ timer1.Initialize("timer1",1000)
+ timer1.Enabled=True
+ mp.Initialize
+ mp.PlayMusicFromFile("sdcard/media/1.mp3",0,True)
+ End Sub
+ 
+ Sub Activity_Resume
+ If mp.IsPlaying Then
+ mp.Play
+ timer1.Enabled = True
+ timer1_tick 
+ End If
+ End Sub
+ 
+ Sub timer1_Tick
+ If mp.IsPlaying Then
+ Label1.text="Position: " &amp; mp.ConvertTimeToMinuts &amp; " - " &amp;  ConvertTimeToSeconds    ( "Position: 3:28 - 0:00" )
+ End If
+ End Sub</comment>
+            <returntype>java.lang.String</returntype>
+        </method>
+        <method>
+            <name>Stop</name>
+            <comment>Stop Playing.
+ You must load the media before to Play it again</comment>
+            <returntype>void</returntype>
+        </method>
+        <method>
+            <name>Release</name>
+            <comment>Release all resources
+ Allocated by ICOSMusicPlayer</comment>
+            <returntype>void</returntype>
+        </method>
+        <method>
+            <name>Pause</name>
+            <comment>Pause the current playback.
+ You can resume it from the current position
+ at any time by calling mp.Play</comment>
+            <returntype>void</returntype>
+        </method>
+        <method>
+            <name>setSetVolume</name>
+            <comment>Set the volume for each channell.
+ The value should be between 0 to 100.
+ Example:
+ mp.SetVolume(100,100)</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>Left</name>
+                <type>float</type>
+            </parameter>
+            <parameter>
+                <name>Right</name>
+                <type>float</type>
+            </parameter>
+        </method>
+        <method>
+            <name>ConvertTimeToMinuts</name>
+            <comment>Give you the real length in MM:SS
+ Example:
+ Sub Process_Globals
+ Dim timer1 As Timer
+ Dim mp As ICOSMusicPlayer
+ End Sub
+ 
+ Sub Globals
+ Dim label1 As Label
+ End Sub
+ 
+ Sub Activity_Create(FirstTime As Boolean)
+ timer1.Initialize("timer1",1000)
+ timer1.Enabled=True
+ mp.Initialize
+ mp.PlayMusicFromFile("sdcard/media/1.mp3",0,True)
+ End Sub
+ 
+ Sub Activity_Resume
+ If mp.IsPlaying Then
+ mp.Play
+ timer1.Enabled = True
+ timer1_tick 
+ End If
+ End Sub
+ 
+ Sub timer1_Tick
+ If mp.IsPlaying Then
+ Label1.text="Position: " &amp; mp.ConvertTimeToMinuts &amp; " - " &amp;  ConvertTimeToSeconds    ( "Position: 3:28 - 0:00" )
+ End If
+ End Sub</comment>
+            <returntype>java.lang.String</returntype>
+        </method>
+        <method>
+            <name>PlayRingtone</name>
+            <comment>TYPE_RINGTONE
+	TYPE_NOTIFICATION
+	TYPE_ALARM
+	TYPE_ALL
+ Example:
+ mp.PlayRingtone(mp.Type_Ringtone)</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>type</name>
+                <type>int</type>
+            </parameter>
+        </method>
+        <property>
+            <name>Duration</name>
+            <returntype>int</returntype>
+            <comment>Return the total value of the loaded media in milliSeconds</comment>
+        </property>
+        <property>
+            <name>Position</name>
+            <returntype>int</returntype>
+            <parameter>
+                <name>value</name>
+                <type>int</type>
+            </parameter>
+            <comment>Get Or Set The Current Position In MilliSeconds</comment>
+        </property>
+        <property>
+            <name>Version</name>
+            <returntype>double</returntype>
+            <comment>Return the version of this library</comment>
+        </property>
+        <field>
+            <name>Get_Date</name>
+            <comment></comment>
+            <returntype>int</returntype>
+        </field>
+        <field>
+            <name>Get_Album_Artist</name>
+            <comment></comment>
+            <returntype>int</returntype>
+        </field>
+        <field>
+            <name>Get_Bitrate</name>
+            <comment></comment>
+            <returntype>int</returntype>
+        </field>
+        <field>
+            <name>Get_Author_Name</name>
+            <comment></comment>
+            <returntype>int</returntype>
+        </field>
+        <field>
+            <name>Get_Title</name>
+            <comment></comment>
+            <returntype>int</returntype>
+        </field>
+        <field>
+            <name>Get_Genre</name>
+            <comment></comment>
+            <returntype>int</returntype>
+        </field>
+        <field>
+            <name>Get_Location</name>
+            <comment></comment>
+            <returntype>int</returntype>
+        </field>
+        <field>
+            <name>Get_Mimetype</name>
+            <comment></comment>
+            <returntype>int</returntype>
+        </field>
+        <field>
+            <name>Get_Duration</name>
+            <comment></comment>
+            <returntype>int</returntype>
+        </field>
+        <field>
+            <name>Type_All</name>
+            <comment></comment>
+            <returntype>int</returntype>
+        </field>
+        <field>
+            <name>Get_Writter</name>
+            <comment></comment>
+            <returntype>int</returntype>
+        </field>
+        <field>
+            <name>Get_Artist_Name</name>
+            <comment></comment>
+            <returntype>int</returntype>
+        </field>
+        <field>
+            <name>Get_Composer_Name</name>
+            <comment></comment>
+            <returntype>int</returntype>
+        </field>
+        <field>
+            <name>Get_Compilation</name>
+            <comment></comment>
+            <returntype>int</returntype>
+        </field>
+        <field>
+            <name>Get_Disc_Number</name>
+            <comment></comment>
+            <returntype>int</returntype>
+        </field>
+        <field>
+            <name>Type_Notification</name>
+            <comment></comment>
+            <returntype>int</returntype>
+        </field>
+        <field>
+            <name>Get_Cd_Track_Number</name>
+            <comment></comment>
+            <returntype>int</returntype>
+        </field>
+        <field>
+            <name>Type_Alarm</name>
+            <comment></comment>
+            <returntype>int</returntype>
+        </field>
+        <field>
+            <name>Get_Album_Title</name>
+            <comment></comment>
+            <returntype>int</returntype>
+        </field>
+        <field>
+            <name>Get_Year</name>
+            <comment></comment>
+            <returntype>int</returntype>
+        </field>
+        <field>
+            <name>Get_Number_Tracks</name>
+            <comment></comment>
+            <returntype>int</returntype>
+        </field>
+        <field>
+            <name>Type_Ringtone</name>
+            <comment></comment>
+            <returntype>int</returntype>
+        </field>
+    </class>
+    <class>
+        <name>giuseppe.salvi.icos.library.ICOSGridView</name>
+        <shortname>ICOSGridView</shortname>
+        <objectwrapper>android.widget.GridView</objectwrapper>
+        <owner>activity</owner>
+        <event>ItemClick (Position As Int, Value As Object)</event>
+        <event>ItemLongClick (Position As Int, Value As Object)</event>
+        <method>
+            <name>AddTextAndBitmap</name>
+            <comment></comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>Text1</name>
+                <type>java.lang.CharSequence</type>
+            </parameter>
+            <parameter>
+                <name>Bitmap</name>
+                <type>android.graphics.Bitmap</type>
+            </parameter>
+        </method>
+        <method>
+            <name>BringToFront</name>
+            <comment></comment>
+            <returntype>void</returntype>
+        </method>
+        <method>
+            <name>RequestFocus</name>
+            <comment></comment>
+            <returntype>boolean</returntype>
+        </method>
+        <method>
+            <name>SetSelection</name>
+            <comment></comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>Position</name>
+                <type>int</type>
+            </parameter>
+        </method>
+        <method>
+            <name>RemoveView</name>
+            <comment></comment>
+            <returntype>void</returntype>
+        </method>
+        <method>
+            <name>AddBitmap</name>
+            <comment></comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>Bitmap</name>
+                <type>android.graphics.Bitmap</type>
+            </parameter>
+        </method>
+        <method>
+            <name>SetBackgroundImage</name>
+            <comment></comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>arg0</name>
+                <type>android.graphics.Bitmap</type>
+            </parameter>
+        </method>
+        <method>
+            <name>AddTwoText</name>
+            <comment></comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>Text1</name>
+                <type>java.lang.CharSequence</type>
+            </parameter>
+            <parameter>
+                <name>Text2</name>
+                <type>java.lang.CharSequence</type>
+            </parameter>
+        </method>
+        <method>
+            <name>Clear</name>
+            <comment></comment>
+            <returntype>void</returntype>
+        </method>
+        <method>
+            <name>Invalidate3</name>
+            <comment></comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>arg0</name>
+                <type>int</type>
+            </parameter>
+            <parameter>
+                <name>arg1</name>
+                <type>int</type>
+            </parameter>
+            <parameter>
+                <name>arg2</name>
+                <type>int</type>
+            </parameter>
+            <parameter>
+                <name>arg3</name>
+                <type>int</type>
+            </parameter>
+        </method>
+        <method>
+            <name>Invalidate2</name>
+            <comment></comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>arg0</name>
+                <type>android.graphics.Rect</type>
+            </parameter>
+        </method>
+        <method>
+            <name>IsInitialized</name>
+            <comment></comment>
+            <returntype>boolean</returntype>
+        </method>
+        <method>
+            <name>Initialize</name>
+            <comment></comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>arg0</name>
+                <type>anywheresoftware.b4a.BA</type>
+            </parameter>
+            <parameter>
+                <name>arg1</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+        <method>
+            <name>GetItem</name>
+            <comment></comment>
+            <returntype>java.lang.Object</returntype>
+            <parameter>
+                <name>Index</name>
+                <type>int</type>
+            </parameter>
+        </method>
+        <method>
+            <name>Invalidate</name>
+            <comment></comment>
+            <returntype>void</returntype>
+        </method>
+        <method>
+            <name>SetLayout</name>
+            <comment></comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>arg0</name>
+                <type>int</type>
+            </parameter>
+            <parameter>
+                <name>arg1</name>
+                <type>int</type>
+            </parameter>
+            <parameter>
+                <name>arg2</name>
+                <type>int</type>
+            </parameter>
+            <parameter>
+                <name>arg3</name>
+                <type>int</type>
+            </parameter>
+        </method>
+        <method>
+            <name>RemoveAt</name>
+            <comment></comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>Index</name>
+                <type>int</type>
+            </parameter>
+        </method>
+        <method>
+            <name>AddTwoTextAndBitmap</name>
+            <comment></comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>Text1</name>
+                <type>java.lang.CharSequence</type>
+            </parameter>
+            <parameter>
+                <name>Text2</name>
+                <type>java.lang.CharSequence</type>
+            </parameter>
+            <parameter>
+                <name>Bitmap</name>
+                <type>android.graphics.Bitmap</type>
+            </parameter>
+        </method>
+        <method>
+            <name>AddText</name>
+            <comment></comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>Text1</name>
+                <type>java.lang.CharSequence</type>
+            </parameter>
+        </method>
+        <method>
+            <name>SendToBack</name>
+            <comment></comment>
+            <returntype>void</returntype>
+        </method>
+        <property>
+            <name>HSpacing</name>
+            <parameter>
+                <name>HSpacing</name>
+                <type>int</type>
+            </parameter>
+            <comment></comment>
+        </property>
+        <property>
+            <name>Enabled</name>
+            <returntype>boolean</returntype>
+            <parameter>
+                <name>arg0</name>
+                <type>boolean</type>
+            </parameter>
+            <comment></comment>
+        </property>
+        <property>
+            <name>Top</name>
+            <returntype>int</returntype>
+            <parameter>
+                <name>arg0</name>
+                <type>int</type>
+            </parameter>
+            <comment></comment>
+        </property>
+        <property>
+            <name>Visible</name>
+            <returntype>boolean</returntype>
+            <parameter>
+                <name>arg0</name>
+                <type>boolean</type>
+            </parameter>
+            <comment></comment>
+        </property>
+        <property>
+            <name>Gravity</name>
+            <parameter>
+                <name>gravity</name>
+                <type>int</type>
+            </parameter>
+            <comment></comment>
+        </property>
+        <property>
+            <name>ScrollingBackgroundColor</name>
+            <parameter>
+                <name>Color</name>
+                <type>int</type>
+            </parameter>
+            <comment></comment>
+        </property>
+        <property>
+            <name>Background</name>
+            <returntype>android.graphics.drawable.Drawable</returntype>
+            <parameter>
+                <name>arg0</name>
+                <type>android.graphics.drawable.Drawable</type>
+            </parameter>
+            <comment></comment>
+        </property>
+        <property>
+            <name>Height</name>
+            <returntype>int</returntype>
+            <parameter>
+                <name>arg0</name>
+                <type>int</type>
+            </parameter>
+            <comment></comment>
+        </property>
+        <property>
+            <name>Left</name>
+            <returntype>int</returntype>
+            <parameter>
+                <name>arg0</name>
+                <type>int</type>
+            </parameter>
+            <comment></comment>
+        </property>
+        <property>
+            <name>Color</name>
+            <parameter>
+                <name>arg0</name>
+                <type>int</type>
+            </parameter>
+            <comment></comment>
+        </property>
+        <property>
+            <name>StretchMode</name>
+            <parameter>
+                <name>StretchMode</name>
+                <type>int</type>
+            </parameter>
+            <comment></comment>
+        </property>
+        <property>
+            <name>Tag</name>
+            <returntype>java.lang.Object</returntype>
+            <parameter>
+                <name>arg0</name>
+                <type>java.lang.Object</type>
+            </parameter>
+            <comment></comment>
+        </property>
+        <property>
+            <name>FastScrollEnabled</name>
+            <returntype>boolean</returntype>
+            <parameter>
+                <name>Enabled</name>
+                <type>boolean</type>
+            </parameter>
+            <comment></comment>
+        </property>
+        <property>
+            <name>ColumnWidth</name>
+            <parameter>
+                <name>columnWidth</name>
+                <type>int</type>
+            </parameter>
+            <comment></comment>
+        </property>
+        <property>
+            <name>Width</name>
+            <returntype>int</returntype>
+            <parameter>
+                <name>arg0</name>
+                <type>int</type>
+            </parameter>
+            <comment></comment>
+        </property>
+        <property>
+            <name>VSpacing</name>
+            <parameter>
+                <name>VSpacing</name>
+                <type>int</type>
+            </parameter>
+            <comment></comment>
+        </property>
+        <property>
+            <name>NumColumns</name>
+            <parameter>
+                <name>Columns</name>
+                <type>int</type>
+            </parameter>
+            <comment></comment>
+        </property>
+        <property>
+            <name>Selection</name>
+            <parameter>
+                <name>position</name>
+                <type>int</type>
+            </parameter>
+            <comment></comment>
+        </property>
+    </class>
+    <class>
+        <name>giuseppe.salvi.icos.library.ICOSGraphics</name>
+        <shortname>ICOSGraphics</shortname>
+        <objectwrapper>android.view.View</objectwrapper>
+        <owner>activity</owner>
+        <permission>android.permission.SET_WALLPAPER</permission>
+        <method>
+            <name>InitializeBitmap</name>
+            <comment>Initialize the Object.
+ Example:
+ Dim ip as ICOSImageProcessing
+ ip.Initialize("ip")</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>ba</name>
+                <type>anywheresoftware.b4a.BA</type>
+            </parameter>
+            <parameter>
+                <name>bmp</name>
+                <type>android.graphics.Bitmap</type>
+            </parameter>
+        </method>
+        <method>
+            <name>MyToastView</name>
+            <comment>mGravity 1 = Gravity.TOP
+ mGravity 2 = Gravity.CENTER
+ mGravity 3 = Gravity.BOTTOM
+ 
+ Duration 0 = Toast.LENGTH_SHORT
+ Duration 1 = Toast.LENGTH_LONG
+ 
+ Dim ip as ICOSImageProcessing
+ Dim img As ImageView  -  ( You can use any view " (ImageView is just an examples) ")
+ Example:
+
+ Sub b1_Click
+ ip.MyToastView(img, mGravity, Duration)
+ End Sub</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>ba</name>
+                <type>anywheresoftware.b4a.BA</type>
+            </parameter>
+            <parameter>
+                <name>view</name>
+                <type>android.view.View</type>
+            </parameter>
+            <parameter>
+                <name>mGravity</name>
+                <type>int</type>
+            </parameter>
+            <parameter>
+                <name>Duration</name>
+                <type>int</type>
+            </parameter>
+        </method>
+        <method>
+            <name>Emboss</name>
+            <comment>Dim ImageView1 as ImageView
+ Dim ip as ICOSImageProcessing
+ Example:
+ ImageView1.Bitmap=ip.Emboss(LoadBitmap(File.Dirassets , "SomeFile.png")
+ Or
+ ImageView1.Bitmap=ip.Boost(ImageView1.Bitmap)</comment>
+            <returntype>android.graphics.Bitmap</returntype>
+            <parameter>
+                <name>Factor</name>
+                <type>int</type>
+            </parameter>
+            <parameter>
+                <name>Offset</name>
+                <type>int</type>
+            </parameter>
+        </method>
+        <method>
+            <name>Smooth</name>
+            <comment>Dim ImageView1 as ImageView
+ Dim ip as ICOSImageProcessing
+ Example:
+ ImageView1.Bitmap=ip.Smooth(LoadBitmap(File.Dirassets , "SomeFile.png" , SmoothValue)
+ Or
+ ImageView1.Bitmap=ip.Boost(ImageView1.Bitmap ,SmoothValue)</comment>
+            <returntype>android.graphics.Bitmap</returntype>
+            <parameter>
+                <name>Factor</name>
+                <type>int</type>
+            </parameter>
+            <parameter>
+                <name>Offset</name>
+                <type>int</type>
+            </parameter>
+        </method>
+        <method>
+            <name>Mirror</name>
+            <comment>Dim ImageView1 as ImageView
+ Dim ip as ICOSImageProcessing
+ Example:
+ ImageView1.Bitmap=ip.Mirror(LoadBitmap(File.Dirassets , "SomeFile.png"))
+ Or
+ ImageView1.Bitmap=ip.Boost(ImageView1.Bitmap)</comment>
+            <returntype>android.graphics.Bitmap</returntype>
+        </method>
+        <method>
+            <name>RoundCorner</name>
+            <comment>Dim ImageView1 as ImageView
+ Dim ip as ICOSImageProcessing
+ Example:
+ ImageView1.Bitmap=ip.RoundCorner(LoadBitmap(File.Dirassets , "SomeFile.png" , RoundValue)
+ Or
+ ImageView1.Bitmap=ip.Boost(ImageView1.Bitmap , RoundValue)</comment>
+            <returntype>android.graphics.Bitmap</returntype>
+            <parameter>
+                <name>RoundValue</name>
+                <type>float</type>
+            </parameter>
+        </method>
+        <method>
+            <name>FlipBitmap</name>
+            <comment>Dim ImageView1 as ImageView
+ Dim ip as ICOSImageProcessing
+ Type = 1 --&gt; FLIP_VERTICAL
+ Type = 2 --&gt; FLIP_HORIZONTAL
+ Example:
+ ImageView1.Bitmap=ip.Flip(LoadBitmap(File.Dirassets , "SomeFile.png" , Type)
+ Or
+ ImageView1.Bitmap=ip.Boost(ImageView1.Bitmap , type)</comment>
+            <returntype>android.graphics.Bitmap</returntype>
+            <parameter>
+                <name>Type</name>
+                <type>int</type>
+            </parameter>
+        </method>
+        <method>
+            <name>SetWalpaper</name>
+            <comment>Dim ip as ICOSImageProcessing
+ Example:
+ Sub b1_Click
+ ip.setWalpaper(LoadBitmap(File.Dirassets , "SomeFile.png"))
+ End Sub</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>ba</name>
+                <type>anywheresoftware.b4a.BA</type>
+            </parameter>
+            <parameter>
+                <name>bmp</name>
+                <type>android.graphics.Bitmap</type>
+            </parameter>
+        </method>
+        <method>
+            <name>MyToastBitmap</name>
+            <comment>mGravity 1 = Gravity.TOP
+ mGravity 2 = Gravity.CENTER
+ mGravity 3 = Gravity.BOTTOM
+ 
+ mDuration 0 = Toast.LENGTH_SHORT
+ mDuration 1 = Toast.LENGTH_LONG
+ 
+ Dim ip as ICOSImageProcessing
+ Dim img As ImageView 
+ Example:
+ Sub b1_Click
+ ip.MyToastBitmap(LoadBitmap(LoadBitmap(File.Dirassets , "SomeFile.png") , mGravity, mDuration)
+ End Sub</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>ba</name>
+                <type>anywheresoftware.b4a.BA</type>
+            </parameter>
+            <parameter>
+                <name>bmp</name>
+                <type>android.graphics.Bitmap</type>
+            </parameter>
+            <parameter>
+                <name>mGravity</name>
+                <type>int</type>
+            </parameter>
+            <parameter>
+                <name>mDuration</name>
+                <type>int</type>
+            </parameter>
+        </method>
+        <method>
+            <name>Boost</name>
+            <comment>Dim ImageView1 as ImageView
+ Dim ip as ICOSImageProcessing
+ Example:
+ Type = 1 --&gt; RED
+ Type = 2 --&gt; GREEN 
+ Type = 3 --&gt; BLUE
+ ImageView1.Bitmap=ip.Boost(LoadBitmap(File.Dirassets , "SomeFile.png" , Type , Percentage)
+ Or
+ ImageView1.Bitmap=ip.Boost(ImageView1.Bitmap , Type , Percentage)</comment>
+            <returntype>android.graphics.Bitmap</returntype>
+            <parameter>
+                <name>Type</name>
+                <type>int</type>
+            </parameter>
+            <parameter>
+                <name>Percentage</name>
+                <type>float</type>
+            </parameter>
+        </method>
+        <method>
+            <name>FastBlur</name>
+            <comment></comment>
+            <returntype>android.graphics.Bitmap</returntype>
+            <parameter>
+                <name>ba</name>
+                <type>anywheresoftware.b4a.BA</type>
+            </parameter>
+            <parameter>
+                <name>radius</name>
+                <type>int</type>
+            </parameter>
+        </method>
+        <method>
+            <name>ImageRotate</name>
+            <comment>Dim ImageView1 as ImageView
+ Dim ip as ICOSImageProcessing
+ Example:
+ ImageView1.Bitmap=ip.Rotate(LoadBitmap(File.Dirassets , "SomeFile.png" , RotateDegree)
+ Or
+ ImageView1.Bitmap=ip.Boost(ImageView1.Bitmap ,RotateDegree)</comment>
+            <returntype>android.graphics.Bitmap</returntype>
+            <parameter>
+                <name>RotateDegree</name>
+                <type>float</type>
+            </parameter>
+        </method>
+        <method>
+            <name>GaussianBlur</name>
+            <comment>Dim ImageView1 as ImageView
+ Dim ip as ICOSImageProcessing
+ Example:
+ ImageView1.Bitmap=ip.GaussianBlur(LoadBitmap(File.Dirassets , "SomeFile.png",BlurValue)
+ Or
+ ImageView1.Bitmap=ip.Boost(ImageView1.Bitmap, BlurValue)</comment>
+            <returntype>android.graphics.Bitmap</returntype>
+            <parameter>
+                <name>BlurValue</name>
+                <type>double</type>
+            </parameter>
+        </method>
+        <method>
+            <name>SepiaEffect</name>
+            <comment>Dim ImageView1 as ImageView
+ Dim ip as ICOSImageProcessing
+ Example:
+ ImageView1.Bitmap=ip.SepiaEffect(LoadBitmap(File.Dirassets , "SomeFile.png" ,Depth , Red , Green , Blue)
+ Or
+ ImageView1.Bitmap=ip.Boost(ImageView1.Bitmap ,Depth , Red , Green , Blue)</comment>
+            <returntype>android.graphics.Bitmap</returntype>
+            <parameter>
+                <name>Depth</name>
+                <type>int</type>
+            </parameter>
+            <parameter>
+                <name>Red</name>
+                <type>double</type>
+            </parameter>
+            <parameter>
+                <name>Green</name>
+                <type>double</type>
+            </parameter>
+            <parameter>
+                <name>Blue</name>
+                <type>double</type>
+            </parameter>
+        </method>
+        <method>
+            <name>Engrave</name>
+            <comment>Dim ImageView1 as ImageView
+ Dim ip as ICOSImageProcessing
+ Example:
+ ImageView1.Bitmap=ip.Engrave(LoadBitmap(File.Dirassets , "SomeFile.png")
+ Or
+ ImageView1.Bitmap=ip.Boost(ImageView1.Bitmap)</comment>
+            <returntype>android.graphics.Bitmap</returntype>
+            <parameter>
+                <name>Factor</name>
+                <type>int</type>
+            </parameter>
+            <parameter>
+                <name>Offset</name>
+                <type>int</type>
+            </parameter>
+        </method>
+        <method>
+            <name>IsInitialized</name>
+            <comment></comment>
+            <returntype>boolean</returntype>
+        </method>
+        <property>
+            <name>Version</name>
+            <returntype>double</returntype>
+            <comment>Return the version of this library</comment>
+        </property>
+        <field>
+            <name>LENGTH_LONG</name>
+            <comment></comment>
+            <returntype>int</returntype>
+        </field>
+        <field>
+            <name>Gravity_CENTER</name>
+            <comment></comment>
+            <returntype>int</returntype>
+        </field>
+        <field>
+            <name>Gravity_BOTTOM</name>
+            <comment></comment>
+            <returntype>int</returntype>
+        </field>
+        <field>
+            <name>Gravity_TOP</name>
+            <comment></comment>
+            <returntype>int</returntype>
+        </field>
+        <field>
+            <name>LENGTH_SHORT</name>
+            <comment></comment>
+            <returntype>int</returntype>
+        </field>
+    </class>
+    <class>
+        <name>giuseppe.salvi.icos.library.ICOSGallery</name>
+        <shortname>ICOSGallery</shortname>
+        <objectwrapper>android.widget.Gallery</objectwrapper>
+        <owner>activity</owner>
+        <event>ItemClick (Position As Int, Value As Object)</event>
+        <event>ItemLongClick (Position As Int, Value As Object)</event>
+        <method>
+            <name>AddTextAndBitmap</name>
+            <comment>Add Text and Bitmap
+ Example:
+ gallery.AddTextAndBitmap("Hello",LoadBitmap(File.DirAssets,"icon.png))</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>Text1</name>
+                <type>java.lang.CharSequence</type>
+            </parameter>
+            <parameter>
+                <name>Bitmap</name>
+                <type>android.graphics.Bitmap</type>
+            </parameter>
+        </method>
+        <method>
+            <name>BringToFront</name>
+            <comment></comment>
+            <returntype>void</returntype>
+        </method>
+        <method>
+            <name>RequestFocus</name>
+            <comment></comment>
+            <returntype>boolean</returntype>
+        </method>
+        <method>
+            <name>dispatchSetSelected</name>
+            <comment>Dispatch setSelected to all of this View's children.</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>Selected</name>
+                <type>boolean</type>
+            </parameter>
+        </method>
+        <method>
+            <name>RemoveView</name>
+            <comment></comment>
+            <returntype>void</returntype>
+        </method>
+        <method>
+            <name>AddBitmap</name>
+            <comment>Add only Bitmap
+ Example:
+ gallery.AddBitmap(LoadBitmap(File.DirAssets,"icon.png))</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>Bitmap</name>
+                <type>android.graphics.Bitmap</type>
+            </parameter>
+        </method>
+        <method>
+            <name>SetBackgroundImage</name>
+            <comment></comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>arg0</name>
+                <type>android.graphics.Bitmap</type>
+            </parameter>
+        </method>
+        <method>
+            <name>AddTwoText</name>
+            <comment>Add Two Text
+ Example:
+ gallery.AddTwoText("Hello","Basic4Android)</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>Text1</name>
+                <type>java.lang.CharSequence</type>
+            </parameter>
+            <parameter>
+                <name>Text2</name>
+                <type>java.lang.CharSequence</type>
+            </parameter>
+        </method>
+        <method>
+            <name>Clear</name>
+            <comment>Clear all item from the Gallery</comment>
+            <returntype>void</returntype>
+        </method>
+        <method>
+            <name>Invalidate3</name>
+            <comment></comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>arg0</name>
+                <type>int</type>
+            </parameter>
+            <parameter>
+                <name>arg1</name>
+                <type>int</type>
+            </parameter>
+            <parameter>
+                <name>arg2</name>
+                <type>int</type>
+            </parameter>
+            <parameter>
+                <name>arg3</name>
+                <type>int</type>
+            </parameter>
+        </method>
+        <method>
+            <name>Invalidate2</name>
+            <comment></comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>arg0</name>
+                <type>android.graphics.Rect</type>
+            </parameter>
+        </method>
+        <method>
+            <name>IsInitialized</name>
+            <comment></comment>
+            <returntype>boolean</returntype>
+        </method>
+        <method>
+            <name>Initialize</name>
+            <comment></comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>arg0</name>
+                <type>anywheresoftware.b4a.BA</type>
+            </parameter>
+            <parameter>
+                <name>arg1</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+        <method>
+            <name>GetItem</name>
+            <comment>Return the value of the item at specified position in a Gallery</comment>
+            <returntype>java.lang.Object</returntype>
+            <parameter>
+                <name>Index</name>
+                <type>int</type>
+            </parameter>
+        </method>
+        <method>
+            <name>Invalidate</name>
+            <comment></comment>
+            <returntype>void</returntype>
+        </method>
+        <method>
+            <name>SetLayout</name>
+            <comment></comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>arg0</name>
+                <type>int</type>
+            </parameter>
+            <parameter>
+                <name>arg1</name>
+                <type>int</type>
+            </parameter>
+            <parameter>
+                <name>arg2</name>
+                <type>int</type>
+            </parameter>
+            <parameter>
+                <name>arg3</name>
+                <type>int</type>
+            </parameter>
+        </method>
+        <method>
+            <name>RemoveAt</name>
+            <comment>Remove the item at specified position in a Gallery</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>Index</name>
+                <type>int</type>
+            </parameter>
+        </method>
+        <method>
+            <name>AddTwoTextAndBitmap</name>
+            <comment>Add Two Text and Bitmap
+ Example:
+ gallery.AddTwoTextAndBitmap("Hello","Basic4Android",LoadBitmap(File.DirAssets,"icon.png))</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>Text1</name>
+                <type>java.lang.CharSequence</type>
+            </parameter>
+            <parameter>
+                <name>Text2</name>
+                <type>java.lang.CharSequence</type>
+            </parameter>
+            <parameter>
+                <name>Bitmap</name>
+                <type>android.graphics.Bitmap</type>
+            </parameter>
+        </method>
+        <method>
+            <name>AddText</name>
+            <comment>Add single Text
+ Example:
+ gallery.AddText("Hello")</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>Text1</name>
+                <type>java.lang.CharSequence</type>
+            </parameter>
+        </method>
+        <method>
+            <name>SendToBack</name>
+            <comment></comment>
+            <returntype>void</returntype>
+        </method>
+        <property>
+            <name>Top</name>
+            <returntype>int</returntype>
+            <parameter>
+                <name>arg0</name>
+                <type>int</type>
+            </parameter>
+            <comment></comment>
+        </property>
+        <property>
+            <name>Enabled</name>
+            <returntype>boolean</returntype>
+            <parameter>
+                <name>arg0</name>
+                <type>boolean</type>
+            </parameter>
+            <comment></comment>
+        </property>
+        <property>
+            <name>Visible</name>
+            <returntype>boolean</returntype>
+            <parameter>
+                <name>arg0</name>
+                <type>boolean</type>
+            </parameter>
+            <comment></comment>
+        </property>
+        <property>
+            <name>Gravity</name>
+            <parameter>
+                <name>gravity</name>
+                <type>int</type>
+            </parameter>
+            <comment>Describes how the child views are aligned.</comment>
+        </property>
+        <property>
+            <name>Background</name>
+            <returntype>android.graphics.drawable.Drawable</returntype>
+            <parameter>
+                <name>arg0</name>
+                <type>android.graphics.drawable.Drawable</type>
+            </parameter>
+            <comment></comment>
+        </property>
+        <property>
+            <name>Height</name>
+            <returntype>int</returntype>
+            <parameter>
+                <name>arg0</name>
+                <type>int</type>
+            </parameter>
+            <comment></comment>
+        </property>
+        <property>
+            <name>Spacing</name>
+            <parameter>
+                <name>spacing</name>
+                <type>int</type>
+            </parameter>
+            <comment>Sets the spacing between items in a Gallery
+ Examples:
+ gallery.Spacing=24</comment>
+        </property>
+        <property>
+            <name>Left</name>
+            <returntype>int</returntype>
+            <parameter>
+                <name>arg0</name>
+                <type>int</type>
+            </parameter>
+            <comment></comment>
+        </property>
+        <property>
+            <name>Color</name>
+            <parameter>
+                <name>arg0</name>
+                <type>int</type>
+            </parameter>
+            <comment></comment>
+        </property>
+        <property>
+            <name>Tag</name>
+            <returntype>java.lang.Object</returntype>
+            <parameter>
+                <name>arg0</name>
+                <type>java.lang.Object</type>
+            </parameter>
+            <comment></comment>
+        </property>
+        <property>
+            <name>Width</name>
+            <returntype>int</returntype>
+            <parameter>
+                <name>arg0</name>
+                <type>int</type>
+            </parameter>
+            <comment></comment>
+        </property>
+    </class>
+    <class>
+        <name>giuseppe.salvi.icos.library.ICOSFlip3DView</name>
+        <shortname>ICOSFlip3DView</shortname>
+        <objectwrapper>android.view.animation.Animation</objectwrapper>
+        <owner>activity</owner>
+        <event>animationend</event>
+        <method>
+            <name>Flip3DView2</name>
+            <comment>Example:
+ Dim anim As ICOSAnimation
+ Dim ImageView1 As ImageView
+ Dim Button1 As Button
+ 
+ Sub b1_Click
+ anim.Flip3D_XYZ("anim",ImageView1,0,180,3,anim.FLIP_HRIZONTAL)
+ anim.StartAnim(ImageView1)
+ End Sub</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>ba</name>
+                <type>anywheresoftware.b4a.BA</type>
+            </parameter>
+            <parameter>
+                <name>EventName</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>v</name>
+                <type>android.view.View</type>
+            </parameter>
+            <parameter>
+                <name>FromDegrees</name>
+                <type>float</type>
+            </parameter>
+            <parameter>
+                <name>ToDegrees</name>
+                <type>float</type>
+            </parameter>
+            <parameter>
+                <name>Duration</name>
+                <type>long</type>
+            </parameter>
+        </method>
+        <method>
+            <name>AutoRepeat</name>
+            <comment>Set repeat infinity automatically</comment>
+            <returntype>void</returntype>
+        </method>
+        <method>
+            <name>Swap2View</name>
+            <comment>Direction -&gt; FLIP_HORIZONTAL = 1
+ Direction -&gt; FLIP_VERTICAL	= 2
+ Example:
+ Dim anim As ICOSFlip3DView
+ Dim img1,img2 As ImageView
+ Dim Button1 As Button
+ 
+ Sub img1_Click
+ anim.Swap2View("anim",img1,img2)
+ End Sub</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>ba</name>
+                <type>anywheresoftware.b4a.BA</type>
+            </parameter>
+            <parameter>
+                <name>EventName</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>view1</name>
+                <type>android.view.View</type>
+            </parameter>
+            <parameter>
+                <name>view2</name>
+                <type>android.view.View</type>
+            </parameter>
+            <parameter>
+                <name>Duration</name>
+                <type>long</type>
+            </parameter>
+            <parameter>
+                <name>Direction</name>
+                <type>int</type>
+            </parameter>
+        </method>
+        <method>
+            <name>Flip3DView</name>
+            <comment>Direction -&gt; FLIP_HORIZONTAL = 1
+ Direction -&gt; FLIP_VERTICAL	= 2
+ Example:
+ Dim anim As ICOSAnimation
+ Dim ImageView1 As ImageView
+ Dim Button1 As Button
+ 
+ Sub b1_Click
+ anim.Flip3DView("anim",ImageView1,180,3,anim.FLIP_HRIZONTAL)
+ anim.StartAnim(ImageView1)
+ End Sub</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>ba</name>
+                <type>anywheresoftware.b4a.BA</type>
+            </parameter>
+            <parameter>
+                <name>EventName</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>v</name>
+                <type>android.view.View</type>
+            </parameter>
+            <parameter>
+                <name>Degrees</name>
+                <type>float</type>
+            </parameter>
+            <parameter>
+                <name>Duration</name>
+                <type>long</type>
+            </parameter>
+            <parameter>
+                <name>Direction</name>
+                <type>int</type>
+            </parameter>
+        </method>
+        <method>
+            <name>StartAnim</name>
+            <comment>anim.StartAnim</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>view</name>
+                <type>android.view.View</type>
+            </parameter>
+        </method>
+        <method>
+            <name>AutoReverse</name>
+            <comment>Set reverse automatically</comment>
+            <returntype>void</returntype>
+        </method>
+        <method>
+            <name>StopAnin</name>
+            <comment>Stop the animation</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>view</name>
+                <type>android.view.View</type>
+            </parameter>
+        </method>
+        <method>
+            <name>IsInitialized</name>
+            <comment></comment>
+            <returntype>boolean</returntype>
+        </method>
+        <property>
+            <name>StartAnimAtTime</name>
+            <parameter>
+                <name>Seconds</name>
+                <type>long</type>
+            </parameter>
+            <comment>Example:
+ Dim anim As ICOSAnimation
+ Dim ImageView1 As ImageView
+ Dim Button1 As Button
+ 
+ Sub b1_Click
+ anim.StartAnimAtTime=5000 The Animation Will start after 5 seconds
+ anim.FadeOut(2)
+ anim.StartAnim(ImageView1)
+ End Sub</comment>
+        </property>
+        <property>
+            <name>Version</name>
+            <returntype>double</returntype>
+            <comment>Return the version of this library</comment>
+        </property>
+        <field>
+            <name>FLIP_VERTICAL</name>
+            <comment></comment>
+            <returntype>int</returntype>
+        </field>
+        <field>
+            <name>FLIP_HORIZONTAL</name>
+            <comment></comment>
+            <returntype>int</returntype>
+        </field>
+    </class>
+    <class>
+        <name>giuseppe.salvi.icos.library.ICOSFadeAnimation</name>
+        <shortname>ICOSFadeAnimation</shortname>
+        <objectwrapper>android.view.animation.Animation</objectwrapper>
+        <owner>activity</owner>
+        <event>animationend</event>
+        <method>
+            <name>FadeInOut</name>
+            <comment>Example:
+ Dim anim As ICOSAnimation
+ Dim ImageView1 As ImageView
+ Dim Button1 As Button
+ 
+ Sub b1_Click
+ anim.FadeInOut("anim",2)
+ anim.StartAnim(ImageView1)
+ End Sub</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>ba</name>
+                <type>anywheresoftware.b4a.BA</type>
+            </parameter>
+            <parameter>
+                <name>EventName</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>Duration</name>
+                <type>int</type>
+            </parameter>
+        </method>
+        <method>
+            <name>AutoRepeat</name>
+            <comment>Set repeat infinity automatically</comment>
+            <returntype>void</returntype>
+        </method>
+        <method>
+            <name>FadeOut</name>
+            <comment>Example:
+ Dim anim As ICOSAnimation
+ Dim ImageView1 As ImageView
+ Dim Button1 As Button
+ 
+ Sub b1_Click
+ anim.FadeOut("anim",2)
+ anim.StartAnim(ImageView1)
+ End Sub</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>ba</name>
+                <type>anywheresoftware.b4a.BA</type>
+            </parameter>
+            <parameter>
+                <name>EventName</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>Duration</name>
+                <type>long</type>
+            </parameter>
+        </method>
+        <method>
+            <name>FadeOutIn</name>
+            <comment>Example:
+ Dim anim As ICOSAnimation
+ Dim ImageView1 As ImageView
+ Dim Button1 As Button
+ 
+ Sub b1_Click
+ anim.FadeOutIn("anim",2)
+ anim.StartAnim(ImageView1)
+ End Sub</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>ba</name>
+                <type>anywheresoftware.b4a.BA</type>
+            </parameter>
+            <parameter>
+                <name>EventName</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>Duration</name>
+                <type>long</type>
+            </parameter>
+        </method>
+        <method>
+            <name>StartAnim</name>
+            <comment>anim.StartAnim</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>view</name>
+                <type>android.view.View</type>
+            </parameter>
+        </method>
+        <method>
+            <name>FadeIn</name>
+            <comment>Example:
+ Dim anim As ICOSAnimation
+ Dim ImageView1 As ImageView
+ Dim Button1 As Button
+ 
+ Sub b1_Click
+ anim.FadeIn("anim",2)
+ anim.StartAnim(ImageView1)
+ End Sub</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>ba</name>
+                <type>anywheresoftware.b4a.BA</type>
+            </parameter>
+            <parameter>
+                <name>EventName</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>Duration</name>
+                <type>long</type>
+            </parameter>
+        </method>
+        <method>
+            <name>AutoReverse</name>
+            <comment>Set reverse automatically</comment>
+            <returntype>void</returntype>
+        </method>
+        <method>
+            <name>StopAnin</name>
+            <comment>Stop the animation</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>view</name>
+                <type>android.view.View</type>
+            </parameter>
+        </method>
+        <method>
+            <name>InfinityFade</name>
+            <comment>Example:
+ Dim anim As ICOSAnimation
+ Dim ImageView1 As ImageView
+ Dim Button1 As Button
+ 
+ Sub b1_Click
+ anim.InfiniteFade("anim",2)
+ anim.StartAnim(ImageView1)
+ End Sub</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>ba</name>
+                <type>anywheresoftware.b4a.BA</type>
+            </parameter>
+            <parameter>
+                <name>EventName</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>Duration</name>
+                <type>long</type>
+            </parameter>
+        </method>
+        <method>
+            <name>IsInitialized</name>
+            <comment></comment>
+            <returntype>boolean</returntype>
+        </method>
+        <property>
+            <name>StartAnimAtTime</name>
+            <parameter>
+                <name>Seconds</name>
+                <type>int</type>
+            </parameter>
+            <comment>Example:
+ Dim anim As ICOSAnimation
+ Dim ImageView1 As ImageView
+ Dim Button1 As Button
+ 
+ Sub b1_Click
+ anim.StartAnimAtTime=5000 The Animation Will start after 5 seconds
+ anim.FadeOut(2)
+ anim.StartAnim(ImageView1)
+ End Sub</comment>
+        </property>
+        <property>
+            <name>Version</name>
+            <returntype>double</returntype>
+            <comment>Return the version of this library</comment>
+        </property>
+    </class>
+    <version>1.5</version>
+    <comment></comment>
+    <author>Giuseppe Salvi</author>
+</root>

@@ -1,0 +1,1769 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root>
+    <doclet-version-NOT-library-version>1.07</doclet-version-NOT-library-version>
+    <class>
+        <name>anywheresoftware.b4a.objects.B2WorldManifold</name>
+        <shortname>B2WorldManifold</shortname>
+        <owner>process</owner>
+        <method>
+            <name>GetPoint</name>
+            <comment>World contact point (point of intersection)</comment>
+            <returntype>anywheresoftware.b4a.objects.B2Vec2</returntype>
+            <parameter>
+                <name>Index</name>
+                <type>int</type>
+            </parameter>
+        </method>
+        <property>
+            <name>Normal</name>
+            <returntype>anywheresoftware.b4a.objects.B2Vec2</returntype>
+            <comment></comment>
+        </property>
+        <field>
+            <name>PointCount</name>
+            <comment></comment>
+            <returntype>int</returntype>
+        </field>
+    </class>
+    <class>
+        <name>anywheresoftware.b4a.objects.B2WorldManifold.B2Manifold</name>
+        <shortname>B2Manifold</shortname>
+        <owner>process</owner>
+        <method>
+            <name>GetManifoldPoint</name>
+            <comment></comment>
+            <returntype>anywheresoftware.b4a.objects.B2WorldManifold.B2ManifoldPoint</returntype>
+            <parameter>
+                <name>Index</name>
+                <type>int</type>
+            </parameter>
+        </method>
+        <property>
+            <name>PointCount</name>
+            <returntype>int</returntype>
+            <comment></comment>
+        </property>
+    </class>
+    <class>
+        <name>anywheresoftware.b4a.objects.B2WorldManifold.B2ManifoldPoint</name>
+        <shortname>B2ManifoldPoint</shortname>
+        <owner>process</owner>
+        <property>
+            <name>LocalPoint</name>
+            <returntype>anywheresoftware.b4a.objects.B2Vec2</returntype>
+            <comment></comment>
+        </property>
+        <property>
+            <name>TangentImpulse</name>
+            <returntype>float</returntype>
+            <comment></comment>
+        </property>
+        <property>
+            <name>NormalImpulse</name>
+            <returntype>float</returntype>
+            <comment></comment>
+        </property>
+    </class>
+    <class>
+        <name>anywheresoftware.b4a.objects.B2WorldManifold.B2ContactImpulse</name>
+        <shortname>B2ContactImpulse</shortname>
+        <owner>process</owner>
+        <method>
+            <name>GetNormalImpulse</name>
+            <comment></comment>
+            <returntype>float</returntype>
+            <parameter>
+                <name>Index</name>
+                <type>int</type>
+            </parameter>
+        </method>
+        <method>
+            <name>GetTangentImpulse</name>
+            <comment></comment>
+            <returntype>float</returntype>
+            <parameter>
+                <name>Index</name>
+                <type>int</type>
+            </parameter>
+        </method>
+        <property>
+            <name>PointCount</name>
+            <returntype>int</returntype>
+            <comment></comment>
+        </property>
+    </class>
+    <class>
+        <name>anywheresoftware.b4a.objects.B2World</name>
+        <shortname>B2World</shortname>
+        <owner>process</owner>
+        <event>BeginContact (Contact As B2Contact)</event>
+        <event>EndContact (Contact As B2Contact)</event>
+        <event>PreSolve (Contact As B2Contact, OldManifold As B2Manifold)</event>
+        <event>PostSolve (Contact As B2Contact, Impulse As B2ContactImpulse)</event>
+        <event>RayCastCallback (Fixture As B2Fixture, Point As B2Vec2, Normal As B2Vec2, Fraction As Float) As Float</event>
+        <method>
+            <name RaisesSynchronousEvents="true">TimeStep</name>
+            <comment>Take a time step. This performs collision detection, integration, and constraint solution.
+ 
+ TimeStep - the amount of time to simulate, this should not vary.
+ VelocityIterations - for the velocity constraint solver.
+ PositionIterations - for the position constraint solver.</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>TimeStep</name>
+                <type>float</type>
+            </parameter>
+            <parameter>
+                <name>VelocityIterations</name>
+                <type>int</type>
+            </parameter>
+            <parameter>
+                <name>PositionIterations</name>
+                <type>int</type>
+            </parameter>
+        </method>
+        <method>
+            <name>DestroyBody</name>
+            <comment>This automatically deletes all associated shapes and joints.
+ This function is locked during callbacks.</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>Body</name>
+                <type>anywheresoftware.b4a.objects.B2Body</type>
+            </parameter>
+        </method>
+        <method>
+            <name>CreateVec2</name>
+            <comment>Created a B2Vec2 vector.</comment>
+            <returntype>anywheresoftware.b4a.objects.B2Vec2</returntype>
+            <parameter>
+                <name>X</name>
+                <type>float</type>
+            </parameter>
+            <parameter>
+                <name>Y</name>
+                <type>float</type>
+            </parameter>
+        </method>
+        <method>
+            <name>QueryAABBToMapOfBodies</name>
+            <comment>Queries the world for all fixtures that potentially overlap the given AABB.
+Returns a Map with the bodies as keys. The map values are not used.</comment>
+            <returntype>anywheresoftware.b4a.objects.collections.Map</returntype>
+            <parameter>
+                <name>AABB</name>
+                <type>anywheresoftware.b4a.objects.B2AABB</type>
+            </parameter>
+        </method>
+        <method>
+            <name RaisesSynchronousEvents="true">RayCast</name>
+            <comment>Ray-cast the world for all fixtures in the path of the ray, going from FromVec to ToVec. Your callback controls whether you
+ get the closest point, any point, or n-points. The ray-cast ignores shapes that contain the
+ starting point.
+ 
+ The RayCastCallback event will be raised. The return value from this event determines the behavior:
+ 0 - Terminate the ray cast.
+ Fraction - Clip the ray to this point.
+ 1 - Do not clip the ray and continue.
+ -1 - Ignore this fixture.</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>FromVec</name>
+                <type>anywheresoftware.b4a.objects.B2Vec2</type>
+            </parameter>
+            <parameter>
+                <name>ToVec</name>
+                <type>anywheresoftware.b4a.objects.B2Vec2</type>
+            </parameter>
+        </method>
+        <method>
+            <name>CreateBody</name>
+            <comment>Create a rigid body given a definition.
+This function is locked during callbacks.</comment>
+            <returntype>anywheresoftware.b4a.objects.B2Body</returntype>
+            <parameter>
+                <name>BodyDef</name>
+                <type>anywheresoftware.b4a.objects.B2Body.B2BodyDef</type>
+            </parameter>
+        </method>
+        <method>
+            <name>FirstContact</name>
+            <comment>Returns the first contact. Note that the list of contacts includes non-touching contacts.
+Example:&lt;code&gt;
+Dim contact As B2Contact = world.FirstContact
+Do While contact &lt;&gt; Null
+	If contact.IsTouching Then
+		'...
+	End If
+	contact = contact.NextContact
+Loop&lt;/code&gt;</comment>
+            <returntype>anywheresoftware.b4a.objects.B2Contact</returntype>
+        </method>
+        <method>
+            <name>Initialize</name>
+            <comment>Initializes the world and sets its gravity.</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>ba</name>
+                <type>anywheresoftware.b4a.BA</type>
+            </parameter>
+            <parameter>
+                <name>EventName</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>Gravity</name>
+                <type>anywheresoftware.b4a.objects.B2Vec2</type>
+            </parameter>
+        </method>
+        <method>
+            <name>QueryAABBToListOfFixtures</name>
+            <comment>Queries the world for all fixtures that potentially overlap the given AABB.
+Returns a List. Each item in the list is a B2Fixture.</comment>
+            <returntype>anywheresoftware.b4a.objects.collections.List</returntype>
+            <parameter>
+                <name>AABB</name>
+                <type>anywheresoftware.b4a.objects.B2AABB</type>
+            </parameter>
+        </method>
+        <property>
+            <name>AllBodies</name>
+            <returntype>anywheresoftware.b4a.objects.collections.List</returntype>
+            <comment>Returns a list with all the bodies.</comment>
+        </property>
+        <property>
+            <name>DynamicBodies</name>
+            <returntype>anywheresoftware.b4a.objects.collections.List</returntype>
+            <comment>Returns a list with all the bodies with dynamic body type.</comment>
+        </property>
+        <property>
+            <name>Gravity</name>
+            <returntype>anywheresoftware.b4a.objects.B2Vec2</returntype>
+            <parameter>
+                <name>v</name>
+                <type>anywheresoftware.b4a.objects.B2Vec2</type>
+            </parameter>
+            <comment>Gets or sets the world gravity.</comment>
+        </property>
+    </class>
+    <class>
+        <name>anywheresoftware.b4a.objects.B2Vec2</name>
+        <shortname>B2Vec2</shortname>
+        <owner>process</owner>
+        <method>
+            <name>Equals</name>
+            <comment>Tests whether the two vectors are equal.</comment>
+            <returntype>boolean</returntype>
+            <parameter>
+                <name>Other</name>
+                <type>anywheresoftware.b4a.objects.B2Vec2</type>
+            </parameter>
+        </method>
+        <method>
+            <name>Set</name>
+            <comment>Set the vector component-wise.</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>X</name>
+                <type>float</type>
+            </parameter>
+            <parameter>
+                <name>Y</name>
+                <type>float</type>
+            </parameter>
+        </method>
+        <method>
+            <name>SubtractFromThis</name>
+            <comment>Subtract another vector from this one and return result - alters this vector.</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>Other</name>
+                <type>anywheresoftware.b4a.objects.B2Vec2</type>
+            </parameter>
+        </method>
+        <method>
+            <name>AddToThis</name>
+            <comment>Add another vector to this one and returns result - alters this vector.</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>Other</name>
+                <type>anywheresoftware.b4a.objects.B2Vec2</type>
+            </parameter>
+        </method>
+        <method>
+            <name>MultiplyThis</name>
+            <comment>Multiply this vector by a number and return result - alters this vector.</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>Scalar</name>
+                <type>float</type>
+            </parameter>
+        </method>
+        <method>
+            <name>CreateCopy</name>
+            <comment>Creates a copy of the current vector.</comment>
+            <returntype>anywheresoftware.b4a.objects.B2Vec2</returntype>
+        </method>
+        <method>
+            <name>NormalizeThis</name>
+            <comment>Normalize this vector and return the length before normalization. Alters this vector.</comment>
+            <returntype>float</returntype>
+        </method>
+        <method>
+            <name>Negate</name>
+            <comment>Return the negation of this vector; does not alter this vector.</comment>
+            <returntype>anywheresoftware.b4a.objects.B2Vec2</returntype>
+        </method>
+        <property>
+            <name>LengthSquared</name>
+            <returntype>float</returntype>
+            <comment>Return the squared length of this vector.</comment>
+        </property>
+        <property>
+            <name>Length</name>
+            <returntype>float</returntype>
+            <comment>Return the length of this vector.</comment>
+        </property>
+        <property>
+            <name>X</name>
+            <returntype>float</returntype>
+            <parameter>
+                <name>x</name>
+                <type>float</type>
+            </parameter>
+            <comment></comment>
+        </property>
+        <property>
+            <name>Y</name>
+            <returntype>float</returntype>
+            <parameter>
+                <name>y</name>
+                <type>float</type>
+            </parameter>
+            <comment></comment>
+        </property>
+    </class>
+    <class>
+        <name>anywheresoftware.b4a.objects.B2Transform</name>
+        <shortname>B2Transform</shortname>
+        <owner>process</owner>
+        <method>
+            <name>Initialize</name>
+            <comment>Creates a new identity transform.</comment>
+            <returntype>void</returntype>
+        </method>
+        <property>
+            <name>Translation</name>
+            <returntype>anywheresoftware.b4a.objects.B2Vec2</returntype>
+            <parameter>
+                <name>v</name>
+                <type>anywheresoftware.b4a.objects.B2Vec2</type>
+            </parameter>
+            <comment>Gets or sets the translation caused by the transform</comment>
+        </property>
+        <property>
+            <name>Angle</name>
+            <returntype>float</returntype>
+            <parameter>
+                <name>f</name>
+                <type>float</type>
+            </parameter>
+            <comment>Gets or sets the rotation caused by the transform</comment>
+        </property>
+    </class>
+    <class>
+        <name>anywheresoftware.b4a.objects.B2Shape</name>
+        <objectwrapper>T</objectwrapper>
+        <owner>process</owner>
+        <method>
+            <name>ComputeAABB</name>
+            <comment>Computes the shape AABB based on the passed transform. The result is stored in the Output object.</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>Output</name>
+                <type>anywheresoftware.b4a.objects.B2AABB</type>
+            </parameter>
+            <parameter>
+                <name>Transform</name>
+                <type>anywheresoftware.b4a.objects.B2Transform</type>
+            </parameter>
+        </method>
+        <method>
+            <name>TestPoint</name>
+            <comment>Test a point for containment in this shape. This only works for convex shapes.
+ 
+ Transform - the shape world transform.
+ Point - a point in world coordinates.</comment>
+            <returntype>boolean</returntype>
+            <parameter>
+                <name>Transform</name>
+                <type>anywheresoftware.b4a.objects.B2Transform</type>
+            </parameter>
+            <parameter>
+                <name>Point</name>
+                <type>anywheresoftware.b4a.objects.B2Vec2</type>
+            </parameter>
+        </method>
+        <method>
+            <name>IsInitialized</name>
+            <comment></comment>
+            <returntype>boolean</returntype>
+        </method>
+        <property>
+            <name>Radius</name>
+            <returntype>float</returntype>
+            <parameter>
+                <name>radius</name>
+                <type>float</type>
+            </parameter>
+            <comment>Gets or sets the radius of the underlying shape. This can refer to different things depending on the
+ shape type.</comment>
+        </property>
+        <property>
+            <name>ShapeType</name>
+            <returntype>java.lang.Object</returntype>
+            <comment>Returns the shape type which is one of the SHAPE constants.</comment>
+        </property>
+        <field>
+            <name>SHAPE_CIRCLE</name>
+            <comment></comment>
+            <returntype>java.lang.Object</returntype>
+        </field>
+        <field>
+            <name>SHAPE_CHAIN</name>
+            <comment></comment>
+            <returntype>java.lang.Object</returntype>
+        </field>
+        <field>
+            <name>SHAPE_EDGE</name>
+            <comment></comment>
+            <returntype>java.lang.Object</returntype>
+        </field>
+        <field>
+            <name>SHAPE_POLYGON</name>
+            <comment></comment>
+            <returntype>java.lang.Object</returntype>
+        </field>
+    </class>
+    <class>
+        <name>anywheresoftware.b4a.objects.B2Shape.ConcreteB2Shape</name>
+        <shortname>B2Shape</shortname>
+        <objectwrapper>org.jbox2d.collision.shapes.Shape</objectwrapper>
+        <owner>process</owner>
+        <method>
+            <name>ComputeAABB</name>
+            <comment>Computes the shape AABB based on the passed transform. The result is stored in the Output object.</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>Output</name>
+                <type>anywheresoftware.b4a.objects.B2AABB</type>
+            </parameter>
+            <parameter>
+                <name>Transform</name>
+                <type>anywheresoftware.b4a.objects.B2Transform</type>
+            </parameter>
+        </method>
+        <method>
+            <name>TestPoint</name>
+            <comment>Test a point for containment in this shape. This only works for convex shapes.
+ 
+ Transform - the shape world transform.
+ Point - a point in world coordinates.</comment>
+            <returntype>boolean</returntype>
+            <parameter>
+                <name>Transform</name>
+                <type>anywheresoftware.b4a.objects.B2Transform</type>
+            </parameter>
+            <parameter>
+                <name>Point</name>
+                <type>anywheresoftware.b4a.objects.B2Vec2</type>
+            </parameter>
+        </method>
+        <method>
+            <name>IsInitialized</name>
+            <comment></comment>
+            <returntype>boolean</returntype>
+        </method>
+        <property>
+            <name>Radius</name>
+            <returntype>float</returntype>
+            <parameter>
+                <name>radius</name>
+                <type>float</type>
+            </parameter>
+            <comment>Gets or sets the radius of the underlying shape. This can refer to different things depending on the
+ shape type.</comment>
+        </property>
+        <property>
+            <name>ShapeType</name>
+            <returntype>java.lang.Object</returntype>
+            <comment>Returns the shape type which is one of the SHAPE constants.</comment>
+        </property>
+        <field>
+            <name>SHAPE_CIRCLE</name>
+            <comment></comment>
+            <returntype>java.lang.Object</returntype>
+        </field>
+        <field>
+            <name>SHAPE_CHAIN</name>
+            <comment></comment>
+            <returntype>java.lang.Object</returntype>
+        </field>
+        <field>
+            <name>SHAPE_EDGE</name>
+            <comment></comment>
+            <returntype>java.lang.Object</returntype>
+        </field>
+        <field>
+            <name>SHAPE_POLYGON</name>
+            <comment></comment>
+            <returntype>java.lang.Object</returntype>
+        </field>
+    </class>
+    <class>
+        <name>anywheresoftware.b4a.objects.B2Shape.B2CircleShape</name>
+        <shortname>B2CircleShape</shortname>
+        <comment>Circle shape.</comment>
+        <objectwrapper>org.jbox2d.collision.shapes.CircleShape</objectwrapper>
+        <owner>process</owner>
+        <method>
+            <name>ComputeAABB</name>
+            <comment>Computes the shape AABB based on the passed transform. The result is stored in the Output object.</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>Output</name>
+                <type>anywheresoftware.b4a.objects.B2AABB</type>
+            </parameter>
+            <parameter>
+                <name>Transform</name>
+                <type>anywheresoftware.b4a.objects.B2Transform</type>
+            </parameter>
+        </method>
+        <method>
+            <name>TestPoint</name>
+            <comment>Test a point for containment in this shape. This only works for convex shapes.
+ 
+ Transform - the shape world transform.
+ Point - a point in world coordinates.</comment>
+            <returntype>boolean</returntype>
+            <parameter>
+                <name>Transform</name>
+                <type>anywheresoftware.b4a.objects.B2Transform</type>
+            </parameter>
+            <parameter>
+                <name>Point</name>
+                <type>anywheresoftware.b4a.objects.B2Vec2</type>
+            </parameter>
+        </method>
+        <method>
+            <name>IsInitialized</name>
+            <comment></comment>
+            <returntype>boolean</returntype>
+        </method>
+        <method>
+            <name>Initialize</name>
+            <comment></comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>Radius</name>
+                <type>float</type>
+            </parameter>
+        </method>
+        <property>
+            <name>Radius</name>
+            <returntype>float</returntype>
+            <parameter>
+                <name>radius</name>
+                <type>float</type>
+            </parameter>
+            <comment>Gets or sets the radius of the underlying shape. This can refer to different things depending on the
+ shape type.</comment>
+        </property>
+        <property>
+            <name>SupportVertex</name>
+            <returntype>anywheresoftware.b4a.objects.B2Vec2</returntype>
+            <comment></comment>
+        </property>
+        <property>
+            <name>ShapeType</name>
+            <returntype>java.lang.Object</returntype>
+            <comment>Returns the shape type which is one of the SHAPE constants.</comment>
+        </property>
+        <field>
+            <name>SHAPE_CIRCLE</name>
+            <comment></comment>
+            <returntype>java.lang.Object</returntype>
+        </field>
+        <field>
+            <name>SHAPE_CHAIN</name>
+            <comment></comment>
+            <returntype>java.lang.Object</returntype>
+        </field>
+        <field>
+            <name>SHAPE_EDGE</name>
+            <comment></comment>
+            <returntype>java.lang.Object</returntype>
+        </field>
+        <field>
+            <name>SHAPE_POLYGON</name>
+            <comment></comment>
+            <returntype>java.lang.Object</returntype>
+        </field>
+    </class>
+    <class>
+        <name>anywheresoftware.b4a.objects.B2Shape.B2EdgeShape</name>
+        <shortname>B2EdgeShape</shortname>
+        <comment>A line segment (edge) shape. These can be connected in chains or loops to other edge shapes. The
+ connectivity information is used to ensure correct contact normals.</comment>
+        <objectwrapper>org.jbox2d.collision.shapes.EdgeShape</objectwrapper>
+        <owner>process</owner>
+        <method>
+            <name>Set</name>
+            <comment></comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>FromVec</name>
+                <type>anywheresoftware.b4a.objects.B2Vec2</type>
+            </parameter>
+            <parameter>
+                <name>ToVec</name>
+                <type>anywheresoftware.b4a.objects.B2Vec2</type>
+            </parameter>
+        </method>
+        <method>
+            <name>ComputeAABB</name>
+            <comment>Computes the shape AABB based on the passed transform. The result is stored in the Output object.</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>Output</name>
+                <type>anywheresoftware.b4a.objects.B2AABB</type>
+            </parameter>
+            <parameter>
+                <name>Transform</name>
+                <type>anywheresoftware.b4a.objects.B2Transform</type>
+            </parameter>
+        </method>
+        <method>
+            <name>TestPoint</name>
+            <comment>Test a point for containment in this shape. This only works for convex shapes.
+ 
+ Transform - the shape world transform.
+ Point - a point in world coordinates.</comment>
+            <returntype>boolean</returntype>
+            <parameter>
+                <name>Transform</name>
+                <type>anywheresoftware.b4a.objects.B2Transform</type>
+            </parameter>
+            <parameter>
+                <name>Point</name>
+                <type>anywheresoftware.b4a.objects.B2Vec2</type>
+            </parameter>
+        </method>
+        <method>
+            <name>IsInitialized</name>
+            <comment></comment>
+            <returntype>boolean</returntype>
+        </method>
+        <method>
+            <name>Initialize</name>
+            <comment></comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>FromVec</name>
+                <type>anywheresoftware.b4a.objects.B2Vec2</type>
+            </parameter>
+            <parameter>
+                <name>ToVec</name>
+                <type>anywheresoftware.b4a.objects.B2Vec2</type>
+            </parameter>
+        </method>
+        <property>
+            <name>Vertex2</name>
+            <returntype>anywheresoftware.b4a.objects.B2Vec2</returntype>
+            <comment></comment>
+        </property>
+        <property>
+            <name>Radius</name>
+            <returntype>float</returntype>
+            <parameter>
+                <name>radius</name>
+                <type>float</type>
+            </parameter>
+            <comment>Gets or sets the radius of the underlying shape. This can refer to different things depending on the
+ shape type.</comment>
+        </property>
+        <property>
+            <name>Vertex1</name>
+            <returntype>anywheresoftware.b4a.objects.B2Vec2</returntype>
+            <comment></comment>
+        </property>
+        <property>
+            <name>ShapeType</name>
+            <returntype>java.lang.Object</returntype>
+            <comment>Returns the shape type which is one of the SHAPE constants.</comment>
+        </property>
+        <field>
+            <name>SHAPE_CIRCLE</name>
+            <comment></comment>
+            <returntype>java.lang.Object</returntype>
+        </field>
+        <field>
+            <name>SHAPE_CHAIN</name>
+            <comment></comment>
+            <returntype>java.lang.Object</returntype>
+        </field>
+        <field>
+            <name>SHAPE_EDGE</name>
+            <comment></comment>
+            <returntype>java.lang.Object</returntype>
+        </field>
+        <field>
+            <name>SHAPE_POLYGON</name>
+            <comment></comment>
+            <returntype>java.lang.Object</returntype>
+        </field>
+    </class>
+    <class>
+        <name>anywheresoftware.b4a.objects.B2Shape.B2ChainShape</name>
+        <shortname>B2ChainShape</shortname>
+        <comment>A chain shape is a free form sequence of line segments. The chain has two-sided collision, so you
+ can use inside and outside collision. Therefore, you may use any winding order. Connectivity
+ information is used to create smooth collisions. WARNING: The chain will not collide properly if
+ there are self-intersections.</comment>
+        <objectwrapper>org.jbox2d.collision.shapes.ChainShape</objectwrapper>
+        <owner>process</owner>
+        <method>
+            <name>GetEdge</name>
+            <comment>Copies the edge to OutShape.</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>Index</name>
+                <type>int</type>
+            </parameter>
+            <parameter>
+                <name>OutShape</name>
+                <type>anywheresoftware.b4a.objects.B2Shape.B2EdgeShape</type>
+            </parameter>
+        </method>
+        <method>
+            <name>ComputeAABB</name>
+            <comment>Computes the shape AABB based on the passed transform. The result is stored in the Output object.</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>Output</name>
+                <type>anywheresoftware.b4a.objects.B2AABB</type>
+            </parameter>
+            <parameter>
+                <name>Transform</name>
+                <type>anywheresoftware.b4a.objects.B2Transform</type>
+            </parameter>
+        </method>
+        <method>
+            <name>CreateLoop</name>
+            <comment>Create a loop. This automatically adjusts connectivity.</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>Vertices</name>
+                <type>anywheresoftware.b4a.objects.collections.List</type>
+            </parameter>
+        </method>
+        <method>
+            <name>CreateChain</name>
+            <comment>Create a chain with isolated end vertices.</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>Vertices</name>
+                <type>anywheresoftware.b4a.objects.collections.List</type>
+            </parameter>
+        </method>
+        <method>
+            <name>IsInitialized</name>
+            <comment></comment>
+            <returntype>boolean</returntype>
+        </method>
+        <method>
+            <name>Initialize</name>
+            <comment></comment>
+            <returntype>void</returntype>
+        </method>
+        <method>
+            <name>TestPoint</name>
+            <comment>Test a point for containment in this shape. This only works for convex shapes.
+ 
+ Transform - the shape world transform.
+ Point - a point in world coordinates.</comment>
+            <returntype>boolean</returntype>
+            <parameter>
+                <name>Transform</name>
+                <type>anywheresoftware.b4a.objects.B2Transform</type>
+            </parameter>
+            <parameter>
+                <name>Point</name>
+                <type>anywheresoftware.b4a.objects.B2Vec2</type>
+            </parameter>
+        </method>
+        <property>
+            <name>Radius</name>
+            <returntype>float</returntype>
+            <parameter>
+                <name>radius</name>
+                <type>float</type>
+            </parameter>
+            <comment>Gets or sets the radius of the underlying shape. This can refer to different things depending on the
+ shape type.</comment>
+        </property>
+        <property>
+            <name>EdgeCount</name>
+            <returntype>int</returntype>
+            <comment>Returns the number of edges.</comment>
+        </property>
+        <property>
+            <name>ShapeType</name>
+            <returntype>java.lang.Object</returntype>
+            <comment>Returns the shape type which is one of the SHAPE constants.</comment>
+        </property>
+        <field>
+            <name>SHAPE_CIRCLE</name>
+            <comment></comment>
+            <returntype>java.lang.Object</returntype>
+        </field>
+        <field>
+            <name>SHAPE_CHAIN</name>
+            <comment></comment>
+            <returntype>java.lang.Object</returntype>
+        </field>
+        <field>
+            <name>SHAPE_EDGE</name>
+            <comment></comment>
+            <returntype>java.lang.Object</returntype>
+        </field>
+        <field>
+            <name>SHAPE_POLYGON</name>
+            <comment></comment>
+            <returntype>java.lang.Object</returntype>
+        </field>
+    </class>
+    <class>
+        <name>anywheresoftware.b4a.objects.B2Shape.B2PolygonShape</name>
+        <shortname>B2PolygonShape</shortname>
+        <comment>A convex polygon shape. Polygons have a maximum number of vertices equal to 8.
+ In most cases you should not need many vertices for a convex polygon.</comment>
+        <objectwrapper>org.jbox2d.collision.shapes.PolygonShape</objectwrapper>
+        <owner>process</owner>
+        <method>
+            <name>SetAsBox2</name>
+            <comment>Creates a box polygon.
+HalfWidth / HalfHeight - Box dimensions.
+Center - Box center in local coordinates.
+Angle - Box rotation in local coordinates (radians).</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>HalfWidth</name>
+                <type>float</type>
+            </parameter>
+            <parameter>
+                <name>HalfHeight</name>
+                <type>float</type>
+            </parameter>
+            <parameter>
+                <name>Center</name>
+                <type>anywheresoftware.b4a.objects.B2Vec2</type>
+            </parameter>
+            <parameter>
+                <name>Angle</name>
+                <type>float</type>
+            </parameter>
+        </method>
+        <method>
+            <name>Set</name>
+            <comment>Creates a convex polygon. Maximum number of vertices is 8.</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>B2Vecs</name>
+                <type>anywheresoftware.b4a.objects.collections.List</type>
+            </parameter>
+        </method>
+        <method>
+            <name>SetAsBox</name>
+            <comment>Creates a box polygon.</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>HalfWidth</name>
+                <type>float</type>
+            </parameter>
+            <parameter>
+                <name>HalfHeight</name>
+                <type>float</type>
+            </parameter>
+        </method>
+        <method>
+            <name>ComputeAABB</name>
+            <comment>Computes the shape AABB based on the passed transform. The result is stored in the Output object.</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>Output</name>
+                <type>anywheresoftware.b4a.objects.B2AABB</type>
+            </parameter>
+            <parameter>
+                <name>Transform</name>
+                <type>anywheresoftware.b4a.objects.B2Transform</type>
+            </parameter>
+        </method>
+        <method>
+            <name>IsInitialized</name>
+            <comment></comment>
+            <returntype>boolean</returntype>
+        </method>
+        <method>
+            <name>Initialize</name>
+            <comment></comment>
+            <returntype>void</returntype>
+        </method>
+        <method>
+            <name>GetVertex</name>
+            <comment>Gets the vertex at the given index.</comment>
+            <returntype>anywheresoftware.b4a.objects.B2Vec2</returntype>
+            <parameter>
+                <name>Index</name>
+                <type>int</type>
+            </parameter>
+        </method>
+        <method>
+            <name>TestPoint</name>
+            <comment>Test a point for containment in this shape. This only works for convex shapes.
+ 
+ Transform - the shape world transform.
+ Point - a point in world coordinates.</comment>
+            <returntype>boolean</returntype>
+            <parameter>
+                <name>Transform</name>
+                <type>anywheresoftware.b4a.objects.B2Transform</type>
+            </parameter>
+            <parameter>
+                <name>Point</name>
+                <type>anywheresoftware.b4a.objects.B2Vec2</type>
+            </parameter>
+        </method>
+        <property>
+            <name>Radius</name>
+            <returntype>float</returntype>
+            <parameter>
+                <name>radius</name>
+                <type>float</type>
+            </parameter>
+            <comment>Gets or sets the radius of the underlying shape. This can refer to different things depending on the
+ shape type.</comment>
+        </property>
+        <property>
+            <name>VertexCount</name>
+            <returntype>int</returntype>
+            <comment>Returns the number of vertex.</comment>
+        </property>
+        <property>
+            <name>ShapeType</name>
+            <returntype>java.lang.Object</returntype>
+            <comment>Returns the shape type which is one of the SHAPE constants.</comment>
+        </property>
+        <field>
+            <name>SHAPE_CIRCLE</name>
+            <comment></comment>
+            <returntype>java.lang.Object</returntype>
+        </field>
+        <field>
+            <name>SHAPE_CHAIN</name>
+            <comment></comment>
+            <returntype>java.lang.Object</returntype>
+        </field>
+        <field>
+            <name>SHAPE_EDGE</name>
+            <comment></comment>
+            <returntype>java.lang.Object</returntype>
+        </field>
+        <field>
+            <name>SHAPE_POLYGON</name>
+            <comment></comment>
+            <returntype>java.lang.Object</returntype>
+        </field>
+    </class>
+    <class>
+        <name>anywheresoftware.b4a.objects.B2Fixture</name>
+        <shortname>B2Fixture</shortname>
+        <owner>process</owner>
+        <method>
+            <name>NextFixture</name>
+            <comment>Returns the next fixture. Returns Null if this is the last fixture.</comment>
+            <returntype>anywheresoftware.b4a.objects.B2Fixture</returntype>
+        </method>
+        <method>
+            <name>SetFilterBits</name>
+            <comment>Limited to lower 16 bits.
+ CategoryBits - A bit (or more) that defines the current fixture. Default value: 1.
+ MaskBits - Bits defining the other fixtures that will collide with this fixture. Default value 0xFFFF.</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>CategoryBits</name>
+                <type>int</type>
+            </parameter>
+            <parameter>
+                <name>MaskBits</name>
+                <type>int</type>
+            </parameter>
+        </method>
+        <property>
+            <name>Restitution</name>
+            <returntype>float</returntype>
+            <parameter>
+                <name>f</name>
+                <type>float</type>
+            </parameter>
+            <comment>The restitution (elasticity) usually in the range [0,1].</comment>
+        </property>
+        <property>
+            <name>Shape</name>
+            <returntype>anywheresoftware.b4a.objects.B2Shape.ConcreteB2Shape</returntype>
+            <comment>Get the child shape. You can modify the child shape, however you should not change the number
+ of vertices because this will crash some collision caching mechanisms.</comment>
+        </property>
+        <property>
+            <name>IsSensor</name>
+            <returntype>boolean</returntype>
+            <parameter>
+                <name>b</name>
+                <type>boolean</type>
+            </parameter>
+            <comment>A sensor shape collects contact information but never generates a collision response.</comment>
+        </property>
+        <property>
+            <name>Friction</name>
+            <returntype>float</returntype>
+            <parameter>
+                <name>f</name>
+                <type>float</type>
+            </parameter>
+            <comment>The friction coefficient, usually in the range [0,1].</comment>
+        </property>
+        <property>
+            <name>IsInitialized</name>
+            <returntype>boolean</returntype>
+            <comment></comment>
+        </property>
+        <property>
+            <name>Body</name>
+            <returntype>anywheresoftware.b4a.objects.B2Body</returntype>
+            <comment>Get the body that this fixture is attached to.</comment>
+        </property>
+        <property>
+            <name>Density</name>
+            <returntype>float</returntype>
+            <parameter>
+                <name>f</name>
+                <type>float</type>
+            </parameter>
+            <comment>The density, usually in kg/m^2</comment>
+        </property>
+        <field>
+            <name>Tag</name>
+            <comment></comment>
+            <returntype>java.lang.Object</returntype>
+        </field>
+    </class>
+    <class>
+        <name>anywheresoftware.b4a.objects.B2Fixture.B2FixtureDef</name>
+        <shortname>B2FixtureDef</shortname>
+        <owner>process</owner>
+        <method>
+            <name>SetFilterBits</name>
+            <comment>Limited to lower 16 bits.
+ CategoryBits - A bit (or more) that defines the current fixture. Default value: 1.
+ MaskBits - Bits defining the other fixtures that will collide with this fixture. Default value 0xFFFF.</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>CategoryBits</name>
+                <type>int</type>
+            </parameter>
+            <parameter>
+                <name>MaskBits</name>
+                <type>int</type>
+            </parameter>
+        </method>
+        <property>
+            <name>Restitution</name>
+            <returntype>float</returntype>
+            <parameter>
+                <name>f</name>
+                <type>float</type>
+            </parameter>
+            <comment>The restitution (elasticity) usually in the range [0,1].</comment>
+        </property>
+        <property>
+            <name>Shape</name>
+            <returntype>anywheresoftware.b4a.objects.B2Shape.ConcreteB2Shape</returntype>
+            <parameter>
+                <name>Shape</name>
+                <type>org.jbox2d.collision.shapes.Shape</type>
+            </parameter>
+            <comment>The shape, this must be set. The shape will be cloned when the fixture is created.</comment>
+        </property>
+        <property>
+            <name>IsSensor</name>
+            <returntype>boolean</returntype>
+            <parameter>
+                <name>b</name>
+                <type>boolean</type>
+            </parameter>
+            <comment>A sensor shape collects contact information but never generates a collision response.</comment>
+        </property>
+        <property>
+            <name>Friction</name>
+            <returntype>float</returntype>
+            <parameter>
+                <name>f</name>
+                <type>float</type>
+            </parameter>
+            <comment>The friction coefficient, usually in the range [0,1].</comment>
+        </property>
+        <property>
+            <name>Density</name>
+            <returntype>float</returntype>
+            <parameter>
+                <name>f</name>
+                <type>float</type>
+            </parameter>
+            <comment>The density, usually in kg/m^2</comment>
+        </property>
+    </class>
+    <class>
+        <name>anywheresoftware.b4a.objects.B2Contact</name>
+        <shortname>B2Contact</shortname>
+        <comment>A contact between two bodies. Note that a contact is created whenever the bodies AABBs overlap.
+Check IsTouching to find whether the two bodies are actually touching.</comment>
+        <owner>process</owner>
+        <method>
+            <name>NextContact</name>
+            <comment>Returns the next contact or Null if none. Should only be used with contacts accessed with World.FirstContact.
+To avoid creating new objects the current object will point to the next contact.</comment>
+            <returntype>anywheresoftware.b4a.objects.B2Contact</returntype>
+        </method>
+        <method>
+            <name>GetWorldManifold</name>
+            <comment>Gets the world manifold.</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>OutManifold</name>
+                <type>anywheresoftware.b4a.objects.B2WorldManifold</type>
+            </parameter>
+        </method>
+        <method>
+            <name>GetManifold</name>
+            <comment>Gets the contact manifold.</comment>
+            <returntype>anywheresoftware.b4a.objects.B2WorldManifold.B2Manifold</returntype>
+        </method>
+        <property>
+            <name>IsEnabled</name>
+            <returntype>boolean</returntype>
+            <parameter>
+                <name>b</name>
+                <type>boolean</type>
+            </parameter>
+            <comment>Enable/disable this contact. This can be used inside the pre-solve contact listener. The
+ contact is only disabled for the current time step (or sub-step in continuous collisions).</comment>
+        </property>
+        <property>
+            <name>FixtureB</name>
+            <returntype>anywheresoftware.b4a.objects.B2Fixture</returntype>
+            <comment>Returns the second fixture.</comment>
+        </property>
+        <property>
+            <name>FixtureA</name>
+            <returntype>anywheresoftware.b4a.objects.B2Fixture</returntype>
+            <comment>Returns the first fixture. Note that the order of fixtures is not consistent.</comment>
+        </property>
+        <property>
+            <name>IsTouching</name>
+            <returntype>boolean</returntype>
+            <comment>Returns true if the two bodies are actually touching.</comment>
+        </property>
+    </class>
+    <class>
+        <name>anywheresoftware.b4a.objects.B2Body</name>
+        <shortname>B2Body</shortname>
+        <owner>process</owner>
+        <method>
+            <name>SetTransform</name>
+            <comment>Set the position of the body's origin and rotation. This breaks any contacts and wakes the
+ other bodies. Manipulating a body's transform may cause non-physical behavior. Note: contacts
+ are updated on the next call to World.TimeStep().
+ 
+Position - the world position of the body's local origin.
+Angle - the world rotation in radians.</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>Position</name>
+                <type>anywheresoftware.b4a.objects.B2Vec2</type>
+            </parameter>
+            <parameter>
+                <name>Angle</name>
+                <type>float</type>
+            </parameter>
+        </method>
+        <method>
+            <name>GetLocalVector</name>
+            <comment>Gets a local vector given a world vector.</comment>
+            <returntype>anywheresoftware.b4a.objects.B2Vec2</returntype>
+            <parameter>
+                <name>WorldVector</name>
+                <type>anywheresoftware.b4a.objects.B2Vec2</type>
+            </parameter>
+        </method>
+        <method>
+            <name>GetContactList</name>
+            <comment>Returns a list with the body contacts.
+TouchingOnly - If False then the list will include non-touching collisions (based on the bodies AABBs).</comment>
+            <returntype>anywheresoftware.b4a.objects.collections.List</returntype>
+            <parameter>
+                <name>TouchingOnly</name>
+                <type>boolean</type>
+            </parameter>
+        </method>
+        <method>
+            <name>GetWorldPoint</name>
+            <comment>Get the world coordinates of a point given the local coordinates.
+ 
+ LocalPoint - a point on the body measured relative the the body's origin.</comment>
+            <returntype>anywheresoftware.b4a.objects.B2Vec2</returntype>
+            <parameter>
+                <name>LocalPoint</name>
+                <type>anywheresoftware.b4a.objects.B2Vec2</type>
+            </parameter>
+        </method>
+        <method>
+            <name>GetLocalPoint</name>
+            <comment>Gets a local point relative to the body's origin given a world point.</comment>
+            <returntype>anywheresoftware.b4a.objects.B2Vec2</returntype>
+            <parameter>
+                <name>WorldPoint</name>
+                <type>anywheresoftware.b4a.objects.B2Vec2</type>
+            </parameter>
+        </method>
+        <method>
+            <name>ApplyTorque</name>
+            <comment>Apply a torque. This affects the angular velocity without affecting the linear velocity of the
+ center of mass. This wakes up the body.
+ 
+ Torque - about the z-axis (out of the screen), usually in N-m.</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>Torque</name>
+                <type>float</type>
+            </parameter>
+        </method>
+        <method>
+            <name>DestroyFixture</name>
+            <comment>Destroy a fixture. This removes the fixture from the broad-phase and destroys all contacts
+ associated with this fixture. This will automatically adjust the mass of the body if the body
+ is dynamic and the fixture has positive density. All fixtures attached to a body are implicitly
+ destroyed when the body is destroyed.
+ 
+This function is locked during callbacks.</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>Fixture</name>
+                <type>anywheresoftware.b4a.objects.B2Fixture</type>
+            </parameter>
+        </method>
+        <method>
+            <name>CreateFixture2</name>
+            <comment>Creates a fixture from a shape and attach it to this body. This is a convenience function. Use
+ FixtureDef if you need to set parameters like friction, restitution, user data, or filtering.
+ If the density is non-zero, this function automatically updates the mass of the body.
+ 
+ Shape - the shape to be cloned.
+ Density - the shape density (set to zero for static bodies).
+ This function is locked during callbacks.</comment>
+            <returntype>anywheresoftware.b4a.objects.B2Fixture</returntype>
+            <parameter>
+                <name>Shape</name>
+                <type>org.jbox2d.collision.shapes.Shape</type>
+            </parameter>
+            <parameter>
+                <name>Density</name>
+                <type>float</type>
+            </parameter>
+        </method>
+        <method>
+            <name>ApplyLinearImpulse</name>
+            <comment>Apply an impulse at a point. This immediately modifies the velocity. It also modifies the
+ angular velocity if the point of application is not at the center of mass. This wakes up the
+ body.
+ 
+ Impulse - the world impulse vector, usually in N-seconds or kg-m/s.
+ Point - the world position of the point of application.
+ Wake - also wake up the body</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>Impulse</name>
+                <type>anywheresoftware.b4a.objects.B2Vec2</type>
+            </parameter>
+            <parameter>
+                <name>Point</name>
+                <type>anywheresoftware.b4a.objects.B2Vec2</type>
+            </parameter>
+        </method>
+        <method>
+            <name>CreateFixture</name>
+            <comment>Creates a fixture and attach it to this body. Use this function if you need to set some fixture
+ parameters, like friction. Otherwise you can create the fixture directly from a shape with CreateFixture2. If the
+ density is non-zero, this function automatically updates the mass of the body. Contacts are not
+ created until the next time step.
+ This function is locked during callbacks.</comment>
+            <returntype>anywheresoftware.b4a.objects.B2Fixture</returntype>
+            <parameter>
+                <name>FixtureDef</name>
+                <type>anywheresoftware.b4a.objects.B2Fixture.B2FixtureDef</type>
+            </parameter>
+        </method>
+        <method>
+            <name>ApplyForceToCenter</name>
+            <comment>Apply a force to the center of mass. This wakes up the body.
+ 
+ Force - the world force vector, usually in Newtons (N).</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>Force</name>
+                <type>anywheresoftware.b4a.objects.B2Vec2</type>
+            </parameter>
+        </method>
+        <method>
+            <name>GetWorldVector</name>
+            <comment>Get the world coordinates of a vector given the local coordinates.
+ 
+ LocalVector - a vector fixed in the body.</comment>
+            <returntype>anywheresoftware.b4a.objects.B2Vec2</returntype>
+            <parameter>
+                <name>LocalVector</name>
+                <type>anywheresoftware.b4a.objects.B2Vec2</type>
+            </parameter>
+        </method>
+        <method>
+            <name>ApplyAngularImpulse</name>
+            <comment>Apply an angular impulse.
+ 
+Impulse - the angular impulse in units of kg*m*m/s</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>Impulse</name>
+                <type>float</type>
+            </parameter>
+        </method>
+        <method>
+            <name>ApplyForce</name>
+            <comment>Apply a force at a world point. If the force is not applied at the center of mass, it will
+ generate a torque and affect the angular velocity. This wakes up the body.
+ 
+ Force - the world force vector, usually in Newtons (N).
+ Point - the world position of the point of application.</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>Force</name>
+                <type>anywheresoftware.b4a.objects.B2Vec2</type>
+            </parameter>
+            <parameter>
+                <name>Point</name>
+                <type>anywheresoftware.b4a.objects.B2Vec2</type>
+            </parameter>
+        </method>
+        <property>
+            <name>LinearVelocity</name>
+            <returntype>anywheresoftware.b4a.objects.B2Vec2</returntype>
+            <parameter>
+                <name>vec</name>
+                <type>anywheresoftware.b4a.objects.B2Vec2</type>
+            </parameter>
+            <comment>Get or sets the linear velocity of the center of mass. Do not modify the returned vector.</comment>
+        </property>
+        <property>
+            <name>Bullet</name>
+            <parameter>
+                <name>b</name>
+                <type>boolean</type>
+            </parameter>
+            <comment></comment>
+        </property>
+        <property>
+            <name>Position</name>
+            <returntype>anywheresoftware.b4a.objects.B2Vec2</returntype>
+            <comment>Get the world body origin position. Do not modify.</comment>
+        </property>
+        <property>
+            <name>IsBullet</name>
+            <returntype>boolean</returntype>
+            <comment>Is this body treated like a bullet for continuous collision detection?</comment>
+        </property>
+        <property>
+            <name>LinearDamping</name>
+            <returntype>float</returntype>
+            <parameter>
+                <name>f</name>
+                <type>float</type>
+            </parameter>
+            <comment>Get or set the linear damping of the body.</comment>
+        </property>
+        <property>
+            <name>IsInitialized</name>
+            <returntype>boolean</returntype>
+            <comment></comment>
+        </property>
+        <property>
+            <name>BodyType</name>
+            <returntype>java.lang.Object</returntype>
+            <parameter>
+                <name>o</name>
+                <type>java.lang.Object</type>
+            </parameter>
+            <comment>Gets or sets the body type.</comment>
+        </property>
+        <property>
+            <name>SleepingAllowed</name>
+            <returntype>boolean</returntype>
+            <parameter>
+                <name>b</name>
+                <type>boolean</type>
+            </parameter>
+            <comment>Get or set whether sleeping is allowed.</comment>
+        </property>
+        <property>
+            <name>AngularDamping</name>
+            <returntype>float</returntype>
+            <parameter>
+                <name>f</name>
+                <type>float</type>
+            </parameter>
+            <comment>Get or set the angular damping of the body.</comment>
+        </property>
+        <property>
+            <name>Awake</name>
+            <returntype>boolean</returntype>
+            <parameter>
+                <name>b</name>
+                <type>boolean</type>
+            </parameter>
+            <comment>Get or set the sleeping state of this body. A sleeping body has very low CPU cost.</comment>
+        </property>
+        <property>
+            <name>Mass</name>
+            <returntype>float</returntype>
+            <comment>Get the total mass of the body. Usually in kilograms (kg).</comment>
+        </property>
+        <property>
+            <name>IsColliding</name>
+            <returntype>boolean</returntype>
+            <comment>Returns true if the contact list is not empty. Note that the list includes non-touching contacts.</comment>
+        </property>
+        <property>
+            <name>Angle</name>
+            <returntype>float</returntype>
+            <comment>Get the angle in radians.</comment>
+        </property>
+        <property>
+            <name>FirstFixture</name>
+            <returntype>anywheresoftware.b4a.objects.B2Fixture</returntype>
+            <comment>Returns the first fixture.</comment>
+        </property>
+        <property>
+            <name>WorldCenter</name>
+            <returntype>anywheresoftware.b4a.objects.B2Vec2</returntype>
+            <comment>Get the world position of the center of mass. Do not modify.</comment>
+        </property>
+        <property>
+            <name>GravityScale</name>
+            <returntype>float</returntype>
+            <parameter>
+                <name>f</name>
+                <type>float</type>
+            </parameter>
+            <comment>Gets or sets the gravity scale.</comment>
+        </property>
+        <property>
+            <name>Inertia</name>
+            <returntype>float</returntype>
+            <comment>Get the central rotational inertia of the body. Usually in kg-m^2</comment>
+        </property>
+        <property>
+            <name>AngularVelocity</name>
+            <returntype>float</returntype>
+            <parameter>
+                <name>f</name>
+                <type>float</type>
+            </parameter>
+            <comment>Gets or sets the angular velocity. Measured in radians/second.</comment>
+        </property>
+        <property>
+            <name>Tag</name>
+            <returntype>java.lang.Object</returntype>
+            <parameter>
+                <name>o</name>
+                <type>java.lang.Object</type>
+            </parameter>
+            <comment></comment>
+        </property>
+        <property>
+            <name>Transform</name>
+            <returntype>anywheresoftware.b4a.objects.B2Transform</returntype>
+            <comment>Gets the body transformation.</comment>
+        </property>
+        <property>
+            <name>LocalCenter</name>
+            <returntype>anywheresoftware.b4a.objects.B2Vec2</returntype>
+            <comment>Get the local position of the center of mass. Do not modify.</comment>
+        </property>
+        <property>
+            <name>FixedRotation</name>
+            <returntype>boolean</returntype>
+            <parameter>
+                <name>b</name>
+                <type>boolean</type>
+            </parameter>
+            <comment>Get or set whether this body have fixed rotation. Setting causes the mass to be reset.</comment>
+        </property>
+        <field>
+            <name>TYPE_STATIC</name>
+            <comment></comment>
+            <returntype>java.lang.Object</returntype>
+        </field>
+        <field>
+            <name>TYPE_DYNAMIC</name>
+            <comment></comment>
+            <returntype>java.lang.Object</returntype>
+        </field>
+        <field>
+            <name>TYPE_KINEMATIC</name>
+            <comment></comment>
+            <returntype>java.lang.Object</returntype>
+        </field>
+    </class>
+    <class>
+        <name>anywheresoftware.b4a.objects.B2Body.B2BodyDef</name>
+        <shortname>B2BodyDef</shortname>
+        <owner>process</owner>
+        <property>
+            <name>LinearVelocity</name>
+            <returntype>anywheresoftware.b4a.objects.B2Vec2</returntype>
+            <parameter>
+                <name>b</name>
+                <type>anywheresoftware.b4a.objects.B2Vec2</type>
+            </parameter>
+            <comment>The linear velocity of the body in world co-ordinates.</comment>
+        </property>
+        <property>
+            <name>Bullet</name>
+            <returntype>boolean</returntype>
+            <parameter>
+                <name>b</name>
+                <type>boolean</type>
+            </parameter>
+            <comment>Is this a fast moving body that should be prevented from tunneling through other moving bodies?
+ Note that all bodies are prevented from tunneling through kinematic and static bodies. This
+ setting is only considered on dynamic bodies.
+ 
+ You should use this flag sparingly since it increases processing time.</comment>
+        </property>
+        <property>
+            <name>AllowSleep</name>
+            <returntype>boolean</returntype>
+            <parameter>
+                <name>b</name>
+                <type>boolean</type>
+            </parameter>
+            <comment>Set this flag to false if this body should never fall asleep. Note that this increases CPU
+ usage.</comment>
+        </property>
+        <property>
+            <name>Position</name>
+            <returntype>anywheresoftware.b4a.objects.B2Vec2</returntype>
+            <parameter>
+                <name>b</name>
+                <type>anywheresoftware.b4a.objects.B2Vec2</type>
+            </parameter>
+            <comment>The world position of the body. Avoid creating bodies at the origin since this can lead to many
+ overlapping shapes.</comment>
+        </property>
+        <property>
+            <name>LinearDamping</name>
+            <returntype>float</returntype>
+            <parameter>
+                <name>f</name>
+                <type>float</type>
+            </parameter>
+            <comment>Linear damping is use to reduce the linear velocity. The damping parameter can be larger than
+ 1.0f but the damping effect becomes sensitive to the time step when the damping parameter is
+ large.</comment>
+        </property>
+        <property>
+            <name>BodyType</name>
+            <returntype>java.lang.Object</returntype>
+            <parameter>
+                <name>o</name>
+                <type>java.lang.Object</type>
+            </parameter>
+            <comment>Get or set the body type.</comment>
+        </property>
+        <property>
+            <name>AngularDamping</name>
+            <returntype>float</returntype>
+            <parameter>
+                <name>f</name>
+                <type>float</type>
+            </parameter>
+            <comment>Angular damping is use to reduce the angular velocity. The damping parameter can be larger than
+ 1.0f but the damping effect becomes sensitive to the time step when the damping parameter is
+ large.</comment>
+        </property>
+        <property>
+            <name>Awake</name>
+            <returntype>boolean</returntype>
+            <parameter>
+                <name>b</name>
+                <type>boolean</type>
+            </parameter>
+            <comment>Is this body initially sleeping?</comment>
+        </property>
+        <property>
+            <name>Active</name>
+            <returntype>boolean</returntype>
+            <parameter>
+                <name>b</name>
+                <type>boolean</type>
+            </parameter>
+            <comment>Does this body start out active?</comment>
+        </property>
+        <property>
+            <name>Angle</name>
+            <returntype>float</returntype>
+            <parameter>
+                <name>a</name>
+                <type>float</type>
+            </parameter>
+            <comment>The world angle of the body in radians.</comment>
+        </property>
+        <property>
+            <name>GravityScale</name>
+            <returntype>float</returntype>
+            <parameter>
+                <name>f</name>
+                <type>float</type>
+            </parameter>
+            <comment>Experimental: scales the inertia tensor.</comment>
+        </property>
+        <property>
+            <name>AngularVelocity</name>
+            <returntype>float</returntype>
+            <parameter>
+                <name>f</name>
+                <type>float</type>
+            </parameter>
+            <comment>The angular velocity of the body.</comment>
+        </property>
+        <property>
+            <name>FixedRotation</name>
+            <returntype>boolean</returntype>
+            <parameter>
+                <name>b</name>
+                <type>boolean</type>
+            </parameter>
+            <comment>Should this body be prevented from rotating? Useful for characters.</comment>
+        </property>
+        <field>
+            <name>TYPE_STATIC</name>
+            <comment></comment>
+            <returntype>java.lang.Object</returntype>
+        </field>
+        <field>
+            <name>TYPE_DYNAMIC</name>
+            <comment></comment>
+            <returntype>java.lang.Object</returntype>
+        </field>
+        <field>
+            <name>TYPE_KINEMATIC</name>
+            <comment></comment>
+            <returntype>java.lang.Object</returntype>
+        </field>
+    </class>
+    <class>
+        <name>anywheresoftware.b4a.objects.B2AABB</name>
+        <shortname>B2AABB</shortname>
+        <owner>process</owner>
+        <method>
+            <name>TestOverlap</name>
+            <comment>Returns true if this AABB overlaps the Other AABB.</comment>
+            <returntype>boolean</returntype>
+            <parameter>
+                <name>Other</name>
+                <type>anywheresoftware.b4a.objects.B2AABB</type>
+            </parameter>
+        </method>
+        <method>
+            <name>Initialize2</name>
+            <comment></comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>BottomLeft</name>
+                <type>anywheresoftware.b4a.objects.B2Vec2</type>
+            </parameter>
+            <parameter>
+                <name>TopRight</name>
+                <type>anywheresoftware.b4a.objects.B2Vec2</type>
+            </parameter>
+        </method>
+        <method>
+            <name>Combine</name>
+            <comment>Combine this AABB with the Other AABB.</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>Other</name>
+                <type>anywheresoftware.b4a.objects.B2AABB</type>
+            </parameter>
+        </method>
+        <method>
+            <name>Contains</name>
+            <comment>Returns true if this AABB contains the Other AABB.</comment>
+            <returntype>boolean</returntype>
+            <parameter>
+                <name>Other</name>
+                <type>anywheresoftware.b4a.objects.B2AABB</type>
+            </parameter>
+        </method>
+        <method>
+            <name>Initialize</name>
+            <comment></comment>
+            <returntype>void</returntype>
+        </method>
+        <property>
+            <name>Center</name>
+            <returntype>anywheresoftware.b4a.objects.B2Vec2</returntype>
+            <comment></comment>
+        </property>
+        <property>
+            <name>BottomLeft</name>
+            <returntype>anywheresoftware.b4a.objects.B2Vec2</returntype>
+            <comment>Returns the bottom left point. You can modify it.</comment>
+        </property>
+        <property>
+            <name>Height</name>
+            <returntype>float</returntype>
+            <comment></comment>
+        </property>
+        <property>
+            <name>TopRight</name>
+            <returntype>anywheresoftware.b4a.objects.B2Vec2</returntype>
+            <comment>Returns the top right point. You can modify it.</comment>
+        </property>
+        <property>
+            <name>Width</name>
+            <returntype>float</returntype>
+            <comment></comment>
+        </property>
+    </class>
+    <version>0.94</version>
+    <customClass>name:Body Delegate Class (XUI2D), filenamewithoutextension:bodydelegate</customClass>
+    <customClass>name:Game Class (XUI2D), filenamewithoutextension:game</customClass>
+</root>

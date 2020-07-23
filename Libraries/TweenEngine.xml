@@ -1,0 +1,1442 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root>
+    <doclet-version-NOT-library-version>1.02</doclet-version-NOT-library-version>
+    <class>
+        <name>com.rootsoft.tweenengine.RSTweenTimeline</name>
+        <shortname>TweenTimeline</shortname>
+        <owner>process</owner>
+        <method>
+            <name>Initialize</name>
+            <comment>Initializes the Universal Tween Engine
+ EventName - Events subs prefix.</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>ba</name>
+                <type>anywheresoftware.b4a.BA</type>
+            </parameter>
+            <parameter>
+                <name>EventName</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+        <method>
+            <name>End</name>
+            <comment>Ends the timeline.</comment>
+            <returntype>void</returntype>
+        </method>
+        <method>
+            <name>isPaused</name>
+            <comment>Returns if the tl is paused.
+Return type: @return:</comment>
+            <returntype>boolean</returntype>
+        </method>
+        <method>
+            <name>Start</name>
+            <comment>Starts a timeline.</comment>
+            <returntype>void</returntype>
+        </method>
+        <method>
+            <name>Update</name>
+            <comment>Moreover, slow-motion, fast-motion and reverse play is easy,
+ you just need to change the speed of the update:
+delta: - delta * speed</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>delta</name>
+                <type>float</type>
+            </parameter>
+        </method>
+        <method>
+            <name>BeginSequence</name>
+            <comment>Begins a sequence timeline.</comment>
+            <returntype>void</returntype>
+        </method>
+        <method>
+            <name>RepeatYoyo</name>
+            <comment>RepeatYoyo a timeline.</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>count</name>
+                <type>int</type>
+            </parameter>
+            <parameter>
+                <name>delay</name>
+                <type>float</type>
+            </parameter>
+        </method>
+        <method>
+            <name>Push</name>
+            <comment>Set all objects to their initial positions.
+ e.g: push(Tween.set(...))
+ do a pause
+ and then push(tween.to(...)) will move the objects after each other.
+ next you can begin a parallel, etc
+tween: </comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>tween</name>
+                <type>aurelienribon.tweenengine.Tween</type>
+            </parameter>
+        </method>
+        <method>
+            <name>PushPause</name>
+            <comment>Push a pause between the tweens.
+time: </comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>time</name>
+                <type>float</type>
+            </parameter>
+        </method>
+        <method>
+            <name>isYoyo</name>
+            <comment>Returns if the tl is yoyo.
+Return type: @return:</comment>
+            <returntype>boolean</returntype>
+        </method>
+        <method>
+            <name>BeginParallel</name>
+            <comment>Begins a parallel timeline.</comment>
+            <returntype>void</returntype>
+        </method>
+        <method>
+            <name>Resume</name>
+            <comment>Resumes a timeline.</comment>
+            <returntype>void</returntype>
+        </method>
+        <method>
+            <name>isFinished</name>
+            <comment>Returns if the tl is finished.
+Return type: @return:</comment>
+            <returntype>boolean</returntype>
+        </method>
+        <method>
+            <name>CreateSequence</name>
+            <comment>Creates a sequence timeline.
+ One of the main constructors for the Timeline.</comment>
+            <returntype>void</returntype>
+        </method>
+        <method>
+            <name>CreateParallel</name>
+            <comment>Creates a parallell timeline.
+ One of the main constructors for the Timeline.</comment>
+            <returntype>void</returntype>
+        </method>
+        <method>
+            <name>Pause</name>
+            <comment>Pauses a timeline</comment>
+            <returntype>void</returntype>
+        </method>
+        <method>
+            <name>isStarted</name>
+            <comment>Returns if the tl is started.
+Return type: @return:</comment>
+            <returntype>boolean</returntype>
+        </method>
+        <method>
+            <name>isInitialized</name>
+            <comment>Returns if the tl is initialized.
+Return type: @return:</comment>
+            <returntype>boolean</returntype>
+        </method>
+        <method>
+            <name>Repeat</name>
+            <comment>Repeat a timeline</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>count</name>
+                <type>int</type>
+            </parameter>
+            <parameter>
+                <name>delay</name>
+                <type>float</type>
+            </parameter>
+        </method>
+        <property>
+            <name>RepeatCount</name>
+            <returntype>int</returntype>
+            <comment>Gets the times the timeline repeats.</comment>
+        </property>
+        <property>
+            <name>Step</name>
+            <returntype>int</returntype>
+            <comment>Gets the tl's step.</comment>
+        </property>
+        <property>
+            <name>RepeatDelay</name>
+            <returntype>float</returntype>
+            <comment>Gets the tl's repeat delay.</comment>
+        </property>
+        <property>
+            <name>CurrentTime</name>
+            <returntype>float</returntype>
+            <comment>Gets the current time of the timeline.</comment>
+        </property>
+        <property>
+            <name>Delay</name>
+            <returntype>float</returntype>
+            <parameter>
+                <name>delay</name>
+                <type>float</type>
+            </parameter>
+            <comment>Gets the timeline's delay.</comment>
+        </property>
+        <property>
+            <name>Duration</name>
+            <returntype>float</returntype>
+            <comment>Gets the timeline's duration.</comment>
+        </property>
+        <property>
+            <name>TimeLine</name>
+            <returntype>aurelienribon.tweenengine.Timeline</returntype>
+            <parameter>
+                <name>tl</name>
+                <type>aurelienribon.tweenengine.Timeline</type>
+            </parameter>
+            <comment>Gets or sets a timeline.</comment>
+        </property>
+        <property>
+            <name>Callback</name>
+            <parameter>
+                <name>callback</name>
+                <type>aurelienribon.tweenengine.TweenCallback</type>
+            </parameter>
+            <comment>Sets a callback of the tl.
+ This is used to receive events of the tl.
+ onevent (event as int) is called</comment>
+        </property>
+        <property>
+            <name>UserData</name>
+            <parameter>
+                <name>data</name>
+                <type>java.lang.Object</type>
+            </parameter>
+            <comment>Sets the user data.</comment>
+        </property>
+        <property>
+            <name>CallbackTriggers</name>
+            <parameter>
+                <name>flags</name>
+                <type>int</type>
+            </parameter>
+            <comment>Sets the callback flags</comment>
+        </property>
+        <property>
+            <name>FullDuration</name>
+            <returntype>float</returntype>
+            <comment>Gets the tl's full duration.</comment>
+        </property>
+    </class>
+    <class>
+        <name>com.rootsoft.tweenengine.RSTweenPath</name>
+        <shortname>TweenPath</shortname>
+        <owner>process</owner>
+        <method>
+            <name>compute</name>
+            <comment>Computes a path
+arg0: 
+arg1: 
+arg2: </comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>arg0</name>
+                <type>float</type>
+            </parameter>
+            <parameter>
+                <name>arg1</name>
+                <type>float[]</type>
+            </parameter>
+            <parameter>
+                <name>arg2</name>
+                <type>int</type>
+            </parameter>
+        </method>
+        <property>
+            <name>TweenPath</name>
+            <returntype>aurelienribon.tweenengine.TweenPath</returntype>
+            <parameter>
+                <name>path</name>
+                <type>aurelienribon.tweenengine.TweenPath</type>
+            </parameter>
+            <comment>Gets or sets the tween path</comment>
+        </property>
+    </class>
+    <class>
+        <name>com.rootsoft.tweenengine.RSTweenManager</name>
+        <shortname>TweenManager</shortname>
+        <owner>process</owner>
+        <method>
+            <name>addTimeLine</name>
+            <comment>Adds a timeline to the TweenManager.
+ You should always use tween.start(manager). 
+ A manager handles the lifecycles of the tweens and timelines. 
+ Calling update() on a manager lets you updates all the tweens associated to the manager at once, and when they are finished, 
+ the manager will remove them and pool them. 
+ Only use tween.start() without manager if you really now what you're doing (that's only useful in some very specific conditions).
+tl: </comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>tl</name>
+                <type>aurelienribon.tweenengine.Timeline</type>
+            </parameter>
+        </method>
+        <method>
+            <name>Initialize</name>
+            <comment>Initializes the Universal Tween Engine
+ EventName - Events subs prefix.</comment>
+            <returntype>void</returntype>
+        </method>
+        <method>
+            <name>containsTarget</name>
+            <comment>Checks if the tweens has a target.
+Return type: @return:</comment>
+            <returntype>boolean</returntype>
+            <parameter>
+                <name>target</name>
+                <type>java.lang.Object</type>
+            </parameter>
+        </method>
+        <method>
+            <name>Resume</name>
+            <comment>Resumes a tween.</comment>
+            <returntype>void</returntype>
+        </method>
+        <method>
+            <name>Update</name>
+            <comment>Moreover, slow-motion, fast-motion and reverse play is easy,
+ you just need to change the speed of the update:
+arg0: - delta * speed</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>arg0</name>
+                <type>float</type>
+            </parameter>
+        </method>
+        <method>
+            <name>killTarget</name>
+            <comment>Kill all tweens associated with the manager.</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>Target</name>
+                <type>java.lang.Object</type>
+            </parameter>
+        </method>
+        <method>
+            <name>StartTween</name>
+            <comment>Starts the tween manager.</comment>
+            <returntype>void</returntype>
+        </method>
+        <method>
+            <name>Pause</name>
+            <comment>Pauses a tween.</comment>
+            <returntype>void</returntype>
+        </method>
+        <method>
+            <name>addTween</name>
+            <comment>Adds a tween to the TweenManager.
+ You should always use tween.start(manager). 
+ A manager handles the lifecycles of the tweens and timelines. 
+ Calling update() on a manager lets you updates all the tweens associated to the manager at once, and when they are finished, 
+ the manager will remove them and pool them. 
+ Only use tween.start() without manager if you really now what you're doing (that's only useful in some very specific conditions).
+tween: </comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>tween</name>
+                <type>aurelienribon.tweenengine.Tween</type>
+            </parameter>
+        </method>
+        <method>
+            <name>StartTimeline</name>
+            <comment>Starts the tween manager.</comment>
+            <returntype>void</returntype>
+        </method>
+        <method>
+            <name>killAllTweens</name>
+            <comment>Kill all tweens associated with the manager.</comment>
+            <returntype>void</returntype>
+        </method>
+        <method>
+            <name>Size</name>
+            <comment>Returns the size
+Return type: @return:</comment>
+            <returntype>int</returntype>
+        </method>
+        <property>
+            <name>RunningTweensCount</name>
+            <returntype>int</returntype>
+            <comment>Returns all tweens currently running.</comment>
+        </property>
+        <property>
+            <name>Object</name>
+            <returntype>java.util.List</returntype>
+            <comment>Returns a java list with all the tweens.</comment>
+        </property>
+    </class>
+    <class>
+        <name>com.rootsoft.tweenengine.RSTweenConstants</name>
+        <shortname>TweenConstants</shortname>
+        <owner>process</owner>
+        <field>
+            <name>CALLBACK_BACK_START</name>
+            <comment></comment>
+            <returntype>int</returntype>
+        </field>
+        <field>
+            <name>SCALE_XY</name>
+            <comment></comment>
+            <returntype>int</returntype>
+        </field>
+        <field>
+            <name>QUAD_OUT</name>
+            <comment></comment>
+            <returntype>aurelienribon.tweenengine.equations.Quad</returntype>
+        </field>
+        <field>
+            <name>QUART_OUT</name>
+            <comment></comment>
+            <returntype>aurelienribon.tweenengine.equations.Quart</returntype>
+        </field>
+        <field>
+            <name>POSITION_Y</name>
+            <comment></comment>
+            <returntype>int</returntype>
+        </field>
+        <field>
+            <name>POSITION_X</name>
+            <comment></comment>
+            <returntype>int</returntype>
+        </field>
+        <field>
+            <name>EXPO_OUT</name>
+            <comment></comment>
+            <returntype>aurelienribon.tweenengine.equations.Expo</returntype>
+        </field>
+        <field>
+            <name>BOUNCE_OUT</name>
+            <comment></comment>
+            <returntype>aurelienribon.tweenengine.equations.Bounce</returntype>
+        </field>
+        <field>
+            <name>BACK_IN</name>
+            <comment></comment>
+            <returntype>aurelienribon.tweenengine.equations.Back</returntype>
+        </field>
+        <field>
+            <name>QUINT_OUT</name>
+            <comment></comment>
+            <returntype>aurelienribon.tweenengine.equations.Quint</returntype>
+        </field>
+        <field>
+            <name>CALLBACK_BEGIN</name>
+            <comment></comment>
+            <returntype>int</returntype>
+        </field>
+        <field>
+            <name>SINE_OUT</name>
+            <comment></comment>
+            <returntype>aurelienribon.tweenengine.equations.Sine</returntype>
+        </field>
+        <field>
+            <name>LINEAR_INOUT</name>
+            <comment></comment>
+            <returntype>aurelienribon.tweenengine.equations.Linear</returntype>
+        </field>
+        <field>
+            <name>SCALE_X</name>
+            <comment></comment>
+            <returntype>int</returntype>
+        </field>
+        <field>
+            <name>CALLBACK_BACK_BEGIN</name>
+            <comment></comment>
+            <returntype>int</returntype>
+        </field>
+        <field>
+            <name>SCALE_Y</name>
+            <comment></comment>
+            <returntype>int</returntype>
+        </field>
+        <field>
+            <name>SINE_INOUT</name>
+            <comment></comment>
+            <returntype>aurelienribon.tweenengine.equations.Sine</returntype>
+        </field>
+        <field>
+            <name>CALLBACK_ANY_BACKWARD</name>
+            <comment></comment>
+            <returntype>int</returntype>
+        </field>
+        <field>
+            <name>CIRC_OUT</name>
+            <comment></comment>
+            <returntype>aurelienribon.tweenengine.equations.Circ</returntype>
+        </field>
+        <field>
+            <name>CALLBACK_START</name>
+            <comment></comment>
+            <returntype>int</returntype>
+        </field>
+        <field>
+            <name>ROT_Z</name>
+            <comment></comment>
+            <returntype>int</returntype>
+        </field>
+        <field>
+            <name>BOUNCE_IN</name>
+            <comment></comment>
+            <returntype>aurelienribon.tweenengine.equations.Bounce</returntype>
+        </field>
+        <field>
+            <name>ROT_X</name>
+            <comment></comment>
+            <returntype>int</returntype>
+        </field>
+        <field>
+            <name>ROT_Y</name>
+            <comment></comment>
+            <returntype>int</returntype>
+        </field>
+        <field>
+            <name>QUART_INOUT</name>
+            <comment></comment>
+            <returntype>aurelienribon.tweenengine.equations.Quart</returntype>
+        </field>
+        <field>
+            <name>QUAD_IN</name>
+            <comment></comment>
+            <returntype>aurelienribon.tweenengine.equations.Quad</returntype>
+        </field>
+        <field>
+            <name>EXPO_INOUT</name>
+            <comment></comment>
+            <returntype>aurelienribon.tweenengine.equations.Expo</returntype>
+        </field>
+        <field>
+            <name>CALLBACK_ANY</name>
+            <comment></comment>
+            <returntype>int</returntype>
+        </field>
+        <field>
+            <name>EXPO_IN</name>
+            <comment></comment>
+            <returntype>aurelienribon.tweenengine.equations.Expo</returntype>
+        </field>
+        <field>
+            <name>SINE_IN</name>
+            <comment></comment>
+            <returntype>aurelienribon.tweenengine.equations.Sine</returntype>
+        </field>
+        <field>
+            <name>QUAD_INOUT</name>
+            <comment></comment>
+            <returntype>aurelienribon.tweenengine.equations.Quad</returntype>
+        </field>
+        <field>
+            <name>CIRC_INOUT</name>
+            <comment></comment>
+            <returntype>aurelienribon.tweenengine.equations.Circ</returntype>
+        </field>
+        <field>
+            <name>CALLBACK_ANY_FORWARD</name>
+            <comment></comment>
+            <returntype>int</returntype>
+        </field>
+        <field>
+            <name>CIRC_IN</name>
+            <comment></comment>
+            <returntype>aurelienribon.tweenengine.equations.Circ</returntype>
+        </field>
+        <field>
+            <name>BACK_INOUT</name>
+            <comment></comment>
+            <returntype>aurelienribon.tweenengine.equations.Back</returntype>
+        </field>
+        <field>
+            <name>ELASTIC_OUT</name>
+            <comment></comment>
+            <returntype>aurelienribon.tweenengine.equations.Elastic</returntype>
+        </field>
+        <field>
+            <name>QUART_IN</name>
+            <comment></comment>
+            <returntype>aurelienribon.tweenengine.equations.Quart</returntype>
+        </field>
+        <field>
+            <name>QUINT_IN</name>
+            <comment></comment>
+            <returntype>aurelienribon.tweenengine.equations.Quint</returntype>
+        </field>
+        <field>
+            <name>ALPHA</name>
+            <comment></comment>
+            <returntype>int</returntype>
+        </field>
+        <field>
+            <name>ELASTIC_IN</name>
+            <comment></comment>
+            <returntype>aurelienribon.tweenengine.equations.Elastic</returntype>
+        </field>
+        <field>
+            <name>CALLBACK_COMPLETE</name>
+            <comment></comment>
+            <returntype>int</returntype>
+        </field>
+        <field>
+            <name>CALLBACK_BACK_END</name>
+            <comment></comment>
+            <returntype>int</returntype>
+        </field>
+        <field>
+            <name>CUBIC_OUT</name>
+            <comment></comment>
+            <returntype>aurelienribon.tweenengine.equations.Cubic</returntype>
+        </field>
+        <field>
+            <name>POSITION_XY</name>
+            <comment></comment>
+            <returntype>int</returntype>
+        </field>
+        <field>
+            <name>CUBIC_IN</name>
+            <comment></comment>
+            <returntype>aurelienribon.tweenengine.equations.Cubic</returntype>
+        </field>
+        <field>
+            <name>QUINT_INOUT</name>
+            <comment></comment>
+            <returntype>aurelienribon.tweenengine.equations.Quint</returntype>
+        </field>
+        <field>
+            <name>BACK_OUT</name>
+            <comment></comment>
+            <returntype>aurelienribon.tweenengine.equations.Back</returntype>
+        </field>
+        <field>
+            <name>CALLBACK_BACK_COMPLETE</name>
+            <comment></comment>
+            <returntype>int</returntype>
+        </field>
+        <field>
+            <name>ELASTIC_INOUT</name>
+            <comment></comment>
+            <returntype>aurelienribon.tweenengine.equations.Elastic</returntype>
+        </field>
+        <field>
+            <name>BOUNCE_INOUT</name>
+            <comment></comment>
+            <returntype>aurelienribon.tweenengine.equations.Bounce</returntype>
+        </field>
+        <field>
+            <name>CALLBACK_END</name>
+            <comment></comment>
+            <returntype>int</returntype>
+        </field>
+        <field>
+            <name>CUBIC_INOUT</name>
+            <comment></comment>
+            <returntype>aurelienribon.tweenengine.equations.Cubic</returntype>
+        </field>
+    </class>
+    <class>
+        <name>com.rootsoft.tweenengine.RSTweenCallback</name>
+        <shortname>TweenCallback</shortname>
+        <owner>process</owner>
+        <event>OnEvent (Event as int)</event>
+        <method>
+            <name>Initialize</name>
+            <comment>Initializes the Universal Tween Engine
+ EventName - Events subs prefix.</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>ba</name>
+                <type>anywheresoftware.b4a.BA</type>
+            </parameter>
+            <parameter>
+                <name>EventName</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+        <property>
+            <name>Listener</name>
+            <parameter>
+                <name>listen</name>
+                <type>boolean</type>
+            </parameter>
+            <comment>Sets a callback listener.
+ Make sure to call it before you set the callback!</comment>
+        </property>
+        <property>
+            <name>TweenCallback</name>
+            <returntype>aurelienribon.tweenengine.TweenCallback</returntype>
+            <parameter>
+                <name>callback</name>
+                <type>aurelienribon.tweenengine.TweenCallback</type>
+            </parameter>
+            <comment>Gets or sets the tween callback.</comment>
+        </property>
+    </class>
+    <class>
+        <name>com.rootsoft.tweenengine.RSTween</name>
+        <shortname>Tween</shortname>
+        <owner>process</owner>
+        <method>
+            <name>PanelFrom</name>
+            <comment>Interpolates from the given values to the current ones
+ One of the four Tween initializers.
+target: - The Object to work with
+tweenType: - One of the constants
+duration: - Duration in seconds.</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>target</name>
+                <type>anywheresoftware.b4a.objects.PanelWrapper</type>
+            </parameter>
+            <parameter>
+                <name>tweenType</name>
+                <type>int</type>
+            </parameter>
+            <parameter>
+                <name>duration</name>
+                <type>float</type>
+            </parameter>
+        </method>
+        <method>
+            <name>Start</name>
+            <comment>Starts a tween.</comment>
+            <returntype>void</returntype>
+        </method>
+        <method>
+            <name>Update</name>
+            <comment>Moreover, slow-motion, fast-motion and reverse play is easy,
+ you just need to change the speed of the update:
+delta: - delta * speed</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>delta</name>
+                <type>float</type>
+            </parameter>
+        </method>
+        <method>
+            <name>RepeatYoyo</name>
+            <comment>RepeatYoyo a tween.</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>count</name>
+                <type>int</type>
+            </parameter>
+            <parameter>
+                <name>delay</name>
+                <type>float</type>
+            </parameter>
+        </method>
+        <method>
+            <name>Path</name>
+            <comment>Sets a path for the tween to follow3.</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>path</name>
+                <type>aurelienribon.tweenengine.TweenPath</type>
+            </parameter>
+        </method>
+        <method>
+            <name>setTarget</name>
+            <comment>Targets a tween to a position</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>targetValue1</name>
+                <type>float</type>
+            </parameter>
+            <parameter>
+                <name>targetValue2</name>
+                <type>float</type>
+            </parameter>
+        </method>
+        <method>
+            <name>PanelTo</name>
+            <comment>Interpolates from the current values to the targets
+ One of the four Tween initializers.
+target: - The Object to work with
+type: - The Object to work with
+tweenType: - One of the constants
+duration: - Duration in seconds.</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>target</name>
+                <type>anywheresoftware.b4a.objects.PanelWrapper</type>
+            </parameter>
+            <parameter>
+                <name>tweenType</name>
+                <type>int</type>
+            </parameter>
+            <parameter>
+                <name>duration</name>
+                <type>float</type>
+            </parameter>
+        </method>
+        <method>
+            <name>Waypoint</name>
+            <comment>Let the tween follow a waypoint.
+Return type: @return:</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>targetValue1</name>
+                <type>float</type>
+            </parameter>
+            <parameter>
+                <name>targetValue2</name>
+                <type>float</type>
+            </parameter>
+        </method>
+        <method>
+            <name>Ease</name>
+            <comment>Sets an easeEquation.
+ Use one of the Elastic constants</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>easeEquation</name>
+                <type>aurelienribon.tweenengine.TweenEquation</type>
+            </parameter>
+        </method>
+        <method>
+            <name>registerImageAccessor</name>
+            <comment>Registers an ImageView to the TweenAccessor</comment>
+            <returntype>void</returntype>
+        </method>
+        <method>
+            <name>Resume</name>
+            <comment>Resumes a tween.</comment>
+            <returntype>void</returntype>
+        </method>
+        <method>
+            <name>ImageSet</name>
+            <comment>Apply the target values without animation (useful with a delay)
+ One of the four Tween initializers.
+target: - The Object to work with
+tweenType: - One of the constants</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>target</name>
+                <type>anywheresoftware.b4a.objects.ImageViewWrapper</type>
+            </parameter>
+            <parameter>
+                <name>tweenType</name>
+                <type>int</type>
+            </parameter>
+        </method>
+        <method>
+            <name>isInitialized</name>
+            <comment>Returns if the tween is initialized.
+Return type: @return:</comment>
+            <returntype>boolean</returntype>
+        </method>
+        <method>
+            <name>ImageCall</name>
+            <comment>Calls a method (useful with a delay)
+ One of the four Tween initializers.
+callback: - not available yet</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>callback</name>
+                <type>aurelienribon.tweenengine.TweenCallback</type>
+            </parameter>
+        </method>
+        <method>
+            <name>Repeat</name>
+            <comment>Repeat a tween.</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>count</name>
+                <type>int</type>
+            </parameter>
+            <parameter>
+                <name>delay</name>
+                <type>float</type>
+            </parameter>
+        </method>
+        <method>
+            <name>Initialize</name>
+            <comment>Initializes the Universal Tween Engine
+ EventName - Events subs prefix.</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>ba</name>
+                <type>anywheresoftware.b4a.BA</type>
+            </parameter>
+            <parameter>
+                <name>EventName</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+        <method>
+            <name>LabelFrom</name>
+            <comment>Interpolates from the given values to the current ones
+ One of the four Tween initializers.
+target: - The Object to work with
+tweenType: - One of the constants
+duration: - Duration in seconds.</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>target</name>
+                <type>anywheresoftware.b4a.objects.LabelWrapper</type>
+            </parameter>
+            <parameter>
+                <name>tweenType</name>
+                <type>int</type>
+            </parameter>
+            <parameter>
+                <name>duration</name>
+                <type>float</type>
+            </parameter>
+        </method>
+        <method>
+            <name>isPaused</name>
+            <comment>Returns if the tween is paused.
+Return type: @return:</comment>
+            <returntype>boolean</returntype>
+        </method>
+        <method>
+            <name>registerLabelAccessor</name>
+            <comment>Registers an ImageView to the TweenAccessor</comment>
+            <returntype>void</returntype>
+        </method>
+        <method>
+            <name>PanelSet</name>
+            <comment>Apply the target values without animation (useful with a delay)
+ One of the four Tween initializers.
+target: - The Object to work with
+tweenType: - One of the constants</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>target</name>
+                <type>anywheresoftware.b4a.objects.PanelWrapper</type>
+            </parameter>
+            <parameter>
+                <name>tweenType</name>
+                <type>int</type>
+            </parameter>
+        </method>
+        <method>
+            <name>registerPanelAccessor</name>
+            <comment>Registers an ImageView to the TweenAccessor</comment>
+            <returntype>void</returntype>
+        </method>
+        <method>
+            <name>ImageFrom</name>
+            <comment>Interpolates from the given values to the current ones
+ One of the four Tween initializers.
+target: - The Object to work with
+tweenType: - One of the constants
+duration: - Duration in seconds.</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>target</name>
+                <type>anywheresoftware.b4a.objects.ImageViewWrapper</type>
+            </parameter>
+            <parameter>
+                <name>tweenType</name>
+                <type>int</type>
+            </parameter>
+            <parameter>
+                <name>duration</name>
+                <type>float</type>
+            </parameter>
+        </method>
+        <method>
+            <name>isYoyo</name>
+            <comment>Returns if the tween is yoyo.
+Return type: @return:</comment>
+            <returntype>boolean</returntype>
+        </method>
+        <method>
+            <name>LabelCall</name>
+            <comment>Calls a method (useful with a delay)
+ One of the four Tween initializers.
+callback: - not available yet</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>callback</name>
+                <type>aurelienribon.tweenengine.TweenCallback</type>
+            </parameter>
+        </method>
+        <method>
+            <name>LabelSet</name>
+            <comment>Apply the target values without animation (useful with a delay)
+ One of the four Tween initializers.
+target: - The Object to work with
+tweenType: - One of the constants</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>target</name>
+                <type>anywheresoftware.b4a.objects.LabelWrapper</type>
+            </parameter>
+            <parameter>
+                <name>tweenType</name>
+                <type>int</type>
+            </parameter>
+        </method>
+        <method>
+            <name>ImageTo</name>
+            <comment>Interpolates from the current values to the targets
+ One of the four Tween initializers.
+target: - The Object to work with
+type: - The Object to work with
+tweenType: - One of the constants
+duration: - Duration in seconds.</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>target</name>
+                <type>anywheresoftware.b4a.objects.ImageViewWrapper</type>
+            </parameter>
+            <parameter>
+                <name>tweenType</name>
+                <type>int</type>
+            </parameter>
+            <parameter>
+                <name>duration</name>
+                <type>float</type>
+            </parameter>
+        </method>
+        <method>
+            <name>isFinished</name>
+            <comment>Returns if the tween is finished.
+Return type: @return:</comment>
+            <returntype>boolean</returntype>
+        </method>
+        <method>
+            <name>Pause</name>
+            <comment>Pauses a tween.</comment>
+            <returntype>void</returntype>
+        </method>
+        <method>
+            <name>LabelTo</name>
+            <comment>Interpolates from the current values to the targets
+ One of the four Tween initializers.
+target: - The Object to work with
+type: - The Object to work with
+tweenType: - One of the constants
+duration: - Duration in seconds.</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>target</name>
+                <type>anywheresoftware.b4a.objects.LabelWrapper</type>
+            </parameter>
+            <parameter>
+                <name>tweenType</name>
+                <type>int</type>
+            </parameter>
+            <parameter>
+                <name>duration</name>
+                <type>float</type>
+            </parameter>
+        </method>
+        <method>
+            <name>isStarted</name>
+            <comment>Returns if the tween is started.
+Return type: @return:</comment>
+            <returntype>boolean</returntype>
+        </method>
+        <method>
+            <name>PanelCall</name>
+            <comment>Calls a method (useful with a delay)
+ One of the four Tween initializers.
+callback: - not available yet</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>callback</name>
+                <type>aurelienribon.tweenengine.TweenCallback</type>
+            </parameter>
+        </method>
+        <property>
+            <name>TargetValues</name>
+            <returntype>float[]</returntype>
+            <comment>Gets the target's values.</comment>
+        </property>
+        <property>
+            <name>Step</name>
+            <returntype>int</returntype>
+            <comment>Gets the tween's step.</comment>
+        </property>
+        <property>
+            <name>RepeatDelay</name>
+            <returntype>float</returntype>
+            <comment>Gets the tween's repeat delay.</comment>
+        </property>
+        <property>
+            <name>CallbackTriggers</name>
+            <parameter>
+                <name>flags</name>
+                <type>int</type>
+            </parameter>
+            <comment>Changes the triggers of the callback. The available triggers, listed as
+ members of the {@link TweenCallback} interface, are:
+ &lt;p/&gt;
+
+ &lt;b&gt;BEGIN&lt;/b&gt;: right after the delay (if any)&lt;br/&gt;
+ &lt;b&gt;START&lt;/b&gt;: at each iteration beginning&lt;br/&gt;
+ &lt;b&gt;END&lt;/b&gt;: at each iteration ending, before the repeat delay&lt;br/&gt;
+ &lt;b&gt;COMPLETE&lt;/b&gt;: at last END event&lt;br/&gt;
+ &lt;b&gt;BACK_BEGIN&lt;/b&gt;: at the beginning of the first backward iteration&lt;br/&gt;
+ &lt;b&gt;BACK_START&lt;/b&gt;: at each backward iteration beginning, after the repeat delay&lt;br/&gt;
+ &lt;b&gt;BACK_END&lt;/b&gt;: at each backward iteration ending&lt;br/&gt;
+ &lt;b&gt;BACK_COMPLETE&lt;/b&gt;: at last BACK_END event
+ &lt;p/&gt;
+
+ &lt;pre&gt; {@code
+ forward :      BEGIN                                   COMPLETE
+ forward :      START    END      START    END      START    END
+ |--------------[XXXXXXXXXX]------[XXXXXXXXXX]------[XXXXXXXXXX]
+ backward:      bEND  bSTART      bEND  bSTART      bEND  bSTART
+ backward:      bCOMPLETE                                 bBEGIN
+ }&lt;/pre&gt;</comment>
+        </property>
+        <property>
+            <name>UserData</name>
+            <parameter>
+                <name>data</name>
+                <type>java.lang.Object</type>
+            </parameter>
+            <comment>Attaches an object to this tween or timeline. It can be useful in order
+ to retrieve some data from a TweenCallback.</comment>
+        </property>
+        <property>
+            <name>FullDuration</name>
+            <returntype>float</returntype>
+            <comment>Gets the tween's full duration.</comment>
+        </property>
+        <property>
+            <name>RepeatCount</name>
+            <returntype>int</returntype>
+            <comment>Gets the times the tween repeats.</comment>
+        </property>
+        <property>
+            <name>Tween</name>
+            <returntype>aurelienribon.tweenengine.Tween</returntype>
+            <parameter>
+                <name>tween</name>
+                <type>aurelienribon.tweenengine.Tween</type>
+            </parameter>
+            <comment>Gets or sets a tween.</comment>
+        </property>
+        <property>
+            <name>Target</name>
+            <returntype>java.lang.Object</returntype>
+            <comment>Gets the target.</comment>
+        </property>
+        <property>
+            <name>CurrentTime</name>
+            <returntype>float</returntype>
+            <comment>Gets the current time of the tween.</comment>
+        </property>
+        <property>
+            <name>Delay</name>
+            <returntype>float</returntype>
+            <parameter>
+                <name>delay</name>
+                <type>float</type>
+            </parameter>
+            <comment>Gets the tween's delay.</comment>
+        </property>
+        <property>
+            <name>Duration</name>
+            <returntype>float</returntype>
+            <comment>Gets the tween's duration.</comment>
+        </property>
+        <property>
+            <name>Callback</name>
+            <parameter>
+                <name>callback</name>
+                <type>aurelienribon.tweenengine.TweenCallback</type>
+            </parameter>
+            <comment>Sets a callback of the tween.
+ This is used to receive events of the tween.
+ onevent (event as int) is called</comment>
+        </property>
+        <property>
+            <name>Y</name>
+            <returntype>float</returntype>
+            <parameter>
+                <name>y</name>
+                <type>float</type>
+            </parameter>
+            <comment></comment>
+        </property>
+        <property>
+            <name>X</name>
+            <returntype>float</returntype>
+            <parameter>
+                <name>x</name>
+                <type>float</type>
+            </parameter>
+            <comment></comment>
+        </property>
+    </class>
+    <class>
+        <name>com.rootsoft.tweenengine.PanelAccessor</name>
+        <owner>process</owner>
+        <method>
+            <name>setValues</name>
+            <comment></comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>target</name>
+                <type>anywheresoftware.b4a.objects.PanelWrapper</type>
+            </parameter>
+            <parameter>
+                <name>tweenType</name>
+                <type>int</type>
+            </parameter>
+            <parameter>
+                <name>newValues</name>
+                <type>float[]</type>
+            </parameter>
+        </method>
+        <method>
+            <name>getValues</name>
+            <comment></comment>
+            <returntype>int</returntype>
+            <parameter>
+                <name>target</name>
+                <type>anywheresoftware.b4a.objects.PanelWrapper</type>
+            </parameter>
+            <parameter>
+                <name>tweenType</name>
+                <type>int</type>
+            </parameter>
+            <parameter>
+                <name>returnValues</name>
+                <type>float[]</type>
+            </parameter>
+        </method>
+        <field>
+            <name>POSITION_Y</name>
+            <comment></comment>
+            <returntype>int</returntype>
+        </field>
+        <field>
+            <name>POSITION_X</name>
+            <comment></comment>
+            <returntype>int</returntype>
+        </field>
+        <field>
+            <name>POSITION_XY</name>
+            <comment></comment>
+            <returntype>int</returntype>
+        </field>
+        <field>
+            <name>SCALE_XY</name>
+            <comment></comment>
+            <returntype>int</returntype>
+        </field>
+        <field>
+            <name>ROT_Z</name>
+            <comment></comment>
+            <returntype>int</returntype>
+        </field>
+        <field>
+            <name>ROT_X</name>
+            <comment></comment>
+            <returntype>int</returntype>
+        </field>
+        <field>
+            <name>SCALE_X</name>
+            <comment></comment>
+            <returntype>int</returntype>
+        </field>
+        <field>
+            <name>ROT_Y</name>
+            <comment></comment>
+            <returntype>int</returntype>
+        </field>
+        <field>
+            <name>ALPHA</name>
+            <comment></comment>
+            <returntype>int</returntype>
+        </field>
+        <field>
+            <name>SCALE_Y</name>
+            <comment></comment>
+            <returntype>int</returntype>
+        </field>
+    </class>
+    <class>
+        <name>com.rootsoft.tweenengine.LabelAccessor</name>
+        <owner>process</owner>
+        <method>
+            <name>setValues</name>
+            <comment></comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>target</name>
+                <type>anywheresoftware.b4a.objects.LabelWrapper</type>
+            </parameter>
+            <parameter>
+                <name>tweenType</name>
+                <type>int</type>
+            </parameter>
+            <parameter>
+                <name>newValues</name>
+                <type>float[]</type>
+            </parameter>
+        </method>
+        <method>
+            <name>getValues</name>
+            <comment></comment>
+            <returntype>int</returntype>
+            <parameter>
+                <name>target</name>
+                <type>anywheresoftware.b4a.objects.LabelWrapper</type>
+            </parameter>
+            <parameter>
+                <name>tweenType</name>
+                <type>int</type>
+            </parameter>
+            <parameter>
+                <name>returnValues</name>
+                <type>float[]</type>
+            </parameter>
+        </method>
+        <field>
+            <name>POSITION_Y</name>
+            <comment></comment>
+            <returntype>int</returntype>
+        </field>
+        <field>
+            <name>POSITION_X</name>
+            <comment></comment>
+            <returntype>int</returntype>
+        </field>
+        <field>
+            <name>POSITION_XY</name>
+            <comment></comment>
+            <returntype>int</returntype>
+        </field>
+        <field>
+            <name>SCALE_XY</name>
+            <comment></comment>
+            <returntype>int</returntype>
+        </field>
+        <field>
+            <name>ROT_Z</name>
+            <comment></comment>
+            <returntype>int</returntype>
+        </field>
+        <field>
+            <name>ROT_X</name>
+            <comment></comment>
+            <returntype>int</returntype>
+        </field>
+        <field>
+            <name>SCALE_X</name>
+            <comment></comment>
+            <returntype>int</returntype>
+        </field>
+        <field>
+            <name>ROT_Y</name>
+            <comment></comment>
+            <returntype>int</returntype>
+        </field>
+        <field>
+            <name>ALPHA</name>
+            <comment></comment>
+            <returntype>int</returntype>
+        </field>
+        <field>
+            <name>SCALE_Y</name>
+            <comment></comment>
+            <returntype>int</returntype>
+        </field>
+    </class>
+    <class>
+        <name>com.rootsoft.tweenengine.ImageViewAccessor</name>
+        <owner>process</owner>
+        <method>
+            <name>setValues</name>
+            <comment></comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>target</name>
+                <type>anywheresoftware.b4a.objects.ImageViewWrapper</type>
+            </parameter>
+            <parameter>
+                <name>tweenType</name>
+                <type>int</type>
+            </parameter>
+            <parameter>
+                <name>newValues</name>
+                <type>float[]</type>
+            </parameter>
+        </method>
+        <method>
+            <name>getValues</name>
+            <comment></comment>
+            <returntype>int</returntype>
+            <parameter>
+                <name>target</name>
+                <type>anywheresoftware.b4a.objects.ImageViewWrapper</type>
+            </parameter>
+            <parameter>
+                <name>tweenType</name>
+                <type>int</type>
+            </parameter>
+            <parameter>
+                <name>returnValues</name>
+                <type>float[]</type>
+            </parameter>
+        </method>
+        <field>
+            <name>POSITION_Y</name>
+            <comment></comment>
+            <returntype>int</returntype>
+        </field>
+        <field>
+            <name>POSITION_X</name>
+            <comment></comment>
+            <returntype>int</returntype>
+        </field>
+        <field>
+            <name>POSITION_XY</name>
+            <comment></comment>
+            <returntype>int</returntype>
+        </field>
+        <field>
+            <name>SCALE_XY</name>
+            <comment></comment>
+            <returntype>int</returntype>
+        </field>
+        <field>
+            <name>ROT_Z</name>
+            <comment></comment>
+            <returntype>int</returntype>
+        </field>
+        <field>
+            <name>ROT_X</name>
+            <comment></comment>
+            <returntype>int</returntype>
+        </field>
+        <field>
+            <name>SCALE_X</name>
+            <comment></comment>
+            <returntype>int</returntype>
+        </field>
+        <field>
+            <name>ROT_Y</name>
+            <comment></comment>
+            <returntype>int</returntype>
+        </field>
+        <field>
+            <name>ALPHA</name>
+            <comment></comment>
+            <returntype>int</returntype>
+        </field>
+        <field>
+            <name>SCALE_Y</name>
+            <comment></comment>
+            <returntype>int</returntype>
+        </field>
+    </class>
+    <version>1.1</version>
+    <dependsOn>tween-engine-api</dependsOn>
+    <dependsOn>tween-engine-api</dependsOn>
+    <dependsOn>tween-engine-api</dependsOn>
+</root>

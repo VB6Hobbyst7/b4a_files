@@ -1,0 +1,212 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root>
+    <doclet-version-NOT-library-version>1.02</doclet-version-NOT-library-version>
+    <class>
+        <name>anywheresoftware.b4a.hamrahpayiab.ORhamrahpayiab</name>
+        <owner>process</owner>
+        <method>
+            <name>PayRequest</name>
+            <comment></comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>ba</name>
+                <type>anywheresoftware.b4a.BA</type>
+            </parameter>
+            <parameter>
+                <name>ProductId</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+        <method>
+            <name>Initialize</name>
+            <comment></comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>ba</name>
+                <type>anywheresoftware.b4a.BA</type>
+            </parameter>
+            <parameter>
+                <name>EventName</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>Consumable</name>
+                <type>boolean</type>
+            </parameter>
+        </method>
+        <method>
+            <name>VerifyLastPayment</name>
+            <comment></comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>ba</name>
+                <type>anywheresoftware.b4a.BA</type>
+            </parameter>
+        </method>
+    </class>
+    <class>
+        <name>anywheresoftware.b4a.hamrahpayiab.Hamrahpay</name>
+        <owner>process</owner>
+        <method>
+            <name>PayRequest</name>
+            <comment>This method sends a pay request to Hamray pay
+sku: , The product sku code
+device_id: , The device Unique ID
+Return type: @return:The status code</comment>
+            <returntype>org.json.JSONObject</returntype>
+            <parameter>
+                <name>sku</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>device_id</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+        <method>
+            <name>getDeviceID</name>
+            <comment>This method returns the device unique ID
+ Dont forget to set :
+ &lt;uses-permission android:name="android.permission.READ_PHONE_STATE" /&gt;
+ &lt;uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/&gt;
+ in AndroidManifest.xml</comment>
+            <returntype>java.lang.String</returntype>
+            <parameter>
+                <name>cont</name>
+                <type>android.content.Context</type>
+            </parameter>
+        </method>
+        <method>
+            <name>VerifyPayment</name>
+            <comment>This method verifies pay code
+PayCode: , pay code
+Return type: @return:the status of verification</comment>
+            <returntype>org.json.JSONObject</returntype>
+            <parameter>
+                <name>PayCode</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+        <method>
+            <name>PayRequest2</name>
+            <comment></comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>sku</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>device_id</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>listener</name>
+                <type>anywheresoftware.b4a.hamrahpayiab.Hamrahpay.onRequestCompletedListener</type>
+            </parameter>
+        </method>
+        <method>
+            <name>VerifyPayment2</name>
+            <comment></comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>PayCode</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>listener</name>
+                <type>anywheresoftware.b4a.hamrahpayiab.Hamrahpay.onVerifyCompletedListener</type>
+            </parameter>
+        </method>
+        <method>
+            <name>SendData</name>
+            <comment>This method sends post data to url
+url: ,url to make request
+params: , parameters to send via POST
+Return type: @return:response data</comment>
+            <returntype>java.lang.String</returntype>
+            <parameter>
+                <name>url</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>params</name>
+                <type>java.util.List</type>
+            </parameter>
+        </method>
+        <property>
+            <name>PayCode</name>
+            <returntype>java.lang.String</returntype>
+            <comment>This method returns pay code</comment>
+        </property>
+        <field>
+            <name>ERROR_TAG</name>
+            <comment></comment>
+            <returntype>java.lang.String</returntype>
+        </field>
+        <field>
+            <name>PAYCODE_TAG</name>
+            <comment></comment>
+            <returntype>java.lang.String</returntype>
+        </field>
+        <field>
+            <name>STATUS_TAG</name>
+            <comment></comment>
+            <returntype>java.lang.String</returntype>
+        </field>
+    </class>
+    <class>
+        <name>anywheresoftware.b4a.hamrahpayOR.ORhamrahpay</name>
+        <shortname>ORhamrahpay</shortname>
+        <owner>process</owner>
+        <event>URLGenerated (Success As Boolean, URL As String, Message As String)</event>
+        <event>VerifyCompleted (Success As Boolean, Message As String)</event>
+        <permission>android.permission.READ_PHONE_STATE</permission>
+        <permission>android.permission.ACCESS_WIFI_STATE</permission>
+        <permission>android.permission.INTERNET</permission>
+        <method>
+            <name>GenerateURL</name>
+            <comment></comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>ba</name>
+                <type>anywheresoftware.b4a.BA</type>
+            </parameter>
+            <parameter>
+                <name>ProductId</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+        <method>
+            <name>Initialize</name>
+            <comment></comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>ba</name>
+                <type>anywheresoftware.b4a.BA</type>
+            </parameter>
+            <parameter>
+                <name>EventName</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+        <method>
+            <name>VerifyLastURL</name>
+            <comment></comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>ba</name>
+                <type>anywheresoftware.b4a.BA</type>
+            </parameter>
+        </method>
+        <method>
+            <name>About</name>
+            <comment></comment>
+            <returntype>java.lang.String</returntype>
+            <parameter>
+                <name>ba</name>
+                <type>anywheresoftware.b4a.BA</type>
+            </parameter>
+        </method>
+    </class>
+    <version>1.0</version>
+</root>

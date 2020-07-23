@@ -1,0 +1,488 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <doclet-version-NOT-library-version>1.00</doclet-version-NOT-library-version>
+  <dependsOn>javaobject</dependsOn>
+  <dependsOn>contentresolver</dependsOn>
+  <dependsOn>sql</dependsOn>
+  <class>
+    <name>b4a.example.contactpicker._contact</name>
+    <shortname>Contact</shortname>
+    <owner>process</owner>
+    <method>
+      <name>Initialize</name>
+      <comment>Initializes the fields to their default value.</comment>
+      <returntype>void</returntype>
+    </method>
+    <field>
+      <name>IsInitialized</name>
+      <comment>Tests whether the object has been initialized.</comment>
+      <returntype>boolean</returntype>
+    </field>
+    <field>
+      <name>Name</name>
+      <returntype>String</returntype>
+    </field>
+    <field>
+      <name>Phones</name>
+      <returntype>anywheresoftware.b4a.objects.collections.List</returntype>
+    </field>
+    <field>
+      <name>ID</name>
+      <returntype>String</returntype>
+    </field>
+  </class>
+  <class>
+    <name>b4a.example.contactpicker</name>
+    <shortname>ContactPicker</shortname>
+    <owner>process</owner>
+    <event>ContactChooser(contact As Contact)</event>
+    <method>
+      <name>IsInitialized</name>
+      <comment>Tests whether the object has been initialized.</comment>
+      <returntype>boolean</returntype>
+    </method>
+    <method>
+      <name DesignerName="Initialize">_initialize</name>
+      <comment>Autor: www.iranapp.org
+Add below permission to manifest
+&lt;code&gt;AddPermission(android.permission.READ_CONTACTS)&lt;/code&gt;
+
+Return it Contact Type
+</comment>
+      <returntype>String</returntype>
+      <parameter>
+        <name>ba</name>
+        <type>anywheresoftware.b4a.BA</type>
+      </parameter>
+      <parameter>
+        <name>Module</name>
+        <type>Object</type>
+      </parameter>
+      <parameter>
+        <name>Event</name>
+        <type>String</type>
+      </parameter>
+    </method>
+    <method>
+      <name DesignerName="ShowPicker">_showpicker</name>
+      <returntype>String</returntype>
+    </method>
+  </class>
+  <class>
+    <name>b4a.example.contactsutils._cucontact</name>
+    <shortname>cuContact</shortname>
+    <owner>process</owner>
+    <method>
+      <name>Initialize</name>
+      <comment>Initializes the fields to their default value.</comment>
+      <returntype>void</returntype>
+    </method>
+    <field>
+      <name>IsInitialized</name>
+      <comment>Tests whether the object has been initialized.</comment>
+      <returntype>boolean</returntype>
+    </field>
+    <field>
+      <name>Id</name>
+      <returntype>long</returntype>
+    </field>
+    <field>
+      <name>DisplayName</name>
+      <returntype>String</returntype>
+    </field>
+  </class>
+  <class>
+    <name>b4a.example.contactsutils._cuemail</name>
+    <shortname>cuEmail</shortname>
+    <owner>process</owner>
+    <method>
+      <name>Initialize</name>
+      <comment>Initializes the fields to their default value.</comment>
+      <returntype>void</returntype>
+    </method>
+    <field>
+      <name>IsInitialized</name>
+      <comment>Tests whether the object has been initialized.</comment>
+      <returntype>boolean</returntype>
+    </field>
+    <field>
+      <name>Email</name>
+      <returntype>String</returntype>
+    </field>
+    <field>
+      <name>EmailType</name>
+      <returntype>String</returntype>
+    </field>
+  </class>
+  <class>
+    <name>b4a.example.contactsutils._cuphone</name>
+    <shortname>cuPhone</shortname>
+    <owner>process</owner>
+    <method>
+      <name>Initialize</name>
+      <comment>Initializes the fields to their default value.</comment>
+      <returntype>void</returntype>
+    </method>
+    <field>
+      <name>IsInitialized</name>
+      <comment>Tests whether the object has been initialized.</comment>
+      <returntype>boolean</returntype>
+    </field>
+    <field>
+      <name>Number</name>
+      <returntype>String</returntype>
+    </field>
+    <field>
+      <name>PhoneType</name>
+      <returntype>String</returntype>
+    </field>
+  </class>
+  <class>
+    <name>b4a.example.contactsutils._cuevent</name>
+    <shortname>cuEvent</shortname>
+    <owner>process</owner>
+    <method>
+      <name>Initialize</name>
+      <comment>Initializes the fields to their default value.</comment>
+      <returntype>void</returntype>
+    </method>
+    <field>
+      <name>IsInitialized</name>
+      <comment>Tests whether the object has been initialized.</comment>
+      <returntype>boolean</returntype>
+    </field>
+    <field>
+      <name>DateString</name>
+      <returntype>String</returntype>
+    </field>
+    <field>
+      <name>EventType</name>
+      <returntype>String</returntype>
+    </field>
+  </class>
+  <class>
+    <name>b4a.example.contactsutils</name>
+    <shortname>ContactsUtils</shortname>
+    <comment>version: 1.10
+Class module
+</comment>
+    <owner>process</owner>
+    <method>
+      <name>IsInitialized</name>
+      <comment>Tests whether the object has been initialized.</comment>
+      <returntype>boolean</returntype>
+    </method>
+    <method>
+      <name DesignerName="AddEmail">_addemail</name>
+      <comment>Adds an email field to the given contact id.
+EmailType - One of the email types strings (see Initialize method).
+</comment>
+      <returntype>String</returntype>
+      <parameter>
+        <name>Id</name>
+        <type>long</type>
+      </parameter>
+      <parameter>
+        <name>Email</name>
+        <type>String</type>
+      </parameter>
+      <parameter>
+        <name>EmailType</name>
+        <type>String</type>
+      </parameter>
+    </method>
+    <method>
+      <name DesignerName="AddNote">_addnote</name>
+      <returntype>String</returntype>
+      <parameter>
+        <name>Id</name>
+        <type>long</type>
+      </parameter>
+      <parameter>
+        <name>Note</name>
+        <type>String</type>
+      </parameter>
+    </method>
+    <method>
+      <name DesignerName="AddPhone">_addphone</name>
+      <comment>Adds a phone field to the given contact id.
+PhoneType - One of the phone types strings (see Initialize method).
+</comment>
+      <returntype>String</returntype>
+      <parameter>
+        <name>Id</name>
+        <type>long</type>
+      </parameter>
+      <parameter>
+        <name>PhoneNumber</name>
+        <type>String</type>
+      </parameter>
+      <parameter>
+        <name>PhoneType</name>
+        <type>String</type>
+      </parameter>
+    </method>
+    <method>
+      <name DesignerName="Class_Globals">_class_globals</name>
+      <returntype>String</returntype>
+    </method>
+    <method>
+      <name DesignerName="DeleteContact">_deletecontact</name>
+      <comment>Deletes the contact with the given Id.
+</comment>
+      <returntype>String</returntype>
+      <parameter>
+        <name>Id</name>
+        <type>long</type>
+      </parameter>
+    </method>
+    <method>
+      <name DesignerName="DeleteEmail">_deleteemail</name>
+      <comment>Deletes the given email address.
+</comment>
+      <returntype>String</returntype>
+      <parameter>
+        <name>Id</name>
+        <type>long</type>
+      </parameter>
+      <parameter>
+        <name>Email</name>
+        <type>String</type>
+      </parameter>
+    </method>
+    <method>
+      <name DesignerName="DeletePhone">_deletephone</name>
+      <comment>Deletes the given phone number.
+</comment>
+      <returntype>String</returntype>
+      <parameter>
+        <name>Id</name>
+        <type>long</type>
+      </parameter>
+      <parameter>
+        <name>PhoneNumber</name>
+        <type>String</type>
+      </parameter>
+    </method>
+    <method>
+      <name DesignerName="FindAllContacts">_findallcontacts</name>
+      <comment>Returns all contacts.
+</comment>
+      <returntype>anywheresoftware.b4a.objects.collections.List</returntype>
+      <parameter>
+        <name>VisibleOnly</name>
+        <type>boolean</type>
+      </parameter>
+    </method>
+    <method>
+      <name DesignerName="FindContactsByMail">_findcontactsbymail</name>
+      <comment>Similar to FindContactsByName. Finds contacts based on the mail address.
+</comment>
+      <returntype>anywheresoftware.b4a.objects.collections.List</returntype>
+      <parameter>
+        <name>Mail</name>
+        <type>String</type>
+      </parameter>
+      <parameter>
+        <name>Exact</name>
+        <type>boolean</type>
+      </parameter>
+      <parameter>
+        <name>VisibleOnly</name>
+        <type>boolean</type>
+      </parameter>
+    </method>
+    <method>
+      <name DesignerName="FindContactsByName">_findcontactsbyname</name>
+      <comment>Returns a List with cuContact items based on the given name.
+Name - Name to look for.
+Exact - Whether to search for the exact name or to search for names that contain the given value.
+VisibleOnly - Whether to return only visible contacts.
+</comment>
+      <returntype>anywheresoftware.b4a.objects.collections.List</returntype>
+      <parameter>
+        <name>Name</name>
+        <type>String</type>
+      </parameter>
+      <parameter>
+        <name>Exact</name>
+        <type>boolean</type>
+      </parameter>
+      <parameter>
+        <name>VisibleOnly</name>
+        <type>boolean</type>
+      </parameter>
+    </method>
+    <method>
+      <name DesignerName="FindContactsByNotes">_findcontactsbynotes</name>
+      <comment>Similar to FindContactsByName. Finds contacts based on the notes field.
+</comment>
+      <returntype>anywheresoftware.b4a.objects.collections.List</returntype>
+      <parameter>
+        <name>Note</name>
+        <type>String</type>
+      </parameter>
+      <parameter>
+        <name>Exact</name>
+        <type>boolean</type>
+      </parameter>
+      <parameter>
+        <name>VisibleOnly</name>
+        <type>boolean</type>
+      </parameter>
+    </method>
+    <method>
+      <name DesignerName="FindContactsByPhone">_findcontactsbyphone</name>
+      <comment>Similar to FindContactsByName. Finds contacts based on the phone number.
+</comment>
+      <returntype>anywheresoftware.b4a.objects.collections.List</returntype>
+      <parameter>
+        <name>PhoneNumber</name>
+        <type>String</type>
+      </parameter>
+      <parameter>
+        <name>Exact</name>
+        <type>boolean</type>
+      </parameter>
+      <parameter>
+        <name>VisibleOnly</name>
+        <type>boolean</type>
+      </parameter>
+    </method>
+    <method>
+      <name DesignerName="FindContactsByStarred">_findcontactsbystarred</name>
+      <comment>Returns the starred contacts.
+</comment>
+      <returntype>anywheresoftware.b4a.objects.collections.List</returntype>
+      <parameter>
+        <name>Starred</name>
+        <type>boolean</type>
+      </parameter>
+    </method>
+    <method>
+      <name DesignerName="FindContactsWithPhotos">_findcontactswithphotos</name>
+      <comment>Returns all contacts with a photo.
+</comment>
+      <returntype>anywheresoftware.b4a.objects.collections.List</returntype>
+    </method>
+    <method>
+      <name DesignerName="GetEmails">_getemails</name>
+      <comment>Returns a List with cuEmail items.
+</comment>
+      <returntype>anywheresoftware.b4a.objects.collections.List</returntype>
+      <parameter>
+        <name>Id</name>
+        <type>long</type>
+      </parameter>
+    </method>
+    <method>
+      <name DesignerName="GetEvents">_getevents</name>
+      <comment>Returns a List with cuEvents items.
+</comment>
+      <returntype>anywheresoftware.b4a.objects.collections.List</returntype>
+      <parameter>
+        <name>Id</name>
+        <type>long</type>
+      </parameter>
+    </method>
+    <method>
+      <name DesignerName="GetNameFromId">_getnamefromid</name>
+      <returntype>String</returntype>
+      <parameter>
+        <name>id</name>
+        <type>String</type>
+      </parameter>
+    </method>
+    <method>
+      <name DesignerName="GetNote">_getnote</name>
+      <comment>Returns the note field.
+</comment>
+      <returntype>String</returntype>
+      <parameter>
+        <name>id</name>
+        <type>long</type>
+      </parameter>
+    </method>
+    <method>
+      <name DesignerName="GetPhones">_getphones</name>
+      <comment>Returns a List with cuPhone items.
+</comment>
+      <returntype>anywheresoftware.b4a.objects.collections.List</returntype>
+      <parameter>
+        <name>id</name>
+        <type>long</type>
+      </parameter>
+    </method>
+    <method>
+      <name DesignerName="GetPhoto">_getphoto</name>
+      <comment>Returns the thumbnail photo of the given contact. Returns an uninitialized bitmap if no photo is available.
+</comment>
+      <returntype>anywheresoftware.b4a.objects.drawable.CanvasWrapper.BitmapWrapper</returntype>
+      <parameter>
+        <name>Id</name>
+        <type>long</type>
+      </parameter>
+    </method>
+    <method>
+      <name DesignerName="GetStarred">_getstarred</name>
+      <comment>Gets whether the contact is "starred".
+</comment>
+      <returntype>boolean</returntype>
+      <parameter>
+        <name>Id</name>
+        <type>long</type>
+      </parameter>
+    </method>
+    <method>
+      <name DesignerName="Initialize">_initialize</name>
+      <returntype>String</returntype>
+      <parameter>
+        <name>ba</name>
+        <type>anywheresoftware.b4a.BA</type>
+      </parameter>
+    </method>
+    <method>
+      <name DesignerName="InsertContact">_insertcontact</name>
+      <comment>Inserts a new contact and returns the cuContact object of this contact.
+</comment>
+      <returntype>b4a.example.contactsutils._cucontact</returntype>
+      <parameter>
+        <name>Name</name>
+        <type>String</type>
+      </parameter>
+      <parameter>
+        <name>Phone</name>
+        <type>String</type>
+      </parameter>
+    </method>
+    <method>
+      <name DesignerName="SetNote">_setnote</name>
+      <comment>Sets the note field of the given id.
+</comment>
+      <returntype>String</returntype>
+      <parameter>
+        <name>Id</name>
+        <type>long</type>
+      </parameter>
+      <parameter>
+        <name>Note</name>
+        <type>String</type>
+      </parameter>
+    </method>
+    <method>
+      <name DesignerName="SetStarred">_setstarred</name>
+      <comment>Sets the starred state of the given id.
+</comment>
+      <returntype>String</returntype>
+      <parameter>
+        <name>Id</name>
+        <type>long</type>
+      </parameter>
+      <parameter>
+        <name>Starred</name>
+        <type>boolean</type>
+      </parameter>
+    </method>
+  </class>
+  <version>1</version>
+</root>

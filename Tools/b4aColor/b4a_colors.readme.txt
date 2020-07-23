@@ -1,0 +1,17 @@
+b4a_colors is a stand alone utility that allows you to change the colors in your Basic4android IDE. It is a simple point and click interface that allows you to select the item(s) in the IDE that you wish to change the display color. This version also works with B4J, and allows you to copy configurations between B4A and B4J.
+
+B4A_COLORS CAN BE PLACED IN ANY DIRECTORY. It does not require any other libraries or .dll file to run. It should work equally well on Windows XP, Vista, 7, and 8.
+
+Some items allow you to select bold as an option (but not all fields support this, or even make sense to allow it). You can also select the overall font (typeface) to use for the editor. 
+
+The font affects all text displayed (including font size) except for the undeclared indentifiers, which is fixed in the b4a code.
+You can share your creations with others by using the Share button. This allows you to save a copy of the file to a location and filename of your choice. From there, you can post it on the forums, or on a server for download.
+
+B4a_colors attempts to find your B4A.xml file in the C:\Program Files (x86)\Anywhere Software\Basic4android\ and C:\Program Files\Anywhere Software\Basic4android\  directories. If you have installed b4a into another location, you need to click the button beside the b4a path edit field and select that location.
+
+The software comes with an example .xml file that I currently use. It is ready to drop in place of your existing file if you so desire. Be sure to backup a copy of your current b4a.xml file BEFORE making any changes with this or any other program.
+
+This version of b4a_colors has been modified to work with b4a version 3.20 as well as earlier versions of the b4a IDE. It also includes a sample .xml file for 3.X. To use the sample, COPY YOUR EXISTING B4A.XML FILE TO A SAFE PLACE! Then copy B4A-sample-2.X.xml to your b4a folder and rename it to B4A.xml.
+
+I hope you find this little utility useful. If you have any suggestions or bug reports, feel free to contact me at:
+jem@www.mlsoft.org

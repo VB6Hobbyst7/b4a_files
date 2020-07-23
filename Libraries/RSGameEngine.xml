@@ -1,0 +1,570 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root>
+    <doclet-version-NOT-library-version>1.02</doclet-version-NOT-library-version>
+    <class>
+        <name>com.rootsoft.rsgameengine.RSGameSprite</name>
+        <shortname>RSGameSprite</shortname>
+        <owner>process</owner>
+        <method>
+            <name>Initialize</name>
+            <comment>Initializes the sprite with a name and bitmap.
+ Name - A custom variable to hold the sprites name.
+ bitmap - The idle or animation image.
+ width - The width of a single imageframe
+ height - The height of a single imageframe.</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>Name</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>bitmap</name>
+                <type>android.graphics.Bitmap</type>
+            </parameter>
+            <parameter>
+                <name>width</name>
+                <type>int</type>
+            </parameter>
+            <parameter>
+                <name>height</name>
+                <type>int</type>
+            </parameter>
+        </method>
+        <method>
+            <name>LoadBitmap</name>
+            <comment>Load a bitmap in the sprite
+Dir: 
+FileName: </comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>Dir</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>FileName</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+        <property>
+            <name>SpriteHeight</name>
+            <returntype>int</returntype>
+            <comment>Get the height of the sprite.</comment>
+        </property>
+        <property>
+            <name>Name</name>
+            <returntype>java.lang.String</returntype>
+            <parameter>
+                <name>Name</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <comment>Gets or sets the name of the sprite.</comment>
+        </property>
+        <property>
+            <name>SpriteWidth</name>
+            <returntype>int</returntype>
+            <comment>Gets the width of the sprite.</comment>
+        </property>
+        <property>
+            <name>Bitmap</name>
+            <returntype>android.graphics.Bitmap</returntype>
+            <parameter>
+                <name>bitmap</name>
+                <type>android.graphics.Bitmap</type>
+            </parameter>
+            <comment>Gets or sets the bitmap of the sprite.</comment>
+        </property>
+        <property>
+            <name>CurrentFrame</name>
+            <returntype>int</returntype>
+            <comment>Gets the current frame number.</comment>
+        </property>
+        <property>
+            <name>NumberOfFrames</name>
+            <returntype>int</returntype>
+            <comment>Gets the number of frames in the animation.</comment>
+        </property>
+        <property>
+            <name>Height</name>
+            <returntype>int</returntype>
+            <comment>Get the height of the spritesheet.</comment>
+        </property>
+        <property>
+            <name>Width</name>
+            <returntype>int</returntype>
+            <comment>Gets the width of the spritesheet.</comment>
+        </property>
+        <field>
+            <name>listAnimation</name>
+            <comment></comment>
+            <returntype>anywheresoftware.b4a.objects.collections.List</returntype>
+        </field>
+    </class>
+    <class>
+        <name>com.rootsoft.rsgameengine.RSGameObject</name>
+        <shortname>RSGameObject</shortname>
+        <owner>process</owner>
+        <event>Click (BoundingBox as ImageView, ID As Int)</event>
+        <method>
+            <name>Initialize</name>
+            <comment>Initializes the object with the given sprite.
+ This is your main object that can have multiple sprites.
+ Sprite - The Sprite to use.
+ Facing - Where to sprite is looking at.</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>ba</name>
+                <type>anywheresoftware.b4a.BA</type>
+            </parameter>
+            <parameter>
+                <name>Name</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>Sprite</name>
+                <type>com.rootsoft.rsgameengine.RSGameSprite</type>
+            </parameter>
+            <parameter>
+                <name>Facing</name>
+                <type>int</type>
+            </parameter>
+        </method>
+        <method>
+            <name>Mirror</name>
+            <comment>Mirrors the bitmap of the BoundingBox.</comment>
+            <returntype>void</returntype>
+        </method>
+        <method>
+            <name>Click</name>
+            <comment>Simulates a click event on a Game Object.
+ This calls a sub with params RSGameObject and ID.
+ e.g. RSGameFrameWork_Click (BoundingBox as ImageView, ID as Int)</comment>
+            <returntype>void</returntype>
+        </method>
+        <method>
+            <name>Flip</name>
+            <comment>Flips the bitmap of the BoundingBox.</comment>
+            <returntype>void</returntype>
+        </method>
+        <method>
+            <name>addGameSprite</name>
+            <comment>Adds a Game Sprite to the Game Object.
+GameSprite: - the spritesheet</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>GameSprite</name>
+                <type>com.rootsoft.rsgameengine.RSGameSprite</type>
+            </parameter>
+            <parameter>
+                <name>Facing</name>
+                <type>int</type>
+            </parameter>
+        </method>
+        <property>
+            <name>Name</name>
+            <returntype>java.lang.String</returntype>
+            <parameter>
+                <name>Name</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <comment>Gets or sets the name of the object.</comment>
+        </property>
+        <property>
+            <name>YPosition</name>
+            <returntype>int</returntype>
+            <parameter>
+                <name>y</name>
+                <type>int</type>
+            </parameter>
+            <comment>Gets or sets the y position of the object.</comment>
+        </property>
+        <property>
+            <name>GameSprite</name>
+            <returntype>com.rootsoft.rsgameengine.RSGameSprite</returntype>
+            <parameter>
+                <name>GameSprite</name>
+                <type>com.rootsoft.rsgameengine.RSGameSprite</type>
+            </parameter>
+            <comment>Gets or sets the GameSprite of the Object.</comment>
+        </property>
+        <property>
+            <name>XPosition</name>
+            <returntype>int</returntype>
+            <parameter>
+                <name>x</name>
+                <type>int</type>
+            </parameter>
+            <comment>Gets or sets the x position of the object.</comment>
+        </property>
+        <property>
+            <name>Bitmap</name>
+            <returntype>android.graphics.Bitmap</returntype>
+            <parameter>
+                <name>src</name>
+                <type>android.graphics.Bitmap</type>
+            </parameter>
+            <comment>Gets or sets the bitmap of the sprite.</comment>
+        </property>
+        <property>
+            <name>BoundingBox</name>
+            <returntype>anywheresoftware.b4a.objects.ImageViewWrapper</returntype>
+            <parameter>
+                <name>BoundingBox</name>
+                <type>anywheresoftware.b4a.objects.ImageViewWrapper</type>
+            </parameter>
+            <comment>Gets or sets the Bounding Box of the Object.
+ This is the ImageView of the sprite.
+ A bounding box is the rectangular shape around an object.
+ It is created when PlaceObject is called.</comment>
+        </property>
+        <property>
+            <name>ID</name>
+            <returntype>int</returntype>
+            <parameter>
+                <name>id</name>
+                <type>int</type>
+            </parameter>
+            <comment>Gets or sets the ID of this game object.
+ WARNING! Not recommended to change the id!
+ An id will be given when the object is placed on the drawing panel.</comment>
+        </property>
+        <property>
+            <name>Height</name>
+            <returntype>int</returntype>
+            <parameter>
+                <name>height</name>
+                <type>int</type>
+            </parameter>
+            <comment>Gets or sets the height of the Game Object.</comment>
+        </property>
+        <property>
+            <name>Width</name>
+            <returntype>int</returntype>
+            <parameter>
+                <name>width</name>
+                <type>int</type>
+            </parameter>
+            <comment>Gets or sets the width of the Game Object.</comment>
+        </property>
+        <property>
+            <name>Hitpoints</name>
+            <returntype>int</returntype>
+            <parameter>
+                <name>hp</name>
+                <type>int</type>
+            </parameter>
+            <comment>Gets or sets the hitpoints of the Game Object.</comment>
+        </property>
+        <field>
+            <name>Facing</name>
+            <comment></comment>
+            <returntype>int</returntype>
+        </field>
+    </class>
+    <class>
+        <name>com.rootsoft.rsgameengine.RSGameEngine</name>
+        <shortname>RSGameEngine</shortname>
+        <owner>activity</owner>
+        <method>
+            <name>Initialize</name>
+            <comment>Initializes the RootSoft Game Engine.
+ EventName - Events subs prefix.</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>ba</name>
+                <type>anywheresoftware.b4a.BA</type>
+            </parameter>
+            <parameter>
+                <name>EventName</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>DrawingPanel</name>
+                <type>anywheresoftware.b4a.objects.PanelWrapper</type>
+            </parameter>
+        </method>
+        <method>
+            <name>PlaceObject</name>
+            <comment>Places an object on the DrawingPanel with the given x and y position.</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>GameObject</name>
+                <type>com.rootsoft.rsgameengine.RSGameObject</type>
+            </parameter>
+            <parameter>
+                <name>x</name>
+                <type>int</type>
+            </parameter>
+            <parameter>
+                <name>y</name>
+                <type>int</type>
+            </parameter>
+            <parameter>
+                <name>Gravity</name>
+                <type>int</type>
+            </parameter>
+        </method>
+        <property>
+            <name>DrawingPanel</name>
+            <returntype>anywheresoftware.b4a.objects.PanelWrapper</returntype>
+            <parameter>
+                <name>DrawingPanel</name>
+                <type>anywheresoftware.b4a.objects.PanelWrapper</type>
+            </parameter>
+            <comment>Gets or sets the DrawingPanel to work on</comment>
+        </property>
+        <field>
+            <name>eventName</name>
+            <comment></comment>
+            <returntype>java.lang.String</returntype>
+        </field>
+    </class>
+    <class>
+        <name>com.rootsoft.rsgameengine.RSGameEffects</name>
+        <shortname>RSGameEffects</shortname>
+        <owner>process</owner>
+        <method>
+            <name>Initialize</name>
+            <comment>Initialize the game effects.
+ Binds these effects with the GameObject
+ GameEngine is the currently used game engine.</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>GameObject</name>
+                <type>com.rootsoft.rsgameengine.RSGameObject</type>
+            </parameter>
+        </method>
+        <method>
+            <name>MoveLeft</name>
+            <comment>Moves the Game Object to the left.
+ X - the amount of pixels to go left
+ src - the new bitmap to use. Pass null to keep the current one.</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>x</name>
+                <type>int</type>
+            </parameter>
+            <parameter>
+                <name>src</name>
+                <type>android.graphics.Bitmap</type>
+            </parameter>
+            <parameter>
+                <name>animate</name>
+                <type>boolean</type>
+            </parameter>
+        </method>
+        <method>
+            <name>BindWithObject</name>
+            <comment>Bind these effects with a RSGame Object.</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>GameObject</name>
+                <type>com.rootsoft.rsgameengine.RSGameObject</type>
+            </parameter>
+        </method>
+        <method>
+            <name>Update</name>
+            <comment>Update the Game Object to use the new Animations.
+Sprite: - the Game Sprite to use.</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>Sprite</name>
+                <type>com.rootsoft.rsgameengine.RSGameSprite</type>
+            </parameter>
+        </method>
+        <method>
+            <name>MoveRight</name>
+            <comment>Moves the Game Object to the right
+ X - the amount of pixels to go right
+ src - the new bitmap to use. Pass null to keep the current one.</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>x</name>
+                <type>int</type>
+            </parameter>
+            <parameter>
+                <name>src</name>
+                <type>android.graphics.Bitmap</type>
+            </parameter>
+            <parameter>
+                <name>animate</name>
+                <type>boolean</type>
+            </parameter>
+        </method>
+        <method>
+            <name>MoveUp</name>
+            <comment>Moves the Game Object upwards.
+ Y - the amount of pixels to go up.
+ src - the new bitmap to use. Pass null to keep the current one.</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>y</name>
+                <type>int</type>
+            </parameter>
+            <parameter>
+                <name>src</name>
+                <type>android.graphics.Bitmap</type>
+            </parameter>
+            <parameter>
+                <name>animate</name>
+                <type>boolean</type>
+            </parameter>
+        </method>
+        <method>
+            <name>MoveDown</name>
+            <comment>Moves the Game Object downwards
+ Y - the amount of pixels to go down.
+ src - the new bitmap to use. Pass null to keep the current one.</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>y</name>
+                <type>int</type>
+            </parameter>
+            <parameter>
+                <name>src</name>
+                <type>android.graphics.Bitmap</type>
+            </parameter>
+            <parameter>
+                <name>animate</name>
+                <type>boolean</type>
+            </parameter>
+        </method>
+        <property>
+            <name>StepsPerFrame</name>
+            <returntype>int</returntype>
+            <parameter>
+                <name>steps</name>
+                <type>int</type>
+            </parameter>
+            <comment>Gets or sets the steps per frame</comment>
+        </property>
+    </class>
+    <class>
+        <name>com.rootsoft.rsgameengine.RSGameConstants</name>
+        <shortname>RSGameConstants</shortname>
+        <owner>process</owner>
+        <field>
+            <name>ANIMATED_MOVING</name>
+            <comment>Animated sprite is moving.</comment>
+            <returntype>int</returntype>
+        </field>
+        <field>
+            <name>FACING_RIGHT</name>
+            <comment></comment>
+            <returntype>int</returntype>
+        </field>
+        <field>
+            <name>ANIMATED_IDLE</name>
+            <comment>Animated sprite is idle.</comment>
+            <returntype>int</returntype>
+        </field>
+        <field>
+            <name>FACING_DOWN</name>
+            <comment></comment>
+            <returntype>int</returntype>
+        </field>
+        <field>
+            <name>ANIMATED_NONE</name>
+            <comment>Use this when no spritesheet is available.</comment>
+            <returntype>int</returntype>
+        </field>
+        <field>
+            <name>FACING_LEFT</name>
+            <comment></comment>
+            <returntype>int</returntype>
+        </field>
+        <field>
+            <name>FACING_IDLE</name>
+            <comment></comment>
+            <returntype>int</returntype>
+        </field>
+        <field>
+            <name>FACING_UP</name>
+            <comment></comment>
+            <returntype>int</returntype>
+        </field>
+        <field>
+            <name>ANIMATED_CYCLE</name>
+            <comment>Use this when an animation frame is needed.</comment>
+            <returntype>int</returntype>
+        </field>
+    </class>
+    <class>
+        <name>com.rootsoft.rsgameengine.RSGameAudio</name>
+        <shortname>RSGameAudio</shortname>
+        <owner>process</owner>
+        <method>
+            <name>ResetAudio</name>
+            <comment>Resets the Media Player.</comment>
+            <returntype>void</returntype>
+        </method>
+        <method>
+            <name>Initialize</name>
+            <comment>Initialize the Game Audio(MediaPlayer) and Sound Effects(Soundpool).
+ Larger audio files should use the MediaPlayer (Audio) and with Sound Effects you better use Soundpool.
+ Binds these effects with the GameEngine</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>GameEngine</name>
+                <type>com.rootsoft.rsgameengine.RSGameEngine</type>
+            </parameter>
+        </method>
+        <method>
+            <name>ReleaseAudio</name>
+            <comment>Releases the MediaPlayer.</comment>
+            <returntype>void</returntype>
+        </method>
+        <method>
+            <name>SeekToAudio</name>
+            <comment>Seek to the given moment in the MediaPlayer
+seek: </comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>seek</name>
+                <type>int</type>
+            </parameter>
+        </method>
+        <method>
+            <name>PlayAudio</name>
+            <comment>Plays the AudioFile. (MediaPlayer)</comment>
+            <returntype>void</returntype>
+        </method>
+        <method>
+            <name>initAudio</name>
+            <comment>Initialize the media player.
+ It is recommended to use this for  large audio files.
+ Dir - The Directory of the File
+ FileName - The Filename</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>Dir</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>FileName</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+        <method>
+            <name>PauseAudio</name>
+            <comment>Pauses the MediaPlayer</comment>
+            <returntype>void</returntype>
+        </method>
+        <method>
+            <name>StopAudio</name>
+            <comment>Stops the media player.</comment>
+            <returntype>void</returntype>
+        </method>
+        <property>
+            <name>CurrentPosition</name>
+            <returntype>int</returntype>
+            <comment>Gets the current position of the MediaPlayer.</comment>
+        </property>
+        <property>
+            <name>AudioDuration</name>
+            <returntype>int</returntype>
+            <comment>Gets the duration of the Mediaplayer.</comment>
+        </property>
+    </class>
+    <version>1.0</version>
+    <author>XverhelstX</author>
+</root>

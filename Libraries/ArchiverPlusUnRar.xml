@@ -1,0 +1,369 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root>
+    <doclet-version-NOT-library-version>1.02</doclet-version-NOT-library-version>
+    <class>
+        <name>b4a.flm.archiverplus.ArchiverPlusUnRar</name>
+        <shortname>ArchiverPlusUnRar</shortname>
+        <owner>process</owner>
+        <event>UnRarProgression(Info As ArchiverRarFileInfo)</event>
+        <event>UnRarResult(ResultCode As Byte, ErrorCode As Int)</event>
+        <method>
+            <name>ListRarEntries</name>
+            <comment>Returns a list containing the properties of all files of the specified RAR archive. Each item of this list is an ArchiverRarFileInfo object.
+Returns Null if an error occurred.
+Example:&lt;code&gt;
+Dim lstEntries As List = Arc.ListRarEntries(ArchiveFolder &amp; "/MyArchive.Rar")
+For i = 0 To lstEntries.Size - 1
+	Dim RarInfo As ArchiverRarFileInfo = lstEntries.Get(i)
+	Log(RarInfo.FileName &amp; ": Compressed=" &amp; RarInfo.CompressedSize &amp; " / Uncompressed=" &amp; RarInfo.UncompressedSize &amp; " / CRC32=" &amp; RarInfo.CRC32)
+	Log(" Last modification=" &amp; DateTime.Date(RarInfo.LastModFileTime) &amp; " " &amp; DateTime.Time(RarInfo.LastModFileTime))
+	Log(" Directory=" &amp; RarInfo.IsDirectory &amp; " / Encrypted=" &amp; RarInfo.IsEncrypted &amp; " / IsSplit=" &amp; RarInfo.IsSplit &amp; " (in " &amp; RarInfo.VolumeName &amp; ")")
+Next&lt;/code&gt;</comment>
+            <returntype>anywheresoftware.b4a.objects.collections.List</returntype>
+            <parameter>
+                <name>ba</name>
+                <type>anywheresoftware.b4a.BA</type>
+            </parameter>
+            <parameter>
+                <name>ArchivePath</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+        <method>
+            <name>CountRarEntries</name>
+            <comment>Returns the number of entries in the specified RAR archive, or -1 if an error occurred.</comment>
+            <returntype>int</returntype>
+            <parameter>
+                <name>ba</name>
+                <type>anywheresoftware.b4a.BA</type>
+            </parameter>
+            <parameter>
+                <name>ArchivePath</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+        <method>
+            <name>Test</name>
+            <comment>Checks that the specified RAR archive is valid.
+EventPrefix: prefix of the "UnRarProgression" and "UnRarResult" events.</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>ba</name>
+                <type>anywheresoftware.b4a.BA</type>
+            </parameter>
+            <parameter>
+                <name>ArchivePath</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>EventPrefix</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+        <method>
+            <name>GetRarArchiveInfo</name>
+            <comment>Returns an ArchiverRarArchInfo object containing the properties of the specified RAR archive.
+Returns Null if an error occurred.
+Example:&lt;code&gt;
+Dim ArchInfo As ArchiverRarArchInfo = Arc.GetRarArchiveInfo(ArchiveFolder &amp; "/MyArchive.Rar")
+Log(ArchInfo.ArchiveName &amp; ": Encrypted=" &amp; ArchInfo.IsEncrypted &amp; " / 1st volume=" &amp; ArchInfo.IsFirstVolume &amp; " / Volume=" &amp; ArchInfo.IsVolume)
+Log(" Locked=" &amp; ArchInfo.IsLocked &amp; " / Protected=" &amp; ArchInfo.IsProtected &amp; " / Solid=" &amp; ArchInfo.IsSolid)&lt;/code&gt;</comment>
+            <returntype>b4a.flm.archiverplus.ArchiverPlusUnRar.ArchiverRarInfo</returntype>
+            <parameter>
+                <name>ba</name>
+                <type>anywheresoftware.b4a.BA</type>
+            </parameter>
+            <parameter>
+                <name>ArchivePath</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+        <method>
+            <name>DecryptRarWithString</name>
+            <comment>Sets the password to be used to process an encrypted archive. This password is nullified once the task is done.
+For security reasons, Strings are not recommended to store passwords (http://docs.oracle.com/javase/1.5.0/docs/guide/security/jce/JCERefGuide.html#PBEEx). You should use an array of bytes instead and set the password with DecryptRarWithArray.</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>Password</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+        <method>
+            <name>DecryptRarWithArray</name>
+            <comment>Sets the password to be used to process an encrypted archive. This password is nullified once the task is done.
+To encode a String into an array of bytes: &lt;code&gt;MyString.GetBytes("UTF-8")&lt;/code&gt;.</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>Password</name>
+                <type>byte[]</type>
+            </parameter>
+        </method>
+        <method>
+            <name>UnRar</name>
+            <comment>Extracts all the files from the given RAR archive to the destination folder.
+ArchivePath: location of the archive to uncompress.
+DestFolder: location where to uncompress the files.
+EventPrefix: prefix of the "UnRarProgression" and "UnRarResult" events.</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>ba</name>
+                <type>anywheresoftware.b4a.BA</type>
+            </parameter>
+            <parameter>
+                <name>ArchivePath</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>DestFolder</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>EventPrefix</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+        <method>
+            <name>GetResultCodes</name>
+            <comment>Returns an array containing the result code (one of the RAR_RESULT_ constants) at index 0 and the error code (one of the RAR_ERROR_ constants) at index 1.</comment>
+            <returntype>int[]</returntype>
+        </method>
+        <method>
+            <name>CancelAllRarTasks</name>
+            <comment>Tries to cancel all the tasks in progress.</comment>
+            <returntype>void</returntype>
+        </method>
+        <method>
+            <name>UnRarFiles</name>
+            <comment>Extracts the selected files from a RAR archive to the destination folder.
+ArchivePath: location of the archive to uncompress.
+Files: list of the files to unrar. Paths to the files are relative.
+DestFolder: location where to uncompress the files.
+EventPrefix: prefix of the "UnRarProgression" and "UnRarResult" events.</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>ba</name>
+                <type>anywheresoftware.b4a.BA</type>
+            </parameter>
+            <parameter>
+                <name>ArchivePath</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>Files</name>
+                <type>anywheresoftware.b4a.objects.collections.List</type>
+            </parameter>
+            <parameter>
+                <name>DestFolder</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>EventPrefix</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+        <property>
+            <name>ExecutionMode</name>
+            <returntype>byte</returntype>
+            <parameter>
+                <name>ExecutionMode</name>
+                <type>byte</type>
+            </parameter>
+            <comment>Gets or sets the execution mode of the RAR archive decompression tasks (one of the RAR_EXECMODE_ constants).
+SYNCHRONOUS: waits for the end of the task (default mode).
+ASYNCHRONOUS: does not wait for the end of the task. The function returns immediately and the task continues in the background. Check the result code with GetResultCodes(0) to know whether the task has ended.
+In both modes, do not try to handle views directly from within the events.</comment>
+        </property>
+        <field>
+            <name>RAR_RESULT_SUCCESS</name>
+            <comment></comment>
+            <returntype>byte</returntype>
+        </field>
+        <field>
+            <name>RAR_ERROR_CANCELLED</name>
+            <comment></comment>
+            <returntype>int</returntype>
+        </field>
+        <field>
+            <name>RAR_ERROR_NO_MEMORY</name>
+            <comment></comment>
+            <returntype>int</returntype>
+        </field>
+        <field>
+            <name>RAR_ERROR_READ_FAILED</name>
+            <comment></comment>
+            <returntype>int</returntype>
+        </field>
+        <field>
+            <name>RAR_ERROR_UNKNOWN</name>
+            <comment></comment>
+            <returntype>int</returntype>
+        </field>
+        <field>
+            <name>RAR_RESULT_WORKING</name>
+            <comment></comment>
+            <returntype>byte</returntype>
+        </field>
+        <field>
+            <name>RAR_EXECMODE_ASYNCHRONOUS</name>
+            <comment></comment>
+            <returntype>byte</returntype>
+        </field>
+        <field>
+            <name>RAR_ERROR_BAD_DATA</name>
+            <comment></comment>
+            <returntype>int</returntype>
+        </field>
+        <field>
+            <name>RAR_ERROR_UNKNOWN_FORMAT</name>
+            <comment></comment>
+            <returntype>int</returntype>
+        </field>
+        <field>
+            <name>RAR_ERROR_BAD_PASSWORD</name>
+            <comment></comment>
+            <returntype>int</returntype>
+        </field>
+        <field>
+            <name>RAR_ERROR_BAD_ARCHIVE</name>
+            <comment></comment>
+            <returntype>int</returntype>
+        </field>
+        <field>
+            <name>RAR_RESULT_ERROR</name>
+            <comment></comment>
+            <returntype>byte</returntype>
+        </field>
+        <field>
+            <name>RAR_ERROR_WRITE_FAILED</name>
+            <comment></comment>
+            <returntype>int</returntype>
+        </field>
+        <field>
+            <name>RAR_RESULT_CANCELLED</name>
+            <comment></comment>
+            <returntype>byte</returntype>
+        </field>
+        <field>
+            <name>RAR_ERROR_NONE</name>
+            <comment></comment>
+            <returntype>int</returntype>
+        </field>
+        <field>
+            <name>RAR_ERROR_CREATE_FAILED</name>
+            <comment></comment>
+            <returntype>int</returntype>
+        </field>
+        <field>
+            <name>RAR_ERROR_MISSING_PASSWORD</name>
+            <comment></comment>
+            <returntype>int</returntype>
+        </field>
+        <field>
+            <name>RAR_EXECMODE_SYNCHRONOUS</name>
+            <comment></comment>
+            <returntype>byte</returntype>
+        </field>
+        <field>
+            <name>RAR_ERROR_OPEN_FAILED</name>
+            <comment></comment>
+            <returntype>int</returntype>
+        </field>
+    </class>
+    <class>
+        <name>b4a.flm.archiverplus.ArchiverPlusUnRar.ArchiverRarInfo</name>
+        <shortname>ArchiverRarArchInfo</shortname>
+        <owner>process</owner>
+        <property>
+            <name>IsLocked</name>
+            <returntype>boolean</returntype>
+            <comment>Returns whether the archive is locked.</comment>
+        </property>
+        <property>
+            <name>IsSolid</name>
+            <returntype>boolean</returntype>
+            <comment>Returns whether the archive is solid.</comment>
+        </property>
+        <property>
+            <name>IsVolume</name>
+            <returntype>boolean</returntype>
+            <comment>Returns whether the archive is a volume of a multi-volume archive.</comment>
+        </property>
+        <property>
+            <name>IsFirstVolume</name>
+            <returntype>boolean</returntype>
+            <comment>Returns whether the archive is the first volume of a multi-volume archive.</comment>
+        </property>
+        <property>
+            <name>ArchiveName</name>
+            <returntype>java.lang.String</returntype>
+            <comment></comment>
+        </property>
+        <property>
+            <name>IsProtected</name>
+            <returntype>boolean</returntype>
+            <comment>Returns whether the archive is protected.</comment>
+        </property>
+        <property>
+            <name>IsEncrypted</name>
+            <returntype>boolean</returntype>
+            <comment>Returns whether the file names are encrypted.</comment>
+        </property>
+    </class>
+    <class>
+        <name>b4a.flm.archiverplus.ArchiverPlusUnRar.ArchiverRarFileInfo</name>
+        <shortname>ArchiverRarFileInfo</shortname>
+        <owner>process</owner>
+        <property>
+            <name>IsDirectory</name>
+            <returntype>boolean</returntype>
+            <comment>Returns whether the file is a directory.</comment>
+        </property>
+        <property>
+            <name>UncompressedSize</name>
+            <returntype>long</returntype>
+            <comment>Returns the uncompressed size in bytes.</comment>
+        </property>
+        <property>
+            <name>LastModFileTime</name>
+            <returntype>long</returntype>
+            <comment>Returns the timestamp of the file.</comment>
+        </property>
+        <property>
+            <name>CompressionMethod</name>
+            <returntype>int</returntype>
+            <comment>Returns the compression method.</comment>
+        </property>
+        <property>
+            <name>IsSplit</name>
+            <returntype>boolean</returntype>
+            <comment>Returns whether the file is split in several parts (in a multi-volume archive).</comment>
+        </property>
+        <property>
+            <name>FileName</name>
+            <returntype>java.lang.String</returntype>
+            <comment></comment>
+        </property>
+        <property>
+            <name>CRC32</name>
+            <returntype>long</returntype>
+            <comment></comment>
+        </property>
+        <property>
+            <name>VolumeName</name>
+            <returntype>java.lang.String</returntype>
+            <comment></comment>
+        </property>
+        <property>
+            <name>CompressedSize</name>
+            <returntype>long</returntype>
+            <comment>Returns the compressed size in bytes.</comment>
+        </property>
+        <property>
+            <name>IsEncrypted</name>
+            <returntype>boolean</returntype>
+            <comment>Returns whether the file is encrypted.</comment>
+        </property>
+    </class>
+    <version>1.02</version>
+    <author>Fr\u00e9d\u00e9ric Leneuf-Magaud, Alexander Roshal</author>
+</root>

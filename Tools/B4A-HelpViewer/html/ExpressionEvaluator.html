@@ -1,0 +1,56 @@
+<HTML>
+<HEAD>
+<META http-equiv="Content-Type" content="text/html; charset=utf-8">
+<TITLE>
+Basic4android - ExpressionEvaluator
+</TITLE>
+<link rel="stylesheet" type="text/css" href="images/help.css" />
+
+</HEAD>
+
+<BODY BGCOLOR="white" leftmargin="50">
+<a name="top"/>
+<h1>ExpressionEvaluator</h1>
+<h3>Written by Andrew Graham</h3>
+</h5>This library includes an Evaluator object that can evaluate arithmetic expressions.
+<h4>List of types:</h4>
+<a href='#evaluator'>Evaluator</a><br/>
+<hr/>
+<h3><u><a name='evaluator'>Evaluator</a></u></h3>
+</h5>This class contains an arithmetic expression evaluator. <br/>It supports the arithmetic sub-set of the full Basic4android language.<br/><br/>Operators in precedence order are <br/><br/>  ^ : exponent<br/>  * / mod : multiply, divide and modulus, % is also accepted for mod<br/>  + - : add and subtract<br/>  <br/>Functions supported are<br/>  <br/> COS(r), SIN(r), TAN(r), ACOS(n), ASIN(n), ATAN(n) : radians<br/> COSD(d), SINDd), TANDd), ACOSD(n), ASIND(n), ATAND(n) : degrees<br/> LN(n) base e, LOG(n) base 10, LOGARITHM(n, base) any base<br/> SQRT(n), FLOOR(n), ABS(n), MAX(n1, n2), MIN(n1, n2), POWER(n, exp), ROUND(n)<br/>  <br/>Constants recognised are<br/> CPI : Pi<br/> CE : e<br/>   <br/>Twenty-six case-insensitive variables are supported named from "A" to "Z" and must be intialised with the required value before being used in an evaluation.<br/>Although the actual variable names are a single letter longer names are accepted but only the initial letter is used to identify the variable.<br/>Variable values are maintained across evaluations.
+<br/>
+
+<h4>Events:</h4>
+None
+<h4>Members:</h4><br/>
+<img src='images/19.png'/>&nbsp;&nbsp;<span style="color: #000000;"><a href='#evaluator_error'><b>Error</b></a> </span><span style="color: #0000FF;">As</span><span style="color: #000000;"> </span><span style="color: #008B8B;">String</span><span style="color: #000000;">  [read only]</span><br/><br/>
+<img src='images/19.png'/>&nbsp;&nbsp;<span style="color: #000000;"><a href='#evaluator_errorflag'><b>ErrorFlag</b></a> </span><span style="color: #0000FF;">As</span><span style="color: #000000;"> </span><span style="color: #008B8B;">Boolean</span><span style="color: #000000;">  [read only]</span><br/><br/>
+<img src='images/15.png'/>&nbsp;&nbsp;<span style="color: #000000;"><a href='#evaluator_evaluate'><b>Evaluate</b></a> (expression </span><span style="color: #0000FF;">As</span><span style="color: #000000;"> </span><span style="color: #008B8B;">String</span><span style="color: #000000;">) </span><span style="color: #0000FF;">As</span><span style="color: #000000;"> </span><span style="color: #008B8B;">Double</span><br/><br/>
+<img src='images/15.png'/>&nbsp;&nbsp;<span style="color: #000000;"><a href='#evaluator_evaluateandsave'><b>EvaluateAndSave</b></a> (expression </span><span style="color: #0000FF;">As</span><span style="color: #000000;"> </span><span style="color: #008B8B;">String</span><span style="color: #000000;">, var </span><span style="color: #0000FF;">As</span><span style="color: #000000;"> </span><span style="color: #008B8B;">String</span><span style="color: #000000;">) </span><span style="color: #0000FF;">As</span><span style="color: #000000;"> </span><span style="color: #008B8B;">Double</span><br/><br/>
+<img src='images/15.png'/>&nbsp;&nbsp;<span style="color: #000000;"><a href='#evaluator_getglobal'><b>GetGlobal</b></a> (var </span><span style="color: #0000FF;">As</span><span style="color: #000000;"> </span><span style="color: #008B8B;">String</span><span style="color: #000000;">) </span><span style="color: #0000FF;">As</span><span style="color: #000000;"> </span><span style="color: #008B8B;">Double</span><br/><br/>
+<img src='images/15.png'/>&nbsp;&nbsp;<span style="color: #000000;"><a href='#evaluator_initialize'><b>Initialize</b></a></span><br/><br/>
+<img src='images/15.png'/>&nbsp;&nbsp;<span style="color: #000000;"><a href='#evaluator_setglobal'><b>SetGlobal</b></a> (var </span><span style="color: #0000FF;">As</span><span style="color: #000000;"> </span><span style="color: #008B8B;">String</span><span style="color: #000000;">, value </span><span style="color: #0000FF;">As</span><span style="color: #000000;"> </span><span style="color: #008B8B;">Double</span><span style="color: #000000;">)</span><br/><br/>
+<img src='images/19.png'/>&nbsp;&nbsp;<span style="color: #000000;"><a href='#evaluator_version'><b>Version</b></a> </span><span style="color: #0000FF;">As</span><span style="color: #000000;"> </span><span style="color: #008B8B;">Double</span><span style="color: #000000;">  [read only]</span><br/><br/>
+
+<h4>Members description:</h4>
+<a name='evaluator_error'/>
+<h5><img src='images/19.png'/>
+<span style="color: #000000;">Error </span><span style="color: #0000FF;">As</span><span style="color: #000000;"> </span><span style="color: #008B8B;">String</span><span style="color: #000000;">  [read only]</span></h5>Returns the error if any of the last evaluation otherwise returns an empty string.<br/>If the error is a NullPointerException or a StringIndexException then the evaluated expression was ill-formed.<a name='evaluator_errorflag'/>
+<h5><img src='images/19.png'/>
+<span style="color: #000000;">ErrorFlag </span><span style="color: #0000FF;">As</span><span style="color: #000000;"> </span><span style="color: #008B8B;">Boolean</span><span style="color: #000000;">  [read only]</span></h5>Returns True if an error occured in the last call to Evaluate otherwise returns False.<a name='evaluator_evaluate'/>
+<h5><img src='images/15.png'/>
+<span style="color: #000000;">Evaluate (expression </span><span style="color: #0000FF;">As</span><span style="color: #000000;"> </span><span style="color: #008B8B;">String</span><span style="color: #000000;">) </span><span style="color: #0000FF;">As</span><span style="color: #000000;"> </span><span style="color: #008B8B;">Double</span></h5>Evaluate the supplied expression and return the result.<br/>If an error occurs zero is returned and the Error property will contain the reason.<a name='evaluator_evaluateandsave'/>
+<h5><img src='images/15.png'/>
+<span style="color: #000000;">EvaluateAndSave (expression </span><span style="color: #0000FF;">As</span><span style="color: #000000;"> </span><span style="color: #008B8B;">String</span><span style="color: #000000;">, var </span><span style="color: #0000FF;">As</span><span style="color: #000000;"> </span><span style="color: #008B8B;">String</span><span style="color: #000000;">) </span><span style="color: #0000FF;">As</span><span style="color: #000000;"> </span><span style="color: #008B8B;">Double</span></h5>Evaluate the supplied expression and return the result also saving it in the specified variable.<a name='evaluator_getglobal'/>
+<h5><img src='images/15.png'/>
+<span style="color: #000000;">GetGlobal (var </span><span style="color: #0000FF;">As</span><span style="color: #000000;"> </span><span style="color: #008B8B;">String</span><span style="color: #000000;">) </span><span style="color: #0000FF;">As</span><span style="color: #000000;"> </span><span style="color: #008B8B;">Double</span></h5>Returns the value of the variable specified.<br/>Twenty-six case-insensitive variables are supported named from "A" to "Z" longer names are accepted but only the initial letter is used.<a name='evaluator_initialize'/>
+<h5><img src='images/15.png'/>
+<span style="color: #000000;">Initialize</span></h5>Initialise the Evaluator.<a name='evaluator_setglobal'/>
+<h5><img src='images/15.png'/>
+<span style="color: #000000;">SetGlobal (var </span><span style="color: #0000FF;">As</span><span style="color: #000000;"> </span><span style="color: #008B8B;">String</span><span style="color: #000000;">, value </span><span style="color: #0000FF;">As</span><span style="color: #000000;"> </span><span style="color: #008B8B;">Double</span><span style="color: #000000;">)</span></h5>Sets the contents of the variable named var to value.<br/>Twenty-six case-insensitive variables are supported named from "A" to "Z" longer names are accepted but only the initial letter is used.<a name='evaluator_version'/>
+<h5><img src='images/19.png'/>
+<span style="color: #000000;">Version </span><span style="color: #0000FF;">As</span><span style="color: #000000;"> </span><span style="color: #008B8B;">Double</span><span style="color: #000000;">  [read only]</span></h5>Returns the version number of the library.
+<hr/>
+<a href="#top">Top</a>
+</body>
+</html>

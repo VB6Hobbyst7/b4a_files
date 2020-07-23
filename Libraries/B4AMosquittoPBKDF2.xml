@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root>
+    <doclet-version-NOT-library-version>1.05</doclet-version-NOT-library-version>
+    <class>
+        <name>com.tillekesoft.mosquittopbkdf2.B4XMosquittoPBKDF2</name>
+        <shortname>B4XMosquittoPBKDF2</shortname>
+        <owner>process</owner>
+        <method>
+            <name>CreateHashPassword</name>
+            <comment>Creates and returns a valid PBKDF2 hashed password
+ for mosquitto-auth-plug.</comment>
+            <returntype>java.lang.String</returntype>
+            <parameter>
+                <name>plainPassword</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+        <method>
+            <name>IsValidPassword</name>
+            <comment>This method compares a plain password and a PBKDF2 password (in
+ mosquitto-auth-plug format) to know whether the password match the PBKDF2
+ hash.</comment>
+            <returntype>boolean</returntype>
+            <parameter>
+                <name>plainPassword</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>hashPassword</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+    </class>
+    <class>
+        <name>com.tillekesoft.mosquittopbkdf2.MosquittoPBKDF2</name>
+        <comment>This class implements functionality to generate and validate PBKDF2 hashes
+ for mosquitto-auth-plug.</comment>
+        <owner>process</owner>
+        <method>
+            <name>createPassword</name>
+            <comment>This method creates a new PBKDF2 password (in mosquitto-auth-plug format)
+ from a plain password.
+plainPassword: The plain password used to generate the
+ corresponding PBKDF2 password (in mosquitto-auth-plug) format.
+Return type: @return:The generated PBKDF2 password in mosquitto-auth-plug format
+ (usually, it will be stored in a MySQL database).</comment>
+            <returntype>java.lang.String</returntype>
+            <parameter>
+                <name>plainPassword</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+        <method>
+            <name>isValidPassword</name>
+            <comment>This method compares a plain password and a PBKDF2 password (in
+ mosquitto-auth-plug format) to know whether the password match the PBKDF2
+ hash.
+plainPassword: Tha plain password to be compared to the PBKDF2
+ hash.
+hashedPasword: The PBKDF2 password in mosquitto-auth-plug format
+ (usualli it is stored in a MySQL database).
+Return type: @return:true, if password matches the PBKDF2 hash. false on the contrary.</comment>
+            <returntype>boolean</returntype>
+            <parameter>
+                <name>plainPassword</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>hashedPasword</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+    </class>
+    <version>0.1</version>
+    <author>Moster67 aka Mikael Osterhed</author>
+</root>

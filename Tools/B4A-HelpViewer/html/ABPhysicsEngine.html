@@ -1,0 +1,442 @@
+<HTML>
+<HEAD>
+<META http-equiv="Content-Type" content="text/html; charset=utf-8">
+<TITLE>
+Basic4android - ABPhysicsEngine
+</TITLE>
+<link rel="stylesheet" type="text/css" href="images/help.css" />
+
+</HEAD>
+
+<BODY BGCOLOR="white" leftmargin="50">
+<a name="top"/>
+<h1>ABPhysicsEngine</h1>
+<h3>Written by Alain Bailleul</h3>
+</h5>
+<h4>List of types:</h4>
+<a href='#abforce'>ABForce</a><br/><a href='#abgroup'>ABGroup</a><br/><a href='#abjoint'>ABJoint</a><br/><a href='#abparticle'>ABParticle</a><br/><a href='#abphysicsengine'>ABPhysicsEngine</a><br/><a href='#abvector'>ABVector</a><br/>
+<hr/>
+<h3><u><a name='abforce'>ABForce</a></u></h3>
+</h5>For making forces like gravity, pushing, etc...
+<br/>
+
+<h4>Events:</h4>
+None
+<h4>Members:</h4><br/>
+<img src='images/15.png'/>&nbsp;&nbsp;<span style="color: #000000;"><a href='#abforce_getvalue'><b>getValue</b></a>&nbsp;(invmass&nbsp;</span><span style="color: #0000FF;">As</span><span style="color: #000000;">&nbsp;</span><span style="color: #008B8B;">Double</span><span style="color: #000000;">)&nbsp;</span><span style="color: #0000FF;">As</span><span style="color: #000000;">&nbsp;ABVector</span><br/><br/>
+<img src='images/15.png'/>&nbsp;&nbsp;<span style="color: #000000;"><a href='#abforce_initialize'><b>Initialize</b></a>&nbsp;(useMass&nbsp;</span><span style="color: #0000FF;">As</span><span style="color: #000000;">&nbsp;</span><span style="color: #008B8B;">Boolean</span><span style="color: #000000;">,&nbsp;vx&nbsp;</span><span style="color: #0000FF;">As</span><span style="color: #000000;">&nbsp;</span><span style="color: #008B8B;">Double</span><span style="color: #000000;">,&nbsp;vy&nbsp;</span><span style="color: #0000FF;">As</span><span style="color: #000000;">&nbsp;</span><span style="color: #008B8B;">Double</span><span style="color: #000000;">,&nbsp;counter&nbsp;</span><span style="color: #0000FF;">As</span><span style="color: #000000;">&nbsp;</span><span style="color: #008B8B;">Int</span><span style="color: #000000;">,&nbsp;name&nbsp;</span><span style="color: #0000FF;">As</span><span style="color: #000000;">&nbsp;</span><span style="color: #008B8B;">String</span><span style="color: #000000;">)</span><br/><br/>
+<img src='images/11.png'/>&nbsp;&nbsp;<span style="color: #000000;"><a href='#abforce_name'><b>Name</b></a>&nbsp;</span><span style="color: #0000FF;">As</span><span style="color: #000000;">&nbsp;</span><span style="color: #008B8B;">String</span><br/><br/>
+<img src='images/19.png'/>&nbsp;&nbsp;<span style="color: #000000;"><a href='#abforce_usemass'><b>UseMass</b></a>&nbsp;</span><span style="color: #0000FF;">As</span><span style="color: #000000;">&nbsp;</span><span style="color: #008B8B;">Boolean</span><span style="color: #000000;">&nbsp;&nbsp;[write&nbsp;only]</span><br/><br/>
+<img src='images/19.png'/>&nbsp;&nbsp;<span style="color: #000000;"><a href='#abforce_vx'><b>vx</b></a>&nbsp;</span><span style="color: #0000FF;">As</span><span style="color: #000000;">&nbsp;</span><span style="color: #008B8B;">Double</span><span style="color: #000000;">&nbsp;&nbsp;[write&nbsp;only]</span><br/><br/>
+<img src='images/19.png'/>&nbsp;&nbsp;<span style="color: #000000;"><a href='#abforce_vy'><b>vy</b></a>&nbsp;</span><span style="color: #0000FF;">As</span><span style="color: #000000;">&nbsp;</span><span style="color: #008B8B;">Double</span><span style="color: #000000;">&nbsp;&nbsp;[write&nbsp;only]</span><br/><br/>
+
+<h4>Members description:</h4>
+<a name='abforce_getvalue'/>
+<h5><img src='images/15.png'/>
+<span style="color: #000000;">getValue&nbsp;(invmass&nbsp;</span><span style="color: #0000FF;">As</span><span style="color: #000000;">&nbsp;</span><span style="color: #008B8B;">Double</span><span style="color: #000000;">)&nbsp;</span><span style="color: #0000FF;">As</span><span style="color: #000000;">&nbsp;ABVector</span></h5><a name='abforce_initialize'/>
+<h5><img src='images/15.png'/>
+<span style="color: #000000;">Initialize&nbsp;(useMass&nbsp;</span><span style="color: #0000FF;">As</span><span style="color: #000000;">&nbsp;</span><span style="color: #008B8B;">Boolean</span><span style="color: #000000;">,&nbsp;vx&nbsp;</span><span style="color: #0000FF;">As</span><span style="color: #000000;">&nbsp;</span><span style="color: #008B8B;">Double</span><span style="color: #000000;">,&nbsp;vy&nbsp;</span><span style="color: #0000FF;">As</span><span style="color: #000000;">&nbsp;</span><span style="color: #008B8B;">Double</span><span style="color: #000000;">,&nbsp;counter&nbsp;</span><span style="color: #0000FF;">As</span><span style="color: #000000;">&nbsp;</span><span style="color: #008B8B;">Int</span><span style="color: #000000;">,&nbsp;name&nbsp;</span><span style="color: #0000FF;">As</span><span style="color: #000000;">&nbsp;</span><span style="color: #008B8B;">String</span><span style="color: #000000;">)</span></h5><a name='abforce_name'/>
+<h5><img src='images/11.png'/>
+<span style="color: #000000;">Name&nbsp;</span><span style="color: #0000FF;">As</span><span style="color: #000000;">&nbsp;</span><span style="color: #008B8B;">String</span></h5><a name='abforce_usemass'/>
+<h5><img src='images/19.png'/>
+<span style="color: #000000;">UseMass&nbsp;</span><span style="color: #0000FF;">As</span><span style="color: #000000;">&nbsp;</span><span style="color: #008B8B;">Boolean</span><span style="color: #000000;">&nbsp;&nbsp;[write&nbsp;only]</span></h5>if the force uses mass, the mass of the particle is taken into account when calculating the force.<br/> Some forces do not use mass, like gravity<a name='abforce_vx'/>
+<h5><img src='images/19.png'/>
+<span style="color: #000000;">vx&nbsp;</span><span style="color: #0000FF;">As</span><span style="color: #000000;">&nbsp;</span><span style="color: #008B8B;">Double</span><span style="color: #000000;">&nbsp;&nbsp;[write&nbsp;only]</span></h5><a name='abforce_vy'/>
+<h5><img src='images/19.png'/>
+<span style="color: #000000;">vy&nbsp;</span><span style="color: #0000FF;">As</span><span style="color: #000000;">&nbsp;</span><span style="color: #008B8B;">Double</span><span style="color: #000000;">&nbsp;&nbsp;[write&nbsp;only]</span></h5><hr/>
+<h3><u><a name='abgroup'>ABGroup</a></u></h3>
+</h5>A group contains Particles and joints that act as one big particle.
+<br/>
+
+<h4>Events:</h4>
+None
+<h4>Members:</h4><br/>
+<img src='images/15.png'/>&nbsp;&nbsp;<span style="color: #000000;"><a href='#abgroup_addarrayofgroupstocollisionlist'><b>AddArrayOfGroupsToCollisionList</b></a>&nbsp;(</span><span style="color: #0000FF;">array</span><span style="color: #000000;">()&nbsp;</span><span style="color: #0000FF;">As</span><span style="color: #000000;">&nbsp;ABGroup)</span><br/><br/>
+<img src='images/15.png'/>&nbsp;&nbsp;<span style="color: #000000;"><a href='#abgroup_addarrayofjoints'><b>AddArrayOfJoints</b></a>&nbsp;(</span><span style="color: #0000FF;">array</span><span style="color: #000000;">()&nbsp;</span><span style="color: #0000FF;">As</span><span style="color: #000000;">&nbsp;ABJoint)</span><br/><br/>
+<img src='images/15.png'/>&nbsp;&nbsp;<span style="color: #000000;"><a href='#abgroup_addarrayofparticles'><b>AddArrayOfParticles</b></a>&nbsp;(</span><span style="color: #0000FF;">array</span><span style="color: #000000;">()&nbsp;</span><span style="color: #0000FF;">As</span><span style="color: #000000;">&nbsp;ABParticle)</span><br/><br/>
+<img src='images/15.png'/>&nbsp;&nbsp;<span style="color: #000000;"><a href='#abgroup_addcollidable'><b>AddCollidable</b></a>&nbsp;(group&nbsp;</span><span style="color: #0000FF;">As</span><span style="color: #000000;">&nbsp;ABGroup)</span><br/><br/>
+<img src='images/15.png'/>&nbsp;&nbsp;<span style="color: #000000;"><a href='#abgroup_addjoint'><b>AddJoint</b></a>&nbsp;(obj&nbsp;</span><span style="color: #0000FF;">As</span><span style="color: #000000;">&nbsp;ABJoint)</span><br/><br/>
+<img src='images/15.png'/>&nbsp;&nbsp;<span style="color: #000000;"><a href='#abgroup_addparticle'><b>AddParticle</b></a>&nbsp;(obj&nbsp;</span><span style="color: #0000FF;">As</span><span style="color: #000000;">&nbsp;ABParticle)</span><br/><br/>
+<img src='images/19.png'/>&nbsp;&nbsp;<span style="color: #000000;"><a href='#abgroup_collideinternal'><b>CollideInternal</b></a>&nbsp;</span><span style="color: #0000FF;">As</span><span style="color: #000000;">&nbsp;</span><span style="color: #008B8B;">Boolean</span><br/><br/>
+<img src='images/19.png'/>&nbsp;&nbsp;<span style="color: #000000;"><a href='#abgroup_collisionlist'><b>CollisionList</b></a>&nbsp;</span><span style="color: #0000FF;">As</span><span style="color: #000000;">&nbsp;java.util.</span><span style="color: #008B8B;">List</span><span style="color: #000000;">&nbsp;&nbsp;[read&nbsp;only]</span><br/><br/>
+<img src='images/15.png'/>&nbsp;&nbsp;<span style="color: #000000;"><a href='#abgroup_getgrouphits'><b>GetGroupHits</b></a>&nbsp;</span><span style="color: #0000FF;">As</span><span style="color: #000000;">&nbsp;java.util.</span><span style="color: #008B8B;">List</span><br/><br/>
+<img src='images/15.png'/>&nbsp;&nbsp;<span style="color: #000000;"><a href='#abgroup_getjointbyname'><b>GetJointByName</b></a>&nbsp;(name&nbsp;</span><span style="color: #0000FF;">As</span><span style="color: #000000;">&nbsp;</span><span style="color: #008B8B;">String</span><span style="color: #000000;">)&nbsp;</span><span style="color: #0000FF;">As</span><span style="color: #000000;">&nbsp;ABJoint</span><br/><br/>
+<img src='images/15.png'/>&nbsp;&nbsp;<span style="color: #000000;"><a href='#abgroup_getjoints'><b>GetJoints</b></a>&nbsp;</span><span style="color: #0000FF;">As</span><span style="color: #000000;">&nbsp;java.util.</span><span style="color: #008B8B;">List</span><br/><br/>
+<img src='images/15.png'/>&nbsp;&nbsp;<span style="color: #000000;"><a href='#abgroup_getparticlebyname'><b>GetParticleByName</b></a>&nbsp;(name&nbsp;</span><span style="color: #0000FF;">As</span><span style="color: #000000;">&nbsp;</span><span style="color: #008B8B;">String</span><span style="color: #000000;">)&nbsp;</span><span style="color: #0000FF;">As</span><span style="color: #000000;">&nbsp;ABParticle</span><br/><br/>
+<img src='images/15.png'/>&nbsp;&nbsp;<span style="color: #000000;"><a href='#abgroup_getparticles'><b>GetParticles</b></a>&nbsp;</span><span style="color: #0000FF;">As</span><span style="color: #000000;">&nbsp;java.util.</span><span style="color: #008B8B;">List</span><br/><br/>
+<img src='images/15.png'/>&nbsp;&nbsp;<span style="color: #000000;"><a href='#abgroup_initialize'><b>Initialize</b></a>&nbsp;(name&nbsp;</span><span style="color: #0000FF;">As</span><span style="color: #000000;">&nbsp;</span><span style="color: #008B8B;">String</span><span style="color: #000000;">,&nbsp;collideInternal&nbsp;</span><span style="color: #0000FF;">As</span><span style="color: #000000;">&nbsp;</span><span style="color: #008B8B;">Boolean</span><span style="color: #000000;">)</span><br/><br/>
+<img src='images/11.png'/>&nbsp;&nbsp;<span style="color: #000000;"><a href='#abgroup_name'><b>Name</b></a>&nbsp;</span><span style="color: #0000FF;">As</span><span style="color: #000000;">&nbsp;</span><span style="color: #008B8B;">String</span><br/><br/>
+<img src='images/15.png'/>&nbsp;&nbsp;<span style="color: #000000;"><a href='#abgroup_removecollidable'><b>RemoveCollidable</b></a>&nbsp;(group&nbsp;</span><span style="color: #0000FF;">As</span><span style="color: #000000;">&nbsp;ABGroup)</span><br/><br/>
+<img src='images/15.png'/>&nbsp;&nbsp;<span style="color: #000000;"><a href='#abgroup_removejoint'><b>RemoveJoint</b></a>&nbsp;(obj&nbsp;</span><span style="color: #0000FF;">As</span><span style="color: #000000;">&nbsp;ABJoint)</span><br/><br/>
+<img src='images/15.png'/>&nbsp;&nbsp;<span style="color: #000000;"><a href='#abgroup_removeparticle'><b>RemoveParticle</b></a>&nbsp;(obj&nbsp;</span><span style="color: #0000FF;">As</span><span style="color: #000000;">&nbsp;ABParticle)</span><br/><br/>
+
+<h4>Members description:</h4>
+<a name='abgroup_addarrayofgroupstocollisionlist'/>
+<h5><img src='images/15.png'/>
+<span style="color: #000000;">AddArrayOfGroupsToCollisionList&nbsp;(</span><span style="color: #0000FF;">array</span><span style="color: #000000;">()&nbsp;</span><span style="color: #0000FF;">As</span><span style="color: #000000;">&nbsp;ABGroup)</span></h5><a name='abgroup_addarrayofjoints'/>
+<h5><img src='images/15.png'/>
+<span style="color: #000000;">AddArrayOfJoints&nbsp;(</span><span style="color: #0000FF;">array</span><span style="color: #000000;">()&nbsp;</span><span style="color: #0000FF;">As</span><span style="color: #000000;">&nbsp;ABJoint)</span></h5>Add an array of joints to the group<a name='abgroup_addarrayofparticles'/>
+<h5><img src='images/15.png'/>
+<span style="color: #000000;">AddArrayOfParticles&nbsp;(</span><span style="color: #0000FF;">array</span><span style="color: #000000;">()&nbsp;</span><span style="color: #0000FF;">As</span><span style="color: #000000;">&nbsp;ABParticle)</span></h5>Add an array of particles to the group<a name='abgroup_addcollidable'/>
+<h5><img src='images/15.png'/>
+<span style="color: #000000;">AddCollidable&nbsp;(group&nbsp;</span><span style="color: #0000FF;">As</span><span style="color: #000000;">&nbsp;ABGroup)</span></h5>Adds an Group instance to be checked for collision against this one.<a name='abgroup_addjoint'/>
+<h5><img src='images/15.png'/>
+<span style="color: #000000;">AddJoint&nbsp;(obj&nbsp;</span><span style="color: #0000FF;">As</span><span style="color: #000000;">&nbsp;ABJoint)</span></h5>Add a joint to the group<a name='abgroup_addparticle'/>
+<h5><img src='images/15.png'/>
+<span style="color: #000000;">AddParticle&nbsp;(obj&nbsp;</span><span style="color: #0000FF;">As</span><span style="color: #000000;">&nbsp;ABParticle)</span></h5>Add a particle to the group<a name='abgroup_collideinternal'/>
+<h5><img src='images/19.png'/>
+<span style="color: #000000;">CollideInternal&nbsp;</span><span style="color: #0000FF;">As</span><span style="color: #000000;">&nbsp;</span><span style="color: #008B8B;">Boolean</span></h5>Determines if the members of this Group are checked for collision with one <br/> another.<a name='abgroup_collisionlist'/>
+<h5><img src='images/19.png'/>
+<span style="color: #000000;">CollisionList&nbsp;</span><span style="color: #0000FF;">As</span><span style="color: #000000;">&nbsp;java.util.</span><span style="color: #008B8B;">List</span><span style="color: #000000;">&nbsp;&nbsp;[read&nbsp;only]</span></h5>Returns the array of every Group assigned to collide with this Group instance.<a name='abgroup_getgrouphits'/>
+<h5><img src='images/15.png'/>
+<span style="color: #000000;">GetGroupHits&nbsp;</span><span style="color: #0000FF;">As</span><span style="color: #000000;">&nbsp;java.util.</span><span style="color: #008B8B;">List</span></h5><a name='abgroup_getjointbyname'/>
+<h5><img src='images/15.png'/>
+<span style="color: #000000;">GetJointByName&nbsp;(name&nbsp;</span><span style="color: #0000FF;">As</span><span style="color: #000000;">&nbsp;</span><span style="color: #008B8B;">String</span><span style="color: #000000;">)&nbsp;</span><span style="color: #0000FF;">As</span><span style="color: #000000;">&nbsp;ABJoint</span></h5>returns a joint from the group by name<a name='abgroup_getjoints'/>
+<h5><img src='images/15.png'/>
+<span style="color: #000000;">GetJoints&nbsp;</span><span style="color: #0000FF;">As</span><span style="color: #000000;">&nbsp;java.util.</span><span style="color: #008B8B;">List</span></h5>returns all joints in the group<a name='abgroup_getparticlebyname'/>
+<h5><img src='images/15.png'/>
+<span style="color: #000000;">GetParticleByName&nbsp;(name&nbsp;</span><span style="color: #0000FF;">As</span><span style="color: #000000;">&nbsp;</span><span style="color: #008B8B;">String</span><span style="color: #000000;">)&nbsp;</span><span style="color: #0000FF;">As</span><span style="color: #000000;">&nbsp;ABParticle</span></h5>Get a particle from the froup by name<a name='abgroup_getparticles'/>
+<h5><img src='images/15.png'/>
+<span style="color: #000000;">GetParticles&nbsp;</span><span style="color: #0000FF;">As</span><span style="color: #000000;">&nbsp;java.util.</span><span style="color: #008B8B;">List</span></h5>returns all particles in the group<a name='abgroup_initialize'/>
+<h5><img src='images/15.png'/>
+<span style="color: #000000;">Initialize&nbsp;(name&nbsp;</span><span style="color: #0000FF;">As</span><span style="color: #000000;">&nbsp;</span><span style="color: #008B8B;">String</span><span style="color: #000000;">,&nbsp;collideInternal&nbsp;</span><span style="color: #0000FF;">As</span><span style="color: #000000;">&nbsp;</span><span style="color: #008B8B;">Boolean</span><span style="color: #000000;">)</span></h5><a name='abgroup_name'/>
+<h5><img src='images/11.png'/>
+<span style="color: #000000;">Name&nbsp;</span><span style="color: #0000FF;">As</span><span style="color: #000000;">&nbsp;</span><span style="color: #008B8B;">String</span></h5><a name='abgroup_removecollidable'/>
+<h5><img src='images/15.png'/>
+<span style="color: #000000;">RemoveCollidable&nbsp;(group&nbsp;</span><span style="color: #0000FF;">As</span><span style="color: #000000;">&nbsp;ABGroup)</span></h5>Removes a Group from the collidable list of this Group.<a name='abgroup_removejoint'/>
+<h5><img src='images/15.png'/>
+<span style="color: #000000;">RemoveJoint&nbsp;(obj&nbsp;</span><span style="color: #0000FF;">As</span><span style="color: #000000;">&nbsp;ABJoint)</span></h5>Remove a joint from the group<a name='abgroup_removeparticle'/>
+<h5><img src='images/15.png'/>
+<span style="color: #000000;">RemoveParticle&nbsp;(obj&nbsp;</span><span style="color: #0000FF;">As</span><span style="color: #000000;">&nbsp;ABParticle)</span></h5>remove a particle from the group<hr/>
+<h3><u><a name='abjoint'>ABJoint</a></u></h3>
+</h5>A joint is connection between two particles.
+<br/>
+
+<h4>Events:</h4>
+None
+<h4>Members:</h4><br/>
+<img src='images/19.png'/>&nbsp;&nbsp;<span style="color: #000000;"><a href='#abjoint_angle'><b>Angle</b></a>&nbsp;</span><span style="color: #0000FF;">As</span><span style="color: #000000;">&nbsp;</span><span style="color: #008B8B;">Double</span><span style="color: #000000;">&nbsp;&nbsp;[read&nbsp;only]</span><br/><br/>
+<img src='images/19.png'/>&nbsp;&nbsp;<span style="color: #000000;"><a href='#abjoint_center'><b>Center</b></a>&nbsp;</span><span style="color: #0000FF;">As</span><span style="color: #000000;">&nbsp;ABVector&nbsp;&nbsp;[read&nbsp;only]</span><br/><br/>
+<img src='images/19.png'/>&nbsp;&nbsp;<span style="color: #000000;"><a href='#abjoint_currlength'><b>CurrLength</b></a>&nbsp;</span><span style="color: #0000FF;">As</span><span style="color: #000000;">&nbsp;</span><span style="color: #008B8B;">Double</span><span style="color: #000000;">&nbsp;&nbsp;[read&nbsp;only]</span><br/><br/>
+<img src='images/19.png'/>&nbsp;&nbsp;<span style="color: #000000;"><a href='#abjoint_fixed'><b>Fixed</b></a>&nbsp;</span><span style="color: #0000FF;">As</span><span style="color: #000000;">&nbsp;</span><span style="color: #008B8B;">Boolean</span><span style="color: #000000;">&nbsp;&nbsp;[read&nbsp;only]</span><br/><br/>
+<img src='images/15.png'/>&nbsp;&nbsp;<span style="color: #000000;"><a href='#abjoint_initialize'><b>Initialize</b></a>&nbsp;(part1&nbsp;</span><span style="color: #0000FF;">As</span><span style="color: #000000;">&nbsp;ABParticle,&nbsp;part2&nbsp;</span><span style="color: #0000FF;">As</span><span style="color: #000000;">&nbsp;ABParticle,&nbsp;name&nbsp;</span><span style="color: #0000FF;">As</span><span style="color: #000000;">&nbsp;</span><span style="color: #008B8B;">String</span><span style="color: #000000;">,&nbsp;stiffness&nbsp;</span><span style="color: #0000FF;">As</span><span style="color: #000000;">&nbsp;</span><span style="color: #008B8B;">Double</span><span style="color: #000000;">)</span><br/><br/>
+<img src='images/15.png'/>&nbsp;&nbsp;<span style="color: #000000;"><a href='#abjoint_isconnectedto'><b>isConnectedTo</b></a>&nbsp;(p&nbsp;</span><span style="color: #0000FF;">As</span><span style="color: #000000;">&nbsp;ABParticle)&nbsp;</span><span style="color: #0000FF;">As</span><span style="color: #000000;">&nbsp;</span><span style="color: #008B8B;">Boolean</span><br/><br/>
+<img src='images/11.png'/>&nbsp;&nbsp;<span style="color: #000000;"><a href='#abjoint_name'><b>Name</b></a>&nbsp;</span><span style="color: #0000FF;">As</span><span style="color: #000000;">&nbsp;</span><span style="color: #008B8B;">String</span><br/><br/>
+<img src='images/11.png'/>&nbsp;&nbsp;<span style="color: #000000;"><a href='#abjoint_part1'><b>Part1</b></a>&nbsp;</span><span style="color: #0000FF;">As</span><span style="color: #000000;">&nbsp;ABParticle</span><br/><br/>
+<img src='images/11.png'/>&nbsp;&nbsp;<span style="color: #000000;"><a href='#abjoint_part2'><b>Part2</b></a>&nbsp;</span><span style="color: #0000FF;">As</span><span style="color: #000000;">&nbsp;ABParticle</span><br/><br/>
+<img src='images/19.png'/>&nbsp;&nbsp;<span style="color: #000000;"><a href='#abjoint_radian'><b>Radian</b></a>&nbsp;</span><span style="color: #0000FF;">As</span><span style="color: #000000;">&nbsp;</span><span style="color: #008B8B;">Double</span><span style="color: #000000;">&nbsp;&nbsp;[read&nbsp;only]</span><br/><br/>
+<img src='images/19.png'/>&nbsp;&nbsp;<span style="color: #000000;"><a href='#abjoint_restlength'><b>RestLength</b></a>&nbsp;</span><span style="color: #0000FF;">As</span><span style="color: #000000;">&nbsp;</span><span style="color: #008B8B;">Double</span><br/><br/>
+<img src='images/19.png'/>&nbsp;&nbsp;<span style="color: #000000;"><a href='#abjoint_stiffness'><b>Stiffness</b></a>&nbsp;</span><span style="color: #0000FF;">As</span><span style="color: #000000;">&nbsp;</span><span style="color: #008B8B;">Double</span><br/><br/>
+
+<h4>Members description:</h4>
+<a name='abjoint_angle'/>
+<h5><img src='images/19.png'/>
+<span style="color: #000000;">Angle&nbsp;</span><span style="color: #0000FF;">As</span><span style="color: #000000;">&nbsp;</span><span style="color: #008B8B;">Double</span><span style="color: #000000;">&nbsp;&nbsp;[read&nbsp;only]</span></h5><a name='abjoint_center'/>
+<h5><img src='images/19.png'/>
+<span style="color: #000000;">Center&nbsp;</span><span style="color: #0000FF;">As</span><span style="color: #000000;">&nbsp;ABVector&nbsp;&nbsp;[read&nbsp;only]</span></h5><a name='abjoint_currlength'/>
+<h5><img src='images/19.png'/>
+<span style="color: #000000;">CurrLength&nbsp;</span><span style="color: #0000FF;">As</span><span style="color: #000000;">&nbsp;</span><span style="color: #008B8B;">Double</span><span style="color: #000000;">&nbsp;&nbsp;[read&nbsp;only]</span></h5><a name='abjoint_fixed'/>
+<h5><img src='images/19.png'/>
+<span style="color: #000000;">Fixed&nbsp;</span><span style="color: #0000FF;">As</span><span style="color: #000000;">&nbsp;</span><span style="color: #008B8B;">Boolean</span><span style="color: #000000;">&nbsp;&nbsp;[read&nbsp;only]</span></h5><a name='abjoint_initialize'/>
+<h5><img src='images/15.png'/>
+<span style="color: #000000;">Initialize&nbsp;(part1&nbsp;</span><span style="color: #0000FF;">As</span><span style="color: #000000;">&nbsp;ABParticle,&nbsp;part2&nbsp;</span><span style="color: #0000FF;">As</span><span style="color: #000000;">&nbsp;ABParticle,&nbsp;name&nbsp;</span><span style="color: #0000FF;">As</span><span style="color: #000000;">&nbsp;</span><span style="color: #008B8B;">String</span><span style="color: #000000;">,&nbsp;stiffness&nbsp;</span><span style="color: #0000FF;">As</span><span style="color: #000000;">&nbsp;</span><span style="color: #008B8B;">Double</span><span style="color: #000000;">)</span></h5><a name='abjoint_isconnectedto'/>
+<h5><img src='images/15.png'/>
+<span style="color: #000000;">isConnectedTo&nbsp;(p&nbsp;</span><span style="color: #0000FF;">As</span><span style="color: #000000;">&nbsp;ABParticle)&nbsp;</span><span style="color: #0000FF;">As</span><span style="color: #000000;">&nbsp;</span><span style="color: #008B8B;">Boolean</span></h5><a name='abjoint_name'/>
+<h5><img src='images/11.png'/>
+<span style="color: #000000;">Name&nbsp;</span><span style="color: #0000FF;">As</span><span style="color: #000000;">&nbsp;</span><span style="color: #008B8B;">String</span></h5><a name='abjoint_part1'/>
+<h5><img src='images/11.png'/>
+<span style="color: #000000;">Part1&nbsp;</span><span style="color: #0000FF;">As</span><span style="color: #000000;">&nbsp;ABParticle</span></h5><a name='abjoint_part2'/>
+<h5><img src='images/11.png'/>
+<span style="color: #000000;">Part2&nbsp;</span><span style="color: #0000FF;">As</span><span style="color: #000000;">&nbsp;ABParticle</span></h5><a name='abjoint_radian'/>
+<h5><img src='images/19.png'/>
+<span style="color: #000000;">Radian&nbsp;</span><span style="color: #0000FF;">As</span><span style="color: #000000;">&nbsp;</span><span style="color: #008B8B;">Double</span><span style="color: #000000;">&nbsp;&nbsp;[read&nbsp;only]</span></h5><a name='abjoint_restlength'/>
+<h5><img src='images/19.png'/>
+<span style="color: #000000;">RestLength&nbsp;</span><span style="color: #0000FF;">As</span><span style="color: #000000;">&nbsp;</span><span style="color: #008B8B;">Double</span></h5><a name='abjoint_stiffness'/>
+<h5><img src='images/19.png'/>
+<span style="color: #000000;">Stiffness&nbsp;</span><span style="color: #0000FF;">As</span><span style="color: #000000;">&nbsp;</span><span style="color: #008B8B;">Double</span></h5>The stifness of the joint. 0 = very loose, 1 = very stiff<hr/>
+<h3><u><a name='abparticle'>ABParticle</a></u></h3>
+</h5>A particle is the basic element of what things are made of. They are put<br/> together in a group and are joint with each other with joints.
+<br/>
+
+<h4>Events:</h4>
+None
+<h4>Members:</h4><br/>
+<img src='images/15.png'/>&nbsp;&nbsp;<span style="color: #000000;"><a href='#abparticle_addanimation'><b>addAnimation</b></a>&nbsp;(bm&nbsp;</span><span style="color: #0000FF;">As</span><span style="color: #000000;">&nbsp;android.graphics.</span><span style="color: #008B8B;">Bitmap</span><span style="color: #000000;">,&nbsp;State&nbsp;</span><span style="color: #0000FF;">As</span><span style="color: #000000;">&nbsp;</span><span style="color: #008B8B;">Int</span><span style="color: #000000;">,&nbsp;Direction&nbsp;</span><span style="color: #0000FF;">As</span><span style="color: #000000;">&nbsp;</span><span style="color: #008B8B;">Int</span><span style="color: #000000;">,&nbsp;Action&nbsp;</span><span style="color: #0000FF;">As</span><span style="color: #000000;">&nbsp;</span><span style="color: #008B8B;">Int</span><span style="color: #000000;">,&nbsp;NumOfFrames&nbsp;</span><span style="color: #0000FF;">As</span><span style="color: #000000;">&nbsp;</span><span style="color: #008B8B;">Int</span><span style="color: #000000;">,&nbsp;Delay&nbsp;</span><span style="color: #0000FF;">As</span><span style="color: #000000;">&nbsp;</span><span style="color: #008B8B;">Int</span><span style="color: #000000;">,&nbsp;AnimationBehaviour&nbsp;</span><span style="color: #0000FF;">As</span><span style="color: #000000;">&nbsp;</span><span style="color: #008B8B;">Int</span><span style="color: #000000;">)</span><br/><br/>
+<img src='images/15.png'/>&nbsp;&nbsp;<span style="color: #000000;"><a href='#abparticle_addforce'><b>AddForce</b></a>&nbsp;(force&nbsp;</span><span style="color: #0000FF;">As</span><span style="color: #000000;">&nbsp;ABForce)</span><br/><br/>
+<img src='images/19.png'/>&nbsp;&nbsp;<span style="color: #000000;"><a href='#abparticle_angle'><b>Angle</b></a>&nbsp;</span><span style="color: #0000FF;">As</span><span style="color: #000000;">&nbsp;</span><span style="color: #008B8B;">Double</span><br/><br/>
+<img src='images/11.png'/>&nbsp;&nbsp;<span style="color: #000000;"><a href='#abparticle_anim_action_a'><b>ANIM_ACTION_A</b></a>&nbsp;</span><span style="color: #0000FF;">As</span><span style="color: #000000;">&nbsp;</span><span style="color: #008B8B;">Int</span><br/><br/>
+<img src='images/11.png'/>&nbsp;&nbsp;<span style="color: #000000;"><a href='#abparticle_anim_action_b'><b>ANIM_ACTION_B</b></a>&nbsp;</span><span style="color: #0000FF;">As</span><span style="color: #000000;">&nbsp;</span><span style="color: #008B8B;">Int</span><br/><br/>
+<img src='images/11.png'/>&nbsp;&nbsp;<span style="color: #000000;"><a href='#abparticle_anim_action_none'><b>ANIM_ACTION_NONE</b></a>&nbsp;</span><span style="color: #0000FF;">As</span><span style="color: #000000;">&nbsp;</span><span style="color: #008B8B;">Int</span><br/><br/>
+<img src='images/11.png'/>&nbsp;&nbsp;<span style="color: #000000;"><a href='#abparticle_anim_action_x'><b>ANIM_ACTION_X</b></a>&nbsp;</span><span style="color: #0000FF;">As</span><span style="color: #000000;">&nbsp;</span><span style="color: #008B8B;">Int</span><br/><br/>
+<img src='images/11.png'/>&nbsp;&nbsp;<span style="color: #000000;"><a href='#abparticle_anim_action_y'><b>ANIM_ACTION_Y</b></a>&nbsp;</span><span style="color: #0000FF;">As</span><span style="color: #000000;">&nbsp;</span><span style="color: #008B8B;">Int</span><br/><br/>
+<img src='images/11.png'/>&nbsp;&nbsp;<span style="color: #000000;"><a href='#abparticle_anim_behaviour_continious'><b>ANIM_BEHAVIOUR_CONTINIOUS</b></a>&nbsp;</span><span style="color: #0000FF;">As</span><span style="color: #000000;">&nbsp;</span><span style="color: #008B8B;">Int</span><br/><br/>
+<img src='images/11.png'/>&nbsp;&nbsp;<span style="color: #000000;"><a href='#abparticle_anim_behaviour_once'><b>ANIM_BEHAVIOUR_ONCE</b></a>&nbsp;</span><span style="color: #0000FF;">As</span><span style="color: #000000;">&nbsp;</span><span style="color: #008B8B;">Int</span><br/><br/>
+<img src='images/11.png'/>&nbsp;&nbsp;<span style="color: #000000;"><a href='#abparticle_anim_direction_down'><b>ANIM_DIRECTION_DOWN</b></a>&nbsp;</span><span style="color: #0000FF;">As</span><span style="color: #000000;">&nbsp;</span><span style="color: #008B8B;">Int</span><br/><br/>
+<img src='images/11.png'/>&nbsp;&nbsp;<span style="color: #000000;"><a href='#abparticle_anim_direction_left'><b>ANIM_DIRECTION_LEFT</b></a>&nbsp;</span><span style="color: #0000FF;">As</span><span style="color: #000000;">&nbsp;</span><span style="color: #008B8B;">Int</span><br/><br/>
+<img src='images/11.png'/>&nbsp;&nbsp;<span style="color: #000000;"><a href='#abparticle_anim_direction_right'><b>ANIM_DIRECTION_RIGHT</b></a>&nbsp;</span><span style="color: #0000FF;">As</span><span style="color: #000000;">&nbsp;</span><span style="color: #008B8B;">Int</span><br/><br/>
+<img src='images/11.png'/>&nbsp;&nbsp;<span style="color: #000000;"><a href='#abparticle_anim_direction_up'><b>ANIM_DIRECTION_UP</b></a>&nbsp;</span><span style="color: #0000FF;">As</span><span style="color: #000000;">&nbsp;</span><span style="color: #008B8B;">Int</span><br/><br/>
+<img src='images/11.png'/>&nbsp;&nbsp;<span style="color: #000000;"><a href='#abparticle_anim_state_move'><b>ANIM_STATE_MOVE</b></a>&nbsp;</span><span style="color: #0000FF;">As</span><span style="color: #000000;">&nbsp;</span><span style="color: #008B8B;">Int</span><br/><br/>
+<img src='images/11.png'/>&nbsp;&nbsp;<span style="color: #000000;"><a href='#abparticle_anim_state_still'><b>ANIM_STATE_STILL</b></a>&nbsp;</span><span style="color: #0000FF;">As</span><span style="color: #000000;">&nbsp;</span><span style="color: #008B8B;">Int</span><br/><br/>
+<img src='images/11.png'/>&nbsp;&nbsp;<span style="color: #000000;"><a href='#abparticle_animaction'><b>AnimAction</b></a>&nbsp;</span><span style="color: #0000FF;">As</span><span style="color: #000000;">&nbsp;</span><span style="color: #008B8B;">Int</span><br/><br/>
+<img src='images/11.png'/>&nbsp;&nbsp;<span style="color: #000000;"><a href='#abparticle_animdirection'><b>AnimDirection</b></a>&nbsp;</span><span style="color: #0000FF;">As</span><span style="color: #000000;">&nbsp;</span><span style="color: #008B8B;">Int</span><br/><br/>
+<img src='images/11.png'/>&nbsp;&nbsp;<span style="color: #000000;"><a href='#abparticle_animstate'><b>AnimState</b></a>&nbsp;</span><span style="color: #0000FF;">As</span><span style="color: #000000;">&nbsp;</span><span style="color: #008B8B;">Int</span><br/><br/>
+<img src='images/19.png'/>&nbsp;&nbsp;<span style="color: #000000;"><a href='#abparticle_autorotate'><b>AutoRotate</b></a>&nbsp;</span><span style="color: #0000FF;">As</span><span style="color: #000000;">&nbsp;</span><span style="color: #008B8B;">Boolean</span><br/><br/>
+<img src='images/19.png'/>&nbsp;&nbsp;<span style="color: #000000;"><a href='#abparticle_centerx'><b>CenterX</b></a>&nbsp;</span><span style="color: #0000FF;">As</span><span style="color: #000000;">&nbsp;</span><span style="color: #008B8B;">Double</span><br/><br/>
+<img src='images/19.png'/>&nbsp;&nbsp;<span style="color: #000000;"><a href='#abparticle_centery'><b>CenterY</b></a>&nbsp;</span><span style="color: #0000FF;">As</span><span style="color: #000000;">&nbsp;</span><span style="color: #008B8B;">Double</span><br/><br/>
+<img src='images/11.png'/>&nbsp;&nbsp;<span style="color: #000000;"><a href='#abparticle_circle'><b>CIRCLE</b></a>&nbsp;</span><span style="color: #0000FF;">As</span><span style="color: #000000;">&nbsp;</span><span style="color: #008B8B;">Int</span><br/><br/>
+<img src='images/19.png'/>&nbsp;&nbsp;<span style="color: #000000;"><a href='#abparticle_elasticity'><b>Elasticity</b></a>&nbsp;</span><span style="color: #0000FF;">As</span><span style="color: #000000;">&nbsp;</span><span style="color: #008B8B;">Double</span><br/><br/>
+<img src='images/19.png'/>&nbsp;&nbsp;<span style="color: #000000;"><a href='#abparticle_friction'><b>Friction</b></a>&nbsp;</span><span style="color: #0000FF;">As</span><span style="color: #000000;">&nbsp;</span><span style="color: #008B8B;">Double</span><br/><br/>
+<img src='images/15.png'/>&nbsp;&nbsp;<span style="color: #000000;"><a href='#abparticle_getforcebyname'><b>GetForceByName</b></a>&nbsp;(name&nbsp;</span><span style="color: #0000FF;">As</span><span style="color: #000000;">&nbsp;</span><span style="color: #008B8B;">String</span><span style="color: #000000;">)&nbsp;</span><span style="color: #0000FF;">As</span><span style="color: #000000;">&nbsp;ABForce</span><br/><br/>
+<img src='images/15.png'/>&nbsp;&nbsp;<span style="color: #000000;"><a href='#abparticle_getforces'><b>GetForces</b></a>&nbsp;</span><span style="color: #0000FF;">As</span><span style="color: #000000;">&nbsp;java.util.</span><span style="color: #008B8B;">List</span><br/><br/>
+<img src='images/15.png'/>&nbsp;&nbsp;<span style="color: #000000;"><a href='#abparticle_gethits'><b>GetHits</b></a>&nbsp;</span><span style="color: #0000FF;">As</span><span style="color: #000000;">&nbsp;java.util.</span><span style="color: #008B8B;">List</span><br/><br/>
+<img src='images/15.png'/>&nbsp;&nbsp;<span style="color: #000000;"><a href='#abparticle_givecurrentanimbitmap'><b>GiveCurrentAnimBitmap</b></a>&nbsp;</span><span style="color: #0000FF;">As</span><span style="color: #000000;">&nbsp;android.graphics.</span><span style="color: #008B8B;">Bitmap</span><br/><br/>
+<img src='images/19.png'/>&nbsp;&nbsp;<span style="color: #000000;"><a href='#abparticle_height'><b>Height</b></a>&nbsp;</span><span style="color: #0000FF;">As</span><span style="color: #000000;">&nbsp;</span><span style="color: #008B8B;">Double</span><br/><br/>
+<img src='images/15.png'/>&nbsp;&nbsp;<span style="color: #000000;"><a href='#abparticle_initialize'><b>Initialize</b></a>&nbsp;(</span><span style="color: #0000FF;">type</span><span style="color: #000000;">&nbsp;</span><span style="color: #0000FF;">As</span><span style="color: #000000;">&nbsp;</span><span style="color: #008B8B;">Int</span><span style="color: #000000;">,&nbsp;centerX&nbsp;</span><span style="color: #0000FF;">As</span><span style="color: #000000;">&nbsp;</span><span style="color: #008B8B;">Double</span><span style="color: #000000;">,&nbsp;centerY&nbsp;</span><span style="color: #0000FF;">As</span><span style="color: #000000;">&nbsp;</span><span style="color: #008B8B;">Double</span><span style="color: #000000;">,&nbsp;width&nbsp;</span><span style="color: #0000FF;">As</span><span style="color: #000000;">&nbsp;</span><span style="color: #008B8B;">Double</span><span style="color: #000000;">,&nbsp;height&nbsp;</span><span style="color: #0000FF;">As</span><span style="color: #000000;">&nbsp;</span><span style="color: #008B8B;">Double</span><span style="color: #000000;">,&nbsp;radius&nbsp;</span><span style="color: #0000FF;">As</span><span style="color: #000000;">&nbsp;</span><span style="color: #008B8B;">Double</span><span style="color: #000000;">,&nbsp;collidable&nbsp;</span><span style="color: #0000FF;">As</span><span style="color: #000000;">&nbsp;</span><span style="color: #008B8B;">Boolean</span><span style="color: #000000;">,&nbsp;seeCollisionAsHit&nbsp;</span><span style="color: #0000FF;">As</span><span style="color: #000000;">&nbsp;</span><span style="color: #008B8B;">Boolean</span><span style="color: #000000;">,&nbsp;rotation&nbsp;</span><span style="color: #0000FF;">As</span><span style="color: #000000;">&nbsp;</span><span style="color: #008B8B;">Double</span><span style="color: #000000;">,&nbsp;name&nbsp;</span><span style="color: #0000FF;">As</span><span style="color: #000000;">&nbsp;</span><span style="color: #008B8B;">String</span><span style="color: #000000;">)</span><br/><br/>
+<img src='images/19.png'/>&nbsp;&nbsp;<span style="color: #000000;"><a href='#abparticle_invmass'><b>InvMass</b></a>&nbsp;</span><span style="color: #0000FF;">As</span><span style="color: #000000;">&nbsp;</span><span style="color: #008B8B;">Double</span><span style="color: #000000;">&nbsp;&nbsp;[read&nbsp;only]</span><br/><br/>
+<img src='images/19.png'/>&nbsp;&nbsp;<span style="color: #000000;"><a href='#abparticle_isanimated'><b>isAnimated</b></a>&nbsp;</span><span style="color: #0000FF;">As</span><span style="color: #000000;">&nbsp;</span><span style="color: #008B8B;">Boolean</span><span style="color: #000000;">&nbsp;&nbsp;[read&nbsp;only]</span><br/><br/>
+<img src='images/19.png'/>&nbsp;&nbsp;<span style="color: #000000;"><a href='#abparticle_isfixed'><b>isFixed</b></a>&nbsp;</span><span style="color: #0000FF;">As</span><span style="color: #000000;">&nbsp;</span><span style="color: #008B8B;">Boolean</span><br/><br/>
+<img src='images/19.png'/>&nbsp;&nbsp;<span style="color: #000000;"><a href='#abparticle_issolid'><b>isSolid</b></a>&nbsp;</span><span style="color: #0000FF;">As</span><span style="color: #000000;">&nbsp;</span><span style="color: #008B8B;">Boolean</span><br/><br/>
+<img src='images/19.png'/>&nbsp;&nbsp;<span style="color: #000000;"><a href='#abparticle_isvisible'><b>isVisible</b></a>&nbsp;</span><span style="color: #0000FF;">As</span><span style="color: #000000;">&nbsp;</span><span style="color: #008B8B;">Boolean</span><br/><br/>
+<img src='images/19.png'/>&nbsp;&nbsp;<span style="color: #000000;"><a href='#abparticle_mass'><b>Mass</b></a>&nbsp;</span><span style="color: #0000FF;">As</span><span style="color: #000000;">&nbsp;</span><span style="color: #008B8B;">Double</span><br/><br/>
+<img src='images/11.png'/>&nbsp;&nbsp;<span style="color: #000000;"><a href='#abparticle_name'><b>Name</b></a>&nbsp;</span><span style="color: #0000FF;">As</span><span style="color: #000000;">&nbsp;</span><span style="color: #008B8B;">String</span><br/><br/>
+<img src='images/15.png'/>&nbsp;&nbsp;<span style="color: #000000;"><a href='#abparticle_pauseanimation'><b>PauseAnimation</b></a></span><br/><br/>
+<img src='images/19.png'/>&nbsp;&nbsp;<span style="color: #000000;"><a href='#abparticle_radian'><b>Radian</b></a>&nbsp;</span><span style="color: #0000FF;">As</span><span style="color: #000000;">&nbsp;</span><span style="color: #008B8B;">Double</span><br/><br/>
+<img src='images/19.png'/>&nbsp;&nbsp;<span style="color: #000000;"><a href='#abparticle_radius'><b>Radius</b></a>&nbsp;</span><span style="color: #0000FF;">As</span><span style="color: #000000;">&nbsp;</span><span style="color: #008B8B;">Double</span><br/><br/>
+<img src='images/11.png'/>&nbsp;&nbsp;<span style="color: #000000;"><a href='#abparticle_rectangle'><b>RECTANGLE</b></a>&nbsp;</span><span style="color: #0000FF;">As</span><span style="color: #000000;">&nbsp;</span><span style="color: #008B8B;">Int</span><br/><br/>
+<img src='images/15.png'/>&nbsp;&nbsp;<span style="color: #000000;"><a href='#abparticle_removeforce'><b>RemoveForce</b></a>&nbsp;(force&nbsp;</span><span style="color: #0000FF;">As</span><span style="color: #000000;">&nbsp;ABForce)</span><br/><br/>
+<img src='images/15.png'/>&nbsp;&nbsp;<span style="color: #000000;"><a href='#abparticle_resumeanimation'><b>ResumeAnimation</b></a></span><br/><br/>
+<img src='images/15.png'/>&nbsp;&nbsp;<span style="color: #000000;"><a href='#abparticle_startanimation'><b>StartAnimation</b></a>&nbsp;(State&nbsp;</span><span style="color: #0000FF;">As</span><span style="color: #000000;">&nbsp;</span><span style="color: #008B8B;">Int</span><span style="color: #000000;">,&nbsp;Direction&nbsp;</span><span style="color: #0000FF;">As</span><span style="color: #000000;">&nbsp;</span><span style="color: #008B8B;">Int</span><span style="color: #000000;">,&nbsp;Action&nbsp;</span><span style="color: #0000FF;">As</span><span style="color: #000000;">&nbsp;</span><span style="color: #008B8B;">Int</span><span style="color: #000000;">)</span><br/><br/>
+<img src='images/15.png'/>&nbsp;&nbsp;<span style="color: #000000;"><a href='#abparticle_stopanimation'><b>StopAnimation</b></a></span><br/><br/>
+<img src='images/19.png'/>&nbsp;&nbsp;<span style="color: #000000;"><a href='#abparticle_traction'><b>Traction</b></a>&nbsp;</span><span style="color: #0000FF;">As</span><span style="color: #000000;">&nbsp;</span><span style="color: #008B8B;">Double</span><br/><br/>
+<img src='images/11.png'/>&nbsp;&nbsp;<span style="color: #0000FF;"><a href='#abparticle_type'><b>Type</b></a></span><span style="color: #000000;">&nbsp;</span><span style="color: #0000FF;">As</span><span style="color: #000000;">&nbsp;</span><span style="color: #008B8B;">Int</span><br/><br/>
+<img src='images/19.png'/>&nbsp;&nbsp;<span style="color: #000000;"><a href='#abparticle_velocity'><b>Velocity</b></a>&nbsp;</span><span style="color: #0000FF;">As</span><span style="color: #000000;">&nbsp;ABVector</span><br/><br/>
+<img src='images/19.png'/>&nbsp;&nbsp;<span style="color: #000000;"><a href='#abparticle_width'><b>Width</b></a>&nbsp;</span><span style="color: #0000FF;">As</span><span style="color: #000000;">&nbsp;</span><span style="color: #008B8B;">Double</span><br/><br/>
+
+<h4>Members description:</h4>
+<a name='abparticle_addanimation'/>
+<h5><img src='images/15.png'/>
+<span style="color: #000000;">addAnimation&nbsp;(bm&nbsp;</span><span style="color: #0000FF;">As</span><span style="color: #000000;">&nbsp;android.graphics.</span><span style="color: #008B8B;">Bitmap</span><span style="color: #000000;">,&nbsp;State&nbsp;</span><span style="color: #0000FF;">As</span><span style="color: #000000;">&nbsp;</span><span style="color: #008B8B;">Int</span><span style="color: #000000;">,&nbsp;Direction&nbsp;</span><span style="color: #0000FF;">As</span><span style="color: #000000;">&nbsp;</span><span style="color: #008B8B;">Int</span><span style="color: #000000;">,&nbsp;Action&nbsp;</span><span style="color: #0000FF;">As</span><span style="color: #000000;">&nbsp;</span><span style="color: #008B8B;">Int</span><span style="color: #000000;">,&nbsp;NumOfFrames&nbsp;</span><span style="color: #0000FF;">As</span><span style="color: #000000;">&nbsp;</span><span style="color: #008B8B;">Int</span><span style="color: #000000;">,&nbsp;Delay&nbsp;</span><span style="color: #0000FF;">As</span><span style="color: #000000;">&nbsp;</span><span style="color: #008B8B;">Int</span><span style="color: #000000;">,&nbsp;AnimationBehaviour&nbsp;</span><span style="color: #0000FF;">As</span><span style="color: #000000;">&nbsp;</span><span style="color: #008B8B;">Int</span><span style="color: #000000;">)</span></h5>Add an animation. This is a bitmap containing all the frames of an animation. <br/> All frames need to be of the same width.<br/> <br/> State:<br/> STATE_STILL<br/> STATE_MOVE<br/> <br/> Direction:<br/> DIRECTION_UP<br/> DIRECTION_DOWN<br/> DIRECTION_LEFT<br/> DIRECTION_RIGHT<br/> <br/> Action:	<br/> ACTION_Y<br/> ACTION_B<br/> ACTION_X<br/> ACTION_A;<br/> ACTION_NONE;<br/> <br/> AnimationBehaviour:<br/> ANIMATIONBEHAVIOUR_ONCE<br/> ANIMATIONBEHAVIOUR_CONTINIOUS<a name='abparticle_addforce'/>
+<h5><img src='images/15.png'/>
+<span style="color: #000000;">AddForce&nbsp;(force&nbsp;</span><span style="color: #0000FF;">As</span><span style="color: #000000;">&nbsp;ABForce)</span></h5><a name='abparticle_angle'/>
+<h5><img src='images/19.png'/>
+<span style="color: #000000;">Angle&nbsp;</span><span style="color: #0000FF;">As</span><span style="color: #000000;">&nbsp;</span><span style="color: #008B8B;">Double</span></h5><a name='abparticle_anim_action_a'/>
+<h5><img src='images/11.png'/>
+<span style="color: #000000;">ANIM_ACTION_A&nbsp;</span><span style="color: #0000FF;">As</span><span style="color: #000000;">&nbsp;</span><span style="color: #008B8B;">Int</span></h5><a name='abparticle_anim_action_b'/>
+<h5><img src='images/11.png'/>
+<span style="color: #000000;">ANIM_ACTION_B&nbsp;</span><span style="color: #0000FF;">As</span><span style="color: #000000;">&nbsp;</span><span style="color: #008B8B;">Int</span></h5><a name='abparticle_anim_action_none'/>
+<h5><img src='images/11.png'/>
+<span style="color: #000000;">ANIM_ACTION_NONE&nbsp;</span><span style="color: #0000FF;">As</span><span style="color: #000000;">&nbsp;</span><span style="color: #008B8B;">Int</span></h5><a name='abparticle_anim_action_x'/>
+<h5><img src='images/11.png'/>
+<span style="color: #000000;">ANIM_ACTION_X&nbsp;</span><span style="color: #0000FF;">As</span><span style="color: #000000;">&nbsp;</span><span style="color: #008B8B;">Int</span></h5><a name='abparticle_anim_action_y'/>
+<h5><img src='images/11.png'/>
+<span style="color: #000000;">ANIM_ACTION_Y&nbsp;</span><span style="color: #0000FF;">As</span><span style="color: #000000;">&nbsp;</span><span style="color: #008B8B;">Int</span></h5><a name='abparticle_anim_behaviour_continious'/>
+<h5><img src='images/11.png'/>
+<span style="color: #000000;">ANIM_BEHAVIOUR_CONTINIOUS&nbsp;</span><span style="color: #0000FF;">As</span><span style="color: #000000;">&nbsp;</span><span style="color: #008B8B;">Int</span></h5><a name='abparticle_anim_behaviour_once'/>
+<h5><img src='images/11.png'/>
+<span style="color: #000000;">ANIM_BEHAVIOUR_ONCE&nbsp;</span><span style="color: #0000FF;">As</span><span style="color: #000000;">&nbsp;</span><span style="color: #008B8B;">Int</span></h5><a name='abparticle_anim_direction_down'/>
+<h5><img src='images/11.png'/>
+<span style="color: #000000;">ANIM_DIRECTION_DOWN&nbsp;</span><span style="color: #0000FF;">As</span><span style="color: #000000;">&nbsp;</span><span style="color: #008B8B;">Int</span></h5><a name='abparticle_anim_direction_left'/>
+<h5><img src='images/11.png'/>
+<span style="color: #000000;">ANIM_DIRECTION_LEFT&nbsp;</span><span style="color: #0000FF;">As</span><span style="color: #000000;">&nbsp;</span><span style="color: #008B8B;">Int</span></h5><a name='abparticle_anim_direction_right'/>
+<h5><img src='images/11.png'/>
+<span style="color: #000000;">ANIM_DIRECTION_RIGHT&nbsp;</span><span style="color: #0000FF;">As</span><span style="color: #000000;">&nbsp;</span><span style="color: #008B8B;">Int</span></h5><a name='abparticle_anim_direction_up'/>
+<h5><img src='images/11.png'/>
+<span style="color: #000000;">ANIM_DIRECTION_UP&nbsp;</span><span style="color: #0000FF;">As</span><span style="color: #000000;">&nbsp;</span><span style="color: #008B8B;">Int</span></h5><a name='abparticle_anim_state_move'/>
+<h5><img src='images/11.png'/>
+<span style="color: #000000;">ANIM_STATE_MOVE&nbsp;</span><span style="color: #0000FF;">As</span><span style="color: #000000;">&nbsp;</span><span style="color: #008B8B;">Int</span></h5><a name='abparticle_anim_state_still'/>
+<h5><img src='images/11.png'/>
+<span style="color: #000000;">ANIM_STATE_STILL&nbsp;</span><span style="color: #0000FF;">As</span><span style="color: #000000;">&nbsp;</span><span style="color: #008B8B;">Int</span></h5><a name='abparticle_animaction'/>
+<h5><img src='images/11.png'/>
+<span style="color: #000000;">AnimAction&nbsp;</span><span style="color: #0000FF;">As</span><span style="color: #000000;">&nbsp;</span><span style="color: #008B8B;">Int</span></h5><a name='abparticle_animdirection'/>
+<h5><img src='images/11.png'/>
+<span style="color: #000000;">AnimDirection&nbsp;</span><span style="color: #0000FF;">As</span><span style="color: #000000;">&nbsp;</span><span style="color: #008B8B;">Int</span></h5><a name='abparticle_animstate'/>
+<h5><img src='images/11.png'/>
+<span style="color: #000000;">AnimState&nbsp;</span><span style="color: #0000FF;">As</span><span style="color: #000000;">&nbsp;</span><span style="color: #008B8B;">Int</span></h5><a name='abparticle_autorotate'/>
+<h5><img src='images/19.png'/>
+<span style="color: #000000;">AutoRotate&nbsp;</span><span style="color: #0000FF;">As</span><span style="color: #000000;">&nbsp;</span><span style="color: #008B8B;">Boolean</span></h5><a name='abparticle_centerx'/>
+<h5><img src='images/19.png'/>
+<span style="color: #000000;">CenterX&nbsp;</span><span style="color: #0000FF;">As</span><span style="color: #000000;">&nbsp;</span><span style="color: #008B8B;">Double</span></h5><a name='abparticle_centery'/>
+<h5><img src='images/19.png'/>
+<span style="color: #000000;">CenterY&nbsp;</span><span style="color: #0000FF;">As</span><span style="color: #000000;">&nbsp;</span><span style="color: #008B8B;">Double</span></h5><a name='abparticle_circle'/>
+<h5><img src='images/11.png'/>
+<span style="color: #000000;">CIRCLE&nbsp;</span><span style="color: #0000FF;">As</span><span style="color: #000000;">&nbsp;</span><span style="color: #008B8B;">Int</span></h5><a name='abparticle_elasticity'/>
+<h5><img src='images/19.png'/>
+<span style="color: #000000;">Elasticity&nbsp;</span><span style="color: #0000FF;">As</span><span style="color: #000000;">&nbsp;</span><span style="color: #008B8B;">Double</span></h5>The elasticity of a particle. 0 = not elastic, 1 = very elastic<a name='abparticle_friction'/>
+<h5><img src='images/19.png'/>
+<span style="color: #000000;">Friction&nbsp;</span><span style="color: #0000FF;">As</span><span style="color: #000000;">&nbsp;</span><span style="color: #008B8B;">Double</span></h5>The friction of a particle. 0 = like ice, 1 = sticky like glue<a name='abparticle_getforcebyname'/>
+<h5><img src='images/15.png'/>
+<span style="color: #000000;">GetForceByName&nbsp;(name&nbsp;</span><span style="color: #0000FF;">As</span><span style="color: #000000;">&nbsp;</span><span style="color: #008B8B;">String</span><span style="color: #000000;">)&nbsp;</span><span style="color: #0000FF;">As</span><span style="color: #000000;">&nbsp;ABForce</span></h5><a name='abparticle_getforces'/>
+<h5><img src='images/15.png'/>
+<span style="color: #000000;">GetForces&nbsp;</span><span style="color: #0000FF;">As</span><span style="color: #000000;">&nbsp;java.util.</span><span style="color: #008B8B;">List</span></h5><a name='abparticle_gethits'/>
+<h5><img src='images/15.png'/>
+<span style="color: #000000;">GetHits&nbsp;</span><span style="color: #0000FF;">As</span><span style="color: #000000;">&nbsp;java.util.</span><span style="color: #008B8B;">List</span></h5><a name='abparticle_givecurrentanimbitmap'/>
+<h5><img src='images/15.png'/>
+<span style="color: #000000;">GiveCurrentAnimBitmap&nbsp;</span><span style="color: #0000FF;">As</span><span style="color: #000000;">&nbsp;android.graphics.</span><span style="color: #008B8B;">Bitmap</span></h5><a name='abparticle_height'/>
+<h5><img src='images/19.png'/>
+<span style="color: #000000;">Height&nbsp;</span><span style="color: #0000FF;">As</span><span style="color: #000000;">&nbsp;</span><span style="color: #008B8B;">Double</span></h5><a name='abparticle_initialize'/>
+<h5><img src='images/15.png'/>
+<span style="color: #000000;">Initialize&nbsp;(</span><span style="color: #0000FF;">type</span><span style="color: #000000;">&nbsp;</span><span style="color: #0000FF;">As</span><span style="color: #000000;">&nbsp;</span><span style="color: #008B8B;">Int</span><span style="color: #000000;">,&nbsp;centerX&nbsp;</span><span style="color: #0000FF;">As</span><span style="color: #000000;">&nbsp;</span><span style="color: #008B8B;">Double</span><span style="color: #000000;">,&nbsp;centerY&nbsp;</span><span style="color: #0000FF;">As</span><span style="color: #000000;">&nbsp;</span><span style="color: #008B8B;">Double</span><span style="color: #000000;">,&nbsp;width&nbsp;</span><span style="color: #0000FF;">As</span><span style="color: #000000;">&nbsp;</span><span style="color: #008B8B;">Double</span><span style="color: #000000;">,&nbsp;height&nbsp;</span><span style="color: #0000FF;">As</span><span style="color: #000000;">&nbsp;</span><span style="color: #008B8B;">Double</span><span style="color: #000000;">,&nbsp;radius&nbsp;</span><span style="color: #0000FF;">As</span><span style="color: #000000;">&nbsp;</span><span style="color: #008B8B;">Double</span><span style="color: #000000;">,&nbsp;collidable&nbsp;</span><span style="color: #0000FF;">As</span><span style="color: #000000;">&nbsp;</span><span style="color: #008B8B;">Boolean</span><span style="color: #000000;">,&nbsp;seeCollisionAsHit&nbsp;</span><span style="color: #0000FF;">As</span><span style="color: #000000;">&nbsp;</span><span style="color: #008B8B;">Boolean</span><span style="color: #000000;">,&nbsp;rotation&nbsp;</span><span style="color: #0000FF;">As</span><span style="color: #000000;">&nbsp;</span><span style="color: #008B8B;">Double</span><span style="color: #000000;">,&nbsp;name&nbsp;</span><span style="color: #0000FF;">As</span><span style="color: #000000;">&nbsp;</span><span style="color: #008B8B;">String</span><span style="color: #000000;">)</span></h5><a name='abparticle_invmass'/>
+<h5><img src='images/19.png'/>
+<span style="color: #000000;">InvMass&nbsp;</span><span style="color: #0000FF;">As</span><span style="color: #000000;">&nbsp;</span><span style="color: #008B8B;">Double</span><span style="color: #000000;">&nbsp;&nbsp;[read&nbsp;only]</span></h5><a name='abparticle_isanimated'/>
+<h5><img src='images/19.png'/>
+<span style="color: #000000;">isAnimated&nbsp;</span><span style="color: #0000FF;">As</span><span style="color: #000000;">&nbsp;</span><span style="color: #008B8B;">Boolean</span><span style="color: #000000;">&nbsp;&nbsp;[read&nbsp;only]</span></h5><a name='abparticle_isfixed'/>
+<h5><img src='images/19.png'/>
+<span style="color: #000000;">isFixed&nbsp;</span><span style="color: #0000FF;">As</span><span style="color: #000000;">&nbsp;</span><span style="color: #008B8B;">Boolean</span></h5>If a particle is fixed, no force will interact with it<a name='abparticle_issolid'/>
+<h5><img src='images/19.png'/>
+<span style="color: #000000;">isSolid&nbsp;</span><span style="color: #0000FF;">As</span><span style="color: #000000;">&nbsp;</span><span style="color: #008B8B;">Boolean</span></h5><a name='abparticle_isvisible'/>
+<h5><img src='images/19.png'/>
+<span style="color: #000000;">isVisible&nbsp;</span><span style="color: #0000FF;">As</span><span style="color: #000000;">&nbsp;</span><span style="color: #008B8B;">Boolean</span></h5><a name='abparticle_mass'/>
+<h5><img src='images/19.png'/>
+<span style="color: #000000;">Mass&nbsp;</span><span style="color: #0000FF;">As</span><span style="color: #000000;">&nbsp;</span><span style="color: #008B8B;">Double</span></h5>The mass of a particle. Must always be greater than 0<a name='abparticle_name'/>
+<h5><img src='images/11.png'/>
+<span style="color: #000000;">Name&nbsp;</span><span style="color: #0000FF;">As</span><span style="color: #000000;">&nbsp;</span><span style="color: #008B8B;">String</span></h5><a name='abparticle_pauseanimation'/>
+<h5><img src='images/15.png'/>
+<span style="color: #000000;">PauseAnimation</span></h5>Pause an animation<a name='abparticle_radian'/>
+<h5><img src='images/19.png'/>
+<span style="color: #000000;">Radian&nbsp;</span><span style="color: #0000FF;">As</span><span style="color: #000000;">&nbsp;</span><span style="color: #008B8B;">Double</span></h5>The rotation of the Particle in radians. For drawing methods you may <br/> want to use the <span class='pre'><span style="color: #000000;">angle</span></span> property which gives the rotation in<br/> degrees from 0 to 360.<br/> <br/> <p><br/> Note that while the Particle can be rotated, it does not have angular<br/> velocity. In otherwords, during collisions, the rotation is not altered, <br/> and the energy of the rotation is not applied to other colliding particles.<br/> </p><a name='abparticle_radius'/>
+<h5><img src='images/19.png'/>
+<span style="color: #000000;">Radius&nbsp;</span><span style="color: #0000FF;">As</span><span style="color: #000000;">&nbsp;</span><span style="color: #008B8B;">Double</span></h5><a name='abparticle_rectangle'/>
+<h5><img src='images/11.png'/>
+<span style="color: #000000;">RECTANGLE&nbsp;</span><span style="color: #0000FF;">As</span><span style="color: #000000;">&nbsp;</span><span style="color: #008B8B;">Int</span></h5><a name='abparticle_removeforce'/>
+<h5><img src='images/15.png'/>
+<span style="color: #000000;">RemoveForce&nbsp;(force&nbsp;</span><span style="color: #0000FF;">As</span><span style="color: #000000;">&nbsp;ABForce)</span></h5><a name='abparticle_resumeanimation'/>
+<h5><img src='images/15.png'/>
+<span style="color: #000000;">ResumeAnimation</span></h5>Resume an Animation<a name='abparticle_startanimation'/>
+<h5><img src='images/15.png'/>
+<span style="color: #000000;">StartAnimation&nbsp;(State&nbsp;</span><span style="color: #0000FF;">As</span><span style="color: #000000;">&nbsp;</span><span style="color: #008B8B;">Int</span><span style="color: #000000;">,&nbsp;Direction&nbsp;</span><span style="color: #0000FF;">As</span><span style="color: #000000;">&nbsp;</span><span style="color: #008B8B;">Int</span><span style="color: #000000;">,&nbsp;Action&nbsp;</span><span style="color: #0000FF;">As</span><span style="color: #000000;">&nbsp;</span><span style="color: #008B8B;">Int</span><span style="color: #000000;">)</span></h5>Start an animation<br/> <br/> State:<br/> STATE_STILL<br/> STATE_MOVE<br/> <br/> Direction:<br/> DIRECTION_UP<br/> DIRECTION_DOWN<br/> DIRECTION_LEFT<br/> DIRECTION_RIGHT<br/> <br/> Action:	<br/> ACTION_Y<br/> ACTION_B<br/> ACTION_X<br/> ACTION_A;<br/> ACTION_NONE;<a name='abparticle_stopanimation'/>
+<h5><img src='images/15.png'/>
+<span style="color: #000000;">StopAnimation</span></h5>Stop an animation<a name='abparticle_traction'/>
+<h5><img src='images/19.png'/>
+<span style="color: #000000;">Traction&nbsp;</span><span style="color: #0000FF;">As</span><span style="color: #000000;">&nbsp;</span><span style="color: #008B8B;">Double</span></h5>The traction of a particle. Can override the friction of another particle<a name='abparticle_type'/>
+<h5><img src='images/11.png'/>
+<span style="color: #0000FF;">Type</span><span style="color: #000000;">&nbsp;</span><span style="color: #0000FF;">As</span><span style="color: #000000;">&nbsp;</span><span style="color: #008B8B;">Int</span></h5><a name='abparticle_velocity'/>
+<h5><img src='images/19.png'/>
+<span style="color: #000000;">Velocity&nbsp;</span><span style="color: #0000FF;">As</span><span style="color: #000000;">&nbsp;ABVector</span></h5>The speed of the particle. Better use a force to move an object<br/> as this will be more natural.<a name='abparticle_width'/>
+<h5><img src='images/19.png'/>
+<span style="color: #000000;">Width&nbsp;</span><span style="color: #0000FF;">As</span><span style="color: #000000;">&nbsp;</span><span style="color: #008B8B;">Double</span></h5><hr/>
+<h3><u><a name='abphysicsengine'>ABPhysicsEngine</a></u></h3>
+</h5>A physics engine for Basic4Android. <br/> <br/> Features:<br/> - collision detection (Circle-Circle, Rect-Rect, Circle-Rect and Rect-Circle) <br/>   between groups and within groups<br/> - particles with elasticity, friction, traction, sprite animation, etc...<br/> - Joints with stiffness that connects particles<br/> - groups of particles and joints<br/> - self-buildable forces (like gravity, push, ...) on the engine and particles<br/> - vector functions<br/> - ...<br/> <br/> Please give credit to me if you use this library in your software as it took a lot<br/> of research to get the physics right, but still very simple to use.
+<br/>
+
+<h4>Events:</h4>
+Error (Number as int, Message as String)<br/>
+<h4>Members:</h4><br/>
+<img src='images/15.png'/>&nbsp;&nbsp;<span style="color: #000000;"><a href='#abphysicsengine_addglobalforce'><b>AddGlobalForce</b></a>&nbsp;(force&nbsp;</span><span style="color: #0000FF;">As</span><span style="color: #000000;">&nbsp;ABForce)</span><br/><br/>
+<img src='images/15.png'/>&nbsp;&nbsp;<span style="color: #000000;"><a href='#abphysicsengine_addgroup'><b>AddGroup</b></a>&nbsp;(group&nbsp;</span><span style="color: #0000FF;">As</span><span style="color: #000000;">&nbsp;ABGroup)</span><br/><br/>
+<img src='images/15.png'/>&nbsp;&nbsp;<span style="color: #000000;"><a href='#abphysicsengine_addlistofgroups'><b>AddListOfGroups</b></a>&nbsp;(</span><span style="color: #008B8B;">list</span><span style="color: #000000;">&nbsp;</span><span style="color: #0000FF;">As</span><span style="color: #000000;">&nbsp;java.util.</span><span style="color: #008B8B;">List</span><span style="color: #000000;">)</span><br/><br/>
+<img src='images/19.png'/>&nbsp;&nbsp;<span style="color: #000000;"><a href='#abphysicsengine_damping'><b>Damping</b></a>&nbsp;</span><span style="color: #0000FF;">As</span><span style="color: #000000;">&nbsp;</span><span style="color: #008B8B;">Double</span><br/><br/>
+<img src='images/15.png'/>&nbsp;&nbsp;<span style="color: #000000;"><a href='#abphysicsengine_getglobalforcebyname'><b>GetGlobalForceByName</b></a>&nbsp;(name&nbsp;</span><span style="color: #0000FF;">As</span><span style="color: #000000;">&nbsp;</span><span style="color: #008B8B;">String</span><span style="color: #000000;">)&nbsp;</span><span style="color: #0000FF;">As</span><span style="color: #000000;">&nbsp;ABForce</span><br/><br/>
+<img src='images/15.png'/>&nbsp;&nbsp;<span style="color: #000000;"><a href='#abphysicsengine_getglobalforces'><b>GetGlobalForces</b></a>&nbsp;</span><span style="color: #0000FF;">As</span><span style="color: #000000;">&nbsp;java.util.</span><span style="color: #008B8B;">List</span><br/><br/>
+<img src='images/15.png'/>&nbsp;&nbsp;<span style="color: #000000;"><a href='#abphysicsengine_getgroupbyname'><b>GetGroupByName</b></a>&nbsp;(name&nbsp;</span><span style="color: #0000FF;">As</span><span style="color: #000000;">&nbsp;</span><span style="color: #008B8B;">String</span><span style="color: #000000;">)&nbsp;</span><span style="color: #0000FF;">As</span><span style="color: #000000;">&nbsp;ABGroup</span><br/><br/>
+<img src='images/15.png'/>&nbsp;&nbsp;<span style="color: #000000;"><a href='#abphysicsengine_getgroups'><b>GetGroups</b></a>&nbsp;</span><span style="color: #0000FF;">As</span><span style="color: #000000;">&nbsp;java.util.</span><span style="color: #008B8B;">List</span><br/><br/>
+<img src='images/15.png'/>&nbsp;&nbsp;<span style="color: #000000;"><a href='#abphysicsengine_initialize'><b>Initialize</b></a>&nbsp;(dt&nbsp;</span><span style="color: #0000FF;">As</span><span style="color: #000000;">&nbsp;</span><span style="color: #008B8B;">Double</span><span style="color: #000000;">)</span><br/><br/>
+<img src='images/19.png'/>&nbsp;&nbsp;<span style="color: #000000;"><a href='#abphysicsengine_jointcollisioncycles'><b>JointCollisionCycles</b></a>&nbsp;</span><span style="color: #0000FF;">As</span><span style="color: #000000;">&nbsp;</span><span style="color: #008B8B;">Int</span><br/><br/>
+<img src='images/19.png'/>&nbsp;&nbsp;<span style="color: #000000;"><a href='#abphysicsengine_jointcycles'><b>JointCycles</b></a>&nbsp;</span><span style="color: #0000FF;">As</span><span style="color: #000000;">&nbsp;</span><span style="color: #008B8B;">Int</span><br/><br/>
+<img src='images/15.png'/>&nbsp;&nbsp;<span style="color: #000000;"><a href='#abphysicsengine_removeglobalforce'><b>RemoveGlobalForce</b></a>&nbsp;(force&nbsp;</span><span style="color: #0000FF;">As</span><span style="color: #000000;">&nbsp;ABForce)</span><br/><br/>
+<img src='images/15.png'/>&nbsp;&nbsp;<span style="color: #000000;"><a href='#abphysicsengine_removegroup'><b>RemoveGroup</b></a>&nbsp;(group&nbsp;</span><span style="color: #0000FF;">As</span><span style="color: #000000;">&nbsp;ABGroup)</span><br/><br/>
+<img src='images/15.png'/>&nbsp;&nbsp;<span style="color: #0000FF;"><a href='#abphysicsengine_step'><b>Step</b></a></span><br/><br/>
+
+<h4>Members description:</h4>
+<a name='abphysicsengine_addglobalforce'/>
+<h5><img src='images/15.png'/>
+<span style="color: #000000;">AddGlobalForce&nbsp;(force&nbsp;</span><span style="color: #0000FF;">As</span><span style="color: #000000;">&nbsp;ABForce)</span></h5>Add a force to the engine. It will have impact on all groups<a name='abphysicsengine_addgroup'/>
+<h5><img src='images/15.png'/>
+<span style="color: #000000;">AddGroup&nbsp;(group&nbsp;</span><span style="color: #0000FF;">As</span><span style="color: #000000;">&nbsp;ABGroup)</span></h5>Add a group to the egnine<a name='abphysicsengine_addlistofgroups'/>
+<h5><img src='images/15.png'/>
+<span style="color: #000000;">AddListOfGroups&nbsp;(</span><span style="color: #008B8B;">list</span><span style="color: #000000;">&nbsp;</span><span style="color: #0000FF;">As</span><span style="color: #000000;">&nbsp;java.util.</span><span style="color: #008B8B;">List</span><span style="color: #000000;">)</span></h5>Add a list of groups to the engine<a name='abphysicsengine_damping'/>
+<h5><img src='images/19.png'/>
+<span style="color: #000000;">Damping&nbsp;</span><span style="color: #0000FF;">As</span><span style="color: #000000;">&nbsp;</span><span style="color: #008B8B;">Double</span></h5>The global damping. Values should be between 0 and 1. Higher numbers result<br/> in less damping. A value of 1 is no damping. A value of 0 won't allow any<br/> particles to move. The default is 1.<br/> <br/> <p><br/> Damping will slow down your simulation and make it more stable. If you find<br/> that your sim is "blowing up', try applying more damping. <br/> </p><a name='abphysicsengine_getglobalforcebyname'/>
+<h5><img src='images/15.png'/>
+<span style="color: #000000;">GetGlobalForceByName&nbsp;(name&nbsp;</span><span style="color: #0000FF;">As</span><span style="color: #000000;">&nbsp;</span><span style="color: #008B8B;">String</span><span style="color: #000000;">)&nbsp;</span><span style="color: #0000FF;">As</span><span style="color: #000000;">&nbsp;ABForce</span></h5>Returns a force from the engine by name<a name='abphysicsengine_getglobalforces'/>
+<h5><img src='images/15.png'/>
+<span style="color: #000000;">GetGlobalForces&nbsp;</span><span style="color: #0000FF;">As</span><span style="color: #000000;">&nbsp;java.util.</span><span style="color: #008B8B;">List</span></h5>Returns all global forces<a name='abphysicsengine_getgroupbyname'/>
+<h5><img src='images/15.png'/>
+<span style="color: #000000;">GetGroupByName&nbsp;(name&nbsp;</span><span style="color: #0000FF;">As</span><span style="color: #000000;">&nbsp;</span><span style="color: #008B8B;">String</span><span style="color: #000000;">)&nbsp;</span><span style="color: #0000FF;">As</span><span style="color: #000000;">&nbsp;ABGroup</span></h5>Get a group by name<a name='abphysicsengine_getgroups'/>
+<h5><img src='images/15.png'/>
+<span style="color: #000000;">GetGroups&nbsp;</span><span style="color: #0000FF;">As</span><span style="color: #000000;">&nbsp;java.util.</span><span style="color: #008B8B;">List</span></h5>returns all the groups in the engine<a name='abphysicsengine_initialize'/>
+<h5><img src='images/15.png'/>
+<span style="color: #000000;">Initialize&nbsp;(dt&nbsp;</span><span style="color: #0000FF;">As</span><span style="color: #000000;">&nbsp;</span><span style="color: #008B8B;">Double</span><span style="color: #000000;">)</span></h5>Initializes the engine. You must call this method prior to adding any <br/> particles or joints.<br/>dt: The delta time value for the engine. This parameter can be used --<br/> in conjunction with speed at which <span class='pre'><span style="color: #000000;">ABPhysicsEngine.</span><span style="color: #0000FF;">Step</span><span style="color: #000000;">()</span></span> is called -- <br/> to change the speed of the simulation. Typical values are 1/3 or 1/4. Lower <br/> values result in slower, but more accurate simulations, and higher ones <br/> result in faster, less accurate ones. Note that this only applies to the <br/> forces added to particles. If you do not add any forces, the <span class='pre'><span style="color: #000000;">dt</span></span> <br/> value won't matter.<a name='abphysicsengine_jointcollisioncycles'/>
+<h5><img src='images/19.png'/>
+<span style="color: #000000;">JointCollisionCycles&nbsp;</span><span style="color: #0000FF;">As</span><span style="color: #000000;">&nbsp;</span><span style="color: #008B8B;">Int</span></h5>Determines the number of times in a single <span class='pre'><span style="color: #000000;">ABPhysicsEngine.</span><span style="color: #0000FF;">Step</span><span style="color: #000000;">()</span></span> cycle that<br/> the joints have their positions corrected and particles in collision have their<br/> positions corrected. This can greatly increase stability and prevent breakthroughs,<br/> especially with large complex arrangements of joints and particles. The larger<br/> this number, the more stable the simulation, at an expense of performance.<br/><br/> <p> <br/> This setting differs from the <span class='pre'><span style="color: #000000;">jointCycles</span></span> property in that it<br/> resolves both joints and collisions during a <span class='pre'><span style="color: #000000;">ABPhysicsEngine.</span><span style="color: #0000FF;">Step</span><span style="color: #000000;">()</span></span>,<br/> as opposed to just the joints. The default value is 1.<br/> </p><a name='abphysicsengine_jointcycles'/>
+<h5><img src='images/19.png'/>
+<span style="color: #000000;">JointCycles&nbsp;</span><span style="color: #0000FF;">As</span><span style="color: #000000;">&nbsp;</span><span style="color: #008B8B;">Int</span></h5>Determines the number of times in a single <span class='pre'><span style="color: #000000;">APEngine.</span><span style="color: #0000FF;">step</span><span style="color: #000000;">()</span></span> cycle that <br/> the joints have their positions corrected. Increasing this number can result in<br/> stiffer, more stable configurations of joints, especially when they are in large<br/> complex arrangements. The trade off is that the higher you set this number the more <br/> performance will suffer.<br/><br/> <p><br/> This setting differs from the <span class='pre'><span style="color: #000000;">jointCollisionCycles</span></span> property in that it<br/> only resolves joints during a <span class='pre'><span style="color: #000000;">ABPhysicsEngine.</span><span style="color: #0000FF;">Step</span><span style="color: #000000;">()</span></span>. The default value<br/> is 0. Because this property doesn't correct for collisions, you should only use it when<br/> the collisions of an arrangement of particles and joints are not an issue. If you <br/> do set this value higher than the default of 0, then  <span class='pre'><span style="color: #000000;">jointCollisionCycles</span></span><br/> should at least be 1, in order to check collisions one time during the <br/> <span class='pre'><span style="color: #000000;">ABPhysicsEngine.</span><span style="color: #0000FF;">Step</span><span style="color: #000000;">()</span></span> cycle.<br/> </p><a name='abphysicsengine_removeglobalforce'/>
+<h5><img src='images/15.png'/>
+<span style="color: #000000;">RemoveGlobalForce&nbsp;(force&nbsp;</span><span style="color: #0000FF;">As</span><span style="color: #000000;">&nbsp;ABForce)</span></h5>Remove a force from the engine<a name='abphysicsengine_removegroup'/>
+<h5><img src='images/15.png'/>
+<span style="color: #000000;">RemoveGroup&nbsp;(group&nbsp;</span><span style="color: #0000FF;">As</span><span style="color: #000000;">&nbsp;ABGroup)</span></h5>Removes a group from the engine<a name='abphysicsengine_step'/>
+<h5><img src='images/15.png'/>
+<span style="color: #0000FF;">Step</span></h5>Update all groups in the engine. Must be used in your timer loop<hr/>
+<h3><u><a name='abvector'>ABVector</a></u></h3>
+</h5>A vector is a point into the coordination system.
+<br/>
+
+<h4>Events:</h4>
+None
+<h4>Members:</h4><br/>
+<img src='images/15.png'/>&nbsp;&nbsp;<span style="color: #000000;"><a href='#abvector_copy'><b>copy</b></a>&nbsp;(v&nbsp;</span><span style="color: #0000FF;">As</span><span style="color: #000000;">&nbsp;ABVector)</span><br/><br/>
+<img src='images/15.png'/>&nbsp;&nbsp;<span style="color: #000000;"><a href='#abvector_cross'><b>cross</b></a>&nbsp;(v&nbsp;</span><span style="color: #0000FF;">As</span><span style="color: #000000;">&nbsp;ABVector)&nbsp;</span><span style="color: #0000FF;">As</span><span style="color: #000000;">&nbsp;</span><span style="color: #008B8B;">Double</span><br/><br/>
+<img src='images/15.png'/>&nbsp;&nbsp;<span style="color: #000000;"><a href='#abvector_distance'><b>distance</b></a>&nbsp;(v&nbsp;</span><span style="color: #0000FF;">As</span><span style="color: #000000;">&nbsp;ABVector)&nbsp;</span><span style="color: #0000FF;">As</span><span style="color: #000000;">&nbsp;</span><span style="color: #008B8B;">Double</span><br/><br/>
+<img src='images/15.png'/>&nbsp;&nbsp;<span style="color: #000000;"><a href='#abvector_distancesigned'><b>distanceSigned</b></a>&nbsp;(v&nbsp;</span><span style="color: #0000FF;">As</span><span style="color: #000000;">&nbsp;ABVector)&nbsp;</span><span style="color: #0000FF;">As</span><span style="color: #000000;">&nbsp;</span><span style="color: #008B8B;">Double</span><br/><br/>
+<img src='images/15.png'/>&nbsp;&nbsp;<span style="color: #000000;"><a href='#abvector_divequals'><b>divEquals</b></a>&nbsp;(s&nbsp;</span><span style="color: #0000FF;">As</span><span style="color: #000000;">&nbsp;</span><span style="color: #008B8B;">Double</span><span style="color: #000000;">)&nbsp;</span><span style="color: #0000FF;">As</span><span style="color: #000000;">&nbsp;ABVector</span><br/><br/>
+<img src='images/15.png'/>&nbsp;&nbsp;<span style="color: #000000;"><a href='#abvector_dot'><b>dot</b></a>&nbsp;(v&nbsp;</span><span style="color: #0000FF;">As</span><span style="color: #000000;">&nbsp;ABVector)&nbsp;</span><span style="color: #0000FF;">As</span><span style="color: #000000;">&nbsp;</span><span style="color: #008B8B;">Double</span><br/><br/>
+<img src='images/15.png'/>&nbsp;&nbsp;<span style="color: #000000;"><a href='#abvector_initialize'><b>Initialize</b></a>&nbsp;(px&nbsp;</span><span style="color: #0000FF;">As</span><span style="color: #000000;">&nbsp;</span><span style="color: #008B8B;">Double</span><span style="color: #000000;">,&nbsp;py&nbsp;</span><span style="color: #0000FF;">As</span><span style="color: #000000;">&nbsp;</span><span style="color: #008B8B;">Double</span><span style="color: #000000;">)</span><br/><br/>
+<img src='images/15.png'/>&nbsp;&nbsp;<span style="color: #000000;"><a href='#abvector_magnitude'><b>magnitude</b></a>&nbsp;</span><span style="color: #0000FF;">As</span><span style="color: #000000;">&nbsp;</span><span style="color: #008B8B;">Double</span><br/><br/>
+<img src='images/15.png'/>&nbsp;&nbsp;<span style="color: #000000;"><a href='#abvector_minus'><b>minus</b></a>&nbsp;(v&nbsp;</span><span style="color: #0000FF;">As</span><span style="color: #000000;">&nbsp;ABVector)&nbsp;</span><span style="color: #0000FF;">As</span><span style="color: #000000;">&nbsp;ABVector</span><br/><br/>
+<img src='images/15.png'/>&nbsp;&nbsp;<span style="color: #000000;"><a href='#abvector_minusequals'><b>minusEquals</b></a>&nbsp;(v&nbsp;</span><span style="color: #0000FF;">As</span><span style="color: #000000;">&nbsp;ABVector)&nbsp;</span><span style="color: #0000FF;">As</span><span style="color: #000000;">&nbsp;ABVector</span><br/><br/>
+<img src='images/15.png'/>&nbsp;&nbsp;<span style="color: #000000;"><a href='#abvector_mult'><b>mult</b></a>&nbsp;(s&nbsp;</span><span style="color: #0000FF;">As</span><span style="color: #000000;">&nbsp;</span><span style="color: #008B8B;">Double</span><span style="color: #000000;">)&nbsp;</span><span style="color: #0000FF;">As</span><span style="color: #000000;">&nbsp;ABVector</span><br/><br/>
+<img src='images/15.png'/>&nbsp;&nbsp;<span style="color: #000000;"><a href='#abvector_multequals'><b>multEquals</b></a>&nbsp;(s&nbsp;</span><span style="color: #0000FF;">As</span><span style="color: #000000;">&nbsp;</span><span style="color: #008B8B;">Double</span><span style="color: #000000;">)&nbsp;</span><span style="color: #0000FF;">As</span><span style="color: #000000;">&nbsp;ABVector</span><br/><br/>
+<img src='images/15.png'/>&nbsp;&nbsp;<span style="color: #000000;"><a href='#abvector_normalize'><b>normalize</b></a>&nbsp;</span><span style="color: #0000FF;">As</span><span style="color: #000000;">&nbsp;ABVector</span><br/><br/>
+<img src='images/15.png'/>&nbsp;&nbsp;<span style="color: #000000;"><a href='#abvector_plus'><b>plus</b></a>&nbsp;(v&nbsp;</span><span style="color: #0000FF;">As</span><span style="color: #000000;">&nbsp;ABVector)&nbsp;</span><span style="color: #0000FF;">As</span><span style="color: #000000;">&nbsp;ABVector</span><br/><br/>
+<img src='images/15.png'/>&nbsp;&nbsp;<span style="color: #000000;"><a href='#abvector_plusequals'><b>plusEquals</b></a>&nbsp;(v&nbsp;</span><span style="color: #0000FF;">As</span><span style="color: #000000;">&nbsp;ABVector)&nbsp;</span><span style="color: #0000FF;">As</span><span style="color: #000000;">&nbsp;ABVector</span><br/><br/>
+<img src='images/15.png'/>&nbsp;&nbsp;<span style="color: #000000;"><a href='#abvector_setto'><b>setTo</b></a>&nbsp;(px&nbsp;</span><span style="color: #0000FF;">As</span><span style="color: #000000;">&nbsp;</span><span style="color: #008B8B;">Double</span><span style="color: #000000;">,&nbsp;py&nbsp;</span><span style="color: #0000FF;">As</span><span style="color: #000000;">&nbsp;</span><span style="color: #008B8B;">Double</span><span style="color: #000000;">)</span><br/><br/>
+<img src='images/15.png'/>&nbsp;&nbsp;<span style="color: #000000;"><a href='#abvector_times'><b>times</b></a>&nbsp;(v&nbsp;</span><span style="color: #0000FF;">As</span><span style="color: #000000;">&nbsp;ABVector)&nbsp;</span><span style="color: #0000FF;">As</span><span style="color: #000000;">&nbsp;ABVector</span><br/><br/>
+<img src='images/15.png'/>&nbsp;&nbsp;<span style="color: #000000;"><a href='#abvector_tostring'><b>toString</b></a>&nbsp;</span><span style="color: #0000FF;">As</span><span style="color: #000000;">&nbsp;</span><span style="color: #008B8B;">String</span><br/><br/>
+<img src='images/11.png'/>&nbsp;&nbsp;<span style="color: #000000;"><a href='#abvector_x'><b>x</b></a>&nbsp;</span><span style="color: #0000FF;">As</span><span style="color: #000000;">&nbsp;</span><span style="color: #008B8B;">Double</span><br/><br/>
+<img src='images/11.png'/>&nbsp;&nbsp;<span st<a href='#abvector_y'><b>y</b></a>le="color: #000000;">y&nbsp;</span><span style="color: #0000FF;">As</span><span style="color: #000000;">&nbsp;</span><span style="color: #008B8B;">Double</span><br/><br/>
+
+<h4>Members description:</h4>
+<a name='abvector_copy'/>
+<h5><img src='images/15.png'/>
+<span style="color: #000000;">copy&nbsp;(v&nbsp;</span><span style="color: #0000FF;">As</span><span style="color: #000000;">&nbsp;ABVector)</span></h5><a name='abvector_cross'/>
+<h5><img src='images/15.png'/>
+<span style="color: #000000;">cross&nbsp;(v&nbsp;</span><span style="color: #0000FF;">As</span><span style="color: #000000;">&nbsp;ABVector)&nbsp;</span><span style="color: #0000FF;">As</span><span style="color: #000000;">&nbsp;</span><span style="color: #008B8B;">Double</span></h5><a name='abvector_distance'/>
+<h5><img src='images/15.png'/>
+<span style="color: #000000;">distance&nbsp;(v&nbsp;</span><span style="color: #0000FF;">As</span><span style="color: #000000;">&nbsp;ABVector)&nbsp;</span><span style="color: #0000FF;">As</span><span style="color: #000000;">&nbsp;</span><span style="color: #008B8B;">Double</span></h5><a name='abvector_distancesigned'/>
+<h5><img src='images/15.png'/>
+<span style="color: #000000;">distanceSigned&nbsp;(v&nbsp;</span><span style="color: #0000FF;">As</span><span style="color: #000000;">&nbsp;ABVector)&nbsp;</span><span style="color: #0000FF;">As</span><span style="color: #000000;">&nbsp;</span><span style="color: #008B8B;">Double</span></h5><a name='abvector_divequals'/>
+<h5><img src='images/15.png'/>
+<span style="color: #000000;">divEquals&nbsp;(s&nbsp;</span><span style="color: #0000FF;">As</span><span style="color: #000000;">&nbsp;</span><span style="color: #008B8B;">Double</span><span style="color: #000000;">)&nbsp;</span><span style="color: #0000FF;">As</span><span style="color: #000000;">&nbsp;ABVector</span></h5><a name='abvector_dot'/>
+<h5><img src='images/15.png'/>
+<span style="color: #000000;">dot&nbsp;(v&nbsp;</span><span style="color: #0000FF;">As</span><span style="color: #000000;">&nbsp;ABVector)&nbsp;</span><span style="color: #0000FF;">As</span><span style="color: #000000;">&nbsp;</span><span style="color: #008B8B;">Double</span></h5><a name='abvector_initialize'/>
+<h5><img src='images/15.png'/>
+<span style="color: #000000;">Initialize&nbsp;(px&nbsp;</span><span style="color: #0000FF;">As</span><span style="color: #000000;">&nbsp;</span><span style="color: #008B8B;">Double</span><span style="color: #000000;">,&nbsp;py&nbsp;</span><span style="color: #0000FF;">As</span><span style="color: #000000;">&nbsp;</span><span style="color: #008B8B;">Double</span><span style="color: #000000;">)</span></h5><a name='abvector_magnitude'/>
+<h5><img src='images/15.png'/>
+<span style="color: #000000;">magnitude&nbsp;</span><span style="color: #0000FF;">As</span><span style="color: #000000;">&nbsp;</span><span style="color: #008B8B;">Double</span></h5><a name='abvector_minus'/>
+<h5><img src='images/15.png'/>
+<span style="color: #000000;">minus&nbsp;(v&nbsp;</span><span style="color: #0000FF;">As</span><span style="color: #000000;">&nbsp;ABVector)&nbsp;</span><span style="color: #0000FF;">As</span><span style="color: #000000;">&nbsp;ABVector</span></h5><a name='abvector_minusequals'/>
+<h5><img src='images/15.png'/>
+<span style="color: #000000;">minusEquals&nbsp;(v&nbsp;</span><span style="color: #0000FF;">As</span><span style="color: #000000;">&nbsp;ABVector)&nbsp;</span><span style="color: #0000FF;">As</span><span style="color: #000000;">&nbsp;ABVector</span></h5><a name='abvector_mult'/>
+<h5><img src='images/15.png'/>
+<span style="color: #000000;">mult&nbsp;(s&nbsp;</span><span style="color: #0000FF;">As</span><span style="color: #000000;">&nbsp;</span><span style="color: #008B8B;">Double</span><span style="color: #000000;">)&nbsp;</span><span style="color: #0000FF;">As</span><span style="color: #000000;">&nbsp;ABVector</span></h5><a name='abvector_multequals'/>
+<h5><img src='images/15.png'/>
+<span style="color: #000000;">multEquals&nbsp;(s&nbsp;</span><span style="color: #0000FF;">As</span><span style="color: #000000;">&nbsp;</span><span style="color: #008B8B;">Double</span><span style="color: #000000;">)&nbsp;</span><span style="color: #0000FF;">As</span><span style="color: #000000;">&nbsp;ABVector</span></h5><a name='abvector_normalize'/>
+<h5><img src='images/15.png'/>
+<span style="color: #000000;">normalize&nbsp;</span><span style="color: #0000FF;">As</span><span style="color: #000000;">&nbsp;ABVector</span></h5><a name='abvector_plus'/>
+<h5><img src='images/15.png'/>
+<span style="color: #000000;">plus&nbsp;(v&nbsp;</span><span style="color: #0000FF;">As</span><span style="color: #000000;">&nbsp;ABVector)&nbsp;</span><span style="color: #0000FF;">As</span><span style="color: #000000;">&nbsp;ABVector</span></h5><a name='abvector_plusequals'/>
+<h5><img src='images/15.png'/>
+<span style="color: #000000;">plusEquals&nbsp;(v&nbsp;</span><span style="color: #0000FF;">As</span><span style="color: #000000;">&nbsp;ABVector)&nbsp;</span><span style="color: #0000FF;">As</span><span style="color: #000000;">&nbsp;ABVector</span></h5><a name='abvector_setto'/>
+<h5><img src='images/15.png'/>
+<span style="color: #000000;">setTo&nbsp;(px&nbsp;</span><span style="color: #0000FF;">As</span><span style="color: #000000;">&nbsp;</span><span style="color: #008B8B;">Double</span><span style="color: #000000;">,&nbsp;py&nbsp;</span><span style="color: #0000FF;">As</span><span style="color: #000000;">&nbsp;</span><span style="color: #008B8B;">Double</span><span style="color: #000000;">)</span></h5><a name='abvector_times'/>
+<h5><img src='images/15.png'/>
+<span style="color: #000000;">times&nbsp;(v&nbsp;</span><span style="color: #0000FF;">As</span><span style="color: #000000;">&nbsp;ABVector)&nbsp;</span><span style="color: #0000FF;">As</span><span style="color: #000000;">&nbsp;ABVector</span></h5><a name='abvector_tostring'/>
+<h5><img src='images/15.png'/>
+<span style="color: #000000;">toString&nbsp;</span><span style="color: #0000FF;">As</span><span style="color: #000000;">&nbsp;</span><span style="color: #008B8B;">String</span></h5><a name='abvector_x'/>
+<h5><img src='images/11.png'/>
+<span style="color: #000000;">x&nbsp;</span><span style="color: #0000FF;">As</span><span style="color: #000000;">&nbsp;</span><span style="color: #008B8B;">Double</span></h5><a name='abvector_y'/>
+<h5><img src='images/11.png'/>
+<span style="color: #000000;">y&nbsp;</span><span style="color: #0000FF;">As</span><span style="color: #000000;">&nbsp;</span><span style="color: #008B8B;">Double</span></h5>
+<hr/>
+<a href="#top">Top</a>
+</body>
+</html>

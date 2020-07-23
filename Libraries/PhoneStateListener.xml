@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root>
+    <doclet-version-NOT-library-version>1.00</doclet-version-NOT-library-version>
+    <class>
+        <name>com.rootsoft.phonestatelistener.PSL</name>
+        <shortname>PhoneStateListener</shortname>
+        <owner>process</owner>
+        <permission>android.permission.ACCESS_COARSE_LOCATION</permission>
+        <permission>android.permission.ACCESS_NETWORK_STATE</permission>
+        <permission>android.permission.CHANGE_NETWORK_STATE</permission>
+        <permission>android.permission.ACCESS_COARSE_UPDATES</permission>
+        <permission>android.permission.READ_PHONE_STATE</permission>
+        <method>
+            <name>Initialize</name>
+            <comment>Initializes the PhoneStateListener.
+ EventName - Events subs prefix.</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>ba</name>
+                <type>anywheresoftware.b4a.BA</type>
+            </parameter>
+            <parameter>
+                <name>EventName</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>EnableLogging</name>
+                <type>boolean</type>
+            </parameter>
+        </method>
+        <method>
+            <name>objSignalStrength</name>
+            <comment>Returns the SignalStrength.
+ SignalStrength has a value when onSignalStrengthsChanged is called.
+ You can work with this object in the Reflector library.
+Return type: @return:</comment>
+            <returntype>java.lang.Object</returntype>
+        </method>
+        <method>
+            <name>startListeningForEvent</name>
+            <comment>Starts listening for specific event in the phone.
+ See the LISTEN_Attributes</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>Event</name>
+                <type>int</type>
+            </parameter>
+        </method>
+        <method>
+            <name>startListening</name>
+            <comment>Starts listening for all PhoneStateListener Events.
+ Use startListeningForEvent for specific events.</comment>
+            <returntype>void</returntype>
+        </method>
+        <method>
+            <name>stopListeningForEvent</name>
+            <comment>Stops listening for PhoneStateListener Events called from StartListeningForEvent.</comment>
+            <returntype>void</returntype>
+        </method>
+        <method>
+            <name>objServiceState</name>
+            <comment>Returns the ServiceState.
+ ServiceState1 has a value when onServiceStateChanged is called.
+ You can work with this object in the Reflector library.
+Return type: @return:</comment>
+            <returntype>java.lang.Object</returntype>
+        </method>
+        <method>
+            <name>isGSM</name>
+            <comment></comment>
+            <returntype>boolean</returntype>
+        </method>
+        <method>
+            <name>stopListening</name>
+            <comment>Stops listening for all PhoneStateListener Events.
+ Use stopListeningForEvent to stop specific events.</comment>
+            <returntype>void</returntype>
+        </method>
+        <method>
+            <name>objCellLocation</name>
+            <comment>Returns the CellLocation.
+ CellLocation has a value when onCellLocationChanged is called.
+ You can work with this object in the Reflector library.
+Return type: @return:</comment>
+            <returntype>java.lang.Object</returntype>
+        </method>
+        <property>
+            <name>CellLocation</name>
+            <returntype>java.lang.String</returntype>
+            <comment>Gets the cell location in a string.</comment>
+        </property>
+        <property>
+            <name>EvdoSnr</name>
+            <returntype>int</returntype>
+            <comment>Get the signal to noise ratio.</comment>
+        </property>
+        <property>
+            <name>CdmaDbm</name>
+            <returntype>int</returntype>
+            <comment>Get the CDMA RSSI value in dBm</comment>
+        </property>
+        <property>
+            <name>GsmBitErrorRate</name>
+            <returntype>int</returntype>
+            <comment>Get the GSM bit error rate (0-7, 99) as defined in TS 27.007 8.5</comment>
+        </property>
+        <property>
+            <name>CdmaEcio</name>
+            <returntype>int</returntype>
+            <comment>Get the CDMA Ec/Io value in dB*10</comment>
+        </property>
+        <property>
+            <name>GsmSignalStrength</name>
+            <returntype>int</returntype>
+            <comment>Get the GSM Signal Strength, valid values are (0-31, 99) as defined in TS 27.007 8.5</comment>
+        </property>
+        <property>
+            <name>EvdoDbm</name>
+            <returntype>int</returntype>
+            <comment>Get the EVDO RSSI value in dBm</comment>
+        </property>
+        <property>
+            <name>EvdoEcio</name>
+            <returntype>int</returntype>
+            <comment>Get the EVDO Ec/Io value in dB*10</comment>
+        </property>
+        <field>
+            <name>LISTEN_DATA_CONNECTION_STATE</name>
+            <comment></comment>
+            <returntype>int</returntype>
+        </field>
+        <field>
+            <name>LISTEN_CALL_STATE</name>
+            <comment></comment>
+            <returntype>int</returntype>
+        </field>
+        <field>
+            <name>LISTEN_SERVICE_STATE</name>
+            <comment></comment>
+            <returntype>int</returntype>
+        </field>
+        <field>
+            <name>LISTEN_CALL_FORWARDING_INDICATOR</name>
+            <comment></comment>
+            <returntype>int</returntype>
+        </field>
+        <field>
+            <name>LISTEN_DATA_ACTIVITY</name>
+            <comment></comment>
+            <returntype>int</returntype>
+        </field>
+        <field>
+            <name>LISTEN_SIGNAL_STRENGTHS</name>
+            <comment></comment>
+            <returntype>int</returntype>
+        </field>
+        <field>
+            <name>LISTEN_MESSAGE_WAITING_INDICATOR</name>
+            <comment></comment>
+            <returntype>int</returntype>
+        </field>
+        <field>
+            <name>LISTEN_NONE</name>
+            <comment></comment>
+            <returntype>int</returntype>
+        </field>
+        <field>
+            <name>LISTEN_CELL_LOCATION</name>
+            <comment></comment>
+            <returntype>int</returntype>
+        </field>
+    </class>
+    <version>1.3</version>
+    <author>XverhelstX</author>
+</root>

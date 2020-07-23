@@ -1,0 +1,678 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root>
+    <doclet-version-NOT-library-version>1.04</doclet-version-NOT-library-version>
+    <class>
+        <name>uk.co.gingerscrack.jSoup.jSoup</name>
+        <shortname>jSoup</shortname>
+        <owner>process</owner>
+        <method>
+            <name>selector</name>
+            <comment>Selector
+ &lt;link&gt;Selector Syntax|http://jsoup.org/apidocs/org/jsoup/select/Selector.html&lt;/link&gt;
+ Returns a list</comment>
+            <returntype>anywheresoftware.b4a.objects.collections.List</returntype>
+            <parameter>
+                <name>html</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>selector</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+        <method>
+            <name>getElementsMatchingText</name>
+            <comment></comment>
+            <returntype>anywheresoftware.b4a.objects.collections.List</returntype>
+            <parameter>
+                <name>html</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>arg0</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+        <method>
+            <name>getElementsByAttributeValueMatching</name>
+            <comment></comment>
+            <returntype>anywheresoftware.b4a.objects.collections.List</returntype>
+            <parameter>
+                <name>html</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>key</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>pattern</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+        <method>
+            <name>getElementByID</name>
+            <comment>Get Element by ID
+ The first matching element by ID, starting with this element, or null if none found.</comment>
+            <returntype>java.lang.String</returntype>
+            <parameter>
+                <name>html</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>id</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+        <method>
+            <name>getElementsMatchingOwnText2</name>
+            <comment></comment>
+            <returntype>anywheresoftware.b4a.objects.collections.List</returntype>
+            <parameter>
+                <name>html</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>arg0</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+        <method>
+            <name>connect</name>
+            <comment>connect(String url)
+ Creates a new Connection to a URL.
+ Must be http or https</comment>
+            <returntype>java.lang.String</returntype>
+            <parameter>
+                <name>url</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+        <method>
+            <name>getElementsByIndexEquals</name>
+            <comment></comment>
+            <returntype>anywheresoftware.b4a.objects.collections.List</returntype>
+            <parameter>
+                <name>html</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>index</name>
+                <type>int</type>
+            </parameter>
+        </method>
+        <method>
+            <name>getElementsByIndexGreaterThan</name>
+            <comment></comment>
+            <returntype>anywheresoftware.b4a.objects.collections.List</returntype>
+            <parameter>
+                <name>html</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>index</name>
+                <type>int</type>
+            </parameter>
+        </method>
+        <method>
+            <name>getElementsByAttribute</name>
+            <comment>Find elements that have a named attribute set. Case insensitive.
+ Parameters:
+ key - name of the attribute, e.g. href
+ Returns list of elements that have this attribute, empty if none</comment>
+            <returntype>anywheresoftware.b4a.objects.collections.List</returntype>
+            <parameter>
+                <name>html</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>key</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+        <method>
+            <name>parse_BodyFragment</name>
+            <comment>parseBodyFragment(String bodyHtml) 
+ Parse a fragment of HTML, with the assumption that it forms the body of the HTML.</comment>
+            <returntype>java.lang.String</returntype>
+            <parameter>
+                <name>bodyHtml</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+        <method>
+            <name>getElementsByAttributeStarting</name>
+            <comment></comment>
+            <returntype>anywheresoftware.b4a.objects.collections.List</returntype>
+            <parameter>
+                <name>html</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>keyPrefix</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+        <method>
+            <name>getElementsByAttributeValueMatching2</name>
+            <comment></comment>
+            <returntype>anywheresoftware.b4a.objects.collections.List</returntype>
+            <parameter>
+                <name>html</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>arg0</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>arg1</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+        <method>
+            <name>selectorFirst</name>
+            <comment>Return the first match as a String
+ If attrib is passed will return contents</comment>
+            <returntype>java.lang.String</returntype>
+            <parameter>
+                <name>html</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>selector</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>attrib</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+        <method>
+            <name>selectorElementAttr</name>
+            <comment>Get the attribute of the passed selector, returns a List
+ Also pass innerhtml or outerhtml if required</comment>
+            <returntype>anywheresoftware.b4a.objects.collections.List</returntype>
+            <parameter>
+                <name>html</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>selector</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>attrib</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+        <method>
+            <name>getElementsMatchingTextPattern</name>
+            <comment></comment>
+            <returntype>anywheresoftware.b4a.objects.collections.List</returntype>
+            <parameter>
+                <name>html</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>pattern</name>
+                <type>java.util.regex.Pattern</type>
+            </parameter>
+        </method>
+        <method>
+            <name>parse_InputStream_Parser</name>
+            <comment>parse(InputStream in, String charsetName, String baseUri, Parser parser)
+ Read an input stream, and parse it to a Document.</comment>
+            <returntype>java.lang.String</returntype>
+            <parameter>
+                <name>in</name>
+                <type>java.io.InputStream</type>
+            </parameter>
+            <parameter>
+                <name>charsetName</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>baseUri</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>parser</name>
+                <type>org.jsoup.parser.Parser</type>
+            </parameter>
+        </method>
+        <method>
+            <name>parse_InputStream</name>
+            <comment>parse(InputStream in, String charsetName, String baseUri)
+ Read an input stream, and parse it to a Document.</comment>
+            <returntype>java.lang.String</returntype>
+            <parameter>
+                <name>input</name>
+                <type>java.io.InputStream</type>
+            </parameter>
+            <parameter>
+                <name>charsetName</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>baseUri</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+        <method>
+            <name>getAllElements</name>
+            <comment>Get All Elements
+ Returns List</comment>
+            <returntype>anywheresoftware.b4a.objects.collections.List</returntype>
+            <parameter>
+                <name>html</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+        <method>
+            <name>parse_HTML_Parser</name>
+            <comment>parse(String html, String baseUri, Parser parser)
+ Parse HTML into a Document, using the provided Parser.</comment>
+            <returntype>java.lang.String</returntype>
+            <parameter>
+                <name>html</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>baseUri</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>parser</name>
+                <type>org.jsoup.parser.Parser</type>
+            </parameter>
+        </method>
+        <method>
+            <name>connectXtra</name>
+            <comment>connect(String url, String UA, String timeout)
+ Creates a new Connection to a URL.
+ Must be http or https
+ 
+ &lt;link&gt;Connection|http://jsoup.org/apidocs/org/jsoup/Connection.html&lt;/link&gt;
+ 
+ userAgent String : User Agent
+ timeout Int : milliseconds
+ header String : 'name|value'
+
+ cookies Map : Map(string, string)
+ followRedirects Boolean : Not follow server redirects.
+ ignoreContentType Boolean : Ignore Content-Type when parsing response.
+ ignoreHttpErrors Boolean : Configures connection to not throw exceptions on HTTP occurs.
+ maxBodySize Int : Set maximum bytes to read from uncompressed connection into the body before the connection is closed, and the input truncated.
+ referrer String : Set the request referrer ('referer') header.
+ data String Array : Add request data parameters. Multiple parameters may be set at once,
+ e.g.: .data('name', 'jsoup', 'language', 'Java', 'language', 'English')</comment>
+            <returntype>java.lang.String</returntype>
+            <parameter>
+                <name>url</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>userAgent</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>timeout</name>
+                <type>int</type>
+            </parameter>
+            <parameter>
+                <name>header_name</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>header_value</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>followRedirects</name>
+                <type>boolean</type>
+            </parameter>
+            <parameter>
+                <name>ignoreContentType</name>
+                <type>boolean</type>
+            </parameter>
+            <parameter>
+                <name>ignoreHttpErrors</name>
+                <type>boolean</type>
+            </parameter>
+            <parameter>
+                <name>maxBodySize</name>
+                <type>int</type>
+            </parameter>
+            <parameter>
+                <name>referrer</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+        <method>
+            <name>parse_HTML</name>
+            <comment>parse(String html)
+ Parse HTML into a Document.</comment>
+            <returntype>java.lang.String</returntype>
+            <parameter>
+                <name>html</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+        <method>
+            <name>parse_HTML_URI</name>
+            <comment>parse(String html, String baseUri)
+Parse HTML into a Document</comment>
+            <returntype>java.lang.String</returntype>
+            <parameter>
+                <name>html</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>baseUri</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+        <method>
+            <name>getElementsByTag</name>
+            <comment>Get Elements by Tag
+ Pass plain tag eg. a b etc
+ Returned as a list</comment>
+            <returntype>anywheresoftware.b4a.objects.collections.List</returntype>
+            <parameter>
+                <name>html</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>tag</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+        <method>
+            <name>parse_file_URI</name>
+            <comment>parse(File in, String charsetName, String baseUri)
+ Parse the contents of a file as HTML.
+ URI can be omitted
+ File input = new File("/tmp/input.html");
+ Document doc = Jsoup.parse(input, "UTF-8", "http://example.com/");</comment>
+            <returntype>java.lang.String</returntype>
+            <parameter>
+                <name>input</name>
+                <type>java.io.File</type>
+            </parameter>
+            <parameter>
+                <name>charsetName</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>baseUri</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+        <method>
+            <name>parse_URL_Timeout</name>
+            <comment>parse(URL url, int timeoutMillis)
+ Fetch a URL, and parse it as HTML.</comment>
+            <returntype>java.lang.String</returntype>
+            <parameter>
+                <name>url</name>
+                <type>java.net.URL</type>
+            </parameter>
+            <parameter>
+                <name>timeoutMillis</name>
+                <type>int</type>
+            </parameter>
+        </method>
+        <method>
+            <name>selectorElementText</name>
+            <comment>Get the text of the passed selector, returns a List</comment>
+            <returntype>anywheresoftware.b4a.objects.collections.List</returntype>
+            <parameter>
+                <name>html</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>selector</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+        <method>
+            <name>getElementsByIndexLessThan</name>
+            <comment></comment>
+            <returntype>anywheresoftware.b4a.objects.collections.List</returntype>
+            <parameter>
+                <name>html</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>index</name>
+                <type>int</type>
+            </parameter>
+        </method>
+        <method>
+            <name>getElementsByAttributeValueNot</name>
+            <comment></comment>
+            <returntype>anywheresoftware.b4a.objects.collections.List</returntype>
+            <parameter>
+                <name>html</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>key</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>value</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+        <method>
+            <name>getElementsByAttributeValueContaining</name>
+            <comment></comment>
+            <returntype>anywheresoftware.b4a.objects.collections.List</returntype>
+            <parameter>
+                <name>html</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>key</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>match</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+        <method>
+            <name>getElementsContainingOwnText</name>
+            <comment></comment>
+            <returntype>anywheresoftware.b4a.objects.collections.List</returntype>
+            <parameter>
+                <name>html</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>searchText</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+        <method>
+            <name>parse_BodyFragment_URI</name>
+            <comment>parseBodyFragment(String bodyHtml, String baseUri)
+ Parse a fragment of HTML, with the assumption that it forms the body of the HTML.</comment>
+            <returntype>java.lang.String</returntype>
+            <parameter>
+                <name>bodyHtml</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>baseUri</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+        <method>
+            <name>getElementsByClass</name>
+            <comment></comment>
+            <returntype>anywheresoftware.b4a.objects.collections.List</returntype>
+            <parameter>
+                <name>html</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>className</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+        <method>
+            <name>getElementsByAttributeValue</name>
+            <comment></comment>
+            <returntype>anywheresoftware.b4a.objects.collections.List</returntype>
+            <parameter>
+                <name>html</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>key</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>value</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+        <method>
+            <name>getElementsMatchingOwnText</name>
+            <comment></comment>
+            <returntype>anywheresoftware.b4a.objects.collections.List</returntype>
+            <parameter>
+                <name>html</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>pattern</name>
+                <type>java.util.regex.Pattern</type>
+            </parameter>
+        </method>
+        <method>
+            <name>getElementsByAttributeValueStarting</name>
+            <comment></comment>
+            <returntype>anywheresoftware.b4a.objects.collections.List</returntype>
+            <parameter>
+                <name>html</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>key</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>valuePrefix</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+        <method>
+            <name>isValid</name>
+            <comment>isValid(String bodyHtml, Whitelist whitelist)
+ Test if the input HTML has only tags and attributes allowed by the Whitelist.</comment>
+            <returntype>java.lang.Boolean</returntype>
+            <parameter>
+                <name>bodyHtml</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>whitelist</name>
+                <type>org.jsoup.safety.Whitelist</type>
+            </parameter>
+        </method>
+        <method>
+            <name>clean_Whitelist</name>
+            <comment>clean(String bodyHtml, String baseUri, Whitelist whitelist)
+ Get safe HTML from untrusted input HTML, by parsing input HTML and filtering
+ it through a white-list of permitted tags and attributes.</comment>
+            <returntype>java.lang.String</returntype>
+            <parameter>
+                <name>bodyHtml</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>baseUri</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>whitelist</name>
+                <type>org.jsoup.safety.Whitelist</type>
+            </parameter>
+        </method>
+        <method>
+            <name>clean_HTML</name>
+            <comment>clean(String bodyHtml, Whitelist whitelist) 
+ Get safe HTML from untrusted input HTML, by parsing input HTML and filtering
+ it through a white-list of permitted tags and attributes.</comment>
+            <returntype>java.lang.String</returntype>
+            <parameter>
+                <name>bodyHtml</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>whitelist</name>
+                <type>org.jsoup.safety.Whitelist</type>
+            </parameter>
+        </method>
+        <method>
+            <name>clean_Output</name>
+            <comment>clean(String bodyHtml, String baseUri, Whitelist whitelist, Document.OutputSettings outputSettings)
+ Get safe HTML from untrusted input HTML, by parsing input HTML and filtering
+ it through a white-list of permitted tags and attributes.</comment>
+            <returntype>java.lang.String</returntype>
+            <parameter>
+                <name>bodyHtml</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>baseUri</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>whitelist</name>
+                <type>org.jsoup.safety.Whitelist</type>
+            </parameter>
+            <parameter>
+                <name>outputSettings</name>
+                <type>org.jsoup.nodes.Document.OutputSettings</type>
+            </parameter>
+        </method>
+        <method>
+            <name>getElementsByAttributeValueEnding</name>
+            <comment></comment>
+            <returntype>anywheresoftware.b4a.objects.collections.List</returntype>
+            <parameter>
+                <name>html</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>key</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>valueSuffix</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+        <method>
+            <name>getElementsContainingText</name>
+            <comment></comment>
+            <returntype>anywheresoftware.b4a.objects.collections.List</returntype>
+            <parameter>
+                <name>html</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>searchText</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+    </class>
+    <version>0.15</version>
+    <author>Wrapped by Neil Craig</author>
+    <dependsOn>jsoup-1.8.1</dependsOn>
+</root>

@@ -1,0 +1,84 @@
+<HTML>
+<HEAD>
+<META http-equiv="Content-Type" content="text/html; charset=utf-8">
+<TITLE>
+Basic4android - Network
+</TITLE>
+<link rel="stylesheet" type="text/css" href="images/help.css" />
+
+</HEAD>
+
+<BODY BGCOLOR="white" leftmargin="50">
+<a name="top"/>
+<h1>Network</h1>
+
+</h5>The network library includes two objects: Socket and ServerSocket. With Socket you can communicate with other devices and computers over TCP/IP.<br/>ServerSocket allows you to listen for incoming connections. Once a connection is established you will receive a Socket object that will be used for handling this specific connection.<br/>See the <a href='http://www.basic4ppc.com/forum/basic4android-getting-started-tutorials/7001-android-network-tutorial.html'>Network tutorial</a>.
+<h4>List of types:</h4>
+<a href='#serversocket'>ServerSocket</a><br/><a href='#socket'>Socket</a><br/>
+<hr/>
+<h3><u><a name='serversocket'>ServerSocket</a></u></h3>
+</h5>The ServerSocket object allows other machines to connect to this machine.<br/>The ServerSocket listens to a specific port. Once a connection arrives, the NewConnection event is raised with a Socket object.<br/>This Socket object should be used to communicate with this client. <br/>You may call Listen again and receive more connections. A single ServerSocket can handle many connections.<br/>For each connection there should be one Socket object.
+<br/>
+<h4>Permissions:</h4>android.permission.INTERNET<br/>
+<h4>Events:</h4>
+NewConnection (Successful As Boolean, NewSocket As Socket)<br/>
+<h4>Members:</h4><br/>
+<img src='images/15.png'/>&nbsp;&nbsp;<span style="color: #000000;"><a href='#serversocket_close'><b>Close</b></a></span><br/><br/>
+<img src='images/15.png'/>&nbsp;&nbsp;<span style="color: #000000;"><a href='#serversocket_getmyip'><b>GetMyIP</b></a> </span><span style="color: #0000FF;">As</span><span style="color: #000000;"> </span><span style="color: #008B8B;">String</span><br/><br/>
+<img src='images/15.png'/>&nbsp;&nbsp;<span style="color: #000000;"><a href='#serversocket_initialize'><b>Initialize</b></a> (Port </span><span style="color: #0000FF;">As</span><span style="color: #000000;"> </span><span style="color: #008B8B;">Int</span><span style="color: #000000;">, EventName </span><span style="color: #0000FF;">As</span><span style="color: #000000;"> </span><span style="color: #008B8B;">String</span><span style="color: #000000;">)</span><br/><br/>
+<img src='images/15.png'/>&nbsp;&nbsp;<span style="color: #000000;"><a href='#serversocket_isinitialized'><b>IsInitialized</b></a> </span><span style="color: #0000FF;">As</span><span style="color: #000000;"> </span><span style="color: #008B8B;">Boolean</span><br/><br/>
+<img src='images/15.png'/>&nbsp;&nbsp;<span style="color: #000000;"><a href='#serversocket_listen'><b>Listen</b></a></span><br/><br/>
+
+<h4>Members description:</h4>
+<a name='serversocket_close'/>
+<h5><img src='images/15.png'/>
+<span style="color: #000000;">Close</span></h5>Closes the ServerSocket. This will not close any other sockets.<br/>You should call Initialize if you want to use this object again.<a name='serversocket_getmyip'/>
+<h5><img src='images/15.png'/>
+<span style="color: #000000;">GetMyIP </span><span style="color: #0000FF;">As</span><span style="color: #000000;"> </span><span style="color: #008B8B;">String</span></h5>Returns the server's IP. Will return "127.0.0.1" (localhost) if no other IP is found.<a name='serversocket_initialize'/>
+<h5><img src='images/15.png'/>
+<span style="color: #000000;">Initialize (Port </span><span style="color: #0000FF;">As</span><span style="color: #000000;"> </span><span style="color: #008B8B;">Int</span><span style="color: #000000;">, EventName </span><span style="color: #0000FF;">As</span><span style="color: #000000;"> </span><span style="color: #008B8B;">String</span><span style="color: #000000;">)</span></h5>Initializes the ServerSocket.<br/>Port - The port that the server will listen to. Note that you should call Listen to start listening.<br/>EventName - The event Sub prefix name.<a name='serversocket_isinitialized'/>
+<h5><img src='images/15.png'/>
+<span style="color: #000000;">IsInitialized </span><span style="color: #0000FF;">As</span><span style="color: #000000;"> </span><span style="color: #008B8B;">Boolean</span></h5>Tests whether the object is initialized.<a name='serversocket_listen'/>
+<h5><img src='images/15.png'/>
+<span style="color: #000000;">Listen</span></h5>Starts listening in the background for incoming connections.<br/>When a connection is established, the NewConnection event is raised. If the connection is successful a Socket object will be passes in the event.<br/>Calling Listen while the ServerSocket is listening will not do anything.<hr/>
+<h3><u><a name='socket'>Socket</a></u></h3>
+</h5>The Socket object is an endpoint for network communication.<br/>If you are connecting to a server then you should initialize a Socket object and call Connect with the server address.<br/>The Connected event will be raised when the connection is ready or if the connection has failed.<br/>Sockets are also used by the server. Once a new incoming connection is established, the NewConnection event will be raised and an initialized Socket object will be passed as a parameter.<br/>Once a socket is connected you should use its <span class='pre'><span style="color: #008B8B;">InputStream</span></span> and <span class='pre'><span style="color: #008B8B;">OutputStream</span></span> to communicate with the other machine.
+<br/>
+<h4>Permissions:</h4>android.permission.INTERNET<br/>
+<h4>Events:</h4>
+Connected (Successful As Boolean)<br/>
+<h4>Members:</h4><br/>
+<img src='images/15.png'/>&nbsp;&nbsp;<span style="color: #000000;"><a href='#socket_close'><b>Close</b></a></span><br/><br/>
+<img src='images/15.png'/>&nbsp;&nbsp;<span style="color: #000000;"><a href='#socket_connect'><b>Connect</b></a> (Host </span><span style="color: #0000FF;">As</span><span style="color: #000000;"> </span><span style="color: #008B8B;">String</span><span style="color: #000000;">, Port </span><span style="color: #0000FF;">As</span><span style="color: #000000;"> </span><span style="color: #008B8B;">Int</span><span style="color: #000000;">, TimeOut </span><span style="color: #0000FF;">As</span><span style="color: #000000;"> </span><span style="color: #008B8B;">Int</span><span style="color: #000000;">)</span><br/><br/>
+<img src='images/19.png'/>&nbsp;&nbsp;<span style="color: #000000;"><a href='#socket_connected'><b>Connected</b></a> </span><span style="color: #0000FF;">As</span><span style="color: #000000;"> </span><span style="color: #008B8B;">Boolean</span><span style="color: #000000;">  [read only]</span><br/><br/>
+<img src='images/15.png'/>&nbsp;&nbsp;<span style="color: #000000;"><a href='#socket_initialize'><b>Initialize</b></a> (EventName </span><span style="color: #0000FF;">As</span><span style="color: #000000;"> </span><span style="color: #008B8B;">String</span><span style="color: #000000;">)</span><br/><br/>
+<img src='images/19.png'/>&nbsp;&nbsp;<span style="color: #008B8B;"><a href='#socket_inputstream'><b>InputStream</b></a></span><span style="color: #000000;"> </span><span style="color: #0000FF;">As</span><span style="color: #000000;"> java.io.InputStream  [read only]</span><br/><br/>
+<img src='images/15.png'/>&nbsp;&nbsp;<span style="color: #000000;"><a href='#socket_isinitialized'><b>IsInitialized</b></a> </span><span style="color: #0000FF;">As</span><span style="color: #000000;"> </span><span style="color: #008B8B;">Boolean</span><br/><br/>
+<img src='images/19.png'/>&nbsp;&nbsp;<span style="color: #008B8B;"><a href='#socket_outputstream'><b>OutputStream</b></a></span><span style="color: #000000;"> </span><span style="color: #0000FF;">As</span><span style="color: #000000;"> java.io.OutputStream  [read only]</span><br/><br/>
+<img src='images/15.png'/>&nbsp;&nbsp;<span style="color: #000000;"><a href='#socket_resolvehost'><b>ResolveHost</b></a> (Host </span><span style="color: #0000FF;">As</span><span style="color: #000000;"> </span><span style="color: #008B8B;">String</span><span style="color: #000000;">) </span><span style="color: #0000FF;">As</span><span style="color: #000000;"> </span><span style="color: #008B8B;">String</span><br/><br/>
+<img src='images/19.png'/>&nbsp;&nbsp;<span style="color: #000000;"><a href='#socket_timeout'><b>TimeOut</b></a> </span><span style="color: #0000FF;">As</span><span style="color: #000000;"> </span><span style="color: #008B8B;">Int</span><br/><br/>
+
+<h4>Members description:</h4>
+<a name='socket_close'/>
+<h5><img src='images/15.png'/>
+<span style="color: #000000;">Close</span></h5>Closes the socket and the streams.<br/>It is safe to call this method multiple times.<a name='socket_connect'/>
+<h5><img src='images/15.png'/>
+<span style="color: #000000;">Connect (Host </span><span style="color: #0000FF;">As</span><span style="color: #000000;"> </span><span style="color: #008B8B;">String</span><span style="color: #000000;">, Port </span><span style="color: #0000FF;">As</span><span style="color: #000000;"> </span><span style="color: #008B8B;">Int</span><span style="color: #000000;">, TimeOut </span><span style="color: #0000FF;">As</span><span style="color: #000000;"> </span><span style="color: #008B8B;">Int</span><span style="color: #000000;">)</span></h5>Tries to connect to the given address. The connection is done in the background.<br/>The Connected event will be raised when the connection is ready or if it has failed.<br/>Host - The host name or IP.<br/>Port - Port number.<br/>TimeOut - Connection timeout. Value is specified in milliseconds. Pass 0 to disable the timeout.<a name='socket_connected'/>
+<h5><img src='images/19.png'/>
+<span style="color: #000000;">Connected </span><span style="color: #0000FF;">As</span><span style="color: #000000;"> </span><span style="color: #008B8B;">Boolean</span><span style="color: #000000;">  [read only]</span></h5>Tests whether the socket is connected.<a name='socket_initialize'/>
+<h5><img src='images/15.png'/>
+<span style="color: #000000;">Initialize (EventName </span><span style="color: #0000FF;">As</span><span style="color: #000000;"> </span><span style="color: #008B8B;">String</span><span style="color: #000000;">)</span></h5>Initializes a new socket.<a name='socket_inputstream'/>
+<h5><img src='images/19.png'/>
+<span style="color: #008B8B;">InputStream</span><span style="color: #000000;"> </span><span style="color: #0000FF;">As</span><span style="color: #000000;"> java.io.InputStream  [read only]</span></h5>Returns the socket's InputStream which is used to read data.<a name='socket_isinitialized'/>
+<h5><img src='images/15.png'/>
+<span style="color: #000000;">IsInitialized </span><span style="color: #0000FF;">As</span><span style="color: #000000;"> </span><span style="color: #008B8B;">Boolean</span></h5>Tests whether the object was initialized.<a name='socket_outputstream'/>
+<h5><img src='images/19.png'/>
+<span style="color: #008B8B;">OutputStream</span><span style="color: #000000;"> </span><span style="color: #0000FF;">As</span><span style="color: #000000;"> java.io.OutputStream  [read only]</span></h5>Returns the socket's OutputStream which is used to write data.<a name='socket_resolvehost'/>
+<h5><img src='images/15.png'/>
+<span style="color: #000000;">ResolveHost (Host </span><span style="color: #0000FF;">As</span><span style="color: #000000;"> </span><span style="color: #008B8B;">String</span><span style="color: #000000;">) </span><span style="color: #0000FF;">As</span><span style="color: #000000;"> </span><span style="color: #008B8B;">String</span></h5>Resolves the host name and returns the IP address.<a name='socket_timeout'/>
+<h5><img src='images/19.png'/>
+<span style="color: #000000;">TimeOut </span><span style="color: #0000FF;">As</span><span style="color: #000000;"> </span><span style="color: #008B8B;">Int</span></h5>Gets or sets the timeout of the socket's InputStream. Value is specified in milliseconds.<br/>By default there is no timeout.
+<hr/>
+<a href="#top">Top</a>
+</body>
+</html>

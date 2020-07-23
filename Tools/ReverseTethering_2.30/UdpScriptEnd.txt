@@ -1,0 +1,36 @@
+// OnUdpStop
+// This script is executed when a, UDP port is closed.
+
+// $listeningPort is the port you specified in "ports" list
+// $redirectPort is assigned at runtime when the udp server is started. First port start at 9500 and is incremented for each server
+// $isForward : true if is just port forwarding. False if it's reverse tethering
+// $isSocks5 : if reverse tethering, indicate if socks5 must be used.
+// all theses variables are read only
+
+//$LogI --------- Script : Udp port stop : $listeningPort / $redirectPort
+
+if $isForward  then
+   return
+fi
+
+if $isAtRunTime then 
+   return
+fi
+
+// reverse tethering
+// send specific tcp port (80,443,...) to TETHER chain
+
+if $isSocks5 = false then
+   // send udp connection directly to the tunnel (9500+)
+   $iptables -t nat -D TETHER -o $myInterface -p udp --dport $listeningPort -j REDIRECT --to $redirectPort  
+else
+   // Socks5 mode : redirection is done on redsocks client port : 42001
+   $iptables -t nat -D TETHER -o $myInterface -p udp --dport $listeningPort -j REDIRECT --to 42001
+fi
+
+$LogI --------- Script : Udp port stop done
+
+
+
+
+

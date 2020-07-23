@@ -1,0 +1,419 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <doclet-version-NOT-library-version>1.00</doclet-version-NOT-library-version>
+  <dependsOn>net</dependsOn>
+  <dependsOn>network</dependsOn>
+  <class>
+    <name>ftp.auto.lib.ftp_auto</name>
+    <shortname>FTP_Auto</shortname>
+    <owner>activity</owner>
+    <permission>android.permission.INTERNET</permission>
+    <permission>android.permission.ACCESS_WIFI_STATE</permission>
+    <permission>android.permission.ACCESS_NETWORK_STATE</permission>
+    <method>
+      <name>IsInitialized</name>
+      <comment>Tests whether the object has been initialized.</comment>
+      <returntype>boolean</returntype>
+    </method>
+    <method>
+      <name DesignerName="Close">_v7</name>
+      <comment>Completes the current Que with any files left to process and then
+closes the connection.</comment>
+      <returntype>String</returntype>
+    </method>
+    <method>
+      <name DesignerName="CloseNow">_v0</name>
+      <comment>Closes the connection and all other files in the Que are 
+ignored and the process is terminated.</comment>
+      <returntype>String</returntype>
+    </method>
+    <method>
+      <name DesignerName="DeleteFile">_vv2</name>
+      <comment>Deletes a single file from the server.
+Example:
+
+DeleteFile("public/pictures/airplane1.jpg")</comment>
+      <returntype>String</returntype>
+      <parameter>
+        <name>DeletePathAndFile</name>
+        <type>String</type>
+      </parameter>
+    </method>
+    <method>
+      <name DesignerName="DeleteFileSet">_vv3</name>
+      <comment>Delete the lastest FileSet in memory from the server.
+If you used a Mask to download a set of files, this function
+will delelete all files in that last set.
+NOTICE: use with care.</comment>
+      <returntype>String</returntype>
+      <parameter>
+        <name>VerifyBeforeDelete</name>
+        <type>boolean</type>
+      </parameter>
+    </method>
+    <method>
+      <name DesignerName="DownLoadFile">_vv5</name>
+      <comment>Downloads a selected file from the FTP server and optionally deletes the file after successful download 
+Example:
+
+DownLoadFile("/mnt/sdcard/pictures/", "public/downloads/", "airplane.jpg", False)</comment>
+      <returntype>String</returntype>
+      <parameter>
+        <name>LocalPath</name>
+        <type>String</type>
+      </parameter>
+      <parameter>
+        <name>ServerPath</name>
+        <type>String</type>
+      </parameter>
+      <parameter>
+        <name>FileName</name>
+        <type>String</type>
+      </parameter>
+      <parameter>
+        <name>Delete_FromServer</name>
+        <type>boolean</type>
+      </parameter>
+    </method>
+    <method>
+      <name DesignerName="DownloadFileSet">_vv6</name>
+      <comment>Retrieves a list of files from the server matching the Mask(s) passed to Files_Path_And_Mask() array.
+You should include the full server path in the Mask.  It will then download these files to
+the Folder passed in LocalPath. Files_Path_And_Mask() can contain one entry or however many is needed.
+Example:
+
+DownloadFileSet(File.DirInternal, Array As String("SM*.txt", "public/pictures/pla*.jpg"), False)</comment>
+      <returntype>String</returntype>
+      <parameter>
+        <name>LocalPath</name>
+        <type>String</type>
+      </parameter>
+      <parameter>
+        <name>Files_Path_And_Mask</name>
+        <type>String[]</type>
+      </parameter>
+      <parameter>
+        <name>Delete_FromServer</name>
+        <type>boolean</type>
+      </parameter>
+    </method>
+    <method>
+      <name DesignerName="FileOrFolderExist">_vvv1</name>
+      <comment>Allows you to check if a File Exist in the Root or a specified directory. Pass
+the name of the File you are looking for in FTPFileExists. Pass "/" to search in the Root 
+directory or pass the path and directory name to: InThisDirectorysearch. If True is passed
+for the last parameter, folders will be returned instead of files.
+
+Example: FileOrFolderExist("myairplane.jpg", "files/images/aircraft", False)
+NOTE: A sub like below is required for a callback with the information about if the file was 
+found. Place this sub in the calling module. This is required because of the Libs modeless operation.
+
+Sub FTP_FileExist(Found As Boolean)
+	If Found Then Log("True") Else Log("False")
+End Sub</comment>
+      <returntype>boolean</returntype>
+      <parameter>
+        <name>FTPFileExists</name>
+        <type>String</type>
+      </parameter>
+      <parameter>
+        <name>InThisDirectory</name>
+        <type>String</type>
+      </parameter>
+      <parameter>
+        <name>CheckForFolder</name>
+        <type>boolean</type>
+      </parameter>
+    </method>
+    <method>
+      <name DesignerName="Initialize">_initialize</name>
+      <comment>Initializes the object for use. If True is passed for ShowMessages, additional 
+messages will be displayed throughout the process.  Use the keywords "Activity"
+and "Me" For the first two parameters.
+Example:
+
+Initialize(Activity, Me, "ftp.yourdomain.com", "userName", "PassWord", "Port", True, False)</comment>
+      <returntype>String</returntype>
+      <parameter>
+        <name>ba</name>
+        <type>anywheresoftware.b4a.BA</type>
+      </parameter>
+      <parameter>
+        <name>Activity</name>
+        <type>anywheresoftware.b4a.objects.ActivityWrapper</type>
+      </parameter>
+      <parameter>
+        <name>CalledFrom</name>
+        <type>Object</type>
+      </parameter>
+      <parameter>
+        <name>FTP_Site</name>
+        <type>String</type>
+      </parameter>
+      <parameter>
+        <name>UserName</name>
+        <type>String</type>
+      </parameter>
+      <parameter>
+        <name>PassWord</name>
+        <type>String</type>
+      </parameter>
+      <parameter>
+        <name>PortNumber</name>
+        <type>int</type>
+      </parameter>
+      <parameter>
+        <name>ShowMessages</name>
+        <type>boolean</type>
+      </parameter>
+      <parameter>
+        <name>UsePassiveMode</name>
+        <type>boolean</type>
+      </parameter>
+    </method>
+    <method>
+      <name DesignerName="LastDownloadStats">_vvv4</name>
+      <comment>Shows a popup window with the detials of the latest Download(s).</comment>
+      <returntype>String</returntype>
+    </method>
+    <method>
+      <name DesignerName="LastProcessSuccessful">_vvv5</name>
+      <comment>Returns True if the last Upload or Download process was successful, otherwise returns False.</comment>
+      <returntype>boolean</returntype>
+    </method>
+    <method>
+      <name DesignerName="LastUploadStats">_vvv6</name>
+      <comment>Show a popup window with details of the latest Upload(s).</comment>
+      <returntype>String</returntype>
+    </method>
+    <method>
+      <name DesignerName="MakeDir">_vvvv2</name>
+      <comment>Makes a directory on the FTP server. Does nothing if the directory already exist.
+If you want to make a directory in the root of the server and then a directory under
+it, you must issue the command twice.
+Example:
+
+MakeDir("test")
+MakeDir("test/datafolder")</comment>
+      <returntype>String</returntype>
+      <parameter>
+        <name>DirectoryName</name>
+        <type>String</type>
+      </parameter>
+    </method>
+    <method>
+      <name DesignerName="RemoveDir">_vvvv6</name>
+      <comment>Removes selected directory from the FTP server</comment>
+      <returntype>String</returntype>
+      <parameter>
+        <name>DirectoryName</name>
+        <type>String</type>
+      </parameter>
+    </method>
+    <method>
+      <name DesignerName="SendCMD">_vvvvv1</name>
+      <comment>Allows you to send FTP commands with parameters to the server</comment>
+      <returntype>String</returntype>
+      <parameter>
+        <name>MyCommand</name>
+        <type>String</type>
+      </parameter>
+      <parameter>
+        <name>MyParameters</name>
+        <type>String</type>
+      </parameter>
+    </method>
+    <method>
+      <name DesignerName="SetColors">_vvvvv2</name>
+      <comment>Used to set colors of each Item in the status dialog.
+NOTE: Passing 0 for any argument with leave that item unchanged</comment>
+      <returntype>String</returntype>
+      <parameter>
+        <name>HeadingColor</name>
+        <type>int</type>
+      </parameter>
+      <parameter>
+        <name>TotalProgressColor</name>
+        <type>int</type>
+      </parameter>
+      <parameter>
+        <name>FileTextColor</name>
+        <type>int</type>
+      </parameter>
+      <parameter>
+        <name>PanelBackgroundColor</name>
+        <type>int</type>
+      </parameter>
+      <parameter>
+        <name>FrameColor</name>
+        <type>int</type>
+      </parameter>
+    </method>
+    <method>
+      <name DesignerName="SetCompletedDownloadDialog">_vvvvv3</name>
+      <comment>If ShowCompletedDialog=True, it will show a dialog after the download process is completed.</comment>
+      <returntype>String</returntype>
+      <parameter>
+        <name>ShowCompletedDialog</name>
+        <type>boolean</type>
+      </parameter>
+      <parameter>
+        <name>DialogText</name>
+        <type>String</type>
+      </parameter>
+    </method>
+    <method>
+      <name DesignerName="SetCompletedUploadDialog">_vvvvv4</name>
+      <comment>If ShowCompletedDialog=True, it will show a dialog after the upload process is completed.</comment>
+      <returntype>String</returntype>
+      <parameter>
+        <name>ShowCompletedDialog</name>
+        <type>boolean</type>
+      </parameter>
+      <parameter>
+        <name>DialogText</name>
+        <type>String</type>
+      </parameter>
+    </method>
+    <method>
+      <name DesignerName="SetProcessCompleteOn">_vvvvv5</name>
+      <comment>Use this function to determine by code when the Upload or Download is finished.
+The calling Activity must contain a sub named FTP_ProcessComplete.  If your calling 
+Activity includes this sub and you set this function to True, then the sub will
+be called as soon as the process has completed.  EXAMPLE:
+
+'Add this sub to calling Activity
+Sub FTP_ProcessComplete
+      'Your code here...
+End Sub</comment>
+      <returntype>String</returntype>
+      <parameter>
+        <name>ProcessCompleteOn</name>
+        <type>boolean</type>
+      </parameter>
+    </method>
+    <method>
+      <name DesignerName="SetStealthOn">_vvvvv6</name>
+      <comment>If set to True, no progress box will be displayed during the file
+transfer.  If False the progress dialog will show during the file
+transfers. The default is False.</comment>
+      <returntype>String</returntype>
+      <parameter>
+        <name>UseStealth</name>
+        <type>boolean</type>
+      </parameter>
+    </method>
+    <method>
+      <name DesignerName="SetStickyOn">_vvvvv7</name>
+      <comment>If set to True, the progress box will stay on the screen until
+the user taps the Done button, otherwise the progress box will close
+as soon as the transfer is complete. The default is False.</comment>
+      <returntype>String</returntype>
+      <parameter>
+        <name>MakeSticky</name>
+        <type>boolean</type>
+      </parameter>
+    </method>
+    <method>
+      <name DesignerName="SetText">_vvvvv0</name>
+      <comment>Used to set the Text of the Item's status display.
+NOTE: May be used for different language, etc.</comment>
+      <returntype>String</returntype>
+      <parameter>
+        <name>HeaderDownLoadText</name>
+        <type>String</type>
+      </parameter>
+      <parameter>
+        <name>HeaderUploadText</name>
+        <type>String</type>
+      </parameter>
+      <parameter>
+        <name>TotalProgressText</name>
+        <type>String</type>
+      </parameter>
+      <parameter>
+        <name>FileProgressText</name>
+        <type>String</type>
+      </parameter>
+      <parameter>
+        <name>ButtonCancelText</name>
+        <type>String</type>
+      </parameter>
+      <parameter>
+        <name>ButtonDoneText</name>
+        <type>String</type>
+      </parameter>
+    </method>
+    <method>
+      <name DesignerName="SetTextSize">_vvvvvv1</name>
+      <comment>Used to set the Text size of the Item's Text in the status dialog.
+NOTE: Passing 0 for any argument with leave that item unchanged</comment>
+      <returntype>String</returntype>
+      <parameter>
+        <name>HeaderTextSize</name>
+        <type>int</type>
+      </parameter>
+      <parameter>
+        <name>TotalProgressTextSize</name>
+        <type>int</type>
+      </parameter>
+      <parameter>
+        <name>FileProgressTextSize</name>
+        <type>int</type>
+      </parameter>
+      <parameter>
+        <name>CancelAndDoneTextSize</name>
+        <type>int</type>
+      </parameter>
+    </method>
+    <method>
+      <name DesignerName="UpLoadFile">_vvvvvv0</name>
+      <comment>Uploads a single file passed in FileToSend
+
+Example: UpLoadFile("/mnt/sdcard/pictures", "uploads/pictures", "vacation.jpg") </comment>
+      <returntype>String</returntype>
+      <parameter>
+        <name>LocalPath</name>
+        <type>String</type>
+      </parameter>
+      <parameter>
+        <name>ServerPath</name>
+        <type>String</type>
+      </parameter>
+      <parameter>
+        <name>FileToSend</name>
+        <type>String</type>
+      </parameter>
+    </method>
+    <method>
+      <name DesignerName="UploadFileSet">_vvvvvvv1</name>
+      <comment>Retrieves a list of files from the local device. The Files_Path_And_Mask() array should contain the full
+path to the local devices files. It will then upload these files to the server.
+Files_Path_And_Mask() array can contain one entry or however many is needed.
+Example:
+
+UploadFileSet("uploads/pictures/", Array As String("/mnt/pictures/VA*.jpg", "/mnt/sdcard/backups/contact*.dat"), False)</comment>
+      <returntype>String</returntype>
+      <parameter>
+        <name>ServerPath</name>
+        <type>String</type>
+      </parameter>
+      <parameter>
+        <name>Files_Path_And_Mask</name>
+        <type>String[]</type>
+      </parameter>
+      <parameter>
+        <name>DeleteFileFromLocalDevice</name>
+        <type>boolean</type>
+      </parameter>
+    </method>
+    <method>
+      <name DesignerName="WiFi_IsConnected">_wifi_isconnected</name>
+      <comment>Check if Wifi is connected
+Returns True if connected otherwise returns False</comment>
+      <returntype>boolean</returntype>
+    </method>
+  </class>
+  <version>1.06</version>
+  <author>Margret</author>
+</root>

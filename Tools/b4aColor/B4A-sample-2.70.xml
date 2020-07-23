@@ -1,0 +1,166 @@
+<SyntaxLanguage Key="Basic4android" LanguageDefinitionVersion="4.0" 
+	Secure="True" SyntaxLanguageTypeName="Dbasic.Lang, Basic4android"
+	xmlns="http://Basic4ppc.com//LanguageDefinition">
+
+	<!-- String Properties -->
+	<Properties>
+		<Property Key="Creator" Value="Anywhere Software" />
+		<Property Key="Copyright" Value="Copyright (c) 2005-2012 Anywhere Software.  All rights reserved." />
+	</Properties>
+
+	<!-- Highlighting Styles -->	
+	<Styles>
+		<Style Key="IdeBackground" ForeColor="#000040"/>
+		<Style Key="ContentDivider" ForeColor="#808080"/>
+		<Style Key="LineNumber" ForeColor="#00FF00"/>
+		<Style Key="ToolTipBackground" ForeColor="#CDB485"/>
+		<Style Key="ToolTipDefaultStyle" ForeColor="#000000" FontFamilyName="MS" FontSize="12" Bold="False"/>
+		<Style Key="DefaultStyle" ForeColor="#FFFF00" FontFamilyName="MS" FontSize="12" Bold="False"/>
+		<Style Key="GlobalVariablesStyle" ForeColor="#00FFFF" FontFamilyName="MS" FontSize="12" Bold="False"/>
+		<Style Key="ReservedWordStyle" ForeColor="#FFFFFF" FontFamilyName="MS" FontSize="12" Bold="False"/>
+		<Style Key="NumberStyle" ForeColor="#80FF80" FontFamilyName="MS" FontSize="12" Bold="False"/>
+		<Style Key="TypeWordStyle" ForeColor="#408080" FontFamilyName="MS" FontSize="12" Bold="True"/>
+		<Style Key="StringDefaultStyle" ForeColor="#E29116" FontFamilyName="MS" FontSize="12" Bold="False"/>
+		<Style Key="CommentDefaultStyle" ForeColor="#808080" FontFamilyName="MS" FontSize="12" Bold="False"/>
+		<Style Key="SelectionHighlight" ForeColor="#A6CAF0" FontFamilyName="MS" FontSize="12" Bold="False"/>
+		<Style Key="ReferenceHighlight" ForeColor="#00FFEF" FontFamilyName="MS" FontSize="12" Bold="False"/>
+		<Style Key="WarningColor" ForeColor="#FF0080"/>
+		<Style Key="ErrorColor" ForeColor="#FF0000"/>
+		<Style Key="UndeclaredIdentifier" ForeColor="#FF0000"/>
+		<Style Key="Annotation" ForeColor="#FF6103"/>
+		<Style Key="PreProcessorDirectiveKeywordStyle" Name="Pre-Processor Directive Keyword" ForeColor="Gray" />
+	</Styles>
+	<!-- States -->
+	<States>
+		<!-- Code -->
+		<State Key="DefaultState">
+			<!-- Patterns Groups -->
+			<PatternGroups>
+				<!-- Whitespace -->
+				<RegexPatternGroup TokenID="2" TokenKey="WhitespaceToken" PatternValue="{WhitespaceMacro}+" IsWhitespace="True" />
+				<!-- Line Terminators -->
+				<RegexPatternGroup TokenID="3" TokenKey="LineTerminatorToken" PatternValue="{LineTerminatorMacro}" IsWhitespace="True" />
+				<!-- Brackets -->
+				<ExplicitPatternGroup Key="OpenParenthesisPatternGroup" TokenKey="OpenParenthesisToken" PatternValue="(" EndBracket="CloseParenthesisPatternGroup" />
+				<ExplicitPatternGroup Key="CloseParenthesisPatternGroup" TokenKey="CloseParenthesisToken" PatternValue=")" StartBracket="OpenParenthesisPatternGroup" />
+				<!-- Content Divider Reserved Words -->
+				<ExplicitPatternGroup TokenKey="EndSubWordToken" Style = "ReservedWordStyle" PatternValue="End Sub"  IsContentDivider="True" CaseSensitivity="AutoCorrect" />
+				<RegexPatternGroup TokenKey="EndSubWordToken" Style="ReservedWordStyle" IsContentDivider="True">
+					<RegexPattern Value="End[ ]*Sub "/>
+				</RegexPatternGroup>
+				<ExplicitPatternGroup TokenKey="SubWordToken" Style = "ReservedWordStyle" PatternValue="Sub " CaseSensitivity="AutoCorrect" />
+
+				<!-- Continuation character -->
+				<ExplicitPatternGroup Key="ContinuationWordToken" TokenKey="ContinuationWordToken" Style="DefaultStyle" LookBehind="^|[^\.]" LookAhead="{NonWordMacro}|\z">
+					<ExplicitPatterns>
+						_
+					</ExplicitPatterns>
+				</ExplicitPatternGroup>
+				
+				<!-- Reserved Word Operators -->
+				<ExplicitPatternGroup TokenKey="ReservedWordOperatorToken" Style="ReservedWordStyle" LookBehind="^|[^\.]" LookAhead="{NonWordMacro}|\z" CaseSensitivity="AutoCorrect" TokenID="1">
+					<ExplicitPatterns>
+						AND OR Mod
+					</ExplicitPatterns>
+				</ExplicitPatternGroup>
+				<!-- Reserved Words -->
+				<ExplicitPatternGroup Key="ReservedWordToken" TokenKey="ReservedWordToken" Style="ReservedWordStyle" LookBehind="^|[^\.]" LookAhead="{NonWordMacro}|\z" CaseSensitivity="AutoCorrect" TokenID="1">
+					<ExplicitPatterns>
+						Try Catch Dim While Until Step
+						If Then Else End For Next Do Each In
+						Type As Loop Return Array To Case ConfigureHomeWidget
+						Private Public
+					</ExplicitPatterns>
+				</ExplicitPatternGroup>
+
+				<!-- TypesWords -->
+				<ExplicitPatternGroup Key="TypeWordToken" TokenKey="TypeWordToken" Style="TypeWordStyle" LookBehind="^|[^\.]" LookAhead="{NonWordMacro}|\z" CaseSensitivity="AutoCorrect" TokenID="1">
+					<ExplicitPatterns>
+
+					</ExplicitPatterns>
+				</ExplicitPatternGroup>
+				<RegexPatternGroup TokenID="4" TokenKey="IdentifierToken" PatternValue="{AlphaMacro}({WordMacro})*" />
+				<!-- Numbers -->
+				<RegexPatternGroup TokenID="5" TokenKey="RealNumberToken" Style="NumberStyle" LookAhead="{NonWordMacro}|\z">
+					<RegexPattern Value="{DigitMacro}* \. {DigitMacro}+ ([Ee] [\+\-]? {DigitMacro}+)? (dip|%x|%y)?" />
+					<RegexPattern Value="{DigitMacro}+ [Ee] [\+\-]? {DigitMacro}+" />
+				</RegexPatternGroup>
+				<RegexPatternGroup TokenKey="IntegerNumberToken" Style="NumberStyle" 
+				PatternValue="(0[Xx])([0123456789aAbBcCdDeEfF])+ | ({DigitMacro}+ (dip|%x|%y)?)" LookAhead="{NonWordMacro}|\z" />
+			</PatternGroups>
+			<!-- Child States -->
+			<ChildStates>
+				<ChildState Key="StringState" />
+				<ChildState Key="CommentState" />
+				<ChildState Key="PreProcessorDirectiveState" />
+				<ChildState Key="AnnotationState" />
+			</ChildStates>
+		</State>
+
+		<!-- Strings -->
+		<State Key="StringState" TokenKey="StringDefaultToken" Style="StringDefaultStyle">
+			<!-- Scopes -->
+			<Scopes>
+				<Scope>
+					<ExplicitPatternGroup Type="StartScope" TokenKey="StringStartToken" PatternValue="&quot;" />
+					<RegexPatternGroup Type="EndScope" TokenKey="StringEndToken" PatternValue="[\&quot;\n]" />
+				</Scope>
+			</Scopes>
+			<!-- Patterns Groups -->
+			<PatternGroups>
+				<ExplicitPatternGroup TokenKey="StringEscapedCharacterToken" PatternValue="&quot;&quot;" />
+				<RegexPatternGroup TokenKey="StringDefaultToken2" PatternValue="[^\&quot;\n]+" />
+			</PatternGroups>
+		</State>
+
+		<!-- Comments -->
+		<State Key="CommentState" TokenKey="CommentDefaultToken" Style="CommentDefaultStyle">
+			<!-- Scopes -->
+			<Scopes>
+				<Scope>
+					<ExplicitPatternGroup Type="StartScope" TokenKey="CommentStartToken" Style="CommentDefaultStyle" PatternValue="'" />
+					<RegexPatternGroup Type="EndScope" TokenKey="CommentEndToken" Style="CommentDefaultStyle" PatternValue="{LineTerminatorMacro}" IsWhitespace="True" />
+				</Scope>
+			</Scopes>
+			<!-- Patterns Groups -->
+			<PatternGroups>
+				<RegexPatternGroup TokenKey="CommentDefaultToken" PatternValue="{NonLineTerminatorMacro}+" />
+			</PatternGroups>
+		</State>
+
+		<!-- Pre-Processor Directives -->
+		<State Key="PreProcessorDirectiveState" TokenKey="PreProcessorDirectiveDefaultToken" Style="DefaultStyle">
+			<!-- Scopes -->
+			<Scopes>
+				<Scope>
+					<ExplicitPatternGroup Type="StartScope" TokenKey="RegionPreProcessorDirectiveStartToken" Style="PreProcessorDirectiveKeywordStyle" PatternValue="#Region" LookAhead="{NonWordMacro}|\z" CaseSensitivity="AutoCorrect" />
+					<RegexPatternGroup Type="EndScope" TokenKey="PreProcessorDirectiveEndToken" Style="DefaultStyle" PatternValue="{LineTerminatorMacro}" IsWhitespace="True" />	
+				</Scope>
+				<Scope>
+					<ExplicitPatternGroup Type="StartScope" TokenKey="EndRegionPreProcessorDirectiveStartToken" Style="PreProcessorDirectiveKeywordStyle" PatternValue="#End Region" LookAhead="{NonWordMacro}|\z" CaseSensitivity="AutoCorrect" />
+					<RegexPatternGroup Type="EndScope" TokenKey="PreProcessorDirectiveEndToken" Style="DefaultStyle" PatternValue="{LineTerminatorMacro}" IsWhitespace="True" />	
+				</Scope>
+			</Scopes>
+			<!-- Patterns Groups -->
+			<PatternGroups>
+				<RegexPatternGroup TokenKey="PreProcessorDirectiveDefaultToken" PatternValue="{NonLineTerminatorMacro}+" />
+			</PatternGroups>
+		</State>
+		
+		<State Key="AnnotationState" TokenKey="AnnotationStart" Style="Annotation">
+			<!-- Scopes -->
+			<Scopes>
+				<Scope>
+					<RegexPatternGroup Type="StartScope" TokenKey="AnnotationStart" Style="Annotation" LookAhead="{NonWordMacro}|\z" PatternValue="#\w+" />
+					<RegexPatternGroup Type="EndScope" TokenKey="AnnotationStart" Style="DefaultStyle" PatternValue="{LineTerminatorMacro}" IsWhitespace="True" />	
+				</Scope>
+			</Scopes>
+			<!-- Patterns Groups -->
+			<PatternGroups>
+				<RegexPatternGroup TokenKey="AnnotationToken" Style="StringDefaultStyle" PatternValue="{NonLineTerminatorMacro}+" />
+			</PatternGroups>
+		</State>	
+		
+	</States>
+		
+</SyntaxLanguage>

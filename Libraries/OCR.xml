@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <doclet-version-NOT-library-version>1.00</doclet-version-NOT-library-version>
+  <dependsOn>http</dependsOn>
+  <dependsOn>json</dependsOn>
+  <class b4a_type="StaticCode">
+    <name>njdude.ocr.library.multipartpost</name>
+    <shortname>MultipartPost</shortname>
+    <owner>activity</owner>
+    <objectwrapper>java.lang.Class</objectwrapper>
+    <method>
+      <name DesignerName="CreatePostRequest">_createpostrequest</name>
+      <returntype>anywheresoftware.b4a.http.HttpClientWrapper.HttpUriRequestWrapper</returntype>
+      <parameter>
+        <name>ba</name>
+        <type>anywheresoftware.b4a.BA</type>
+      </parameter>
+      <parameter>
+        <name>URL</name>
+        <type>String</type>
+      </parameter>
+      <parameter>
+        <name>NameValues</name>
+        <type>anywheresoftware.b4a.objects.collections.Map</type>
+      </parameter>
+      <parameter>
+        <name>Files</name>
+        <type>anywheresoftware.b4a.objects.collections.List</type>
+      </parameter>
+    </method>
+    <method>
+      <name>process_globals</name>
+      <returntype>void</returntype>
+    </method>
+  </class>
+  <class>
+    <name>njdude.ocr.library.ocr</name>
+    <shortname>OCR</shortname>
+    <owner>process</owner>
+    <permission>android.permission.INTERNET</permission>
+    <permission>android.permission.WRITE_EXTERNAL_STORAGE</permission>
+    <event>ExtractedText_Response(OCRData As Map)</event>
+    <event>ErrorMessage(Message As String)</event>
+    <method>
+      <name>IsInitialized</name>
+      <comment>Tests whether the object has been initialized.</comment>
+      <returntype>boolean</returntype>
+    </method>
+    <method>
+      <name DesignerName="ExtractFromImage">_extractfromimage</name>
+      <comment>FileName: Path and file name of the image to scan.
+URL: A publicly accessible HTTP URL from which the image can be retrieved.
+ImageType: One of the following values:
+Photo (Use to recognize text in a document that has been digitized with variable light, such as through a mobile phone camera) [DEFAULT].
+Scan (Use to recognize text in a document that has been digitized with constant lighting, such as through a flatbed scanner).
+Scene (Use to recognize text in a scene, for example signs and billboards in a landscape).
+Subtitle (Use to recognize text superimposed on an image, such as TV subtitles).
+Timeout: Time in milliseconds.</comment>
+      <returntype>String</returntype>
+      <parameter>
+        <name>FileName</name>
+        <type>String</type>
+      </parameter>
+      <parameter>
+        <name>URL</name>
+        <type>String</type>
+      </parameter>
+      <parameter>
+        <name>ImageType</name>
+        <type>String</type>
+      </parameter>
+      <parameter>
+        <name>Timeout</name>
+        <type>int</type>
+      </parameter>
+    </method>
+    <method>
+      <name DesignerName="Initialize">_initialize</name>
+      <comment>Initializes the OCR library.
+Module: Me (Required).
+EventName: Prefix to be used on the event responses.
+APIKey: Your API key.</comment>
+      <returntype>String</returntype>
+      <parameter>
+        <name>ba</name>
+        <type>anywheresoftware.b4a.BA</type>
+      </parameter>
+      <parameter>
+        <name>Module</name>
+        <type>Object</type>
+      </parameter>
+      <parameter>
+        <name>EventName</name>
+        <type>String</type>
+      </parameter>
+      <parameter>
+        <name>APIKey</name>
+        <type>String</type>
+      </parameter>
+    </method>
+  </class>
+  <class>
+    <name>njdude.ocr.library.multipartpost._filedata</name>
+    <shortname>FileData</shortname>
+    <owner>process</owner>
+    <method>
+      <name>Initialize</name>
+      <comment>Initializes the fields to their default value.</comment>
+      <returntype>void</returntype>
+    </method>
+    <field>
+      <name>IsInitialized</name>
+      <comment>Tests whether the object has been initialized.</comment>
+      <returntype>boolean</returntype>
+    </field>
+    <field>
+      <name>Directory</name>
+      <returntype>String</returntype>
+    </field>
+    <field>
+      <name>FileName</name>
+      <returntype>String</returntype>
+    </field>
+    <field>
+      <name>KeyName</name>
+      <returntype>String</returntype>
+    </field>
+    <field>
+      <name>ContentType</name>
+      <returntype>String</returntype>
+    </field>
+  </class>
+  <version>1.2</version>
+  <author>NJDude</author>
+</root>

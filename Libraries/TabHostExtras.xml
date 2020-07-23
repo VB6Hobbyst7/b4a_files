@@ -1,0 +1,313 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root>
+    <doclet-version-NOT-library-version>1.02</doclet-version-NOT-library-version>
+    <class>
+        <name>uk.co.martinpearman.b4a.tabhostextras.TabHostExtras</name>
+        <shortname>TabHostExtras</shortname>
+        <owner>process</owner>
+        <method>
+            <name>getTabHeight</name>
+            <comment>Get the height (in pixels) of the TabIndicators in tabHost1</comment>
+            <returntype>int</returntype>
+            <parameter>
+                <name>tabHost1</name>
+                <type>android.widget.TabHost</type>
+            </parameter>
+        </method>
+        <method>
+            <name>getTabVisibility</name>
+            <comment>Get the visibility of TabIndicators #index in tabHost1</comment>
+            <returntype>boolean</returntype>
+            <parameter>
+                <name>tabHost1</name>
+                <type>android.widget.TabHost</type>
+            </parameter>
+            <parameter>
+                <name>index</name>
+                <type>int</type>
+            </parameter>
+        </method>
+        <method>
+            <name>setTabGradientDrawable</name>
+            <comment>Set a GradientDrawable as the background on all TabIndicators in tabHost1
+ All fours corner radii of the GradientDrawable are set to the value of cornerRadius (in pixels)</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>tabHost1</name>
+                <type>android.widget.TabHost</type>
+            </parameter>
+            <parameter>
+                <name>orientation</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>color1</name>
+                <type>int</type>
+            </parameter>
+            <parameter>
+                <name>color2</name>
+                <type>int</type>
+            </parameter>
+            <parameter>
+                <name>cornerRadius</name>
+                <type>float</type>
+            </parameter>
+        </method>
+        <method>
+            <name>setTabEnabled2</name>
+            <comment>Enable or disable TabIndicator #index in tabHost1</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>tabHost1</name>
+                <type>android.widget.TabHost</type>
+            </parameter>
+            <parameter>
+                <name>enabled</name>
+                <type>boolean</type>
+            </parameter>
+            <parameter>
+                <name>index</name>
+                <type>int</type>
+            </parameter>
+        </method>
+        <method>
+            <name>setTabVisibility2</name>
+            <comment>Set the visibility of TabIndicator #index in tabHost1</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>tabHost1</name>
+                <type>android.widget.TabHost</type>
+            </parameter>
+            <parameter>
+                <name>visible</name>
+                <type>boolean</type>
+            </parameter>
+            <parameter>
+                <name>index</name>
+                <type>int</type>
+            </parameter>
+        </method>
+        <method>
+            <name>getTabHostPadding</name>
+            <comment>Get the layout padding of tabHost1 container View
+ Returns a Rect object containing pixel values</comment>
+            <returntype>anywheresoftware.b4a.objects.drawable.CanvasWrapper.RectWrapper</returntype>
+            <parameter>
+                <name>tabHost1</name>
+                <type>android.widget.TabHost</type>
+            </parameter>
+        </method>
+        <method>
+            <name>setTabTitle</name>
+            <comment>Set the Title text of TabIndicator #TabIndex in tabHost1</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>tabHost1</name>
+                <type>android.widget.TabHost</type>
+            </parameter>
+            <parameter>
+                <name>Title</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>TabIndex</name>
+                <type>int</type>
+            </parameter>
+        </method>
+        <method>
+            <name>setTabHostPadding</name>
+            <comment>Set the layout padding (in dip) of tabHost1 container View</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>tabHost1</name>
+                <type>android.widget.TabHost</type>
+            </parameter>
+            <parameter>
+                <name>left</name>
+                <type>int</type>
+            </parameter>
+            <parameter>
+                <name>top</name>
+                <type>int</type>
+            </parameter>
+            <parameter>
+                <name>right</name>
+                <type>int</type>
+            </parameter>
+            <parameter>
+                <name>bottom</name>
+                <type>int</type>
+            </parameter>
+        </method>
+        <method>
+            <name>getTabTextSize</name>
+            <comment>Get the text size (in pixels) of all TabIndicators</comment>
+            <returntype>float</returntype>
+            <parameter>
+                <name>tabHost1</name>
+                <type>android.widget.TabHost</type>
+            </parameter>
+        </method>
+        <method>
+            <name>setTabContentViewPadding</name>
+            <comment>Set the layout padding (in dip) of tabHost1 TabContentView</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>tabHost1</name>
+                <type>android.widget.TabHost</type>
+            </parameter>
+            <parameter>
+                <name>left</name>
+                <type>int</type>
+            </parameter>
+            <parameter>
+                <name>top</name>
+                <type>int</type>
+            </parameter>
+            <parameter>
+                <name>right</name>
+                <type>int</type>
+            </parameter>
+            <parameter>
+                <name>bottom</name>
+                <type>int</type>
+            </parameter>
+        </method>
+        <method>
+            <name>setTabEnabled</name>
+            <comment>Enable or disable all TabIndicators in tabHost1</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>tabHost1</name>
+                <type>android.widget.TabHost</type>
+            </parameter>
+            <parameter>
+                <name>enabled</name>
+                <type>boolean</type>
+            </parameter>
+        </method>
+        <method>
+            <name>setTabVisibility</name>
+            <comment>Set the visibility of all TabIndicators in tabHost1</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>tabHost1</name>
+                <type>android.widget.TabHost</type>
+            </parameter>
+            <parameter>
+                <name>visible</name>
+                <type>boolean</type>
+            </parameter>
+        </method>
+        <method>
+            <name>setTabTextSize</name>
+            <comment>Set the text size of all TabIndicators
+TextSize is assumed to be in units of dip.</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>tabHost1</name>
+                <type>android.widget.TabHost</type>
+            </parameter>
+            <parameter>
+                <name>TextSize</name>
+                <type>float</type>
+            </parameter>
+        </method>
+        <method>
+            <name>setTabHeight</name>
+            <comment>Set the height (in pixels) of all TabIndicators in tabHost1</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>tabHost1</name>
+                <type>android.widget.TabHost</type>
+            </parameter>
+            <parameter>
+                <name>tabHeight</name>
+                <type>int</type>
+            </parameter>
+        </method>
+        <method>
+            <name>setTabTextColor</name>
+            <comment>Set the color to be used for all tab indicators text.
+This color will be used for all tab indicators regardless of their selected state.</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>tabHost1</name>
+                <type>android.widget.TabHost</type>
+            </parameter>
+            <parameter>
+                <name>Color</name>
+                <type>int</type>
+            </parameter>
+        </method>
+        <method>
+            <name>getTabContentViewPadding</name>
+            <comment>Get the layout padding of tabHost1 TabContentView
+ Returns a Rect object containing pixel values</comment>
+            <returntype>anywheresoftware.b4a.objects.drawable.CanvasWrapper.RectWrapper</returntype>
+            <parameter>
+                <name>tabHost1</name>
+                <type>android.widget.TabHost</type>
+            </parameter>
+        </method>
+        <method>
+            <name>getTabEnabled</name>
+            <comment>Get the Enabled state of TabIndicator #index in tabHost1</comment>
+            <returntype>boolean</returntype>
+            <parameter>
+                <name>tabHost1</name>
+                <type>android.widget.TabHost</type>
+            </parameter>
+            <parameter>
+                <name>index</name>
+                <type>int</type>
+            </parameter>
+        </method>
+        <method>
+            <name>setTabGradientDrawable2</name>
+            <comment>Set a GradientDrawable as the background on all TabIndicators in tabHost1
+ Corner radii of the GradientDrawable are set individually (in pixels) based upon the number of elements in the array cornerRadius:
+ 1 element defines all corner radii
+ 2 elements define corner radii in order top left and right, bottom left and right
+ 4 elements define corner radii in order top-left, top-right, bottom-right, bottom-left</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>tabHost1</name>
+                <type>android.widget.TabHost</type>
+            </parameter>
+            <parameter>
+                <name>orientation</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>color1</name>
+                <type>int</type>
+            </parameter>
+            <parameter>
+                <name>color2</name>
+                <type>int</type>
+            </parameter>
+            <parameter>
+                <name>cornerRadius</name>
+                <type>float[]</type>
+            </parameter>
+        </method>
+        <method>
+            <name>setTabTextColorStateList</name>
+            <comment>Set a ColorStateList to be used for the text color of all tab indicators.
+The ColorStateList must be defined in XML in your application Objects/res/drawable folder.
+Color for selected and not selected tab state can be defined.</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>tabHost1</name>
+                <type>android.widget.TabHost</type>
+            </parameter>
+            <parameter>
+                <name>ColorStateListName</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+    </class>
+    <version>2.0</version>
+    <author>Martin Pearman</author>
+</root>

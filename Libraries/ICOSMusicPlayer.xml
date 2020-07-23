@@ -1,0 +1,325 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root>
+    <doclet-version-NOT-library-version>1.01</doclet-version-NOT-library-version>
+    <class>
+        <name>giuseppe.salvi.icos.library.ICOSMusicPlayer</name>
+        <shortname>ICOSMusicPlayer</shortname>
+        <owner>process</owner>
+        <event>Complete</event>
+        <method>
+            <name>Initialize</name>
+            <comment>Initialize the Object.
+ You Should Initialize Before Load Any Sounds.
+ Example:
+ Dim mp as ICOSMusicPlayer
+ mp.Initialize("mp")</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>ba</name>
+                <type>anywheresoftware.b4a.BA</type>
+            </parameter>
+            <parameter>
+                <name>EventName</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+        <method>
+            <name>PlayMusicFromFile</name>
+            <comment>Load any media file and Play. 
+ Example:
+ Dim Label1 as Label
+ Label1.Text = mp.PlayMusicFromFile("sdcard/media/somefile.mp3",mp.Get_Title)
+ or
+ mp.PlayMusicFromFile("sdcard/media/somefile.mp3",0,True)
+ type is any information about any media file, type 0 = null.</comment>
+            <returntype>java.lang.String</returntype>
+            <parameter>
+                <name>FileName</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>type</name>
+                <type>int</type>
+            </parameter>
+        </method>
+        <method>
+            <name>IsPlaying</name>
+            <comment>Return true if ICOSMusicPlayer is currently playig</comment>
+            <returntype>boolean</returntype>
+        </method>
+        <method>
+            <name>Play</name>
+            <comment>Play or resume the media you loaded before</comment>
+            <returntype>void</returntype>
+        </method>
+        <method>
+            <name>PlayMusicFromAsset</name>
+            <comment>Load any media file and Play. 
+ Example:
+ Dim Label1 as Label
+ Label1.Text = mp.PlayMusicFromFile("sdcard/media/somefile.mp3",mp.Get_Title)
+ or
+ mp.PlayMusicFromFile("somefile.mp3",0,True)
+ type is any information about any media file, type 0 = null.</comment>
+            <returntype>java.lang.String</returntype>
+            <parameter>
+                <name>FileName</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>type</name>
+                <type>int</type>
+            </parameter>
+        </method>
+        <method>
+            <name>ConvertTimeToSeconds</name>
+            <comment>Give you the real length in MM:SS
+ Example:
+ Sub Process_Globals
+ Dim timer1 As Timer
+ Dim mp As ICOSMusicPlayer
+ End Sub
+ 
+ Sub Globals
+ Dim label1 As Label
+ End Sub
+ 
+ Sub Activity_Create(FirstTime As Boolean)
+ timer1.Initialize("timer1",1000)
+ timer1.Enabled=True
+ mp.Initialize
+ mp.PlayMusicFromFile("sdcard/media/1.mp3",0,True)
+ End Sub
+ 
+ Sub Activity_Resume
+ If mp.IsPlaying Then
+ mp.Play
+ timer1.Enabled = True
+ timer1_tick 
+ End If
+ End Sub
+ 
+ Sub timer1_Tick
+ If mp.IsPlaying Then
+ Label1.text="Position: " &amp; mp.ConvertTimeToMinuts &amp; " - " &amp;  ConvertTimeToSeconds    ( "Position: 3:28 - 0:00" )
+ End If
+ End Sub</comment>
+            <returntype>java.lang.String</returntype>
+        </method>
+        <method>
+            <name>Stop</name>
+            <comment>Stop Playing.
+ You must load the media before to Play it again</comment>
+            <returntype>void</returntype>
+        </method>
+        <method>
+            <name>Release</name>
+            <comment>Release all resources
+ Allocated by ICOSMusicPlayer</comment>
+            <returntype>void</returntype>
+        </method>
+        <method>
+            <name>Pause</name>
+            <comment>Pause the current playback.
+ You can resume it from the current position
+ at any time by calling mp.Play</comment>
+            <returntype>void</returntype>
+        </method>
+        <method>
+            <name>setSetVolume</name>
+            <comment>Set the volume for each channell.
+ The value should be between 0 to 100.
+ Example:
+ mp.SetVolume(100,100)</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>Left</name>
+                <type>float</type>
+            </parameter>
+            <parameter>
+                <name>Right</name>
+                <type>float</type>
+            </parameter>
+        </method>
+        <method>
+            <name>ConvertTimeToMinuts</name>
+            <comment>Give you the real length in MM:SS
+ Example:
+ Sub Process_Globals
+ Dim timer1 As Timer
+ Dim mp As ICOSMusicPlayer
+ End Sub
+ 
+ Sub Globals
+ Dim label1 As Label
+ End Sub
+ 
+ Sub Activity_Create(FirstTime As Boolean)
+ timer1.Initialize("timer1",1000)
+ timer1.Enabled=True
+ mp.Initialize
+ mp.PlayMusicFromFile("sdcard/media/1.mp3",0,True)
+ End Sub
+ 
+ Sub Activity_Resume
+ If mp.IsPlaying Then
+ mp.Play
+ timer1.Enabled = True
+ timer1_tick 
+ End If
+ End Sub
+ 
+ Sub timer1_Tick
+ If mp.IsPlaying Then
+ Label1.text="Position: " &amp; mp.ConvertTimeToMinuts &amp; " - " &amp;  ConvertTimeToSeconds    ( "Position: 3:28 - 0:00" )
+ End If
+ End Sub</comment>
+            <returntype>java.lang.String</returntype>
+        </method>
+        <method>
+            <name>PlayRingtone</name>
+            <comment>TYPE_RINGTONE
+	TYPE_NOTIFICATION
+	TYPE_ALARM
+	TYPE_ALL
+ Example:
+ mp.PlayRingtone(mp.Type_Ringtone)</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>type</name>
+                <type>int</type>
+            </parameter>
+        </method>
+        <property>
+            <name>Duration</name>
+            <returntype>int</returntype>
+            <comment>Return the total value of the loaded media in milliSeconds</comment>
+        </property>
+        <property>
+            <name>Position</name>
+            <returntype>int</returntype>
+            <parameter>
+                <name>value</name>
+                <type>int</type>
+            </parameter>
+            <comment>Get Or Set The Current Position In MilliSeconds</comment>
+        </property>
+        <property>
+            <name>Version</name>
+            <returntype>double</returntype>
+            <comment>Return the version of this library</comment>
+        </property>
+        <field>
+            <name>Get_Date</name>
+            <comment></comment>
+            <returntype>int</returntype>
+        </field>
+        <field>
+            <name>Get_Album_Artist</name>
+            <comment></comment>
+            <returntype>int</returntype>
+        </field>
+        <field>
+            <name>Get_Bitrate</name>
+            <comment></comment>
+            <returntype>int</returntype>
+        </field>
+        <field>
+            <name>Get_Author_Name</name>
+            <comment></comment>
+            <returntype>int</returntype>
+        </field>
+        <field>
+            <name>Get_Title</name>
+            <comment></comment>
+            <returntype>int</returntype>
+        </field>
+        <field>
+            <name>Get_Genre</name>
+            <comment></comment>
+            <returntype>int</returntype>
+        </field>
+        <field>
+            <name>Get_Location</name>
+            <comment></comment>
+            <returntype>int</returntype>
+        </field>
+        <field>
+            <name>Get_Mimetype</name>
+            <comment></comment>
+            <returntype>int</returntype>
+        </field>
+        <field>
+            <name>Get_Duration</name>
+            <comment></comment>
+            <returntype>int</returntype>
+        </field>
+        <field>
+            <name>Type_All</name>
+            <comment></comment>
+            <returntype>int</returntype>
+        </field>
+        <field>
+            <name>Get_Writter</name>
+            <comment></comment>
+            <returntype>int</returntype>
+        </field>
+        <field>
+            <name>Get_Artist_Name</name>
+            <comment></comment>
+            <returntype>int</returntype>
+        </field>
+        <field>
+            <name>Get_Composer_Name</name>
+            <comment></comment>
+            <returntype>int</returntype>
+        </field>
+        <field>
+            <name>Get_Compilation</name>
+            <comment></comment>
+            <returntype>int</returntype>
+        </field>
+        <field>
+            <name>Get_Disc_Number</name>
+            <comment></comment>
+            <returntype>int</returntype>
+        </field>
+        <field>
+            <name>Type_Notification</name>
+            <comment></comment>
+            <returntype>int</returntype>
+        </field>
+        <field>
+            <name>Get_Cd_Track_Number</name>
+            <comment></comment>
+            <returntype>int</returntype>
+        </field>
+        <field>
+            <name>Type_Alarm</name>
+            <comment></comment>
+            <returntype>int</returntype>
+        </field>
+        <field>
+            <name>Get_Album_Title</name>
+            <comment></comment>
+            <returntype>int</returntype>
+        </field>
+        <field>
+            <name>Get_Year</name>
+            <comment></comment>
+            <returntype>int</returntype>
+        </field>
+        <field>
+            <name>Get_Number_Tracks</name>
+            <comment></comment>
+            <returntype>int</returntype>
+        </field>
+        <field>
+            <name>Type_Ringtone</name>
+            <comment></comment>
+            <returntype>int</returntype>
+        </field>
+    </class>
+    <version>1.4</version>
+    <author>Giuseppe Salvi</author>
+</root>

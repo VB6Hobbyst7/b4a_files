@@ -1,0 +1,337 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root>
+    <doclet-version-NOT-library-version>1.02</doclet-version-NOT-library-version>
+    <class>
+        <name>b4a.flm.classloader.ClassLoaderUtils</name>
+        <shortname>ClassLoaderUtils</shortname>
+        <owner>process</owner>
+        <method>
+            <name>CreatePrivateDir</name>
+            <comment>Creates a private directory in the application directory where only the application can write.
+Returns the path of this directory.</comment>
+            <returntype>java.lang.String</returntype>
+            <parameter>
+                <name>DirName</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+        <method>
+            <name>GetErrorMsg</name>
+            <comment>Returns the last error message, if any.</comment>
+            <returntype>java.lang.String</returntype>
+        </method>
+        <method>
+            <name>GetClassListFrom</name>
+            <comment>Returns the list of class names of the DEX file contained in the specified APK/JAR file.
+Returns Null if an error occurred. You can retrieve the error text with GetErrorMsg.</comment>
+            <returntype>anywheresoftware.b4a.objects.collections.List</returntype>
+            <parameter>
+                <name>FilePath</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+        <method>
+            <name>GetBA</name>
+            <comment>Gets the BA instance that may be required by some methods.</comment>
+            <returntype>anywheresoftware.b4a.BA</returntype>
+            <parameter>
+                <name>ba</name>
+                <type>anywheresoftware.b4a.BA</type>
+            </parameter>
+        </method>
+        <method>
+            <name>GetSignatures</name>
+            <comment>Returns an array with the signatures of the given APK/JAR file.
+Returns Null if an error occurred. You can retrieve the error text with GetErrorMsg.</comment>
+            <returntype>java.lang.String[]</returntype>
+            <parameter>
+                <name>FilePath</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+        <method>
+            <name>CheckSignatures</name>
+            <comment>Returns True if the signatures of this application match the signatures of the given APK/JAR file.
+Returns False if an error occurred. You can retrieve the error text with GetErrorMsg.</comment>
+            <returntype>boolean</returntype>
+            <parameter>
+                <name>FilePath</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+    </class>
+    <class>
+        <name>b4a.flm.classloader.ClassLoader</name>
+        <shortname>ClassLoader</shortname>
+        <owner>process</owner>
+        <method>
+            <name>CleanOptDir</name>
+            <comment>Removes all files in the directory where the optimized DEX files are written.</comment>
+            <returntype>void</returntype>
+        </method>
+        <method>
+            <name>Initialize</name>
+            <comment>Initializes the class loader and caches the optimized DEX file. Does not check the signatures of the given APK/JAR file.
+Returns True if the operation succeeded.
+FilePath: Path to the APK/JAR file containing a classes.dex file.
+OptDir: Directory where the optimized DEX file will be written. Should be created with ClassLoaderUtils.CreatePrivateDir.
+NativeDir: Directory where the native files (.so) are stored. Can be Null.</comment>
+            <returntype>boolean</returntype>
+            <parameter>
+                <name>FilePath</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>OptDir</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>NativeDir</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+        <method>
+            <name>LoadClass</name>
+            <comment>Loads and returns the class with the specified name.
+Returns Null if an error occurred. You can retrieve the error text with ClassLoaderUtils.GetErrorMsg.</comment>
+            <returntype>b4a.flm.classloader.ClassLClass</returntype>
+            <parameter>
+                <name>ClassName</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+        <method>
+            <name>InitializeWithCheck</name>
+            <comment>Initializes the class loader and caches the optimized DEX file. Checks whether the signatures of the application match the signatures of the given APK/JAR file.
+Returns True if the operation succeeded.
+FilePath: Path to the APK/JAR file containing a classes.dex file.
+OptDir: Directory where the optimized DEX file will be written. Should be created with ClassLoaderUtils.CreatePrivateDir.
+NativeDir: Directory where the native files (.so) are stored. Can be Null.</comment>
+            <returntype>boolean</returntype>
+            <parameter>
+                <name>FilePath</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>OptDir</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>NativeDir</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+        <method>
+            <name>IsInitialized</name>
+            <comment></comment>
+            <returntype>boolean</returntype>
+        </method>
+    </class>
+    <class>
+        <name>b4a.flm.classloader.ClassLMethod</name>
+        <shortname>ClassLMethod</shortname>
+        <owner>process</owner>
+        <method>
+            <name>RunStaticMethod</name>
+            <comment>Invokes the underlying static method with the specified parameters and returns the result of the method invocation, if any.
+Throws an exception when an error occurs.</comment>
+            <returntype>java.lang.Object</returntype>
+            <parameter>
+                <name>Params</name>
+                <type>java.lang.Object[]</type>
+            </parameter>
+        </method>
+        <method>
+            <name>IsStatic</name>
+            <comment>Returns whether this method is static.</comment>
+            <returntype>boolean</returntype>
+        </method>
+        <method>
+            <name>RunMethod</name>
+            <comment>Invokes the underlying method on the specified object with the specified parameters and returns the result of the method invocation, if any.
+Throws an exception when an error occurs.</comment>
+            <returntype>java.lang.Object</returntype>
+            <parameter>
+                <name>Instance</name>
+                <type>java.lang.Object</type>
+            </parameter>
+            <parameter>
+                <name>Params</name>
+                <type>java.lang.Object[]</type>
+            </parameter>
+        </method>
+        <property>
+            <name>Name</name>
+            <returntype>java.lang.String</returntype>
+            <comment>Returns the short name of this method.</comment>
+        </property>
+        <property>
+            <name>ReturnType</name>
+            <returntype>java.lang.String</returntype>
+            <comment>Gets the type of the object returned by this method.</comment>
+        </property>
+        <property>
+            <name>Declaration</name>
+            <returntype>java.lang.String</returntype>
+            <comment>Returns a string describing this method, including type parameters.</comment>
+        </property>
+        <property>
+            <name>ParameterTypes</name>
+            <returntype>java.lang.String[]</returntype>
+            <comment>Returns an array of the parameter types of this method, in declaration order.</comment>
+        </property>
+        <property>
+            <name>ClassName</name>
+            <returntype>java.lang.String</returntype>
+            <comment>Returns the complete name of the class that declares this method.</comment>
+        </property>
+    </class>
+    <class>
+        <name>b4a.flm.classloader.ClassLField</name>
+        <shortname>ClassLField</shortname>
+        <owner>process</owner>
+        <method>
+            <name>GetStaticValue</name>
+            <comment>Returns the value of the underlying static field. 
+Throws an exception when an error occurs.</comment>
+            <returntype>java.lang.Object</returntype>
+        </method>
+        <method>
+            <name>GetValue</name>
+            <comment>Returns the value of the underlying field for the specified object. 
+Throws an exception when an error occurs.</comment>
+            <returntype>java.lang.Object</returntype>
+            <parameter>
+                <name>Instance</name>
+                <type>java.lang.Object</type>
+            </parameter>
+        </method>
+        <method>
+            <name>IsStatic</name>
+            <comment>Returns whether this field is static.</comment>
+            <returntype>boolean</returntype>
+        </method>
+        <property>
+            <name>Name</name>
+            <returntype>java.lang.String</returntype>
+            <comment>Returns the short name of this field.</comment>
+        </property>
+        <property>
+            <name>Type</name>
+            <returntype>java.lang.String</returntype>
+            <comment>Returns the declared type for this field.</comment>
+        </property>
+        <property>
+            <name>Declaration</name>
+            <returntype>java.lang.String</returntype>
+            <comment>Returns a string describing this field, including its type.</comment>
+        </property>
+        <property>
+            <name>ClassName</name>
+            <returntype>java.lang.String</returntype>
+            <comment>Returns the complete name of the class that declares this field.</comment>
+        </property>
+    </class>
+    <class>
+        <name>b4a.flm.classloader.ClassLConstructor</name>
+        <shortname>ClassLConstructor</shortname>
+        <owner>process</owner>
+        <method>
+            <name>CreateInstance</name>
+            <comment>Creates a new instance of the class with this constructor and the specified parameters.
+Returns Null if an error occurred. You can retrieve the error text with ClassLoaderUtils.GetErrorMsg.</comment>
+            <returntype>java.lang.Object</returntype>
+            <parameter>
+                <name>Params</name>
+                <type>java.lang.Object[]</type>
+            </parameter>
+        </method>
+        <property>
+            <name>Name</name>
+            <returntype>java.lang.String</returntype>
+            <comment>Returns the short name of this constructor.</comment>
+        </property>
+        <property>
+            <name>Declaration</name>
+            <returntype>java.lang.String</returntype>
+            <comment>Returns a string describing this constructor, including type parameters.</comment>
+        </property>
+        <property>
+            <name>ParameterTypes</name>
+            <returntype>java.lang.String[]</returntype>
+            <comment>Returns an array of the parameter types of this constructor, in declaration order.</comment>
+        </property>
+        <property>
+            <name>ClassName</name>
+            <returntype>java.lang.String</returntype>
+            <comment>Returns the complete name of the class that declares this constructor.</comment>
+        </property>
+    </class>
+    <class>
+        <name>b4a.flm.classloader.ClassLClass</name>
+        <shortname>ClassLClass</shortname>
+        <owner>process</owner>
+        <method>
+            <name>GetField</name>
+            <comment>Returns the field with the given name.
+Returns Null if the field was not found or an error occurred. You can retrieve the error text with ClassLoaderUtils.GetErrorMsg.</comment>
+            <returntype>b4a.flm.classloader.ClassLField</returntype>
+            <parameter>
+                <name>FieldName</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+        <method>
+            <name>GetMethod2</name>
+            <comment>Returns the method with the given name and parameter types, faster than GetMethod.
+Returns Null if the method was not found or an error occurred. You can retrieve the error text with ClassLoaderUtils.GetErrorMsg.</comment>
+            <returntype>b4a.flm.classloader.ClassLMethod</returntype>
+            <parameter>
+                <name>MethodName</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>ParamTypes</name>
+                <type>java.lang.String[]</type>
+            </parameter>
+        </method>
+        <method>
+            <name>GetMethod</name>
+            <comment>Returns the first method with the given name.
+Returns Null if the method was not found.</comment>
+            <returntype>b4a.flm.classloader.ClassLMethod</returntype>
+            <parameter>
+                <name>MethodName</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+        <method>
+            <name>Class</name>
+            <comment>Returns the Java class.</comment>
+            <returntype>java.lang.Class</returntype>
+        </method>
+        <method>
+            <name>CreateInstance</name>
+            <comment>Creates a new instance of this class with the default constructor without arguments.
+Returns Null if an error occurred. You can retrieve the error text with ClassLoaderUtils.GetErrorMsg.</comment>
+            <returntype>java.lang.Object</returntype>
+        </method>
+        <property>
+            <name>Name</name>
+            <returntype>java.lang.String</returntype>
+            <comment>Returns the complete name of this class.</comment>
+        </property>
+        <property>
+            <name>List</name>
+            <returntype>anywheresoftware.b4a.objects.collections.List</returntype>
+            <comment>Returns a list with all public constructors (ClassLConstructor), fields (ClassLField) and methods (ClassLMethod).</comment>
+        </property>
+        <property>
+            <name>WrapperName</name>
+            <returntype>java.lang.String</returntype>
+            <comment>Returns the short name of the wrapper, if any.</comment>
+        </property>
+    </class>
+    <version>1.0</version>
+    <author>F.Leneuf-Magaud/Informatix</author>
+</root>

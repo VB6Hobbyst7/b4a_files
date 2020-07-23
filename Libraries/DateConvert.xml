@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root>
+    <doclet-version-NOT-library-version>1.02</doclet-version-NOT-library-version>
+    <class>
+        <name>derez.libs.DateConvert</name>
+        <shortname>DateConvert</shortname>
+        <comment>Converts Gregorian\Julian dates to Hebrew dates and vice versa.</comment>
+        <owner>process</owner>
+        <method>
+            <name>HebMonthLength</name>
+            <comment>Returns the length of the Hebrew month for that Hebrew year.
+ Numbers for the months:
+ 1 - Tishrei, 2 - Cheshvan, 3 - Kislev, 4 - Tevet, 5- Shevat
+ 6 - Adar A, 7 - Adar or Adar B, 8 - Nissan, 9 - Iyar
+ 10 - Sivan, 11- Tamuz, 12 - Av , 13 - Elul.</comment>
+            <returntype>int</returntype>
+            <parameter>
+                <name>Hmonth</name>
+                <type>int</type>
+            </parameter>
+            <parameter>
+                <name>Hyear</name>
+                <type>int</type>
+            </parameter>
+        </method>
+        <method>
+            <name>HebToGreg</name>
+            <comment>Returns the Gregorian date from a given Hebrew date,
+ defined by numbers.
+ The numbers of Adar A and Adar B are 6 and 7 in a leap year.
+ In regular year they are both named Adar, use 7.
+ The year parameter should includes the thousands.</comment>
+            <returntype>java.lang.String</returntype>
+            <parameter>
+                <name>DayH</name>
+                <type>int</type>
+            </parameter>
+            <parameter>
+                <name>MonthH</name>
+                <type>int</type>
+            </parameter>
+            <parameter>
+                <name>YearH</name>
+                <type>int</type>
+            </parameter>
+        </method>
+        <method>
+            <name>GregToHeb</name>
+            <comment>Returns the Hebrew date.
+ If HebText is true, the returned string will be in Hebrew, else - numerical.
+ The numbers of Adar A and Adar B are 6 and 7 in a leap year.
+ In regular year they are both named Adar.
+ The result include the thousands.
+ Year must be &gt; 1 .</comment>
+            <returntype>java.lang.String</returntype>
+            <parameter>
+                <name>day</name>
+                <type>int</type>
+            </parameter>
+            <parameter>
+                <name>month</name>
+                <type>int</type>
+            </parameter>
+            <parameter>
+                <name>year</name>
+                <type>int</type>
+            </parameter>
+            <parameter>
+                <name>HebText</name>
+                <type>boolean</type>
+            </parameter>
+        </method>
+        <method>
+            <name>IsLeapG</name>
+            <comment>Returns true if the Gregorian year is leap year, 
+ so that February has 29 days.</comment>
+            <returntype>boolean</returntype>
+            <parameter>
+                <name>year</name>
+                <type>int</type>
+            </parameter>
+        </method>
+        <method>
+            <name>IsLeapH</name>
+            <comment>Returns True if the Hebrew year is a Leap year.	
+ The year parameter should include thousands.</comment>
+            <returntype>boolean</returntype>
+            <parameter>
+                <name>hyear</name>
+                <type>int</type>
+            </parameter>
+        </method>
+        <method>
+            <name>GregToHeb2</name>
+            <comment>Returns the Hebrew date.
+ If HebText is true, the returned string will be in Hebrew, else - numerical.
+ The numbers of Adar A and Adar B are 6 and 7 in a leap year.
+ In regular year they are both named Adar.
+ The result includes the thousands.
+ The parameter GragDate is the Gregorian date in ticks.</comment>
+            <returntype>java.lang.String</returntype>
+            <parameter>
+                <name>GregDate</name>
+                <type>long</type>
+            </parameter>
+            <parameter>
+                <name>HebText</name>
+                <type>boolean</type>
+            </parameter>
+        </method>
+    </class>
+    <version>1.22</version>
+    <author>Derez</author>
+</root>

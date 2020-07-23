@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root>
+    <doclet-version-NOT-library-version>1.05</doclet-version-NOT-library-version>
+    <class>
+        <name>ir.hitex.layoutmanagers.Hitex_RecyclerView_Plugin_VegaLayoutManager</name>
+        <shortname>Hitex_RecyclerView_Plugin_VegaLayoutManager</shortname>
+        <owner>activity</owner>
+        <method>
+            <name>InitalizeAutoSet</name>
+            <comment>Created By Sadeq Nameni (Hitexroid)</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>LV</name>
+                <type>wir.hitex.recycler.Hitex_LayoutView</type>
+            </parameter>
+        </method>
+    </class>
+    <version>1.0</version>
+    <author>Sadeq Nameni (Hitexroid)</author>
+    <dependsOn>Hitex_RecyclerView</dependsOn>
+</root>

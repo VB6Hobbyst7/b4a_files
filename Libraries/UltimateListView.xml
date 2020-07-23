@@ -1,0 +1,2326 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root>
+    <doclet-version-NOT-library-version>1.05</doclet-version-NOT-library-version>
+    <class>
+        <name>flm.b4a.ultimatelistview.UltimateListViewWrapper</name>
+        <shortname>UltimateListView</shortname>
+        <objectwrapper>flm.b4a.ultimatelistview.UltimateListView</objectwrapper>
+        <owner>activity</owner>
+        <event>Touch(Action As Int, X As Int, Y As Int, MotionEvent As Object) As Boolean</event>
+        <event>CellClick(RowID As Long, CellIndex As Byte, Position As Int, ClickedPanel As Panel)</event>
+        <event>CellLongClick(RowID As Long, CellIndex As Byte, Position As Int, ClickedPanel As Panel)</event>
+        <event>CellTouch(CellIndex As Byte, Position As Int, Action As Int, X As Int, Y As Int, TouchedPanel As Panel)</event>
+        <event>ItemClick(ItemID As Long, Position As Int, ClickedPanel As Panel)</event>
+        <event>ItemLongClick(ItemID As Long, Position As Int, ClickedPanel As Panel)</event>
+        <event>ItemTouch(Position As Int, Action As Int, X As Int, Y As Int, TouchedPanel As Panel)</event>
+        <event>ItemSelectedStateChanged(ItemID As Long, Position As Int, Selected As Boolean)</event>
+        <event>EmptyView(LayoutPanel As Panel)</event>
+        <event>LayoutCreator(LayoutName As String, LayoutPanel As Panel)</event>
+        <event>RowLayoutCreator(LayoutName As String, CellPanel As Panel, CellIndex As Byte)</event>
+        <event>ContentFiller(ItemID As Long, LayoutName As String, LayoutPanel As Panel, Position As Int)</event>
+        <event>RowContentFiller(RowID As Long, LayoutName As String, CellPanel As Panel, CellIndex As Byte, Position As Int)</event>
+        <event>Cleaner(PanelToClean As Panel, LayoutName As String)</event>
+        <event>LoadText(TextID As String) As String</event>
+        <event>PreLoad(ImageViewWidth As Int, ImageViewHeight As Int) As Object</event>
+        <event>CustomLoad(Location As String, ImgID As String, ImageViewWidth As Int, ImageViewHeight As Int) As Bitmap</event>
+        <event>PostLoad(Bmp As Bitmap, ImgID As String, ImageViewWidth As Int, ImageViewHeight As Int) As Bitmap</event>
+        <event>LoadingError(ImgID As String, ImageViewWidth As Int, ImageViewHeight As Int) As Bitmap</event>
+        <event>OutOfMemoryError</event>
+        <event>Scrolled(FirstVisibleItem As Int, VisibleItemCount As Int, TotalItemCount As Int, IsAtTop As Boolean, IsAtBottom As Boolean)</event>
+        <event>ScrollStateChanged(ScrollState As Int)</event>
+        <event>Overscrolled(Action As Int, ScrollY As Int)</event>
+        <event>EnterDropZone(DropView As View)</event>
+        <event>LeaveDropZone(DropView As View)</event>
+        <event>DragCancelled(StartPosition As Int, CurrentPosition As Int)</event>
+        <event>Dropped(DropView As View, StartPosition As Int, DropPosition As Int)</event>
+        <event>SwipeBegin(Position As Int, LayoutPanel As Panel, LocalX As Int, ScreenX As Int) As Boolean</event>
+        <event>Swiped(Position As Int, LayoutPanel As Panel, LocalX As Int, ScreenX As Int, DeltaX As Int)</event>
+        <event>SwipeEnd(Position As Int, LayoutPanel As Panel, LocalX As Int, ScreenX As Int, VelocityX As Float)</event>
+        <event>SwipeCancelled(Position As Int, LayoutPanel As Panel, LocalX As Int, ScreenX As Int)</event>
+        <event>Key(Action As Int, Code As Int, State As KeyState) As Boolean</event>
+        <event>KeyDown(Code As Int, State As KeyState) As Boolean</event>
+        <event>KeyUp(Code As Int, State As KeyState) As Boolean</event>
+        <method>
+            <name>SetLoadTextCallback</name>
+            <comment>Defines the function to call if the text was not found in cache with LoadTextAsync.
+&lt;B&gt;LoadCallback&lt;/B&gt; = name of the callback function loading the text.
+ The LoadCallback function must be declared like this: &lt;I&gt;my_LoadText(TextID As String) As String&lt;/I&gt;</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>LoadCallback</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+        <method>
+            <name>DesignerCreateView</name>
+            <comment></comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>base</name>
+                <type>anywheresoftware.b4a.objects.PanelWrapper</type>
+            </parameter>
+            <parameter>
+                <name>lw</name>
+                <type>anywheresoftware.b4a.objects.LabelWrapper</type>
+            </parameter>
+            <parameter>
+                <name>props</name>
+                <type>anywheresoftware.b4a.objects.collections.Map</type>
+            </parameter>
+        </method>
+        <method>
+            <name>NumberOfItemsInSection</name>
+            <comment>Returns the number of items for the given section (excluding the header and the footer).
+Returns -1 if the section was not found.</comment>
+            <returntype>int</returntype>
+            <parameter>
+                <name>SectionName</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+        <method>
+            <name>IsInitialized</name>
+            <comment></comment>
+            <returntype>boolean</returntype>
+        </method>
+        <method>
+            <name>GetItemID</name>
+            <comment>Gets the ID of the item at the given position.
+Returns -1 if the position is invalid.</comment>
+            <returntype>long</returntype>
+            <parameter>
+                <name>Position</name>
+                <type>int</type>
+            </parameter>
+        </method>
+        <method>
+            <name>FindIDInVisibleItems</name>
+            <comment>Searches the given view within the visible items tree and returns the item ID of its parent.
+Returns -1 if not found.
+This function should only be used when there is no other way to know the ID.</comment>
+            <returntype>long</returntype>
+            <parameter>
+                <name>Sender</name>
+                <type>android.view.View</type>
+            </parameter>
+        </method>
+        <method>
+            <name>Initialize</name>
+            <comment>Initializes the UltimateListView.
+&lt;B&gt;MemoryCacheSize&lt;/B&gt; = percentage of free memory used to store bitmaps in the memory cache.
+&lt;B&gt;DiskCacheSize&lt;/B&gt; = number of megabytes used to store data in the disk cache.
+&lt;B&gt;DiskCacheLocation&lt;/B&gt; = working folder for the disk cache. If empty, the default cache folder of the application is used.
+&lt;B&gt;EventPrefix&lt;/B&gt; = prefix of events.</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>ba</name>
+                <type>anywheresoftware.b4a.BA</type>
+            </parameter>
+            <parameter>
+                <name>MemoryCacheSize</name>
+                <type>byte</type>
+            </parameter>
+            <parameter>
+                <name>DiskCacheSize</name>
+                <type>int</type>
+            </parameter>
+            <parameter>
+                <name>DiskCacheLocation</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>EventPrefix</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+        <method>
+            <name>BulkAddItems</name>
+            <comment>Adds massively a given number of items with the same layout. If you are using sections, you should instead call BulkAddItemsToSection.
+Returns True if the operation succeeded.
+&lt;B&gt;Qty&lt;/B&gt; = number of items to add.
+&lt;B&gt;LayoutName&lt;/B&gt; = name of the layout used to display the items.
+&lt;B&gt;FirstID&lt;/B&gt; = an unique identifier for the first item (the ID of the following items is automatically incremented).</comment>
+            <returntype>boolean</returntype>
+            <parameter>
+                <name>Qty</name>
+                <type>int</type>
+            </parameter>
+            <parameter>
+                <name>LayoutName</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>FirstID</name>
+                <type>int</type>
+            </parameter>
+        </method>
+        <method>
+            <name>StartDrag</name>
+            <comment>Starts a drag &amp;amp; drop operation.
+&lt;B&gt;InitialPosition&lt;/B&gt; = the starting position of the item to drag.
+&lt;B&gt;Internal&lt;/B&gt; = if True, the dragged item is limited to the bounds of the list (for a reordering of the list items).
+ Otherwise, the item can be dragged anywhere in the panel containing the list.
+&lt;B&gt;DropViews&lt;/B&gt; = if Null, the item being dragged can only be dropped on the list.
+ Otherwise, it may be dropped on any of the given views. These views must have the same parent as the list.
+ When the item is moved over a DropView, the EnterDropZone event is fired. When it leaves this area, the LeaveDropZone event is fired.
+ If Internal is True, DropViews are ignored.</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>InitialPosition</name>
+                <type>int</type>
+            </parameter>
+            <parameter>
+                <name>Internal</name>
+                <type>boolean</type>
+            </parameter>
+            <parameter>
+                <name>DropViews</name>
+                <type>anywheresoftware.b4a.objects.ConcreteViewWrapper[]</type>
+            </parameter>
+        </method>
+        <method>
+            <name>BulkAddItemsToSection</name>
+            <comment>Adds massively a given number of items in the same section.
+Returns True if the operation succeeded.
+&lt;B&gt;SectionName&lt;/B&gt; = name of the section where to add the items.
+&lt;B&gt;Qty&lt;/B&gt; = number of items to add.
+&lt;B&gt;FirstID&lt;/B&gt; = an unique identifier for the first item (the ID of the following items is automatically incremented).</comment>
+            <returntype>boolean</returntype>
+            <parameter>
+                <name>SectionName</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>Qty</name>
+                <type>int</type>
+            </parameter>
+            <parameter>
+                <name>FirstID</name>
+                <type>long</type>
+            </parameter>
+        </method>
+        <method>
+            <name>RemoveLayout</name>
+            <comment>Removes the given layout from the layout store.
+Returns True if the layout was found and removed.</comment>
+            <returntype>boolean</returntype>
+            <parameter>
+                <name>Name</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+        <method>
+            <name>GetLayoutProperties</name>
+            <comment>Returns a map with the following properties of the given layout: "height", "nbofcells", "cellwidths", "isselectable".
+Returns null if the layout was not found.</comment>
+            <returntype>anywheresoftware.b4a.objects.collections.Map</returntype>
+            <parameter>
+                <name>Name</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+        <method>
+            <name>SetStyle</name>
+            <comment>Changes the style of the list. This style is based on the system drawables and its appearance may vary between devices due to manufacturer customizations.
+The Holo styles are not available before API 11 (Android v3 Honeycomb).
+The Material styles are not available before API 21 (Android v5 Lollipop).
+&lt;B&gt;NewStyle&lt;/B&gt; = One of the STYLE constants.</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>ba</name>
+                <type>anywheresoftware.b4a.BA</type>
+            </parameter>
+            <parameter>
+                <name>NewStyle</name>
+                <type>byte</type>
+            </parameter>
+        </method>
+        <method>
+            <name>RemoveView</name>
+            <comment>Removes this view from its parent.</comment>
+            <returntype>void</returntype>
+        </method>
+        <method>
+            <name>GetPositionForID</name>
+            <comment>Gets the position of the item with the given ID.
+Returns -1 if the ID was not found.
+&lt;B&gt;OnlyInVisibleItems&lt;/B&gt; = if True, the search is done only within the visible items.</comment>
+            <returntype>int</returntype>
+            <parameter>
+                <name>ID</name>
+                <type>long</type>
+            </parameter>
+            <parameter>
+                <name>OnlyInVisibleItems</name>
+                <type>boolean</type>
+            </parameter>
+        </method>
+        <method>
+            <name>SetBackgroundImage</name>
+            <comment></comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>Bitmap</name>
+                <type>anywheresoftware.b4a.objects.drawable.CanvasWrapper.BitmapWrapper</type>
+            </parameter>
+            <parameter>
+                <name>Gravity</name>
+                <type>int</type>
+            </parameter>
+        </method>
+        <method>
+            <name>ClearSelection</name>
+            <comment>Clears any selection previously set. Call RefreshContent after this to visually update the list.</comment>
+            <returntype>void</returntype>
+        </method>
+        <method>
+            <name>GetSectionFooterID</name>
+            <comment>Gets the ID of the footer of the given section.
+Returns -1 if the section was not found or there is no footer.</comment>
+            <returntype>long</returntype>
+            <parameter>
+                <name>SectionName</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+        <method>
+            <name>SaveState</name>
+            <comment>Saves the current list state (the layout store, the sections list, the items list, the selected items list, and the scroll position).
+Returns True if the operation was successful.</comment>
+            <returntype>boolean</returntype>
+            <parameter>
+                <name>ba</name>
+                <type>anywheresoftware.b4a.BA</type>
+            </parameter>
+            <parameter>
+                <name>ListName</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+        <method>
+            <name>MoveItem</name>
+            <comment>Moves an item from StartPosition to EndPosition.
+Both parameters range from 0 (the first item) to NumberOfItems-1 (the last item).
+If you are using sections, note that the item cannot be moved outside its current section.
+This function returns True if the operation succeeded.</comment>
+            <returntype>boolean</returntype>
+            <parameter>
+                <name>StartPosition</name>
+                <type>int</type>
+            </parameter>
+            <parameter>
+                <name>EndPosition</name>
+                <type>int</type>
+            </parameter>
+        </method>
+        <method>
+            <name>ReplaceItemLayoutAt</name>
+            <comment>Replaces the layout of the item at the given position.
+Returns True if the operation succeeded.</comment>
+            <returntype>boolean</returntype>
+            <parameter>
+                <name>NewLayoutName</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>Position</name>
+                <type>int</type>
+            </parameter>
+        </method>
+        <method>
+            <name>GetVisiblePanels</name>
+            <comment>Returns the panels of all visible items. The views of these special panels cannot be retrieved or modified.</comment>
+            <returntype>flm.b4a.ultimatelistview.UltimateListViewWrapper.ULVPanel[]</returntype>
+        </method>
+        <method>
+            <name>SetLoadImageCallbacks</name>
+            <comment>Defines the functions to call if the bitmap was not found in cache with LoadImageAsync.
+PreLoadCB should be used to put a placeholder image in the ImageView before the loading takes place. This image is not put in cache.
+CustomLoadCB should be used to load the image with your own loader (needed if the image is stored in a database). To trigger it, the image location must start with "custom:".
+PostLoadCB should be used to transform the image (to add a frame, resize, crop, etc.) before it is stored in cache.
+LoadingErrorCB should be used to display an error symbol in the ImageView. This image is not put in cache.
+&lt;B&gt;PreLoadCallback&lt;/B&gt; = name of the callback function executed before the bitmap is loaded in a separate thread.
+ The PreLoadCallback function must be declared like this: &lt;I&gt;my_PreLoad(ImageViewWidth As Int, ImageViewHeight As Int) As Object&lt;/I&gt;
+ The returned object must be a Drawable.
+&lt;B&gt;CustomLoadCallback&lt;/B&gt; = name of the callback function loading the bitmap.
+ The CustomLoadCallback function must be declared like this: &lt;I&gt;my_CustomLoad(Location As String, ImgID As String, ImageViewWidth As Int, ImageViewHeight As Int) As Bitmap&lt;/I&gt;
+ The returned object must be a Bitmap.
+&lt;B&gt;PostLoadCallback&lt;/B&gt; = name of the callback function executed after the bitmap is loaded, but before it is displayed or stored in cache.
+ The PostLoadCallback function must be declared like this: &lt;I&gt;my_PostLoad(Bmp As Bitmap, ImgID As String, ImageViewWidth As Int, ImageViewHeight As Int) As Bitmap&lt;/I&gt;
+ The returned object must be a Bitmap.
+&lt;B&gt;LoadingErrorCallback&lt;/B&gt; = name of the callback function executed if the bitmap wasn't loaded successfully.
+ The LoadingErrorCallback function must be declared like this: &lt;I&gt;my_LoadingError(ImgID As String, ImageViewWidth As Int, ImageViewHeight As Int) As Bitmap&lt;/I&gt;
+ The returned object must be a Bitmap or Null.</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>PreLoadCallback</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>CustomLoadCallback</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>PostLoadCallback</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>LoadingErrorCallback</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+        <method>
+            <name>FeedDiskCacheWithBitmap</name>
+            <comment>Stores the given bitmap in the disk cache.
+&lt;B&gt;Bmp&lt;/B&gt; = the bitmap to store.
+&lt;B&gt;ImgID&lt;/B&gt; = an unique identifier for the bitmap.
+&lt;B&gt;Async&lt;/B&gt; = if True, the operation is done in a separate thread.</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>ba</name>
+                <type>anywheresoftware.b4a.BA</type>
+            </parameter>
+            <parameter>
+                <name>Bmp</name>
+                <type>anywheresoftware.b4a.objects.drawable.CanvasWrapper.BitmapWrapper</type>
+            </parameter>
+            <parameter>
+                <name>ImgID</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>Async</name>
+                <type>boolean</type>
+            </parameter>
+        </method>
+        <method>
+            <name>StackFromBottom</name>
+            <comment>If enabled, stacks the contents from the bottom.
+It is disabled by default.</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>Enabled</name>
+                <type>boolean</type>
+            </parameter>
+        </method>
+        <method>
+            <name>RefreshContent</name>
+            <comment>Refreshes the content of the visible items.
+This function should be added to Activity_Resume if you make calls to LoadImageAsync as it restarts the asynchronous loader after a pause.</comment>
+            <returntype>void</returntype>
+        </method>
+        <method>
+            <name>GetItemSectionName</name>
+            <comment>Returns the section name of the item at the given position.
+Returns an empty string if the position is invalid or the item does not belong to a section.</comment>
+            <returntype>java.lang.String</returntype>
+            <parameter>
+                <name>Position</name>
+                <type>int</type>
+            </parameter>
+        </method>
+        <method>
+            <name>InsertItemInSection</name>
+            <comment>Inserts an item at the specified relative position in a section.
+Returns True if the operation succeeded.
+&lt;B&gt;RelativeIndex&lt;/B&gt; = position inside the given section. 0 is the first position (the header position is not taken into account).</comment>
+            <returntype>boolean</returntype>
+            <parameter>
+                <name>ID</name>
+                <type>long</type>
+            </parameter>
+            <parameter>
+                <name>SectionName</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>RelativeIndex</name>
+                <type>int</type>
+            </parameter>
+        </method>
+        <method>
+            <name>PlaceItemFromTop</name>
+            <comment>Scrolls to the given position, then places the item Y pixels from the top edge of the ULV.</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>Position</name>
+                <type>int</type>
+            </parameter>
+            <parameter>
+                <name>Y</name>
+                <type>int</type>
+            </parameter>
+        </method>
+        <method>
+            <name>GetItemLayoutName</name>
+            <comment>Gets the name of the item layout at the given position. The name is returned in uppercase.
+Returns an empty string if the position is invalid.</comment>
+            <returntype>java.lang.String</returntype>
+            <parameter>
+                <name>Position</name>
+                <type>int</type>
+            </parameter>
+        </method>
+        <method>
+            <name>IsDragStarted</name>
+            <comment>Returns whether a drag &amp;amp; drop operation is in progress.</comment>
+            <returntype>boolean</returntype>
+        </method>
+        <method>
+            <name>GetLastVisiblePosition</name>
+            <comment>Returns the position of the last visible item.</comment>
+            <returntype>int</returntype>
+        </method>
+        <method>
+            <name>SetSectionHeader</name>
+            <comment>Sets the header of the given section. If there's already one, it is replaced.
+Returns True if the operation succeeded.
+&lt;B&gt;ID&lt;/B&gt; = an unique identifier for the item.</comment>
+            <returntype>boolean</returntype>
+            <parameter>
+                <name>ID</name>
+                <type>long</type>
+            </parameter>
+            <parameter>
+                <name>SectionName</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+        <method>
+            <name>BringToFront</name>
+            <comment>Changes the Z order of this view and brings it to the front.</comment>
+            <returntype>void</returntype>
+        </method>
+        <method>
+            <name>ReplaceRowLayout</name>
+            <comment>Replaces the given row layout in the layout store.
+Returns True if the layout was found and replaced.
+&lt;B&gt;Name&lt;/B&gt; = name of the layout to replace.
+&lt;B&gt;LayoutCallback&lt;/B&gt; = name of the callback function creating the layout.
+&lt;B&gt;ContentCallback&lt;/B&gt; = name of the callback function filling the content.
+&lt;B&gt;Height&lt;/B&gt; = height of the layout.
+&lt;B&gt;NbOfCells&lt;/B&gt; = number of cells in the row.
+&lt;B&gt;CellWidths&lt;/B&gt; = array containing the width of each cell (example: &lt;I&gt;Array As Int(70dip, 100dip, 150dip)&lt;/I&gt;).
+&lt;B&gt;DividerWidth&lt;/B&gt; = width of the divider between cells.
+&lt;B&gt;BackgroundColor&lt;/B&gt; = color of the row background (used as the divider color).
+&lt;B&gt;IsSelectable&lt;/B&gt; = indicates whether the row with this layout reacts to a touch, a click or a long click, and can be selected.</comment>
+            <returntype>boolean</returntype>
+            <parameter>
+                <name>Name</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>LayoutCallback</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>ContentCallback</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>Height</name>
+                <type>int</type>
+            </parameter>
+            <parameter>
+                <name>NbOfCells</name>
+                <type>byte</type>
+            </parameter>
+            <parameter>
+                <name>CellWidths</name>
+                <type>int[]</type>
+            </parameter>
+            <parameter>
+                <name>DividerWidth</name>
+                <type>int</type>
+            </parameter>
+            <parameter>
+                <name>BackgroundColor</name>
+                <type>int</type>
+            </parameter>
+            <parameter>
+                <name>IsSelectable</name>
+                <type>boolean</type>
+            </parameter>
+        </method>
+        <method>
+            <name>GetSectionsMap</name>
+            <comment>Returns a map containing all sections (key) with their position (value).
+The sections are sorted by position in ascending order. The sections with no header, no items and no footer have a position = -1.</comment>
+            <returntype>anywheresoftware.b4a.objects.collections.Map</returntype>
+        </method>
+        <method>
+            <name>IsInCache</name>
+            <comment>Checks whether the given ID is in cache.
+Returns:&lt;I&gt;
+ 0: not found in cache
+ 1: in memory cache only
+ 2: in disk cache only
+ 3: in both caches&lt;/I&gt;</comment>
+            <returntype>int</returntype>
+            <parameter>
+                <name>ID</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+        <method>
+            <name>DeleteAllStateFiles</name>
+            <comment>Deletes all the files used to save list states.
+Returns True if the operation was successful.</comment>
+            <returntype>boolean</returntype>
+        </method>
+        <method>
+            <name>FadingEdges</name>
+            <comment>Defines whether the edges should be faded when this view is scrolled.
+They are faded by default.</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>Enabled</name>
+                <type>boolean</type>
+            </parameter>
+        </method>
+        <method>
+            <name>GetSelectedIDs</name>
+            <comment>Returns a list of the IDs of the selected items.</comment>
+            <returntype>anywheresoftware.b4a.objects.collections.List</returntype>
+        </method>
+        <method>
+            <name>AddItemToSection</name>
+            <comment>Adds an item to the given section.
+Returns True if the operation succeeded.
+&lt;B&gt;ID&lt;/B&gt; = an unique identifier for the item.</comment>
+            <returntype>boolean</returntype>
+            <parameter>
+                <name>ID</name>
+                <type>long</type>
+            </parameter>
+            <parameter>
+                <name>SectionName</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+        <method>
+            <name>JumpToSection</name>
+            <comment>Scrolls to the beginning of the given section.</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>SectionName</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>Smoothly</name>
+                <type>boolean</type>
+            </parameter>
+        </method>
+        <method>
+            <name>StopScrolling</name>
+            <comment>Stops a scrolling initiated by a gesture.</comment>
+            <returntype>void</returntype>
+        </method>
+        <method>
+            <name>RetrieveDataFromCache</name>
+            <comment>Retrieves the data with the given ID from the disk cache.
+&lt;B&gt;ID&lt;/B&gt; = an unique identifier for the data.</comment>
+            <returntype>java.lang.Object</returntype>
+            <parameter>
+                <name>ID</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+        <method>
+            <name>SetPadding</name>
+            <comment>Sets the padding for each side.</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>LeftPadding</name>
+                <type>int</type>
+            </parameter>
+            <parameter>
+                <name>TopPadding</name>
+                <type>int</type>
+            </parameter>
+            <parameter>
+                <name>RightPadding</name>
+                <type>int</type>
+            </parameter>
+            <parameter>
+                <name>BottomPadding</name>
+                <type>int</type>
+            </parameter>
+        </method>
+        <method>
+            <name>SetScrollbarStyle</name>
+            <comment>Sets the scrollbar style and visibility.
+The scrollbar is visible by default, with the "Outside_Overlay" style.
+For further details on styles: &lt;I&gt;http://developer.android.com/reference/android/view/View.html#attr_android:scrollbarStyle&lt;/I&gt;</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>NewStyle</name>
+                <type>int</type>
+            </parameter>
+        </method>
+        <method>
+            <name>InsertItemAt</name>
+            <comment>Inserts an item at the given position. If you are using sections, you should instead call InsertItemInSection.
+Returns True if the operation succeeded.
+&lt;B&gt;Position&lt;/B&gt; = from 0 (before the first item) to NumberOfItems (after the last item).</comment>
+            <returntype>boolean</returntype>
+            <parameter>
+                <name>LayoutName</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>ID</name>
+                <type>long</type>
+            </parameter>
+            <parameter>
+                <name>Position</name>
+                <type>int</type>
+            </parameter>
+        </method>
+        <method>
+            <name>ExpandChildren</name>
+            <comment>Creates and inserts the children items under the current parent position.
+&lt;B&gt;ParentID&lt;/B&gt; = unique identifier of the parent item.
+Returns false if the parent was not found.</comment>
+            <returntype>boolean</returntype>
+            <parameter>
+                <name>ParentID</name>
+                <type>long</type>
+            </parameter>
+        </method>
+        <method>
+            <name>GetPositionSelectedWithKeys</name>
+            <comment>Returns the position of the item selected with keys.</comment>
+            <returntype>int</returntype>
+        </method>
+        <method>
+            <name>GetDiskCacheList</name>
+            <comment>Returns a list of the current contents of the disk cache, unordered.
+Map structure: key=filename, value=object array (0=time of the last modification, 1=size in bytes)</comment>
+            <returntype>anywheresoftware.b4a.objects.collections.Map</returntype>
+        </method>
+        <method>
+            <name>GetRelativeIndexForID</name>
+            <comment>Returns the relative position of the given ID in its section (excluding the header, so 0 is always the first position in the section).
+Returns -1 if the ID was not found or the item is not in a section.</comment>
+            <returntype>int</returntype>
+            <parameter>
+                <name>ID</name>
+                <type>long</type>
+            </parameter>
+        </method>
+        <method>
+            <name>JumpTo</name>
+            <comment>Scrolls to the given position.</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>Position</name>
+                <type>int</type>
+            </parameter>
+            <parameter>
+                <name>Smoothly</name>
+                <type>boolean</type>
+            </parameter>
+        </method>
+        <method>
+            <name>SetChildren</name>
+            <comment>Sets the children IDs (long values) and the children layout name for the given parent.
+The children items stay uncreated (and thus invisible) until they are expanded by the ExpandChildren function. 
+&lt;B&gt;ParentID&lt;/B&gt; = unique identifier of the parent item.
+Returns false if the parent was not found.</comment>
+            <returntype>boolean</returntype>
+            <parameter>
+                <name>ParentID</name>
+                <type>long</type>
+            </parameter>
+            <parameter>
+                <name>ChildrenIDs</name>
+                <type>anywheresoftware.b4a.objects.collections.List</type>
+            </parameter>
+            <parameter>
+                <name>ChildrenLayoutName</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+        <method>
+            <name>AddItem</name>
+            <comment>Adds an item to the UltimateListView. If you are using sections, you should instead call AddItemToSection.
+Returns True if the operation succeeded.
+&lt;B&gt;LayoutName&lt;/B&gt; = name of the layout used to display the item.
+&lt;B&gt;ID&lt;/B&gt; = an unique identifier for the item.</comment>
+            <returntype>boolean</returntype>
+            <parameter>
+                <name>LayoutName</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>ID</name>
+                <type>long</type>
+            </parameter>
+        </method>
+        <method>
+            <name>IsSelected</name>
+            <comment>Gets whether the given item is selected.</comment>
+            <returntype>boolean</returntype>
+            <parameter>
+                <name>Position</name>
+                <type>int</type>
+            </parameter>
+        </method>
+        <method>
+            <name>SynchronizePositionWith</name>
+            <comment>When this list scrolls vertically, the scroll position of the specified list is updated automatically.
+&lt;B&gt;ULV&lt;/B&gt; = The UltimateListView to synchronize. Can be set to Null to stop the synchronization.</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>ULV</name>
+                <type>flm.b4a.ultimatelistview.UltimateListViewWrapper</type>
+            </parameter>
+        </method>
+        <method>
+            <name>AddLayout</name>
+            <comment>Adds a new layout to the layout store.
+&lt;B&gt;Name&lt;/B&gt; = an unique name for your layout.
+&lt;B&gt;LayoutCallback&lt;/B&gt; = name of the callback function creating the layout.
+ The LayoutCallback function must be declared like this: &lt;I&gt;myItem_LayoutCreator(LayoutName As String, LayoutPanel As Panel)&lt;/I&gt;
+&lt;B&gt;ContentCallback&lt;/B&gt; = name of the callback function filling the content.
+ The ContentCallback function must be declared like this: &lt;I&gt;myItem_ContentFiller(ItemID As Long, LayoutName As String, LayoutPanel As Panel, Position As Int)&lt;/I&gt;
+&lt;B&gt;Height&lt;/B&gt; = height of the layout.
+&lt;B&gt;IsSelectable&lt;/B&gt; = indicates whether the item with this layout reacts to a touch, a click or a long click, and can be selected.</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>Name</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>LayoutCallback</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>ContentCallback</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>Height</name>
+                <type>int</type>
+            </parameter>
+            <parameter>
+                <name>IsSelectable</name>
+                <type>boolean</type>
+            </parameter>
+        </method>
+        <method>
+            <name>SetSwipeDirection</name>
+            <comment>Sets the direction of the swipe gesture to be detected at the given position.
+&lt;B&gt;Direction&lt;/B&gt; = one of the SWIPE_DIRECTION constants.</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>Position</name>
+                <type>int</type>
+            </parameter>
+            <parameter>
+                <name>Direction</name>
+                <type>byte</type>
+            </parameter>
+        </method>
+        <method>
+            <name>SetLayout</name>
+            <comment>Changes the view position and size.</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>Left</name>
+                <type>int</type>
+            </parameter>
+            <parameter>
+                <name>Top</name>
+                <type>int</type>
+            </parameter>
+            <parameter>
+                <name>Width</name>
+                <type>int</type>
+            </parameter>
+            <parameter>
+                <name>Height</name>
+                <type>int</type>
+            </parameter>
+        </method>
+        <method>
+            <name>GetSectionHeaderID</name>
+            <comment>Gets the ID of the header of the given section.
+Returns -1 if the section was not found or there is no header.</comment>
+            <returntype>long</returntype>
+            <parameter>
+                <name>SectionName</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+        <method>
+            <name>GetStateFilesVersion</name>
+            <comment>Gets the version of the state files. Returns -1 if no version information was found.</comment>
+            <returntype>float</returntype>
+            <parameter>
+                <name>ListName</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+        <method>
+            <name>ClearContent</name>
+            <comment>Deletes all items and clears the memory cache.</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>ba</name>
+                <type>anywheresoftware.b4a.BA</type>
+            </parameter>
+        </method>
+        <method>
+            <name>GetChildrenLayoutName</name>
+            <comment>Returns the layout name of children for the given parent.
+&lt;B&gt;ParentID&lt;/B&gt; = unique identifier of the parent item.
+Returns an empty string if the parent was not found.</comment>
+            <returntype>java.lang.String</returntype>
+            <parameter>
+                <name>ParentID</name>
+                <type>long</type>
+            </parameter>
+        </method>
+        <method>
+            <name>ClearAllLayouts</name>
+            <comment>Removes all layouts from the layout store.</comment>
+            <returntype>void</returntype>
+        </method>
+        <method>
+            <name>CollapseChildren</name>
+            <comment>Removes the children items from the list if they are visible.
+&lt;B&gt;ParentID&lt;/B&gt; = unique identifier of the parent item.
+Returns false if the parent was not found.</comment>
+            <returntype>boolean</returntype>
+            <parameter>
+                <name>ParentID</name>
+                <type>long</type>
+            </parameter>
+        </method>
+        <method>
+            <name>Invalidate3</name>
+            <comment>Invalidates the given rectangle.
+Redrawing will only happen when the program can process messages. Usually when it finishes running the current code.</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>Left</name>
+                <type>int</type>
+            </parameter>
+            <parameter>
+                <name>Top</name>
+                <type>int</type>
+            </parameter>
+            <parameter>
+                <name>Right</name>
+                <type>int</type>
+            </parameter>
+            <parameter>
+                <name>Bottom</name>
+                <type>int</type>
+            </parameter>
+        </method>
+        <method>
+            <name>GetHeaderPositionOfSection</name>
+            <comment>Returns the position of the header of the given section.
+Returns -1 if the section was not found or the section has no header.</comment>
+            <returntype>int</returntype>
+            <parameter>
+                <name>SectionName</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+        <method>
+            <name>Invalidate2</name>
+            <comment>Invalidates the given rectangle.
+Redrawing will only happen when the program can process messages. Usually when it finishes running the current code.</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>Rect</name>
+                <type>android.graphics.Rect</type>
+            </parameter>
+        </method>
+        <method>
+            <name>SectionHasHeader</name>
+            <comment>Returns whether the given section has a header.</comment>
+            <returntype>boolean</returntype>
+            <parameter>
+                <name>SectionName</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+        <method>
+            <name>RemoveDataFromCache</name>
+            <comment>Removes the data with the given ID from the disk cache.</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>ID</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+        <method>
+            <name>CancelDrag</name>
+            <comment>Cancels the current drag &amp;amp; drop operation.</comment>
+            <returntype>void</returntype>
+        </method>
+        <method>
+            <name>SetSectionFooter</name>
+            <comment>Sets the footer of the given section. If there's already one, it is replaced.
+Returns True if the operation succeeded.
+&lt;B&gt;ID&lt;/B&gt; = an unique identifier for the item.</comment>
+            <returntype>boolean</returntype>
+            <parameter>
+                <name>ID</name>
+                <type>long</type>
+            </parameter>
+            <parameter>
+                <name>SectionName</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+        <method>
+            <name>NumberOfItems</name>
+            <comment>Returns the number of items.</comment>
+            <returntype>int</returntype>
+        </method>
+        <method>
+            <name>LoadState</name>
+            <comment>Restores the saved list state (the layout store, the sections list, the items list, the selected items list, and the scroll position).
+Returns True if the state files were found and loaded. Throws an IOException if an error occurs.
+&lt;B&gt;RestoreLayouts&lt;/B&gt; = if True, the layouts are restored. If False, the current layouts are used.</comment>
+            <returntype>boolean</returntype>
+            <parameter>
+                <name>ListName</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>RestoreLayouts</name>
+                <type>boolean</type>
+            </parameter>
+        </method>
+        <method>
+            <name>DeleteStateFiles</name>
+            <comment>Deletes the files used to save the list state.
+Returns True if the operation was successful.</comment>
+            <returntype>boolean</returntype>
+            <parameter>
+                <name>ListName</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+        <method>
+            <name>RemoveItemAt</name>
+            <comment>Removes an item at the given position.
+Returns True if the operation succeeded.</comment>
+            <returntype>boolean</returntype>
+            <parameter>
+                <name>Position</name>
+                <type>int</type>
+            </parameter>
+        </method>
+        <method>
+            <name>RequestFocus</name>
+            <comment>Tries to set the focus to this view.
+Returns True if the focus was set.</comment>
+            <returntype>boolean</returntype>
+        </method>
+        <method>
+            <name>FeedMemoryCacheWithBitmap</name>
+            <comment>Stores the given bitmap in the memory cache.
+&lt;B&gt;Bmp&lt;/B&gt; = the bitmap to store.
+&lt;B&gt;ImgID&lt;/B&gt; = an unique identifier for the bitmap.</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>Bmp</name>
+                <type>anywheresoftware.b4a.objects.drawable.CanvasWrapper.BitmapWrapper</type>
+            </parameter>
+            <parameter>
+                <name>ImgID</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+        <method>
+            <name>RemoveBitmapFromCache</name>
+            <comment>Removes the bitmap with the given ID from the cache (memory and disk).</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>ID</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+        <method>
+            <name>SectionHasFooter</name>
+            <comment>Returns whether the given section has a footer.</comment>
+            <returntype>boolean</returntype>
+            <parameter>
+                <name>SectionName</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+        <method>
+            <name>LayoutExists</name>
+            <comment>Checks whether the given layout is in the layout store.</comment>
+            <returntype>boolean</returntype>
+            <parameter>
+                <name>Name</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+        <method>
+            <name>FastScroller</name>
+            <comment>Enables/disables the fast scroller.</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>Enabled</name>
+                <type>boolean</type>
+            </parameter>
+        </method>
+        <method>
+            <name>ReopenDiskCache</name>
+            <comment>Reopens a closed disk cache.</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>ba</name>
+                <type>anywheresoftware.b4a.BA</type>
+            </parameter>
+        </method>
+        <method>
+            <name>NumberOfLayouts</name>
+            <comment>Returns the number of layouts.</comment>
+            <returntype>int</returntype>
+        </method>
+        <method>
+            <name>FeedDiskCacheWithData</name>
+            <comment>Stores the given data in the disk cache.
+&lt;B&gt;Data&lt;/B&gt; = the data to store (any type).
+&lt;B&gt;ID&lt;/B&gt; = an unique identifier for the data.
+&lt;B&gt;Async&lt;/B&gt; = if True, the operation is done in a separate thread.</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>ba</name>
+                <type>anywheresoftware.b4a.BA</type>
+            </parameter>
+            <parameter>
+                <name>Data</name>
+                <type>java.lang.Object</type>
+            </parameter>
+            <parameter>
+                <name>ID</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>Async</name>
+                <type>boolean</type>
+            </parameter>
+        </method>
+        <method>
+            <name>GetFooterPositionOfSection</name>
+            <comment>Returns the position of the footer of the given section.
+Returns -1 if the section was not found or the section has no footer.</comment>
+            <returntype>int</returntype>
+            <parameter>
+                <name>SectionName</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+        <method>
+            <name>CancelSwipe</name>
+            <comment>Stops handling the current swipe motion.</comment>
+            <returntype>void</returntype>
+        </method>
+        <method>
+            <name>GetParentID</name>
+            <comment>Returns the parent's ID for the given child.
+&lt;B&gt;ChildID&lt;/B&gt; = unique identifier of the child item.
+Returns -1 if the child was not found or has no parent.</comment>
+            <returntype>long</returntype>
+            <parameter>
+                <name>ChildID</name>
+                <type>long</type>
+            </parameter>
+        </method>
+        <method>
+            <name>IsExpanded</name>
+            <comment>Gets whether the children items are expanded under their parent.
+&lt;B&gt;ParentID&lt;/B&gt; = unique identifier of the parent item.</comment>
+            <returntype>boolean</returntype>
+            <parameter>
+                <name>ParentID</name>
+                <type>long</type>
+            </parameter>
+        </method>
+        <method>
+            <name>AddRowLayout</name>
+            <comment>Adds a new row layout to the layout store.
+&lt;B&gt;Name&lt;/B&gt; = an unique name for your layout.
+&lt;B&gt;LayoutCallback&lt;/B&gt; = name of the callback function creating the layout.
+ The LayoutCallback function must be declared like this: &lt;I&gt;myItem_RowLayoutCreator(LayoutName As String, CellPanel As Panel, CellIndex As Byte)&lt;/I&gt;
+&lt;B&gt;ContentCallback&lt;/B&gt; = name of the callback function filling the content.
+ The ContentCallback function must be declared like this: &lt;I&gt;myItem_RowContentFiller(RowID As Long, LayoutName As String, CellPanel As Panel, CellIndex As Byte, Position As Int)&lt;/I&gt;
+&lt;B&gt;Height&lt;/B&gt; = height of the layout.
+&lt;B&gt;NbOfCells&lt;/B&gt; = number of cells in the row.
+&lt;B&gt;CellWidths&lt;/B&gt; = array containing the width of each cell (example: &lt;I&gt;Array As Int(70dip, 100dip, 150dip)&lt;/I&gt;).
+&lt;B&gt;DividerWidth&lt;/B&gt; = width of the divider between cells.
+&lt;B&gt;BackgroundColor&lt;/B&gt; = color of the row background (used as the divider color).
+&lt;B&gt;IsSelectable&lt;/B&gt; = indicates whether the row with this layout reacts to a touch, a click or a long click, and can be selected.</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>Name</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>LayoutCallback</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>ContentCallback</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>Height</name>
+                <type>int</type>
+            </parameter>
+            <parameter>
+                <name>NbOfCells</name>
+                <type>byte</type>
+            </parameter>
+            <parameter>
+                <name>CellWidths</name>
+                <type>int[]</type>
+            </parameter>
+            <parameter>
+                <name>DividerWidth</name>
+                <type>int</type>
+            </parameter>
+            <parameter>
+                <name>BackgroundColor</name>
+                <type>int</type>
+            </parameter>
+            <parameter>
+                <name>IsSelectable</name>
+                <type>boolean</type>
+            </parameter>
+        </method>
+        <method>
+            <name>CloseCache</name>
+            <comment>Closes the disk cache.
+&lt;B&gt;DeleteFiles&lt;/B&gt; = if True, the cache content is deleted.</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>DeleteFiles</name>
+                <type>boolean</type>
+            </parameter>
+        </method>
+        <method>
+            <name>SendToBack</name>
+            <comment>Changes the Z order of this view and sends it to the back.</comment>
+            <returntype>void</returntype>
+        </method>
+        <method>
+            <name>AddSection</name>
+            <comment>Adds an empty section. It won't be visible until you fill it with a header (SetSectionHeader), an item (AddItemToSection) or a footer (SetSectionFooter).
+&lt;B&gt;SectionName&lt;/B&gt; = an unique name for this section.
+&lt;B&gt;HeaderLayoutName&lt;/B&gt; = the layout name of the header.
+&lt;B&gt;ItemLayoutName&lt;/B&gt; = the layout name of the section items.
+&lt;B&gt;FooterLayoutName&lt;/B&gt; = the layout name of the footer.</comment>
+            <returntype>boolean</returntype>
+            <parameter>
+                <name>SectionName</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>HeaderLayoutName</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>ItemLayoutName</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>FooterLayoutName</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+        <method>
+            <name>GetFirstItemPositionOfSection</name>
+            <comment>Returns the first position of the given section (excluding the header and the footer).
+Returns -1 if the section was not found or the section has no items.</comment>
+            <returntype>int</returntype>
+            <parameter>
+                <name>SectionName</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+        <method>
+            <name>LoadTextAsync</name>
+            <comment>Loads a text asynchronously.
+&lt;B&gt;TextView&lt;/B&gt; = the view waiting for the text to load.
+&lt;B&gt;TextID&lt;/B&gt; = an unique identifier for the text.
+&lt;B&gt;StoreInCache&lt;/B&gt; = specifies whether the loaded text will be stored in the disk cache.
+This function modifies the Tag property of the view, so don't use this property.</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>ba</name>
+                <type>anywheresoftware.b4a.BA</type>
+            </parameter>
+            <parameter>
+                <name>TextView</name>
+                <type>anywheresoftware.b4a.objects.ConcreteViewWrapper</type>
+            </parameter>
+            <parameter>
+                <name>TextID</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>StoreInCache</name>
+                <type>boolean</type>
+            </parameter>
+        </method>
+        <method>
+            <name>RetrieveBitmapFromCache</name>
+            <comment>Retrieves the bitmap with the given ID from the cache (memory or disk).
+&lt;B&gt;ID&lt;/B&gt; = an unique identifier for the bitmap.</comment>
+            <returntype>java.lang.Object</returntype>
+            <parameter>
+                <name>ID</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+        <method>
+            <name>GetVisibleTop</name>
+            <comment>Returns the top position of a visible item (in pixels).
+&lt;B&gt;Index&lt;/B&gt; = Position of the item in the visible area (e.g. 0 for the first visible item).
+Throws an exception if the index is out of bounds.</comment>
+            <returntype>int</returntype>
+            <parameter>
+                <name>Index</name>
+                <type>int</type>
+            </parameter>
+        </method>
+        <method>
+            <name>StopAsyncLoading</name>
+            <comment>Stops all asynchronous loadings initiated with LoadImageAsync or LoadTextAsync.</comment>
+            <returntype>void</returntype>
+        </method>
+        <method>
+            <name>LogStatsCache</name>
+            <comment>Writes the cache statistics in the B4A log.</comment>
+            <returntype>void</returntype>
+        </method>
+        <method>
+            <name>GetSwipeDirection</name>
+            <comment>Gets the direction of the swipe gesture to be detected at the given position.
+&lt;B&gt;Direction&lt;/B&gt; = one of the SWIPE_DIRECTION constants.</comment>
+            <returntype>byte</returntype>
+            <parameter>
+                <name>Position</name>
+                <type>int</type>
+            </parameter>
+        </method>
+        <method>
+            <name>NumberOfSections</name>
+            <comment>Returns the number of sections.</comment>
+            <returntype>int</returntype>
+        </method>
+        <method>
+            <name>IsUniqueID</name>
+            <comment>Checks whether the given ID is not already associated to an item.
+Returns True if the ID was not found.</comment>
+            <returntype>boolean</returntype>
+            <parameter>
+                <name>IDtoCheck</name>
+                <type>long</type>
+            </parameter>
+        </method>
+        <method>
+            <name>EnsureVisibility</name>
+            <comment>Ensures that the item at the given position is fully visible.</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>Position</name>
+                <type>int</type>
+            </parameter>
+        </method>
+        <method>
+            <name>GetChildrenIDs</name>
+            <comment>Returns the list of children IDs for the given parent.
+&lt;B&gt;ParentID&lt;/B&gt; = unique identifier of the parent item.
+Returns null if the parent was not found.</comment>
+            <returntype>anywheresoftware.b4a.objects.collections.List</returntype>
+            <parameter>
+                <name>ParentID</name>
+                <type>long</type>
+            </parameter>
+        </method>
+        <method>
+            <name>GetFirstVisiblePosition</name>
+            <comment>Returns the position of the first visible item.</comment>
+            <returntype>int</returntype>
+        </method>
+        <method>
+            <name>ReplaceLayout</name>
+            <comment>Replaces the given layout in the layout store.
+Returns True if the layout was found and replaced.
+&lt;B&gt;Name&lt;/B&gt; = name of the layout to replace.
+&lt;B&gt;LayoutCallback&lt;/B&gt; = name of the callback function creating the layout.
+&lt;B&gt;ContentCallback&lt;/B&gt; = name of the callback function filling the content.
+&lt;B&gt;Height&lt;/B&gt; = height of the layout.
+&lt;B&gt;IsSelectable&lt;/B&gt; = indicates whether the item with this layout reacts to a touch, a click or a long click, and can be selected.</comment>
+            <returntype>boolean</returntype>
+            <parameter>
+                <name>Name</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>LayoutCallback</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>ContentCallback</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>Height</name>
+                <type>int</type>
+            </parameter>
+            <parameter>
+                <name>IsSelectable</name>
+                <type>boolean</type>
+            </parameter>
+        </method>
+        <method>
+            <name>RemoveSection</name>
+            <comment>Removes the specified section (including the header and the footer).
+Returns True if the operation succeeded.</comment>
+            <returntype>boolean</returntype>
+            <parameter>
+                <name>SectionName</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+        <method>
+            <name>FeedDiskCacheWithFile</name>
+            <comment>Copies the content of the given file into the disk cache.
+&lt;B&gt;Dir, FileName&lt;/B&gt; = location of the file to copy.
+&lt;B&gt;ID&lt;/B&gt; = an unique identifier for the cached data.
+&lt;B&gt;DeleteAfter&lt;/B&gt; = if True, the file is deleted after the copy.</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>Dir</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>FileName</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>ID</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>DeleteAfter</name>
+                <type>boolean</type>
+            </parameter>
+        </method>
+        <method>
+            <name>ClearMemoryCache</name>
+            <comment>Removes all bitmaps from the memory cache.</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>ba</name>
+                <type>anywheresoftware.b4a.BA</type>
+            </parameter>
+        </method>
+        <method>
+            <name>Invalidate</name>
+            <comment>Invalidates the whole view forcing the view to redraw itself.
+Redrawing will only happen when the program can process messages. Usually when it finishes running the current code.</comment>
+            <returntype>void</returntype>
+        </method>
+        <method>
+            <name>LoadImageAsync</name>
+            <comment>Loads an image asynchronously.
+&lt;B&gt;ImgView&lt;/B&gt; = the ImageView waiting for the image to load.
+&lt;B&gt;Location&lt;/B&gt; = the image location on internet (e.g. http://my.images.com/b4a.png) or on the device storage media (e.g. /mnt/sdcard/media/b4a.png). If the location starts with "assets:", the image is retrieved from the assets of the application. If it starts with "custom:", the function calls the custom loader defined with SetLoadImageCallbacks.
+&lt;B&gt;ImgID&lt;/B&gt; = an unique identifier for the image.
+&lt;B&gt;Gravity&lt;/B&gt; = the gravity used to position/stretch the image within its bounds. This setting will affect also the placeholder image if this image is a BitmapDrawable.
+This function modifies the Tag property of the ImageView, so don't use this property.</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>ba</name>
+                <type>anywheresoftware.b4a.BA</type>
+            </parameter>
+            <parameter>
+                <name>ImgView</name>
+                <type>java.lang.Object</type>
+            </parameter>
+            <parameter>
+                <name>Location</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>ImgID</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>Gravity</name>
+                <type>int</type>
+            </parameter>
+        </method>
+        <method>
+            <name>SetSelected</name>
+            <comment>Changes the selected state of the item at the given position.</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>Position</name>
+                <type>int</type>
+            </parameter>
+            <parameter>
+                <name>Selected</name>
+                <type>boolean</type>
+            </parameter>
+        </method>
+        <property>
+            <name>SwipeMode</name>
+            <returntype>byte</returntype>
+            <parameter>
+                <name>Mode</name>
+                <type>byte</type>
+            </parameter>
+            <comment>Gets or sets whether a swipe gesture is handled at the item level or at the list level.
+If set to MODE_ITEM (default), the swipe gesture is handled at the item level and SetSwipeDirection has to be called for each item.
+If set to MODE_LIST_DIR_*, the swipe gesture is handled at the list level.
+If set to MODE_LIST_DIR_ALL, the list can also scroll vertically during the swipe motion.</comment>
+        </property>
+        <property>
+            <name>Left</name>
+            <returntype>int</returntype>
+            <parameter>
+                <name>left</name>
+                <type>int</type>
+            </parameter>
+            <comment>Gets or sets the view's left.</comment>
+        </property>
+        <property>
+            <name>Parent</name>
+            <returntype>java.lang.Object</returntype>
+            <comment>Returns the parent of the list.</comment>
+        </property>
+        <property>
+            <name>AtLeastOneSelection</name>
+            <returntype>boolean</returntype>
+            <parameter>
+                <name>Enabled</name>
+                <type>boolean</type>
+            </parameter>
+            <comment>Gets or sets whether the last and only selection can be undone. If True, there must always be at least one selection.</comment>
+        </property>
+        <property>
+            <name>MinimumDistanceForSwipe</name>
+            <returntype>int</returntype>
+            <parameter>
+                <name>NewDistance</name>
+                <type>int</type>
+            </parameter>
+            <comment>Gets or sets the minimum distance of horizontal movement before a gesture is considered a swipe.</comment>
+        </property>
+        <property>
+            <name>ScrollingSpeedWhenDragged</name>
+            <returntype>int</returntype>
+            <parameter>
+                <name>NewValue</name>
+                <type>int</type>
+            </parameter>
+            <comment>Gets or sets the scrolling speed when an item is dragged to the top or to the bottom during an internal drag &amp;amp; drop operation.
+Minimum value = 1, Default value = 6.</comment>
+        </property>
+        <property>
+            <name>DividerDrawable</name>
+            <returntype>android.graphics.drawable.Drawable</returntype>
+            <parameter>
+                <name>NewDrawable</name>
+                <type>android.graphics.drawable.Drawable</type>
+            </parameter>
+            <comment>Gets/sets the drawable that will be drawn between each item.</comment>
+        </property>
+        <property>
+            <name>Visible</name>
+            <returntype>boolean</returntype>
+            <parameter>
+                <name>Visible</name>
+                <type>boolean</type>
+            </parameter>
+            <comment></comment>
+        </property>
+        <property>
+            <name>Height</name>
+            <returntype>int</returntype>
+            <parameter>
+                <name>height</name>
+                <type>int</type>
+            </parameter>
+            <comment>Gets or sets the view's height.</comment>
+        </property>
+        <property>
+            <name>TranscriptMode</name>
+            <returntype>int</returntype>
+            <parameter>
+                <name>NewMode</name>
+                <type>int</type>
+            </parameter>
+            <comment>Gets or sets the transcript mode (disabled by default).
+When this mode is enabled, the list scrolls to the bottom to make new items visible when they are added.
+If set to NORMAL, the list scrolls to the bottom only if the last item is already visible on screen.
+If set to ALWAYS_SCROLL, the list always scrolls to the bottom, no matter what items are currently visible.
+The transcript mode has to be disabled if you want to perform a drag &amp;amp; drop operation.</comment>
+        </property>
+        <property>
+            <name>PressedDrawable</name>
+            <returntype>android.graphics.drawable.Drawable</returntype>
+            <parameter>
+                <name>NewDrawable</name>
+                <type>android.graphics.drawable.Drawable</type>
+            </parameter>
+            <comment>Gets/sets the drawable for the pressed state.</comment>
+        </property>
+        <property>
+            <name>Width</name>
+            <returntype>int</returntype>
+            <parameter>
+                <name>width</name>
+                <type>int</type>
+            </parameter>
+            <comment>Gets or sets the view's width.</comment>
+        </property>
+        <property>
+            <name>SelectWithClick</name>
+            <returntype>boolean</returntype>
+            <parameter>
+                <name>Enabled</name>
+                <type>boolean</type>
+            </parameter>
+            <comment>Gets or sets whether the items are automatically selected with a click (default value) when the selection mode is set to SINGLE or MULTIPLE.
+If False, the items have to be selected with the SetSelected function.</comment>
+        </property>
+        <property>
+            <name>QualityForCache</name>
+            <returntype>boolean</returntype>
+            <parameter>
+                <name>HighQuality</name>
+                <type>boolean</type>
+            </parameter>
+            <comment>Gets/sets the format and quality used to save bitmaps in the disk cache.
+If True, the bitmap is saved into a PNG file with maximum quality. If False (default), it is saved into a JPG file with a quality of 75. This setting is ignored if the image is not opaque (the PNG format is used to keep the alpha channel).</comment>
+        </property>
+        <property>
+            <name>Background</name>
+            <returntype>android.graphics.drawable.Drawable</returntype>
+            <parameter>
+                <name>drawable</name>
+                <type>android.graphics.drawable.Drawable</type>
+            </parameter>
+            <comment>Gets or sets the background drawable.</comment>
+        </property>
+        <property>
+            <name>Color</name>
+            <parameter>
+                <name>color</name>
+                <type>int</type>
+            </parameter>
+            <comment>Sets the background of the view to be a ColorDrawable with the given color.
+If the current background is of type GradientDrawable or ColorDrawable the round corners will be kept.</comment>
+        </property>
+        <property>
+            <name>Enabled</name>
+            <returntype>boolean</returntype>
+            <parameter>
+                <name>Enabled</name>
+                <type>boolean</type>
+            </parameter>
+            <comment>When the list is disabled, it cannot scroll or raise click events.</comment>
+        </property>
+        <property>
+            <name>NumberOfAsyncLoaders</name>
+            <returntype>int</returntype>
+            <parameter>
+                <name>Number</name>
+                <type>int</type>
+            </parameter>
+            <comment>Gets/sets the number of concurrent loaders for LoadImageAsync and LoadTextAsync.
+The default value is 2.</comment>
+        </property>
+        <property>
+            <name>DividerHeight</name>
+            <returntype>int</returntype>
+            <parameter>
+                <name>Height</name>
+                <type>int</type>
+            </parameter>
+            <comment>Gets/sets the divider height.</comment>
+        </property>
+        <property>
+            <name>AnimationCleaner</name>
+            <returntype>boolean</returntype>
+            <parameter>
+                <name>Enabled</name>
+                <type>boolean</type>
+            </parameter>
+            <comment>Gets or sets whether the animation cleaner is enabled. When True, all animations on a view being reused or scrapped will be stopped.
+The cleaner works only with the standard Android animations created with the Animation or AnimationPlus libraries.
+As it slows down the processing of items, the option is set to False by default.</comment>
+        </property>
+        <property>
+            <name>FastScrollerState</name>
+            <returntype>int</returntype>
+            <comment>Returns the state of the fast scroller.
+Returns FASTSCRL_STATE_ERROR if the fast scroller is not enabled.</comment>
+        </property>
+        <property>
+            <name>OverscrollMaximum</name>
+            <returntype>int</returntype>
+            <parameter>
+                <name>Value</name>
+                <type>int</type>
+            </parameter>
+            <comment>Gets or sets the maximum value returned by the Overscrolled event.
+This value is always positive.</comment>
+        </property>
+        <property>
+            <name>Top</name>
+            <returntype>int</returntype>
+            <parameter>
+                <name>top</name>
+                <type>int</type>
+            </parameter>
+            <comment>Gets or sets the view's top.</comment>
+        </property>
+        <property>
+            <name>Tag</name>
+            <returntype>java.lang.Object</returntype>
+            <parameter>
+                <name>tag</name>
+                <type>java.lang.Object</type>
+            </parameter>
+            <comment>Gets or sets the Tag value. This is a place holder which can used to store additional data.</comment>
+        </property>
+        <property>
+            <name>SelectionMode</name>
+            <returntype>int</returntype>
+            <parameter>
+                <name>NewMode</name>
+                <type>int</type>
+            </parameter>
+            <comment>Gets or sets the selection mode (None by default).
+If set to Single, only one item can be selected.
+If set to Multiple, several items can be selected.</comment>
+        </property>
+        <field>
+            <name>SCROLLBAR_INSIDE_OVERLAY</name>
+            <comment></comment>
+            <returntype>int</returntype>
+        </field>
+        <field>
+            <name>FASTSCRL_STATE_ERROR</name>
+            <comment></comment>
+            <returntype>int</returntype>
+        </field>
+        <field>
+            <name>STYLE_MATERIAL_DARK</name>
+            <comment></comment>
+            <returntype>byte</returntype>
+        </field>
+        <field>
+            <name>STYLE_DEFAULT</name>
+            <comment></comment>
+            <returntype>byte</returntype>
+        </field>
+        <field>
+            <name>SCROLLSTATE_IDLE</name>
+            <comment></comment>
+            <returntype>int</returntype>
+        </field>
+        <field>
+            <name>SCROLLSTATE_START</name>
+            <comment></comment>
+            <returntype>int</returntype>
+        </field>
+        <field>
+            <name>SWIPE_MODE_LIST_DIR_ALL</name>
+            <comment></comment>
+            <returntype>byte</returntype>
+        </field>
+        <field>
+            <name>STYLE_HOLO_LIGHT</name>
+            <comment></comment>
+            <returntype>byte</returntype>
+        </field>
+        <field>
+            <name>TRANSCRIPT_ALWAYS_SCROLL</name>
+            <comment></comment>
+            <returntype>int</returntype>
+        </field>
+        <field>
+            <name>STYLE_HOLO_DARK3</name>
+            <comment></comment>
+            <returntype>byte</returntype>
+        </field>
+        <field>
+            <name>STYLE_HOLO_DARK2</name>
+            <comment></comment>
+            <returntype>byte</returntype>
+        </field>
+        <field>
+            <name>SWIPE_DIRECTION_RIGHT</name>
+            <comment></comment>
+            <returntype>byte</returntype>
+        </field>
+        <field>
+            <name>STYLE_HOLO_LIGHT3_DIV2</name>
+            <comment></comment>
+            <returntype>byte</returntype>
+        </field>
+        <field>
+            <name>TRANSCRIPT_DISABLED</name>
+            <comment></comment>
+            <returntype>int</returntype>
+        </field>
+        <field>
+            <name>SWIPE_DIRECTION_BOTH</name>
+            <comment></comment>
+            <returntype>byte</returntype>
+        </field>
+        <field>
+            <name>SCROLLBAR_OUTSIDE_OVERLAY</name>
+            <comment></comment>
+            <returntype>int</returntype>
+        </field>
+        <field>
+            <name>SWIPE_DIRECTION_LEFT</name>
+            <comment></comment>
+            <returntype>byte</returntype>
+        </field>
+        <field>
+            <name>SELECTION_NONE</name>
+            <comment></comment>
+            <returntype>int</returntype>
+        </field>
+        <field>
+            <name>FASTSCRL_STATE_VISIBLE</name>
+            <comment></comment>
+            <returntype>int</returntype>
+        </field>
+        <field>
+            <name>TRANSCRIPT_NORMAL</name>
+            <comment></comment>
+            <returntype>int</returntype>
+        </field>
+        <field>
+            <name>STYLE_HOLO_DARK2_DIV2</name>
+            <comment></comment>
+            <returntype>byte</returntype>
+        </field>
+        <field>
+            <name>SWIPE_MODE_LIST_DIR_BOTH</name>
+            <comment></comment>
+            <returntype>byte</returntype>
+        </field>
+        <field>
+            <name>STYLE_HOLO_LIGHT2_DIV2</name>
+            <comment></comment>
+            <returntype>byte</returntype>
+        </field>
+        <field>
+            <name>SELECTION_MULTIPLE</name>
+            <comment></comment>
+            <returntype>int</returntype>
+        </field>
+        <field>
+            <name>STYLE_HOLO_LIGHT3</name>
+            <comment></comment>
+            <returntype>byte</returntype>
+        </field>
+        <field>
+            <name>STYLE_HOLO_LIGHT2</name>
+            <comment></comment>
+            <returntype>byte</returntype>
+        </field>
+        <field>
+            <name>SCROLLSTATE_END</name>
+            <comment></comment>
+            <returntype>int</returntype>
+        </field>
+        <field>
+            <name>STYLE_HOLO_DARK</name>
+            <comment></comment>
+            <returntype>byte</returntype>
+        </field>
+        <field>
+            <name>SWIPE_MODE_LIST_DIR_RIGHT</name>
+            <comment></comment>
+            <returntype>byte</returntype>
+        </field>
+        <field>
+            <name>SCROLLBAR_INSIDE_INSET</name>
+            <comment></comment>
+            <returntype>int</returntype>
+        </field>
+        <field>
+            <name>SCROLLSTATE_FLING</name>
+            <comment></comment>
+            <returntype>int</returntype>
+        </field>
+        <field>
+            <name>SWIPE_MODE_NONE</name>
+            <comment></comment>
+            <returntype>byte</returntype>
+        </field>
+        <field>
+            <name>STYLE_HOLO_DARK_DIV2</name>
+            <comment></comment>
+            <returntype>byte</returntype>
+        </field>
+        <field>
+            <name>FASTSCRL_STATE_DRAGGING</name>
+            <comment></comment>
+            <returntype>int</returntype>
+        </field>
+        <field>
+            <name>SWIPE_MODE_ITEM</name>
+            <comment></comment>
+            <returntype>byte</returntype>
+        </field>
+        <field>
+            <name>SWIPE_MODE_LIST_DIR_LEFT</name>
+            <comment></comment>
+            <returntype>byte</returntype>
+        </field>
+        <field>
+            <name>SWIPE_DIRECTION_NONE</name>
+            <comment></comment>
+            <returntype>byte</returntype>
+        </field>
+        <field>
+            <name>SCROLLBAR_INVISIBLE</name>
+            <comment></comment>
+            <returntype>int</returntype>
+        </field>
+        <field>
+            <name>FASTSCRL_STATE_INVISIBLE</name>
+            <comment></comment>
+            <returntype>int</returntype>
+        </field>
+        <field>
+            <name>STYLE_MATERIAL_LIGHT</name>
+            <comment></comment>
+            <returntype>byte</returntype>
+        </field>
+        <field>
+            <name>STYLE_MATERIAL_DARK2</name>
+            <comment></comment>
+            <returntype>byte</returntype>
+        </field>
+        <field>
+            <name>STYLE_HOLO_LIGHT_DIV2</name>
+            <comment></comment>
+            <returntype>byte</returntype>
+        </field>
+        <field>
+            <name>STYLE_HOLO_TRANSLUCENT</name>
+            <comment></comment>
+            <returntype>byte</returntype>
+        </field>
+        <field>
+            <name>STYLE_MATERIAL_LIGHT2</name>
+            <comment></comment>
+            <returntype>byte</returntype>
+        </field>
+        <field>
+            <name>SCROLLBAR_OUTSIDE_INSET</name>
+            <comment></comment>
+            <returntype>int</returntype>
+        </field>
+        <field>
+            <name>STYLE_HOLO_DARK3_DIV2</name>
+            <comment></comment>
+            <returntype>byte</returntype>
+        </field>
+        <field>
+            <name>VERSION</name>
+            <comment></comment>
+            <returntype>float</returntype>
+        </field>
+        <field>
+            <name>SELECTION_SINGLE</name>
+            <comment></comment>
+            <returntype>int</returntype>
+        </field>
+        <designerProperty>key:AnimationCleaner, displayname:AnimationCleaner, defaultvalue:False, fieldtype:Boolean</designerProperty>
+        <designerProperty>key:AtLeastOneSelection, displayname:AtLeastOneSelection, defaultvalue:False, fieldtype:Boolean, description:Whether the last and only selection can be undone.</designerProperty>
+        <designerProperty>key:DiskCacheLocation, displayname:DiskCacheLocation, defaultvalue:, fieldtype:String</designerProperty>
+        <designerProperty>key:DiskCacheSize, displayname:DiskCacheSize, defaultvalue:0, fieldtype:Int, minrange:0, description:Number of megabytes used to store data in the disk cache.</designerProperty>
+        <designerProperty>key:DividerHeight, displayname:DividerHeight, defaultvalue:-1, fieldtype:Int, minrange:-1, description:-1 = default value.</designerProperty>
+        <designerProperty>key:FadingEdges, displayname:FadingEdges, defaultvalue:True, fieldtype:Boolean</designerProperty>
+        <designerProperty>key:MemoryCacheSize, displayname:MemoryCacheSize, defaultvalue:0, fieldtype:Int, minrange:0, maxrange:90, description:Percentage of free memory used to store bitmaps in the memory cache.</designerProperty>
+        <designerProperty>key:MinimumDistanceForSwipe, displayname:MinimumDistanceForSwipe, defaultvalue:-1, fieldtype:Int, minrange:-1, description:-1 = default value.</designerProperty>
+        <designerProperty>key:NumberOfAsyncLoaders, displayname:NumberOfAsyncLoaders, defaultvalue:2, fieldtype:Int, minrange:1, maxrange:8, description:The number of concurrent loaders for LoadImageAsync and LoadTextAsync.</designerProperty>
+        <designerProperty>key:OverscrollMaximum, displayname:OverscrollMaximum, defaultvalue:2147483647, fieldtype:Int, minrange:0</designerProperty>
+        <designerProperty>key:QualityForCache, displayname:QualityForCache, defaultvalue:JPG 75%, fieldtype:String, list:JPG 75%|PNG</designerProperty>
+        <designerProperty>key:ScrollbarStyle, displayname:ScrollbarStyle, defaultvalue:OUTSIDE_OVERLAY, fieldtype:String, list:INVISIBLE|INSIDE_INSET|OUTSIDE_INSET|INSIDE_OVERLAY|OUTSIDE_OVERLAY</designerProperty>
+        <designerProperty>key:ScrollingSpeedWhenDragged, displayname:ScrollingSpeedWhenDragged, defaultvalue:6, fieldtype:Int, minrange:0, description:The speed when an item is dragged to the top or to the bottom during an internal drag &amp; drop operation.</designerProperty>
+        <designerProperty>key:SelectionMode, displayname:SelectionMode, defaultvalue:NONE, fieldtype:String, list:NONE|SINGLE|MULTIPLE</designerProperty>
+        <designerProperty>key:SelectWithClick, displayname:SelectWithClick, defaultvalue:True, fieldtype:Boolean</designerProperty>
+        <designerProperty>key:Style, displayname:Style, defaultvalue:DEFAULT, fieldtype:String, list:DEFAULT|STYLE_HOLO_DARK|STYLE_HOLO_DARK_DIV2|STYLE_HOLO_DARK2|STYLE_HOLO_DARK2_DIV2|STYLE_HOLO_DARK3|STYLE_HOLO_DARK3_DIV2|STYLE_HOLO_LIGHT|STYLE_HOLO_LIGHT_DIV2|STYLE_HOLO_LIGHT2|STYLE_HOLO_LIGHT2_DIV2|STYLE_HOLO_LIGHT3|STYLE_HOLO_LIGHT3_DIV2|STYLE_HOLO_TRANSLUCENT|STYLE_MATERIAL_DARK|STYLE_MATERIAL_DARK2|STYLE_MATERIAL_LIGHT|STYLE_MATERIAL_LIGHT2</designerProperty>
+        <designerProperty>key:SwipeMode, displayname:SwipeMode, defaultvalue:ITEM, fieldtype:String, list:NONE|ITEM|LIST_DIR_LEFT|LIST_DIR_RIGHT|LIST_DIR_BOTH|LIST_DIR_ALL</designerProperty>
+        <designerProperty>key:TranscriptMode, displayname:TranscriptMode, defaultvalue:DISABLED, fieldtype:String, list:DISABLED|NORMAL|ALWAYS_SCROLL</designerProperty>
+    </class>
+    <class>
+        <name>flm.b4a.ultimatelistview.UltimateListViewWrapper.ULVPanel</name>
+        <shortname>UltimateLVPanel</shortname>
+        <objectwrapper>android.view.ViewGroup</objectwrapper>
+        <owner>process</owner>
+        <method>
+            <name>IsInitialized</name>
+            <comment></comment>
+            <returntype>boolean</returntype>
+        </method>
+        <method>
+            <name>BringToFront</name>
+            <comment></comment>
+            <returntype>void</returntype>
+        </method>
+        <method>
+            <name>SendToBack</name>
+            <comment></comment>
+            <returntype>void</returntype>
+        </method>
+        <method>
+            <name>SetVisibleAnimated</name>
+            <comment></comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>arg0</name>
+                <type>int</type>
+            </parameter>
+            <parameter>
+                <name>arg1</name>
+                <type>boolean</type>
+            </parameter>
+        </method>
+        <method>
+            <name>Invalidate3</name>
+            <comment></comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>arg0</name>
+                <type>int</type>
+            </parameter>
+            <parameter>
+                <name>arg1</name>
+                <type>int</type>
+            </parameter>
+            <parameter>
+                <name>arg2</name>
+                <type>int</type>
+            </parameter>
+            <parameter>
+                <name>arg3</name>
+                <type>int</type>
+            </parameter>
+        </method>
+        <method>
+            <name>Invalidate2</name>
+            <comment></comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>arg0</name>
+                <type>android.graphics.Rect</type>
+            </parameter>
+        </method>
+        <method>
+            <name>SetColorAnimated</name>
+            <comment></comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>arg0</name>
+                <type>int</type>
+            </parameter>
+            <parameter>
+                <name>arg1</name>
+                <type>int</type>
+            </parameter>
+            <parameter>
+                <name>arg2</name>
+                <type>int</type>
+            </parameter>
+        </method>
+        <method>
+            <name DesignerName="SetBackgroundImage">SetBackgroundImageNew</name>
+            <comment></comment>
+            <returntype>anywheresoftware.b4a.objects.drawable.BitmapDrawable</returntype>
+            <parameter>
+                <name>arg0</name>
+                <type>android.graphics.Bitmap</type>
+            </parameter>
+        </method>
+        <method>
+            <name>Invalidate</name>
+            <comment></comment>
+            <returntype>void</returntype>
+        </method>
+        <method>
+            <name>SetLayoutAnimated</name>
+            <comment></comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>arg0</name>
+                <type>int</type>
+            </parameter>
+            <parameter>
+                <name>arg1</name>
+                <type Pixel="true">int</type>
+            </parameter>
+            <parameter>
+                <name>arg2</name>
+                <type Pixel="true">int</type>
+            </parameter>
+            <parameter>
+                <name>arg3</name>
+                <type Pixel="true">int</type>
+            </parameter>
+            <parameter>
+                <name>arg4</name>
+                <type Pixel="true">int</type>
+            </parameter>
+        </method>
+        <method>
+            <name>RequestFocus</name>
+            <comment></comment>
+            <returntype>boolean</returntype>
+        </method>
+        <property>
+            <name>Left</name>
+            <returntype>int</returntype>
+            <comment></comment>
+        </property>
+        <property>
+            <name>Background</name>
+            <returntype>android.graphics.drawable.Drawable</returntype>
+            <parameter>
+                <name>arg0</name>
+                <type>android.graphics.drawable.Drawable</type>
+            </parameter>
+            <comment></comment>
+        </property>
+        <property>
+            <name>Parent</name>
+            <returntype>java.lang.Object</returntype>
+            <comment></comment>
+        </property>
+        <property>
+            <name>Color</name>
+            <parameter>
+                <name>arg0</name>
+                <type>int</type>
+            </parameter>
+            <comment></comment>
+        </property>
+        <property>
+            <name>NumberOfViews</name>
+            <returntype>int</returntype>
+            <comment></comment>
+        </property>
+        <property>
+            <name>Enabled</name>
+            <returntype>boolean</returntype>
+            <parameter>
+                <name>arg0</name>
+                <type>boolean</type>
+            </parameter>
+            <comment></comment>
+        </property>
+        <property>
+            <name>Elevation</name>
+            <returntype>float</returntype>
+            <comment></comment>
+        </property>
+        <property>
+            <name>Top</name>
+            <returntype>int</returntype>
+            <comment></comment>
+        </property>
+        <property>
+            <name>Visible</name>
+            <returntype>boolean</returntype>
+            <parameter>
+                <name>arg0</name>
+                <type>boolean</type>
+            </parameter>
+            <comment></comment>
+        </property>
+        <property>
+            <name>Padding</name>
+            <returntype>int[]</returntype>
+            <parameter>
+                <name>arg0</name>
+                <type>int[]</type>
+            </parameter>
+            <comment></comment>
+        </property>
+        <property>
+            <name>Height</name>
+            <returntype>int</returntype>
+            <parameter>
+                <name>NewHeight</name>
+                <type>int</type>
+            </parameter>
+            <comment></comment>
+        </property>
+        <property>
+            <name>Tag</name>
+            <returntype>java.lang.Object</returntype>
+            <parameter>
+                <name>arg0</name>
+                <type>java.lang.Object</type>
+            </parameter>
+            <comment></comment>
+        </property>
+        <property>
+            <name>Width</name>
+            <returntype>int</returntype>
+            <comment></comment>
+        </property>
+        <field>
+            <name>ACTION_MOVE</name>
+            <comment></comment>
+            <returntype>int</returntype>
+        </field>
+        <field>
+            <name>ACTION_DOWN</name>
+            <comment></comment>
+            <returntype>int</returntype>
+        </field>
+        <field>
+            <name>ACTION_UP</name>
+            <comment></comment>
+            <returntype>int</returntype>
+        </field>
+    </class>
+    <class>
+        <name>flm.b4a.ultimatelistview.UltimateListView.KeyState</name>
+        <shortname>KeyState</shortname>
+        <owner>process</owner>
+        <field>
+            <name>IsAltPressed</name>
+            <comment></comment>
+            <returntype>boolean</returntype>
+        </field>
+        <field>
+            <name>IsCtrlPressed</name>
+            <comment></comment>
+            <returntype>boolean</returntype>
+        </field>
+        <field>
+            <name>IsShiftPressed</name>
+            <comment></comment>
+            <returntype>boolean</returntype>
+        </field>
+        <field>
+            <name>Modifiers</name>
+            <comment></comment>
+            <returntype>int</returntype>
+        </field>
+    </class>
+    <class>
+        <name>flm.b4a.ultimatelistview.Animator</name>
+        <shortname>UltimateLVAnimator</shortname>
+        <owner>process</owner>
+        <event>Before(Position As Int, PanelToRecycle As Panel, PanelTop As Int, Action As Byte)</event>
+        <event>Confirm(FirstVisiblePosition As Int, LastVisiblePosition As Int) As Boolean</event>
+        <event>Changed(Position As Int, Index As Int, PanelToAnim As Panel, PanelTop As Int, Action As Byte)</event>
+        <event>Scrolled(Position As Int, Index As Int, PanelToAnim As Panel, PanelTop As Int, ScrollDirection As Byte)</event>
+        <event>After(FirstVisiblePosition As Int, LastVisiblePosition As Int)</event>
+        <method>
+            <name>WaitDraw</name>
+            <comment>Waits until the UltimateListView is about to be drawn.
+Call this when you want to trigger the Changed event for any drawing reason, before the drawing occurs.</comment>
+            <returntype>void</returntype>
+        </method>
+        <method>
+            <name>Initialize</name>
+            <comment>Creates an animator to use with UltimateListView.
+It will trigger an event whenever one of these actions is performed on the list: scroll, add, insert, remove, replace a layout.
+&lt;U&gt;Events:&lt;/U&gt;
+&lt;B&gt;Before&lt;/B&gt; is raised before the action is performed.
+&lt;B&gt;Confirm&lt;/B&gt; is raised after the action is performed, but before the drawing occurs and before the Changed or Scrolled events. If True is returned or if this event is not handled, the following events will be raised; otherwise, they will be skipped.
+&lt;B&gt;Changed&lt;/B&gt; and &lt;B&gt;Scrolled&lt;/B&gt; are raised after the action is performed, but before the drawing occurs. &lt;I&gt;Changed&lt;/I&gt; is raised for each visible item. &lt;I&gt;Scrolled&lt;/I&gt; is raised for each item that becomes visible.
+&lt;B&gt;After&lt;/B&gt; is raised after the action is performed and after all other events.</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>ba</name>
+                <type>anywheresoftware.b4a.BA</type>
+            </parameter>
+            <parameter>
+                <name>Source</name>
+                <type>flm.b4a.ultimatelistview.UltimateListViewWrapper</type>
+            </parameter>
+            <parameter>
+                <name>EventPrefix</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+        <property>
+            <name>AnimateOnFling</name>
+            <returntype>boolean</returntype>
+            <parameter>
+                <name>AoF</name>
+                <type>boolean</type>
+            </parameter>
+            <comment>Gets or sets whether the Scrolled event is raised during a fling motion.
+Default = true.</comment>
+        </property>
+        <property>
+            <name>IsInitialized</name>
+            <returntype>boolean</returntype>
+            <comment></comment>
+        </property>
+        <field>
+            <name>SCROLL_UP</name>
+            <comment></comment>
+            <returntype>byte</returntype>
+        </field>
+        <field>
+            <name>ACTION_REPLACELAYOUT</name>
+            <comment></comment>
+            <returntype>byte</returntype>
+        </field>
+        <field>
+            <name>ACTION_ADD</name>
+            <comment></comment>
+            <returntype>byte</returntype>
+        </field>
+        <field>
+            <name>ACTION_USER</name>
+            <comment></comment>
+            <returntype>byte</returntype>
+        </field>
+        <field>
+            <name>ACTION_REMOVE</name>
+            <comment></comment>
+            <returntype>byte</returntype>
+        </field>
+        <field>
+            <name>ACTION_INSERT</name>
+            <comment></comment>
+            <returntype>byte</returntype>
+        </field>
+        <field>
+            <name>SCROLL_DOWN</name>
+            <comment></comment>
+            <returntype>byte</returntype>
+        </field>
+    </class>
+    <version>4.5</version>
+    <author>Fr\u00e9d\u00e9ric Leneuf-Magaud</author>
+    <dependsOn>Cache</dependsOn>
+</root>

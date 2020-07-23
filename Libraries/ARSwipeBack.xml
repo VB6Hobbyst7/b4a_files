@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root>
+    <doclet-version-NOT-library-version>1.05</doclet-version-NOT-library-version>
+    <class>
+        <name>ir.aminrezaei.arswipeback.ARSwipeUtils</name>
+        <shortname>ARSwipeUtils</shortname>
+        <comment>Created by Amin Rezaei on 5/25/2017 3:21 PM</comment>
+        <owner>activity</owner>
+        <method>
+            <name>setDragEdge</name>
+            <comment>
+edge: LEFT - 0
+ TOP - 1
+ RIGHT - 2
+ BOTTOM - 3</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>ba</name>
+                <type>anywheresoftware.b4a.BA</type>
+            </parameter>
+            <parameter>
+                <name>edge</name>
+                <type>int</type>
+            </parameter>
+        </method>
+        <method>
+            <name>GetStatusBarHeight</name>
+            <comment></comment>
+            <returntype>int</returntype>
+            <parameter>
+                <name>ba</name>
+                <type>anywheresoftware.b4a.BA</type>
+            </parameter>
+        </method>
+        <method>
+            <name>prepareContent</name>
+            <comment></comment>
+            <returntype>anywheresoftware.b4a.objects.PanelWrapper</returntype>
+            <parameter>
+                <name>ba</name>
+                <type>anywheresoftware.b4a.BA</type>
+            </parameter>
+        </method>
+        <method>
+            <name>AddStatusBar</name>
+            <comment></comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>ba</name>
+                <type>anywheresoftware.b4a.BA</type>
+            </parameter>
+            <parameter>
+                <name>panelWrapper</name>
+                <type>anywheresoftware.b4a.objects.PanelWrapper</type>
+            </parameter>
+            <parameter>
+                <name>color</name>
+                <type>int</type>
+            </parameter>
+        </method>
+        <method>
+            <name>attachToToolbarBack</name>
+            <comment></comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>ba</name>
+                <type>anywheresoftware.b4a.BA</type>
+            </parameter>
+            <parameter>
+                <name>toolbar</name>
+                <type>android.support.v7.widget.Toolbar</type>
+            </parameter>
+        </method>
+        <method>
+            <name>exitActivity</name>
+            <comment></comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>ba</name>
+                <type>anywheresoftware.b4a.BA</type>
+            </parameter>
+        </method>
+    </class>
+    <version>1.0</version>
+    <author>Amin Rezaei</author>
+    <dependsOn>swipeback.aar</dependsOn>
+</root>

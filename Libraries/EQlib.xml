@@ -1,0 +1,303 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root>
+    <doclet-version-NOT-library-version>1.00</doclet-version-NOT-library-version>
+    <class>
+        <name>eqlib.EQlib</name>
+        <shortname>EQlib</shortname>
+        <owner>process</owner>
+        <permission>android.permission.MODIFY_AUDIO_SETTINGS</permission>
+        <method>
+            <name>Initialize</name>
+            <comment>Checks whether the Equalizer is available and Initializes the object,
+ only for all output and not for specific media players.
+ For backwards compatibility, the library will not throw an exception 
+ on failure to initialize the Equalizer, but will return true or false 
+ and set the IsInitialized flag appropriately if it fails for any reason.
+ check either of these before running the other methods as if the equalizer
+ is not initialized, you will get a runtime error.
+ &lt;code&gt;Dim EQ As EQlib
+ EQ.Initialize
+ If EQ.IsInitialized Then
+      EQ.Enable(True)
+      NoPres=EQ.GetNumberOfPresets
+      For i = 0 To NoPres-1
+          Log(EQ.GetPresetName(i))
+      Next
+ End if
+ &lt;/code&gt;</comment>
+            <returntype>boolean</returntype>
+        </method>
+        <method>
+            <name>IsAvailable</name>
+            <comment>Returns the availability of the Equalizer object, it must be available for
+ the devices API level (9 or later)</comment>
+            <returntype>boolean</returntype>
+        </method>
+        <method>
+            <name>GetBandLevel</name>
+            <comment>Gets the Level set for the given Equalizer band.
+ &lt;code&gt;
+ Dim EQ As EQlib
+ Dim Level As Short
+ EQ.Initialize
+ If EQ.IsInitialized Then
+      EQ.Enable(True)
+      Level = EQ.GetBandLevel(band) 
+ End If
+ &lt;/code&gt;</comment>
+            <returntype>short</returntype>
+            <parameter>
+                <name>band</name>
+                <type>short</type>
+            </parameter>
+        </method>
+        <method>
+            <name>SetBandLevel</name>
+            <comment>Sets the given Equalizer band to the given Level.
+ &lt;code&gt;
+ Dim EQ As EQlib
+ Dim band,level As Short
+ EQ.Initialize
+ If EQ.IsInitialized Then
+      EQ.Enable(True)
+      EQ.SetBandLevel(band,level) 
+ End If
+ &lt;/code&gt;</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>band</name>
+                <type>short</type>
+            </parameter>
+            <parameter>
+                <name>level</name>
+                <type>short</type>
+            </parameter>
+        </method>
+        <method>
+            <name>UsePreset</name>
+            <comment>Sets the Equalizer according to the given preset.
+ &lt;code&gt;
+ Dim EQ As EQlib
+ EQ.Initialize
+ If EQ.IsInitialized Then
+      EQ.Enable(True)
+      EQ.UsePreset(preset)
+ End If
+ &lt;/code&gt;</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>preset</name>
+                <type>short</type>
+            </parameter>
+        </method>
+        <method>
+            <name>GetProperties</name>
+            <comment>Gets the Equalizer properties.
+ &lt;code&gt;
+ Dim EQ As EQlib
+ EQ.Initialize
+ EQ.Enable(True)
+ EqSett= EQ.GetProperties
+ EQ.SetProperties(EqSett)
+ &lt;/code&gt;</comment>
+            <returntype>java.lang.String</returntype>
+        </method>
+        <method>
+            <name>GetBandLevelRange</name>
+            <comment>Gets the level range for use by setBandLevel(short band, short level).
+ &lt;code&gt;
+ Dim EQ As EQlib
+ EQ.Initialize
+ If EQ.IsInitialized Then
+      EQ.Enable(True)
+      Dim FRange() As Short
+      FRange=EQ.GetBandLevelRange
+      For i = 0 To FRange.Length-1
+          Log(FRange(i))
+      Next
+ End If
+ &lt;/code&gt;</comment>
+            <returntype>short[]</returntype>
+        </method>
+        <method>
+            <name>SetProperties</name>
+            <comment>Sets the Equalizer properties.
+ &lt;code&gt;
+ Dim EQ As EQlib
+ EQ.Initialize
+ EQ.Enable(True)
+ EqSett= EQ.GetProperties
+ EQ.SetProperties(EqSett)
+ &lt;/code&gt;</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>settingsStr</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+        <method>
+            <name>GetBand</name>
+            <comment>Gets the band that has the most effect on the given frequency.
+ &lt;code&gt;
+ Dim EQ As EQlib
+ Dim band As Short
+ Dim freq as Int
+ freq = 1000
+ EQ.Initialize
+ If EQ.IsInitialized Then
+      EQ.Enable(True)
+      band = EQ.GetBand(freq) 
+ End If
+ &lt;/code&gt;</comment>
+            <returntype>short</returntype>
+            <parameter>
+                <name>frequency</name>
+                <type>int</type>
+            </parameter>
+        </method>
+        <method>
+            <name>Release</name>
+            <comment>Releases the native AudioEffect resources. 
+ It is a good practice to release the effect engine when not 
+ in use as control can be returned to other 
+ applications or the native resources released.</comment>
+            <returntype>void</returntype>
+        </method>
+        <method>
+            <name>GetPresetName</name>
+            <comment>Gets the preset name based on the index.
+ &lt;code&gt;
+ Dim EQ As EQlib
+ EQ.Initialize
+ If EQ.IsInitialized Then
+      EQ.Enable(True)
+      NoPres=EQ.GetNumberOfPresets
+      For i = 0 To NoPres-1
+          Log(EQ.GetPresetName(i))
+      Next
+ End if
+ &lt;/code&gt;</comment>
+            <returntype>java.lang.String</returntype>
+            <parameter>
+                <name>preset</name>
+                <type>short</type>
+            </parameter>
+        </method>
+        <method>
+            <name>Enable</name>
+            <comment>Enables or disables the Audio effect engine.</comment>
+            <returntype>int</returntype>
+            <parameter>
+                <name>enable</name>
+                <type>boolean</type>
+            </parameter>
+        </method>
+        <method>
+            <name>GetNumberOfPresets</name>
+            <comment>Gets the total number of presets the Equalizer supports.
+ &lt;code&gt;
+ Dim EQ As EQlib
+ EQ.Initialize
+ If EQ.IsInitialized Then
+      EQ.Enable(True)
+      NoPres=EQ.GetNumberOfPresets
+      For i = 0 To NoPres-1
+          Log(EQ.GetPresetName(i))
+      Next
+ End if
+ &lt;/code&gt;</comment>
+            <returntype>short</returntype>
+        </method>
+        <method>
+            <name>GetBandFreqRange</name>
+            <comment>Gets the frequency range of the given frequency band.
+ &lt;code&gt;
+ Dim EQ As EQlib
+ EQ.Initialize
+ If EQ.IsInitialized Then
+      EQ.Enable(True)
+      Dim BandFreqRange() As Int
+      BandFreqRange=EQ.GetBandFreqRange
+      For i = 0 To BandFreqRange.Length-1
+          Log(BandFreqRange(i))
+      Next
+ End If
+ &lt;/code&gt;</comment>
+            <returntype>int[]</returntype>
+            <parameter>
+                <name>band</name>
+                <type>short</type>
+            </parameter>
+        </method>
+        <method>
+            <name>GetCurrentPreset</name>
+            <comment>Gets current preset.
+ &lt;code&gt;
+ Dim EQ As EQlib
+ EQ.Initialize
+ If EQ.IsInitialized Then
+      EQ.Enable(True)
+      EQ.GetCurrentPreset
+ End If
+ &lt;/code&gt;</comment>
+            <returntype>short</returntype>
+        </method>
+        <method>
+            <name>GetEnabled</name>
+            <comment>Gets the Enabled status of the Audio effect engine.</comment>
+            <returntype>boolean</returntype>
+        </method>
+        <method>
+            <name>GetCenterFreq</name>
+            <comment>Gets the center frequency of the given band.
+ &lt;code&gt;
+ Dim EQ As EQlib
+ Dim Freq AS Int
+ EQ.Initialize
+ If EQ.IsInitialized Then
+      EQ.Enable(True)
+      Freq = EQ.GetCenterFreq(band) 
+ End If
+ &lt;/code&gt;</comment>
+            <returntype>int</returntype>
+            <parameter>
+                <name>band</name>
+                <type>short</type>
+            </parameter>
+        </method>
+        <method>
+            <name>GetNumberOfBands</name>
+            <comment>Gets the number of frequency bands supported by the Equalizer engine.
+ &lt;code&gt;
+ Dim EQ AS SLEqualizer
+ EQ.Initialize
+ If EQ.IsInitialized Then
+      EQ.Enable(True)
+      NoBands=EQ.GetNumberOfBands
+ End if
+ &lt;/code&gt;</comment>
+            <returntype>short</returntype>
+        </method>
+        <method>
+            <name>HasControl</name>
+            <comment>Checks if this AudioEffect object is controlling the effect engine</comment>
+            <returntype>boolean</returntype>
+        </method>
+        <method>
+            <name>IsInitialized</name>
+            <comment>Returns the status of the Equalizer object, it must be available for
+ the devices API level and initialized
+ &lt;code&gt;
+ Dim EQ As EQlib
+ EQ.Initialize
+ If EQ.IsInitialized Then
+      EQ.Enable(True)
+      'Setup EQ Parameters
+ End if
+ &lt;/code&gt;</comment>
+            <returntype>boolean</returntype>
+        </method>
+    </class>
+    <version>1.01</version>
+    <author>Steve Laming</author>
+</root>

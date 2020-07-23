@@ -1,0 +1,139 @@
+<HTML>
+<HEAD>
+<META http-equiv="Content-Type" content="text/html; charset=utf-8">
+<TITLE>
+Basic4android - GPS
+</TITLE>
+<link rel="stylesheet" type="text/css" href="images/help.css" />
+
+</HEAD>
+
+<BODY BGCOLOR="white" leftmargin="50">
+<a name="top"/>
+<h1>GPS</h1>
+
+</h5>The GPS library allows you to get information from the phone's GPS device.<br/>See the <a href='http://www.basic4ppc.com/forum/basic4android-getting-started-tutorials/6592-gps-tutorial.html'>GPS tutorial</a> for more information about this library.
+<h4>List of types:</h4>
+<a href='#gps'>GPS</a><br/><a href='#gpssatellite'>GPSSatellite</a><br/><a href='#location'>Location</a><br/>
+<hr/>
+<h3><u><a name='gps'>GPS</a></u></h3>
+</h5>The main object that raises the GPS events.
+<br/>
+<h4>Permissions:</h4>android.permission.ACCESS_FINE_LOCATION<br/>
+<h4>Events:</h4>
+LocationChanged (Location1 As Location)<br/>UserEnabled (Enabled As Boolean)<br/>GpsStatus (Satellites As List)<br/>
+<h4>Members:</h4><br/>
+<img src='images/19.png'/>&nbsp;&nbsp;<span style="color: #000000;"><a href='#gps_gpsenabled'><b>GPSEnabled</b></a> </span><span style="color: #0000FF;">As</span><span style="color: #000000;"> </span><span style="color: #008B8B;">Boolean</span><span style="color: #000000;">  [read only]</span><br/><br/>
+<img src='images/15.png'/>&nbsp;&nbsp;<span style="color: #000000;"><a href='#gps_initialize'><b>Initialize</b></a> (EventName </span><span style="color: #0000FF;">As</span><span style="color: #000000;"> </span><span style="color: #008B8B;">String</span><span style="color: #000000;">)</span><br/><br/>
+<img src='images/19.png'/>&nbsp;&nbsp;<span style="color: #000000;"><a href='#gps_locationsettingsintent'><b>LocationSettingsIntent</b></a> </span><span style="color: #0000FF;">As</span><span style="color: #000000;"> android.content.Intent  [read only]</span><br/><br/>
+<img src='images/15.png'/>&nbsp;&nbsp;<span style="color: #000000;"><a href='#gps_start'><b>Start</b></a> (MinimumTime </span><span style="color: #0000FF;">As</span><span style="color: #000000;"> </span><span style="color: #008B8B;">Long</span><span style="color: #000000;">, MinimumDistance </span><span style="color: #0000FF;">As</span><span style="color: #000000;"> </span><span style="color: #008B8B;">Float</span><span style="color: #000000;">)</span><br/><br/>
+<img src='images/15.png'/>&nbsp;&nbsp;<span style="color: #000000;"><a href='#gps_stop'><b>Stop</b></a></span><br/><br/>
+
+<h4>Members description:</h4>
+<a name='gps_gpsenabled'/>
+<h5><img src='images/19.png'/>
+<span style="color: #000000;">GPSEnabled </span><span style="color: #0000FF;">As</span><span style="color: #000000;"> </span><span style="color: #008B8B;">Boolean</span><span style="color: #000000;">  [read only]</span></h5>Tests whether the user has enabled the GPS.<a name='gps_initialize'/>
+<h5><img src='images/15.png'/>
+<span style="color: #000000;">Initialize (EventName </span><span style="color: #0000FF;">As</span><span style="color: #000000;"> </span><span style="color: #008B8B;">String</span><span style="color: #000000;">)</span></h5><a name='gps_locationsettingsintent'/>
+<h5><img src='images/19.png'/>
+<span style="color: #000000;">LocationSettingsIntent </span><span style="color: #0000FF;">As</span><span style="color: #000000;"> android.content.Intent  [read only]</span></h5>Returns the intent that is used to show the global locations settings.<br/>Example:<span class='pre'><span style="color: #000000;"><br/></span><span style="color: #0000FF;">If</span><span style="color: #000000;"> GPS1.GPSEnabled = False </span><span style="color: #0000FF;">Then</span><span style="color: #000000;"> StartActivity(GPS1.LocationSettingsIntent)</span></span><a name='gps_start'/>
+<h5><img src='images/15.png'/>
+<span style="color: #000000;">Start (MinimumTime </span><span style="color: #0000FF;">As</span><span style="color: #000000;"> </span><span style="color: #008B8B;">Long</span><span style="color: #000000;">, MinimumDistance </span><span style="color: #0000FF;">As</span><span style="color: #000000;"> </span><span style="color: #008B8B;">Float</span><span style="color: #000000;">)</span></h5>Starts listening for events.<br/>MinimumTime - The shortest period (measured in milliseconds) between events. Pass 0 for highest frequency.<br/>MimumDistance - The shortest change in distance (measured in meters) for which to raise events. Pass 0 for highest frequency.<a name='gps_stop'/>
+<h5><img src='images/15.png'/>
+<span style="color: #000000;">Stop</span></h5>Stops listening to the GPS. You will usually want to call Stop inside Sub Activity_Pause.<hr/>
+<h3><u><a name='gpssatellite'>GPSSatellite</a></u></h3>
+</h5>The GPSSatellite object holds various information about a GPS satellite. A List with the available satellites is passed to the GpsStatus event.
+<br/>
+
+<h4>Events:</h4>
+None
+<h4>Members:</h4><br/>
+<img src='images/19.png'/>&nbsp;&nbsp;<span style="color: #000000;"><a href='#gpssatellite_azimuth'><b>Azimuth</b></a> </span><span style="color: #0000FF;">As</span><span style="color: #000000;"> </span><span style="color: #008B8B;">Float</span><span style="color: #000000;">  [read only]</span><br/><br/>
+<img src='images/19.png'/>&nbsp;&nbsp;<span style="color: #000000;"><a href='#gpssatellite_elevation'><b>Elevation</b></a> </span><span style="color: #0000FF;">As</span><span style="color: #000000;"> </span><span style="color: #008B8B;">Float</span><span style="color: #000000;">  [read only]</span><br/><br/>
+<img src='images/15.png'/>&nbsp;&nbsp;<span style="color: #000000;"><a href='#gpssatellite_isinitialized'><b>IsInitialized</b></a> </span><span style="color: #0000FF;">As</span><span style="color: #000000;"> </span><span style="color: #008B8B;">Boolean</span><br/><br/>
+<img src='images/19.png'/>&nbsp;&nbsp;<span style="color: #000000;"><a href='#gpssatellite_prn'><b>Prn</b></a> </span><span style="color: #0000FF;">As</span><span style="color: #000000;"> </span><span style="color: #008B8B;">Int</span><span style="color: #000000;">  [read only]</span><br/><br/>
+<img src='images/19.png'/>&nbsp;&nbsp;<span style="color: #000000;"><a href='#gpssatellite_snr'><b>Snr</b></a> </span><span style="color: #0000FF;">As</span><span style="color: #000000;"> </span><span style="color: #008B8B;">Float</span><span style="color: #000000;">  [read only]</span><br/><br/>
+<img src='images/19.png'/>&nbsp;&nbsp;<span style="color: #000000;"><a href='#gpssatellite_usedinfix'><b>UsedInFix</b></a> </span><span style="color: #0000FF;">As</span><span style="color: #000000;"> </span><span style="color: #008B8B;">Boolean</span><span style="color: #000000;">  [read only]</span><br/><br/>
+
+<h4>Members description:</h4>
+<a name='gpssatellite_azimuth'/>
+<h5><img src='images/19.png'/>
+<span style="color: #000000;">Azimuth </span><span style="color: #0000FF;">As</span><span style="color: #000000;"> </span><span style="color: #008B8B;">Float</span><span style="color: #000000;">  [read only]</span></h5>Returns the satellite azimuth in degrees (0 - 90).<a name='gpssatellite_elevation'/>
+<h5><img src='images/19.png'/>
+<span style="color: #000000;">Elevation </span><span style="color: #0000FF;">As</span><span style="color: #000000;"> </span><span style="color: #008B8B;">Float</span><span style="color: #000000;">  [read only]</span></h5>Returns the satellite elevation in degrees (0 - 360).<a name='gpssatellite_isinitialized'/>
+<h5><img src='images/15.png'/>
+<span style="color: #000000;">IsInitialized </span><span style="color: #0000FF;">As</span><span style="color: #000000;"> </span><span style="color: #008B8B;">Boolean</span></h5><a name='gpssatellite_prn'/>
+<h5><img src='images/19.png'/>
+<span style="color: #000000;">Prn </span><span style="color: #0000FF;">As</span><span style="color: #000000;"> </span><span style="color: #008B8B;">Int</span><span style="color: #000000;">  [read only]</span></h5>Returns the PRN (pseudo-random number) for the satellite.<a name='gpssatellite_snr'/>
+<h5><img src='images/19.png'/>
+<span style="color: #000000;">Snr </span><span style="color: #0000FF;">As</span><span style="color: #000000;"> </span><span style="color: #008B8B;">Float</span><span style="color: #000000;">  [read only]</span></h5>Returns the signal to noise ratio for the satellite.<a name='gpssatellite_usedinfix'/>
+<h5><img src='images/19.png'/>
+<span style="color: #000000;">UsedInFix </span><span style="color: #0000FF;">As</span><span style="color: #000000;"> </span><span style="color: #008B8B;">Boolean</span><span style="color: #000000;">  [read only]</span></h5>Tests whether this satellite was used to calculate the most recent fix.<hr/>
+<h3><u><a name='location'>Location</a></u></h3>
+</h5>A Location object holds various information about a specific GPS fix.<br/>In most cases you will work with locations that are passed to the GPS LocationChanged event.<br/>The location object can also be used to calculate distance and bearing to other locations.
+<br/>
+
+<h4>Events:</h4>
+None
+<h4>Members:</h4><br/>
+<img src='images/19.png'/>&nbsp;&nbsp;<span style="color: #000000;"><a href='#location_accuracy'><b>Accuracy</b></a> </span><span style="color: #0000FF;">As</span><span style="color: #000000;"> </span><span style="color: #008B8B;">Float</span><br/><br/>
+<img src='images/19.png'/>&nbsp;&nbsp;<span style="color: #000000;"><a href='#location_accuracyvalid'><b>AccuracyValid</b></a> </span><span style="color: #0000FF;">As</span><span style="color: #000000;"> </span><span style="color: #008B8B;">Boolean</span><span style="color: #000000;">  [read only]</span><br/><br/>
+<img src='images/19.png'/>&nbsp;&nbsp;<span style="color: #000000;"><a href='#location_altitude'><b>Altitude</b></a> </span><span style="color: #0000FF;">As</span><span style="color: #000000;"> </span><span style="color: #008B8B;">Double</span><br/><br/>
+<img src='images/19.png'/>&nbsp;&nbsp;<span style="color: #000000;"><a href='#location_altitudevalid'><b>AltitudeValid</b></a> </span><span style="color: #0000FF;">As</span><span style="color: #000000;"> </span><span style="color: #008B8B;">Boolean</span><span style="color: #000000;">  [read only]</span><br/><br/>
+<img src='images/19.png'/>&nbsp;&nbsp;<span style="color: #000000;"><a href='#location_bearing'><b>Bearing</b></a> </span><span style="color: #0000FF;">As</span><span style="color: #000000;"> </span><span style="color: #008B8B;">Float</span><br/><br/>
+<img src='images/15.png'/>&nbsp;&nbsp;<span style="color: #000000;"><a href='#location_bearingto'><b>BearingTo</b></a> (TargetLocation </span><span style="color: #0000FF;">As</span><span style="color: #000000;"> android.location.Location) </span><span style="color: #0000FF;">As</span><span style="color: #000000;"> </span><span style="color: #008B8B;">Float</span><br/><br/>
+<img src='images/19.png'/>&nbsp;&nbsp;<span style="color: #000000;"><a href='#location_bearingvalid'><b>BearingValid</b></a> </span><span style="color: #0000FF;">As</span><span style="color: #000000;"> </span><span style="color: #008B8B;">Boolean</span><span style="color: #000000;">  [read only]</span><br/><br/>
+<img src='images/15.png'/>&nbsp;&nbsp;<span style="color: #000000;"><a href='#location_converttominutes'><b>ConvertToMinutes</b></a> (Coordinate </span><span style="color: #0000FF;">As</span><span style="color: #000000;"> </span><span style="color: #008B8B;">Double</span><span style="color: #000000;">) </span><span style="color: #0000FF;">As</span><span style="color: #000000;"> </span><span style="color: #008B8B;">String</span><br/><br/>
+<img src='images/15.png'/>&nbsp;&nbsp;<span style="color: #000000;"><a href='#location_converttoseconds'><b>ConvertToSeconds</b></a> (Coordinate </span><span style="color: #0000FF;">As</span><span style="color: #000000;"> </span><span style="color: #008B8B;">Double</span><span style="color: #000000;">) </span><span style="color: #0000FF;">As</span><span style="color: #000000;"> </span><span style="color: #008B8B;">String</span><br/><br/>
+<img src='images/15.png'/>&nbsp;&nbsp;<span style="color: #000000;"><a href='#location_distanceto'><b>DistanceTo</b></a> (TargetLocation </span><span style="color: #0000FF;">As</span><span style="color: #000000;"> android.location.Location) </span><span style="color: #0000FF;">As</span><span style="color: #000000;"> </span><span style="color: #008B8B;">Float</span><br/><br/>
+<img src='images/15.png'/>&nbsp;&nbsp;<span style="color: #000000;"><a href='#location_initialize'><b>Initialize</b></a></span><br/><br/>
+<img src='images/15.png'/>&nbsp;&nbsp;<span style="color: #000000;"><a href='#location_initialize2'><b>Initialize2</b></a> (Latitude </span><span style="color: #0000FF;">As</span><span style="color: #000000;"> </span><span style="color: #008B8B;">String</span><span style="color: #000000;">, Longitude </span><span style="color: #0000FF;">As</span><span style="color: #000000;"> </span><span style="color: #008B8B;">String</span><span style="color: #000000;">)</span><br/><br/>
+<img src='images/15.png'/>&nbsp;&nbsp;<span style="color: #000000;"><a href='#location_isinitialized'><b>IsInitialized</b></a> </span><span style="color: #0000FF;">As</span><span style="color: #000000;"> </span><span style="color: #008B8B;">Boolean</span><br/><br/>
+<img src='images/19.png'/>&nbsp;&nbsp;<span style="color: #000000;"><a href='#location_latitude'><b>Latitude</b></a> </span><span style="color: #0000FF;">As</span><span style="color: #000000;"> </span><span style="color: #008B8B;">Double</span><br/><br/>
+<img src='images/19.png'/>&nbsp;&nbsp;<span style="color: #000000;"><a href='#location_longitude'><b>Longitude</b></a> </span><span style="color: #0000FF;">As</span><span style="color: #000000;"> </span><span style="color: #008B8B;">Double</span><br/><br/>
+<img src='images/19.png'/>&nbsp;&nbsp;<span style="color: #000000;"><a href='#location_speed'><b>Speed</b></a> </span><span style="color: #0000FF;">As</span><span style="color: #000000;"> </span><span style="color: #008B8B;">Float</span><br/><br/>
+<img src='images/19.png'/>&nbsp;&nbsp;<span style="color: #000000;"><a href='#location_speedvalid'><b>SpeedValid</b></a> </span><span style="color: #0000FF;">As</span><span style="color: #000000;"> </span><span style="color: #008B8B;">Boolean</span><span style="color: #000000;">  [read only]</span><br/><br/>
+<img src='images/19.png'/>&nbsp;&nbsp;<span style="color: #000000;"><a href='#location_time'><b>Time</b></a> </span><span style="color: #0000FF;">As</span><span style="color: #000000;"> </span><span style="color: #008B8B;">Long</span><br/><br/>
+
+<h4>Members description:</h4>
+<a name='location_accuracy'/>
+<h5><img src='images/19.png'/>
+<span style="color: #000000;">Accuracy </span><span style="color: #0000FF;">As</span><span style="color: #000000;"> </span><span style="color: #008B8B;">Float</span></h5>Gets or sets the fix accuracy (meters).<a name='location_accuracyvalid'/>
+<h5><img src='images/19.png'/>
+<span style="color: #000000;">AccuracyValid </span><span style="color: #0000FF;">As</span><span style="color: #000000;"> </span><span style="color: #008B8B;">Boolean</span><span style="color: #000000;">  [read only]</span></h5>Returns true if the fix includes accuracy value.<a name='location_altitude'/>
+<h5><img src='images/19.png'/>
+<span style="color: #000000;">Altitude </span><span style="color: #0000FF;">As</span><span style="color: #000000;"> </span><span style="color: #008B8B;">Double</span></h5>Gets or sets the fix altitude (meters).<a name='location_altitudevalid'/>
+<h5><img src='images/19.png'/>
+<span style="color: #000000;">AltitudeValid </span><span style="color: #0000FF;">As</span><span style="color: #000000;"> </span><span style="color: #008B8B;">Boolean</span><span style="color: #000000;">  [read only]</span></h5>Returns true if the fix includes altitude value.<a name='location_bearing'/>
+<h5><img src='images/19.png'/>
+<span style="color: #000000;">Bearing </span><span style="color: #0000FF;">As</span><span style="color: #000000;"> </span><span style="color: #008B8B;">Float</span></h5>Gets or sets the fix bearing East of true North.<a name='location_bearingto'/>
+<h5><img src='images/15.png'/>
+<span style="color: #000000;">BearingTo (TargetLocation </span><span style="color: #0000FF;">As</span><span style="color: #000000;"> android.location.Location) </span><span style="color: #0000FF;">As</span><span style="color: #000000;"> </span><span style="color: #008B8B;">Float</span></h5>Returns the bearing to the given location.<a name='location_bearingvalid'/>
+<h5><img src='images/19.png'/>
+<span style="color: #000000;">BearingValid </span><span style="color: #0000FF;">As</span><span style="color: #000000;"> </span><span style="color: #008B8B;">Boolean</span><span style="color: #000000;">  [read only]</span></h5>Returns true if the fix includes bearing value.<a name='location_converttominutes'/>
+<h5><img src='images/15.png'/>
+<span style="color: #000000;">ConvertToMinutes (Coordinate </span><span style="color: #0000FF;">As</span><span style="color: #000000;"> </span><span style="color: #008B8B;">Double</span><span style="color: #000000;">) </span><span style="color: #0000FF;">As</span><span style="color: #000000;"> </span><span style="color: #008B8B;">String</span></h5>Converts the given coordinate to a string formatted with the following format:<br/>[+-]DDD:MM.MMMMM (Minute = 1 / 60 of a degree)<a name='location_converttoseconds'/>
+<h5><img src='images/15.png'/>
+<span style="color: #000000;">ConvertToSeconds (Coordinate </span><span style="color: #0000FF;">As</span><span style="color: #000000;"> </span><span style="color: #008B8B;">Double</span><span style="color: #000000;">) </span><span style="color: #0000FF;">As</span><span style="color: #000000;"> </span><span style="color: #008B8B;">String</span></h5>Converts the given coordinate to a string formatted with the following format:<br/>[+-]DDD:MM:SS.SSSSS (Minute = 1 / 60 of a degree, Second = 1 / 3600 of a degree)<a name='location_distanceto'/>
+<h5><img src='images/15.png'/>
+<span style="color: #000000;">DistanceTo (TargetLocation </span><span style="color: #0000FF;">As</span><span style="color: #000000;"> android.location.Location) </span><span style="color: #0000FF;">As</span><span style="color: #000000;"> </span><span style="color: #008B8B;">Float</span></h5>Returns the distance to the given location, measured in meters.<a name='location_initialize'/>
+<h5><img src='images/15.png'/>
+<span style="color: #000000;">Initialize</span></h5>Initializes an empty location object.<a name='location_initialize2'/>
+<h5><img src='images/15.png'/>
+<span style="color: #000000;">Initialize2 (Latitude </span><span style="color: #0000FF;">As</span><span style="color: #000000;"> </span><span style="color: #008B8B;">String</span><span style="color: #000000;">, Longitude </span><span style="color: #0000FF;">As</span><span style="color: #000000;"> </span><span style="color: #008B8B;">String</span><span style="color: #000000;">)</span></h5>Initializes the location object with the given Latitude and Longitude.<br/>Values can be formatted in any of the three formats:<br/>Degrees: [+-]DDD.DDDDD<br/>Minutes: [+-]DDD:MM.MMMMM (Minute = 1 / 60 of a degree)<br/>Seconds: [+-]DDD:MM:SS.SSSSS (Second = 1 / 3600 of a degree)<br/>Example:<span class='pre'><span style="color: #000000;"><br/></span><span style="color: #0000FF;">Dim</span><span style="color: #000000;"> L1 </span><span style="color: #0000FF;">As</span><span style="color: #000000;"> Location<br/>L1.Initialize2(</span><span style="color: #800000;">"</span><span style="color: #800000;">45:30:30</span><span style="color: #800000;">"</span><span style="color: #000000;">, </span><span style="color: #800000;">"</span><span style="color: #800000;">45:20:15</span><span style="color: #800000;">"</span><span style="color: #000000;">)</span></span><a name='location_isinitialized'/>
+<h5><img src='images/15.png'/>
+<span style="color: #000000;">IsInitialized </span><span style="color: #0000FF;">As</span><span style="color: #000000;"> </span><span style="color: #008B8B;">Boolean</span></h5><a name='location_latitude'/>
+<h5><img src='images/19.png'/>
+<span style="color: #000000;">Latitude </span><span style="color: #0000FF;">As</span><span style="color: #000000;"> </span><span style="color: #008B8B;">Double</span></h5>Gets or sets the fix latitude (degrees from -90 (South) to 90 (North)).<a name='location_longitude'/>
+<h5><img src='images/19.png'/>
+<span style="color: #000000;">Longitude </span><span style="color: #0000FF;">As</span><span style="color: #000000;"> </span><span style="color: #008B8B;">Double</span></h5>Gets or sets the fix longitude (degrees from -180 to 180, positive values represent the eastern hemisphere).<a name='location_speed'/>
+<h5><img src='images/19.png'/>
+<span style="color: #000000;">Speed </span><span style="color: #0000FF;">As</span><span style="color: #000000;"> </span><span style="color: #008B8B;">Float</span></h5>Gets or sets the fix speed (meters / second).<a name='location_speedvalid'/>
+<h5><img src='images/19.png'/>
+<span style="color: #000000;">SpeedValid </span><span style="color: #0000FF;">As</span><span style="color: #000000;"> </span><span style="color: #008B8B;">Boolean</span><span style="color: #000000;">  [read only]</span></h5>Returns true if the fix includes speed value.<a name='location_time'/>
+<h5><img src='images/19.png'/>
+<span style="color: #000000;">Time </span><span style="color: #0000FF;">As</span><span style="color: #000000;"> </span><span style="color: #008B8B;">Long</span></h5>Gets or sets the fix time.
+<hr/>
+<a href="#top">Top</a>
+</body>
+</html>

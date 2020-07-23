@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root>
+    <doclet-version-NOT-library-version>1.04</doclet-version-NOT-library-version>
+    <class>
+        <name>com.mjt.actionbarrtlsized.ActionBarRTL</name>
+        <shortname>ActionBarRTL</shortname>
+        <owner>process</owner>
+        <method>
+            <name>SetRTLActionBar</name>
+            <comment></comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>parent</name>
+                <type>android.app.Activity</type>
+            </parameter>
+            <parameter>
+                <name>Toolbar</name>
+                <type>android.view.ViewGroup</type>
+            </parameter>
+        </method>
+    </class>
+    <version>0.05</version>
+</root>

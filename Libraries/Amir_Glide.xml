@@ -1,0 +1,2144 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root>
+    <doclet-version-NOT-library-version>1.07</doclet-version-NOT-library-version>
+    <class>
+        <name>ir.aghajari.retrofitglide.Amir_Glide</name>
+        <shortname>Amir_Glide</shortname>
+        <comment>&lt;b&gt;Legendary Coders&lt;/b&gt; &lt;link&gt;&lt;i&gt;lcoders.ir&lt;/i&gt;|http://lcoders.ir&lt;/link&gt;
+ &lt;link&gt;Amirhossein Aghajari|http://lcoders.ir/about&lt;/link&gt; --&gt; &lt;i&gt;امیر حسین آقاجری&lt;/i&gt;
+ &lt;b&gt;Glide Version : 4.7.0 &lt;/b&gt;
+ &lt;b&gt;Edited Version : 4.7.1 &lt;/b&gt;
+  Retrofit , Glide
+ &lt;i&gt;&lt;b&gt;hi.&lt;/b&gt; Tnx For Select &lt;u&gt;Amir_Glide&lt;/u&gt; Library.&lt;/i&gt;
+ The Best Glid Library in Android..
+ You Can Connect Amir_Glide To The Amir_Retrofit To Get Best Speed !</comment>
+        <owner>process</owner>
+        <permission>android.permission.INTERNET</permission>
+        <method>
+            <name>LoadWith</name>
+            <comment></comment>
+            <returntype>ir.aghajari.retrofitglide.Amir_Glide.Loader2</returntype>
+        </method>
+        <method>
+            <name>Load</name>
+            <comment></comment>
+            <returntype>ir.aghajari.retrofitglide.Amir_RequestBuilder</returntype>
+            <parameter>
+                <name>Object</name>
+                <type>java.lang.Object</type>
+            </parameter>
+        </method>
+        <method>
+            <name>As</name>
+            <comment></comment>
+            <returntype>ir.aghajari.retrofitglide.Amir_Glide.AsWhat</returntype>
+        </method>
+        <method>
+            <name>RequestManager</name>
+            <comment></comment>
+            <returntype>ir.aghajari.retrofitglide.Amir_Glide.Amir_RequestManager</returntype>
+        </method>
+        <method>
+            <name>Initializer</name>
+            <comment>Initialize Glide
+ Return a new Initializer Class
+ _____________________________________________________________________
+ &lt;b&gt;If you do not use Initialize,
+  the default Context will be ApplicationContext&lt;/b&gt;
+ _____________________________________________________________________
+ &lt;b&gt;  Examples : &lt;/b&gt;
+ &lt;code&gt; Dim Glide As Amir_Glide &lt;/code&gt;
+ &lt;i&gt;Default : &lt;/i&gt;&lt;code&gt;
+ Glide.Initializer.Default &lt;/code&gt;
+ &lt;i&gt;Retrofit : &lt;/i&gt;
+ &lt;code&gt;Glide.Initializer.Retrofit(Amir_Retrofit,0) 'CallFactory&lt;/code&gt;
+ &lt;code&gt;Glide.Initializer.Retrofit(Amir_Retrofit,1) 'HttpClient&lt;/code&gt;
+ &lt;i&gt;OkHttp : &lt;/i&gt; &lt;code&gt;
+ Glide.Initializer.OkHttp(OkHttpClient)&lt;/code&gt;</comment>
+            <returntype>ir.aghajari.retrofitglide.Amir_Glide.Initializer</returntype>
+            <parameter>
+                <name>ba</name>
+                <type>anywheresoftware.b4a.BA</type>
+            </parameter>
+        </method>
+        <method>
+            <name>RetrofitLoad</name>
+            <comment>This is a Custom Method Useing Callback Retrofit To Show Image And Gifs ...
+ You Can Use This Method Just With Initialize Retrofit 
+ Don't Forgot to Enable Cache In Retrofit Builder</comment>
+            <returntype>ir.aghajari.retrofitglide.Amir_RRequestBuilder</returntype>
+            <parameter>
+                <name>Link</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+        <method>
+            <name>RecyclerView</name>
+            <comment>Loads a few resources ahead in the direction of scrolling in any RecyclerView so that
+ images are in the memory cache just before the corresponding view in created in the list. Gives
+ the appearance of an infinitely large image cache, depending on scrolling speed, cpu speed, and
+ cache size.
+
+ Must be added as a listener to the RecyclerView using OnScrollListener, or have its
+ corresponding methods called from another
+ android.support.v7.widget.RecyclerView.OnScrollListener to function. 
+
+ This class only works with android.support.v7.widget.LinearLayoutManager and
+ subclasses of android.support.v7.widget.LinearLayoutManager.
+ 
+ &lt;b&gt; Setup : &lt;/b&gt;
+ 1.PreloadSizeProvider 
+ 2.PreloadModelProvider
+ 3.MaxPreload
+ 4.SetToRecyclerView</comment>
+            <returntype>ir.aghajari.retrofitglide.Amir_Glide.RV</returntype>
+        </method>
+        <method>
+            <name>About</name>
+            <comment>&lt;code&gt; "امیرحسین آقاجری" &lt;/code&gt; تهیه کننده :
+Telegram Id : &lt;code&gt; @LCoders &lt;/code&gt;
+Instagram : &lt;code&gt; amirhossein_aghajari_official &lt;/code&gt;</comment>
+            <returntype>java.lang.String</returntype>
+        </method>
+        <property>
+            <name>TO</name>
+            <returntype>ir.aghajari.retrofitglide.Amir_GlideTransitionOptions</returntype>
+            <comment>return a new Amir_GlideTransitionOptions class</comment>
+        </property>
+        <property>
+            <name>RO</name>
+            <returntype>ir.aghajari.retrofitglide.Amir_RequestOptions</returntype>
+            <comment>return a new Amir_GlideRequestOptions class</comment>
+        </property>
+        <property>
+            <name>Glide</name>
+            <returntype>ir.aghajari.retrofitglide.Amir_Glide.GlideSettings</returntype>
+            <comment></comment>
+        </property>
+        <field>
+            <name>LastRequest</name>
+            <comment></comment>
+            <returntype>ir.aghajari.retrofitglide.Amir_RequestBuilder</returntype>
+        </field>
+    </class>
+    <class>
+        <name>ir.aghajari.retrofitglide.Amir_Glide.Initializer</name>
+        <owner>process</owner>
+        <method>
+            <name>OkHttp</name>
+            <comment>Initialize Glide With OkHttpClient</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>Client</name>
+                <type>okhttp3.OkHttpClient</type>
+            </parameter>
+        </method>
+        <method>
+            <name>Retrofit</name>
+            <comment>Initialize Glide With Retrofit
+ Type : 0 = CallFactory | 1 = Client</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>Amir_Retrofit</name>
+                <type>ir.aghajari.retrofit.Retrofit</type>
+            </parameter>
+            <parameter>
+                <name>Type</name>
+                <type>int</type>
+            </parameter>
+        </method>
+        <method>
+            <name>Default</name>
+            <comment></comment>
+            <returntype>void</returntype>
+        </method>
+    </class>
+    <class>
+        <name>ir.aghajari.retrofitglide.Amir_Glide.Amir_RequestManager</name>
+        <owner>process</owner>
+        <method>
+            <name>isPaused</name>
+            <comment>Returns true if loads for this RequestManager are currently paused.</comment>
+            <returntype>boolean</returntype>
+        </method>
+        <method>
+            <name>PauseAllRequests</name>
+            <comment>Cancels any in progress loads and clears resources of completed loads.
+
+ Note : resumeRequests must be called for any requests made before or while the
+ manager is paused to complete. RequestManagers attached to Fragments and Activities
+ automatically resume onStart().
+
+ This will release the memory used by completed bitmaps but leaves them in any configured caches. 
+
+ see : isPaused()
+ see : resumeRequests()</comment>
+            <returntype>ir.aghajari.retrofitglide.Amir_Glide.Amir_RequestManager</returntype>
+        </method>
+        <method>
+            <name>PauseRequests</name>
+            <comment>Cancels any in progress loads, but does not clear resources of completed loads.
+ 
+ Note : resumeRequests must be called for any requests made before or while the
+ manager is paused to complete. RequestManagers attached to Fragments and Activities
+ automatically resume onStart().</comment>
+            <returntype>ir.aghajari.retrofitglide.Amir_Glide.Amir_RequestManager</returntype>
+        </method>
+        <method>
+            <name>ResumeRequestsRecursive</name>
+            <comment>Performs resumeRequests recursively for all managers that are contextually
+ descendant to this manager based on the Activity/Fragment hierarchy. The hierarchical semantics
+ are identical as for pauseRequestsRecursive.</comment>
+            <returntype>ir.aghajari.retrofitglide.Amir_Glide.Amir_RequestManager</returntype>
+        </method>
+        <method>
+            <name>ApplyDefaultRequestOptions</name>
+            <comment>Updates the default  RequestOptions for all loads started with this request manager
+ with the given RequestOptions.
+
+ Multiple sets of options can be applied. If there are conflicts the last
+ RequestOptions applied will win.
+
+ The modified options will only be applied to loads started after this method is called.</comment>
+            <returntype>ir.aghajari.retrofitglide.Amir_Glide.Amir_RequestManager</returntype>
+            <parameter>
+                <name>Transform</name>
+                <type>ir.aghajari.retrofitglide.Amir_RequestOptions</type>
+            </parameter>
+        </method>
+        <method>
+            <name>SetDefaultRequestOptions</name>
+            <comment>Replaces the default  RequestOptions for all loads started with this request manager
+ with the given RequestOptions.
+
+ The RequestOptions provided here replace those that have been previously provided
+ via this method, setDefaultRequestOptions(RequestOptions) and applyDefaultRequestOptions(RequestOptions).
+
+ Subsequent calls to applyDefaultRequestOptions(RequestOptions) will not mutate
+ the RequestOptions provided here. Instead the manager will create a clone of these
+ options and mutate the clone.
+
+ see :  applyDefaultRequestOptions(RequestOptions)</comment>
+            <returntype>ir.aghajari.retrofitglide.Amir_Glide.Amir_RequestManager</returntype>
+            <parameter>
+                <name>requestOptions</name>
+                <type>ir.aghajari.retrofitglide.Amir_RequestOptions</type>
+            </parameter>
+        </method>
+        <method>
+            <name>ResumeRequests</name>
+            <comment>Restarts any loads that have not yet completed.</comment>
+            <returntype>ir.aghajari.retrofitglide.Amir_Glide.Amir_RequestManager</returntype>
+        </method>
+        <method>
+            <name>Clear</name>
+            <comment>Cancel any pending loads Glide may have for the view and free any resources that may have been
+ loaded for the view.
+
+ Note : that this will only work if View#setTag(Object) is not called on this view
+ outside of Glide. 
+
+ param : view The view to cancel loads and free resources for.
+ throws : IllegalArgumentException if an object other than Glide's metadata is put as the view's tag.</comment>
+            <returntype>ir.aghajari.retrofitglide.Amir_Glide.Amir_RequestManager</returntype>
+            <parameter>
+                <name>View</name>
+                <type>android.view.View</type>
+            </parameter>
+        </method>
+        <method>
+            <name>PauseRequestsRecursive</name>
+            <comment>Performs  pauseRequests recursively for all managers that are contextually
+ descendant to this manager based on the Activity/Fragment hierarchy:</comment>
+            <returntype>ir.aghajari.retrofitglide.Amir_Glide.Amir_RequestManager</returntype>
+        </method>
+    </class>
+    <class>
+        <name>ir.aghajari.retrofitglide.Amir_Glide.Loader2</name>
+        <owner>process</owner>
+        <method>
+            <name>Bitmap</name>
+            <comment></comment>
+            <returntype>ir.aghajari.retrofitglide.Amir_RequestBuilder</returntype>
+            <parameter>
+                <name>Bitmap</name>
+                <type>android.graphics.Bitmap</type>
+            </parameter>
+        </method>
+        <method>
+            <name>Load</name>
+            <comment></comment>
+            <returntype>ir.aghajari.retrofitglide.Amir_RequestBuilder</returntype>
+            <parameter>
+                <name>Object</name>
+                <type>java.lang.Object</type>
+            </parameter>
+        </method>
+        <method>
+            <name>Byte</name>
+            <comment></comment>
+            <returntype>ir.aghajari.retrofitglide.Amir_RequestBuilder</returntype>
+            <parameter>
+                <name>model</name>
+                <type>byte[]</type>
+            </parameter>
+        </method>
+        <method>
+            <name>Drawable</name>
+            <comment></comment>
+            <returntype>ir.aghajari.retrofitglide.Amir_RequestBuilder</returntype>
+            <parameter>
+                <name>drawable</name>
+                <type>android.graphics.drawable.Drawable</type>
+            </parameter>
+        </method>
+        <method>
+            <name>String</name>
+            <comment></comment>
+            <returntype>ir.aghajari.retrofitglide.Amir_RequestBuilder</returntype>
+            <parameter>
+                <name>string</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+        <method>
+            <name>File</name>
+            <comment></comment>
+            <returntype>ir.aghajari.retrofitglide.Amir_RequestBuilder</returntype>
+            <parameter>
+                <name>path</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>name</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+        <method>
+            <name>URI</name>
+            <comment></comment>
+            <returntype>ir.aghajari.retrofitglide.Amir_RequestBuilder</returntype>
+            <parameter>
+                <name>URI</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+        <method>
+            <name>URL</name>
+            <comment></comment>
+            <returntype>ir.aghajari.retrofitglide.Amir_RequestBuilder</returntype>
+            <parameter>
+                <name>URL</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+    </class>
+    <class>
+        <name>ir.aghajari.retrofitglide.Amir_Glide.Loader</name>
+        <owner>process</owner>
+        <method>
+            <name>LoadURL</name>
+            <comment></comment>
+            <returntype>ir.aghajari.retrofitglide.Amir_RequestBuilder</returntype>
+            <parameter>
+                <name>URL</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+        <method>
+            <name>Load</name>
+            <comment></comment>
+            <returntype>ir.aghajari.retrofitglide.Amir_RequestBuilder</returntype>
+        </method>
+        <method>
+            <name>LoadString</name>
+            <comment></comment>
+            <returntype>ir.aghajari.retrofitglide.Amir_RequestBuilder</returntype>
+            <parameter>
+                <name>string</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+        <method>
+            <name>LoadObject</name>
+            <comment></comment>
+            <returntype>ir.aghajari.retrofitglide.Amir_RequestBuilder</returntype>
+            <parameter>
+                <name>Object</name>
+                <type>java.lang.Object</type>
+            </parameter>
+        </method>
+        <method>
+            <name>LoadFile</name>
+            <comment></comment>
+            <returntype>ir.aghajari.retrofitglide.Amir_RequestBuilder</returntype>
+            <parameter>
+                <name>path</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>name</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+        <method>
+            <name>LoadDrawable</name>
+            <comment></comment>
+            <returntype>ir.aghajari.retrofitglide.Amir_RequestBuilder</returntype>
+            <parameter>
+                <name>drawable</name>
+                <type>android.graphics.drawable.Drawable</type>
+            </parameter>
+        </method>
+        <method>
+            <name>LoadByte</name>
+            <comment></comment>
+            <returntype>ir.aghajari.retrofitglide.Amir_RequestBuilder</returntype>
+            <parameter>
+                <name>model</name>
+                <type>byte[]</type>
+            </parameter>
+        </method>
+        <method>
+            <name>LoadBitmap</name>
+            <comment></comment>
+            <returntype>ir.aghajari.retrofitglide.Amir_RequestBuilder</returntype>
+            <parameter>
+                <name>Bitmap</name>
+                <type>android.graphics.Bitmap</type>
+            </parameter>
+        </method>
+        <method>
+            <name>LoadURI</name>
+            <comment></comment>
+            <returntype>ir.aghajari.retrofitglide.Amir_RequestBuilder</returntype>
+            <parameter>
+                <name>URI</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+    </class>
+    <class>
+        <name>ir.aghajari.retrofitglide.Amir_Glide.GlideSettings</name>
+        <owner>process</owner>
+        <method>
+            <name>GetDrawable</name>
+            <comment></comment>
+            <returntype>android.graphics.drawable.Drawable</returntype>
+            <parameter>
+                <name>imageView</name>
+                <type>anywheresoftware.b4a.objects.ImageViewWrapper</type>
+            </parameter>
+        </method>
+        <method>
+            <name>ClearDiskCache</name>
+            <comment>Clears disk cache.</comment>
+            <returntype>void</returntype>
+        </method>
+        <method>
+            <name>GetBitmap</name>
+            <comment></comment>
+            <returntype>android.graphics.Bitmap</returntype>
+            <parameter>
+                <name>imageView</name>
+                <type>anywheresoftware.b4a.objects.ImageViewWrapper</type>
+            </parameter>
+        </method>
+        <method>
+            <name>ClearMemory</name>
+            <comment>Clears as much memory as possible.</comment>
+            <returntype>void</returntype>
+        </method>
+        <property>
+            <name>PhotoCacheDir</name>
+            <returntype>java.lang.String</returntype>
+            <comment>Returns a directory with a default name in the private cache directory of the application to
+ use to store retrieved media and thumbnails.</comment>
+        </property>
+        <property>
+            <name>MemoryCategory</name>
+            <parameter>
+                <name>name</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <comment>HIGH | NORMAL | LOW
+ 
+ Adjusts Glide's current and maximum memory usage based on the given  MemoryCategory.
+
+ The default  MemoryCategory is NORMAL.
+ HIGH increases Glide's maximum memory usage by up to 50% and
+ LOW decreases Glide's maximum memory usage by 50%. This method should be
+ used to temporarily increase or decrease memory usage for a single Activity or part of the app.</comment>
+        </property>
+        <property>
+            <name>TrimMemory</name>
+            <parameter>
+                <name>Level</name>
+                <type>int</type>
+            </parameter>
+            <comment>Clears some memory with the exact amount depending on the given level.</comment>
+        </property>
+    </class>
+    <class>
+        <name>ir.aghajari.retrofitglide.Amir_Glide.AsWhat</name>
+        <owner>process</owner>
+        <method>
+            <name>New</name>
+            <comment></comment>
+            <returntype>ir.aghajari.retrofitglide.Amir_Glide.Loader</returntype>
+            <parameter>
+                <name>Class</name>
+                <type>java.lang.Class</type>
+            </parameter>
+        </method>
+        <method>
+            <name>Bitmap</name>
+            <comment>Attempts to always load the resource as a  android.graphics.Bitmap, even if it could
+ actually be animated.</comment>
+            <returntype>ir.aghajari.retrofitglide.Amir_Glide.Loader</returntype>
+        </method>
+        <method>
+            <name>Gif</name>
+            <comment>Attempts to always load the resource as a Amir_GlidGifDrawable
+
+ If the underlying data is not a GIF, this will fail. As a result, this should only be used
+ if the model represents an animated GIF and the caller wants to interact with the GifDrawable
+ directly. Normally using just asDrawable is sufficient because it will determine
+ whether or not the given data represents an animated GIF and return the appropriate
+ Drawable, animated or not, automatically.</comment>
+            <returntype>ir.aghajari.retrofitglide.Amir_Glide.Loader</returntype>
+        </method>
+        <method>
+            <name>PictureDrawable</name>
+            <comment></comment>
+            <returntype>ir.aghajari.retrofitglide.Amir_Glide.Loader</returntype>
+        </method>
+        <method>
+            <name>Drawable</name>
+            <comment>Attempts to always load the resource using any registered {@link
+ com.bumptech.glide.load.ResourceDecoder}s that can decode any subclass of {@link Drawable}.
+
+ By default, may return either a android.graphics.drawable.BitmapDrawable or
+ GifDrawable, but if additional decoders are registered for other  Drawable subclasses,
+ any of those subclasses may also be returned. &lt;/p&gt;</comment>
+            <returntype>ir.aghajari.retrofitglide.Amir_Glide.Loader</returntype>
+        </method>
+        <method>
+            <name>File</name>
+            <comment>Attempts to always load a File containing the resource, either using a file path
+ obtained from the media store (for local images/videos), or using Glide's disk cache
+ (for remote images/videos).</comment>
+            <returntype>ir.aghajari.retrofitglide.Amir_Glide.Loader</returntype>
+        </method>
+    </class>
+    <class>
+        <name>ir.aghajari.retrofitglide.Amir_Glide.Amir_PreloadSizeProvider</name>
+        <owner>process</owner>
+        <method>
+            <name>Initialize_FixedSize</name>
+            <comment>Constructor for a PreloadSizeProvider with a fixed size.</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>ImageWidth</name>
+                <type>int</type>
+            </parameter>
+            <parameter>
+                <name>ImageHeight</name>
+                <type>int</type>
+            </parameter>
+        </method>
+        <method>
+            <name>Initialize_ViewSize</name>
+            <comment>Constructor that does nothing by default and requires users to call setView(android.view.View) 
+ when a View is available to registerComponents the dimensions returned by this class.</comment>
+            <returntype>void</returntype>
+        </method>
+        <method>
+            <name>Initialize_ViewSize2</name>
+            <comment>Constructor that will extract the preload size from a given View.</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>View</name>
+                <type>android.view.View</type>
+            </parameter>
+        </method>
+        <method>
+            <name>SetView</name>
+            <comment>Sets the View the size will be extracted.
+ Note - only the first call to this method will be obeyed, subsequent requests will be ignored.
+ 
+ &lt;b&gt;Parameters:&lt;/b&gt;
+ View - A not null View the size will be extracted async with an .OnPreDrawListener 
+ 
+ &lt;b&gt; This Method Only Work if You Initialize PreloadSizeProvider With ViewSize &lt;/b&gt;</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>View</name>
+                <type>android.view.View</type>
+            </parameter>
+        </method>
+        <method>
+            <name>getPreloadSize</name>
+            <comment>Returns the size of the view in the list where the resources will be displayed 
+ in pixels in the format [x, y], or null if no size is currently available.</comment>
+            <returntype>int[]</returntype>
+            <parameter>
+                <name>item</name>
+                <type>java.lang.Object</type>
+            </parameter>
+            <parameter>
+                <name>adapterPosition</name>
+                <type>int</type>
+            </parameter>
+            <parameter>
+                <name>itemPosition</name>
+                <type>int</type>
+            </parameter>
+        </method>
+    </class>
+    <class>
+        <name>ir.aghajari.retrofitglide.Amir_Glide.RV</name>
+        <owner>process</owner>
+        <method>
+            <name>SetToRecyclerView</name>
+            <comment>Constructor that accepts interfaces for providing the dimensions of images to preload,
+ the list of models to preload for a given position, and the request to use to load images.
+ The final step, once you have your RecyclerViewPreloader is to add it as a scroll listener to your RecyclerView:</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>RecyclerView</name>
+                <type>android.support.v7.widget.RecyclerView</type>
+            </parameter>
+        </method>
+        <method>
+            <name>RemoveFromRecyclerView</name>
+            <comment></comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>RecyclerView</name>
+                <type>android.support.v7.widget.RecyclerView</type>
+            </parameter>
+        </method>
+        <method>
+            <name>PreloadModelProvider</name>
+            <comment>The PreloadModelProvider performs two actions. 
+  First it collects and returns a list of Models (the items you pass in to Glide’s 
+  load(Object) method, like URLs or file paths) for a given position. Second it 
+  takes a Model and produces a Glide RequestBuilder that will be used to preload 
+  the given Model into memory.
+  
+ &lt;b&gt; Don't Forgot Add This two Events &lt;/b&gt;
+ &lt;b&gt; Events &lt;/b&gt; &lt;code&gt;
+ Sub EventName_getPreloadItems (position as int) As List 'Object Lists
+ Return Null
+ End Sub
+ Sub EventName_getPreloadRequestBuilder (arg As Object) As Amir_GlideRequestBuilder
+ Return Null
+ End Sub &lt;/code&gt;</comment>
+            <returntype>ir.aghajari.retrofitglide.Amir_Glide.RV</returntype>
+            <parameter>
+                <name>ba</name>
+                <type>anywheresoftware.b4a.BA</type>
+            </parameter>
+            <parameter>
+                <name>EventName</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+        <method>
+            <name>MaxPreload</name>
+            <comment>&lt;b&gt; Maximum number of items to preload. &lt;/b&gt;
+ 
+ The maxPreload is an integer that indicates how many items you want to preload.
+ The optimal number will vary by your image size, quantity, the layout of your 
+ RecyclerView and in some cases even the devices your application is running on.
+ A good starting point is to pick a number large enough to include all of the images
+ in two or three rows. Once you’ve picked your initial number, you can try running
+ your application on a couple of devices and tweaking it as necessary to maximize 
+ the number of cache hits.
+ An overly large number will mean you’re preloading too far ahead to be useful. 
+ An overly small number will prevent you from loading enough images ahead of time.
+ 
+ &lt;i&gt;Defualt Is 10 &lt;/i&gt;</comment>
+            <returntype>ir.aghajari.retrofitglide.Amir_Glide.RV</returntype>
+            <parameter>
+                <name>maxPreload</name>
+                <type>int</type>
+            </parameter>
+        </method>
+        <method>
+            <name>Reset</name>
+            <comment>Remove All Data..
+ Before Run This Method You Can Run RemoveFromRecyclerView
+ &lt;b&gt;Return :&lt;/b&gt; New ir.aghajari.retrofitglide.Amir_Glide.RV</comment>
+            <returntype>ir.aghajari.retrofitglide.Amir_Glide.RV</returntype>
+        </method>
+        <field>
+            <name>PreloadSizeProvider</name>
+            <comment>The PreloadSizeProvider is responsible for making sure your RecyclerViewPreloader
+ loads images in the same size as those loaded by your adapters onBindViewHolder method.
+ 
+ Glide provides two built in implementations of PreloadSizeProvider:
+ &lt;b&gt;1. ViewPreloadSizeProvider
+ 2. FixedPreloadSizeProvider&lt;/b&gt;
+ 
+ If you have uniform View sizes in your RecyclerView, you’re loading images with 
+ into(ImageView) and you’re not using override() to set a different size, you can
+ use ViewPreloadSizeProvider.
+ 
+ If you’re using override() or are otherwise loading image sizes that don’t exactly
+ match the size of your Views, you can use FixedPreloadSizeProvider.
+ 
+ If the logic required to determine the image size used for a given position in your
+ RecyclerView doesn’t fit either of those cases, you can always write your own 
+ implementation of PreloadSizeProvider.</comment>
+            <returntype>ir.aghajari.retrofitglide.Amir_Glide.Amir_PreloadSizeProvider</returntype>
+        </field>
+    </class>
+    <class>
+        <name>ir.aghajari.retrofitglide.Amir_GlideTransformation</name>
+        <shortname>Amir_GlideTransformation</shortname>
+        <comment>Some Transformations To Use In Request..
+ There is a List For Add Multi Transformation</comment>
+        <owner>process</owner>
+        <method>
+            <name>Rotate</name>
+            <comment></comment>
+            <returntype>ir.aghajari.retrofitglide.Amir_GlideTransformation</returntype>
+            <parameter>
+                <name>Angle</name>
+                <type>float</type>
+            </parameter>
+        </method>
+        <method>
+            <name>Brightness</name>
+            <comment></comment>
+            <returntype>ir.aghajari.retrofitglide.Amir_GlideTransformation</returntype>
+            <parameter>
+                <name>value</name>
+                <type>float</type>
+            </parameter>
+        </method>
+        <method>
+            <name>BlackAndWhiteFilter</name>
+            <comment></comment>
+            <returntype>ir.aghajari.retrofitglide.Amir_GlideTransformation</returntype>
+        </method>
+        <method>
+            <name>Mask</name>
+            <comment>Set a Mask drawable
+ &lt;b&gt; Example : &lt;/b&gt; &lt;code&gt;
+ Dim Xml As XmlLayoutBuilder
+ Dim Request As Amir_GlideRequestOptions
+ Dim Trans As Amir_GlideTransformation
+Request.BitmapTransition(Trans.Mask(Xml.GetResourceId("drawable","mask_image")))
+	Glide.Load("Link") _
+ .Apply(Request).Into(img)&lt;/code&gt;</comment>
+            <returntype>ir.aghajari.retrofitglide.Amir_GlideTransformation</returntype>
+            <parameter>
+                <name>ba</name>
+                <type>anywheresoftware.b4a.BA</type>
+            </parameter>
+            <parameter>
+                <name>maskId</name>
+                <type>int</type>
+            </parameter>
+        </method>
+        <method>
+            <name>CenterCrop</name>
+            <comment></comment>
+            <returntype>ir.aghajari.retrofitglide.Amir_GlideTransformation</returntype>
+        </method>
+        <method>
+            <name>RoundedCorners</name>
+            <comment></comment>
+            <returntype>ir.aghajari.retrofitglide.Amir_GlideTransformation</returntype>
+            <parameter>
+                <name>radius</name>
+                <type>int</type>
+            </parameter>
+            <parameter>
+                <name>margin</name>
+                <type>int</type>
+            </parameter>
+        </method>
+        <method>
+            <name>Flip</name>
+            <comment>TYPE_FLIP_VERTICAL = 1 
+ TYPE_FLIP_HORIZONTAL = 2</comment>
+            <returntype>ir.aghajari.retrofitglide.Amir_GlideTransformation</returntype>
+            <parameter>
+                <name>Type</name>
+                <type>int</type>
+            </parameter>
+        </method>
+        <method>
+            <name>CreateTransform</name>
+            <comment>&lt;code&gt; EventName_Transform (BitmapToTransform As Object,outWidth as int,outHeight As int) As Bitmap &lt;/code&gt;</comment>
+            <returntype>ir.aghajari.retrofitglide.Amir_GlideTransformation</returntype>
+            <parameter>
+                <name>ba</name>
+                <type>anywheresoftware.b4a.BA</type>
+            </parameter>
+            <parameter>
+                <name>EventName</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>DiskCacheKey</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>Sender</name>
+                <type>java.lang.Object</type>
+            </parameter>
+        </method>
+        <method>
+            <name>BlackAndWhiteFilter2</name>
+            <comment></comment>
+            <returntype>ir.aghajari.retrofitglide.Amir_GlideTransformation</returntype>
+            <parameter>
+                <name>value</name>
+                <type>double</type>
+            </parameter>
+        </method>
+        <method>
+            <name>Contrast</name>
+            <comment></comment>
+            <returntype>ir.aghajari.retrofitglide.Amir_GlideTransformation</returntype>
+            <parameter>
+                <name>value</name>
+                <type>float</type>
+            </parameter>
+        </method>
+        <method>
+            <name>CenterInside</name>
+            <comment></comment>
+            <returntype>ir.aghajari.retrofitglide.Amir_GlideTransformation</returntype>
+        </method>
+        <method>
+            <name>MaskDrawable</name>
+            <comment>Set a Mask drawable
+ &lt;b&gt; Example : &lt;/b&gt; &lt;code&gt;
+ Dim drawable As BitmapDrawable
+ drawable.Initialize(LoadBitmap(File.DirAssets,"images.png"))
+ Dim Request As Amir_GlideRequestOptions
+ Dim Trans As Amir_GlideTransformation
+Request.BitmapTransition(Trans.MaskDrawable(drawable))
+	Glide.Load("Link") _
+ .Apply(Request).Into(img)&lt;/code&gt;</comment>
+            <returntype>ir.aghajari.retrofitglide.Amir_GlideTransformation</returntype>
+            <parameter>
+                <name>drawable</name>
+                <type>android.graphics.drawable.Drawable</type>
+            </parameter>
+        </method>
+        <method>
+            <name>Crop</name>
+            <comment>TOP  CENTER  BOTTOM</comment>
+            <returntype>ir.aghajari.retrofitglide.Amir_GlideTransformation</returntype>
+            <parameter>
+                <name>width</name>
+                <type>int</type>
+            </parameter>
+            <parameter>
+                <name>height</name>
+                <type>int</type>
+            </parameter>
+            <parameter>
+                <name>CropTypes</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+        <method>
+            <name>OldPhoto</name>
+            <comment></comment>
+            <returntype>ir.aghajari.retrofitglide.Amir_GlideTransformation</returntype>
+        </method>
+        <method>
+            <name>CircleCrop</name>
+            <comment></comment>
+            <returntype>ir.aghajari.retrofitglide.Amir_GlideTransformation</returntype>
+        </method>
+        <method>
+            <name>ColorFilter</name>
+            <comment>You Can Add A Layer Color With Tint</comment>
+            <returntype>ir.aghajari.retrofitglide.Amir_GlideTransformation</returntype>
+            <parameter>
+                <name>Color</name>
+                <type>int</type>
+            </parameter>
+        </method>
+        <method>
+            <name>Blur</name>
+            <comment></comment>
+            <returntype>ir.aghajari.retrofitglide.Amir_GlideTransformation</returntype>
+        </method>
+        <method>
+            <name>Blur3</name>
+            <comment></comment>
+            <returntype>ir.aghajari.retrofitglide.Amir_GlideTransformation</returntype>
+            <parameter>
+                <name>radius</name>
+                <type>int</type>
+            </parameter>
+            <parameter>
+                <name>sampling</name>
+                <type>int</type>
+            </parameter>
+        </method>
+        <method>
+            <name>FitCenter</name>
+            <comment></comment>
+            <returntype>ir.aghajari.retrofitglide.Amir_GlideTransformation</returntype>
+        </method>
+        <method>
+            <name>Tint</name>
+            <comment>You Can Change The All Of BitmapColor With ColorFilter</comment>
+            <returntype>ir.aghajari.retrofitglide.Amir_GlideTransformation</returntype>
+            <parameter>
+                <name>Color</name>
+                <type>int</type>
+            </parameter>
+        </method>
+        <method>
+            <name>Grayscale</name>
+            <comment></comment>
+            <returntype>ir.aghajari.retrofitglide.Amir_GlideTransformation</returntype>
+        </method>
+        <method>
+            <name>RoundedCorners2</name>
+            <comment>ALL
+ TOP_LEFT, TOP_RIGHT, BOTTOM_LEFT, BOTTOM_RIGHT
+ TOP, BOTTOM, LEFT, RIGHT
+ OTHER_TOP_LEFT, OTHER_TOP_RIGHT, OTHER_BOTTOM_LEFT, OTHER_BOTTOM_RIGHT
+ DIAGONAL_FROM_TOP_LEFT, DIAGONAL_FROM_TOP_RIGHT</comment>
+            <returntype>ir.aghajari.retrofitglide.Amir_GlideTransformation</returntype>
+            <parameter>
+                <name>radius</name>
+                <type>int</type>
+            </parameter>
+            <parameter>
+                <name>margin</name>
+                <type>int</type>
+            </parameter>
+            <parameter>
+                <name>CornerTypes</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+        <method>
+            <name>Blur2</name>
+            <comment></comment>
+            <returntype>ir.aghajari.retrofitglide.Amir_GlideTransformation</returntype>
+            <parameter>
+                <name>radius</name>
+                <type>int</type>
+            </parameter>
+        </method>
+        <field>
+            <name>MultiTransformationList</name>
+            <comment></comment>
+            <returntype>ir.aghajari.retrofitglide.Amir_GlideTransformation.Amir_GlideMultiTransformation</returntype>
+        </field>
+    </class>
+    <class>
+        <name>ir.aghajari.retrofitglide.Amir_GlideTransformation.Amir_GlideMultiTransformation</name>
+        <owner>process</owner>
+        <method>
+            <name>Add</name>
+            <comment></comment>
+            <returntype>ir.aghajari.retrofitglide.Amir_GlideTransformation.Amir_GlideMultiTransformation</returntype>
+            <parameter>
+                <name>Transformation</name>
+                <type>com.bumptech.glide.load.Transformation</type>
+            </parameter>
+        </method>
+        <method>
+            <name>Remove</name>
+            <comment></comment>
+            <returntype>ir.aghajari.retrofitglide.Amir_GlideTransformation.Amir_GlideMultiTransformation</returntype>
+            <parameter>
+                <name>index</name>
+                <type>int</type>
+            </parameter>
+        </method>
+        <property>
+            <name>List</name>
+            <returntype>java.util.List</returntype>
+            <parameter>
+                <name>TList</name>
+                <type>java.util.List</type>
+            </parameter>
+            <comment></comment>
+        </property>
+    </class>
+    <class>
+        <name>ir.aghajari.retrofitglide.Amir_GlideTransitionOptions</name>
+        <shortname>Amir_GlideTransitionOptions</shortname>
+        <comment>Implementation of TransitionOptions that exposes only generic methods that can be applied
+ to any resource type.</comment>
+        <owner>process</owner>
+        <method>
+            <name>NoTransition</name>
+            <comment>Removes any existing animation put on the builder.</comment>
+            <returntype>ir.aghajari.retrofitglide.Amir_GlideTransitionOptions.Amir_TransitionOptionsAnim</returntype>
+        </method>
+        <method>
+            <name>Animator</name>
+            <comment>Returns a typed GenericTransitionOptions object that uses the given animator.
+ &lt;b&gt;&lt;i&gt; Don't Forgot To Add Event &lt;/i&gt;&lt;/b&gt;
+ 
+ &lt;b&gt; Event : &lt;/b&gt;
+ &lt;code&gt; EventName_onAnimate (View As Object) &lt;/code&gt;</comment>
+            <returntype>ir.aghajari.retrofitglide.Amir_GlideTransitionOptions.Amir_TransitionOptionsAnim</returntype>
+            <parameter>
+                <name>ba</name>
+                <type>anywheresoftware.b4a.BA</type>
+            </parameter>
+            <parameter>
+                <name>EventName</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>Sender</name>
+                <type>java.lang.Object</type>
+            </parameter>
+        </method>
+        <method>
+            <name>ViewAnimationId</name>
+            <comment>Returns a typed GenericTransitionOptions object that uses the given view animation.</comment>
+            <returntype>ir.aghajari.retrofitglide.Amir_GlideTransitionOptions.Amir_TransitionOptionsAnim</returntype>
+            <parameter>
+                <name>viewAnimationId</name>
+                <type>int</type>
+            </parameter>
+        </method>
+        <method>
+            <name>WithCrossFade</name>
+            <comment>DrawableTransitionOptions</comment>
+            <returntype>ir.aghajari.retrofitglide.Amir_GlideTransitionOptions.Amir_TransitionOptionsAnim</returntype>
+        </method>
+        <method>
+            <name>WithCrossFade2</name>
+            <comment>DrawableTransitionOptions</comment>
+            <returntype>ir.aghajari.retrofitglide.Amir_GlideTransitionOptions.Amir_TransitionOptionsAnim</returntype>
+            <parameter>
+                <name>duration</name>
+                <type>int</type>
+            </parameter>
+        </method>
+    </class>
+    <class>
+        <name>ir.aghajari.retrofitglide.Amir_GlidGifDrawable</name>
+        <shortname>Amir_GlideGifDrawable</shortname>
+        <comment>Manage Your Gif ... 
+ &lt;b&gt; Example : &lt;/b&gt; &lt;code&gt;
+ Glide.AsGif.Load("Gif_URL_Link").Listener("Amir",Null).Into(ImageView)
+ 
+ Sub Amir_onResourceReady (Data As Object,Model As Object,DataSourceName As String,isFirstResource as boolean) As Boolean
+ Dim Gif As Amir_GlidGifDrawable
+ if Gif.Initialize(Data) Then
+ Log(Gif.FrameCount)
+ Gif.LoopCount=1
+ End if
+ Return False
+ End Sub&lt;/code&gt;</comment>
+        <owner>process</owner>
+        <method>
+            <name>setVisible</name>
+            <comment></comment>
+            <returntype>boolean</returntype>
+            <parameter>
+                <name>visible</name>
+                <type>boolean</type>
+            </parameter>
+            <parameter>
+                <name>restart</name>
+                <type>boolean</type>
+            </parameter>
+        </method>
+        <method>
+            <name>isRunning</name>
+            <comment>True if the drawable is currently animating.</comment>
+            <returntype>boolean</returntype>
+        </method>
+        <method>
+            <name>Start</name>
+            <comment></comment>
+            <returntype>void</returntype>
+        </method>
+        <method>
+            <name>Stop</name>
+            <comment></comment>
+            <returntype>void</returntype>
+        </method>
+        <method>
+            <name>setFrameTransformation</name>
+            <comment></comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>Transformation</name>
+                <type>com.bumptech.glide.load.Transformation</type>
+            </parameter>
+            <parameter>
+                <name>FirstFrame</name>
+                <type>android.graphics.Bitmap</type>
+            </parameter>
+        </method>
+        <method>
+            <name>Recycle</name>
+            <comment>Clears any resources for loading frames that are currently held on to by this object.</comment>
+            <returntype>void</returntype>
+        </method>
+        <method>
+            <name>Initialize</name>
+            <comment></comment>
+            <returntype>boolean</returntype>
+            <parameter>
+                <name>resource</name>
+                <type>android.graphics.drawable.Drawable</type>
+            </parameter>
+        </method>
+        <method>
+            <name>StartFromFirstFrame</name>
+            <comment>Starts the animation from the first frame. Can only be called while animation is not running.</comment>
+            <returntype>void</returntype>
+        </method>
+        <property>
+            <name>LoopCount</name>
+            <parameter>
+                <name>loopCount</name>
+                <type>int</type>
+            </parameter>
+            <comment></comment>
+        </property>
+        <property>
+            <name>FrameTransformation</name>
+            <returntype>com.bumptech.glide.load.Transformation</returntype>
+            <comment></comment>
+        </property>
+        <property>
+            <name>FrameCount</name>
+            <returntype>int</returntype>
+            <comment></comment>
+        </property>
+        <property>
+            <name>FirstFrame</name>
+            <returntype>android.graphics.Bitmap</returntype>
+            <comment></comment>
+        </property>
+        <property>
+            <name>IntrinsicWidth</name>
+            <returntype>int</returntype>
+            <comment></comment>
+        </property>
+        <property>
+            <name>IntrinsicHeight</name>
+            <returntype>int</returntype>
+            <comment></comment>
+        </property>
+        <property>
+            <name>Alpha</name>
+            <parameter>
+                <name>i</name>
+                <type>int</type>
+            </parameter>
+            <comment></comment>
+        </property>
+        <property>
+            <name>Opacity</name>
+            <returntype>int</returntype>
+            <comment></comment>
+        </property>
+        <property>
+            <name>FrameIndex</name>
+            <returntype>int</returntype>
+            <comment>Returns the current frame index in the range 0.. getFrameCount() - 1, or -1 if no frame
+ is displayed.</comment>
+        </property>
+        <field>
+            <name>LOOP_FOREVER</name>
+            <comment>A constant indicating that an animated drawable should loop continuously.</comment>
+            <returntype>int</returntype>
+        </field>
+    </class>
+    <class>
+        <name>ir.aghajari.retrofitglide.Amir_Request</name>
+        <shortname>Amir_GlideRequest</shortname>
+        <owner>process</owner>
+        <event>onSizeReady (Width As int,Height As int)</event>
+        <method>
+            <name>isPaused</name>
+            <comment>Returns true if this request is paused and may be restarted.</comment>
+            <returntype>boolean</returntype>
+        </method>
+        <method>
+            <name>ClearOnDetach</name>
+            <comment>Clears the  View's Request when the View is detached from its
+ android.view.Window and restarts the Request when the View is
+ re-attached from its android.view.Window.
+
+ This is an experimental API that may be removed in a future version.
+
+ Using this method can save memory by allowing Glide to more eagerly clear resources when
+ transitioning screens or swapping adapters in scrolling views. However it also substantially
+ increases the odds that images will not be in memory if users subsequently return to a screen
+ where images were previously loaded. Whether or not this happens will depend on the number
+ of images loaded in the new screen and the size of the memory cache. Increasing the size of
+ the memory cache can improve this behavior but it largely negates the memory benefits of using
+ this method.
+
+ Use this method with caution and measure your memory usage to ensure that it's actually
+ improving your memory usage in the cases you care about.</comment>
+            <returntype>ir.aghajari.retrofitglide.Amir_Request</returntype>
+        </method>
+        <method>
+            <name>isCancelled</name>
+            <comment>Returns true if the request has been cancelled.</comment>
+            <returntype>boolean</returntype>
+        </method>
+        <method>
+            <name>isResourceSet</name>
+            <comment>Returns true if a non-placeholder resource is put. For Requests that load more than one
+ resource, isResourceSet may return true even if isComplete returns false.</comment>
+            <returntype>boolean</returntype>
+        </method>
+        <method>
+            <name>Pause</name>
+            <comment>Identical to clear except that the request may later be restarted.</comment>
+            <returntype>ir.aghajari.retrofitglide.Amir_Request</returntype>
+        </method>
+        <method>
+            <name>isFailed</name>
+            <comment>Returns true if the request has failed.</comment>
+            <returntype>boolean</returntype>
+        </method>
+        <method>
+            <name>SizeReadyCallback</name>
+            <comment></comment>
+            <returntype>ir.aghajari.retrofitglide.Amir_Request</returntype>
+            <parameter>
+                <name>ba</name>
+                <type>anywheresoftware.b4a.BA</type>
+            </parameter>
+            <parameter>
+                <name>EventName</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+        <method>
+            <name>Clear</name>
+            <comment>Prevents any bitmaps being loaded from previous requests, releases any resources held by this
+ request, displays the current placeholder if one was provided, and marks the request as having
+ been cancelled.</comment>
+            <returntype>ir.aghajari.retrofitglide.Amir_Request</returntype>
+        </method>
+        <method>
+            <name>isEquivalentTo</name>
+            <comment>Returns true if this Request is equivalent to the given Request (has all of the same 
+ options and sizes).
+
+ This method is identical to Object equals(Object) except that it's specific to
+ Request subclasses. We do not use Object equals(Object) directly because we
+ track Requests in collections like java.util.Set and it's perfectly legitimate
+ to have two different Request objects for two different Targets (for example). 
+ Using a similar but different method let's us selectively compare Request objects to each 
+ other when it's useful in specific scenarios.</comment>
+            <returntype>boolean</returntype>
+            <parameter>
+                <name>Request</name>
+                <type>ir.aghajari.retrofitglide.Amir_Request</type>
+            </parameter>
+        </method>
+        <method>
+            <name>WaitForLayout</name>
+            <comment>waitForLayout If set to true, Glide will always wait for any pending layout pass
+ before checking for the size a View. If set to false Glide will only wait for a pending
+ layout pass if it's unable to resolve the size from layout parameters or an existing View size.
+ Because setting this parameter to true forces Glide to wait for the layout pass to
+ occur before starting the load, setting this parameter to true can cause flashing in
+ some cases and should be used sparingly. If layout parameters are set to fixed sizes, they will
+ still be used instead of the View's dimensions even if this parameter is set to true.
+ This parameter is a fallback only.</comment>
+            <returntype>ir.aghajari.retrofitglide.Amir_Request</returntype>
+        </method>
+        <method>
+            <name>isRunning</name>
+            <comment>Returns true if this request is running and has not completed or failed.</comment>
+            <returntype>boolean</returntype>
+        </method>
+        <method>
+            <name>Recycle</name>
+            <comment>Recycles the request object and releases its resources.</comment>
+            <returntype>ir.aghajari.retrofitglide.Amir_Request</returntype>
+        </method>
+        <method>
+            <name>Begin</name>
+            <comment>Starts an asynchronous load.</comment>
+            <returntype>ir.aghajari.retrofitglide.Amir_Request</returntype>
+        </method>
+        <method>
+            <name>isComplete</name>
+            <comment>Returns true if the request has completed successfully.</comment>
+            <returntype>boolean</returntype>
+        </method>
+        <property>
+            <name>View</name>
+            <returntype>android.view.View</returntype>
+            <comment></comment>
+        </property>
+    </class>
+    <class>
+        <name>ir.aghajari.retrofitglide.Amir_RequestBuilder</name>
+        <shortname>Amir_GlideRequestBuilder</shortname>
+        <comment>&lt;b&gt;Use Amir_Glide To Get Amir_GlideRequestBuilder&lt;/b&gt;</comment>
+        <owner>process</owner>
+        <event>onResourceReady (Data As Object,Model As Object,DataSourceName As String,isFirstResource as boolean) As Boolean</event>
+        <event>onLoadFailed (ErrorMessage As String,Model As Object,isFirstResource as boolean) As Boolean</event>
+        <method>
+            <name>Into</name>
+            <comment>Sets the ImageView the resource will be loaded into, cancels any existing loads into
+ the view, and frees any resources Glide may have previously loaded into the view so they may be
+ reused.</comment>
+            <returntype>ir.aghajari.retrofitglide.Amir_Request</returntype>
+            <parameter>
+                <name>View</name>
+                <type>android.widget.ImageView</type>
+            </parameter>
+        </method>
+        <method>
+            <name>Load</name>
+            <comment></comment>
+            <returntype>ir.aghajari.retrofitglide.Amir_RequestBuilder.Loader3</returntype>
+        </method>
+        <method>
+            <name>Listener</name>
+            <comment>Sets a RequestListener to monitor the resource load. It's best to create a single
+ instance of an exception handler per type of request (usually activity/fragment) rather than
+ pass one in per request to avoid some redundant object allocation.</comment>
+            <returntype>ir.aghajari.retrofitglide.Amir_RequestBuilder</returntype>
+            <parameter>
+                <name>EventName</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>ba</name>
+                <type>anywheresoftware.b4a.BA</type>
+            </parameter>
+            <parameter>
+                <name>Sender</name>
+                <type>java.lang.Object</type>
+            </parameter>
+        </method>
+        <method>
+            <name>Apply</name>
+            <comment>Applies the given options to the request.</comment>
+            <returntype>ir.aghajari.retrofitglide.Amir_RequestBuilder</returntype>
+            <parameter>
+                <name>RequestOptions</name>
+                <type>ir.aghajari.retrofitglide.Amir_RequestOptions</type>
+            </parameter>
+        </method>
+        <method>
+            <name>Preload2</name>
+            <comment></comment>
+            <returntype>ir.aghajari.retrofitglide.Amir_Request</returntype>
+            <parameter>
+                <name>Width</name>
+                <type>int</type>
+            </parameter>
+            <parameter>
+                <name>Height</name>
+                <type>int</type>
+            </parameter>
+        </method>
+        <method>
+            <name>Thumbnail</name>
+            <comment>Loads a resource in an identical manner to this request except with the dimensions of the
+ target multiplied by the given size multiplier. If the thumbnail load completes before the full
+ size load, the thumbnail will be shown. If the thumbnail load completes after the full size
+ load, the thumbnail will not be shown.
+
+ Recursive calls to thumbnail are supported.</comment>
+            <returntype>ir.aghajari.retrofitglide.Amir_RequestBuilder</returntype>
+            <parameter>
+                <name>sizeMultiplier</name>
+                <type>float</type>
+            </parameter>
+        </method>
+        <method>
+            <name>ErrorBuilder</name>
+            <comment>Sets a RequestBuilder that is built and run iff the load started by this RequestBuilder fails.
+
+ If this RequestBuilder uses a thumbnail that succeeds the given error
+ RequestBuilder will be started anyway if the non-thumbnail request fails.
+
+ Recursive calls to this method as well as calls to  thumbnail(float) and
+ thumbnail(RequestBuilder) are supported for the given error  RequestBuilder.
+
+ Unlike thumbnail(RequestBuilder) and thumbnail(float), no options from
+ this primary RequestBuilder are propagated to the given error RequestBuilder.
+ Options like priority, override widths and heights and transitions must be applied
+ independently to the error builder.
+
+ The given RequestBuilder will start and potentially override a fallback drawable
+ if it's set on this RequestBuilder via
+  RequestOptions fallback(android.graphics.drawable.Drawable) or
+  RequestOptions fallback(int).</comment>
+            <returntype>ir.aghajari.retrofitglide.Amir_RequestBuilder</returntype>
+            <parameter>
+                <name>Error</name>
+                <type>ir.aghajari.retrofitglide.Amir_RequestBuilder</type>
+            </parameter>
+        </method>
+        <method>
+            <name>DownloadOnly</name>
+            <comment></comment>
+            <returntype>ir.aghajari.retrofitglide.Amir_Request</returntype>
+            <parameter>
+                <name>Width</name>
+                <type>int</type>
+            </parameter>
+            <parameter>
+                <name>Height</name>
+                <type>int</type>
+            </parameter>
+        </method>
+        <method>
+            <name>Preload</name>
+            <comment></comment>
+            <returntype>ir.aghajari.retrofitglide.Amir_Request</returntype>
+        </method>
+        <method>
+            <name>Transition</name>
+            <comment>Sets the  TransitionOptions to use to transition from the placeholder or thumbnail when
+ this load completes.
+
+ The given TransitionOptions will replace any TransitionOptions set previously.</comment>
+            <returntype>ir.aghajari.retrofitglide.Amir_RequestBuilder</returntype>
+            <parameter>
+                <name>Transition</name>
+                <type>ir.aghajari.retrofitglide.Amir_GlideTransitionOptions.Amir_TransitionOptionsAnim</type>
+            </parameter>
+        </method>
+        <method>
+            <name>Submit</name>
+            <comment></comment>
+            <returntype>ir.aghajari.retrofitglide.Amir_Request</returntype>
+        </method>
+        <method>
+            <name>ThumbnailRequest</name>
+            <comment>Loads and displays the resource retrieved by the given thumbnail request if it finishes before
+ this request. Best used for loading thumbnail resources that are smaller and will be loaded
+ more quickly than the full size resource. There are no guarantees about the order in which the
+ requests will actually finish. However, if the thumb request completes after the full request,
+ the thumb resource will never replace the full resource.
+
+ Recursive calls to thumbnail are supported.</comment>
+            <returntype>ir.aghajari.retrofitglide.Amir_RequestBuilder</returntype>
+            <parameter>
+                <name>thumbnailRequest</name>
+                <type>ir.aghajari.retrofitglide.Amir_RequestBuilder</type>
+            </parameter>
+        </method>
+        <method>
+            <name>Submit2</name>
+            <comment></comment>
+            <returntype>ir.aghajari.retrofitglide.Amir_Request</returntype>
+            <parameter>
+                <name>Width</name>
+                <type>int</type>
+            </parameter>
+            <parameter>
+                <name>Height</name>
+                <type>int</type>
+            </parameter>
+        </method>
+        <method>
+            <name>Clone</name>
+            <comment>Returns a copy of this request builder with all of the options put so far on this builder.
+
+ This method returns a "deep" copy in that all non-immutable arguments are copied such that
+ changes to one builder will not affect the other builder. However, in addition to immutable
+ arguments, the current model is not copied copied so changes to the model will affect both
+ builders.</comment>
+            <returntype>ir.aghajari.retrofitglide.Amir_RequestBuilder</returntype>
+        </method>
+    </class>
+    <class>
+        <name>ir.aghajari.retrofitglide.Amir_RequestBuilder.Loader3</name>
+        <owner>process</owner>
+        <method>
+            <name>Bitmap</name>
+            <comment></comment>
+            <returntype>ir.aghajari.retrofitglide.Amir_RequestBuilder</returntype>
+            <parameter>
+                <name>Bitmap</name>
+                <type>android.graphics.Bitmap</type>
+            </parameter>
+        </method>
+        <method>
+            <name>Byte</name>
+            <comment></comment>
+            <returntype>ir.aghajari.retrofitglide.Amir_RequestBuilder</returntype>
+            <parameter>
+                <name>model</name>
+                <type>byte[]</type>
+            </parameter>
+        </method>
+        <method>
+            <name>Drawable</name>
+            <comment></comment>
+            <returntype>ir.aghajari.retrofitglide.Amir_RequestBuilder</returntype>
+            <parameter>
+                <name>drawable</name>
+                <type>android.graphics.drawable.Drawable</type>
+            </parameter>
+        </method>
+        <method>
+            <name>Object</name>
+            <comment></comment>
+            <returntype>ir.aghajari.retrofitglide.Amir_RequestBuilder</returntype>
+            <parameter>
+                <name>Object</name>
+                <type>java.lang.Object</type>
+            </parameter>
+        </method>
+        <method>
+            <name>String</name>
+            <comment></comment>
+            <returntype>ir.aghajari.retrofitglide.Amir_RequestBuilder</returntype>
+            <parameter>
+                <name>string</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+        <method>
+            <name>File</name>
+            <comment></comment>
+            <returntype>ir.aghajari.retrofitglide.Amir_RequestBuilder</returntype>
+            <parameter>
+                <name>path</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>name</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+        <method>
+            <name>URI</name>
+            <comment></comment>
+            <returntype>ir.aghajari.retrofitglide.Amir_RequestBuilder</returntype>
+            <parameter>
+                <name>URI</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+        <method>
+            <name>URL</name>
+            <comment></comment>
+            <returntype>ir.aghajari.retrofitglide.Amir_RequestBuilder</returntype>
+            <parameter>
+                <name>URL</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+    </class>
+    <class>
+        <name>ir.aghajari.retrofitglide.Amir_RequestOptions</name>
+        <shortname>Amir_GlideRequestOptions</shortname>
+        <comment>Provides type independent options to customize loads with Glide.</comment>
+        <owner>process</owner>
+        <method>
+            <name>SizeMultiplier</name>
+            <comment>Applies a multiplier to the Target's size before
+ loading the resource. Useful for loading thumbnails or trying to avoid loading huge resources
+ (particularly Bitmaps on devices with overly dense screens.</comment>
+            <returntype>ir.aghajari.retrofitglide.Amir_RequestOptions</returntype>
+            <parameter>
+                <name>sizeMultiplier</name>
+                <type>float</type>
+            </parameter>
+        </method>
+        <method>
+            <name>Placeholder</name>
+            <comment>Sets an Drawable to display while a resource is loading.</comment>
+            <returntype>ir.aghajari.retrofitglide.Amir_RequestOptions</returntype>
+            <parameter>
+                <name>placeholder</name>
+                <type>android.graphics.drawable.Drawable</type>
+            </parameter>
+        </method>
+        <method>
+            <name>Frame</name>
+            <comment>Sets the time position of the frame to extract from a video.
+
+ This is a component option specific to VideoDecoder. If the default video
+ decoder is replaced or skipped because of your configuration, this option may be ignored.
+
+  &lt;b&gt;frameTimeMicros :&lt;/b&gt; 
+  The time position in microseconds of the desired frame. If negative the Android 
+  framework implementation return a representative frame.</comment>
+            <returntype>ir.aghajari.retrofitglide.Amir_RequestOptions</returntype>
+            <parameter>
+                <name>frameTimeMicros</name>
+                <type>long</type>
+            </parameter>
+        </method>
+        <method>
+            <name>OptionalFitCenter</name>
+            <comment>Applies FitCenter and to all default types, DownsampleStrategy FIT_CENTER to
+ image types, and ignores unknown types.
+
+ This will override previous calls to DontTransform() and previous calls to
+ Downsample(DownsampleStrategy).</comment>
+            <returntype>ir.aghajari.retrofitglide.Amir_RequestOptions</returntype>
+        </method>
+        <method>
+            <name>EncodeFormat</name>
+            <comment>Sets the value for key BitmapEncoder COMPRESSION_FORMAT.
+ _______________________________________________________
+ &lt;b&gt; Types : &lt;/b&gt;
+ &lt;code&gt; "JPEG" &lt;/code&gt;
+ &lt;code&gt; "WEBP" &lt;/code&gt;
+ &lt;code&gt; "PNG" &lt;/code&gt;</comment>
+            <returntype>ir.aghajari.retrofitglide.Amir_RequestOptions</returntype>
+            <parameter>
+                <name>Type</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+        <method>
+            <name>OptionalCenterInside</name>
+            <comment>Applies CenterInside to all default types, DownsampleStrategy CENTER_INSIDE 
+ to image types, and ignores unknown types.
+
+ This will override previous calls to DontTransform() and previous calls to
+ Downsample(DownsampleStrategy).</comment>
+            <returntype>ir.aghajari.retrofitglide.Amir_RequestOptions</returntype>
+        </method>
+        <method>
+            <name>DisallowHardwareConfig</name>
+            <comment>Disables the use of android.graphics.Bitmap.Config HARDWARE in Downsampler to
+ avoid errors caused by inspecting Bitmap pixels, drawing with hardware support disabled,
+ drawing to android.graphics.Canvass backed by Bitmaps etc.
+
+ It's almost never safe to set Downsampler ALLOW_HARDWARE_CONFIG to true so
+ we only provide a way to disable hardware configs entirely. If no option is set for
+ Downsampler ALLOW_HARDWARE_CONFIG, Glide will set the value per request based on
+ whether or not a Transformation is applied and if one is, the type of
+ Transformation applied. Built in transformations like FitCenter and
+ DownsampleStrategy.CenterOutside can safely use
+ android.graphics.Bitmap.Config HARDWARE because they can be entirely replaced by
+ scaling within Downsampler. Transformations like CircleCrop that
+ can't be replicated by Downsampler cannot use Bitmap.Config HARDWARE because
+ android.graphics.Bitmap.Config HARDWARE cannot be drawn to
+ android.graphics.Canvass, which is required by most Transformations.</comment>
+            <returntype>ir.aghajari.retrofitglide.Amir_RequestOptions</returntype>
+        </method>
+        <method>
+            <name>TimeOut</name>
+            <comment>Sets the read and write timeout for the http requests used to load the image.</comment>
+            <returntype>ir.aghajari.retrofitglide.Amir_RequestOptions</returntype>
+            <parameter>
+                <name>timeout</name>
+                <type>int</type>
+            </parameter>
+        </method>
+        <method>
+            <name>Apply</name>
+            <comment>Updates this options set with any options that are explicitly set in the given
+ RequestOptions object and returns this object if autoClone() is disabled or
+ a new RequestOptions object if autoClone() is enabled.
+
+ apply only replaces those values that are explicitly set in the given RequestOptions. 
+ If you need to completely reset all previously set options, create a
+ new RequestOptions object instead of using this method.
+
+ The options that will be set to values in the returned RequestOptions object is the
+ intersection of the set of options in this RequestOptions object and the given
+ RequestOptions object that were explicitly set. If the values of any of the options
+ conflict, the values in the returned RequestOptions object will be set to those in the
+ given RequestOptions object.</comment>
+            <returntype>ir.aghajari.retrofitglide.Amir_RequestOptions</returntype>
+            <parameter>
+                <name>other</name>
+                <type>ir.aghajari.retrofitglide.Amir_RequestOptions</type>
+            </parameter>
+        </method>
+        <method>
+            <name>FallBack</name>
+            <comment>Sets an Drawable to display if the model provided to RequestBuilder Load(Object) is Null.
+
+ If a fallback is not set, null models will cause the error drawable to be displayed. If the
+ error drawable is not set, the placeholder will be displayed.</comment>
+            <returntype>ir.aghajari.retrofitglide.Amir_RequestOptions</returntype>
+            <parameter>
+                <name>drawable</name>
+                <type>android.graphics.drawable.Drawable</type>
+            </parameter>
+        </method>
+        <method>
+            <name>ErrorDrawable</name>
+            <comment>Sets a Drawable to display if a load fails.</comment>
+            <returntype>ir.aghajari.retrofitglide.Amir_RequestOptions</returntype>
+            <parameter>
+                <name>errorDrawable</name>
+                <type>android.graphics.drawable.Drawable</type>
+            </parameter>
+        </method>
+        <method>
+            <name>Format</name>
+            <comment>Sets the DecodeFormat to use when decoding Bitmap objects using
+ Downsampler and Glide's default GIF decoders.
+
+ DecodeFormat is a request, not a requirement. It's possible the resource will be
+ decoded using a decoder that cannot control the format
+ (android.media.MediaMetadataRetriever for example), or that the decoder may choose to
+ ignore the requested format if it can't display the image (i.e. RGB_565 is requested, but the
+ image has alpha).
+
+ This is a component option specific to Downsampler and Glide's GIF decoders. If the
+ default Bitmap decoders are replaced or skipped because of your configuration, this option may
+ be ignored.
+
+ To set only the format used when decoding Bitmaps, use
+ option and Downsampler DECODE_FORMAT. To set only the format
+ used when decoding GIF frames, use option and
+ GifOptions DECODE_FORMAT.
+ _______________________________________________________
+ &lt;b&gt; Types : &lt;/b&gt;
+ &lt;code&gt; "DEFAULT" &lt;/code&gt;
+ &lt;code&gt; "PREFER_ARGB_8888" &lt;/code&gt;
+ &lt;code&gt; "PREFER_ARGB_8888_DISALLOW_HARDWARE" &lt;/code&gt;
+ &lt;code&gt; "PREFER_RGB_565" &lt;/code&gt;</comment>
+            <returntype>ir.aghajari.retrofitglide.Amir_RequestOptions</returntype>
+            <parameter>
+                <name>Type</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+        <method>
+            <name>OptionalTransform</name>
+            <comment>Applies the given Transformation for Bitmaps to the default types (Bitmap),
+ android.graphics.drawable.BitmapDrawable, and GifDrawable and ignores unknown types.
+
+ This will override previous calls to DontTransform().
+ 
+ &lt;b&gt; Support Multi Transformation :) &lt;/b&gt;</comment>
+            <returntype>ir.aghajari.retrofitglide.Amir_RequestOptions</returntype>
+            <parameter>
+                <name>Transition</name>
+                <type>ir.aghajari.retrofitglide.Amir_GlideTransformation</type>
+            </parameter>
+        </method>
+        <method>
+            <name>Quality</name>
+            <comment>Sets the value for key BitmapEncoder COMPRESSION_QUALITY from 0 to 100</comment>
+            <returntype>ir.aghajari.retrofitglide.Amir_RequestOptions</returntype>
+            <parameter>
+                <name>quality</name>
+                <type>int</type>
+            </parameter>
+        </method>
+        <method>
+            <name>SkipMemoryCache</name>
+            <comment>Allows the loaded resource to skip the memory cache.
+
+ &lt;i&gt; Note :&lt;/i&gt; this is not a guarantee. If a request is already pending for this resource and that
+ request is not also skipping the memory cache, the resource will be cached in memory.</comment>
+            <returntype>ir.aghajari.retrofitglide.Amir_RequestOptions</returntype>
+            <parameter>
+                <name>skipMemoryCache</name>
+                <type>boolean</type>
+            </parameter>
+        </method>
+        <method>
+            <name>DiskCacheStrategy</name>
+            <comment>Sets the DiskCacheStrategy to use for this load.
+
+ &lt;i&gt; Defaults to AUTOMATIC. &lt;/i&gt;
+
+ For most applications RESOURCE is ideal. 
+ Applications that use the same resource multiple times in multiple sizes and are willing
+ to trade off some speed and disk space in return for lower bandwidth usage may want to consider
+ using DATA or ALL.
+ ___________________________________________
+ &lt;b&gt; Types : &lt;/b&gt;
+ &lt;code&gt; "ALL" &lt;/code&gt;
+ &lt;code&gt; "AUTOMATIC" &lt;/code&gt;
+ &lt;code&gt; "DATA" &lt;/code&gt;
+ &lt;code&gt; "NONE" &lt;/code&gt;
+ &lt;code&gt; "RESOURCE" &lt;/code&gt;</comment>
+            <returntype>ir.aghajari.retrofitglide.Amir_RequestOptions</returntype>
+            <parameter>
+                <name>Type</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+        <method>
+            <name>FitCenter</name>
+            <comment>Applies FitCenter and to all default types, DownsampleStrategy FIT_CENTER to
+ image types, and throws an exception if asked to transform an unknown
+ type.
+ 
+ This will override previous calls to DontTransform() and previous calls to
+ Downsample(DownsampleStrategy).</comment>
+            <returntype>ir.aghajari.retrofitglide.Amir_RequestOptions</returntype>
+        </method>
+        <method>
+            <name>DontAnimate</name>
+            <comment>Disables resource decoders that return animated resources so any resource returned will be
+ static.</comment>
+            <returntype>ir.aghajari.retrofitglide.Amir_RequestOptions</returntype>
+        </method>
+        <method>
+            <name>Override</name>
+            <comment>Overrides the Target's width and height with the given size.</comment>
+            <returntype>ir.aghajari.retrofitglide.Amir_RequestOptions</returntype>
+            <parameter>
+                <name>size</name>
+                <type>int</type>
+            </parameter>
+        </method>
+        <method>
+            <name>OptionalCenterCrop</name>
+            <comment>Applies CenterCrop to all default types, and ignores unknown types.
+
+ This will override previous calls to DontTransform().</comment>
+            <returntype>ir.aghajari.retrofitglide.Amir_RequestOptions</returntype>
+        </method>
+        <method>
+            <name>Clone</name>
+            <comment>Returns a copy of this request builder with all of the options put so far on this builder.
+
+ This method returns a "deep" copy in that all non-immutable arguments are copied such that
+ changes to one builder will not affect the other builder. However, in addition to immutable
+ arguments, the current model is not copied copied so changes to the model will affect both
+ builders. 
+
+ &lt;i&gt; Even if this object was locked, the cloned object returned from this method will not be
+ locked. &lt;/i&gt;</comment>
+            <returntype>ir.aghajari.retrofitglide.Amir_RequestOptions</returntype>
+        </method>
+        <method>
+            <name>OptionalCircleCrop</name>
+            <comment>Applies CircleCrop to all default types, and ignores unknown types.
+
+ This will override previous calls to dontTransform().</comment>
+            <returntype>ir.aghajari.retrofitglide.Amir_RequestOptions</returntype>
+        </method>
+        <method>
+            <name>DownsampleStrategy</name>
+            <comment>Sets the DownsampleStrategy to use when decoding Bitmaps using Downsampler.
+
+ This is a component option specific to Downsampler. If the defautlt Bitmap decoder
+ is replaced or skipped because of your configuration, this option may be ignored.
+ 
+ &lt;b&gt; Types : &lt;/b&gt;
+ &lt;code&gt; "AT_LEAST" &lt;/code&gt;
+ &lt;code&gt; "AT_MOST" &lt;/code&gt;
+ &lt;code&gt; "CENTER_INSIDE" &lt;/code&gt;
+ &lt;code&gt; "CENTER_OUTSIDE" &lt;/code&gt;
+ &lt;code&gt; "DEFAULT" &lt;/code&gt;
+ &lt;code&gt; "FIT_CENTER" &lt;/code&gt;
+ &lt;code&gt; "NONE" &lt;/code&gt;</comment>
+            <returntype>ir.aghajari.retrofitglide.Amir_RequestOptions</returntype>
+            <parameter>
+                <name>Type</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+        <method>
+            <name>Priority</name>
+            <comment>Sets the priority for this load.
+ &lt;b&gt; Types : &lt;/b&gt;
+ &lt;code&gt; "IMMEDIATE" &lt;/code&gt;
+ &lt;code&gt; "HIGH" &lt;/code&gt;
+ &lt;code&gt; "NORMAL" &lt;/code&gt;
+ &lt;code&gt; "LOW" &lt;/code&gt;</comment>
+            <returntype>ir.aghajari.retrofitglide.Amir_RequestOptions</returntype>
+            <parameter>
+                <name>Type</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+        <method>
+            <name>AutoClone</name>
+            <comment>Similar to lock() except that mutations cause a clone() operation to happen
+ before the mutation resulting in all methods returning a new Object and leaving the original
+ locked object unmodified.
+
+ Auto clone is not retained by cloned objects returned from mutations. The cloned objects
+ are mutable and are not locked.</comment>
+            <returntype>ir.aghajari.retrofitglide.Amir_RequestOptions</returntype>
+        </method>
+        <method>
+            <name>CenterCrop</name>
+            <comment>Applies CenterCrop to all default types and
+ throws an exception if asked to transform an unknown type.
+
+ this will override previous calls to dontTransform().</comment>
+            <returntype>ir.aghajari.retrofitglide.Amir_RequestOptions</returntype>
+        </method>
+        <method>
+            <name>DontTransform</name>
+            <comment>Removes all applied Transformation Transformations for all resource classes and allows 
+ unknown resource types to be transformed without throwing an exception.</comment>
+            <returntype>ir.aghajari.retrofitglide.Amir_RequestOptions</returntype>
+        </method>
+        <method>
+            <name>CenterInside</name>
+            <comment>Applies CenterInside to all default types, DownsampleStrategy CENTER_INSIDE to
+ image types and throws an exception if asked to transform an unknown type.
+
+ This will override previous calls to dontTransform() and previous calls to
+ Downsample(DownsampleStrategy).</comment>
+            <returntype>ir.aghajari.retrofitglide.Amir_RequestOptions</returntype>
+        </method>
+        <method>
+            <name>OnlyRetrieveFromCache</name>
+            <comment>If set to true, will only load an item if found in the cache, and will not fetch from source.</comment>
+            <returntype>ir.aghajari.retrofitglide.Amir_RequestOptions</returntype>
+            <parameter>
+                <name>flag</name>
+                <type>boolean</type>
+            </parameter>
+        </method>
+        <method>
+            <name>Lock</name>
+            <comment>Throws if any further mutations are attempted.
+
+ Once locked, the only way to unlock is to use clone()</comment>
+            <returntype>ir.aghajari.retrofitglide.Amir_RequestOptions</returntype>
+        </method>
+        <method>
+            <name>UseUnlimitedSourceGeneratorsPool</name>
+            <comment>If set to true, uses a cached unlimited java.util.concurrent.Executor to run
+ the request.
+
+ This method should &lt;i&gt;ONLY&lt;/i&gt; be used when a Glide load is started recursively on one
+ of Glide's threads as part of another request. Using this method in other scenarios can lead
+ to excessive memory usage and OOMs and/or a significant decrease in performance across an
+ application.
+
+ If both this method and useAnimationPool(boolean) are set, this method will be
+ preferred and useAnimationPool(boolean) will be ignored.</comment>
+            <returntype>ir.aghajari.retrofitglide.Amir_RequestOptions</returntype>
+            <parameter>
+                <name>flag</name>
+                <type>boolean</type>
+            </parameter>
+        </method>
+        <method>
+            <name>CircleCrop</name>
+            <comment>Applies CircleCrop to all default types and throws an exception if asked to transform
+ an unknown type.
+
+ This will override previous calls to DontTransform().</comment>
+            <returntype>ir.aghajari.retrofitglide.Amir_RequestOptions</returntype>
+        </method>
+        <method>
+            <name>Signature</name>
+            <comment>Sets some additional data to be mixed in to the memory and disk cache keys allowing the caller
+ more control over when cached data is invalidated.
+
+ &lt;i&gt; Note - The signature does not replace the cache key, it is purely additive. &lt;/i&gt;</comment>
+            <returntype>ir.aghajari.retrofitglide.Amir_RequestOptions</returntype>
+            <parameter>
+                <name>ObjectKey</name>
+                <type>java.lang.Object</type>
+            </parameter>
+        </method>
+        <method>
+            <name>UseAnimationPool</name>
+            <comment>If set to true, uses a special java.util.concurrent.Executor that is used
+ exclusively for decoding frames of animated resources, like GIFs.
+
+ The animation executor disallows network operations and must not be used for loads that
+ may load remote data. The animation executor has fewer threads available to it than Glide's
+ normal executors and is only useful as a way of avoiding blocking on longer and more expensive
+ reads for critical requests like those in an animating GIF.
+
+ If both useUnlimitedSourceGeneratorsPool(boolean) and this method are set,
+ useUnlimitedSourceGeneratorsPool(boolean) will be preferred and this method will be
+ ignored.</comment>
+            <returntype>ir.aghajari.retrofitglide.Amir_RequestOptions</returntype>
+            <parameter>
+                <name>flag</name>
+                <type>boolean</type>
+            </parameter>
+        </method>
+        <method>
+            <name>Override2</name>
+            <comment>Overrides the Target's width and height with the
+ given values. This is useful for thumbnails, and should only be used for other cases when you
+ need a very specific image size.</comment>
+            <returntype>ir.aghajari.retrofitglide.Amir_RequestOptions</returntype>
+            <parameter>
+                <name>width</name>
+                <type>int</type>
+            </parameter>
+            <parameter>
+                <name>height</name>
+                <type>int</type>
+            </parameter>
+        </method>
+        <method>
+            <name>Theme</name>
+            <comment>Sets the android.content.res.Resources.Theme to apply when loading Drawables
+ for resource ids provided via Error,Placeholder, and Fallback.
+
+ The theme is &lt;i&gt;NOT&lt;/i&gt; applied in the decoder that will attempt to decode a given
+ resource id model on Glide's background threads. The theme is used exclusively on the main
+ thread to obtain placeholder/error/fallback drawables to avoid leaking Activities.
+
+ If the android.content.Context of the  android.app.Fragment or
+ android.app.Activity used to start this load has a different
+ android.content.res.Resources.Theme, the android.content.res.Resources.Theme
+ provided here will override the android.content.res.Resources.Theme of the
+ android.content.Context.
+
+  &lt;b&gt;theme : &lt;/b&gt; The theme to use when loading Drawables.</comment>
+            <returntype>ir.aghajari.retrofitglide.Amir_RequestOptions</returntype>
+            <parameter>
+                <name>theme</name>
+                <type>android.content.res.Resources.Theme</type>
+            </parameter>
+        </method>
+        <method>
+            <name>Transform</name>
+            <comment>Applies the given Transformation for any decoded resource of
+ the given type and throws if asked to transform an unknown resource type.
+
+ &lt;i&gt;This will override previous calls to DontTransform().&lt;/i&gt;
+ 
+ &lt;b&gt; Support Multi Transformation :) &lt;/b&gt;</comment>
+            <returntype>ir.aghajari.retrofitglide.Amir_RequestOptions</returntype>
+            <parameter>
+                <name>Transition</name>
+                <type>ir.aghajari.retrofitglide.Amir_GlideTransformation</type>
+            </parameter>
+        </method>
+        <field>
+            <name>TR</name>
+            <comment>a Fild To Get Amir_GlideTransformation</comment>
+            <returntype>ir.aghajari.retrofitglide.Amir_GlideTransformation</returntype>
+        </field>
+    </class>
+    <class>
+        <name>ir.aghajari.retrofitglide.Amir_RRequestBuilder</name>
+        <owner>process</owner>
+        <method>
+            <name>Into</name>
+            <comment>Sets the ImageView the resource will be loaded into, cancels any existing loads into
+ the view, and frees any resources Glide may have previously loaded into the view so they may be
+ reused.</comment>
+            <returntype>java.lang.Object</returntype>
+            <parameter>
+                <name>View</name>
+                <type>android.widget.ImageView</type>
+            </parameter>
+        </method>
+        <method>
+            <name>Listener</name>
+            <comment>Sets a RequestListener to monitor the resource load. It's best to create a single
+ instance of an exception handler per type of request (usually activity/fragment) rather than
+ pass one in per request to avoid some redundant object allocation.</comment>
+            <returntype>ir.aghajari.retrofitglide.Amir_RRequestBuilder</returntype>
+            <parameter>
+                <name>EventName</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>ba</name>
+                <type>anywheresoftware.b4a.BA</type>
+            </parameter>
+            <parameter>
+                <name>Sender</name>
+                <type>java.lang.Object</type>
+            </parameter>
+        </method>
+        <method>
+            <name>Apply</name>
+            <comment>Applies the given options to the request.</comment>
+            <returntype>ir.aghajari.retrofitglide.Amir_RRequestBuilder</returntype>
+            <parameter>
+                <name>RequestOptions</name>
+                <type>ir.aghajari.retrofitglide.Amir_RequestOptions</type>
+            </parameter>
+        </method>
+        <method>
+            <name>Transition</name>
+            <comment>Sets the  TransitionOptions to use to transition from the placeholder or thumbnail when
+ this load completes.
+
+ The given TransitionOptions will replace any TransitionOptions set previously.</comment>
+            <returntype>ir.aghajari.retrofitglide.Amir_RRequestBuilder</returntype>
+            <parameter>
+                <name>Transition</name>
+                <type>ir.aghajari.retrofitglide.Amir_GlideTransitionOptions.Amir_TransitionOptionsAnim</type>
+            </parameter>
+        </method>
+        <method>
+            <name>ThumbnailRequest</name>
+            <comment>Loads and displays the resource retrieved by the given thumbnail request if it finishes before
+ this request. Best used for loading thumbnail resources that are smaller and will be loaded
+ more quickly than the full size resource. There are no guarantees about the order in which the
+ requests will actually finish. However, if the thumb request completes after the full request,
+ the thumb resource will never replace the full resource.
+
+ Recursive calls to thumbnail are supported.</comment>
+            <returntype>ir.aghajari.retrofitglide.Amir_RRequestBuilder</returntype>
+            <parameter>
+                <name>thumbnailRequest</name>
+                <type>ir.aghajari.retrofitglide.Amir_RequestBuilder</type>
+            </parameter>
+        </method>
+        <method>
+            <name>Thumbnail</name>
+            <comment>Loads a resource in an identical manner to this request except with the dimensions of the
+ target multiplied by the given size multiplier. If the thumbnail load completes before the full
+ size load, the thumbnail will be shown. If the thumbnail load completes after the full size
+ load, the thumbnail will not be shown.
+
+ Recursive calls to thumbnail are supported.</comment>
+            <returntype>ir.aghajari.retrofitglide.Amir_RRequestBuilder</returntype>
+            <parameter>
+                <name>sizeMultiplier</name>
+                <type>float</type>
+            </parameter>
+        </method>
+        <method>
+            <name>ErrorBuilder</name>
+            <comment>Sets a RequestBuilder that is built and run iff the load started by this RequestBuilder fails.
+
+ If this RequestBuilder uses a thumbnail that succeeds the given error
+ RequestBuilder will be started anyway if the non-thumbnail request fails.
+
+ Recursive calls to this method as well as calls to  thumbnail(float) and
+ thumbnail(RequestBuilder) are supported for the given error  RequestBuilder.
+
+ Unlike thumbnail(RequestBuilder) and thumbnail(float), no options from
+ this primary RequestBuilder are propagated to the given error RequestBuilder.
+ Options like priority, override widths and heights and transitions must be applied
+ independently to the error builder.
+
+ The given RequestBuilder will start and potentially override a fallback drawable
+ if it's set on this RequestBuilder via
+  RequestOptions fallback(android.graphics.drawable.Drawable) or
+  RequestOptions fallback(int).</comment>
+            <returntype>ir.aghajari.retrofitglide.Amir_RRequestBuilder</returntype>
+            <parameter>
+                <name>Error</name>
+                <type>ir.aghajari.retrofitglide.Amir_RequestBuilder</type>
+            </parameter>
+        </method>
+    </class>
+    <version>4.71</version>
+    <author>AmirHosseinAghajari</author>
+    <dependsOn>android-support-v4</dependsOn>
+    <dependsOn>Amir_Glide.aar</dependsOn>
+</root>

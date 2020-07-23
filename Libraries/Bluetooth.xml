@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <doclet-version-NOT-library-version>1.00</doclet-version-NOT-library-version>
+  <dependsOn>phone</dependsOn>
+  <dependsOn>reflection</dependsOn>
+  <class>
+    <name>b4a.example.bluetooth</name>
+    <shortname>BlueTooth</shortname>
+    <owner>process</owner>
+    <permission>android.permission.WRITE_EXTERNAL_STORAGE</permission>
+    <method>
+      <name>IsInitialized</name>
+      <comment>Tests whether the object has been initialized.</comment>
+      <returntype>boolean</returntype>
+    </method>
+    <method>
+      <name DesignerName="Class_Globals">_class_globals</name>
+      <returntype>String</returntype>
+    </method>
+    <method>
+      <name DesignerName="Initialize">_initialize</name>
+      <returntype>String</returntype>
+      <parameter>
+        <name>ba</name>
+        <type>anywheresoftware.b4a.BA</type>
+      </parameter>
+    </method>
+    <method>
+      <name DesignerName="SendFileBluetooth">_sendfilebluetooth</name>
+      <comment>Send any File to other Bluetooth
+Example : &lt;code&gt;SendFileBluetooth(File.DirRootExternal,"icm/","tricks.apk")&lt;/code&gt;</comment>
+      <returntype>String</returntype>
+      <parameter>
+        <name>Dir</name>
+        <type>String</type>
+      </parameter>
+      <parameter>
+        <name>sDirectory</name>
+        <type>String</type>
+      </parameter>
+      <parameter>
+        <name>Filename</name>
+        <type>String</type>
+      </parameter>
+    </method>
+  </class>
+  <version>1</version>
+</root>

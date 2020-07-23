@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root>
+    <doclet-version-NOT-library-version>1.02</doclet-version-NOT-library-version>
+    <class>
+        <name>anywheresoftware.b4a.specci48.spdialogs.SPDialogs</name>
+        <shortname>SPDialogs</shortname>
+        <owner>activity</owner>
+    </class>
+    <class>
+        <name>anywheresoftware.b4a.specci48.spdialogs.SPDialogs.Msgbox3</name>
+        <shortname>Msgbox3</shortname>
+        <owner>activity</owner>
+        <method>
+            <name>Show</name>
+            <comment>Shows a modal MessageBox dialog with the specified message and title.
+ Message - The dialog message.
+ Title - The dialog title.
+ Positive - The text to show for the "positive" button. Pass "" if you don't want to show the button.
+ Cancel - The text to show for the "cancel" button. Pass "" if you don't want to show the button.
+ Negative - The text to show for the "negative" button. Pass "" if you don't want to show the button.
+ Icon - A bitmap that will be drawn near the title. Pass Null if you don't want to show an icon.
+ Returns one of the DialogResponse values.</comment>
+            <returntype>int</returntype>
+            <parameter>
+                <name>Message</name>
+                <type>java.lang.CharSequence</type>
+            </parameter>
+            <parameter>
+                <name>Title</name>
+                <type>java.lang.CharSequence</type>
+            </parameter>
+            <parameter>
+                <name>Positive</name>
+                <type>java.lang.CharSequence</type>
+            </parameter>
+            <parameter>
+                <name>Cancel</name>
+                <type>java.lang.CharSequence</type>
+            </parameter>
+            <parameter>
+                <name>Negative</name>
+                <type>java.lang.CharSequence</type>
+            </parameter>
+            <parameter>
+                <name>Icon</name>
+                <type>android.graphics.Bitmap</type>
+            </parameter>
+            <parameter>
+                <name>ba</name>
+                <type>anywheresoftware.b4a.BA</type>
+            </parameter>
+        </method>
+        <property>
+            <name>Version</name>
+            <returntype>double</returntype>
+            <comment>Returns the version of the library.</comment>
+        </property>
+    </class>
+    <class>
+        <name>anywheresoftware.b4a.specci48.spdialogs.SPDialogs.Msgbox3WithoutDim</name>
+        <shortname>Msgbox3WithoutDim</shortname>
+        <owner>activity</owner>
+        <method>
+            <name>Show</name>
+            <comment>Shows a modal MessageBox dialog with the specified message and title.
+ The background is NOT dimmed when the MessageBox is shown.
+ Message - The dialog message.
+ Title - The dialog title.
+ Positive - The text to show for the "positive" button. Pass "" if you don't want to show the button.
+ Cancel - The text to show for the "cancel" button. Pass "" if you don't want to show the button.
+ Negative - The text to show for the "negative" button. Pass "" if you don't want to show the button.
+ Icon - A bitmap that will be drawn near the title. Pass Null if you don't want to show an icon.
+ Returns one of the DialogResponse values.</comment>
+            <returntype>int</returntype>
+            <parameter>
+                <name>Message</name>
+                <type>java.lang.CharSequence</type>
+            </parameter>
+            <parameter>
+                <name>Title</name>
+                <type>java.lang.CharSequence</type>
+            </parameter>
+            <parameter>
+                <name>Positive</name>
+                <type>java.lang.CharSequence</type>
+            </parameter>
+            <parameter>
+                <name>Cancel</name>
+                <type>java.lang.CharSequence</type>
+            </parameter>
+            <parameter>
+                <name>Negative</name>
+                <type>java.lang.CharSequence</type>
+            </parameter>
+            <parameter>
+                <name>Icon</name>
+                <type>android.graphics.Bitmap</type>
+            </parameter>
+            <parameter>
+                <name>ba</name>
+                <type>anywheresoftware.b4a.BA</type>
+            </parameter>
+        </method>
+        <property>
+            <name>Version</name>
+            <returntype>double</returntype>
+            <comment>Returns the version of the library.</comment>
+        </property>
+    </class>
+    <class>
+        <name>anywheresoftware.b4a.specci48.spdialogs.SPDialogs.CustomDialog3</name>
+        <shortname>CustomDialog3</shortname>
+        <owner>activity</owner>
+        <method>
+            <name>AddView</name>
+            <comment>Adds the custom layout view, most probably a Panel, to the custom dialog.
+ Although named AddView to match Basic4androd syntax only one view can be added.
+ Adding a view replaces any existing view previously added to the dialog.</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>View</name>
+                <type>android.view.View</type>
+            </parameter>
+            <parameter>
+                <name>Width</name>
+                <type>int</type>
+            </parameter>
+            <parameter>
+                <name>Height</name>
+                <type>int</type>
+            </parameter>
+        </method>
+        <method>
+            <name>Show</name>
+            <comment>Shows a modal custom dialog with the specified title.
+ Title - The dialog title.
+ Positive - The text to show for the "positive" button. Pass "" if you don't want to show the button.
+ Cancel - The text to show for the "cancel" button. Pass "" if you don't want to show the button.
+ Negative - The text to show for the "negative" button. Pass "" if you don't want to show the button.
+ Icon - A bitmap that will be drawn near the title. Pass Null if you don't want to show an icon.
+ Returns one of the DialogResponse values.</comment>
+            <returntype>int</returntype>
+            <parameter>
+                <name>Title</name>
+                <type>java.lang.CharSequence</type>
+            </parameter>
+            <parameter>
+                <name>Positive</name>
+                <type>java.lang.CharSequence</type>
+            </parameter>
+            <parameter>
+                <name>Cancel</name>
+                <type>java.lang.CharSequence</type>
+            </parameter>
+            <parameter>
+                <name>Negative</name>
+                <type>java.lang.CharSequence</type>
+            </parameter>
+            <parameter>
+                <name>ba</name>
+                <type>anywheresoftware.b4a.BA</type>
+            </parameter>
+            <parameter>
+                <name>Icon</name>
+                <type>android.graphics.Bitmap</type>
+            </parameter>
+        </method>
+        <property>
+            <name>Response</name>
+            <returntype>int</returntype>
+            <comment>Returns the response code that the dialog returned when it last closed.</comment>
+        </property>
+        <property>
+            <name>Version</name>
+            <returntype>double</returntype>
+            <comment>Returns the version of the library.</comment>
+        </property>
+    </class>
+    <version>1.01</version>
+    <comment></comment>
+</root>

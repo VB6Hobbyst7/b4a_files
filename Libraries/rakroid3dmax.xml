@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <doclet-version-NOT-library-version>1.00</doclet-version-NOT-library-version>
+  <dependsOn>jpct-ae (alhowiriny)</dependsOn>
+  <dependsOn>jpct_ae</dependsOn>
+  <class>
+    <name>b4a.example.rakroid3dmax</name>
+    <shortname>rakroid3dmax</shortname>
+    <owner>activity</owner>
+    <method>
+      <name>IsInitialized</name>
+      <comment>Tests whether the object has been initialized.</comment>
+      <returntype>boolean</returntype>
+    </method>
+    <method>
+      <name DesignerName="color">_color</name>
+      <returntype>int</returntype>
+      <parameter>
+        <name>r</name>
+        <type>int</type>
+      </parameter>
+      <parameter>
+        <name>g</name>
+        <type>int</type>
+      </parameter>
+      <parameter>
+        <name>b</name>
+        <type>int</type>
+      </parameter>
+    </method>
+    <method>
+      <name DesignerName="Initialize">_initialize</name>
+      <comment>پوشه , نام فایل  , اکتیویتی</comment>
+      <returntype>String</returntype>
+      <parameter>
+        <name>ba</name>
+        <type>anywheresoftware.b4a.BA</type>
+      </parameter>
+      <parameter>
+        <name>dir</name>
+        <type>String</type>
+      </parameter>
+      <parameter>
+        <name>filname</name>
+        <type>String</type>
+      </parameter>
+      <parameter>
+        <name>activity</name>
+        <type>anywheresoftware.b4a.objects.ActivityWrapper</type>
+      </parameter>
+    </method>
+    <method>
+      <name DesignerName="move">_move</name>
+      <comment>nm:
+1=چرخش حول محور x
+2=چرخش حول محور y
+3=حرکت به پایین
+4=حرکت به بالا
+5=حرکت به چپ
+6=حرکت به راست
+7=بزرگ نمایی
+8=گوچک نمایی
+values:
+با توجه به نوع حرکت مقدار آن متفاوت است.
+مثال:
+برای چرخش مقدار درجه چرخش را وارد کنید
+rak.move(1,90.0)
+برای حرکت مقدار dip را وارد کنید
+rak.move(4,10)</comment>
+      <returntype>String</returntype>
+      <parameter>
+        <name>nm</name>
+        <type>int</type>
+      </parameter>
+      <parameter>
+        <name>values</name>
+        <type>float</type>
+      </parameter>
+    </method>
+  </class>
+  <version>1</version>
+</root>

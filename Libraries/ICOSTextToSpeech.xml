@@ -1,0 +1,348 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root>
+    <doclet-version-NOT-library-version>1.01</doclet-version-NOT-library-version>
+    <class>
+        <name>giuseppe.salvi.icos.library.TTs</name>
+        <shortname>ICOSTextToSpeech</shortname>
+        <objectwrapper>android.speech.tts.TextToSpeech</objectwrapper>
+        <owner>activity</owner>
+        <permission>android.permission.READ_SMS</permission>
+        <permission>android.permission.RECEIVE_SMS</permission>
+        <permission>android.permission.WRITE_SMS</permission>
+        <permission>android.permission.ACCESS_LOCATION_EXTRA_COMMANDS</permission>
+        <permission>jp.co.c_lis.permission.CHANGE_LOCALE</permission>
+        <method>
+            <name>GoLanguageSettings</name>
+            <comment>Examples:
+ Dim tts As ICOSTextToSpeech
+ Dim b1 As Button
+ 
+ Sub b1_Click
+ tts.LanguageSettings
+ End Sub
+ 
+ Goes into the language setting to check if it has changed the language you've chosen</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>ba</name>
+                <type>anywheresoftware.b4a.BA</type>
+            </parameter>
+        </method>
+        <method>
+            <name>AddSpeaking</name>
+            <comment>Examples:
+ Dim tts As ICOSTextToSpeech
+ Dim b1 As Button
+ 
+ Sub b1_Click
+ tts.AddSpeaking="bla bla bla"
+ End Sub
+ 
+ Add the second text to speaking</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>ba</name>
+                <type>anywheresoftware.b4a.BA</type>
+            </parameter>
+            <parameter>
+                <name>txt2</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+        <method>
+            <name>GetEngineByPackageName</name>
+            <comment>Examples:
+ Dim tts As ICOSTextToSpeech
+ Dim b1 As Button
+ 
+ Sub b1_Click
+ tts.GetEngineByPackageName
+ End Sub
+ 
+ Return the current Engine Package Name</comment>
+            <returntype>java.lang.String</returntype>
+            <parameter>
+                <name>ba</name>
+                <type>anywheresoftware.b4a.BA</type>
+            </parameter>
+        </method>
+        <method>
+            <name>RateToSpeak</name>
+            <comment>Examples:
+ Dim tts As ICOSTextToSpeech
+ Dim b1 As Button
+ 
+ Sub b1_Click
+ tts.RateToSpeak=3.5
+ End Sub
+ 
+ Set the rate for the speaking</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>ba</name>
+                <type>anywheresoftware.b4a.BA</type>
+            </parameter>
+            <parameter>
+                <name>mRate</name>
+                <type>float</type>
+            </parameter>
+        </method>
+        <method>
+            <name>ShutDown</name>
+            <comment>Examples:
+ Dim tts As ICOSTextToSpeech
+ Dim b1 As Button
+ 
+ Sub b1_Click
+ tts.ShutDown
+ End Sub
+ 
+ Release the ICOSTextToSpeech.</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>ba</name>
+                <type>anywheresoftware.b4a.BA</type>
+            </parameter>
+        </method>
+        <method>
+            <name>StopToSpeak</name>
+            <comment>Examples:
+ Dim tts As ICOSTextToSpeech
+ Dim b1 As Button
+ 
+ Sub b1_Click
+ tts.StopToSpeak
+ End Sub
+ 
+ Stop the ICOSTextToSpeech.</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>ba</name>
+                <type>anywheresoftware.b4a.BA</type>
+            </parameter>
+        </method>
+        <method>
+            <name>ChangeDefaultLanguage</name>
+            <comment>Examples:
+ Dim tts As ICOSTextToSpeech
+ Dim b1 As Button
+ 
+ Sub b1_Click
+ tts.ChangeDefaultLanguage
+ End Sub
+ 
+ Programmatically change the default language of your phone with that choice yourself</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>ba</name>
+                <type>anywheresoftware.b4a.BA</type>
+            </parameter>
+        </method>
+        <method>
+            <name>Speaking</name>
+            <comment>Examples:
+ Dim tts As ICOSTextToSpeech
+ Dim b1 As Button
+ 
+ Sub b1_Click
+ tts.Speaking="bla bla bla"
+ End Sub
+ 
+ Speak the first text</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>ba</name>
+                <type>anywheresoftware.b4a.BA</type>
+            </parameter>
+            <parameter>
+                <name>txt</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+        <method>
+            <name>WriteAndSpeakText</name>
+            <comment>Examples:
+ Dim tts As ICOSTextToSpeech
+ Dim b1 As Button
+ 
+ Sub b1_Click
+ tts.WriteAndSpeakText
+ End Sub</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>ba</name>
+                <type>anywheresoftware.b4a.BA</type>
+            </parameter>
+        </method>
+        <method>
+            <name>SetEngineByPackageName</name>
+            <comment>Examples:
+ Dim tts As ICOSTextToSpeech
+ Dim b1 As Button
+ 
+ Sub b1_Click
+ tts.SetEngineByPackageName="com.ivona.tts"
+ End Sub
+ 
+ Set Engine PackageName</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>ba</name>
+                <type>anywheresoftware.b4a.BA</type>
+            </parameter>
+            <parameter>
+                <name>EnginePackageName</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+        <method>
+            <name>InitializeTTs</name>
+            <comment>Examples:
+ Dim tts As ICOSTextToSpeech
+ 
+ tts.InitializeTextToSpeech("tts")</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>ba</name>
+                <type>anywheresoftware.b4a.BA</type>
+            </parameter>
+            <parameter>
+                <name>EventName</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>DefLang</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+        <method>
+            <name>ReadAndSpeakSMS</name>
+            <comment>Examples:
+ Dim tts As ICOSTextToSpeech
+ Dim b1 As Button
+ 
+ Sub b1_Click
+ tts.ReadAndSpeakSMS
+ End Sub</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>ba</name>
+                <type>anywheresoftware.b4a.BA</type>
+            </parameter>
+        </method>
+        <method>
+            <name>PitchToSpeak</name>
+            <comment>Examples:
+ Dim tts As ICOSTextToSpeech
+ Dim b1 As Button
+ 
+ Sub b1_Click
+ tts.PitchToSpeak=3.5
+ End Sub
+ 
+ Set the pitch for the speaking</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>ba</name>
+                <type>anywheresoftware.b4a.BA</type>
+            </parameter>
+            <parameter>
+                <name>mPitch</name>
+                <type>float</type>
+            </parameter>
+        </method>
+        <method>
+            <name>SetLanguageToSpeak</name>
+            <comment>Examples:
+ Dim tts As ICOSTextToSpeech
+ Dim b1 As Button
+ 
+ Sub b1_Click
+ tts.SetLanguageToSpeak
+ End Sub
+ 
+ Set the language</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>ba</name>
+                <type>anywheresoftware.b4a.BA</type>
+            </parameter>
+        </method>
+        <method>
+            <name>IsInitialized</name>
+            <comment></comment>
+            <returntype>boolean</returntype>
+        </method>
+        <property>
+            <name>Version</name>
+            <returntype>double</returntype>
+            <comment>Return the version of this library</comment>
+        </property>
+    </class>
+    <class>
+        <name>giuseppe.salvi.icos.library.TTs.StringCryptor</name>
+        <owner>process</owner>
+        <method>
+            <name>decrypt</name>
+            <comment></comment>
+            <returntype>java.lang.String</returntype>
+            <parameter>
+                <name>password</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>encryptedData</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+        <method>
+            <name>encrypt</name>
+            <comment></comment>
+            <returntype>java.lang.String</returntype>
+            <parameter>
+                <name>password</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>data</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+        <method>
+            <name>generateKey</name>
+            <comment></comment>
+            <returntype>byte[]</returntype>
+            <parameter>
+                <name>seed</name>
+                <type>byte[]</type>
+            </parameter>
+        </method>
+    </class>
+    <class>
+        <name>giuseppe.salvi.icos.library.TTs.MyClassInfo</name>
+        <owner>process</owner>
+        <property>
+            <name>LanguageCountry</name>
+            <returntype>java.lang.String</returntype>
+            <comment></comment>
+        </property>
+        <property>
+            <name>Language</name>
+            <returntype>java.lang.String</returntype>
+            <comment></comment>
+        </property>
+        <property>
+            <name>Locale</name>
+            <returntype>java.util.Locale</returntype>
+            <comment></comment>
+        </property>
+        <property>
+            <name>LanguageTag</name>
+            <returntype>java.lang.String</returntype>
+            <comment></comment>
+        </property>
+    </class>
+    <version>1.5</version>
+    <comment></comment>
+    <author>Giuseppe Salvi</author>
+</root>

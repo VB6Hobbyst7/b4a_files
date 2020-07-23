@@ -1,0 +1,111 @@
+<HTML>
+<HEAD>
+<META http-equiv="Content-Type" content="text/html; charset=utf-8">
+<TITLE>
+Basic4android - Audio
+</TITLE>
+<link rel="stylesheet" type="text/css" href="images/help.css" />
+
+</HEAD>
+
+<BODY BGCOLOR="white" leftmargin="50">
+<a name="top"/>
+<h1>Audio</h1>
+
+</h5>
+<h4>List of types:</h4>
+<a href='#jetplayer'>JetPlayer</a><br/><a href='#soundpool'>SoundPool</a><br/>
+<hr/>
+<h3><u><a name='jetplayer'>JetPlayer</a></u></h3>
+
+<br/>
+
+<h4>Events:</h4>
+QueuedSegmentsCountChanged (Count As Int)<br/>CurrentUserIdChanged (UserId As Int, RepeatCount As Int)<br/>
+<h4>Members:</h4><br/>
+<img src='images/15.png'/>&nbsp;&nbsp;<span style="color: #000000;"><a href='#jetplayer_clearqueue'><b>ClearQueue</b></a></span><br/><br/>
+<img src='images/15.png'/>&nbsp;&nbsp;<span style="color: #000000;"><a href='#jetplayer_closefile'><b>CloseFile</b></a></span><br/><br/>
+<img src='images/15.png'/>&nbsp;&nbsp;<span style="color: #000000;"><a href='#jetplayer_initialize'><b>Initialize</b></a> (EventName </span><span style="color: #0000FF;">As</span><span style="color: #000000;"> </span><span style="color: #008B8B;">String</span><span style="color: #000000;">)</span><br/><br/>
+<img src='images/15.png'/>&nbsp;&nbsp;<span style="color: #000000;"><a href='#jetplayer_isinitialized'><b>IsInitialized</b></a> </span><span style="color: #0000FF;">As</span><span style="color: #000000;"> </span><span style="color: #008B8B;">Boolean</span><br/><br/>
+<img src='images/15.png'/>&nbsp;&nbsp;<span style="color: #000000;"><a href='#jetplayer_loadfile'><b>LoadFile</b></a> (Dir </span><span style="color: #0000FF;">As</span><span style="color: #000000;"> </span><span style="color: #008B8B;">String</span><span style="color: #000000;">, File </span><span style="color: #0000FF;">As</span><span style="color: #000000;"> </span><span style="color: #008B8B;">String</span><span style="color: #000000;">)</span><br/><br/>
+<img src='images/19.png'/>&nbsp;&nbsp;<span style="color: #000000;"><a href='#jetplayer_maxtracks'><b>MaxTracks</b></a> </span><span style="color: #0000FF;">As</span><span style="color: #000000;"> </span><span style="color: #008B8B;">Int</span><span style="color: #000000;">  [read only]</span><br/><br/>
+<img src='images/15.png'/>&nbsp;&nbsp;<span style="color: #000000;"><a href='#jetplayer_pause'><b>Pause</b></a></span><br/><br/>
+<img src='images/15.png'/>&nbsp;&nbsp;<span style="color: #000000;"><a href='#jetplayer_play'><b>Play</b></a></span><br/><br/>
+<img src='images/15.png'/>&nbsp;&nbsp;<span style="color: #000000;"><a href='#jetplayer_queuesegment'><b>QueueSegment</b></a> (SegmentNum </span><span style="color: #0000FF;">As</span><span style="color: #000000;"> </span><span style="color: #008B8B;">Int</span><span style="color: #000000;">, LibNum </span><span style="color: #0000FF;">As</span><span style="color: #000000;"> </span><span style="color: #008B8B;">Int</span><span style="color: #000000;">, RepeatCount </span><span style="color: #0000FF;">As</span><span style="color: #000000;"> </span><span style="color: #008B8B;">Int</span><span style="color: #000000;">, Transpose </span><span style="color: #0000FF;">As</span><span style="color: #000000;"> </span><span style="color: #008B8B;">Int</span><span style="color: #000000;">, MuteArray() </span><span style="color: #0000FF;">As</span><span style="color: #000000;"> </span><span style="color: #008B8B;">Boolean</span><span style="color: #000000;">, UserId </span><span style="color: #0000FF;">As</span><span style="color: #000000;"> </span><span style="color: #008B8B;">Byte</span><span style="color: #000000;">)</span><br/><br/>
+<img src='images/15.png'/>&nbsp;&nbsp;<span style="color: #000000;"><a href='#jetplayer_release'><b>Release</b></a></span><br/><br/>
+<img src='images/15.png'/>&nbsp;&nbsp;<span style="color: #000000;"><a href='#jetplayer_setmute'><b>SetMute</b></a> (MuteArray() </span><span style="color: #0000FF;">As</span><span style="color: #000000;"> </span><span style="color: #008B8B;">Boolean</span><span style="color: #000000;">, Sync </span><span style="color: #0000FF;">As</span><span style="color: #000000;"> </span><span style="color: #008B8B;">Boolean</span><span style="color: #000000;">)</span><br/><br/>
+<img src='images/15.png'/>&nbsp;&nbsp;<span style="color: #000000;"><a href='#jetplayer_settrackmute'><b>SetTrackMute</b></a> (Track </span><span style="color: #0000FF;">As</span><span style="color: #000000;"> </span><span style="color: #008B8B;">Int</span><span style="color: #000000;">, Mute </span><span style="color: #0000FF;">As</span><span style="color: #000000;"> </span><span style="color: #008B8B;">Boolean</span><span style="color: #000000;">, Sync </span><span style="color: #0000FF;">As</span><span style="color: #000000;"> </span><span style="color: #008B8B;">Boolean</span><span style="color: #000000;">)</span><br/><br/>
+
+<h4>Members description:</h4>
+<a name='jetplayer_clearqueue'/>
+<h5><img src='images/15.png'/>
+<span style="color: #000000;">ClearQueue</span></h5>Clears the segments queue.<a name='jetplayer_closefile'/>
+<h5><img src='images/15.png'/>
+<span style="color: #000000;">CloseFile</span></h5>Closes the resources related to the loaded file.<a name='jetplayer_initialize'/>
+<h5><img src='images/15.png'/>
+<span style="color: #000000;">Initialize (EventName </span><span style="color: #0000FF;">As</span><span style="color: #000000;"> </span><span style="color: #008B8B;">String</span><span style="color: #000000;">)</span></h5>Initializes the object and sets the Subs that will handle the JetPlayer events.<a name='jetplayer_isinitialized'/>
+<h5><img src='images/15.png'/>
+<span style="color: #000000;">IsInitialized </span><span style="color: #0000FF;">As</span><span style="color: #000000;"> </span><span style="color: #008B8B;">Boolean</span></h5><a name='jetplayer_loadfile'/>
+<h5><img src='images/15.png'/>
+<span style="color: #000000;">LoadFile (Dir </span><span style="color: #0000FF;">As</span><span style="color: #000000;"> </span><span style="color: #008B8B;">String</span><span style="color: #000000;">, File </span><span style="color: #0000FF;">As</span><span style="color: #000000;"> </span><span style="color: #008B8B;">String</span><span style="color: #000000;">)</span></h5>Loads a jet file.<a name='jetplayer_maxtracks'/>
+<h5><img src='images/19.png'/>
+<span style="color: #000000;">MaxTracks </span><span style="color: #0000FF;">As</span><span style="color: #000000;"> </span><span style="color: #008B8B;">Int</span><span style="color: #000000;">  [read only]</span></h5>Returns the maximum number of simultaneous tracks.<a name='jetplayer_pause'/>
+<h5><img src='images/15.png'/>
+<span style="color: #000000;">Pause</span></h5>Pauses playback.<a name='jetplayer_play'/>
+<h5><img src='images/15.png'/>
+<span style="color: #000000;">Play</span></h5>Starts playing the segments queue.<a name='jetplayer_queuesegment'/>
+<h5><img src='images/15.png'/>
+<span style="color: #000000;">QueueSegment (SegmentNum </span><span style="color: #0000FF;">As</span><span style="color: #000000;"> </span><span style="color: #008B8B;">Int</span><span style="color: #000000;">, LibNum </span><span style="color: #0000FF;">As</span><span style="color: #000000;"> </span><span style="color: #008B8B;">Int</span><span style="color: #000000;">, RepeatCount </span><span style="color: #0000FF;">As</span><span style="color: #000000;"> </span><span style="color: #008B8B;">Int</span><span style="color: #000000;">, Transpose </span><span style="color: #0000FF;">As</span><span style="color: #000000;"> </span><span style="color: #008B8B;">Int</span><span style="color: #000000;">, MuteArray() </span><span style="color: #0000FF;">As</span><span style="color: #000000;"> </span><span style="color: #008B8B;">Boolean</span><span style="color: #000000;">, UserId </span><span style="color: #0000FF;">As</span><span style="color: #000000;"> </span><span style="color: #008B8B;">Byte</span><span style="color: #000000;">)</span></h5>Adds a segment to the queue. No more than 3 segments are allowed.<br/>SegmentNum - The segment identifier.<br/>LibNum - The index of the sound bank associated with this segment. Pass -1 if there is no sound bank.<br/>RepeatCount - Number of times the segment will be repeated. 0 means that it will be played once. Pass -1 to repeat indefinitely.<br/>Transpose - The pitch transition. Should be between -12 to 12.<br/>MuteArray - An array of booleans that sets the mute value of each track. The array length must be equal to MaxTracks value.<br/>UserId - An id given to this segment. When the current segment changes the CurrentUserIdChanged event is raised with this id<br/>(assuming that the id of the previous segment was different).<a name='jetplayer_release'/>
+<h5><img src='images/15.png'/>
+<span style="color: #000000;">Release</span></h5>Releases all resources allocated for the JetPlayer.<a name='jetplayer_setmute'/>
+<h5><img src='images/15.png'/>
+<span style="color: #000000;">SetMute (MuteArray() </span><span style="color: #0000FF;">As</span><span style="color: #000000;"> </span><span style="color: #008B8B;">Boolean</span><span style="color: #000000;">, Sync </span><span style="color: #0000FF;">As</span><span style="color: #000000;"> </span><span style="color: #008B8B;">Boolean</span><span style="color: #000000;">)</span></h5>Sets the tracks mute state.<br/>MuteArray - An array of booleans that sets the mute state of each track. The array length must be equal to MaxTracks value.<br/>Sync - If false the change will be applied as soon as possible, otherwise the change will be applied at the start of the next segment or next repeat.<a name='jetplayer_settrackmute'/>
+<h5><img src='images/15.png'/>
+<span style="color: #000000;">SetTrackMute (Track </span><span style="color: #0000FF;">As</span><span style="color: #000000;"> </span><span style="color: #008B8B;">Int</span><span style="color: #000000;">, Mute </span><span style="color: #0000FF;">As</span><span style="color: #000000;"> </span><span style="color: #008B8B;">Boolean</span><span style="color: #000000;">, Sync </span><span style="color: #0000FF;">As</span><span style="color: #000000;"> </span><span style="color: #008B8B;">Boolean</span><span style="color: #000000;">)</span></h5>Similar to SetMute but only changes the state of a single track.<hr/>
+<h3><u><a name='soundpool'>SoundPool</a></u></h3>
+</h5>SoundPool holds a collection of short sounds which can be played with low latency.<br/>Each sound has two Id values which you should work with. The first is the LoadId which is returned when loading the sound with Load.<br/>The second is the PlayId which is returned when you call Play.<br/>When working with SoundPool it is useful to watch the unfiltered LogCat for messages (for example when the sound is too long).
+<br/>
+
+<h4>Events:</h4>
+None
+<h4>Members:</h4><br/>
+<img src='images/15.png'/>&nbsp;&nbsp;<span style="color: #000000;"><a href='#soundpool_initialize'><b>Initialize</b></a> (MaxStreams </span><span style="color: #0000FF;">As</span><span style="color: #000000;"> </span><span style="color: #008B8B;">Int</span><span style="color: #000000;">)</span><br/><br/>
+<img src='images/15.png'/>&nbsp;&nbsp;<span style="color: #000000;"><a href='#soundpool_isinitialized'><b>IsInitialized</b></a> </span><span style="color: #0000FF;">As</span><span style="color: #000000;"> </span><span style="color: #008B8B;">Boolean</span><br/><br/>
+<img src='images/15.png'/>&nbsp;&nbsp;<span style="color: #000000;"><a href='#soundpool_load'><b>Load</b></a> (Dir </span><span style="color: #0000FF;">As</span><span style="color: #000000;"> </span><span style="color: #008B8B;">String</span><span style="color: #000000;">, File </span><span style="color: #0000FF;">As</span><span style="color: #000000;"> </span><span style="color: #008B8B;">String</span><span style="color: #000000;">) </span><span style="color: #0000FF;">As</span><span style="color: #000000;"> </span><span style="color: #008B8B;">Int</span><br/><br/>
+<img src='images/15.png'/>&nbsp;&nbsp;<span style="color: #000000;"><a href='#soundpool_pause'><b>Pause</b></a> (PlayId </span><span style="color: #0000FF;">As</span><span style="color: #000000;"> </span><span style="color: #008B8B;">Int</span><span style="color: #000000;">)</span><br/><br/>
+<img src='images/15.png'/>&nbsp;&nbsp;<span style="color: #000000;"><a href='#soundpool_play'><b>Play</b></a> (LoadId </span><span style="color: #0000FF;">As</span><span style="color: #000000;"> </span><span style="color: #008B8B;">Int</span><span style="color: #000000;">, LeftVolume </span><span style="color: #0000FF;">As</span><span style="color: #000000;"> </span><span style="color: #008B8B;">Float</span><span style="color: #000000;">, RightVolume </span><span style="color: #0000FF;">As</span><span style="color: #000000;"> </span><span style="color: #008B8B;">Float</span><span style="color: #000000;">, Priority </span><span style="color: #0000FF;">As</span><span style="color: #000000;"> </span><span style="color: #008B8B;">Int</span><span style="color: #000000;">, </span><span style="color: #0000FF;">Loop</span><span style="color: #000000;"> </span><span style="color: #0000FF;">As</span><span style="color: #000000;"> </span><span style="color: #008B8B;">Int</span><span style="color: #000000;">, Rate </span><span style="color: #0000FF;">As</span><span style="color: #000000;"> </span><span style="color: #008B8B;">Float</span><span style="color: #000000;">) </span><span style="color: #0000FF;">As</span><span style="color: #000000;"> </span><span style="color: #008B8B;">Int</span><br/><br/>
+<img src='images/15.png'/>&nbsp;&nbsp;<span style="color: #000000;"><a href='#soundpool_release'><b>Release</b></a></span><br/><br/>
+<img src='images/15.png'/>&nbsp;&nbsp;<span style="color: #000000;"><a href='#soundpool_resume'><b>Resume</b></a> (PlayId </span><span style="color: #0000FF;">As</span><span style="color: #000000;"> </span><span style="color: #008B8B;">Int</span><span style="color: #000000;">)</span><br/><br/>
+<img src='images/15.png'/>&nbsp;&nbsp;<span style="color: #000000;"><a href='#soundpool_setrate'><b>SetRate</b></a> (PlayId </span><span style="color: #0000FF;">As</span><span style="color: #000000;"> </span><span style="color: #008B8B;">Int</span><span style="color: #000000;">, Rate </span><span style="color: #0000FF;">As</span><span style="color: #000000;"> </span><span style="color: #008B8B;">Float</span><span style="color: #000000;">)</span><br/><br/>
+<img src='images/15.png'/>&nbsp;&nbsp;<span style="color: #000000;"><a href='#soundpool_setvolume'><b>SetVolume</b></a> (PlayId </span><span style="color: #0000FF;">As</span><span style="color: #000000;"> </span><span style="color: #008B8B;">Int</span><span style="color: #000000;">, Left </span><span style="color: #0000FF;">As</span><span style="color: #000000;"> </span><span style="color: #008B8B;">Float</span><span style="color: #000000;">, Right </span><span style="color: #0000FF;">As</span><span style="color: #000000;"> </span><span style="color: #008B8B;">Float</span><span style="color: #000000;">)</span><br/><br/>
+<img src='images/15.png'/>&nbsp;&nbsp;<span style="color: #000000;"><a href='#soundpool_stop'><b>Stop</b></a> (PlayId </span><span style="color: #0000FF;">As</span><span style="color: #000000;"> </span><span style="color: #008B8B;">Int</span><span style="color: #000000;">)</span><br/><br/>
+<img src='images/15.png'/>&nbsp;&nbsp;<span style="color: #000000;"><a href='#soundpool_unload'><b>Unload</b></a> (LoadId </span><span style="color: #0000FF;">As</span><span style="color: #000000;"> </span><span style="color: #008B8B;">Int</span><span style="color: #000000;">)</span><br/><br/>
+
+<h4>Members description:</h4>
+<a name='soundpool_initialize'/>
+<h5><img src='images/15.png'/>
+<span style="color: #000000;">Initialize (MaxStreams </span><span style="color: #0000FF;">As</span><span style="color: #000000;"> </span><span style="color: #008B8B;">Int</span><span style="color: #000000;">)</span></h5>Initializes the SoundPool and sets the maximum number of simultaneous streams.<a name='soundpool_isinitialized'/>
+<h5><img src='images/15.png'/>
+<span style="color: #000000;">IsInitialized </span><span style="color: #0000FF;">As</span><span style="color: #000000;"> </span><span style="color: #008B8B;">Boolean</span></h5><a name='soundpool_load'/>
+<h5><img src='images/15.png'/>
+<span style="color: #000000;">Load (Dir </span><span style="color: #0000FF;">As</span><span style="color: #000000;"> </span><span style="color: #008B8B;">String</span><span style="color: #000000;">, File </span><span style="color: #0000FF;">As</span><span style="color: #000000;"> </span><span style="color: #008B8B;">String</span><span style="color: #000000;">) </span><span style="color: #0000FF;">As</span><span style="color: #000000;"> </span><span style="color: #008B8B;">Int</span></h5>Loads a sound file and returns the sound LoadId.<br/>Example:<span class='pre'><span style="color: #000000;"><br/></span><span style="color: #0000FF;">Dim</span><span style="color: #000000;"> LoadId </span><span style="color: #0000FF;">As</span><span style="color: #000000;"> </span><span style="color: #008B8B;">Int</span><span style="color: #000000;"><br/>LoadId = SP.Load(File.DirAssets, </span><span style="color: #800000;">"</span><span style="color: #800000;">sound.wav</span><span style="color: #800000;">"</span><span style="color: #000000;">)</span></span><a name='soundpool_pause'/>
+<h5><img src='images/15.png'/>
+<span style="color: #000000;">Pause (PlayId </span><span style="color: #0000FF;">As</span><span style="color: #000000;"> </span><span style="color: #008B8B;">Int</span><span style="color: #000000;">)</span></h5>Pauses the stream with the given PlayId.<a name='soundpool_play'/>
+<h5><img src='images/15.png'/>
+<span style="color: #000000;">Play (LoadId </span><span style="color: #0000FF;">As</span><span style="color: #000000;"> </span><span style="color: #008B8B;">Int</span><span style="color: #000000;">, LeftVolume </span><span style="color: #0000FF;">As</span><span style="color: #000000;"> </span><span style="color: #008B8B;">Float</span><span style="color: #000000;">, RightVolume </span><span style="color: #0000FF;">As</span><span style="color: #000000;"> </span><span style="color: #008B8B;">Float</span><span style="color: #000000;">, Priority </span><span style="color: #0000FF;">As</span><span style="color: #000000;"> </span><span style="color: #008B8B;">Int</span><span style="color: #000000;">, </span><span style="color: #0000FF;">Loop</span><span style="color: #000000;"> </span><span style="color: #0000FF;">As</span><span style="color: #000000;"> </span><span style="color: #008B8B;">Int</span><span style="color: #000000;">, Rate </span><span style="color: #0000FF;">As</span><span style="color: #000000;"> </span><span style="color: #008B8B;">Float</span><span style="color: #000000;">) </span><span style="color: #0000FF;">As</span><span style="color: #000000;"> </span><span style="color: #008B8B;">Int</span></h5>Plays the sound with the matching LoadId and returns the PlayId. Returns 0 if there was an error.<br/>LoadId - The value returned when loading the file.<br/>LeftVolume / RightVolume - The volume value (0 - 1)<br/>Priority - A priority value which you assign to this sound. The higher the value the higher the priority.<br/>When the number of simultaneous streams is higher than the value set in Initialize the lowest priority stream will be stopped.<br/>Loop - Number of times to repeat. Pass -1 to repeat indefinitely.<br/>Rate - Playback rate (0 - 2).<a name='soundpool_release'/>
+<h5><img src='images/15.png'/>
+<span style="color: #000000;">Release</span></h5>Releases all resources allocated to this object.<a name='soundpool_resume'/>
+<h5><img src='images/15.png'/>
+<span style="color: #000000;">Resume (PlayId </span><span style="color: #0000FF;">As</span><span style="color: #000000;"> </span><span style="color: #008B8B;">Int</span><span style="color: #000000;">)</span></h5>Resumes the stream with the given PlayId.<a name='soundpool_setrate'/>
+<h5><img src='images/15.png'/>
+<span style="color: #000000;">SetRate (PlayId </span><span style="color: #0000FF;">As</span><span style="color: #000000;"> </span><span style="color: #008B8B;">Int</span><span style="color: #000000;">, Rate </span><span style="color: #0000FF;">As</span><span style="color: #000000;"> </span><span style="color: #008B8B;">Float</span><span style="color: #000000;">)</span></h5>Sets the rate of the stream with the given PlayId. Value is between 0 to 2.<a name='soundpool_setvolume'/>
+<h5><img src='images/15.png'/>
+<span style="color: #000000;">SetVolume (PlayId </span><span style="color: #0000FF;">As</span><span style="color: #000000;"> </span><span style="color: #008B8B;">Int</span><span style="color: #000000;">, Left </span><span style="color: #0000FF;">As</span><span style="color: #000000;"> </span><span style="color: #008B8B;">Float</span><span style="color: #000000;">, Right </span><span style="color: #0000FF;">As</span><span style="color: #000000;"> </span><span style="color: #008B8B;">Float</span><span style="color: #000000;">)</span></h5>Sets the volume of the stream with the given PlayId. Values are between 0 to 1.<a name='soundpool_stop'/>
+<h5><img src='images/15.png'/>
+<span style="color: #000000;">Stop (PlayId </span><span style="color: #0000FF;">As</span><span style="color: #000000;"> </span><span style="color: #008B8B;">Int</span><span style="color: #000000;">)</span></h5>Stops the stream with the given PlayId.<a name='soundpool_unload'/>
+<h5><img src='images/15.png'/>
+<span style="color: #000000;">Unload (LoadId </span><span style="color: #0000FF;">As</span><span style="color: #000000;"> </span><span style="color: #008B8B;">Int</span><span style="color: #000000;">)</span></h5>Unloads the stream with the given LoadId.
+<hr/>
+<a href="#top">Top</a>
+</body>
+</html>

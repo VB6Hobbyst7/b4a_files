@@ -1,0 +1,245 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root>
+    <doclet-version-NOT-library-version>1.02</doclet-version-NOT-library-version>
+    <class>
+        <name>com.rootsoft.rsfluffylocation.RSFluffyLocationInfo</name>
+        <shortname>RSFluffyLocationInfo</shortname>
+        <objectwrapper>com.littlefluffytoys.littlefluffylocationlibrary.LocationInfo</objectwrapper>
+        <owner>process</owner>
+        <method>
+            <name>Initialize</name>
+            <comment>Initializes the RSFluffylocation Library.
+ PackageName - Your package name of your app.</comment>
+            <returntype>void</returntype>
+        </method>
+        <method>
+            <name>AnyLocationDataReceived</name>
+            <comment>Returns true if any location data been received since the last reboot.</comment>
+            <returntype>boolean</returntype>
+        </method>
+        <method>
+            <name>AnyLocationDataBroadcast</name>
+            <comment>Returns true if any location data been broadcast since the last reboot</comment>
+            <returntype>boolean</returntype>
+        </method>
+        <method>
+            <name>Refresh</name>
+            <comment>Refresh the fields with the latest location info</comment>
+            <returntype>void</returntype>
+        </method>
+        <method>
+            <name>HasLatestDataBeenBroadcast</name>
+            <comment>Returns true if the location data in the object has already been broadcast.</comment>
+            <returntype>boolean</returntype>
+        </method>
+        <method>
+            <name>IsInitialized</name>
+            <comment></comment>
+            <returntype>boolean</returntype>
+        </method>
+        <property>
+            <name>LocationBroadcastTimestamp</name>
+            <returntype>long</returntype>
+            <comment>Gets the time a location update was last broadcast, in milliseconds</comment>
+        </property>
+        <property>
+            <name>Latitude</name>
+            <returntype>float</returntype>
+            <comment>Gets the last location update's latitude.</comment>
+        </property>
+        <property>
+            <name>Accuracy</name>
+            <returntype>int</returntype>
+            <comment>Gets the last location update's accuracy, in metres</comment>
+        </property>
+        <property>
+            <name>TimestampAgeInSeconds</name>
+            <returntype>long</returntype>
+            <comment>Returns the age of the last location update in seconds</comment>
+        </property>
+        <property>
+            <name>Longitude</name>
+            <returntype>float</returntype>
+            <comment>Gets the last location update's longitude</comment>
+        </property>
+        <property>
+            <name>Provider</name>
+            <returntype>java.lang.String</returntype>
+            <comment>Gets the latest location provider.</comment>
+        </property>
+        <property>
+            <name>LocationUpdateTimestamp</name>
+            <returntype>long</returntype>
+            <comment>Gets the time the last location update was recorded, in milliseconds</comment>
+        </property>
+    </class>
+    <class>
+        <name>com.rootsoft.rsfluffylocation.RSFluffyLocation</name>
+        <shortname>RSFluffyLocation</shortname>
+        <owner>process</owner>
+        <permission>android.permission.RECEIVE_BOOT_COMPLETED</permission>
+        <permission>android.permission.ACCESS_COARSE_LOCATION</permission>
+        <permission>android.permission.ACCESS_FINE_LOCATION</permission>
+        <method>
+            <name>Initialize</name>
+            <comment>Initializes the RSFluffylocation Library.
+ PackageName - Your package name of your app.</comment>
+            <returntype>int</returntype>
+            <parameter>
+                <name>ba</name>
+                <type>anywheresoftware.b4a.BA</type>
+            </parameter>
+            <parameter>
+                <name>PackageName</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+        <method>
+            <name>EnableDebugging</name>
+            <comment></comment>
+            <returntype>void</returntype>
+        </method>
+        <method>
+            <name>getLocationInfo</name>
+            <comment>Returns the latest LocationInfo object from an intent.
+ You should call this from your BroadCastReceiver OnReceive method.</comment>
+            <returntype>com.littlefluffytoys.littlefluffylocationlibrary.LocationInfo</returntype>
+            <parameter>
+                <name>intent</name>
+                <type>anywheresoftware.b4a.objects.IntentWrapper</type>
+            </parameter>
+        </method>
+        <method>
+            <name>Initialize4</name>
+            <comment>Initializes the RSFluffylocation Library.
+ PackageName - Your package name of your app.
+ 
+ BroadcastEveryLocationUpdate - If true, in addition to broadcasting periodic updates, 
+ it broadcasts every location update as it is found, 
+ using intent action com.your.package.name.littlefluffylocationlibrary.LOCATION_CHANGED_TICK. The default is false
+ 
+ AlarmFrequency - How often to broadcast a location update in milliseconds, if one was received. 
+ For battery efficiency, this should be one of the available inexact recurrence intervals.
+ You are not prevented from using any other value.The default is AlarmManager.INTERVAL_FIFTEEN_MINUTES.
+ 
+ LocationMaximumAge - The maximum age of a location update. 
+ If when the alarm fires the location is older than this, a location update will be requested. 
+ The default is AlarmManager.INTERVAL_HOUR.</comment>
+            <returntype>int</returntype>
+            <parameter>
+                <name>ba</name>
+                <type>anywheresoftware.b4a.BA</type>
+            </parameter>
+            <parameter>
+                <name>PackageName</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>BroadcastEveryLocationUpdate</name>
+                <type>boolean</type>
+            </parameter>
+            <parameter>
+                <name>AlarmFrequency</name>
+                <type>long</type>
+            </parameter>
+            <parameter>
+                <name>LocationMaximumAge</name>
+                <type>int</type>
+            </parameter>
+        </method>
+        <method>
+            <name>UseFineAccuracyForRequests</name>
+            <comment>Uses fine accuracy for requests.</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>useFineAccuracyForRequests</name>
+                <type>boolean</type>
+            </parameter>
+        </method>
+        <method>
+            <name>Initialize2</name>
+            <comment>Initializes the RSFluffylocation Library.
+ PackageName - Your package name of your app.
+ 
+ BroadcastEveryLocationUpdate - If true, in addition to broadcasting periodic updates, 
+ it broadcasts every location update as it is found, 
+ using intent action com.your.package.name.littlefluffylocationlibrary.LOCATION_CHANGED_TICK. The default is false</comment>
+            <returntype>int</returntype>
+            <parameter>
+                <name>ba</name>
+                <type>anywheresoftware.b4a.BA</type>
+            </parameter>
+            <parameter>
+                <name>PackageName</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>BroadcastEveryLocationUpdate</name>
+                <type>boolean</type>
+            </parameter>
+        </method>
+        <method>
+            <name>Initialize3</name>
+            <comment>Initializes the RSFluffylocation Library.
+ PackageName - Your package name of your app.
+ 
+ AlarmFrequency - How often to broadcast a location update in milliseconds, if one was received. 
+ For battery efficiency, this should be one of the available inexact recurrence intervals.
+ You are not prevented from using any other value.The default is AlarmManager.INTERVAL_FIFTEEN_MINUTES.
+ 
+ LocationMaximumAge - The maximum age of a location update. 
+ If when the alarm fires the location is older than this, a location update will be requested. 
+ The default is AlarmManager.INTERVAL_HOUR.</comment>
+            <returntype>int</returntype>
+            <parameter>
+                <name>ba</name>
+                <type>anywheresoftware.b4a.BA</type>
+            </parameter>
+            <parameter>
+                <name>PackageName</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>AlarmFrequency</name>
+                <type>long</type>
+            </parameter>
+            <parameter>
+                <name>LocationMaximumAge</name>
+                <type>int</type>
+            </parameter>
+        </method>
+        <method>
+            <name>ForceLocationUpdate</name>
+            <comment>To force a location update, call this and soon you'll get a broadcast containing the latest location.</comment>
+            <returntype>void</returntype>
+        </method>
+        <field>
+            <name>getLocationChangedTickerBroadcastAction</name>
+            <comment></comment>
+            <returntype>java.lang.String</returntype>
+        </field>
+        <field>
+            <name>LOCATION_BROADCAST_EXTRA_LOCATIONINFO</name>
+            <comment></comment>
+            <returntype>java.lang.String</returntype>
+        </field>
+        <field>
+            <name>DEFAULT_ALARM_FREQUENCY</name>
+            <comment></comment>
+            <returntype>long</returntype>
+        </field>
+        <field>
+            <name>getLocationChangedPeriodicBroadcastAction</name>
+            <comment></comment>
+            <returntype>java.lang.String</returntype>
+        </field>
+        <field>
+            <name>DEFAULT_MAXIMUM_LOCATION_AGE</name>
+            <comment></comment>
+            <returntype>int</returntype>
+        </field>
+    </class>
+    <version>1.0</version>
+    <author>XverhelstX</author>
+    <dependsOn>littlefluffylocationlibrary</dependsOn>
+</root>

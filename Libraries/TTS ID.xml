@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <doclet-version-NOT-library-version>1.00</doclet-version-NOT-library-version>
+  <dependsOn>tts</dependsOn>
+  <dependsOn>javaobject</dependsOn>
+  <dependsOn>reflection</dependsOn>
+  <class>
+    <name>b4a.example.ttsid</name>
+    <shortname>TTSID</shortname>
+    <owner>process</owner>
+    <method>
+      <name>IsInitialized</name>
+      <comment>Tests whether the object has been initialized.</comment>
+      <returntype>boolean</returntype>
+    </method>
+    <method>
+      <name DesignerName="AllAvailableLanguages">_v5</name>
+      <comment>Return all supported languages
+</comment>
+      <returntype>anywheresoftware.b4a.objects.collections.List</returntype>
+    </method>
+    <method>
+      <name DesignerName="GetEngines">_v6</name>
+      <comment>Gets a list of all installed TTS engines.
+</comment>
+      <returntype>anywheresoftware.b4a.objects.collections.List</returntype>
+    </method>
+    <method>
+      <name DesignerName="getMaxSpeechLength" HideFromIDE="true">_getvvv3</name>
+      <comment>Limit of length of input string passed to speak and synthesizeToFile.
+</comment>
+      <returntype>int</returntype>
+    </method>
+    <method>
+      <name DesignerName="Initialize">_initialize</name>
+      <returntype>String</returntype>
+      <parameter>
+        <name>ba</name>
+        <type>anywheresoftware.b4a.BA</type>
+      </parameter>
+      <parameter>
+        <name>Activity</name>
+        <type>Object</type>
+      </parameter>
+      <parameter>
+        <name>eventname</name>
+        <type>String</type>
+      </parameter>
+    </method>
+    <method>
+      <name DesignerName="IsAvailableLanguage">_v0</name>
+      <comment>Check if a Language is supported
+(e.g. "pt_BR")
+</comment>
+      <returntype>boolean</returntype>
+      <parameter>
+        <name>lang</name>
+        <type>String</type>
+      </parameter>
+    </method>
+    <method>
+      <name DesignerName="isSpeaking">_vv1</name>
+      <comment>Checks whether the TTS engine is busy speaking.
+</comment>
+      <returntype>boolean</returntype>
+    </method>
+    <method>
+      <name DesignerName="Pitch">_vv2</name>
+      <comment>Set the pitch value. Default is 1
+</comment>
+      <returntype>String</returntype>
+      <parameter>
+        <name>value</name>
+        <type>float</type>
+      </parameter>
+    </method>
+    <method>
+      <name DesignerName="Ready">_vv3</name>
+      <comment>Check if TTS is ready to use.
+</comment>
+      <returntype>boolean</returntype>
+    </method>
+    <method>
+      <name DesignerName="Release">_vv4</name>
+      <returntype>String</returntype>
+    </method>
+    <method>
+      <name DesignerName="SetEngineByPackageName">_vv5</name>
+      <comment>Sets the TTS engine to use.
+(e.g. "com.svox.pico")
+</comment>
+      <returntype>boolean</returntype>
+      <parameter>
+        <name>PackageName</name>
+        <type>String</type>
+      </parameter>
+    </method>
+    <method>
+      <name DesignerName="SetLanguage">_vv6</name>
+      <comment>Sets the text-to-speech language.
+</comment>
+      <returntype>boolean</returntype>
+      <parameter>
+        <name>language</name>
+        <type>String</type>
+      </parameter>
+      <parameter>
+        <name>country</name>
+        <type>String</type>
+      </parameter>
+    </method>
+    <method>
+      <name DesignerName="Speak">_vv7</name>
+      <comment>Speaks the text
+ClearQueue - If true then all waiting texts are dismissed and the new text is spoken
+</comment>
+      <returntype>String</returntype>
+      <parameter>
+        <name>text</name>
+        <type>String</type>
+      </parameter>
+      <parameter>
+        <name>ClearQueue</name>
+        <type>boolean</type>
+      </parameter>
+    </method>
+    <method>
+      <name DesignerName="SpeechRate">_vv0</name>
+      <comment>Set the SpeechRate value. Default is 1
+</comment>
+      <returntype>String</returntype>
+      <parameter>
+        <name>value</name>
+        <type>float</type>
+      </parameter>
+    </method>
+    <method>
+      <name DesignerName="Stop">_vvv1</name>
+      <returntype>String</returntype>
+    </method>
+    <method>
+      <name DesignerName="TextToAudio">_vvv2</name>
+      <comment>Synthesizes the given text to a file using the specified parameters
+</comment>
+      <returntype>String</returntype>
+      <parameter>
+        <name>Activity</name>
+        <type>Object</type>
+      </parameter>
+      <parameter>
+        <name>text</name>
+        <type>String</type>
+      </parameter>
+      <parameter>
+        <name>fp</name>
+        <type>String</type>
+      </parameter>
+      <parameter>
+        <name>audiofile</name>
+        <type>String</type>
+      </parameter>
+    </method>
+    <property>
+      <name DesignerName="MaxSpeechLength">_vvv3</name>
+      <comment>Limit of length of input string passed to speak and synthesizeToFile.
+</comment>
+      <returntype>int</returntype>
+    </property>
+  </class>
+  <version>1.2</version>
+  <author>Douglas Farias</author>
+</root>

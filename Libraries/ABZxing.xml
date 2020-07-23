@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root>
+    <doclet-version-NOT-library-version>1.00</doclet-version-NOT-library-version>
+    <class>
+        <name>com.AB.ABZxing.ABZxing</name>
+        <shortname>ABZxing</shortname>
+        <comment>This library allows you to use the Zxing barcode scanner. If the scanner is not
+ installed, the library will prompt the user to download it from the Android Market</comment>
+        <owner>activity</owner>
+        <event>BarcodeFound (barCode as String, formatName as string)</event>
+        <event>Canceled()</event>
+        <method>
+            <name>ABGetBarcode</name>
+            <comment>Starts the barcode scanner. The barcode is returned in the BarcodeFound event or the Canceled event
+eventName (String): name of the ABBarcode object
+mode (String):
+"" for everything
+"QR_CODE_TYPES" for QR codes
+"PRODUCT_CODE_TYPES" for UPC_A,UPC_E,EAN_8,EAN_13
+"ONE_D_CODE_TYPES" for UPC_A,UPC_E,EAN_8,EAN_13,CODE_39,CODE_93,CODE_128 
+Example:&lt;code&gt;
+Sub Button1_Click
+   myABBarcode.ABBarcodeGet("myABBarcode", "QR_CODE_TYPES")
+End Sub
+
+Sub myABBarcode_BarcodeFound(barCode as String, formatName as String)
+   msgbox(barCode, "")
+End Sub
+
+Sub myABBarcode_Canceled
+   msgbox("Canceled","")
+End Sub
+&lt;/code&gt;</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>ba</name>
+                <type>anywheresoftware.b4a.BA</type>
+            </parameter>
+            <parameter>
+                <name>eventName</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>mode</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>        
+    </class>
+    <version>1.0</version>
+    <author>Alain Bailleul</author>
+</root>

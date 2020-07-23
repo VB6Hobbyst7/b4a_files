@@ -1,0 +1,543 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root>
+    <doclet-version-NOT-library-version>1.03</doclet-version-NOT-library-version>
+    <class>
+        <name>it.giuseppe.salvi.contextmenu.core.ContextMenuFragment</name>
+        <shortname>GSContextMenu</shortname>
+        <owner>activity</owner>
+        <event>MenuClick</event>
+        <event>ItemClick(Position As Int, Title As Object)</event>
+        <event>ItemLongClick(Position As Int, Title As Object)</event>
+        <method>
+            <name>WithMenuClosableOutside</name>
+            <comment>Set option menu can be closed on touch to non-button area.
+closeable: </comment>
+            <returntype>it.giuseppe.salvi.contextmenu.core.ContextMenuFragment</returntype>
+            <parameter>
+                <name>closeable</name>
+                <type>boolean</type>
+            </parameter>
+        </method>
+        <method>
+            <name>WithBitmap</name>
+            <comment>Add Bitmap from assets.
+text: 
+bitmap: </comment>
+            <returntype>it.giuseppe.salvi.contextmenu.core.ContextMenuFragment</returntype>
+            <parameter>
+                <name>title</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>eventName</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>bitmap</name>
+                <type>android.graphics.Bitmap</type>
+            </parameter>
+        </method>
+        <method>
+            <name>WithTextTypeFaceStyle</name>
+            <comment>Sets the style in which the text should be displayed.
+style: </comment>
+            <returntype>it.giuseppe.salvi.contextmenu.core.ContextMenuFragment</returntype>
+            <parameter>
+                <name>style</name>
+                <type>int</type>
+            </parameter>
+        </method>
+        <method>
+            <name>WithTextColor2</name>
+            <comment>Change color to the text at the specified index.
+index: 
+color: </comment>
+            <returntype>it.giuseppe.salvi.contextmenu.core.ContextMenuFragment</returntype>
+            <parameter>
+                <name>index</name>
+                <type>int</type>
+            </parameter>
+            <parameter>
+                <name>color</name>
+                <type>java.lang.Object</type>
+            </parameter>
+        </method>
+        <method>
+            <name>WithTextTypeFace</name>
+            <comment>Sets the typeface in which the text should be displayed.
+ttf: </comment>
+            <returntype>it.giuseppe.salvi.contextmenu.core.ContextMenuFragment</returntype>
+            <parameter>
+                <name>ttf</name>
+                <type>android.graphics.Typeface</type>
+            </parameter>
+        </method>
+        <method>
+            <name>WithTextTypeFace2</name>
+            <comment>Change the typeface in which the text should be displayed at the specified index.
+index: 
+ttf: </comment>
+            <returntype>it.giuseppe.salvi.contextmenu.core.ContextMenuFragment</returntype>
+            <parameter>
+                <name>index</name>
+                <type>int</type>
+            </parameter>
+            <parameter>
+                <name>ttf</name>
+                <type>android.graphics.Typeface</type>
+            </parameter>
+        </method>
+        <method>
+            <name>Initialize</name>
+            <comment>Initialize Object
+EventName: </comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>ba</name>
+                <type>anywheresoftware.b4a.BA</type>
+            </parameter>
+            <parameter>
+                <name>EventName</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+        <method>
+            <name>WithBgColor</name>
+            <comment>Sets the color to the background at specified index.
+index: 
+color: </comment>
+            <returntype>it.giuseppe.salvi.contextmenu.core.ContextMenuFragment</returntype>
+            <parameter>
+                <name>index</name>
+                <type>int</type>
+            </parameter>
+            <parameter>
+                <name>color</name>
+                <type>java.lang.Object</type>
+            </parameter>
+        </method>
+        <method>
+            <name>WithResource</name>
+            <comment>Add Bitmap from resources.
+text: 
+bitmap: </comment>
+            <returntype>it.giuseppe.salvi.contextmenu.core.ContextMenuFragment</returntype>
+            <parameter>
+                <name>title</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>EventName</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>res</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+        <method>
+            <name>WithDrawable</name>
+            <comment>Add Bitmap from drawable.
+text: 
+bitmap: </comment>
+            <returntype>it.giuseppe.salvi.contextmenu.core.ContextMenuFragment</returntype>
+            <parameter>
+                <name>title</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>eventName</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>drawable</name>
+                <type>android.graphics.drawable.Drawable</type>
+            </parameter>
+        </method>
+        <method>
+            <name>WithText</name>
+            <comment>Changes the text at the specified index.
+index: 
+text: </comment>
+            <returntype>it.giuseppe.salvi.contextmenu.core.ContextMenuFragment</returntype>
+            <parameter>
+                <name>index</name>
+                <type>int</type>
+            </parameter>
+            <parameter>
+                <name>title</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+        <method>
+            <name>WithBgBitmap</name>
+            <comment>Sets bitmap to the background at specified index.
+index: 
+bitmap: </comment>
+            <returntype>it.giuseppe.salvi.contextmenu.core.ContextMenuFragment</returntype>
+            <parameter>
+                <name>index</name>
+                <type>int</type>
+            </parameter>
+            <parameter>
+                <name>bitmap</name>
+                <type>android.graphics.Bitmap</type>
+            </parameter>
+        </method>
+        <method>
+            <name>ShowActionBar</name>
+            <comment>Show custom ActionBar.</comment>
+            <returntype>void</returntype>
+        </method>
+        <method>
+            <name>WithFontFromAssets</name>
+            <comment>Loads a font and sets it to the whole menu.
+ttf: </comment>
+            <returntype>it.giuseppe.salvi.contextmenu.core.ContextMenuFragment</returntype>
+            <parameter>
+                <name>ttf</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+        <method>
+            <name>WithTextTypeFaceStyle2</name>
+            <comment>Change the style in which the text should be displayed at the specified index.
+index: 
+style: </comment>
+            <returntype>it.giuseppe.salvi.contextmenu.core.ContextMenuFragment</returntype>
+            <parameter>
+                <name>index</name>
+                <type>int</type>
+            </parameter>
+            <parameter>
+                <name>style</name>
+                <type>int</type>
+            </parameter>
+        </method>
+        <method>
+            <name>WithTextColor</name>
+            <comment>Sets color to the text.
+color: </comment>
+            <returntype>it.giuseppe.salvi.contextmenu.core.ContextMenuFragment</returntype>
+            <parameter>
+                <name>color</name>
+                <type>java.lang.Object</type>
+            </parameter>
+        </method>
+        <method>
+            <name>WithTextSize2</name>
+            <comment>Changes the text size at the specified index.
+index: 
+size: </comment>
+            <returntype>it.giuseppe.salvi.contextmenu.core.ContextMenuFragment</returntype>
+            <parameter>
+                <name>index</name>
+                <type>int</type>
+            </parameter>
+            <parameter>
+                <name>size</name>
+                <type>int</type>
+            </parameter>
+        </method>
+        <method>
+            <name>Show</name>
+            <comment>Show Context Menu.</comment>
+            <returntype>void</returntype>
+        </method>
+        <method>
+            <name>WithBgDrawable</name>
+            <comment>Sets drawable to the background at specified index.
+index: 
+dravable: </comment>
+            <returntype>it.giuseppe.salvi.contextmenu.core.ContextMenuFragment</returntype>
+            <parameter>
+                <name>index</name>
+                <type>int</type>
+            </parameter>
+            <parameter>
+                <name>drawable</name>
+                <type>android.graphics.drawable.Drawable</type>
+            </parameter>
+        </method>
+        <method>
+            <name>WithDividerColor</name>
+            <comment>Set color to the divider. 
+ 
+ Example:&lt;code&gt;
+ 
+ ContextMenu.WithDividerColor(Colors.Red)
+ or  
+ ContextMenu.WithDividerColor("#FF0000")
+ or
+ ContextMenu.WithDividerColor(Colors.ARGB(100,255,255,255))
+ &lt;/code&gt;
+color: </comment>
+            <returntype>it.giuseppe.salvi.contextmenu.core.ContextMenuFragment</returntype>
+            <parameter>
+                <name>color</name>
+                <type>java.lang.Object</type>
+            </parameter>
+        </method>
+        <method>
+            <name>WithBgResource</name>
+            <comment>Sets resource to the background at specified index.
+index: 
+res: </comment>
+            <returntype>it.giuseppe.salvi.contextmenu.core.ContextMenuFragment</returntype>
+            <parameter>
+                <name>index</name>
+                <type>int</type>
+            </parameter>
+            <parameter>
+                <name>res</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+        <method>
+            <name>WithTextSize</name>
+            <comment>Set the default text size to the given value, interpreted as
+ "scaled pixel" units.
+size: </comment>
+            <returntype>it.giuseppe.salvi.contextmenu.core.ContextMenuFragment</returntype>
+            <parameter>
+                <name>size</name>
+                <type>int</type>
+            </parameter>
+        </method>
+        <method>
+            <name>WithFontFromAssets2</name>
+            <comment>Loads a font and sets the specified index
+index: 
+ttf: </comment>
+            <returntype>it.giuseppe.salvi.contextmenu.core.ContextMenuFragment</returntype>
+            <parameter>
+                <name>index</name>
+                <type>int</type>
+            </parameter>
+            <parameter>
+                <name>ttf</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+        <property>
+            <name>ActionBarTitle</name>
+            <parameter>
+                <name>title</name>
+                <type>java.lang.CharSequence</type>
+            </parameter>
+            <comment>Set title.</comment>
+        </property>
+        <property>
+            <name>ActionBarTitleColor</name>
+            <parameter>
+                <name>color</name>
+                <type>java.lang.Object</type>
+            </parameter>
+            <comment>Set title color.</comment>
+        </property>
+        <property>
+            <name>Version</name>
+            <returntype>java.lang.String</returntype>
+            <comment></comment>
+        </property>
+        <property>
+            <name>ActionBarSubtitleColor</name>
+            <parameter>
+                <name>color</name>
+                <type>java.lang.Object</type>
+            </parameter>
+            <comment>Set subtitle color.</comment>
+        </property>
+        <property>
+            <name>MenuBackgroundColor</name>
+            <parameter>
+                <name>color</name>
+                <type>java.lang.Object</type>
+            </parameter>
+            <comment>Set alpha + color to the menu
+ 
+ Example: &lt;code&gt;
+ 
+ MenuBackgroundColor = Colors.ARGB(50,0,0,100)
+ or
+ MenuBackgroundColor = "#770000AA"
+ 
+ &lt;/code&gt;</comment>
+        </property>
+        <property>
+            <name>ActionBarLogo</name>
+            <parameter>
+                <name>bitmap</name>
+                <type>android.graphics.Bitmap</type>
+            </parameter>
+            <comment>Set ActionBarlogo.</comment>
+        </property>
+        <property>
+            <name>ActionBarBackground</name>
+            <parameter>
+                <name>bitmap</name>
+                <type>android.graphics.Bitmap</type>
+            </parameter>
+            <comment>Set background to ActionBar.</comment>
+        </property>
+        <property>
+            <name>ActionBarSubtitle</name>
+            <parameter>
+                <name>subtitle</name>
+                <type>java.lang.CharSequence</type>
+            </parameter>
+            <comment>Set subtitle.</comment>
+        </property>
+        <property>
+            <name>ActionBarSubtitleSize</name>
+            <parameter>
+                <name>size</name>
+                <type>java.lang.Object</type>
+            </parameter>
+            <comment>Set subtitle size.
+ Example:
+ ActionBarSubtitleSize ="10px" - "10dp" - "10dip" - "10sp"
+ or
+ ActionBarSubtitleSize = 10 - 10dip</comment>
+        </property>
+        <property>
+            <name>ActionBarTitleSize</name>
+            <parameter>
+                <name>size</name>
+                <type>java.lang.Object</type>
+            </parameter>
+            <comment>Set title size.
+ Example:
+ ActionBarTitleSize ="10px" - "10dp" - "10dip" - "10sp"
+ or
+ ActionBarTitleSize = 10 - 10dip</comment>
+        </property>
+        <property>
+            <name>ActionBarMenuIcon</name>
+            <parameter>
+                <name>bitmap</name>
+                <type>android.graphics.Bitmap</type>
+            </parameter>
+            <comment>Set ActionBarIcon.</comment>
+        </property>
+    </class>
+    <class>
+        <name>it.giuseppe.salvi.nineoldandroids.animation.AnimatorSet.Builder</name>
+        <comment>The &lt;code&gt;Builder&lt;/code&gt; object is a utility class to facilitate adding
+ animations to a &lt;code&gt;AnimatorSet&lt;/code&gt; along with the relationships
+ between the various animations. The intention of the &lt;code&gt;Builder&lt;/code&gt;
+ methods, along with the {@link AnimatorSet#play(Animator) play()} method
+ of &lt;code&gt;AnimatorSet&lt;/code&gt; is to make it possible to express the
+ dependency relationships of animations in a natural way. Developers can
+ also use the {@link AnimatorSet#playTogether(Animator[]) playTogether()}
+ and {@link AnimatorSet#playSequentially(Animator[]) playSequentially()}
+ methods if these suit the need, but it might be easier in some situations
+ to express the AnimatorSet of animations in pairs.
+ &lt;p/&gt;
+ &lt;p&gt;
+ The &lt;code&gt;Builder&lt;/code&gt; object cannot be constructed directly, but is
+ rather constructed internally via a call to
+ {@link AnimatorSet#play(Animator)}.
+ &lt;/p&gt;
+ &lt;p/&gt;
+ &lt;p&gt;
+ For example, this sets up a AnimatorSet to play anim1 and anim2 at the
+ same time, anim3 to play when anim2 finishes, and anim4 to play when
+ anim3 finishes:
+ &lt;/p&gt;
+ 
+ &lt;pre&gt;
+ AnimatorSet s = new AnimatorSet();
+ s.play(anim1).with(anim2);
+ s.play(anim2).before(anim3);
+ s.play(anim4).after(anim3);
+ &lt;/pre&gt;
+ &lt;p/&gt;
+ &lt;p&gt;
+ Note in the example that both {@link Builder#before(Animator)} and
+ {@link Builder#after(Animator)} are used. These are just different ways
+ of expressing the same relationship and are provided to make it easier to
+ say things in a way that is more natural, depending on the situation.
+ &lt;/p&gt;
+ &lt;p/&gt;
+ &lt;p&gt;
+ It is possible to make several calls into the same &lt;code&gt;Builder&lt;/code&gt;
+ object to express multiple relationships. However, note that it is only
+ the animation passed into the initial {@link AnimatorSet#play(Animator)}
+ method that is the dependency in any of the successive calls to the
+ &lt;code&gt;Builder&lt;/code&gt; object. For example, the following code starts both
+ anim2 and anim3 when anim1 ends; there is no direct dependency
+ relationship between anim2 and anim3:
+ 
+ &lt;pre&gt;
+ AnimatorSet s = new AnimatorSet();
+ s.play(anim1).before(anim2).before(anim3);
+ &lt;/pre&gt;
+ 
+ If the desired result is to play anim1 then anim2 then anim3, this code
+ expresses the relationship correctly:
+ &lt;/p&gt;
+ 
+ &lt;pre&gt;
+ AnimatorSet s = new AnimatorSet();
+ s.play(anim1).before(anim2);
+ s.play(anim2).before(anim3);
+ &lt;/pre&gt;
+ &lt;p/&gt;
+ &lt;p&gt;
+ Note that it is possible to express relationships that cannot be resolved
+ and will not result in sensible results. For example,
+ &lt;code&gt;play(anim1).after(anim1)&lt;/code&gt; makes no sense. In general,
+ circular dependencies like this one (or more indirect ones where a
+ depends on b, which depends on c, which depends on a) should be avoided.
+ Only create AnimatorSets that can boil down to a simple, one-way
+ relationship of animations starting with, before, and after other,
+ different, animations.
+ &lt;/p&gt;</comment>
+        <owner>process</owner>
+        <method>
+            <name>with</name>
+            <comment>Sets up the given animation to play at the same time as the animation
+ supplied in the {@link AnimatorSet#play(Animator)} call that created
+ this &lt;code&gt;Builder&lt;/code&gt; object.
+anim: The animation that will play when the animation supplied
+            to the {@link AnimatorSet#play(Animator)} method starts.</comment>
+            <returntype>it.giuseppe.salvi.nineoldandroids.animation.AnimatorSet.Builder</returntype>
+            <parameter>
+                <name>anim</name>
+                <type>it.giuseppe.salvi.nineoldandroids.animation.Animator</type>
+            </parameter>
+        </method>
+        <method>
+            <name>before</name>
+            <comment>Sets up the given animation to play when the animation supplied in
+ the {@link AnimatorSet#play(Animator)} call that created this
+ &lt;code&gt;Builder&lt;/code&gt; object ends.
+anim: The animation that will play when the animation supplied
+            to the {@link AnimatorSet#play(Animator)} method ends.</comment>
+            <returntype>it.giuseppe.salvi.nineoldandroids.animation.AnimatorSet.Builder</returntype>
+            <parameter>
+                <name>anim</name>
+                <type>it.giuseppe.salvi.nineoldandroids.animation.Animator</type>
+            </parameter>
+        </method>
+        <method>
+            <name>after</name>
+            <comment>Sets up the given animation to play when the animation supplied in
+ the {@link AnimatorSet#play(Animator)} call that created this
+ &lt;code&gt;Builder&lt;/code&gt; object to start when the animation supplied in
+ this method call ends.
+anim: The animation whose end will cause the animation supplied
+            to the {@link AnimatorSet#play(Animator)} method to play.</comment>
+            <returntype>it.giuseppe.salvi.nineoldandroids.animation.AnimatorSet.Builder</returntype>
+            <parameter>
+                <name>anim</name>
+                <type>it.giuseppe.salvi.nineoldandroids.animation.Animator</type>
+            </parameter>
+        </method>
+    </class>
+    <version>1.0</version>
+    <comment></comment>
+    <author>Giuseppe Salvi</author>
+    <dependsOn>com.android.support:appcompat-v7</dependsOn>
+</root>

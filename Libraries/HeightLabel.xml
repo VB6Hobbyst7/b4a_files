@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <doclet-version-NOT-library-version>1.00</doclet-version-NOT-library-version>
+  <dependsOn>reflection</dependsOn>
+  <dependsOn>stringutils</dependsOn>
+  <class>
+    <name>b4a.example.heightlabel</name>
+    <shortname>HeightLabel</shortname>
+    <owner>process</owner>
+    <method>
+      <name>IsInitialized</name>
+      <comment>Tests whether the object has been initialized.</comment>
+      <returntype>boolean</returntype>
+    </method>
+    <method>
+      <name DesignerName="Initialize">_initialize</name>
+      <returntype>String</returntype>
+      <parameter>
+        <name>ba</name>
+        <type>anywheresoftware.b4a.BA</type>
+      </parameter>
+    </method>
+    <method>
+      <name DesignerName="LabelHeight">_labelheight</name>
+      <returntype>float</returntype>
+      <parameter>
+        <name>Txt</name>
+        <type>String</type>
+      </parameter>
+      <parameter>
+        <name>Label</name>
+        <type>anywheresoftware.b4a.objects.LabelWrapper</type>
+      </parameter>
+      <parameter>
+        <name>Font</name>
+        <type>anywheresoftware.b4a.keywords.constants.TypefaceWrapper</type>
+      </parameter>
+      <parameter>
+        <name>Size</name>
+        <type>int</type>
+      </parameter>
+      <parameter>
+        <name>GravityLabel</name>
+        <type>int</type>
+      </parameter>
+      <parameter>
+        <name>LineSpacing</name>
+        <type>float</type>
+      </parameter>
+    </method>
+  </class>
+  <version>1</version>
+</root>

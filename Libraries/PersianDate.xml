@@ -1,0 +1,201 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root>
+    <doclet-version-NOT-library-version>1.02</doclet-version-NOT-library-version>
+    <class>
+        <name>anywheresoftware.b4a.student.PersianDate</name>
+        <shortname>PersianDate</shortname>
+        <owner>process</owner>
+        <method>
+            <name>getDate</name>
+            <comment>Get Perisan Date
+ For Get Current Persian Date set all Parameter(year,month,day) to 0</comment>
+            <returntype>java.lang.String</returntype>
+            <parameter>
+                <name>year</name>
+                <type>int</type>
+            </parameter>
+            <parameter>
+                <name>month</name>
+                <type>int</type>
+            </parameter>
+            <parameter>
+                <name>day</name>
+                <type>int</type>
+            </parameter>
+            <parameter>
+                <name>Separator</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+    </class>
+    <class>
+        <name>anywheresoftware.b4a.student.Main</name>
+        <owner>process</owner>
+        <method>
+            <name>nextDay</name>
+            <comment>nextDay:
+ Go to next julian day number (JDN) and adjusts the other dates.</comment>
+            <returntype>void</returntype>
+        </method>
+        <method>
+            <name>setGregorianDate</name>
+            <comment>setGregorianDate:
+ Sets the date according to the Gregorian calendar and adjusts the other dates.
+year: int
+month: int
+day: int</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>year</name>
+                <type>int</type>
+            </parameter>
+            <parameter>
+                <name>month</name>
+                <type>int</type>
+            </parameter>
+            <parameter>
+                <name>day</name>
+                <type>int</type>
+            </parameter>
+        </method>
+        <method>
+            <name>setJulianDate</name>
+            <comment>setJulianDate:
+ Sets the date according to the Julian calendar and adjusts the other dates.
+year: int
+month: int
+day: int</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>year</name>
+                <type>int</type>
+            </parameter>
+            <parameter>
+                <name>month</name>
+                <type>int</type>
+            </parameter>
+            <parameter>
+                <name>day</name>
+                <type>int</type>
+            </parameter>
+        </method>
+        <method>
+            <name>previousDay</name>
+            <comment>previousDay:
+ Go to previous julian day number (JDN) and adjusts the otehr dates.</comment>
+            <returntype>void</returntype>
+        </method>
+        <method>
+            <name>toString</name>
+            <comment>toString:
+ Overrides the default toString() method to return all dates.
+Return type: @return:String</comment>
+            <returntype>java.lang.String</returntype>
+        </method>
+        <method>
+            <name>setIranianDate</name>
+            <comment>setIranianDate:
+ Sets the date according to the Iranian calendar and adjusts the other dates.
+year: int
+month: int
+day: int</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>year</name>
+                <type>int</type>
+            </parameter>
+            <parameter>
+                <name>month</name>
+                <type>int</type>
+            </parameter>
+            <parameter>
+                <name>day</name>
+                <type>int</type>
+            </parameter>
+        </method>
+        <property>
+            <name>GregorianDate</name>
+            <returntype>java.lang.String</returntype>
+            <comment>getGregorianDate:
+ Returns a string version of Gregorian date</comment>
+        </property>
+        <property>
+            <name>WeekDayStr</name>
+            <returntype>java.lang.String</returntype>
+            <comment>getWeekDayStr:
+ Returns the week day name.</comment>
+        </property>
+        <property>
+            <name>JulianMonth</name>
+            <returntype>int</returntype>
+            <comment>getJulianMonth:
+ Returns the 'month' part of the Julian date.</comment>
+        </property>
+        <property>
+            <name>IranianYear</name>
+            <returntype>int</returntype>
+            <comment>getIranianYear:
+ Returns the 'year' part of the Iranian date.</comment>
+        </property>
+        <property>
+            <name>GregorianMonth</name>
+            <returntype>int</returntype>
+            <comment>getGregorianMonth:
+ Returns the 'month' part of the Gregorian date.</comment>
+        </property>
+        <property>
+            <name>IranianMonth</name>
+            <returntype>int</returntype>
+            <comment>getIranianMonth:
+ Returns the 'month' part of the Iranian date.</comment>
+        </property>
+        <property>
+            <name>DayOfWeek</name>
+            <returntype>int</returntype>
+            <comment>getDayOfWeek:
+ Returns the week day number. Monday=0..Sunday=6;</comment>
+        </property>
+        <property>
+            <name>IranianDay</name>
+            <returntype>int</returntype>
+            <comment>getIranianDay:
+ Returns the 'day' part of the Iranian date.</comment>
+        </property>
+        <property>
+            <name>GregorianYear</name>
+            <returntype>int</returntype>
+            <comment>getGregorianYear:
+ Returns the 'year' part of the Gregorian date.</comment>
+        </property>
+        <property>
+            <name>JulianDate</name>
+            <returntype>java.lang.String</returntype>
+            <comment>getJulianDate:
+ Returns a string version of Julian date</comment>
+        </property>
+        <property>
+            <name>JulianYear</name>
+            <returntype>int</returntype>
+            <comment>getJulianYear:
+ Returns the 'year' part of the Julian date.</comment>
+        </property>
+        <property>
+            <name>GregorianDay</name>
+            <returntype>int</returntype>
+            <comment>getGregorianDay:
+ Returns the 'day' part of the Gregorian date.</comment>
+        </property>
+        <property>
+            <name>IranianDate</name>
+            <returntype>java.lang.String</returntype>
+            <comment>getIranianDate:
+ Returns a string version of Iranian date</comment>
+        </property>
+        <property>
+            <name>JulianDay</name>
+            <returntype>int</returntype>
+            <comment>getJulianDay()
+ Returns the 'day' part of the Julian date.</comment>
+        </property>
+    </class>
+</root>

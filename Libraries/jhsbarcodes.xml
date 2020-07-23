@@ -1,0 +1,501 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <doclet-version-NOT-library-version>1.00</doclet-version-NOT-library-version>
+  <dependsOn>phone</dependsOn>
+  <dependsOn>stringfunctions</dependsOn>
+  <dependsOn>rsimageprocessing</dependsOn>
+  <class b4a_type="StaticCode">
+    <name>JHSBarcodes.V1.azteccode</name>
+    <shortname>AztecCode</shortname>
+    <owner>activity</owner>
+    <objectwrapper>java.lang.Class</objectwrapper>
+    <permission>android.permission.WRITE_EXTERNAL_STORAGE</permission>
+    <method>
+      <name DesignerName="DrawAztecCode">_drawazteccode</name>
+      <comment>Description: Generates an Aztec code and saves it in the /pictures folder as "Aztec.png" from where it can be loaded into for eg an ImageView
+
+Method of calling:
+AztecCode.DrawAztecCode(message,back_color,fore_color,shape)
+
+where 'message' = message to be encoded - type String
+where 'back_color' = background color of the QR Code - type Int
+where 'fore_color' = foreground color of the QR Code (pixel color) - type Int
+where 'shape' = the shape of the pixels (c or C = circle, s or S = square) - type string
+example of parameters to pass:
+message = "Hallo, how are you today"
+back_color = Colors.Yellow
+fore_color = Colors.Black
+shape = "c"</comment>
+      <returntype>String</returntype>
+      <parameter>
+        <name>ba</name>
+        <type>anywheresoftware.b4a.BA</type>
+      </parameter>
+      <parameter>
+        <name>mes</name>
+        <type>String</type>
+      </parameter>
+      <parameter>
+        <name>bc</name>
+        <type>int</type>
+      </parameter>
+      <parameter>
+        <name>fc</name>
+        <type>int</type>
+      </parameter>
+      <parameter>
+        <name>shape</name>
+        <type>String</type>
+      </parameter>
+    </method>
+    <method>
+      <name>process_globals</name>
+      <returntype>void</returntype>
+    </method>
+  </class>
+  <class b4a_type="StaticCode">
+    <name>JHSBarcodes.V1.qrcode</name>
+    <shortname>QRcode</shortname>
+    <owner>activity</owner>
+    <objectwrapper>java.lang.Class</objectwrapper>
+    <permission>android.permission.WRITE_EXTERNAL_STORAGE</permission>
+    <method>
+      <name DesignerName="Draw_QR_Code">_draw_qr_code</name>
+      <comment>Description: Generates a QR code and saves it in the /pictures folder as "QRcode.png" from where it can be loaded into for eg an ImageView
+
+Method of calling:
+QRcode.Draw_QR_Code(message,error_level,mask_pattern,back_color,fore_color,shape)
+
+where 'message' = message to be encoded - type String
+where 'error_level' = the required error level ("L", "M", "Q", "H") - type String
+where 'mask_pattern' = the masking pattern to apply (0 to 7) - type Int
+where 'back_color' = background color of the QR Code - type Int
+where 'fore_color' = foreground color of the QR Code (pixel color) - type Int
+where 'shape' = the shape of the pixels (c or C = circle, s or S = square) - type string
+example of parameters to pass:
+message = "Hallo, how are you today"
+error_level = "H"
+mask_pattern = 7
+back_color = Colors.Yellow
+fore_color = Colors.Black
+shape = "c"</comment>
+      <returntype>int</returntype>
+      <parameter>
+        <name>ba</name>
+        <type>anywheresoftware.b4a.BA</type>
+      </parameter>
+      <parameter>
+        <name>message</name>
+        <type>String</type>
+      </parameter>
+      <parameter>
+        <name>err_lvl</name>
+        <type>String</type>
+      </parameter>
+      <parameter>
+        <name>mask</name>
+        <type>int</type>
+      </parameter>
+      <parameter>
+        <name>bc</name>
+        <type>int</type>
+      </parameter>
+      <parameter>
+        <name>fc</name>
+        <type>int</type>
+      </parameter>
+      <parameter>
+        <name>shape</name>
+        <type>String</type>
+      </parameter>
+    </method>
+    <method>
+      <name>process_globals</name>
+      <returntype>void</returntype>
+    </method>
+  </class>
+  <class b4a_type="StaticCode">
+    <name>JHSBarcodes.V1.code25i</name>
+    <shortname>Code25I</shortname>
+    <owner>activity</owner>
+    <objectwrapper>java.lang.Class</objectwrapper>
+    <permission>android.permission.WRITE_EXTERNAL_STORAGE</permission>
+    <method>
+      <name DesignerName="Draw_Code25I">_draw_code25i</name>
+      <comment>Description: Generates a 2 of 5 Interleaved barcode and saves it in the /pictures folder as "Code25I.png" from where it can be loaded into for eg an ImageView
+
+Method of calling:
+success = Code25I.Draw_Code25I(message, back_color, fore_color)
+
+where 'success' = indication of successful encoding (0 = successful, 1 = not successful) - type Int
+successful = all input chars are numbers only
+where 'message' = message to be encoded - type String
+where 'back_color' = background color of the code - type Int
+where 'fore_color' = foreground color of the code (solid bar color) - type Int
+example of parameters to pass:
+message = "600106035982" (12 chars only. No check digit to be included. Check digit will be calculated and added automatically)
+back_color = Colors.Yellow
+fore_color = Colors.Black</comment>
+      <returntype>int</returntype>
+      <parameter>
+        <name>ba</name>
+        <type>anywheresoftware.b4a.BA</type>
+      </parameter>
+      <parameter>
+        <name>message</name>
+        <type>String</type>
+      </parameter>
+      <parameter>
+        <name>back_color</name>
+        <type>int</type>
+      </parameter>
+      <parameter>
+        <name>front_color</name>
+        <type>int</type>
+      </parameter>
+    </method>
+    <method>
+      <name>process_globals</name>
+      <returntype>void</returntype>
+    </method>
+  </class>
+  <class b4a_type="StaticCode">
+    <name>JHSBarcodes.V1.ean13</name>
+    <shortname>EAN13</shortname>
+    <owner>activity</owner>
+    <objectwrapper>java.lang.Class</objectwrapper>
+    <permission>android.permission.WRITE_EXTERNAL_STORAGE</permission>
+    <method>
+      <name DesignerName="Draw_EAN13">_draw_ean13</name>
+      <comment>Description: Generates a EAN-13 barcode and saves it in the /pictures folder as "EAN13.png" from where it can be loaded into for eg an ImageView
+
+Method of calling:
+success = EAN13.Draw_EAN13(message, back_color, fore_color)
+
+where 'success' = indication of successful encoding (0 = successful, 1 = not successful) - type Int
+successful = all input chars are numbers only
+where 'message' = message to be encoded - type String (enter first 12 characters only. The check digit (13th char) will be calculated and added)
+where 'back_color' = background color of the code - type Int
+where 'fore_color' = foreground color of the code (solid bar color) - type Int
+example of parameters to pass:
+message = "600106035982" - the message excludes the check digit that will be added
+back_color = Colors.Yellow
+fore_color = Colors.Black</comment>
+      <returntype>int</returntype>
+      <parameter>
+        <name>ba</name>
+        <type>anywheresoftware.b4a.BA</type>
+      </parameter>
+      <parameter>
+        <name>message</name>
+        <type>String</type>
+      </parameter>
+      <parameter>
+        <name>back_color</name>
+        <type>int</type>
+      </parameter>
+      <parameter>
+        <name>front_color</name>
+        <type>int</type>
+      </parameter>
+    </method>
+    <method>
+      <name>process_globals</name>
+      <returntype>void</returntype>
+    </method>
+  </class>
+  <class b4a_type="StaticCode">
+    <name>JHSBarcodes.V1.ean8</name>
+    <shortname>EAN8</shortname>
+    <owner>activity</owner>
+    <objectwrapper>java.lang.Class</objectwrapper>
+    <permission>android.permission.WRITE_EXTERNAL_STORAGE</permission>
+    <method>
+      <name DesignerName="Draw_EAN8">_draw_ean8</name>
+      <comment>Description: Generates a EAN-8 barcode and saves it in the /pictures folder as "EAN8.png" from where it can be loaded into for eg an ImageView
+
+Method of calling:
+success = EAN8.Draw_EAN8(message, back_color, fore_color)
+
+where 'success' = indication of successful encoding (0 = successful, 1 = not successful) - type Int
+successful = all input chars are numbers only
+where 'message' = message to be encoded - type String (enter first 7 characters only. The check digit (8th char) will be calculated and added)
+where 'back_color' = background color of the code - type Int
+where 'fore_color' = foreground color of the code (solid bar color) - type Int
+example of parameters to pass:
+message = "5512345" - the message excludes the check digit that will be added
+back_color = Colors.Yellow
+fore_color = Colors.Black</comment>
+      <returntype>int</returntype>
+      <parameter>
+        <name>ba</name>
+        <type>anywheresoftware.b4a.BA</type>
+      </parameter>
+      <parameter>
+        <name>message</name>
+        <type>String</type>
+      </parameter>
+      <parameter>
+        <name>back_color</name>
+        <type>int</type>
+      </parameter>
+      <parameter>
+        <name>front_color</name>
+        <type>int</type>
+      </parameter>
+    </method>
+    <method>
+      <name>process_globals</name>
+      <returntype>void</returntype>
+    </method>
+  </class>
+  <class b4a_type="StaticCode">
+    <name>JHSBarcodes.V1.code128</name>
+    <shortname>Code128</shortname>
+    <owner>activity</owner>
+    <objectwrapper>java.lang.Class</objectwrapper>
+    <permission>android.permission.WRITE_EXTERNAL_STORAGE</permission>
+    <method>
+      <name DesignerName="Draw_Code128">_draw_code128</name>
+      <comment>Description: Generates Code 128 barcode and saves it in the /pictures folder as "Code128.png" from where it can be loaded into for eg an ImageView
+
+Method of calling:
+success = Code128.Draw_Code128(message, back_color, fore_color)
+
+where 'success' = indication of successful encoding (0 = successful, 1 = not successful) - type Int
+successful = all input chars are numbers only
+where 'message' = message to be encoded - type String
+where 'back_color' = background color of the code - type Int
+where 'fore_color' = foreground color of the code (solid bar color) - type Int
+example of parameters to pass:
+message = "600106035982" (12 chars only. No check digit to be included. Check digit will be calculated and added automatically)
+back_color = Colors.Yellow
+fore_color = Colors.Black</comment>
+      <returntype>int</returntype>
+      <parameter>
+        <name>ba</name>
+        <type>anywheresoftware.b4a.BA</type>
+      </parameter>
+      <parameter>
+        <name>message</name>
+        <type>String</type>
+      </parameter>
+      <parameter>
+        <name>back_color</name>
+        <type>int</type>
+      </parameter>
+      <parameter>
+        <name>front_color</name>
+        <type>int</type>
+      </parameter>
+    </method>
+    <method>
+      <name>process_globals</name>
+      <returntype>void</returntype>
+    </method>
+  </class>
+  <class b4a_type="StaticCode">
+    <name>JHSBarcodes.V1.pdf417</name>
+    <shortname>PDF417</shortname>
+    <owner>activity</owner>
+    <objectwrapper>java.lang.Class</objectwrapper>
+    <permission>android.permission.WRITE_EXTERNAL_STORAGE</permission>
+    <method>
+      <name DesignerName="Draw_PDF417_Code">_draw_pdf417_code</name>
+      <comment>Description: Generates a PDF417 code and saves it in the /pictures folder as "PDF417.png" from where it can be loaded into for eg an ImageView
+
+Method of calling:
+PDF417.Draw_PDF417_Code(message,err_lvl,no_of_data_columns,back_color, fore_color)
+
+where 'message' = message to be encoded - type String
+where 'err_lvl' = error correction level to be applied (0 to 5)
+where 'no_of_data_columns' = the number of data columns inside the PDF417 code (this will be a minimum of 2 even if 1 is requested)
+where 'back_color' = background color of the PDF417 Code - type Int
+where 'fore_color' = foreground color of the PDF417 Code (pixel color) - type Int
+example of parameters to pass:
+message = "This message will be encoded into a PDF417 code"
+err_lvl = 4
+no_of_data_columns = 4
+back_color = Colors.Yellow
+fore_color = Colors.Black</comment>
+      <returntype>String</returntype>
+      <parameter>
+        <name>ba</name>
+        <type>anywheresoftware.b4a.BA</type>
+      </parameter>
+      <parameter>
+        <name>message</name>
+        <type>String</type>
+      </parameter>
+      <parameter>
+        <name>err_lvl</name>
+        <type>int</type>
+      </parameter>
+      <parameter>
+        <name>no_of_data_columns</name>
+        <type>int</type>
+      </parameter>
+      <parameter>
+        <name>back_color</name>
+        <type>int</type>
+      </parameter>
+      <parameter>
+        <name>fore_color</name>
+        <type>int</type>
+      </parameter>
+    </method>
+    <method>
+      <name>process_globals</name>
+      <returntype>void</returntype>
+    </method>
+  </class>
+  <class b4a_type="StaticCode">
+    <name>JHSBarcodes.V1.code39</name>
+    <shortname>Code39</shortname>
+    <owner>activity</owner>
+    <objectwrapper>java.lang.Class</objectwrapper>
+    <permission>android.permission.WRITE_EXTERNAL_STORAGE</permission>
+    <method>
+      <name DesignerName="Draw_Code39">_draw_code39</name>
+      <comment>Description: Generates Code39 barcode and saves it in the /pictures folder as "Code39.png" from where it can be loaded into for eg an ImageView
+
+Method of calling:
+success = Code39.Draw_Code39(message, back_color, front_color)
+
+where 'success' = indication of successful encoding (0 = successful, 1 = not successful) - type Int
+successful = all input chars are valid input chars (lower case will automatically be converted to upper case)
+where 'message' = message to be encoded - type String
+where 'back_color' = background color of the code - type Int
+where 'front_color' = foreground color of the code (solid bar color) - type Int
+example of parameters to pass:
+message = "Test Code39" 
+back_color = Colors.Yellow
+fore_color = Colors.Black</comment>
+      <returntype>int</returntype>
+      <parameter>
+        <name>ba</name>
+        <type>anywheresoftware.b4a.BA</type>
+      </parameter>
+      <parameter>
+        <name>message</name>
+        <type>String</type>
+      </parameter>
+      <parameter>
+        <name>back_color</name>
+        <type>int</type>
+      </parameter>
+      <parameter>
+        <name>front_color</name>
+        <type>int</type>
+      </parameter>
+    </method>
+    <method>
+      <name>process_globals</name>
+      <returntype>void</returntype>
+    </method>
+  </class>
+  <class b4a_type="StaticCode">
+    <name>JHSBarcodes.V1.code93</name>
+    <shortname>Code93</shortname>
+    <owner>activity</owner>
+    <objectwrapper>java.lang.Class</objectwrapper>
+    <permission>android.permission.WRITE_EXTERNAL_STORAGE</permission>
+    <method>
+      <name DesignerName="Draw_Code93">_draw_code93</name>
+      <comment>Description: Generates Code93 barcode and saves it in the /pictures folder as "Code93.png" from where it can be loaded into for eg an ImageView
+
+Method of calling:
+success = Code93.Draw_Code93(message, back_color, front_color)
+
+where 'success' = indication of successful encoding (0 = successful, 1 = not successful) - type Int
+successful = all input chars are valid input chars (lower case will automatically be converted to upper case)
+where 'message' = message to be encoded - type String
+where 'back_color' = background color of the code - type Int
+where 'front_color' = foreground color of the code (solid bar color) - type Int
+example of parameters to pass:
+message = "Test Code93" 
+back_color = Colors.Yellow
+fore_color = Colors.Black</comment>
+      <returntype>int</returntype>
+      <parameter>
+        <name>ba</name>
+        <type>anywheresoftware.b4a.BA</type>
+      </parameter>
+      <parameter>
+        <name>message</name>
+        <type>String</type>
+      </parameter>
+      <parameter>
+        <name>back_color</name>
+        <type>int</type>
+      </parameter>
+      <parameter>
+        <name>front_color</name>
+        <type>int</type>
+      </parameter>
+    </method>
+    <method>
+      <name>process_globals</name>
+      <returntype>void</returntype>
+    </method>
+  </class>
+  <class b4a_type="StaticCode">
+    <name>JHSBarcodes.V1.code11</name>
+    <shortname>Code11</shortname>
+    <owner>activity</owner>
+    <objectwrapper>java.lang.Class</objectwrapper>
+    <permission>android.permission.WRITE_EXTERNAL_STORAGE</permission>
+    <method>
+      <name DesignerName="Draw_Code11">_draw_code11</name>
+      <comment>Description: Generates Code11 barcode and saves it in the /pictures folder as "Code11.png" from where it can be loaded into for eg an ImageView
+
+Method of calling:
+success = Code11.Draw_Code11(message, start_chr, stop_chr, back_color, front_color)
+
+where 'success' = indication of successful encoding (0 = successful, 1 = not successful) - type Int
+successful = all input chars are valid input chars (lower case will automatically be converted to upper case)
+where 'message' = message to be encoded - type String
+where 'start_chr' = start character (A, B, C, or D) - type String
+where 'stop_chr' = stop character (A, B, C, or D) - type String
+where 'back_color' = background color of the code - type Int
+where 'front_color' = foreground color of the code (solid bar color) - type Int
+example of parameters to pass:
+message = "40156" 
+strt = "A"
+stp = "B"
+back_color = Colors.Yellow
+fore_color = Colors.Black</comment>
+      <returntype>int</returntype>
+      <parameter>
+        <name>ba</name>
+        <type>anywheresoftware.b4a.BA</type>
+      </parameter>
+      <parameter>
+        <name>message</name>
+        <type>String</type>
+      </parameter>
+      <parameter>
+        <name>strt</name>
+        <type>String</type>
+      </parameter>
+      <parameter>
+        <name>stp</name>
+        <type>String</type>
+      </parameter>
+      <parameter>
+        <name>back_color</name>
+        <type>int</type>
+      </parameter>
+      <parameter>
+        <name>front_color</name>
+        <type>int</type>
+      </parameter>
+    </method>
+    <method>
+      <name>process_globals</name>
+      <returntype>void</returntype>
+    </method>
+  </class>
+  <version>1.01</version>
+  <author>Johan Schoeman</author>
+</root>

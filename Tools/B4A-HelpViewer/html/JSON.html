@@ -1,0 +1,69 @@
+<HTML>
+<HEAD>
+<META http-equiv="Content-Type" content="text/html; charset=utf-8">
+<TITLE>
+Basic4android - JSON
+</TITLE>
+<link rel="stylesheet" type="text/css" href="images/help.css" />
+
+</HEAD>
+
+<BODY BGCOLOR="white" leftmargin="50">
+<a name="top"/>
+<h1>JSON</h1>
+
+</h5>
+<h4>List of types:</h4>
+<a href='#jsongenerator'>JSONGenerator</a><br/><a href='#jsonparser'>JSONParser</a><br/>
+<hr/>
+<h3><u><a name='jsongenerator'>JSONGenerator</a></u></h3>
+</h5>This object generates JSON strings.<br/>It can be initialized with a Map or a List. Both can contain other Maps or Lists.<br/>See the <a href='http://www.basic4ppc.com/forum/basic4android-getting-started-tutorials/6923-android-json-tutorial.html'>JSON tutorial</a>.
+<br/>
+
+<h4>Events:</h4>
+None
+<h4>Members:</h4><br/>
+<img src='images/15.png'/>&nbsp;&nbsp;<span style="color: #000000;"><a href='#jsongenerator_initialize'><b>Initialize</b></a> (</span><span style="color: #008B8B;">Map</span><span style="color: #000000;"> </span><span style="color: #0000FF;">As</span><span style="color: #000000;"> </span><span style="color: #008B8B;">Map</span><span style="color: #000000;">)</span><br/><br/>
+<img src='images/15.png'/>&nbsp;&nbsp;<span style="color: #000000;"><a href='#jsongenerator_initialize2'><b>Initialize2</b></a> (</span><span style="color: #008B8B;">List</span><span style="color: #000000;"> </span><span style="color: #0000FF;">As</span><span style="color: #000000;"> </span><span style="color: #008B8B;">List</span><span style="color: #000000;">)</span><br/><br/>
+<img src='images/15.png'/>&nbsp;&nbsp;<span style="color: #000000;"><a href='#jsongenerator_toprettystring'><b>ToPrettyString</b></a> (Indent </span><span style="color: #0000FF;">As</span><span style="color: #000000;"> </span><span style="color: #008B8B;">Int</span><span style="color: #000000;">) </span><span style="color: #0000FF;">As</span><span style="color: #000000;"> </span><span style="color: #008B8B;">String</span><br/><br/>
+<img src='images/15.png'/>&nbsp;&nbsp;<span style="color: #000000;"><a href='#jsongenerator_tostring'><b>ToString</b></a> </span><span style="color: #0000FF;">As</span><span style="color: #000000;"> </span><span style="color: #008B8B;">String</span><br/><br/>
+
+<h4>Members description:</h4>
+<a name='jsongenerator_initialize'/>
+<h5><img src='images/15.png'/>
+<span style="color: #000000;">Initialize (</span><span style="color: #008B8B;">Map</span><span style="color: #000000;"> </span><span style="color: #0000FF;">As</span><span style="color: #000000;"> </span><span style="color: #008B8B;">Map</span><span style="color: #000000;">)</span></h5>Initializes the object with the given Map.<a name='jsongenerator_initialize2'/>
+<h5><img src='images/15.png'/>
+<span style="color: #000000;">Initialize2 (</span><span style="color: #008B8B;">List</span><span style="color: #000000;"> </span><span style="color: #0000FF;">As</span><span style="color: #000000;"> </span><span style="color: #008B8B;">List</span><span style="color: #000000;">)</span></h5>Initializes the object with the given List.<a name='jsongenerator_toprettystring'/>
+<h5><img src='images/15.png'/>
+<span style="color: #000000;">ToPrettyString (Indent </span><span style="color: #0000FF;">As</span><span style="color: #000000;"> </span><span style="color: #008B8B;">Int</span><span style="color: #000000;">) </span><span style="color: #0000FF;">As</span><span style="color: #000000;"> </span><span style="color: #008B8B;">String</span></h5>Creates a JSON string from the initialized object.<br/>The string will be indented and easier for reading.<br/>Note that the string created is a valid JSON string.<br/>Indent - Number of spaces to add to each level.<a name='jsongenerator_tostring'/>
+<h5><img src='images/15.png'/>
+<span style="color: #000000;">ToString </span><span style="color: #0000FF;">As</span><span style="color: #000000;"> </span><span style="color: #008B8B;">String</span></h5>Creates a JSON string from the initialized object.<br/>This string does not include any extra whitespace.<hr/>
+<h3><u><a name='jsonparser'>JSONParser</a></u></h3>
+</h5>Parses JSON formatted strings: <a href='http://www.json.org/'>Description of JSON</a>.<br/>JSON objects are converted to Maps and JSON arrays are converted to Lists.<br/>After initializing the object you will usually call NextObject to get a single Map object.<br/>If the JSON string top level value is an array you should call NextArray.<br/>Afterward you should work with the Map or List and fetch the required data.<br/>See the <a href='http://www.basic4ppc.com/forum/basic4android-getting-started-tutorials/6923-android-json-tutorial.html'>JSON tutorial</a>.<br/>Typical code:<span class='pre'><span style="color: #000000;"><br/></span><span style="color: #0000FF;">Dim</span><span style="color: #000000;"> JSON </span><span style="color: #0000FF;">As</span><span style="color: #000000;"> JSONParser<br/></span><span style="color: #0000FF;">Dim</span><span style="color: #000000;"> Map1 </span><span style="color: #0000FF;">As</span><span style="color: #000000;"> </span><span style="color: #008B8B;">Map</span><span style="color: #000000;"><br/>JSON.Initialize(File.ReadString(File.DirAssets, </span><span style="color: #800000;">"</span><span style="color: #800000;">example.json</span><span style="color: #800000;">"</span><span style="color: #000000;">)) </span><span style="color: #008000;">'</span><span style="color: #008000;">Read the text from a file.</span><span style="color: #008000;"><br/></span><span style="color: #000000;">Map1 = JSON.NextObject</span></span>
+<br/>
+
+<h4>Events:</h4>
+None
+<h4>Members:</h4><br/>
+<img src='images/15.png'/>&nbsp;&nbsp;<span style="color: #000000;"><a href='#jsonparser_initialize'><b>Initialize</b></a> (Text </span><span style="color: #0000FF;">As</span><span style="color: #000000;"> </span><span style="color: #008B8B;">String</span><span style="color: #000000;">)</span><br/><br/>
+<img src='images/15.png'/>&nbsp;&nbsp;<span style="color: #000000;"><a href='#jsonparser_isinitialized'><b>IsInitialized</b></a> </span><span style="color: #0000FF;">As</span><span style="color: #000000;"> </span><span style="color: #008B8B;">Boolean</span><br/><br/>
+<img src='images/15.png'/>&nbsp;&nbsp;<span style="color: #000000;"><a href='#jsonparser_nextarray'><b>NextArray</b></a> </span><span style="color: #0000FF;">As</span><span style="color: #000000;"> </span><span style="color: #008B8B;">List</span><br/><br/>
+<img src='images/15.png'/>&nbsp;&nbsp;<span style="color: #000000;"><a href='#jsonparser_nextobject'><b>NextObject</b></a> </span><span style="color: #0000FF;">As</span><span style="color: #000000;"> </span><span style="color: #008B8B;">Map</span><br/><br/>
+<img src='images/15.png'/>&nbsp;&nbsp;<span style="color: #000000;"><a href='#jsonparser_nextvalue'><b>NextValue</b></a> </span><span style="color: #0000FF;">As</span><span style="color: #000000;"> </span><span style="color: #008B8B;">Object</span><br/><br/>
+
+<h4>Members description:</h4>
+<a name='jsonparser_initialize'/>
+<h5><img src='images/15.png'/>
+<span style="color: #000000;">Initialize (Text </span><span style="color: #0000FF;">As</span><span style="color: #000000;"> </span><span style="color: #008B8B;">String</span><span style="color: #000000;">)</span></h5>Initializes the object and sets the text that will be parsed.<a name='jsonparser_isinitialized'/>
+<h5><img src='images/15.png'/>
+<span style="color: #000000;">IsInitialized </span><span style="color: #0000FF;">As</span><span style="color: #000000;"> </span><span style="color: #008B8B;">Boolean</span></h5><a name='jsonparser_nextarray'/>
+<h5><img src='images/15.png'/>
+<span style="color: #000000;">NextArray </span><span style="color: #0000FF;">As</span><span style="color: #000000;"> </span><span style="color: #008B8B;">List</span></h5>Parses the text assuming that the top level value is an array.<a name='jsonparser_nextobject'/>
+<h5><img src='images/15.png'/>
+<span style="color: #000000;">NextObject </span><span style="color: #0000FF;">As</span><span style="color: #000000;"> </span><span style="color: #008B8B;">Map</span></h5>Parses the text assuming that the top level value is an object.<a name='jsonparser_nextvalue'/>
+<h5><img src='images/15.png'/>
+<span style="color: #000000;">NextValue </span><span style="color: #0000FF;">As</span><span style="color: #000000;"> </span><span style="color: #008B8B;">Object</span></h5>Parses the text assuming that the top level value is a simple value.
+<hr/>
+<a href="#top">Top</a>
+</body>
+</html>

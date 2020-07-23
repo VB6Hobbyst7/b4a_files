@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root>
+    <doclet-version-NOT-library-version>1.03</doclet-version-NOT-library-version>
+    <class>
+        <name>bm.watscho.keyboard.CustomKeyboard</name>
+        <shortname>CustomKeyboard</shortname>
+        <owner>activity</owner>
+        <method>
+            <name>Initialize</name>
+            <comment>Create a custom keyboard, that uses the KeyboardView (with xml-filename
+ 'keyboardViewName') of the host activity and load the keyboard layout into
+ this KeyboardView from xml-filename 'keyboardlayoutName'.
+ Note that the host activity must have a KeyboardView in its layout
+ (typically aligned to the bottom of the activity).
+ To enable EditTexts for using this custom keyboard, call the methode
+ registerEditText(editTextView, eventName, addedByDesigner, showCursor).
+ If there are any event-subs for this KeyboardView they must be named like
+ keyboardViewName_xxxxx...  and you can catch the currently used EditText
+ via the ViewTag in this event-sub.</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>ba</name>
+                <type>anywheresoftware.b4a.BA</type>
+            </parameter>
+            <parameter>
+                <name>keyboardViewName</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>keyboardLayoutName</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+        <method>
+            <name>setEditTextHeight</name>
+            <comment>Sets the height of the specified EditText to the wished value
+ (value of height must be in pixels, editTextName). 
+ If the used EditText is added by the designer don't use this
+ method, use editTextName.Height = ....  instead.</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>height</name>
+                <type Pixel="true">int</type>
+            </parameter>
+            <parameter>
+                <name>etName</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+        <method>
+            <name>registerEditText</name>
+            <comment>Register EditText with name editTextView (on the hosting activity), the used eventName, if the editTextView is addedByDesigner
+ for using this custom keyboard and if you wish to showCursor. If there are any used event-subs for this EditText they must be
+ named like eventName_xxxxx...
+ If  the editTextView is addedByDesigner don't use the designer to generate event-subs and don't use an EventName in the designer
+ (leave the line unwritten) instead use an eventName that have a different spelling to that you used as the editTextView-name
+ (don't use registerEditText(etHex, "etHex",.....) otherwise you can get two different active events for the same event.
+     
+ If you loaded the editTextView via xml the used eventName must have the same spelling as you used in your xml-file look into the
+ used line (android:id="@+id/eventName") otherwise this register-sub will not find your EditText and you get an error !!!</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>editTextView</name>
+                <type>android.widget.EditText</type>
+            </parameter>
+            <parameter>
+                <name>eventName</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>addedByDesigner</name>
+                <type>boolean</type>
+            </parameter>
+            <parameter>
+                <name>showCursor</name>
+                <type>boolean</type>
+            </parameter>
+        </method>
+        <method>
+            <name>hideCustomKeyboard</name>
+            <comment>Make the CustomKeyboard invisible.</comment>
+            <returntype>void</returntype>
+        </method>
+        <method>
+            <name>showCustomKeyboard</name>
+            <comment>Make the CustomKeyboard visible and hide
+  the system keyboard for EditTextView v.</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>v</name>
+                <type>android.view.View</type>
+            </parameter>
+        </method>
+        <method>
+            <name>isCustomKeyboardVisible</name>
+            <comment>Returns whether the CustomKeyboard is visible.</comment>
+            <returntype>boolean</returntype>
+        </method>
+        <method>
+            <name>enableHapticFeedback</name>
+            <comment>Enables or disables the haptic feedback on keyboard
+ touches. Set goEnabled true if you want haptic feedback,
+ false otherwise</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>goEnabled</name>
+                <type>boolean</type>
+            </parameter>
+        </method>
+    </class>
+    <version>1.0</version>
+    <author>watscho</author>
+</root>

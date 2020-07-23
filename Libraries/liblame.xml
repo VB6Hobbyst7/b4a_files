@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root>
+    <doclet-version-NOT-library-version>1.04</doclet-version-NOT-library-version>
+    <class>
+        <name>uk.co.martinpearman.b4a.liblame.DecoderWrapper</name>
+        <shortname>liblameDecoder</shortname>
+        <objectwrapper>com.intervigil.lame.Decoder</objectwrapper>
+        <owner>process</owner>
+        <event>DecodeComplete(Success As Boolean)</event>
+        <method>
+            <name>Initialize</name>
+            <comment>Initialize the Decoder with an event name.</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>EventName</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+        <method>
+            <name>Decode</name>
+            <comment>Start the decoding process.
+The event DecodeComplete(Success As Boolean) will be raised on completion.</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>pBA</name>
+                <type>anywheresoftware.b4a.BA</type>
+            </parameter>
+        </method>
+        <method>
+            <name>SetFiles</name>
+            <comment>Set the source mp3 and destination wav file names.
+Returns True on success, False on error.</comment>
+            <returntype>boolean</returntype>
+            <parameter>
+                <name>InputFilename</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>OutputFilename</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+        <method>
+            <name>IsInitialized</name>
+            <comment></comment>
+            <returntype>boolean</returntype>
+        </method>
+    </class>
+    <class>
+        <name>uk.co.martinpearman.b4a.liblame.EncoderWrapper</name>
+        <shortname>liblameEncoder</shortname>
+        <objectwrapper>com.intervigil.lame.Encoder</objectwrapper>
+        <owner>process</owner>
+        <event>EncodeComplete(Success As Boolean)</event>
+        <method>
+            <name>Initialize</name>
+            <comment>Initialize the Encoder with an event name.</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>EventName</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+        <method>
+            <name>SetQuality</name>
+            <comment>Set the encoding quality.
+Choose from:
+Encoder.LAME_PRESET_DEFAULT
+Encoder.LAME_PRESET_MEDIUM
+Encoder.LAME_PRESET_STANDARD
+Encoder.LAME_PRESET_EXTREME</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>Quality</name>
+                <type>int</type>
+            </parameter>
+        </method>
+        <method>
+            <name>SetFiles</name>
+            <comment>Set the source wav and destination mp3 file names.
+The Encoder will default to Quality of Encoder.LAME_PRESET_DEFAULT.
+Returns True on success, False on error.</comment>
+            <returntype>boolean</returntype>
+            <parameter>
+                <name>InputFilename</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>OutputFilename</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+        <method>
+            <name>Encode</name>
+            <comment>Start the encoding process.
+The event EncodeComplete(Success As Boolean) will be raised on completion.</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>pBA</name>
+                <type>anywheresoftware.b4a.BA</type>
+            </parameter>
+        </method>
+        <method>
+            <name>IsInitialized</name>
+            <comment></comment>
+            <returntype>boolean</returntype>
+        </method>
+        <field>
+            <name>LAME_PRESET_DEFAULT</name>
+            <comment></comment>
+            <returntype>int</returntype>
+        </field>
+        <field>
+            <name>LAME_PRESET_MEDIUM</name>
+            <comment></comment>
+            <returntype>int</returntype>
+        </field>
+        <field>
+            <name>LAME_PRESET_EXTREME</name>
+            <comment></comment>
+            <returntype>int</returntype>
+        </field>
+        <field>
+            <name>LAME_PRESET_STANDARD</name>
+            <comment></comment>
+            <returntype>int</returntype>
+        </field>
+    </class>
+    <version>1.01</version>
+    <author>Martin Pearman</author>
+</root>

@@ -1,0 +1,66 @@
+<HTML>
+<HEAD>
+<META http-equiv="Content-Type" content="text/html; charset=utf-8">
+<TITLE>
+Basic4android - ABZipUnzip
+</TITLE>
+<link rel="stylesheet" type="text/css" href="images/help.css" />
+
+</HEAD>
+
+<BODY BGCOLOR="white" leftmargin="50">
+<a name="top"/>
+<h1>ABZipUnzip</h1>
+<h3>Written by Alain Bailleul</h3>
+</h5>
+<h4>List of types:</h4>
+<a href='#abzipcontent'>ABZipContent</a><br/><a href='#abzipunzip'>ABZipUnzip</a><br/>
+<hr/>
+<h3><u><a name='abzipcontent'>ABZipContent</a></u></h3>
+</h5>An object that the contains information about an entry in the zip file
+<br/>
+
+<h4>Events:</h4>
+None
+<h4>Members:</h4><br/>
+<img src='images/19.png'/>&nbsp;&nbsp;<span style="color: #000000;"><a href='#abzipcontent_compressedsize'><b>CompressedSize</b></a> </span><span style="color: #0000FF;">As</span><span style="color: #000000;"> </span><span style="color: #008B8B;">Long</span><span style="color: #000000;">  [read only]</span><br/><br/>
+<img src='images/19.png'/>&nbsp;&nbsp;<span style="color: #000000;"><a href='#abzipcontent_name'><b>Name</b></a> </span><span style="color: #0000FF;">As</span><span style="color: #000000;"> </span><span style="color: #008B8B;">String</span><span style="color: #000000;">  [read only]</span><br/><br/>
+<img src='images/19.png'/>&nbsp;&nbsp;<span style="color: #000000;"><a href='#abzipcontent_size'><b>Size</b></a> </span><span style="color: #0000FF;">As</span><span style="color: #000000;"> </span><span style="color: #008B8B;">Long</span><span style="color: #000000;">  [read only]</span><br/><br/>
+
+<h4>Members description:</h4>
+<a name='abzipcontent_compressedsize'/>
+<h5><img src='images/19.png'/>
+<span style="color: #000000;">CompressedSize </span><span style="color: #0000FF;">As</span><span style="color: #000000;"> </span><span style="color: #008B8B;">Long</span><span style="color: #000000;">  [read only]</span></h5>Returns the compressed size of the entry<a name='abzipcontent_name'/>
+<h5><img src='images/19.png'/>
+<span style="color: #000000;">Name </span><span style="color: #0000FF;">As</span><span style="color: #000000;"> </span><span style="color: #008B8B;">String</span><span style="color: #000000;">  [read only]</span></h5>Returns the full path and name of the entry<a name='abzipcontent_size'/>
+<h5><img src='images/19.png'/>
+<span style="color: #000000;">Size </span><span style="color: #0000FF;">As</span><span style="color: #000000;"> </span><span style="color: #008B8B;">Long</span><span style="color: #000000;">  [read only]</span></h5>Returns the uncompressed size of the entry<hr/>
+<h3><u><a name='abzipunzip'>ABZipUnzip</a></u></h3>
+</h5>Object that does zip en unzip files on the device
+<br/>
+<h4>Permissions:</h4>android.permission.WRITE_EXTERNAL_STORAGE<br/>
+<h4>Events:</h4>
+None
+<h4>Members:</h4><br/>
+<img src='images/15.png'/>&nbsp;&nbsp;<span style="color: #000000;"><a href='#abzipunzip_abgetlistitem'><b>ABGetListItem</b></a> (index </span><span style="color: #0000FF;">As</span><span style="color: #000000;"> </span><span style="color: #008B8B;">Int</span><span style="color: #000000;">) </span><span style="color: #0000FF;">As</span><span style="color: #000000;"> ABZipContent</span><br/><br/>
+<img src='images/15.png'/>&nbsp;&nbsp;<span style="color: #000000;"><a href='#abzipunzip_ablistzip'><b>ABListZip</b></a> (zipFile </span><span style="color: #0000FF;">As</span><span style="color: #000000;"> </span><span style="color: #008B8B;">String</span><span style="color: #000000;">) </span><span style="color: #0000FF;">As</span><span style="color: #000000;"> </span><span style="color: #008B8B;">Int</span><br/><br/>
+<img src='images/15.png'/>&nbsp;&nbsp;<span style="color: #000000;"><a href='#abzipunzip_abunzip'><b>ABUnzip</b></a> (zipFile </span><span style="color: #0000FF;">As</span><span style="color: #000000;"> </span><span style="color: #008B8B;">String</span><span style="color: #000000;">, targetPath </span><span style="color: #0000FF;">As</span><span style="color: #000000;"> </span><span style="color: #008B8B;">String</span><span style="color: #000000;">) </span><span style="color: #0000FF;">As</span><span style="color: #000000;"> </span><span style="color: #008B8B;">Boolean</span><br/><br/>
+<img src='images/15.png'/>&nbsp;&nbsp;<span style="color: #000000;"><a href='#abzipunzip_abzipdirectory'><b>ABZipDirectory</b></a> (sourceDir </span><span style="color: #0000FF;">As</span><span style="color: #000000;"> </span><span style="color: #008B8B;">String</span><span style="color: #000000;">, zipFile </span><span style="color: #0000FF;">As</span><span style="color: #000000;"> </span><span style="color: #008B8B;">String</span><span style="color: #000000;">) </span><span style="color: #0000FF;">As</span><span style="color: #000000;"> </span><span style="color: #008B8B;">Boolean</span><br/><br/>
+<img src='images/15.png'/>&nbsp;&nbsp;<span style="color: #000000;"><a href='#abzipunzip_abzipfile'><b>ABZipfile</b></a> (sourcePath </span><span style="color: #0000FF;">As</span><span style="color: #000000;"> </span><span style="color: #008B8B;">String</span><span style="color: #000000;">, sourceFile </span><span style="color: #0000FF;">As</span><span style="color: #000000;"> </span><span style="color: #008B8B;">String</span><span style="color: #000000;">, zipFile </span><span style="color: #0000FF;">As</span><span style="color: #000000;"> </span><span style="color: #008B8B;">String</span><span style="color: #000000;">) </span><span style="color: #0000FF;">As</span><span style="color: #000000;"> </span><span style="color: #008B8B;">Boolean</span><br/><br/>
+
+<h4>Members description:</h4>
+<a name='abzipunzip_abgetlistitem'/>
+<h5><img src='images/15.png'/>
+<span style="color: #000000;">ABGetListItem (index </span><span style="color: #0000FF;">As</span><span style="color: #000000;"> </span><span style="color: #008B8B;">Int</span><span style="color: #000000;">) </span><span style="color: #0000FF;">As</span><span style="color: #000000;"> ABZipContent</span></h5>Get one if the items in the zipfile to get more information. Fill this list first by calling ABListZip()<a name='abzipunzip_ablistzip'/>
+<h5><img src='images/15.png'/>
+<span style="color: #000000;">ABListZip (zipFile </span><span style="color: #0000FF;">As</span><span style="color: #000000;"> </span><span style="color: #008B8B;">String</span><span style="color: #000000;">) </span><span style="color: #0000FF;">As</span><span style="color: #000000;"> </span><span style="color: #008B8B;">Int</span></h5>List the contents of a zip file<br/>  <br/>  Example:<span class='pre'><span style="color: #000000;"><br/>  </span><span style="color: #0000FF;">Dim</span><span style="color: #000000;"> myZipFile </span><span style="color: #0000FF;">as</span><span style="color: #000000;"> ABZipContent <br/>  <br/>  listview1.Clear<br/>  counter = myzip.ABListZip(sdRoot &amp; </span><span style="color: #800000;">"</span><span style="color: #800000;">myZipOneFile.zip</span><span style="color: #800000;">"</span><span style="color: #000000;">)<br/>  </span><span style="color: #0000FF;">For</span><span style="color: #000000;"> a = </span><span style="color: #800080;">0</span><span style="color: #000000;"> </span><span style="color: #0000FF;">To</span><span style="color: #000000;"> counter - </span><span style="color: #800080;">1</span><span style="color: #000000;"><br/>&nbsp;&nbsp;&nbsp;&nbsp;   myZipFile = myZip.ABGetListItem(a)<br/>&nbsp;&nbsp;&nbsp;&nbsp;   listview1.AddTwoLines(myZipfile.Name, </span><span style="color: #800000;">"</span><span style="color: #800000;">Size: </span><span style="color: #800000;">"</span><span style="color: #000000;"> &amp; MyZipfile.Size &amp; </span><span style="color: #800000;">"</span><span style="color: #800000;"> bytes   Compressed Size: </span><span style="color: #800000;">"</span><span style="color: #000000;"> &amp; myzipFile.CompressedSize &amp; </span><span style="color: #800000;">"</span><span style="color: #800000;"> bytes</span><span style="color: #800000;">"</span><span style="color: #000000;">)<br/>  </span><span style="color: #0000FF;">Next</span><span style="color: #000000;"><br/>  </span></span><a name='abzipunzip_abunzip'/>
+<h5><img src='images/15.png'/>
+<span style="color: #000000;">ABUnzip (zipFile </span><span style="color: #0000FF;">As</span><span style="color: #000000;"> </span><span style="color: #008B8B;">String</span><span style="color: #000000;">, targetPath </span><span style="color: #0000FF;">As</span><span style="color: #000000;"> </span><span style="color: #008B8B;">String</span><span style="color: #000000;">) </span><span style="color: #0000FF;">As</span><span style="color: #000000;"> </span><span style="color: #008B8B;">Boolean</span></h5>Unzip a zip file <br/>  <br/>  Example:<span class='pre'><span style="color: #000000;"><br/>  myZip.ABUnzip(sdRoot &amp; </span><span style="color: #800000;">"</span><span style="color: #800000;">myZip.zip</span><span style="color: #800000;">"</span><span style="color: #000000;">, sdRoot &amp; </span><span style="color: #800000;">"</span><span style="color: #800000;">target</span><span style="color: #800000;">"</span><span style="color: #000000;">)<br/>  </span></span><a name='abzipunzip_abzipdirectory'/>
+<h5><img src='images/15.png'/>
+<span style="color: #000000;">ABZipDirectory (sourceDir </span><span style="color: #0000FF;">As</span><span style="color: #000000;"> </span><span style="color: #008B8B;">String</span><span style="color: #000000;">, zipFile </span><span style="color: #0000FF;">As</span><span style="color: #000000;"> </span><span style="color: #008B8B;">String</span><span style="color: #000000;">) </span><span style="color: #0000FF;">As</span><span style="color: #000000;"> </span><span style="color: #008B8B;">Boolean</span></h5>zip a folder with all its files and subdirectories<br/>  <br/>  Example:<span class='pre'><span style="color: #000000;"><br/>  myzip.ABZipDirectory(sdRoot &amp; </span><span style="color: #800000;">"</span><span style="color: #800000;">start</span><span style="color: #800000;">"</span><span style="color: #000000;">, sdRoot &amp; </span><span style="color: #800000;">"</span><span style="color: #800000;">myZip.zip</span><span style="color: #800000;">"</span><span style="color: #000000;">)<br/>  </span></span><a name='abzipunzip_abzipfile'/>
+<h5><img src='images/15.png'/>
+<span style="color: #000000;">ABZipfile (sourcePath </span><span style="color: #0000FF;">As</span><span style="color: #000000;"> </span><span style="color: #008B8B;">String</span><span style="color: #000000;">, sourceFile </span><span style="color: #0000FF;">As</span><span style="color: #000000;"> </span><span style="color: #008B8B;">String</span><span style="color: #000000;">, zipFile </span><span style="color: #0000FF;">As</span><span style="color: #000000;"> </span><span style="color: #008B8B;">String</span><span style="color: #000000;">) </span><span style="color: #0000FF;">As</span><span style="color: #000000;"> </span><span style="color: #008B8B;">Boolean</span></h5>Zip a single file<br/>  <br/>  sourcePath must end with "/"<br/>  <br/>  Example:<span class='pre'><span style="color: #000000;"><br/>  myzip.ABZipFile(sdRoot &amp; </span><span style="color: #800000;">"</span><span style="color: #800000;">start/</span><span style="color: #800000;">"</span><span style="color: #000000;"> , </span><span style="color: #800000;">"</span><span style="color: #800000;">test4.txt</span><span style="color: #800000;">"</span><span style="color: #000000;">, sdRoot &amp; </span><span style="color: #800000;">"</span><span style="color: #800000;">myZipOneFile.zip</span><span style="color: #800000;">"</span><span style="color: #000000;">)<br/>  </span></span>
+<hr/>
+<a href="#top">Top</a>
+</body>
+</html>

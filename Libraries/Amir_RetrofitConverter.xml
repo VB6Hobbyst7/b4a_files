@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root>
+    <doclet-version-NOT-library-version>1.07</doclet-version-NOT-library-version>
+    <class>
+        <name>aghajari.retrofitcf.Converters</name>
+        <shortname>Amir_ConverterFactory</shortname>
+        <comment>Convert objects to and from their representation in HTTP. Instances are created by
+ a factory which is ( Retrofit.Builder : addConverterFactory(Factory) ) installed
+ into the Retrofit instance.</comment>
+        <owner>process</owner>
+        <event>ResponseBodyConverter (TypeName As String,TypeClass As Object,BaseUrl As String,Retrofit As Object,Annotations() As String) As Object</event>
+        <event>RequestBodyConverter (TypeName As String,TypeClass As Object,BaseUrl As String,Retrofit As Object,ParameterAnnotations() As String,MethodAnnotations() As String) As Object</event>
+        <event>StringConverter (TypeName As String,TypeClass As Object,BaseUrl As String,Retrofit As Object,Annotations() As String) As Object</event>
+        <event>ConvertRequestBody (Value As Object) As Object 'okhttp3.RequestBody</event>
+        <event>ConvertResponseBody (Value As Amir_ResponseBody) As Object</event>
+        <event>ConvertString (Value As Object) As String</event>
+        <method>
+            <name>Finalize</name>
+            <comment>throws Throwable</comment>
+            <returntype>void</returntype>
+        </method>
+        <method>
+            <name>NewStringConverter</name>
+            <comment>Get New String Convertor
+ Event : EventName_ConvertString (Value As Object) As String
+ ____________________________________________________________
+ &lt;b&gt; What is StringConverter ? &lt;/b&gt;
+  Returns a Converter for converting type to a String, or null if
+  type cannot be handled by this factory. This is used to create converters for types
+  specified by Field, FieldMap values,Header,HeaderMap,Path,Query,QueryMap values.</comment>
+            <returntype>aghajari.retrofitcf.StringConverter</returntype>
+        </method>
+        <method>
+            <name>NewResponseBodyConverter</name>
+            <comment>Get New ResponseBody Convertor
+ Event : EventName_ConvertResponseBody (Value As Amir_ResponseBody) As Object
+ ____________________________________________________________
+ &lt;b&gt; What is ResponseBodyConverter ? &lt;/b&gt;
+ Returns a Converter for converting an HTTP response body to type, or null if
+ type cannot be handled by this factory. This is used to create converters for
+ response types such as SimpleResponse from a Call(SimpleResponse)
+ declaration.</comment>
+            <returntype>aghajari.retrofitcf.ResponseBodyConverter</returntype>
+        </method>
+        <method>
+            <name>Initialize</name>
+            <comment>Creates Converter instances based on a type and target usage.</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>ba</name>
+                <type>anywheresoftware.b4a.BA</type>
+            </parameter>
+            <parameter>
+                <name>EventName</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+        <method>
+            <name>Clone</name>
+            <comment>throws CloneNotSupportedException</comment>
+            <returntype>void</returntype>
+        </method>
+        <method>
+            <name>NewRequestBodyConverter</name>
+            <comment>Get New RequestBody Convertor
+ Event : EventName_ConvertRequestBody (Value As Object) As Object 'okhttp3.RequestBody
+ ____________________________________________________________
+ &lt;b&gt; What is RequestBodyConverter (Object) ? &lt;/b&gt;
+ Returns a Converter for converting type to an HTTP request body, or null if
+ type cannot be handled by this factory. This is used to create converters for types
+ specified by Body,Part, and PartMap PartMap values.</comment>
+            <returntype>aghajari.retrofitcf.RequestBodyConverter</returntype>
+        </method>
+        <property>
+            <name>Enabled</name>
+            <returntype>boolean</returntype>
+            <parameter>
+                <name>enable</name>
+                <type>boolean</type>
+            </parameter>
+            <comment></comment>
+        </property>
+        <property>
+            <name>ConverterFactory</name>
+            <returntype>aghajari.retrofitcf.Amir_ConverterFactory</returntype>
+            <comment>Get Retrofit this Converter Factory
+ &lt;b&gt; Example : &lt;/b&gt;
+ Builder.addConverterFactory(Amir_ConverterFactory.ConverterFactory)&lt;/b&gt;</comment>
+        </property>
+    </class>
+    <version>2.48</version>
+    <author>AmirHosseinAghajari</author>
+</root>

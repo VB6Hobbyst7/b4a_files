@@ -1,0 +1,65 @@
+<HTML>
+<HEAD>
+<META http-equiv="Content-Type" content="text/html; charset=utf-8">
+<TITLE>
+Basic4android - Media Player (Core)
+</TITLE>
+<link rel="stylesheet" type="text/css" href="images/help.css" />
+
+</HEAD>
+
+<BODY BGCOLOR="white" leftmargin="50">
+<a name="top"/>
+<h1>Media Player (Core)</h1>
+
+</h5>
+<h4>List of types:</h4>
+<a href='#mediaplayer'>MediaPlayer</a><br/>
+<hr/>
+<h3><u><a name='mediaplayer'>MediaPlayer</a></u></h3>
+</h5>The MediaPlayer can be used to play audio files.<br/>See the <a href='http://www.basic4ppc.com/forum/basic4android-getting-started-tutorials/6591-mediaplayer-tutorial.html'>media player tutorial</a> for more information.<br/>NOTE: The media player should be declared as a <b>process</b> global object.
+<br/>
+
+<h4>Events:</h4>
+None
+<h4>Members:</h4><br/>
+<img src='images/19.png'/>&nbsp;&nbsp;<span style="color: #000000;"><a href='#mediaplayer_duration'><b>Duration</b></a> </span><span style="color: #0000FF;">As</span><span style="color: #000000;"> </span><span style="color: #008B8B;">Int</span><span style="color: #000000;">  [read only]</span><br/><br/>
+<img src='images/15.png'/>&nbsp;&nbsp;<span style="color: #000000;"><a href='#mediaplayer_initialize'><b>Initialize</b></a></span><br/><br/>
+<img src='images/15.png'/>&nbsp;&nbsp;<span style="color: #000000;"><a href='#mediaplayer_isplaying'><b>IsPlaying</b></a> </span><span style="color: #0000FF;">As</span><span style="color: #000000;"> </span><span style="color: #008B8B;">Boolean</span><br/><br/>
+<img src='images/15.png'/>&nbsp;&nbsp;<span style="color: #000000;"><a href='#mediaplayer_load'><b>Load</b></a> (Dir </span><span style="color: #0000FF;">As</span><span style="color: #000000;"> </span><span style="color: #008B8B;">String</span><span style="color: #000000;">, FileName </span><span style="color: #0000FF;">As</span><span style="color: #000000;"> </span><span style="color: #008B8B;">String</span><span style="color: #000000;">)</span><br/><br/>
+<img src='images/19.png'/>&nbsp;&nbsp;<span style="color: #000000;"><a href='#mediaplayer_looping'><b>Looping</b></a> </span><span style="color: #0000FF;">As</span><span style="color: #000000;"> </span><span style="color: #008B8B;">Boolean</span><br/><br/>
+<img src='images/15.png'/>&nbsp;&nbsp;<span style="color: #000000;"><a href='#mediaplayer_pause'><b>Pause</b></a></span><br/><br/>
+<img src='images/15.png'/>&nbsp;&nbsp;<span style="color: #000000;"><a href='#mediaplayer_play'><b>Play</b></a></span><br/><br/>
+<img src='images/19.png'/>&nbsp;&nbsp;<span style="color: #000000;"><a href='#mediaplayer_position'><b>Position</b></a> </span><span style="color: #0000FF;">As</span><span style="color: #000000;"> </span><span style="color: #008B8B;">Int</span><br/><br/>
+<img src='images/15.png'/>&nbsp;&nbsp;<span style="color: #000000;"><a href='#mediaplayer_release'><b>Release</b></a></span><br/><br/>
+<img src='images/15.png'/>&nbsp;&nbsp;<span style="color: #000000;"><a href='#mediaplayer_setvolume'><b>SetVolume</b></a> (Right </span><span style="color: #0000FF;">As</span><span style="color: #000000;"> </span><span style="color: #008B8B;">Float</span><span style="color: #000000;">, Left </span><span style="color: #0000FF;">As</span><span style="color: #000000;"> </span><span style="color: #008B8B;">Float</span><span style="color: #000000;">)</span><br/><br/>
+<img src='images/15.png'/>&nbsp;&nbsp;<span style="color: #000000;"><a href='#mediaplayer_stop'><b>Stop</b></a></span><br/><br/>
+
+<h4>Members description:</h4>
+<a name='mediaplayer_duration'/>
+<h5><img src='images/19.png'/>
+<span style="color: #000000;">Duration </span><span style="color: #0000FF;">As</span><span style="color: #000000;"> </span><span style="color: #008B8B;">Int</span><span style="color: #000000;">  [read only]</span></h5>Returns the total duration of the loaded file (in milliseconds).<a name='mediaplayer_initialize'/>
+<h5><img src='images/15.png'/>
+<span style="color: #000000;">Initialize</span></h5>Initializes the object.<br/>IMPORTANT: this object should be declared in Sub Process_Globals.<br/>Example:<span class='pre'><span style="color: #000000;"><br/></span><span style="color: #0000FF;">Dim</span><span style="color: #000000;"> MP </span><span style="color: #0000FF;">As</span><span style="color: #000000;"> </span><span style="color: #008B8B;">MediaPlayer</span><span style="color: #000000;"> </span><span style="color: #008000;">'</span><span style="color: #008000;">should be done in Sub Process_Globals</span><span style="color: #008000;"><br/></span><span style="color: #000000;">MP.Initialize<br/>MP.Load(File.DirAssets, </span><span style="color: #800000;">"</span><span style="color: #800000;">SomeFile.mp3</span><span style="color: #800000;">"</span><span style="color: #000000;">)<br/>MP.Play</span></span><a name='mediaplayer_isplaying'/>
+<h5><img src='images/15.png'/>
+<span style="color: #000000;">IsPlaying </span><span style="color: #0000FF;">As</span><span style="color: #000000;"> </span><span style="color: #008B8B;">Boolean</span></h5>Returns true if the media player is currently playing.<a name='mediaplayer_load'/>
+<h5><img src='images/15.png'/>
+<span style="color: #000000;">Load (Dir </span><span style="color: #0000FF;">As</span><span style="color: #000000;"> </span><span style="color: #008B8B;">String</span><span style="color: #000000;">, FileName </span><span style="color: #0000FF;">As</span><span style="color: #000000;"> </span><span style="color: #008B8B;">String</span><span style="color: #000000;">)</span></h5>Loads an audio file and prepares it for playing.<a name='mediaplayer_looping'/>
+<h5><img src='images/19.png'/>
+<span style="color: #000000;">Looping </span><span style="color: #0000FF;">As</span><span style="color: #000000;"> </span><span style="color: #008B8B;">Boolean</span></h5>Gets or sets whether the media player will restart playing automatically.<a name='mediaplayer_pause'/>
+<h5><img src='images/15.png'/>
+<span style="color: #000000;">Pause</span></h5>Pauses playback. You can resume playback from the current position by calling Play.<a name='mediaplayer_play'/>
+<h5><img src='images/15.png'/>
+<span style="color: #000000;">Play</span></h5>Starts (or resumes) playing the loaded audio file.<a name='mediaplayer_position'/>
+<h5><img src='images/19.png'/>
+<span style="color: #000000;">Position </span><span style="color: #0000FF;">As</span><span style="color: #000000;"> </span><span style="color: #008B8B;">Int</span></h5>Gets or sets the current position (in milliseconds).<a name='mediaplayer_release'/>
+<h5><img src='images/15.png'/>
+<span style="color: #000000;">Release</span></h5>Releases all resources allocated by the media player.<a name='mediaplayer_setvolume'/>
+<h5><img src='images/15.png'/>
+<span style="color: #000000;">SetVolume (Right </span><span style="color: #0000FF;">As</span><span style="color: #000000;"> </span><span style="color: #008B8B;">Float</span><span style="color: #000000;">, Left </span><span style="color: #0000FF;">As</span><span style="color: #000000;"> </span><span style="color: #008B8B;">Float</span><span style="color: #000000;">)</span></h5>Sets the playing volume for each channel. The value should be between 0 to 1.<a name='mediaplayer_stop'/>
+<h5><img src='images/15.png'/>
+<span style="color: #000000;">Stop</span></h5>Stops playing. You must call Load before trying to play again.
+<hr/>
+<a href="#top">Top</a>
+</body>
+</html>

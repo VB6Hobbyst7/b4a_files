@@ -1,0 +1,3370 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root>
+    <doclet-version-NOT-library-version>1.05</doclet-version-NOT-library-version>
+    <class>
+        <name>ir.CardView.Hitex_CardInLayoutView</name>
+        <owner>process</owner>
+        <method>
+            <name>PreventCornerOverlap</name>
+            <comment></comment>
+            <returntype>ir.CardView.Hitex_CardInLayoutView</returntype>
+            <parameter>
+                <name>PreventCornerOverlap</name>
+                <type>boolean</type>
+            </parameter>
+        </method>
+        <method>
+            <name>Radius</name>
+            <comment></comment>
+            <returntype>ir.CardView.Hitex_CardInLayoutView</returntype>
+            <parameter>
+                <name>Radius</name>
+                <type>float</type>
+            </parameter>
+        </method>
+        <method>
+            <name>Margins</name>
+            <comment></comment>
+            <returntype>ir.CardView.Hitex_CardInLayoutView</returntype>
+            <parameter>
+                <name>Left</name>
+                <type>int</type>
+            </parameter>
+            <parameter>
+                <name>Top</name>
+                <type>int</type>
+            </parameter>
+            <parameter>
+                <name>Right</name>
+                <type>int</type>
+            </parameter>
+            <parameter>
+                <name>Bottom</name>
+                <type>int</type>
+            </parameter>
+        </method>
+        <method>
+            <name>UseCompatPadding</name>
+            <comment>Add padding in API v21+ as well to have the same measurements with previous versions.</comment>
+            <returntype>ir.CardView.Hitex_CardInLayoutView</returntype>
+            <parameter>
+                <name>UseCompatPadding</name>
+                <type>boolean</type>
+            </parameter>
+        </method>
+        <method>
+            <name>MaxElevation</name>
+            <comment></comment>
+            <returntype>ir.CardView.Hitex_CardInLayoutView</returntype>
+            <parameter>
+                <name>MaxElevation</name>
+                <type>float</type>
+            </parameter>
+        </method>
+        <method>
+            <name>CardElevation</name>
+            <comment></comment>
+            <returntype>ir.CardView.Hitex_CardInLayoutView</returntype>
+            <parameter>
+                <name>CardElevation</name>
+                <type>float</type>
+            </parameter>
+        </method>
+        <method>
+            <name>BackgroundColor</name>
+            <comment></comment>
+            <returntype>ir.CardView.Hitex_CardInLayoutView</returntype>
+            <parameter>
+                <name>BackgroundColor</name>
+                <type>int</type>
+            </parameter>
+        </method>
+    </class>
+    <class>
+        <name>ir.FastScroll.Hitex_FastScroll</name>
+        <owner>process</owner>
+        <method>
+            <name>TrackColor</name>
+            <comment></comment>
+            <returntype>ir.FastScroll.Hitex_FastScroll</returntype>
+            <parameter>
+                <name>Color</name>
+                <type>int</type>
+            </parameter>
+        </method>
+        <method>
+            <name>Margins</name>
+            <comment>Just for Type 1 and 2</comment>
+            <returntype>ir.FastScroll.Hitex_FastScroll</returntype>
+            <parameter>
+                <name>Left</name>
+                <type>int</type>
+            </parameter>
+            <parameter>
+                <name>Top</name>
+                <type>int</type>
+            </parameter>
+            <parameter>
+                <name>Right</name>
+                <type>int</type>
+            </parameter>
+            <parameter>
+                <name>Bottom</name>
+                <type>int</type>
+            </parameter>
+        </method>
+        <method>
+            <name>Padding</name>
+            <comment>Just for Type 1 and 2</comment>
+            <returntype>ir.FastScroll.Hitex_FastScroll</returntype>
+            <parameter>
+                <name>Left</name>
+                <type>int</type>
+            </parameter>
+            <parameter>
+                <name>Top</name>
+                <type>int</type>
+            </parameter>
+            <parameter>
+                <name>Right</name>
+                <type>int</type>
+            </parameter>
+            <parameter>
+                <name>Bottom</name>
+                <type>int</type>
+            </parameter>
+        </method>
+        <method>
+            <name>HandleColor</name>
+            <comment></comment>
+            <returntype>ir.FastScroll.Hitex_FastScroll</returntype>
+            <parameter>
+                <name>Color</name>
+                <type>int</type>
+            </parameter>
+        </method>
+        <method>
+            <name>TextSize</name>
+            <comment></comment>
+            <returntype>ir.FastScroll.Hitex_FastScroll</returntype>
+            <parameter>
+                <name>TextSize</name>
+                <type>float</type>
+            </parameter>
+        </method>
+        <method>
+            <name>TextColor</name>
+            <comment></comment>
+            <returntype>ir.FastScroll.Hitex_FastScroll</returntype>
+            <parameter>
+                <name>Color</name>
+                <type>int</type>
+            </parameter>
+        </method>
+        <method>
+            <name>BubbleColor</name>
+            <comment></comment>
+            <returntype>ir.FastScroll.Hitex_FastScroll</returntype>
+            <parameter>
+                <name>Color</name>
+                <type>int</type>
+            </parameter>
+        </method>
+        <method>
+            <name>AutoHideDelay</name>
+            <comment></comment>
+            <returntype>ir.FastScroll.Hitex_FastScroll</returntype>
+            <parameter>
+                <name>Delay</name>
+                <type>int</type>
+            </parameter>
+        </method>
+    </class>
+    <class>
+        <name>ir.ItemDecoration.Hi_ItemDecoration</name>
+        <owner>process</owner>
+        <method>
+            <name>Add3</name>
+            <comment>Example 3 : &lt;code&gt;
+ Dim BD As BitmapDrawable
+ BD.Initialize(LoadBitmap(File.DirAssets,"divider.png"))
+ LV.Divider.Add3(BD,25dip)
+ &lt;/code&gt;</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>Drawable</name>
+                <type>android.graphics.drawable.Drawable</type>
+            </parameter>
+            <parameter>
+                <name>Size</name>
+                <type>int</type>
+            </parameter>
+        </method>
+        <method>
+            <name>Add2</name>
+            <comment>Example 2 : &lt;code&gt; LV.Divider.Add2(Colors.Gray,1dip,8dip,8dip) &lt;/code&gt;</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>Color</name>
+                <type>int</type>
+            </parameter>
+            <parameter>
+                <name>Size</name>
+                <type>int</type>
+            </parameter>
+            <parameter>
+                <name>Left_Or_Top_Margin</name>
+                <type>int</type>
+            </parameter>
+            <parameter>
+                <name>Right_Or_Bottom_Margin</name>
+                <type>int</type>
+            </parameter>
+        </method>
+        <method>
+            <name>Add1</name>
+            <comment>Example 1 : &lt;code&gt; LV.Divider.Add1(Colors.Gray,1dip) &lt;/code&gt;</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>Color</name>
+                <type>int</type>
+            </parameter>
+            <parameter>
+                <name>Size</name>
+                <type>int</type>
+            </parameter>
+        </method>
+    </class>
+    <class>
+        <name>ir.Ripple.Hitex_Ripple</name>
+        <owner>process</owner>
+        <method>
+            <name>DiameterDp</name>
+            <comment></comment>
+            <returntype>ir.Ripple.Hitex_Ripple</returntype>
+            <parameter>
+                <name>DiameterDp</name>
+                <type>int</type>
+            </parameter>
+        </method>
+        <method>
+            <name>Background</name>
+            <comment></comment>
+            <returntype>ir.Ripple.Hitex_Ripple</returntype>
+            <parameter>
+                <name>Background</name>
+                <type>int</type>
+            </parameter>
+        </method>
+        <method>
+            <name>Hover</name>
+            <comment></comment>
+            <returntype>ir.Ripple.Hitex_Ripple</returntype>
+            <parameter>
+                <name>Hover</name>
+                <type>boolean</type>
+            </parameter>
+        </method>
+        <method>
+            <name>Color</name>
+            <comment></comment>
+            <returntype>ir.Ripple.Hitex_Ripple</returntype>
+            <parameter>
+                <name>Color</name>
+                <type>int</type>
+            </parameter>
+        </method>
+        <method>
+            <name>Alpha</name>
+            <comment></comment>
+            <returntype>ir.Ripple.Hitex_Ripple</returntype>
+            <parameter>
+                <name>Alpha</name>
+                <type>float</type>
+            </parameter>
+        </method>
+        <method>
+            <name>FadeDuration</name>
+            <comment></comment>
+            <returntype>ir.Ripple.Hitex_Ripple</returntype>
+            <parameter>
+                <name>FadeDuration</name>
+                <type>int</type>
+            </parameter>
+        </method>
+        <method>
+            <name>Duration</name>
+            <comment></comment>
+            <returntype>ir.Ripple.Hitex_Ripple</returntype>
+            <parameter>
+                <name>Duration</name>
+                <type>int</type>
+            </parameter>
+        </method>
+        <method>
+            <name>Persistent</name>
+            <comment></comment>
+            <returntype>ir.Ripple.Hitex_Ripple</returntype>
+            <parameter>
+                <name>Persistent</name>
+                <type>boolean</type>
+            </parameter>
+        </method>
+        <method>
+            <name>RoundedCorners</name>
+            <comment></comment>
+            <returntype>ir.Ripple.Hitex_Ripple</returntype>
+            <parameter>
+                <name>RoundedCorners</name>
+                <type>int</type>
+            </parameter>
+        </method>
+        <method>
+            <name>Overlay</name>
+            <comment></comment>
+            <returntype>ir.Ripple.Hitex_Ripple</returntype>
+            <parameter>
+                <name>Overlay</name>
+                <type>boolean</type>
+            </parameter>
+        </method>
+        <method>
+            <name>DelayClick</name>
+            <comment></comment>
+            <returntype>ir.Ripple.Hitex_Ripple</returntype>
+            <parameter>
+                <name>DelayClick</name>
+                <type>boolean</type>
+            </parameter>
+        </method>
+    </class>
+    <class>
+        <name>ir.Type.Hitex_LimitStaggeredRecyclerView</name>
+        <owner>process</owner>
+        <method>
+            <name>Horizontal</name>
+            <comment>Just for Hitex_LayoutView</comment>
+            <returntype>ir.Type.Hitex_LimitStaggeredRecyclerView</returntype>
+        </method>
+        <method>
+            <name>Header</name>
+            <comment>Adds a parent on top of 'RecyclerView'</comment>
+            <returntype>ir.Type.Hitex_LimitStaggeredRecyclerView</returntype>
+            <parameter>
+                <name>Height</name>
+                <type Pixel="true">int</type>
+            </parameter>
+        </method>
+        <method>
+            <name>ReverseLayout</name>
+            <comment>Used to reverse item traversal and layout order.</comment>
+            <returntype>ir.Type.Hitex_LimitStaggeredRecyclerView</returntype>
+        </method>
+        <method>
+            <name>RefreshLayout</name>
+            <comment>Adds a parent with 'RefreshLayout' behind of 'RecyclerView'</comment>
+            <returntype>ir.Type.Hitex_LimitStaggeredRecyclerView</returntype>
+        </method>
+        <method>
+            <name>GapStrategy</name>
+            <comment>Sets the gap handling strategy for StaggeredGridLayoutManager.
+
+ Pass 0 for "GAP_HANDLING_NONE"
+ Pass 1 for "GAP_HANDLING_MOVE_ITEMS_BETWEEN_SPANS"
+ Pass 2 for "GAP_HANDLING_LAZY" &lt;b&gt;DEPRECATED&lt;/b&gt;
+
+ Staggered grids are likely to have gaps at the edges of the layout. To avoid these gaps, StaggeredGridLayoutManager can offset spans independently or move items between spans</comment>
+            <returntype>ir.Type.Hitex_LimitStaggeredRecyclerView</returntype>
+            <parameter>
+                <name>Strategy</name>
+                <type>int</type>
+            </parameter>
+        </method>
+        <method>
+            <name>Build</name>
+            <comment>Don't foregt to add this to end point of Initializer.</comment>
+            <returntype>void</returntype>
+        </method>
+        <method>
+            <name>Footer</name>
+            <comment>Adds a parent on bottom of 'RecyclerView'</comment>
+            <returntype>ir.Type.Hitex_LimitStaggeredRecyclerView</returntype>
+            <parameter>
+                <name>Height</name>
+                <type Pixel="true">int</type>
+            </parameter>
+        </method>
+        <method>
+            <name>FastScrollType</name>
+            <comment>1
+ 2
+ 3 (if someone there needs to hide the bubble hint, just set the return value in 'GetFastscrollSectionTitle' as an empty String (return ""))</comment>
+            <returntype>ir.Type.Hitex_LimitStaggeredRecyclerView</returntype>
+            <parameter>
+                <name>Type</name>
+                <type>int</type>
+            </parameter>
+        </method>
+    </class>
+    <class>
+        <name>ir.Type.Hitex_RecyclerView</name>
+        <owner>process</owner>
+        <method>
+            <name>Horizontal</name>
+            <comment>Just for Hitex_LayoutView</comment>
+            <returntype>ir.Type.Hitex_RecyclerView</returntype>
+        </method>
+        <method>
+            <name>ReverseLayout</name>
+            <comment>Used to reverse item traversal and layout order.</comment>
+            <returntype>ir.Type.Hitex_RecyclerView</returntype>
+        </method>
+        <method>
+            <name>StackFromEnd</name>
+            <comment>The list fills its content starting from the bottom of the view.</comment>
+            <returntype>ir.Type.Hitex_RecyclerView</returntype>
+        </method>
+        <method>
+            <name>Header</name>
+            <comment>Adds a parent on top of 'RecyclerView'</comment>
+            <returntype>ir.Type.Hitex_RecyclerView</returntype>
+            <parameter>
+                <name>Height</name>
+                <type Pixel="true">int</type>
+            </parameter>
+        </method>
+        <method>
+            <name>RefreshLayout</name>
+            <comment>Adds a parent with 'RefreshLayout' behind of 'RecyclerView'</comment>
+            <returntype>ir.Type.Hitex_RecyclerView</returntype>
+        </method>
+        <method>
+            <name>Build</name>
+            <comment>Don't foregt to add this to end point of Initializer.</comment>
+            <returntype>void</returntype>
+        </method>
+        <method>
+            <name>Footer</name>
+            <comment>Adds a parent on bottom of 'RecyclerView'</comment>
+            <returntype>ir.Type.Hitex_RecyclerView</returntype>
+            <parameter>
+                <name>Height</name>
+                <type Pixel="true">int</type>
+            </parameter>
+        </method>
+        <method>
+            <name>RTL</name>
+            <comment>sets layout from Right To Left</comment>
+            <returntype>ir.Type.Hitex_RecyclerView</returntype>
+        </method>
+        <method>
+            <name>FastScrollType</name>
+            <comment>1
+ 2
+ 3 (if someone there needs to hide the bubble hint, just set the return value in 'GetFastscrollSectionTitle' as an empty String (return ""))</comment>
+            <returntype>ir.Type.Hitex_RecyclerView</returntype>
+            <parameter>
+                <name>Type</name>
+                <type>int</type>
+            </parameter>
+        </method>
+        <method>
+            <name>SmoothScrollSpeedFactor</name>
+            <comment>Just works for 'ListView' and 'GridView'</comment>
+            <returntype>ir.Type.Hitex_RecyclerView</returntype>
+            <parameter>
+                <name>SpeedFactor</name>
+                <type>float</type>
+            </parameter>
+        </method>
+    </class>
+    <class>
+        <name>ir.Type.Hitex_SwitchTypeRequest</name>
+        <owner>process</owner>
+        <method>
+            <name>StaggeredGridView</name>
+            <comment>A LayoutManager that lays out children in a staggered grid formation. It supports horizontal &amp;amp; vertical layout as well as an ability to layout children in reverse.
+ SpanCount: Sets the number of spans to be laid out.</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>SpanCount</name>
+                <type>int</type>
+            </parameter>
+        </method>
+        <method>
+            <name>ListView</name>
+            <comment>ListView LinearLayout is a view group that aligns all children in a single direction, vertically or horizontally.</comment>
+            <returntype>void</returntype>
+        </method>
+        <method>
+            <name>GridView</name>
+            <comment>A layout that places its children in a rectangular grid.
+ SpanCount: Sets the number of spans to be laid out.</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>SpanCount</name>
+                <type>int</type>
+            </parameter>
+        </method>
+    </class>
+    <class>
+        <name>ir.Type.Hitex_TypeRequest</name>
+        <owner>process</owner>
+        <method>
+            <name>StaggeredGridView</name>
+            <comment>A LayoutManager that lays out children in a staggered grid formation. It supports horizontal &amp;amp; vertical layout as well as an ability to layout children in reverse.
+ SpanCount: Sets the number of spans to be laid out.</comment>
+            <returntype>ir.Type.Hitex_LimitStaggeredRecyclerView</returntype>
+            <parameter>
+                <name>SpanCount</name>
+                <type>int</type>
+            </parameter>
+        </method>
+        <method>
+            <name>ListView</name>
+            <comment>ListView LinearLayout is a view group that aligns all children in a single direction, vertically or horizontally.</comment>
+            <returntype>ir.Type.Hitex_RecyclerView</returntype>
+        </method>
+        <method>
+            <name>GridView</name>
+            <comment>A layout that places its children in a rectangular grid.
+ SpanCount: Sets the number of spans to be laid out.</comment>
+            <returntype>ir.Type.Hitex_RecyclerView</returntype>
+            <parameter>
+                <name>SpanCount</name>
+                <type>int</type>
+            </parameter>
+        </method>
+    </class>
+    <class>
+        <name>ir.Type.Hi_Swipeable</name>
+        <owner>process</owner>
+        <method>
+            <name>SwipeEnable</name>
+            <comment>Default is true</comment>
+            <returntype>ir.Type.Hi_Swipeable</returntype>
+            <parameter>
+                <name>Enable</name>
+                <type>boolean</type>
+            </parameter>
+        </method>
+        <method>
+            <name>Ios</name>
+            <comment>Default is true</comment>
+            <returntype>ir.Type.Hi_Swipeable</returntype>
+            <parameter>
+                <name>Ios</name>
+                <type>boolean</type>
+            </parameter>
+        </method>
+        <method>
+            <name>LeftSwipe</name>
+            <comment>Default is true</comment>
+            <returntype>ir.Type.Hi_Swipeable</returntype>
+            <parameter>
+                <name>LeftSwipe</name>
+                <type>boolean</type>
+            </parameter>
+        </method>
+    </class>
+    <class>
+        <name>wir.hitex.recycler.CustomPanelWrapper</name>
+        <objectwrapper>android.view.ViewGroup</objectwrapper>
+        <owner>process</owner>
+        <method>
+            <name>GetView</name>
+            <comment></comment>
+            <returntype>anywheresoftware.b4a.objects.ConcreteViewWrapper</returntype>
+            <parameter>
+                <name>arg0</name>
+                <type>int</type>
+            </parameter>
+        </method>
+        <method>
+            <name>AddView</name>
+            <comment></comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>arg0</name>
+                <type>android.view.View</type>
+            </parameter>
+            <parameter>
+                <name>arg1</name>
+                <type>int</type>
+            </parameter>
+            <parameter>
+                <name>arg2</name>
+                <type>int</type>
+            </parameter>
+            <parameter>
+                <name>arg3</name>
+                <type>int</type>
+            </parameter>
+            <parameter>
+                <name>arg4</name>
+                <type>int</type>
+            </parameter>
+        </method>
+        <method>
+            <name>IsInitialized</name>
+            <comment></comment>
+            <returntype>boolean</returntype>
+        </method>
+        <method>
+            <name>GetAllViewsRecursive</name>
+            <comment></comment>
+            <returntype>anywheresoftware.b4a.BA.IterableList</returntype>
+        </method>
+        <method>
+            <name>BringToFront</name>
+            <comment></comment>
+            <returntype>void</returntype>
+        </method>
+        <method>
+            <name>SetLayout</name>
+            <comment></comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>arg0</name>
+                <type Pixel="true">int</type>
+            </parameter>
+            <parameter>
+                <name>arg1</name>
+                <type Pixel="true">int</type>
+            </parameter>
+            <parameter>
+                <name>arg2</name>
+                <type Pixel="true">int</type>
+            </parameter>
+            <parameter>
+                <name>arg3</name>
+                <type Pixel="true">int</type>
+            </parameter>
+        </method>
+        <method>
+            <name>RemoveViewAt</name>
+            <comment></comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>arg0</name>
+                <type>int</type>
+            </parameter>
+        </method>
+        <method>
+            <name>SendToBack</name>
+            <comment></comment>
+            <returntype>void</returntype>
+        </method>
+        <method>
+            <name>SetVisibleAnimated</name>
+            <comment></comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>arg0</name>
+                <type>int</type>
+            </parameter>
+            <parameter>
+                <name>arg1</name>
+                <type>boolean</type>
+            </parameter>
+        </method>
+        <method>
+            <name>RemoveView</name>
+            <comment></comment>
+            <returntype>void</returntype>
+        </method>
+        <method>
+            <name>Invalidate3</name>
+            <comment></comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>arg0</name>
+                <type>int</type>
+            </parameter>
+            <parameter>
+                <name>arg1</name>
+                <type>int</type>
+            </parameter>
+            <parameter>
+                <name>arg2</name>
+                <type>int</type>
+            </parameter>
+            <parameter>
+                <name>arg3</name>
+                <type>int</type>
+            </parameter>
+        </method>
+        <method>
+            <name>Invalidate2</name>
+            <comment></comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>arg0</name>
+                <type>android.graphics.Rect</type>
+            </parameter>
+        </method>
+        <method>
+            <name RaisesSynchronousEvents="true">LoadLayout</name>
+            <comment></comment>
+            <returntype>anywheresoftware.b4a.keywords.LayoutValues</returntype>
+            <parameter>
+                <name>arg0</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>arg1</name>
+                <type>anywheresoftware.b4a.BA</type>
+            </parameter>
+        </method>
+        <method>
+            <name>SetColorAnimated</name>
+            <comment></comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>arg0</name>
+                <type>int</type>
+            </parameter>
+            <parameter>
+                <name>arg1</name>
+                <type>int</type>
+            </parameter>
+            <parameter>
+                <name>arg2</name>
+                <type>int</type>
+            </parameter>
+        </method>
+        <method>
+            <name DesignerName="SetBackgroundImage">SetBackgroundImageNew</name>
+            <comment></comment>
+            <returntype>anywheresoftware.b4a.objects.drawable.BitmapDrawable</returntype>
+            <parameter>
+                <name>arg0</name>
+                <type>android.graphics.Bitmap</type>
+            </parameter>
+        </method>
+        <method>
+            <name>SetElevationAnimated</name>
+            <comment></comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>arg0</name>
+                <type>int</type>
+            </parameter>
+            <parameter>
+                <name>arg1</name>
+                <type Pixel="true">float</type>
+            </parameter>
+        </method>
+        <method>
+            <name>RemoveAllViews</name>
+            <comment></comment>
+            <returntype>void</returntype>
+        </method>
+        <method>
+            <name>Invalidate</name>
+            <comment></comment>
+            <returntype>void</returntype>
+        </method>
+        <method>
+            <name>SetLayoutAnimated</name>
+            <comment></comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>arg0</name>
+                <type>int</type>
+            </parameter>
+            <parameter>
+                <name>arg1</name>
+                <type Pixel="true">int</type>
+            </parameter>
+            <parameter>
+                <name>arg2</name>
+                <type Pixel="true">int</type>
+            </parameter>
+            <parameter>
+                <name>arg3</name>
+                <type Pixel="true">int</type>
+            </parameter>
+            <parameter>
+                <name>arg4</name>
+                <type Pixel="true">int</type>
+            </parameter>
+        </method>
+        <method>
+            <name>RequestFocus</name>
+            <comment></comment>
+            <returntype>boolean</returntype>
+        </method>
+        <property>
+            <name>Background</name>
+            <returntype>android.graphics.drawable.Drawable</returntype>
+            <parameter>
+                <name>arg0</name>
+                <type>android.graphics.drawable.Drawable</type>
+            </parameter>
+            <comment></comment>
+        </property>
+        <property>
+            <name>Parent</name>
+            <returntype>java.lang.Object</returntype>
+            <comment></comment>
+        </property>
+        <property>
+            <name>Color</name>
+            <parameter>
+                <name>arg0</name>
+                <type>int</type>
+            </parameter>
+            <comment></comment>
+        </property>
+        <property>
+            <name>NumberOfViews</name>
+            <returntype>int</returntype>
+            <comment></comment>
+        </property>
+        <property>
+            <name>Enabled</name>
+            <returntype>boolean</returntype>
+            <parameter>
+                <name>arg0</name>
+                <type>boolean</type>
+            </parameter>
+            <comment></comment>
+        </property>
+        <property>
+            <name>Elevation</name>
+            <returntype>float</returntype>
+            <parameter>
+                <name>arg0</name>
+                <type Pixel="true">float</type>
+            </parameter>
+            <comment></comment>
+        </property>
+        <property>
+            <name>Visible</name>
+            <returntype>boolean</returntype>
+            <parameter>
+                <name>arg0</name>
+                <type>boolean</type>
+            </parameter>
+            <comment></comment>
+        </property>
+        <property>
+            <name>Padding</name>
+            <returntype>int[]</returntype>
+            <parameter>
+                <name>arg0</name>
+                <type>int[]</type>
+            </parameter>
+            <comment></comment>
+        </property>
+        <property>
+            <name>Tag</name>
+            <returntype>java.lang.Object</returntype>
+            <parameter>
+                <name>arg0</name>
+                <type>java.lang.Object</type>
+            </parameter>
+            <comment></comment>
+        </property>
+        <property>
+            <name>Width</name>
+            <returntype>int</returntype>
+            <parameter>
+                <name>arg0</name>
+                <type Pixel="true">int</type>
+            </parameter>
+            <comment></comment>
+        </property>
+    </class>
+    <class>
+        <name>wir.hitex.recycler.Hitex_CardView</name>
+        <shortname>Hitex_CardView</shortname>
+        <objectwrapper>layout.b4a.view.CustomCardView</objectwrapper>
+        <owner>activity</owner>
+        <event>Click</event>
+        <event>LongClick</event>
+        <method>
+            <name>DesignerCreateView</name>
+            <comment></comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>base</name>
+                <type>anywheresoftware.b4a.objects.PanelWrapper</type>
+            </parameter>
+            <parameter>
+                <name>labelWrapper</name>
+                <type>anywheresoftware.b4a.objects.LabelWrapper</type>
+            </parameter>
+            <parameter>
+                <name>map</name>
+                <type>anywheresoftware.b4a.objects.collections.Map</type>
+            </parameter>
+        </method>
+        <method>
+            <name>IsInitialized</name>
+            <comment></comment>
+            <returntype>boolean</returntype>
+        </method>
+        <method>
+            <name>Initialize</name>
+            <comment></comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>ba</name>
+                <type>anywheresoftware.b4a.BA</type>
+            </parameter>
+            <parameter>
+                <name>EventName</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+        <method>
+            <name>BringToFront</name>
+            <comment></comment>
+            <returntype>void</returntype>
+        </method>
+        <method>
+            <name>SetLayout</name>
+            <comment></comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>arg0</name>
+                <type Pixel="true">int</type>
+            </parameter>
+            <parameter>
+                <name>arg1</name>
+                <type Pixel="true">int</type>
+            </parameter>
+            <parameter>
+                <name>arg2</name>
+                <type Pixel="true">int</type>
+            </parameter>
+            <parameter>
+                <name>arg3</name>
+                <type Pixel="true">int</type>
+            </parameter>
+        </method>
+        <method>
+            <name>SendToBack</name>
+            <comment></comment>
+            <returntype>void</returntype>
+        </method>
+        <method>
+            <name>ContentPadding</name>
+            <comment>&lt;code&gt;CV.ContentPadding = Array As Int(10Dip, 10Dip, 10Dip, 10Dip)&lt;/code&gt;</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>ContentPadding</name>
+                <type>int[]</type>
+            </parameter>
+        </method>
+        <method>
+            <name>SetVisibleAnimated</name>
+            <comment></comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>arg0</name>
+                <type>int</type>
+            </parameter>
+            <parameter>
+                <name>arg1</name>
+                <type>boolean</type>
+            </parameter>
+        </method>
+        <method>
+            <name>RemoveView</name>
+            <comment></comment>
+            <returntype>void</returntype>
+        </method>
+        <method>
+            <name>SetColorAnimated</name>
+            <comment></comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>arg0</name>
+                <type>int</type>
+            </parameter>
+            <parameter>
+                <name>arg1</name>
+                <type>int</type>
+            </parameter>
+            <parameter>
+                <name>arg2</name>
+                <type>int</type>
+            </parameter>
+        </method>
+        <method>
+            <name DesignerName="SetBackgroundImage">SetBackgroundImageNew</name>
+            <comment></comment>
+            <returntype>anywheresoftware.b4a.objects.drawable.BitmapDrawable</returntype>
+            <parameter>
+                <name>arg0</name>
+                <type>android.graphics.Bitmap</type>
+            </parameter>
+        </method>
+        <method>
+            <name>Invalidate</name>
+            <comment></comment>
+            <returntype>void</returntype>
+        </method>
+        <method>
+            <name>SetLayoutAnimated</name>
+            <comment></comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>arg0</name>
+                <type>int</type>
+            </parameter>
+            <parameter>
+                <name>arg1</name>
+                <type Pixel="true">int</type>
+            </parameter>
+            <parameter>
+                <name>arg2</name>
+                <type Pixel="true">int</type>
+            </parameter>
+            <parameter>
+                <name>arg3</name>
+                <type Pixel="true">int</type>
+            </parameter>
+            <parameter>
+                <name>arg4</name>
+                <type Pixel="true">int</type>
+            </parameter>
+        </method>
+        <method>
+            <name>RequestFocus</name>
+            <comment></comment>
+            <returntype>boolean</returntype>
+        </method>
+        <property>
+            <name>Radius</name>
+            <returntype>float</returntype>
+            <parameter>
+                <name>radius</name>
+                <type>float</type>
+            </parameter>
+            <comment></comment>
+        </property>
+        <property>
+            <name>Left</name>
+            <returntype>int</returntype>
+            <parameter>
+                <name>arg0</name>
+                <type Pixel="true">int</type>
+            </parameter>
+            <comment></comment>
+        </property>
+        <property>
+            <name>Background</name>
+            <returntype>android.graphics.drawable.Drawable</returntype>
+            <parameter>
+                <name>arg0</name>
+                <type>android.graphics.drawable.Drawable</type>
+            </parameter>
+            <comment></comment>
+        </property>
+        <property>
+            <name>Parent</name>
+            <returntype>java.lang.Object</returntype>
+            <comment></comment>
+        </property>
+        <property>
+            <name>Color</name>
+            <parameter>
+                <name>arg0</name>
+                <type>int</type>
+            </parameter>
+            <comment></comment>
+        </property>
+        <property>
+            <name>Enabled</name>
+            <returntype>boolean</returntype>
+            <parameter>
+                <name>arg0</name>
+                <type>boolean</type>
+            </parameter>
+            <comment></comment>
+        </property>
+        <property>
+            <name>MaxElevation</name>
+            <returntype>float</returntype>
+            <parameter>
+                <name>elevation</name>
+                <type>float</type>
+            </parameter>
+            <comment></comment>
+        </property>
+        <property>
+            <name>PreventCornerOverlap</name>
+            <parameter>
+                <name>PreventCornerOverlap</name>
+                <type>boolean</type>
+            </parameter>
+            <comment></comment>
+        </property>
+        <property>
+            <name>Panel</name>
+            <returntype>anywheresoftware.b4a.objects.PanelWrapper</returntype>
+            <comment></comment>
+        </property>
+        <property>
+            <name>Elevation</name>
+            <returntype>float</returntype>
+            <parameter>
+                <name>elevation</name>
+                <type>float</type>
+            </parameter>
+            <comment></comment>
+        </property>
+        <property>
+            <name>Top</name>
+            <returntype>int</returntype>
+            <parameter>
+                <name>arg0</name>
+                <type Pixel="true">int</type>
+            </parameter>
+            <comment></comment>
+        </property>
+        <property>
+            <name>Visible</name>
+            <returntype>boolean</returntype>
+            <parameter>
+                <name>arg0</name>
+                <type>boolean</type>
+            </parameter>
+            <comment></comment>
+        </property>
+        <property>
+            <name>Padding</name>
+            <returntype>int[]</returntype>
+            <parameter>
+                <name>arg0</name>
+                <type>int[]</type>
+            </parameter>
+            <comment></comment>
+        </property>
+        <property>
+            <name>UseCompatPadding</name>
+            <parameter>
+                <name>UseCompatPadding</name>
+                <type>boolean</type>
+            </parameter>
+            <comment></comment>
+        </property>
+        <property>
+            <name>Height</name>
+            <returntype>int</returntype>
+            <parameter>
+                <name>arg0</name>
+                <type Pixel="true">int</type>
+            </parameter>
+            <comment></comment>
+        </property>
+        <property>
+            <name>Tag</name>
+            <returntype>java.lang.Object</returntype>
+            <parameter>
+                <name>arg0</name>
+                <type>java.lang.Object</type>
+            </parameter>
+            <comment></comment>
+        </property>
+        <property>
+            <name>Width</name>
+            <returntype>int</returntype>
+            <parameter>
+                <name>arg0</name>
+                <type Pixel="true">int</type>
+            </parameter>
+            <comment></comment>
+        </property>
+    </class>
+    <class>
+        <name>wir.hitex.recycler.Hitex_ExpandableView</name>
+        <shortname>Hitex_ExpandableView</shortname>
+        <objectwrapper>android.support.v7.widget.RecyclerView</objectwrapper>
+        <owner>activity</owner>
+        <event>onPreOpen (Position As Int)</event>
+        <event>onPreClose (Position As Int)</event>
+        <event>onTitleClick (Position As Int)</event>
+        <event>onDescriptionClick (Position As Int)</event>
+        <method>
+            <name>DesignerCreateView</name>
+            <comment></comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>base</name>
+                <type>anywheresoftware.b4a.objects.PanelWrapper</type>
+            </parameter>
+            <parameter>
+                <name>labelWrapper</name>
+                <type>anywheresoftware.b4a.objects.LabelWrapper</type>
+            </parameter>
+            <parameter>
+                <name>map</name>
+                <type>anywheresoftware.b4a.objects.collections.Map</type>
+            </parameter>
+        </method>
+        <method>
+            <name>AddItem</name>
+            <comment>Just call before 'Show' method.</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>Title</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>Description</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>TitleBackgroundColor</name>
+                <type>int</type>
+            </parameter>
+            <parameter>
+                <name>DescriptionBackgroundColor</name>
+                <type>int</type>
+            </parameter>
+        </method>
+        <method>
+            <name>IsInitialized</name>
+            <comment></comment>
+            <returntype>boolean</returntype>
+        </method>
+        <method>
+            <name>Initialize</name>
+            <comment></comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>ba</name>
+                <type>anywheresoftware.b4a.BA</type>
+            </parameter>
+            <parameter>
+                <name>EventName</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+        <method>
+            <name>ItemTouchOnMove</name>
+            <comment></comment>
+            <returntype>void</returntype>
+        </method>
+        <method>
+            <name>BringToFront</name>
+            <comment></comment>
+            <returntype>void</returntype>
+        </method>
+        <method>
+            <name>IsExpanded</name>
+            <comment></comment>
+            <returntype>boolean</returntype>
+            <parameter>
+                <name>Position</name>
+                <type>int</type>
+            </parameter>
+        </method>
+        <method>
+            <name>SendToBack</name>
+            <comment></comment>
+            <returntype>void</returntype>
+        </method>
+        <method>
+            <name>GetLabelDescription</name>
+            <comment>&lt;code&gt;Dim lblDescription As Label = LV.GetLabelDescription(Position)&lt;/code&gt;</comment>
+            <returntype>anywheresoftware.b4a.objects.LabelWrapper</returntype>
+            <parameter>
+                <name>Position</name>
+                <type>int</type>
+            </parameter>
+        </method>
+        <method>
+            <name>FooterEnabled</name>
+            <comment></comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>Height</name>
+                <type Pixel="true">int</type>
+            </parameter>
+        </method>
+        <method>
+            <name>Collapse</name>
+            <comment></comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>Position</name>
+                <type>int</type>
+            </parameter>
+        </method>
+        <method>
+            <name>ChangeItemAt</name>
+            <comment></comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>Title</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>Description</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>TitleBackgroundColor</name>
+                <type>int</type>
+            </parameter>
+            <parameter>
+                <name>DescriptionBackgroundColor</name>
+                <type>int</type>
+            </parameter>
+            <parameter>
+                <name>Position</name>
+                <type>int</type>
+            </parameter>
+        </method>
+        <method>
+            <name>RemoveView</name>
+            <comment></comment>
+            <returntype>void</returntype>
+        </method>
+        <method>
+            <name>FooterRemoveView</name>
+            <comment></comment>
+            <returntype>void</returntype>
+        </method>
+        <method>
+            <name>AddItemAt</name>
+            <comment></comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>Title</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>Description</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>TitleBackgroundColor</name>
+                <type>int</type>
+            </parameter>
+            <parameter>
+                <name>DescriptionBackgroundColor</name>
+                <type>int</type>
+            </parameter>
+            <parameter>
+                <name>Position</name>
+                <type>int</type>
+            </parameter>
+        </method>
+        <method>
+            <name>GetLabelTitle</name>
+            <comment>&lt;code&gt;Dim lblDescription As Label = LV.GetLabelTitle(Position)&lt;/code&gt;</comment>
+            <returntype>anywheresoftware.b4a.objects.LabelWrapper</returntype>
+            <parameter>
+                <name>Position</name>
+                <type>int</type>
+            </parameter>
+        </method>
+        <method>
+            <name>Expand</name>
+            <comment></comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>Position</name>
+                <type>int</type>
+            </parameter>
+        </method>
+        <method>
+            <name>MoveItemTo</name>
+            <comment></comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>FromPosition</name>
+                <type>int</type>
+            </parameter>
+            <parameter>
+                <name>ToPosition</name>
+                <type>int</type>
+            </parameter>
+        </method>
+        <method>
+            <name>Invalidate</name>
+            <comment></comment>
+            <returntype>void</returntype>
+        </method>
+        <method>
+            <name>Show</name>
+            <comment>for showing recycler view must be call this after all Exp properties in 'Activity_Create'</comment>
+            <returntype>void</returntype>
+        </method>
+        <method>
+            <name>RemoveItemAt</name>
+            <comment></comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>Position</name>
+                <type>int</type>
+            </parameter>
+        </method>
+        <property>
+            <name>FooterPanel</name>
+            <returntype>wir.hitex.recycler.CustomPanelWrapper</returntype>
+            <comment>&lt;b&gt; Don't forget to add Footer(?%y) to Initializer method. &lt;/b&gt;</comment>
+        </property>
+        <property>
+            <name>Left</name>
+            <returntype>int</returntype>
+            <parameter>
+                <name>arg0</name>
+                <type Pixel="true">int</type>
+            </parameter>
+            <comment></comment>
+        </property>
+        <property>
+            <name>Parent</name>
+            <returntype>java.lang.Object</returntype>
+            <comment></comment>
+        </property>
+        <property>
+            <name>DescriptionTextColor</name>
+            <parameter>
+                <name>TextColor</name>
+                <type>int</type>
+            </parameter>
+            <comment>Just call before 'Show' method.</comment>
+        </property>
+        <property>
+            <name>DescriptionTextSize</name>
+            <parameter>
+                <name>TextSize</name>
+                <type>float</type>
+            </parameter>
+            <comment>Just call before 'Show' method.</comment>
+        </property>
+        <property>
+            <name>Visible</name>
+            <returntype>boolean</returntype>
+            <parameter>
+                <name>arg0</name>
+                <type>boolean</type>
+            </parameter>
+            <comment></comment>
+        </property>
+        <property>
+            <name>TitleTextSize</name>
+            <parameter>
+                <name>TextSize</name>
+                <type>float</type>
+            </parameter>
+            <comment>Just call before 'Show' method.</comment>
+        </property>
+        <property>
+            <name>ItemCount</name>
+            <returntype>int</returntype>
+            <comment></comment>
+        </property>
+        <property>
+            <name>Padding</name>
+            <returntype>int[]</returntype>
+            <parameter>
+                <name>arg0</name>
+                <type>int[]</type>
+            </parameter>
+            <comment></comment>
+        </property>
+        <property>
+            <name>Height</name>
+            <returntype>int</returntype>
+            <parameter>
+                <name>arg0</name>
+                <type Pixel="true">int</type>
+            </parameter>
+            <comment></comment>
+        </property>
+        <property>
+            <name>TitleTextColor</name>
+            <parameter>
+                <name>TextColor</name>
+                <type>int</type>
+            </parameter>
+            <comment>Just call before 'Show' method.</comment>
+        </property>
+        <property>
+            <name>Width</name>
+            <returntype>int</returntype>
+            <parameter>
+                <name>arg0</name>
+                <type Pixel="true">int</type>
+            </parameter>
+            <comment></comment>
+        </property>
+        <property>
+            <name>TitleHeight</name>
+            <parameter>
+                <name>Height</name>
+                <type>int</type>
+            </parameter>
+            <comment>Just call before 'Show' method.</comment>
+        </property>
+        <property>
+            <name>TitleTypeface</name>
+            <parameter>
+                <name>typeface</name>
+                <type>anywheresoftware.b4a.keywords.constants.TypefaceWrapper</type>
+            </parameter>
+            <comment>Just call before 'Show' method.</comment>
+        </property>
+        <property>
+            <name>Color</name>
+            <parameter>
+                <name>arg0</name>
+                <type>int</type>
+            </parameter>
+            <comment></comment>
+        </property>
+        <property>
+            <name>Enabled</name>
+            <returntype>boolean</returntype>
+            <parameter>
+                <name>arg0</name>
+                <type>boolean</type>
+            </parameter>
+            <comment></comment>
+        </property>
+        <property>
+            <name>Duration</name>
+            <parameter>
+                <name>Duration</name>
+                <type>int</type>
+            </parameter>
+            <comment>Just call before 'Show' method.</comment>
+        </property>
+        <property>
+            <name>DescriptionGravity</name>
+            <parameter>
+                <name>Gravity</name>
+                <type>int</type>
+            </parameter>
+            <comment>Just call before 'Show' method.</comment>
+        </property>
+        <property>
+            <name>InterPolator</name>
+            <parameter>
+                <name>InterPolator</name>
+                <type>int</type>
+            </parameter>
+            <comment>ACCELERATE_DECELERATE_INTERPOLATOR = 0
+ ACCELERATE_INTERPOLATOR = 1
+ ANTICIPATE_INTERPOLATOR = 2
+ ANTICIPATE_OVERSHOOT_INTERPOLATOR = 3
+ BOUNCE_INTERPOLATOR = 4
+ DECELERATE_INTERPOLATOR = 5
+ FAST_OUT_LINEAR_IN_INTERPOLATOR = 6
+ FAST_OUT_SLOW_IN_INTERPOLATOR = 7
+ LINEAR_INTERPOLATOR = 8
+ LINEAR_OUT_SLOW_IN_INTERPOLATOR = 9
+ OVERSHOOT_INTERPOLATOR = 10;</comment>
+        </property>
+        <property>
+            <name>TitleGravity</name>
+            <parameter>
+                <name>Gravity</name>
+                <type>int</type>
+            </parameter>
+            <comment>Just call before 'Show' method.</comment>
+        </property>
+        <property>
+            <name>Top</name>
+            <returntype>int</returntype>
+            <parameter>
+                <name>arg0</name>
+                <type Pixel="true">int</type>
+            </parameter>
+            <comment></comment>
+        </property>
+        <property>
+            <name>DescriptionTypeface</name>
+            <parameter>
+                <name>typeface</name>
+                <type>anywheresoftware.b4a.keywords.constants.TypefaceWrapper</type>
+            </parameter>
+            <comment>Just call before 'Show' method.</comment>
+        </property>
+        <property>
+            <name>RecyclerView</name>
+            <returntype>anywheresoftware.b4j.object.JavaObject</returntype>
+            <comment>&lt;b&gt;Don't forget to tick 'JavaObject library' before using!&lt;/b&gt;
+ &lt;p&gt;
+ Example for removing over scroll: &lt;code&gt;
+ Dim OVER_SCROLL_NEVER = 2 As Int
+ Exp.RecyclerView.RunMethod("setOverScrollMode", Array(OVER_SCROLL_NEVER))
+ &lt;/code&gt;</comment>
+        </property>
+        <property>
+            <name>Tag</name>
+            <returntype>java.lang.Object</returntype>
+            <parameter>
+                <name>arg0</name>
+                <type>java.lang.Object</type>
+            </parameter>
+            <comment></comment>
+        </property>
+    </class>
+    <class>
+        <name>wir.hitex.recycler.Hitex_ItemAnimator</name>
+        <shortname>ItemAnimator</shortname>
+        <objectwrapper>android.support.v7.widget.RecyclerView.ItemAnimator</objectwrapper>
+        <owner>process</owner>
+        <method>
+            <name>IsInitialized</name>
+            <comment></comment>
+            <returntype>boolean</returntype>
+        </method>
+        <method>
+            <name>EndAnimations</name>
+            <comment></comment>
+            <returntype>void</returntype>
+        </method>
+        <property>
+            <name>ChangeDuration</name>
+            <returntype>long</returntype>
+            <parameter>
+                <name>ChangeDuration</name>
+                <type>long</type>
+            </parameter>
+            <comment></comment>
+        </property>
+        <property>
+            <name>MoveDuration</name>
+            <returntype>long</returntype>
+            <parameter>
+                <name>MoveDuration</name>
+                <type>long</type>
+            </parameter>
+            <comment></comment>
+        </property>
+        <property>
+            <name>IsRunning</name>
+            <returntype>boolean</returntype>
+            <comment></comment>
+        </property>
+        <property>
+            <name>RemoveDuration</name>
+            <returntype>long</returntype>
+            <parameter>
+                <name>RemoveDuration</name>
+                <type>long</type>
+            </parameter>
+            <comment></comment>
+        </property>
+        <property>
+            <name>AddDuration</name>
+            <returntype>long</returntype>
+            <parameter>
+                <name>AddDuration</name>
+                <type>long</type>
+            </parameter>
+            <comment></comment>
+        </property>
+    </class>
+    <class>
+        <name>wir.hitex.recycler.Hitex_LayoutManager</name>
+        <shortname>LayoutManager</shortname>
+        <objectwrapper>android.support.v7.widget.RecyclerView.LayoutManager</objectwrapper>
+        <owner>process</owner>
+        <method>
+            <name>IsInitialized</name>
+            <comment></comment>
+            <returntype>boolean</returntype>
+        </method>
+    </class>
+    <class>
+        <name>wir.hitex.recycler.Hitex_LayoutView</name>
+        <shortname>Hitex_LayoutView</shortname>
+        <comment>The RecyclerView is a more advanced and more flexible version of the ListView.
+ &lt;b&gt;Created by Sadeq Nameni (Hitexroid)&lt;/b&gt;
+
+ Visit &lt;link&gt;hitexroidgroup.ir|http://hitexroidgroup.ir/&lt;/link&gt;
+ &lt;link&gt;Hitexroid Channel In Telegram|http://telegram.me/hitexroid_channel&lt;/link&gt;
+ &lt;link&gt;Check for Updates...|http://hitexroidgroup.ir/shop-b4a/product/13-%DA%A9%D8%AA%D8%A7%D8%A8%D8%AE%D8%A7%D9%86%D9%87-%DB%8C-hitex_recyclerview/&lt;/link&gt;</comment>
+        <objectwrapper>android.widget.RelativeLayout</objectwrapper>
+        <owner>activity</owner>
+        <event>ItemClick (ClickedItem As Panel, Position As Int)		'&#x1f446; ItemClick &#x1f446;'</event>
+        <event>ItemLongClick (LongClickedItem As Panel, Position As Int) ' &#x1f449; ItemLongClick &#x1f448;'</event>
+        <event>onScrollListener (dx As Int,dy As Int)</event>
+        <event>GetFastscrollSectionTitle (Position As Int) As String</event>
+        <event>BackPanelSwipeContentClick (Index As Int, Position As Int)</event>
+        <event>GetItemId (Position As Int) As Long</event>
+        <event>GetItemViewType (Position As Int) As Int				   '&#x1f3ad; GetItemViewType &#x1f3ad;'</event>
+        <event>onCreateViewHolder (Parent As Panel, ViewType As Int)      '&#x1f48e; onCreate &#x1f48e;'
+	
+	
+	
+End Sub
+Sub EventName_onBindViewHolder (Parent As Panel, Position As Int)         '&#x1f4a0; onBind &#x1f4a0;'
+	
+End Sub
+Sub EventName_GetItemCount As Int 								        '&#x1f4af; ItemCount &#x1f4af;'
+ 	Return 100 '/ItemList.Size</event>
+        <event>onScrollStateChanged (State As Int) 	
+	Select (State) 
+		Case LV.SCROLL_STATE_DRAGGING: 
+			Log("DRAGGING") 
+		Case LV.SCROLL_STATE_IDLE: 
+			Log("IDLE") 
+		Case LV.SCROLL_STATE_SETTLING: 
+			Log("SETTLING") 
+	End Select</event>
+        <method>
+            <name>DesignerCreateView</name>
+            <comment></comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>base</name>
+                <type>anywheresoftware.b4a.objects.PanelWrapper</type>
+            </parameter>
+            <parameter>
+                <name>lw</name>
+                <type>anywheresoftware.b4a.objects.LabelWrapper</type>
+            </parameter>
+            <parameter>
+                <name>map</name>
+                <type>anywheresoftware.b4a.objects.collections.Map</type>
+            </parameter>
+        </method>
+        <method>
+            <name>SwipeBackPanel</name>
+            <comment>&lt;b&gt;Don't forget to call 'Swipeable' before 'Show' method.
+ Just call 'SwipeBackPanel' in 'onCreateViewHolder Sub'.&lt;/b&gt;
+
+ Example (Copy it into 'OncreateViewHolder') : &lt;code&gt;
+ #Region Add Swipe Buttons
+
+ Dim BtnDelete As Button : BtnDelete.Initialize("")
+ BtnDelete.Typeface = Typeface.FONTAWESOME
+ BtnDelete.Text = Chr(0xF014) : BtnDelete.TextSize = 18
+
+ Dim BtnRobot As Button : BtnRobot.Initialize("")
+ BtnRobot.Typeface = Typeface.FONTAWESOME
+ BtnRobot.Text = Chr(0xF281) : BtnRobot.TextSize = 18
+
+ LV.SwipeBackPanel.Width = 40%x ' for 2 item with 20%x width.
+ LV.SwipeBackPanel.Color = Colors.Red
+
+ LV.SwipeBackPanel.AddView(BtnDelete,0,0,20%x,20%x)   '/Index 1
+ LV.SwipeBackPanel.AddView(BtnRobot,20%x,0,20%x,20%x) '/Index 2
+
+ #End Region
+
+ &lt;/code&gt;
+
+ Example For Event : &lt;code&gt;
+ Sub LV_BackPanelSwipeContentClick (Index As Int, Position As Int)
+ Select Index
+ Case 0 : ToastMessageShow("Delete : " &amp; Position, False)
+ Case 1 : ToastMessageShow("Robot  : " &amp; Position, False)
+ End Select
+ End Sub
+ &lt;/code&gt;</comment>
+            <returntype>anywheresoftware.b4a.objects.PanelWrapper</returntype>
+        </method>
+        <method>
+            <name>IsInitialized</name>
+            <comment></comment>
+            <returntype>boolean</returntype>
+        </method>
+        <method>
+            <name>SwipeClose</name>
+            <comment></comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>Position</name>
+                <type>int</type>
+            </parameter>
+            <parameter>
+                <name>Smooth</name>
+                <type>boolean</type>
+            </parameter>
+        </method>
+        <method>
+            <name>ItemTouchOnMove</name>
+            <comment></comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>ItemList</name>
+                <type>anywheresoftware.b4a.objects.collections.List</type>
+            </parameter>
+        </method>
+        <method>
+            <name>SetLayout</name>
+            <comment></comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>arg0</name>
+                <type Pixel="true">int</type>
+            </parameter>
+            <parameter>
+                <name>arg1</name>
+                <type Pixel="true">int</type>
+            </parameter>
+            <parameter>
+                <name>arg2</name>
+                <type Pixel="true">int</type>
+            </parameter>
+            <parameter>
+                <name>arg3</name>
+                <type Pixel="true">int</type>
+            </parameter>
+        </method>
+        <method>
+            <name>SwipeOpen</name>
+            <comment></comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>Position</name>
+                <type>int</type>
+            </parameter>
+        </method>
+        <method>
+            <name>SmoothScrollToPosition</name>
+            <comment>Starts a smooth scroll to an adapter position.</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>Position</name>
+                <type>int</type>
+            </parameter>
+        </method>
+        <method>
+            <name>RemoveView</name>
+            <comment></comment>
+            <returntype>void</returntype>
+        </method>
+        <method>
+            <name>CardView</name>
+            <comment>&lt;b&gt;Just Call before "Show" method.&lt;/b&gt;
+
+ Example : &lt;code&gt;
+ LV.CardView.CardElevation(4dip).Radius(2dip)
+ &lt;/code&gt;</comment>
+            <returntype>ir.CardView.Hitex_CardInLayoutView</returntype>
+        </method>
+        <method>
+            <name>SwitchTo</name>
+            <comment>Converts the layouts to each other.
+
+ Example 1 : &lt;code&gt;LV.SwitchTo.ListView&lt;/code&gt;
+
+ Example 2 : &lt;code&gt;LV.SwitchTo.GridView(2)&lt;/code&gt;
+
+ Example 3 : &lt;code&gt;LV.SwitchTo.StaggeredGridView(3)&lt;/code&gt;</comment>
+            <returntype>ir.Type.Hitex_SwitchTypeRequest</returntype>
+        </method>
+        <method>
+            <name RaisesSynchronousEvents="true">notifyItemRangeChanged</name>
+            <comment>Notify any registered observers that the ToPosition items starting at position FromPosition have changed.</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>FromPosition</name>
+                <type>int</type>
+            </parameter>
+            <parameter>
+                <name>ToPosition</name>
+                <type>int</type>
+            </parameter>
+        </method>
+        <method>
+            <name>FooterRemoveView</name>
+            <comment></comment>
+            <returntype>void</returntype>
+        </method>
+        <method>
+            <name>GetParentById</name>
+            <comment>&lt;code&gt;Dim Panel As Panel = LV.GetParentById(Id)&lt;/code&gt;</comment>
+            <returntype>anywheresoftware.b4a.objects.PanelWrapper</returntype>
+            <parameter>
+                <name>Id</name>
+                <type>long</type>
+            </parameter>
+        </method>
+        <method>
+            <name RaisesSynchronousEvents="true">notifyItemRemoved</name>
+            <comment>Notify any registered observers that the item previously located at position has been removed from the data set.
+
+ Example: &lt;code&gt;
+ Try
+ ItemList.RemoveAt(Position)
+ LV.notifyItemRemoved(Position)
+ Catch
+ Log("")
+ End Try
+ &lt;/code&gt;</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>Position</name>
+                <type>int</type>
+            </parameter>
+        </method>
+        <method>
+            <name RaisesSynchronousEvents="true">notifyDataSetChanged</name>
+            <comment>Notify any registered observers that the data set has changed.</comment>
+            <returntype>void</returntype>
+        </method>
+        <method>
+            <name>Initializer</name>
+            <comment>ListView Example : &lt;code&gt;
+ LV.Initializer("LV").ListView.Build
+ Activity.AddView(LV,0,0,100%x,100%y)
+
+ LV.Show &lt;/code&gt;
+ ___________________________________________________________________________________
+ GridView Example : &lt;code&gt;
+ LV.Initializer("LV").GridView(3).Build
+ Activity.AddView(LV,0,0,100%x,100%y)
+
+ LV.Show &lt;/code&gt;
+ ___________________________________________________________________________________
+ Example 3 : &lt;code&gt;
+ LV.Initializer("LV").ListView.Horizontal.RefreshLayout.RTL.Build
+ Activity.AddView(LV,0,0,100%x,100%y)
+
+ LV.Show &lt;/code&gt;
+ ___________________________________________________________________________________
+ Event Example : &lt;code&gt;
+ Sub LV_onCreateViewHolder (Parent As Panel, ViewType As Int)      '# onCreate #'
+ Dim lbl As Label : lbl.Initialize("lbl")
+ lbl.TextColor = -2 : lbl.TextSize = 18
+ Parent.AddView(lbl,0,0,100%x,10%y)
+ End Sub
+
+ Sub LV_onBindViewHolder (Parent As Panel, Position As Int)         '* onBind *'
+ Dim lbl = Parent.GetView(0) As Label
+ lbl.Text = "Hello World ! " &amp; Position
+ End Sub
+
+ Sub LV_GetItemCount As Int 								        '$ ItemCount $'
+ Return 100 'ItemList.Size
+ End Sub
+ &lt;/code&gt;
+ ___________________________________________________________________________________
+ &lt;b&gt;Created By Sadeq Nameni (Hitexroid)&lt;/b&gt;
+ ___________________________________________________________________________________
+ &lt;a href="http://hitexroidgroup.ir/shop-b4a"&gt;Visit hitexroidgroup.ir/shop-b4a !&lt;/a&gt;
+ ___________________________________________________________________________________
+ &lt;a href="http://telegram.me/hitexroid_channel"&gt;Hitexroid Channel In Telegram&lt;/a&gt;</comment>
+            <returntype>ir.Type.Hitex_TypeRequest</returntype>
+            <parameter>
+                <name>ba</name>
+                <type>anywheresoftware.b4a.BA</type>
+            </parameter>
+            <parameter>
+                <name>EventName</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+        <method>
+            <name>SpacingItemDecoration</name>
+            <comment>Don't forget to add '&lt;b&gt;&lt;code&gt;Parent.Width = -1&lt;/code&gt;&lt;/b&gt;' in your 'onBindViewHolder' sub.
+
+ Example in '&lt;b&gt;Activity_Create&lt;/b&gt;' : &lt;code&gt;
+ LV.SpacingItemDecoration(50, True)
+ &lt;/code&gt;</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>Spacing</name>
+                <type>int</type>
+            </parameter>
+            <parameter>
+                <name>IncludeEdge</name>
+                <type>boolean</type>
+            </parameter>
+        </method>
+        <method>
+            <name>DetectScrollDirection</name>
+            <comment>Example 1 : &lt;code&gt;
+ Sub LV_OnScrollListener (dx As Int,dy As Int)
+ Log(LV.DetectScrollDirection(dx,dy))
+ End Sub
+ &lt;/code&gt;
+
+ if (dx &amp;gt; 0) return "Scrolled Right"
+ if (dx &amp;lt; 0) return "Scrolled Left"
+ if (dx == 0) return "No Horizontal Scrolled"
+ if (dy &amp;gt; 0) return "Scrolled Downwards"
+ if (dy &amp;lt; 0) return "Scrolled Upwards"
+ if (dy == 0) return "No Vertical Scrolled"</comment>
+            <returntype>java.lang.String</returntype>
+            <parameter>
+                <name>dx</name>
+                <type>int</type>
+            </parameter>
+            <parameter>
+                <name>dy</name>
+                <type>int</type>
+            </parameter>
+        </method>
+        <method>
+            <name>Ripple</name>
+            <comment>&lt;b&gt;Just Call before "Show" method.&lt;/b&gt;
+
+ Example : &lt;code&gt;
+ LV.Ripple.Color(0xFF5E23DE).Alpha(0.2f).Duration(350)
+ &lt;/code&gt;</comment>
+            <returntype>ir.Ripple.Hitex_Ripple</returntype>
+        </method>
+        <method>
+            <name RaisesSynchronousEvents="true">Show</name>
+            <comment>for showing recyclerview must be call this after all lv properties in 'Activity_Create'
+
+ ' You can set 'Parent.Height' And 'Parent.width' = ?%x or ?%y in 'onBindViewHolder' sub.
+ ________________________________________________________________________________________________
+ if you need divider , use this code :
+ Example : &lt;code&gt;
+ LV.Divider.Add1(Colors.Gray,1dip)
+ &lt;/code&gt;</comment>
+            <returntype>void</returntype>
+        </method>
+        <method>
+            <name RaisesSynchronousEvents="true">notifyItemRangeInserted</name>
+            <comment>Notify any registered observers that the currently reflected ToPosition items starting at FromPosition have been newly inserted.</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>FromPosition</name>
+                <type>int</type>
+            </parameter>
+            <parameter>
+                <name>ToPosition</name>
+                <type>int</type>
+            </parameter>
+        </method>
+        <method>
+            <name>notifyItemMoved</name>
+            <comment>Notify any registered observers that the item reflected at fromPosition has been moved to toPosition.</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>FromPosition</name>
+                <type>int</type>
+            </parameter>
+            <parameter>
+                <name>ToPosition</name>
+                <type>int</type>
+            </parameter>
+        </method>
+        <method>
+            <name>ScrollToPosition</name>
+            <comment>Convenience method to scroll to a certain position.</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>Position</name>
+                <type>int</type>
+            </parameter>
+        </method>
+        <method>
+            <name>FastScroller</name>
+            <comment>&lt;b&gt;Just Call bafore "Show" method.&lt;/b&gt;
+
+ Simple Example : &lt;code&gt;
+ LV.FastScroller
+ &lt;/code&gt;
+
+ Example 2 :&lt;code&gt;
+ LV.FastScroller.BubbleColor(Colors.Red).HandleColor(Colors.Green)
+ &lt;/code&gt;
+
+ Bubble Example : &lt;code&gt;
+ Sub LV_GetFastscrollSectionTitle (Position As Int) As String
+ Public Items = ItemList.Get(Position) As Adapter
+ Return Items.Name.SubString2(0,1)
+ End Sub
+ &lt;/code&gt;</comment>
+            <returntype>ir.FastScroll.Hitex_FastScroll</returntype>
+        </method>
+        <method>
+            <name RaisesSynchronousEvents="true">notifyItemAdded</name>
+            <comment>notifies item to end of list.
+ _____________________________________________________
+ Example : &lt;code&gt;
+ Sub Globals
+ Type Adapter(Name As String,Family As String)
+ Dim ItemList As List
+ End Sub
+ &lt;/code&gt;
+ _____________________________________________________
+ Example : &lt;code&gt;
+ Dim item As Adapter
+ item.Name = "Great"
+ ItemList.Add(item)
+ LV.notifyItemAdded
+ &lt;/code&gt;</comment>
+            <returntype>void</returntype>
+        </method>
+        <method>
+            <name>Swipeable</name>
+            <comment>&lt;b&gt;Just Call before "Show" method.&lt;/b&gt;
+
+ Example 1 : &lt;code&gt;
+ LV.Swipeable
+ &lt;/code&gt;
+
+ Example 2 : &lt;code&gt;
+ LV.Swipeable.LeftSwipe(False) ' Shows swipeable form left side.
+ &lt;/code&gt;
+
+ &lt;b&gt;Note : after 'Swipeable' other properties like 'Ripple' and 'CardView' not worked! &lt;/b&gt;</comment>
+            <returntype>ir.Type.Hi_Swipeable</returntype>
+        </method>
+        <method>
+            <name>SetLayoutManager</name>
+            <comment></comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>LayoutManager</name>
+                <type>wir.hitex.recycler.Hitex_LayoutManager</type>
+            </parameter>
+        </method>
+        <method>
+            <name>BringToFront</name>
+            <comment></comment>
+            <returntype>void</returntype>
+        </method>
+        <method>
+            <name>GetVisibleItemPosition</name>
+            <comment>Returns the adapter position of the first/Last visible view.</comment>
+            <returntype>int</returntype>
+            <parameter>
+                <name>First</name>
+                <type>boolean</type>
+            </parameter>
+            <parameter>
+                <name>Completely</name>
+                <type>boolean</type>
+            </parameter>
+        </method>
+        <method>
+            <name>SendToBack</name>
+            <comment></comment>
+            <returntype>void</returntype>
+        </method>
+        <method>
+            <name>HeaderRemoveView</name>
+            <comment></comment>
+            <returntype>void</returntype>
+        </method>
+        <method>
+            <name>SetVisibleAnimated</name>
+            <comment></comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>arg0</name>
+                <type>int</type>
+            </parameter>
+            <parameter>
+                <name>arg1</name>
+                <type>boolean</type>
+            </parameter>
+        </method>
+        <method>
+            <name>GetParentByPosition</name>
+            <comment>&lt;code&gt;Dim Panel As Panel = LV.GetParentByPosition(Position)&lt;/code&gt;</comment>
+            <returntype>anywheresoftware.b4a.objects.PanelWrapper</returntype>
+            <parameter>
+                <name>Position</name>
+                <type>int</type>
+            </parameter>
+        </method>
+        <method>
+            <name RaisesSynchronousEvents="true">notifyItemInserted</name>
+            <comment>Notify any registered observers that the item reflected at position has been newly inserted.
+ _____________________________________________________________________________________________________
+ Example : &lt;code&gt;
+ Sub Globals
+ Type Model(Name As String, Family As String)
+ Dim ItemList As List
+ End Sub
+ &lt;/code&gt;
+ _____________________________________________________________________________________________________
+ Example : &lt;code&gt;
+ Dim item As Adapter
+ item.Name = "Great "
+ ItemList.InsertAt(10,item)
+ LV.notifyItemInserted(10)
+ &lt;/code&gt;</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>Position</name>
+                <type>int</type>
+            </parameter>
+        </method>
+        <method>
+            <name>StartSnapMode</name>
+            <comment>Gravity.LEFT | Gravity.TOP | Gravity.CENTER | Gravity.RIGHT | Gravity.BOTTOM</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>Gravity</name>
+                <type>int</type>
+            </parameter>
+        </method>
+        <method>
+            <name>StopScroll</name>
+            <comment></comment>
+            <returntype>void</returntype>
+        </method>
+        <method>
+            <name>notifyItemChanged</name>
+            <comment></comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>Position</name>
+                <type>int</type>
+            </parameter>
+        </method>
+        <method>
+            <name>Invalidate</name>
+            <comment></comment>
+            <returntype>void</returntype>
+        </method>
+        <method>
+            <name>Divider</name>
+            <comment>___________________________________________________________________________
+ Example 1 : &lt;code&gt; LV.Divider.Add1(Colors.Gray,1dip) &lt;/code&gt;
+ ___________________________________________________________________________
+ Example 2 : &lt;code&gt; LV.Divider.Add2(Colors.Gray,1dip,8dip,8dip) &lt;/code&gt;
+ ___________________________________________________________________________
+ Example 3 : &lt;code&gt;
+ Dim BD As BitmapDrawable
+ BD.Initialize(LoadBitmap(File.DirAssets,"divider.png"))
+ LV.Divider.Add3(BD,25dip)
+ &lt;/code&gt;</comment>
+            <returntype>ir.ItemDecoration.Hi_ItemDecoration</returntype>
+        </method>
+        <method>
+            <name RaisesSynchronousEvents="true">notifyItemRangeRemoved</name>
+            <comment>Notify any registered observers that the ToPosition items previously located at FromPosition have been removed from the data set.</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>FromPosition</name>
+                <type>int</type>
+            </parameter>
+            <parameter>
+                <name>ToPosition</name>
+                <type>int</type>
+            </parameter>
+        </method>
+        <method>
+            <name>SetLayoutAnimated</name>
+            <comment></comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>arg0</name>
+                <type>int</type>
+            </parameter>
+            <parameter>
+                <name>arg1</name>
+                <type Pixel="true">int</type>
+            </parameter>
+            <parameter>
+                <name>arg2</name>
+                <type Pixel="true">int</type>
+            </parameter>
+            <parameter>
+                <name>arg3</name>
+                <type Pixel="true">int</type>
+            </parameter>
+            <parameter>
+                <name>arg4</name>
+                <type Pixel="true">int</type>
+            </parameter>
+        </method>
+        <property>
+            <name>MotionEventSplitting</name>
+            <parameter>
+                <name>Enabled</name>
+                <type>boolean</type>
+            </parameter>
+            <comment>Enable or disable the splitting of MotionEvents to multiple children during touch event dispatch.</comment>
+        </property>
+        <property>
+            <name>FooterPanel</name>
+            <returntype>wir.hitex.recycler.CustomPanelWrapper</returntype>
+            <comment>&lt;b&gt; Don't forget to add Footer(?%y) to Initializer method. &lt;/b&gt;</comment>
+        </property>
+        <property>
+            <name>Left</name>
+            <returntype>int</returntype>
+            <parameter>
+                <name>arg0</name>
+                <type Pixel="true">int</type>
+            </parameter>
+            <comment></comment>
+        </property>
+        <property>
+            <name>Parent</name>
+            <returntype>java.lang.Object</returntype>
+            <comment></comment>
+        </property>
+        <property>
+            <name>ItemPressedBackground</name>
+            <parameter>
+                <name>Background</name>
+                <type>android.graphics.drawable.Drawable</type>
+            </parameter>
+            <comment>Call before show &amp;amp; Clickable must be true</comment>
+        </property>
+        <property>
+            <name>ViewHolder</name>
+            <returntype>wir.hitex.recycler.Hitex_ViewHolder</returntype>
+            <comment>&lt;b&gt;Just Use In 'OnBindViewHolder' Sub&lt;/b&gt;</comment>
+        </property>
+        <property>
+            <name>Clickable</name>
+            <parameter>
+                <name>Clickable</name>
+                <type>boolean</type>
+            </parameter>
+            <comment>&lt;b&gt;Call before Show.&lt;/b&gt;
+ Default clickable is true.</comment>
+        </property>
+        <property>
+            <name>Visible</name>
+            <returntype>boolean</returntype>
+            <parameter>
+                <name>arg0</name>
+                <type>boolean</type>
+            </parameter>
+            <comment></comment>
+        </property>
+        <property>
+            <name>ItemCount</name>
+            <returntype>int</returntype>
+            <comment></comment>
+        </property>
+        <property>
+            <name>Padding</name>
+            <returntype>int[]</returntype>
+            <parameter>
+                <name>arg0</name>
+                <type>int[]</type>
+            </parameter>
+            <comment></comment>
+        </property>
+        <property>
+            <name>Height</name>
+            <returntype>int</returntype>
+            <parameter>
+                <name>arg0</name>
+                <type Pixel="true">int</type>
+            </parameter>
+            <comment></comment>
+        </property>
+        <property>
+            <name>Width</name>
+            <returntype>int</returntype>
+            <parameter>
+                <name>arg0</name>
+                <type Pixel="true">int</type>
+            </parameter>
+            <comment></comment>
+        </property>
+        <property>
+            <name>HasFixedSize</name>
+            <returntype>boolean</returntype>
+            <parameter>
+                <name>HasFixedSize</name>
+                <type>boolean</type>
+            </parameter>
+            <comment>HasFixedSize is used to let the RecyclerView keep the same size.
+ This information will be used to optimize itself.
+
+ &lt;b&gt;Default is true&lt;/b&gt;</comment>
+        </property>
+        <property>
+            <name>ItemAnimator</name>
+            <returntype>wir.hitex.recycler.Hitex_ItemAnimator</returntype>
+            <parameter>
+                <name>Animator</name>
+                <type>wir.hitex.recycler.Hitex_ItemAnimator</type>
+            </parameter>
+            <comment></comment>
+        </property>
+        <property>
+            <name>Background</name>
+            <returntype>android.graphics.drawable.Drawable</returntype>
+            <parameter>
+                <name>arg0</name>
+                <type>android.graphics.drawable.Drawable</type>
+            </parameter>
+            <comment></comment>
+        </property>
+        <property>
+            <name>Color</name>
+            <parameter>
+                <name>arg0</name>
+                <type>int</type>
+            </parameter>
+            <comment></comment>
+        </property>
+        <property>
+            <name>Enabled</name>
+            <returntype>boolean</returntype>
+            <parameter>
+                <name>arg0</name>
+                <type>boolean</type>
+            </parameter>
+            <comment></comment>
+        </property>
+        <property>
+            <name>ComputeScrollOffset</name>
+            <returntype>int</returntype>
+            <comment>Sub LV_onScrollListener (dx As Int, dy As Int)
+ Log(LV.ComputeScrollOffset)
+ End Sub</comment>
+        </property>
+        <property>
+            <name>SupportsChangeAnimations</name>
+            <parameter>
+                <name>Support</name>
+                <type>boolean</type>
+            </parameter>
+            <comment></comment>
+        </property>
+        <property>
+            <name>Top</name>
+            <returntype>int</returntype>
+            <parameter>
+                <name>arg0</name>
+                <type Pixel="true">int</type>
+            </parameter>
+            <comment></comment>
+        </property>
+        <property>
+            <name>HeaderPanel</name>
+            <returntype>wir.hitex.recycler.CustomPanelWrapper</returntype>
+            <comment>&lt;b&gt; Don't forget to add Hedaer(?%y) to Initializer method. &lt;/b&gt;</comment>
+        </property>
+        <property>
+            <name>LayoutManager</name>
+            <returntype>wir.hitex.recycler.Hitex_LayoutManager</returntype>
+            <comment></comment>
+        </property>
+        <property>
+            <name>RecyclerView</name>
+            <returntype>anywheresoftware.b4j.object.JavaObject</returntype>
+            <comment>&lt;b&gt;Don't forget to tick 'JavaObject library' before using this!&lt;/b&gt;
+
+ Example for removing over scroll: &lt;code&gt;
+ Dim OVER_SCROLL_NEVER = 2 As Int
+ LV.RecyclerView.RunMethod("setOverScrollMode",Array(OVER_SCROLL_NEVER))
+ &lt;/code&gt;</comment>
+        </property>
+        <property>
+            <name>Tag</name>
+            <returntype>java.lang.Object</returntype>
+            <parameter>
+                <name>arg0</name>
+                <type>java.lang.Object</type>
+            </parameter>
+            <comment></comment>
+        </property>
+        <property>
+            <name>EmptyView</name>
+            <returntype>anywheresoftware.b4a.objects.PanelWrapper</returntype>
+            <comment>If getItemCount equals by 0 shows EmptyView
+
+ Jsut call after &lt;b&gt;Show&lt;/b&gt; method.</comment>
+        </property>
+        <field>
+            <name>SCROLL_STATE_SETTLING</name>
+            <comment></comment>
+            <returntype>int</returntype>
+        </field>
+        <field>
+            <name>SCROLL_STATE_IDLE</name>
+            <comment></comment>
+            <returntype>int</returntype>
+        </field>
+        <field>
+            <name>SCROLL_STATE_DRAGGING</name>
+            <comment></comment>
+            <returntype>int</returntype>
+        </field>
+        <designerProperty>key:Refresh, displayname:Refresh Layout, fieldtype:boolean, defaultvalue:false</designerProperty>
+        <designerProperty>key:RecyclerType, displayname:Recycler Type, fieldtype:string, defaultvalue:ListView, list:ListView|GridView|StaggeredGridView</designerProperty>
+        <designerProperty>key:Orientation, displayname:Orientation, fieldtype:string, defaultvalue:Vertical, list:Vertical|Horizontal</designerProperty>
+        <designerProperty>key:Header, displayname:Header, fieldtype:boolean, defaultvalue:false</designerProperty>
+        <designerProperty>key:HeaderHeight, displayname:HeaderHeight, fieldtype:int, defaultvalue:56</designerProperty>
+        <designerProperty>key:Footer, displayname:Footer, fieldtype:boolean, defaultvalue:false</designerProperty>
+        <designerProperty>key:FooterHeight, displayname:FooterHeight, fieldtype:int, defaultvalue:56</designerProperty>
+        <designerProperty>key:RTL, displayname:RTL, fieldtype:boolean, defaultvalue:false, description:RTL : Right To Left</designerProperty>
+        <designerProperty>key:StackFromEnd, displayname:StackFromEnd, fieldtype:boolean, defaultvalue:false, description:The list fills its content starting from the bottom of the view.</designerProperty>
+        <designerProperty>key:ReverseLayout, displayname:ReverseLayout, fieldtype:boolean, defaultvalue:false, description:Used to reverse item traversal and layout order.</designerProperty>
+        <designerProperty>key:SpanCount, displayname:Span Count, description:Just for GridView and StaggeredGridView  !, fieldtype:int, defaultvalue:3</designerProperty>
+        <designerProperty>key:SmoothScrollSpeedFactor, displayname:SmoothScroll Speed Factor, fieldtype:float, defaultvalue:2, description:Just works for \'ListView\' and \'GridView\'</designerProperty>
+        <designerProperty>key:FastScrollEnabled, displayname:Fast Scroll Enabled, fieldtype:boolean, defaultvalue:false</designerProperty>
+        <designerProperty>key:FastScrollerType, displayname:Fast Scroller Type, description:Fast Scroller 1 has horizontal and vertical mode . Fast Scroller 2 just has a vertical mode., fieldtype:string, defaultvalue:Fast Scroller 1, list:Fast Scroller 1|Fast Scroller 2|Fast Scroller 3</designerProperty>
+        <designerProperty>key:FastScrollBubbleColor, displayname:Fast Scroll BubbleColor, fieldtype:color, defaultvalue:0xFF2184DB</designerProperty>
+        <designerProperty>key:FastScrollBubbleHandlerColor, displayname:Fast Scroll Bubble Handler Color, fieldtype:color, defaultvalue:0xFF2184DB</designerProperty>
+        <designerProperty>key:FastScrollBubbleTextColor, displayname:Fast Scroll Bubble Text Color, fieldtype:color, defaultvalue:0xFFFAFAFA</designerProperty>
+        <designerProperty>key:FastScrollBubbleTextSize, displayname:Fast Scroll Bubble Text Size, fieldtype:float, defaultvalue:25</designerProperty>
+        <designerProperty>key:SpacingItemDecorationEnabled, displayname:SpacingItemDecorationEnabled, fieldtype:boolean, defaultvalue:false, description:adds spaces between items in RecyclerView</designerProperty>
+        <designerProperty>key:SpacingItemDecorationSize, displayname:SpacingItemDecorationSize, fieldtype:int, defaultvalue:10, description:Don\'t forget to add \'Parent.Width = -1\' in your \'onBindViewHolder\' sub.</designerProperty>
+        <designerProperty>key:SpacingItemDecorationIncludeEdge, displayname:SpacingItemDecorationIncludeEdge, fieldtype:boolean, defaultvalue:false, description:Don\'t forget to add \'Parent.Width = -1\' in your \'onBindViewHolder\' sub.</designerProperty>
+    </class>
+    <class>
+        <name>wir.hitex.recycler.Hitex_LayoutView.GridSpacingItemDecoration</name>
+        <owner>process</owner>
+        <method>
+            <name>onDrawOver</name>
+            <comment></comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>arg0</name>
+                <type>android.graphics.Canvas</type>
+            </parameter>
+            <parameter>
+                <name>arg1</name>
+                <type>android.support.v7.widget.RecyclerView</type>
+            </parameter>
+            <parameter>
+                <name>arg2</name>
+                <type>android.support.v7.widget.RecyclerView.State</type>
+            </parameter>
+        </method>
+        <method>
+            <name>onDraw</name>
+            <comment></comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>arg0</name>
+                <type>android.graphics.Canvas</type>
+            </parameter>
+            <parameter>
+                <name>arg1</name>
+                <type>android.support.v7.widget.RecyclerView</type>
+            </parameter>
+            <parameter>
+                <name>arg2</name>
+                <type>android.support.v7.widget.RecyclerView.State</type>
+            </parameter>
+        </method>
+        <method>
+            <name>getItemOffsets</name>
+            <comment></comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>outRect</name>
+                <type>android.graphics.Rect</type>
+            </parameter>
+            <parameter>
+                <name>view</name>
+                <type>android.view.View</type>
+            </parameter>
+            <parameter>
+                <name>parent</name>
+                <type>android.support.v7.widget.RecyclerView</type>
+            </parameter>
+            <parameter>
+                <name>state</name>
+                <type>android.support.v7.widget.RecyclerView.State</type>
+            </parameter>
+        </method>
+    </class>
+    <class>
+        <name>wir.hitex.recycler.Hitex_LayoutView.SpacesItemDecoration</name>
+        <owner>process</owner>
+        <method>
+            <name>onDrawOver</name>
+            <comment></comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>arg0</name>
+                <type>android.graphics.Canvas</type>
+            </parameter>
+            <parameter>
+                <name>arg1</name>
+                <type>android.support.v7.widget.RecyclerView</type>
+            </parameter>
+            <parameter>
+                <name>arg2</name>
+                <type>android.support.v7.widget.RecyclerView.State</type>
+            </parameter>
+        </method>
+        <method>
+            <name>onDraw</name>
+            <comment></comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>arg0</name>
+                <type>android.graphics.Canvas</type>
+            </parameter>
+            <parameter>
+                <name>arg1</name>
+                <type>android.support.v7.widget.RecyclerView</type>
+            </parameter>
+            <parameter>
+                <name>arg2</name>
+                <type>android.support.v7.widget.RecyclerView.State</type>
+            </parameter>
+        </method>
+        <method>
+            <name>getItemOffsets</name>
+            <comment></comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>outRect</name>
+                <type>android.graphics.Rect</type>
+            </parameter>
+            <parameter>
+                <name>view</name>
+                <type>android.view.View</type>
+            </parameter>
+            <parameter>
+                <name>parent</name>
+                <type>android.support.v7.widget.RecyclerView</type>
+            </parameter>
+            <parameter>
+                <name>state</name>
+                <type>android.support.v7.widget.RecyclerView.State</type>
+            </parameter>
+        </method>
+    </class>
+    <class>
+        <name>wir.hitex.recycler.Hitex_RecyclerViewPager</name>
+        <shortname>Hitex_RecyclerViewPager</shortname>
+        <objectwrapper>com.recyclerviewpager.RecyclerViewPager</objectwrapper>
+        <owner>activity</owner>
+        <event>onPageChanged (OldPosition As Int, NewPosition As Int)</event>
+        <event>GetItemViewType (Position As Int) As Int						  '&#x1f3ad; GetItemViewType &#x1f3ad;'</event>
+        <event>onScrolled (dx As Int, dy As Int)
+</event>
+        <event>Click (Clicked As Panel, Position As Int)						 '&#x1f446;   Click   &#x1f446;'</event>
+        <event>LongClick (LongClicked As Panel, Position As Int) ' &#x1f449; LongClick &#x1f448;'</event>
+        <event>onCreateViewHolder (Parent As Panel, ViewType As Int)      '&#x1f48e; onCreate &#x1f48e;'
+	
+	
+	
+End Sub
+Sub EventName_onBindViewHolder (Parent As Panel, Position As Int)         '&#x1f4a0; onBind &#x1f4a0;'
+	
+End Sub
+Sub EventName_GetItemCount As Int 								        '&#x1f4af; ItemCount &#x1f4af;'
+ 	Return 100 '/ItemList.Size</event>
+        <event>onScrollStateChanged (State As Int) 	
+	Select (State) 
+		Case RVP.SCROLL_STATE_DRAGGING: 
+			Log("DRAGGING") 
+		Case RVP.SCROLL_STATE_IDLE: 
+			Log("IDLE") 
+		Case RVP.SCROLL_STATE_SETTLING: 
+			Log("SETTLING") 
+	End Select</event>
+        <method>
+            <name RaisesSynchronousEvents="true">notifyItemRangeInserted</name>
+            <comment>Notify any registered observers that the currently reflected ToPosition items starting at FromPosition have been newly inserted.</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>FromPosition</name>
+                <type>int</type>
+            </parameter>
+            <parameter>
+                <name>ToPosition</name>
+                <type>int</type>
+            </parameter>
+        </method>
+        <method>
+            <name>notifyItemMoved</name>
+            <comment></comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>FromPosition</name>
+                <type>int</type>
+            </parameter>
+            <parameter>
+                <name>ToPosition</name>
+                <type>int</type>
+            </parameter>
+        </method>
+        <method>
+            <name>DesignerCreateView</name>
+            <comment></comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>base</name>
+                <type>anywheresoftware.b4a.objects.PanelWrapper</type>
+            </parameter>
+            <parameter>
+                <name>labelWrapper</name>
+                <type>anywheresoftware.b4a.objects.LabelWrapper</type>
+            </parameter>
+            <parameter>
+                <name>map</name>
+                <type>anywheresoftware.b4a.objects.collections.Map</type>
+            </parameter>
+        </method>
+        <method>
+            <name>GotoPage</name>
+            <comment></comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>Position</name>
+                <type>int</type>
+            </parameter>
+            <parameter>
+                <name>Smooth</name>
+                <type>boolean</type>
+            </parameter>
+        </method>
+        <method>
+            <name>IsInitialized</name>
+            <comment></comment>
+            <returntype>boolean</returntype>
+        </method>
+        <method>
+            <name RaisesSynchronousEvents="true">notifyItemAdded</name>
+            <comment>notifies item to end of list.</comment>
+            <returntype>void</returntype>
+        </method>
+        <method>
+            <name>Initialize</name>
+            <comment>Example : &lt;code&gt;
+ RVP.Initialize("RVP")
+ Activity.AddView(RVP,0,0,100%x,100%y)
+
+ RVP.Orientation = RVP.HORIZONTAL
+ RVP.Show
+ &lt;/code&gt;</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>ba</name>
+                <type>anywheresoftware.b4a.BA</type>
+            </parameter>
+            <parameter>
+                <name>EventName</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+        <method>
+            <name>BringToFront</name>
+            <comment></comment>
+            <returntype>void</returntype>
+        </method>
+        <method>
+            <name>SendToBack</name>
+            <comment></comment>
+            <returntype>void</returntype>
+        </method>
+        <method>
+            <name>GetParentByPosition</name>
+            <comment></comment>
+            <returntype>anywheresoftware.b4a.objects.PanelWrapper</returntype>
+            <parameter>
+                <name>Position</name>
+                <type>int</type>
+            </parameter>
+        </method>
+        <method>
+            <name>RemoveView</name>
+            <comment></comment>
+            <returntype>void</returntype>
+        </method>
+        <method>
+            <name RaisesSynchronousEvents="true">notifyItemRangeChanged</name>
+            <comment>Notify any registered observers that the ToPosition items starting at position FromPosition have changed.</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>FromPosition</name>
+                <type>int</type>
+            </parameter>
+            <parameter>
+                <name>ToPosition</name>
+                <type>int</type>
+            </parameter>
+        </method>
+        <method>
+            <name RaisesSynchronousEvents="true">notifyItemInserted</name>
+            <comment>Notify any registered observers that the item reflected at position has been newly inserted.</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>Position</name>
+                <type>int</type>
+            </parameter>
+        </method>
+        <method>
+            <name RaisesSynchronousEvents="true">notifyItemRemoved</name>
+            <comment></comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>Position</name>
+                <type>int</type>
+            </parameter>
+        </method>
+        <method>
+            <name RaisesSynchronousEvents="true">notifyDataSetChanged</name>
+            <comment></comment>
+            <returntype>void</returntype>
+        </method>
+        <method>
+            <name>notifyItemChanged</name>
+            <comment></comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>Position</name>
+                <type>int</type>
+            </parameter>
+        </method>
+        <method>
+            <name>Invalidate</name>
+            <comment></comment>
+            <returntype>void</returntype>
+        </method>
+        <method>
+            <name RaisesSynchronousEvents="true">Show</name>
+            <comment></comment>
+            <returntype>void</returntype>
+        </method>
+        <method>
+            <name RaisesSynchronousEvents="true">notifyItemRangeRemoved</name>
+            <comment>Notify any registered observers that the ToPosition items previously located at FromPosition have been removed from the data set.</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>FromPosition</name>
+                <type>int</type>
+            </parameter>
+            <parameter>
+                <name>ToPosition</name>
+                <type>int</type>
+            </parameter>
+        </method>
+        <property>
+            <name>Left</name>
+            <returntype>int</returntype>
+            <parameter>
+                <name>arg0</name>
+                <type Pixel="true">int</type>
+            </parameter>
+            <comment></comment>
+        </property>
+        <property>
+            <name>Parent</name>
+            <returntype>java.lang.Object</returntype>
+            <comment></comment>
+        </property>
+        <property>
+            <name>CurrentPosition</name>
+            <returntype>int</returntype>
+            <comment></comment>
+        </property>
+        <property>
+            <name>ViewHolder</name>
+            <returntype>wir.hitex.recycler.Hitex_ViewHolder</returntype>
+            <comment>&lt;b&gt;Just Use In 'OnBindViewHolder' Sub&lt;/b&gt;</comment>
+        </property>
+        <property>
+            <name>LayoutDirection</name>
+            <parameter>
+                <name>Direction</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <comment>&lt;b&gt;Call requires API level 17&lt;/b&gt;
+ &lt;code&gt;"RTL"&lt;/code&gt; or &lt;code&gt;"LTR"&lt;/code&gt;</comment>
+        </property>
+        <property>
+            <name>SinglePageFling</name>
+            <parameter>
+                <name>SinglePageFling</name>
+                <type>boolean</type>
+            </parameter>
+            <comment></comment>
+        </property>
+        <property>
+            <name>Visible</name>
+            <returntype>boolean</returntype>
+            <parameter>
+                <name>arg0</name>
+                <type>boolean</type>
+            </parameter>
+            <comment></comment>
+        </property>
+        <property>
+            <name>FlingFactor</name>
+            <parameter>
+                <name>FlingFactor</name>
+                <type>float</type>
+            </parameter>
+            <comment></comment>
+        </property>
+        <property>
+            <name>ItemCount</name>
+            <returntype>int</returntype>
+            <comment></comment>
+        </property>
+        <property>
+            <name>Padding</name>
+            <returntype>int[]</returntype>
+            <parameter>
+                <name>arg0</name>
+                <type>int[]</type>
+            </parameter>
+            <comment></comment>
+        </property>
+        <property>
+            <name>Height</name>
+            <returntype>int</returntype>
+            <parameter>
+                <name>arg0</name>
+                <type Pixel="true">int</type>
+            </parameter>
+            <comment></comment>
+        </property>
+        <property>
+            <name>Width</name>
+            <returntype>int</returntype>
+            <parameter>
+                <name>arg0</name>
+                <type Pixel="true">int</type>
+            </parameter>
+            <comment></comment>
+        </property>
+        <property>
+            <name>HasFixedSize</name>
+            <parameter>
+                <name>HasFixedSize</name>
+                <type>boolean</type>
+            </parameter>
+            <comment></comment>
+        </property>
+        <property>
+            <name>Color</name>
+            <parameter>
+                <name>arg0</name>
+                <type>int</type>
+            </parameter>
+            <comment></comment>
+        </property>
+        <property>
+            <name>Enabled</name>
+            <returntype>boolean</returntype>
+            <parameter>
+                <name>arg0</name>
+                <type>boolean</type>
+            </parameter>
+            <comment></comment>
+        </property>
+        <property>
+            <name>ComputeScrollOffset</name>
+            <returntype>int</returntype>
+            <comment>Sub LV_onScrollListener (dx As Int, dy As Int)
+ Log(LV.ComputeScrollOffset)
+ End Sub</comment>
+        </property>
+        <property>
+            <name>Orientation</name>
+            <parameter>
+                <name>Orientation</name>
+                <type>int</type>
+            </parameter>
+            <comment>&lt;b&gt;Just call before 'Show' method.&lt;/b&gt;
+ &lt;p&gt;
+ &lt;code&gt;RVP.Orientation = RVP.HORIZONTAL&lt;/code&gt;
+ &lt;code&gt;RVP.Orientation = RVP.VERTICAL&lt;/code&gt;</comment>
+        </property>
+        <property>
+            <name>ClipToPadding</name>
+            <parameter>
+                <name>ClipToPadding</name>
+                <type>boolean</type>
+            </parameter>
+            <comment></comment>
+        </property>
+        <property>
+            <name>Top</name>
+            <returntype>int</returntype>
+            <parameter>
+                <name>arg0</name>
+                <type Pixel="true">int</type>
+            </parameter>
+            <comment></comment>
+        </property>
+        <property>
+            <name>Tag</name>
+            <returntype>java.lang.Object</returntype>
+            <parameter>
+                <name>arg0</name>
+                <type>java.lang.Object</type>
+            </parameter>
+            <comment></comment>
+        </property>
+        <property>
+            <name>TriggerOffset</name>
+            <parameter>
+                <name>Offset</name>
+                <type>int</type>
+            </parameter>
+            <comment></comment>
+        </property>
+        <field>
+            <name>SCROLL_STATE_SETTLING</name>
+            <comment></comment>
+            <returntype>int</returntype>
+        </field>
+        <field>
+            <name>VERTICAL</name>
+            <comment></comment>
+            <returntype>int</returntype>
+        </field>
+        <field>
+            <name>SCROLL_STATE_IDLE</name>
+            <comment></comment>
+            <returntype>int</returntype>
+        </field>
+        <field>
+            <name>HORIZONTAL</name>
+            <comment></comment>
+            <returntype>int</returntype>
+        </field>
+        <field>
+            <name>SCROLL_STATE_DRAGGING</name>
+            <comment></comment>
+            <returntype>int</returntype>
+        </field>
+    </class>
+    <class>
+        <name>wir.hitex.recycler.Hitex_RefreshLayout</name>
+        <shortname>Hitex_RefreshLayout</shortname>
+        <owner>activity</owner>
+        <event>onRefresh (Direction As Int)</event>
+        <method>
+            <name>Initialize</name>
+            <comment>Example : &lt;code&gt;
+ RL.Initialize(LV, "RL")
+ RL.Direction = RL.DIRECTION_BOTTOM
+ RL.SchemeColors = Array As Int (Colors.Red, Colors.Black, Colors.Blue)
+ &lt;/code&gt;
+ ________________________________________
+ &lt;code&gt;
+ Sub RL_onRefresh (Direction As Int)
+
+ Select (Direction)
+ Case RL.DIRECTION_TOP:
+ Log("TOP")
+ Case RL.DIRECTION_BOTTOM:
+ Log("BOTTOM")
+ End Select
+
+ End Sub
+ &lt;/code&gt;</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>ba</name>
+                <type>anywheresoftware.b4a.BA</type>
+            </parameter>
+            <parameter>
+                <name>LV</name>
+                <type>wir.hitex.recycler.Hitex_LayoutView</type>
+            </parameter>
+            <parameter>
+                <name>EventName</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+        <property>
+            <name>DistanceToTriggerSync</name>
+            <parameter>
+                <name>Distance</name>
+                <type>int</type>
+            </parameter>
+            <comment>Set the distance to trigger a sync in dips</comment>
+        </property>
+        <property>
+            <name>Refreshing</name>
+            <returntype>boolean</returntype>
+            <parameter>
+                <name>Refreshing</name>
+                <type>boolean</type>
+            </parameter>
+            <comment></comment>
+        </property>
+        <property>
+            <name>Direction</name>
+            <returntype>int</returntype>
+            <parameter>
+                <name>Direction</name>
+                <type>int</type>
+            </parameter>
+            <comment>&lt;code&gt;RL.Direction = RL.DIRECTION_TOP&lt;/code&gt;
+ &lt;code&gt;RL.Direction = RL.DIRECTION_BOTTOM&lt;/code&gt;
+ &lt;code&gt;RL.Direction = RL.DIRECTION_BOTH&lt;/code&gt;
+ ___________________________________________________________________________
+ Can i refresh when scroll to bottom automatically ?
+
+ In OnBindViewHolder :
+ &lt;code&gt;If (Position = ItemList.Size-1) Then R.Refreshing = True&lt;/code&gt;</comment>
+        </property>
+        <property>
+            <name>SchemeColors</name>
+            <parameter>
+                <name>Colors</name>
+                <type>int[]</type>
+            </parameter>
+            <comment>RL.SchemeColors = Array As Int (Colors.Red, Colors.Black, Colors.Blue)</comment>
+        </property>
+        <field>
+            <name>DIRECTION_BOTH</name>
+            <comment></comment>
+            <returntype>int</returntype>
+        </field>
+        <field>
+            <name>DIRECTION_BOTTOM</name>
+            <comment></comment>
+            <returntype>int</returntype>
+        </field>
+        <field>
+            <name>DIRECTION_TOP</name>
+            <comment></comment>
+            <returntype>int</returntype>
+        </field>
+    </class>
+    <class>
+        <name>wir.hitex.recycler.Hitex_Utils</name>
+        <shortname>Hitex_Utils</shortname>
+        <owner>activity</owner>
+        <method>
+            <name>GetViewByTag</name>
+            <comment></comment>
+            <returntype>anywheresoftware.b4a.objects.ConcreteViewWrapper</returntype>
+            <parameter>
+                <name>Parent</name>
+                <type>anywheresoftware.b4a.objects.PanelWrapper</type>
+            </parameter>
+            <parameter>
+                <name>Tag</name>
+                <type>java.lang.Object</type>
+            </parameter>
+        </method>
+        <method>
+            <name>GetActivity</name>
+            <comment></comment>
+            <returntype>android.app.Activity</returntype>
+            <parameter>
+                <name>ba</name>
+                <type>anywheresoftware.b4a.BA</type>
+            </parameter>
+        </method>
+        <method>
+            <name>FilterSearchList</name>
+            <comment>Type Model (SearchText As String,id As Int)
+ Dim Util As Hitex_Utils
+ OriginalItemList = a copy of 'ItemList' in 'Activity_Create'
+
+ Example : &lt;code&gt;
+ Sub EditText_TextChanged (Old As String, New As String)
+
+ ItemList = Utils.FilterSearchList("SearchText",OriginalItemList).Contains(New)
+ LV.ScrollToPosition(0)
+ LV.notifyDataSetChanged
+
+ End Sub
+ &lt;/code&gt;</comment>
+            <returntype>wir.hitex.recycler.Hitex_Utils.Hi_SearchType</returntype>
+            <parameter>
+                <name>ItemName</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>OriginalItemList</name>
+                <type>anywheresoftware.b4a.objects.collections.List</type>
+            </parameter>
+        </method>
+        <method>
+            <name>EnToFa</name>
+            <comment>Convert English numbers to Persian numbers</comment>
+            <returntype>java.lang.String</returntype>
+            <parameter>
+                <name>EN_Number</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+        <method>
+            <name>GetImageScaleHeight</name>
+            <comment></comment>
+            <returntype>double</returntype>
+            <parameter>
+                <name>bitmap</name>
+                <type>anywheresoftware.b4a.objects.drawable.CanvasWrapper.BitmapWrapper</type>
+            </parameter>
+            <parameter>
+                <name>ImageViewWidth</name>
+                <type>int</type>
+            </parameter>
+        </method>
+        <method>
+            <name>LongConvertor</name>
+            <comment></comment>
+            <returntype>java.lang.String</returntype>
+            <parameter>
+                <name>bytes</name>
+                <type>long</type>
+            </parameter>
+            <parameter>
+                <name>SI</name>
+                <type>boolean</type>
+            </parameter>
+        </method>
+        <method>
+            <name>FaToEn</name>
+            <comment>Convert Persian numbers to English numbers</comment>
+            <returntype>java.lang.String</returntype>
+            <parameter>
+                <name>Fa_Number</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+        <method>
+            <name>GetTextHeight</name>
+            <comment>Label must have text before.</comment>
+            <returntype>float</returntype>
+            <parameter>
+                <name>Label</name>
+                <type>anywheresoftware.b4a.objects.LabelWrapper</type>
+            </parameter>
+        </method>
+    </class>
+    <class>
+        <name>wir.hitex.recycler.Hitex_Utils.Hi_SearchType</name>
+        <owner>process</owner>
+        <method>
+            <name>EqualsIgnoreCase</name>
+            <comment></comment>
+            <returntype>anywheresoftware.b4a.objects.collections.List</returntype>
+            <parameter>
+                <name>EqualsIgnoreCaseText</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+        <method>
+            <name>Equals</name>
+            <comment></comment>
+            <returntype>anywheresoftware.b4a.objects.collections.List</returntype>
+            <parameter>
+                <name>EqualsText</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+        <method>
+            <name>Matches</name>
+            <comment></comment>
+            <returntype>anywheresoftware.b4a.objects.collections.List</returntype>
+            <parameter>
+                <name>Match</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+        <method>
+            <name>IsMatch</name>
+            <comment>ItemList = Utils.FilterSearchList("Titr",OriginalItemList).IsMatch("\w+@\w+\.\w+")
+ LV.notifyDataSetChanged
+
+ if Item or Items matches to above pattern , that item will added to ItemList. for example : mike@gmail.com</comment>
+            <returntype>anywheresoftware.b4a.objects.collections.List</returntype>
+            <parameter>
+                <name>Pattern</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+        <method>
+            <name>Matcher</name>
+            <comment>ItemList = Utils.FilterSearchList("Titr",OriginalItemList).Matcher("\w+@\w+\.\w+")
+ LV.notifyDataSetChanged
+
+ if Item or Items contains the above pattern , that item will added to ItemList. for example : Please contact mike@gmail.com</comment>
+            <returntype>anywheresoftware.b4a.objects.collections.List</returntype>
+            <parameter>
+                <name>Pattern</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+        <method>
+            <name>Contains</name>
+            <comment></comment>
+            <returntype>anywheresoftware.b4a.objects.collections.List</returntype>
+            <parameter>
+                <name>ContainsText</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+        <method>
+            <name>StartsWith</name>
+            <comment></comment>
+            <returntype>anywheresoftware.b4a.objects.collections.List</returntype>
+            <parameter>
+                <name>StartsWithText</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+        <method>
+            <name>EndsWith</name>
+            <comment></comment>
+            <returntype>anywheresoftware.b4a.objects.collections.List</returntype>
+            <parameter>
+                <name>EndsWithText</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+    </class>
+    <class>
+        <name>wir.hitex.recycler.Hitex_ViewHolder</name>
+        <shortname>ViewHolder</shortname>
+        <objectwrapper>android.support.v7.widget.RecyclerView.ViewHolder</objectwrapper>
+        <owner>process</owner>
+        <property>
+            <name>ItemView</name>
+            <returntype>anywheresoftware.b4a.objects.ConcreteViewWrapper</returntype>
+            <comment></comment>
+        </property>
+        <property>
+            <name>ItemViewType</name>
+            <returntype>int</returntype>
+            <comment>The view type of this ViewHolder.</comment>
+        </property>
+        <property>
+            <name>Position</name>
+            <returntype>int</returntype>
+            <comment>&lt;b&gt;DEPRECATED&lt;/b&gt;
+ This method was deprecated in API level 22.0.0. This method is deprecated because its meaning is ambiguous due to the async handling of adapter updates. Please use 'LayoutPosition' or 'AdapterPosition' depending on your use case.</comment>
+        </property>
+        <property>
+            <name>IsRecyclable</name>
+            <returntype>boolean</returntype>
+            <parameter>
+                <name>IsRecyclable</name>
+                <type>boolean</type>
+            </parameter>
+            <comment>Informs the recycler whether this item can be recycled.</comment>
+        </property>
+        <property>
+            <name>OldPosition</name>
+            <returntype>int</returntype>
+            <comment>When LayoutManager supports animations, RecyclerView tracks 3 positions for ViewHolders to perform animations.</comment>
+        </property>
+        <property>
+            <name>ItemId</name>
+            <returntype>long</returntype>
+            <comment>Returns The itemId represented by this ViewHolder.</comment>
+        </property>
+        <property>
+            <name>LayoutPosition</name>
+            <returntype>int</returntype>
+            <comment>Returns the position of the ViewHolder in terms of the latest layout pass.</comment>
+        </property>
+        <property>
+            <name>AdapterPosition</name>
+            <returntype>int</returntype>
+            <comment>Returns the Adapter position of the item represented by this ViewHolder.</comment>
+        </property>
+    </class>
+    <version>7.2</version>
+    <dependsOn>com.android.support:support-v4</dependsOn>
+    <dependsOn>com.android.support:recyclerview-v7</dependsOn>
+    <dependsOn>com.android.support:cardview-v7</dependsOn>
+    <dependsOn>Hitex_RecyclerView.aar</dependsOn>
+    <dependsOn>JavaObject</dependsOn>
+</root>

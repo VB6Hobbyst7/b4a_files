@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root>
+    <doclet-version-NOT-library-version>1.04</doclet-version-NOT-library-version>
+    <class>
+        <name>pn.captcha.picker.PNCaptchaPicker</name>
+        <shortname>PNCaptchaPicker</shortname>
+        <owner>process</owner>
+        <method>
+            <name>Initialize</name>
+            <comment></comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>b</name>
+                <type>anywheresoftware.b4a.BA</type>
+            </parameter>
+        </method>
+        <method>
+            <name>AddNewJavaScriptInterface</name>
+            <comment></comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>webview</name>
+                <type>android.webkit.WebView</type>
+            </parameter>
+        </method>
+        <method>
+            <name>Exequte</name>
+            <comment></comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>webview</name>
+                <type>android.webkit.WebView</type>
+            </parameter>
+            <parameter>
+                <name>SubName</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>JSCodeForGetImg</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+        <field>
+            <name>ABOUT</name>
+            <comment></comment>
+            <returntype>java.lang.String</returntype>
+        </field>
+    </class>
+    <version>1.01</version>
+    <author>pejman nikravan</author>
+</root>

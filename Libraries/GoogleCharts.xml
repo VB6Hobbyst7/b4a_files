@@ -1,0 +1,2106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <doclet-version-NOT-library-version>1.00</doclet-version-NOT-library-version>
+  <dependsOn>stringutils</dependsOn>
+  <dependsOn>cloudprint</dependsOn>
+  <dependsOn>reflection</dependsOn>
+  <dependsOn>javaobject</dependsOn>
+  <dependsOn>webviewextras</dependsOn>
+  <dependsOn>phone</dependsOn>
+  <class>
+    <name>njdude.googlecharts.lib.googlecharts</name>
+    <shortname>GoogleCharts</shortname>
+    <owner>activity</owner>
+    <permission>android.permission.WRITE_EXTERNAL_STORAGE</permission>
+    <permission>android.permission.INTERNET</permission>
+    <event>ChartGenerated_Response</event>
+    <event>ChartMenuButtonPressed_Response</event>
+    <event>ChartSaved_Response</event>
+    <method>
+      <name>IsInitialized</name>
+      <comment>Tests whether the object has been initialized.</comment>
+      <returntype>boolean</returntype>
+    </method>
+    <method>
+      <name DesignerName="BarChartLegend">_barchartlegend</name>
+      <comment>Specifies the legend text style.
+Position: Possible values: Top, Bottom, Left, Right, In, None.
+TextColor: Color of the legend text.
+FontName: Name of the selected font.
+FontSize: Size of the selected font.
+Bold: True or False.
+Italic: True or False.</comment>
+      <returntype>String</returntype>
+      <parameter>
+        <name>Position</name>
+        <type>String</type>
+      </parameter>
+      <parameter>
+        <name>TextColor</name>
+        <type>String</type>
+      </parameter>
+      <parameter>
+        <name>FontName</name>
+        <type>String</type>
+      </parameter>
+      <parameter>
+        <name>FontSize</name>
+        <type>int</type>
+      </parameter>
+      <parameter>
+        <name>Bold</name>
+        <type>boolean</type>
+      </parameter>
+      <parameter>
+        <name>Italic</name>
+        <type>boolean</type>
+      </parameter>
+    </method>
+    <method>
+      <name DesignerName="BarChartSetColumnValues">_barchartsetcolumnvalues</name>
+      <comment>Description of every value.</comment>
+      <returntype>String</returntype>
+      <parameter>
+        <name>ValueLabel</name>
+        <type>String</type>
+      </parameter>
+      <parameter>
+        <name>Values</name>
+        <type>anywheresoftware.b4a.objects.collections.List</type>
+      </parameter>
+    </method>
+    <method>
+      <name DesignerName="BarChartSetHorizontalAxisTitle">_barchartsethorizontalaxistitle</name>
+      <comment>Specifies the title of the horizontal axis.</comment>
+      <returntype>String</returntype>
+      <parameter>
+        <name>Title</name>
+        <type>String</type>
+      </parameter>
+      <parameter>
+        <name>TextColor</name>
+        <type>String</type>
+      </parameter>
+      <parameter>
+        <name>FontName</name>
+        <type>String</type>
+      </parameter>
+      <parameter>
+        <name>FontSize</name>
+        <type>int</type>
+      </parameter>
+      <parameter>
+        <name>Bold</name>
+        <type>boolean</type>
+      </parameter>
+      <parameter>
+        <name>Italic</name>
+        <type>boolean</type>
+      </parameter>
+    </method>
+    <method>
+      <name DesignerName="BarChartSetVerticalAxisTitle">_barchartsetverticalaxistitle</name>
+      <comment>Specifies the title of the vertical axis.</comment>
+      <returntype>String</returntype>
+      <parameter>
+        <name>Title</name>
+        <type>String</type>
+      </parameter>
+      <parameter>
+        <name>TextColor</name>
+        <type>String</type>
+      </parameter>
+      <parameter>
+        <name>FontName</name>
+        <type>String</type>
+      </parameter>
+      <parameter>
+        <name>FontSize</name>
+        <type>int</type>
+      </parameter>
+      <parameter>
+        <name>Bold</name>
+        <type>boolean</type>
+      </parameter>
+      <parameter>
+        <name>Italic</name>
+        <type>boolean</type>
+      </parameter>
+    </method>
+    <method>
+      <name DesignerName="BarChartTitleStyle">_barcharttitlestyle</name>
+      <comment>Specifies the bar text style. </comment>
+      <returntype>String</returntype>
+      <parameter>
+        <name>TextColor</name>
+        <type>String</type>
+      </parameter>
+      <parameter>
+        <name>FontName</name>
+        <type>String</type>
+      </parameter>
+      <parameter>
+        <name>FontSize</name>
+        <type>int</type>
+      </parameter>
+      <parameter>
+        <name>Bold</name>
+        <type>boolean</type>
+      </parameter>
+      <parameter>
+        <name>Italic</name>
+        <type>boolean</type>
+      </parameter>
+    </method>
+    <method>
+      <name DesignerName="BubbleChartLegend">_bubblechartlegend</name>
+      <comment>Specifies the legend text style.
+Position: Possible values: Top, Bottom, Left, Right, In, None.
+TextColor: Color of the legend text.
+FontName: Name of the selected font.
+FontSize: Size of the selected font.
+Bold: True or False.
+Italic: True or False.</comment>
+      <returntype>String</returntype>
+      <parameter>
+        <name>Position</name>
+        <type>String</type>
+      </parameter>
+      <parameter>
+        <name>TextColor</name>
+        <type>String</type>
+      </parameter>
+      <parameter>
+        <name>FontName</name>
+        <type>String</type>
+      </parameter>
+      <parameter>
+        <name>FontSize</name>
+        <type>int</type>
+      </parameter>
+      <parameter>
+        <name>Bold</name>
+        <type>boolean</type>
+      </parameter>
+      <parameter>
+        <name>Italic</name>
+        <type>boolean</type>
+      </parameter>
+    </method>
+    <method>
+      <name DesignerName="BubbleChartSetBubbleStyle">_bubblechartsetbubblestyle</name>
+      <comment>Colors to assign to the bubbles.</comment>
+      <returntype>String</returntype>
+      <parameter>
+        <name>TextColor</name>
+        <type>String</type>
+      </parameter>
+      <parameter>
+        <name>FontName</name>
+        <type>String</type>
+      </parameter>
+      <parameter>
+        <name>FontSize</name>
+        <type>int</type>
+      </parameter>
+      <parameter>
+        <name>AuraColor</name>
+        <type>String</type>
+      </parameter>
+      <parameter>
+        <name>Bold</name>
+        <type>boolean</type>
+      </parameter>
+      <parameter>
+        <name>Italic</name>
+        <type>boolean</type>
+      </parameter>
+    </method>
+    <method>
+      <name DesignerName="BubbleChartSetColumnValues">_bubblechartsetcolumnvalues</name>
+      <comment>Column values.</comment>
+      <returntype>String</returntype>
+      <parameter>
+        <name>ValueLabel</name>
+        <type>String</type>
+      </parameter>
+      <parameter>
+        <name>Values</name>
+        <type>anywheresoftware.b4a.objects.collections.List</type>
+      </parameter>
+    </method>
+    <method>
+      <name DesignerName="BubbleChartSetHorizontalAxisTitle">_bubblechartsethorizontalaxistitle</name>
+      <comment>Specifies the title of the horizontal axis.</comment>
+      <returntype>String</returntype>
+      <parameter>
+        <name>Title</name>
+        <type>String</type>
+      </parameter>
+      <parameter>
+        <name>TextColor</name>
+        <type>String</type>
+      </parameter>
+      <parameter>
+        <name>FontName</name>
+        <type>String</type>
+      </parameter>
+      <parameter>
+        <name>FontSize</name>
+        <type>int</type>
+      </parameter>
+      <parameter>
+        <name>Bold</name>
+        <type>boolean</type>
+      </parameter>
+      <parameter>
+        <name>Italic</name>
+        <type>boolean</type>
+      </parameter>
+    </method>
+    <method>
+      <name DesignerName="BubbleChartSetVerticalAxisTitle">_bubblechartsetverticalaxistitle</name>
+      <comment>Specifies the title of the vertical axis.</comment>
+      <returntype>String</returntype>
+      <parameter>
+        <name>Title</name>
+        <type>String</type>
+      </parameter>
+      <parameter>
+        <name>TextColor</name>
+        <type>String</type>
+      </parameter>
+      <parameter>
+        <name>FontName</name>
+        <type>String</type>
+      </parameter>
+      <parameter>
+        <name>FontSize</name>
+        <type>int</type>
+      </parameter>
+      <parameter>
+        <name>Bold</name>
+        <type>boolean</type>
+      </parameter>
+      <parameter>
+        <name>Italic</name>
+        <type>boolean</type>
+      </parameter>
+    </method>
+    <method>
+      <name DesignerName="BubbleChartTitleStyle">_bubblecharttitlestyle</name>
+      <comment>Specifies the slice text style. </comment>
+      <returntype>String</returntype>
+      <parameter>
+        <name>TextColor</name>
+        <type>String</type>
+      </parameter>
+      <parameter>
+        <name>FontName</name>
+        <type>String</type>
+      </parameter>
+      <parameter>
+        <name>FontSize</name>
+        <type>int</type>
+      </parameter>
+      <parameter>
+        <name>Bold</name>
+        <type>boolean</type>
+      </parameter>
+      <parameter>
+        <name>Italic</name>
+        <type>boolean</type>
+      </parameter>
+    </method>
+    <method>
+      <name DesignerName="ChartDefaultBackground">_chartdefaultbackground</name>
+      <comment>Set the default background for the whole chart.
+StrokeColor: The color of the chart border.
+StrokeWidth: The border width.
+FillColor: The background color for the main area of the chart.</comment>
+      <returntype>String</returntype>
+      <parameter>
+        <name>StrokeColor</name>
+        <type>String</type>
+      </parameter>
+      <parameter>
+        <name>StrokeWidth</name>
+        <type>int</type>
+      </parameter>
+      <parameter>
+        <name>FillColor</name>
+        <type>String</type>
+      </parameter>
+    </method>
+    <method>
+      <name DesignerName="ComboChartCreateSeries">_combochartcreateseries</name>
+      <comment>Create a specific data representation.
+ColumnLabel: The name of the column to use.
+SeriesType: Possible values: Line, Area, Bars, SteppedArea.
+CurveType: None, Funtion. (Just for Line series type).
+VisibleInLegend: Show the Column name in the chart's legend.</comment>
+      <returntype>String</returntype>
+      <parameter>
+        <name>ColumnLabel</name>
+        <type>String</type>
+      </parameter>
+      <parameter>
+        <name>SeriesType</name>
+        <type>String</type>
+      </parameter>
+      <parameter>
+        <name>CurveType</name>
+        <type>String</type>
+      </parameter>
+      <parameter>
+        <name>VisibleInLegend</name>
+        <type>boolean</type>
+      </parameter>
+    </method>
+    <method>
+      <name DesignerName="ComboChartCrosshair">_combochartcrosshair</name>
+      <comment>Trigger: Possible values: Both, Focus, Selection.
+Orientation: Possible values: Both, Horizontal, Vertical.</comment>
+      <returntype>String</returntype>
+      <parameter>
+        <name>Trigger</name>
+        <type>String</type>
+      </parameter>
+      <parameter>
+        <name>Orientation</name>
+        <type>String</type>
+      </parameter>
+    </method>
+    <method>
+      <name DesignerName="ComboChartLegend">_combochartlegend</name>
+      <comment>Specifies the legend text style.
+Position: Possible values: Top, Bottom, Left, Right, In, None.
+TextColor: Color of the legend text.
+FontName: Name of the selected font.
+FontSize: Size of the selected font.
+Bold: True or False.
+Italic: True or False.</comment>
+      <returntype>String</returntype>
+      <parameter>
+        <name>Position</name>
+        <type>String</type>
+      </parameter>
+      <parameter>
+        <name>TextColor</name>
+        <type>String</type>
+      </parameter>
+      <parameter>
+        <name>FontName</name>
+        <type>String</type>
+      </parameter>
+      <parameter>
+        <name>FontSize</name>
+        <type>int</type>
+      </parameter>
+      <parameter>
+        <name>Bold</name>
+        <type>boolean</type>
+      </parameter>
+      <parameter>
+        <name>Italic</name>
+        <type>boolean</type>
+      </parameter>
+    </method>
+    <method>
+      <name DesignerName="ComboChartSetColumnValues">_combochartsetcolumnvalues</name>
+      <comment>Column values.</comment>
+      <returntype>String</returntype>
+      <parameter>
+        <name>ValueLabel</name>
+        <type>String</type>
+      </parameter>
+      <parameter>
+        <name>Values</name>
+        <type>anywheresoftware.b4a.objects.collections.List</type>
+      </parameter>
+    </method>
+    <method>
+      <name DesignerName="ComboChartSetHorizontalAxisTitle">_combochartsethorizontalaxistitle</name>
+      <comment>Specifies the title of the horizontal axis.</comment>
+      <returntype>String</returntype>
+      <parameter>
+        <name>Title</name>
+        <type>String</type>
+      </parameter>
+      <parameter>
+        <name>TextColor</name>
+        <type>String</type>
+      </parameter>
+      <parameter>
+        <name>FontName</name>
+        <type>String</type>
+      </parameter>
+      <parameter>
+        <name>FontSize</name>
+        <type>int</type>
+      </parameter>
+      <parameter>
+        <name>Bold</name>
+        <type>boolean</type>
+      </parameter>
+      <parameter>
+        <name>Italic</name>
+        <type>boolean</type>
+      </parameter>
+    </method>
+    <method>
+      <name DesignerName="ComboChartSetVerticalAxisTitle">_combochartsetverticalaxistitle</name>
+      <comment>Specifies the title of the vertical axis.</comment>
+      <returntype>String</returntype>
+      <parameter>
+        <name>Title</name>
+        <type>String</type>
+      </parameter>
+      <parameter>
+        <name>TextColor</name>
+        <type>String</type>
+      </parameter>
+      <parameter>
+        <name>FontName</name>
+        <type>String</type>
+      </parameter>
+      <parameter>
+        <name>FontSize</name>
+        <type>int</type>
+      </parameter>
+      <parameter>
+        <name>Bold</name>
+        <type>boolean</type>
+      </parameter>
+      <parameter>
+        <name>Italic</name>
+        <type>boolean</type>
+      </parameter>
+    </method>
+    <method>
+      <name DesignerName="ComboChartTitleStyle">_combocharttitlestyle</name>
+      <comment>Specifies the slice text style. </comment>
+      <returntype>String</returntype>
+      <parameter>
+        <name>TextColor</name>
+        <type>String</type>
+      </parameter>
+      <parameter>
+        <name>FontName</name>
+        <type>String</type>
+      </parameter>
+      <parameter>
+        <name>FontSize</name>
+        <type>int</type>
+      </parameter>
+      <parameter>
+        <name>Bold</name>
+        <type>boolean</type>
+      </parameter>
+      <parameter>
+        <name>Italic</name>
+        <type>boolean</type>
+      </parameter>
+    </method>
+    <method>
+      <name DesignerName="GeoChartLegend">_geochartlegend</name>
+      <comment>Specifies the legend text style.
+Position: Possible values: Top, Bottom, Left, Right, Labeled, None.
+TextColor: Color of the legend text.
+FontName: Name of the selected font.
+FontSize: Size of the selected font.
+Bold: True or False.
+Italic: True or False.</comment>
+      <returntype>String</returntype>
+      <parameter>
+        <name>TextColor</name>
+        <type>String</type>
+      </parameter>
+      <parameter>
+        <name>FontName</name>
+        <type>String</type>
+      </parameter>
+      <parameter>
+        <name>FontSize</name>
+        <type>int</type>
+      </parameter>
+      <parameter>
+        <name>Bold</name>
+        <type>boolean</type>
+      </parameter>
+      <parameter>
+        <name>Italic</name>
+        <type>boolean</type>
+      </parameter>
+    </method>
+    <method>
+      <name DesignerName="GeoChartSetColumnValues">_geochartsetcolumnvalues</name>
+      <comment>Description of every column and their respective value.</comment>
+      <returntype>String</returntype>
+      <parameter>
+        <name>ValueLabel</name>
+        <type>String</type>
+      </parameter>
+      <parameter>
+        <name>Values</name>
+        <type>anywheresoftware.b4a.objects.collections.List</type>
+      </parameter>
+    </method>
+    <method>
+      <name DesignerName="HistogramChartLegend">_histogramchartlegend</name>
+      <comment>Specifies the legend text style.
+Position: Possible values: Top, Bottom, Left, Right, In, None.
+TextColor: Color of the legend text.
+FontName: Name of the selected font.
+FontSize: Size of the selected font.
+Bold: True or False.
+Italic: True or False.</comment>
+      <returntype>String</returntype>
+      <parameter>
+        <name>Position</name>
+        <type>String</type>
+      </parameter>
+      <parameter>
+        <name>TextColor</name>
+        <type>String</type>
+      </parameter>
+      <parameter>
+        <name>FontName</name>
+        <type>String</type>
+      </parameter>
+      <parameter>
+        <name>FontSize</name>
+        <type>int</type>
+      </parameter>
+      <parameter>
+        <name>Bold</name>
+        <type>boolean</type>
+      </parameter>
+      <parameter>
+        <name>Italic</name>
+        <type>boolean</type>
+      </parameter>
+    </method>
+    <method>
+      <name DesignerName="HistogramChartSetColumnValues">_histogramchartsetcolumnvalues</name>
+      <comment>Column values.
+Set: Row index.</comment>
+      <returntype>String</returntype>
+      <parameter>
+        <name>Set</name>
+        <type>int</type>
+      </parameter>
+      <parameter>
+        <name>Values</name>
+        <type>anywheresoftware.b4a.objects.collections.List</type>
+      </parameter>
+    </method>
+    <method>
+      <name DesignerName="HistogramChartSetHorizontalAxisTitle">_histogramchartsethorizontalaxistitle</name>
+      <comment>Specifies the title of the horizontal axis.</comment>
+      <returntype>String</returntype>
+      <parameter>
+        <name>Title</name>
+        <type>String</type>
+      </parameter>
+      <parameter>
+        <name>TextColor</name>
+        <type>String</type>
+      </parameter>
+      <parameter>
+        <name>FontName</name>
+        <type>String</type>
+      </parameter>
+      <parameter>
+        <name>FontSize</name>
+        <type>int</type>
+      </parameter>
+      <parameter>
+        <name>Bold</name>
+        <type>boolean</type>
+      </parameter>
+      <parameter>
+        <name>Italic</name>
+        <type>boolean</type>
+      </parameter>
+    </method>
+    <method>
+      <name DesignerName="HistogramChartSetVerticalAxisTitle">_histogramchartsetverticalaxistitle</name>
+      <comment>Specifies the title of the vertical axis.</comment>
+      <returntype>String</returntype>
+      <parameter>
+        <name>Title</name>
+        <type>String</type>
+      </parameter>
+      <parameter>
+        <name>TextColor</name>
+        <type>String</type>
+      </parameter>
+      <parameter>
+        <name>FontName</name>
+        <type>String</type>
+      </parameter>
+      <parameter>
+        <name>FontSize</name>
+        <type>int</type>
+      </parameter>
+      <parameter>
+        <name>Bold</name>
+        <type>boolean</type>
+      </parameter>
+      <parameter>
+        <name>Italic</name>
+        <type>boolean</type>
+      </parameter>
+    </method>
+    <method>
+      <name DesignerName="HistogramChartTitleStyle">_histogramcharttitlestyle</name>
+      <comment>Specifies the histogram text style. </comment>
+      <returntype>String</returntype>
+      <parameter>
+        <name>TextColor</name>
+        <type>String</type>
+      </parameter>
+      <parameter>
+        <name>FontName</name>
+        <type>String</type>
+      </parameter>
+      <parameter>
+        <name>FontSize</name>
+        <type>int</type>
+      </parameter>
+      <parameter>
+        <name>Bold</name>
+        <type>boolean</type>
+      </parameter>
+      <parameter>
+        <name>Italic</name>
+        <type>boolean</type>
+      </parameter>
+    </method>
+    <method>
+      <name DesignerName="Initialize">_initialize</name>
+      <comment>Initializes the GoogleCharts library.
+Parent: Activity or Panel where the GoogleCharts will be added to.
+Module: Me (Required).
+EventName: Prefix to be used on the event responses.
+ShowMenuButton: Display a menu button on the chart.</comment>
+      <returntype>String</returntype>
+      <parameter>
+        <name>ba</name>
+        <type>anywheresoftware.b4a.BA</type>
+      </parameter>
+      <parameter>
+        <name>Parent</name>
+        <type>anywheresoftware.b4a.objects.PanelWrapper</type>
+      </parameter>
+      <parameter>
+        <name>Module</name>
+        <type>Object</type>
+      </parameter>
+      <parameter>
+        <name>EventName</name>
+        <type>String</type>
+      </parameter>
+      <parameter>
+        <name>ShowMenuButton</name>
+        <type>boolean</type>
+      </parameter>
+    </method>
+    <method>
+      <name DesignerName="PieChartLegend">_piechartlegend</name>
+      <comment>Specifies the legend text style.
+Position: Possible values: Top, Bottom, Left, Right, Labeled, None.
+TextColor: Color of the legend text.
+FontName: Name of the selected font.
+FontSize: Size of the selected font.
+Bold: True or False.
+Italic: True or False.</comment>
+      <returntype>String</returntype>
+      <parameter>
+        <name>Position</name>
+        <type>String</type>
+      </parameter>
+      <parameter>
+        <name>TextColor</name>
+        <type>String</type>
+      </parameter>
+      <parameter>
+        <name>FontName</name>
+        <type>String</type>
+      </parameter>
+      <parameter>
+        <name>FontSize</name>
+        <type>int</type>
+      </parameter>
+      <parameter>
+        <name>Bold</name>
+        <type>boolean</type>
+      </parameter>
+      <parameter>
+        <name>Italic</name>
+        <type>boolean</type>
+      </parameter>
+    </method>
+    <method>
+      <name DesignerName="PieChartSetSliceOffset">_piechartsetsliceoffset</name>
+      <comment>Set the margin of separation for the selected slice.
+SliceLabel: The selected slice to separate.
+Offset: Amount of separation, from 0 through 9.</comment>
+      <returntype>String</returntype>
+      <parameter>
+        <name>SliceLabel</name>
+        <type>String</type>
+      </parameter>
+      <parameter>
+        <name>Offset</name>
+        <type>int</type>
+      </parameter>
+    </method>
+    <method>
+      <name DesignerName="PieChartSliceLabelAndValue">_piechartslicelabelandvalue</name>
+      <comment>Description of every slice on the chart.</comment>
+      <returntype>String</returntype>
+      <parameter>
+        <name>SliceLabel</name>
+        <type>String</type>
+      </parameter>
+      <parameter>
+        <name>SliceValue</name>
+        <type>int</type>
+      </parameter>
+    </method>
+    <method>
+      <name DesignerName="PieChartSliceTextStyle">_piechartslicetextstyle</name>
+      <comment>Specifies the slice text style.</comment>
+      <returntype>String</returntype>
+      <parameter>
+        <name>TextColor</name>
+        <type>String</type>
+      </parameter>
+      <parameter>
+        <name>FontName</name>
+        <type>String</type>
+      </parameter>
+      <parameter>
+        <name>FontSize</name>
+        <type>int</type>
+      </parameter>
+    </method>
+    <method>
+      <name DesignerName="PieChartTitleStyle">_piecharttitlestyle</name>
+      <comment>Specifies the slice text style. </comment>
+      <returntype>String</returntype>
+      <parameter>
+        <name>TextColor</name>
+        <type>String</type>
+      </parameter>
+      <parameter>
+        <name>FontName</name>
+        <type>String</type>
+      </parameter>
+      <parameter>
+        <name>FontSize</name>
+        <type>int</type>
+      </parameter>
+      <parameter>
+        <name>Bold</name>
+        <type>boolean</type>
+      </parameter>
+      <parameter>
+        <name>Italic</name>
+        <type>boolean</type>
+      </parameter>
+    </method>
+    <method>
+      <name DesignerName="PrintChart">_printchart</name>
+      <comment>Print the selected chart via CloudPrint.</comment>
+      <returntype>String</returntype>
+    </method>
+    <method>
+      <name DesignerName="SaveChart">_savechart</name>
+      <comment>Save the selected chart.</comment>
+      <returntype>String</returntype>
+      <parameter>
+        <name>Path</name>
+        <type>String</type>
+      </parameter>
+      <parameter>
+        <name>ImageName</name>
+        <type>String</type>
+      </parameter>
+    </method>
+    <method>
+      <name DesignerName="ScatterChartCrosshair">_scatterchartcrosshair</name>
+      <comment>Trigger: Possible values: Both, Focus, Selection.
+Orientation: Possible values: Both, Horizontal, Vertical.</comment>
+      <returntype>String</returntype>
+      <parameter>
+        <name>Trigger</name>
+        <type>String</type>
+      </parameter>
+      <parameter>
+        <name>Orientation</name>
+        <type>String</type>
+      </parameter>
+    </method>
+    <method>
+      <name DesignerName="ScatterChartLegend">_scatterchartlegend</name>
+      <comment>Specifies the legend text style.
+Position: Possible values: Top, Bottom, Left, Right, In, None.
+TextColor: Color of the legend text.
+FontName: Name of the selected font.
+FontSize: Size of the selected font.
+Bold: True or False.
+Italic: True or False.</comment>
+      <returntype>String</returntype>
+      <parameter>
+        <name>Position</name>
+        <type>String</type>
+      </parameter>
+      <parameter>
+        <name>TextColor</name>
+        <type>String</type>
+      </parameter>
+      <parameter>
+        <name>FontName</name>
+        <type>String</type>
+      </parameter>
+      <parameter>
+        <name>FontSize</name>
+        <type>int</type>
+      </parameter>
+      <parameter>
+        <name>Bold</name>
+        <type>boolean</type>
+      </parameter>
+      <parameter>
+        <name>Italic</name>
+        <type>boolean</type>
+      </parameter>
+    </method>
+    <method>
+      <name DesignerName="ScatterChartPointShape">_scatterchartpointshape</name>
+      <comment>The shape of individual data elements.
+Shape: Possible values: Circle, Triangle, Square, Diamond, Star, Polygon.</comment>
+      <returntype>String</returntype>
+      <parameter>
+        <name>Shape</name>
+        <type>String</type>
+      </parameter>
+      <parameter>
+        <name>Size</name>
+        <type>int</type>
+      </parameter>
+    </method>
+    <method>
+      <name DesignerName="ScatterChartSetColumnValues">_scatterchartsetcolumnvalues</name>
+      <comment>Description of every column and their respective value.</comment>
+      <returntype>String</returntype>
+      <parameter>
+        <name>ValueLabel</name>
+        <type>String</type>
+      </parameter>
+      <parameter>
+        <name>Values</name>
+        <type>anywheresoftware.b4a.objects.collections.List</type>
+      </parameter>
+    </method>
+    <method>
+      <name DesignerName="ScatterChartSetHorizontalAxisTitle">_scatterchartsethorizontalaxistitle</name>
+      <comment>Specifies the title of the horizontal axis.</comment>
+      <returntype>String</returntype>
+      <parameter>
+        <name>Title</name>
+        <type>String</type>
+      </parameter>
+      <parameter>
+        <name>TextColor</name>
+        <type>String</type>
+      </parameter>
+      <parameter>
+        <name>FontName</name>
+        <type>String</type>
+      </parameter>
+      <parameter>
+        <name>FontSize</name>
+        <type>int</type>
+      </parameter>
+      <parameter>
+        <name>Bold</name>
+        <type>boolean</type>
+      </parameter>
+      <parameter>
+        <name>Italic</name>
+        <type>boolean</type>
+      </parameter>
+    </method>
+    <method>
+      <name DesignerName="ScatterChartSetVerticalAxisTitle">_scatterchartsetverticalaxistitle</name>
+      <comment>Specifies the title of the vertical axis.</comment>
+      <returntype>String</returntype>
+      <parameter>
+        <name>Title</name>
+        <type>String</type>
+      </parameter>
+      <parameter>
+        <name>TextColor</name>
+        <type>String</type>
+      </parameter>
+      <parameter>
+        <name>FontName</name>
+        <type>String</type>
+      </parameter>
+      <parameter>
+        <name>FontSize</name>
+        <type>int</type>
+      </parameter>
+      <parameter>
+        <name>Bold</name>
+        <type>boolean</type>
+      </parameter>
+      <parameter>
+        <name>Italic</name>
+        <type>boolean</type>
+      </parameter>
+    </method>
+    <method>
+      <name DesignerName="ScatterChartShowTrendLine">_scatterchartshowtrendline</name>
+      <comment>Displays a trendline on the chart.
+ColumnLabel: The name of the column.
+LabelInLegend: The text to show describing the trendline.
+TrendLineType: Possible values: Linear, Polynomial, Exponential.
+Degree: The degree of the polynomial (2 for quadratic, 3 for cubic, and so on).
+LineWidth: The line width of the trendline, in pixels.
+PointSize: Size of the dot.
+ShowLabelInLegend: Show the text discribing the trendline on the legend.</comment>
+      <returntype>String</returntype>
+      <parameter>
+        <name>ColumnLabel</name>
+        <type>String</type>
+      </parameter>
+      <parameter>
+        <name>LabelInLegend</name>
+        <type>String</type>
+      </parameter>
+      <parameter>
+        <name>TrendLineType</name>
+        <type>String</type>
+      </parameter>
+      <parameter>
+        <name>Degree</name>
+        <type>int</type>
+      </parameter>
+      <parameter>
+        <name>LineWidth</name>
+        <type>int</type>
+      </parameter>
+      <parameter>
+        <name>PointSize</name>
+        <type>int</type>
+      </parameter>
+      <parameter>
+        <name>ShowLabelInLegend</name>
+        <type>boolean</type>
+      </parameter>
+    </method>
+    <method>
+      <name DesignerName="ScatterChartTitleStyle">_scattercharttitlestyle</name>
+      <comment>Specifies the Scatter Chart text style. </comment>
+      <returntype>String</returntype>
+      <parameter>
+        <name>TextColor</name>
+        <type>String</type>
+      </parameter>
+      <parameter>
+        <name>FontName</name>
+        <type>String</type>
+      </parameter>
+      <parameter>
+        <name>FontSize</name>
+        <type>int</type>
+      </parameter>
+      <parameter>
+        <name>Bold</name>
+        <type>boolean</type>
+      </parameter>
+      <parameter>
+        <name>Italic</name>
+        <type>boolean</type>
+      </parameter>
+    </method>
+    <method>
+      <name DesignerName="setAddOfflineCustomFontToChart" HideFromIDE="true">_setaddofflinecustomfonttochart</name>
+      <comment>Add a font from your assets directory.</comment>
+      <returntype>String</returntype>
+      <parameter>
+        <name>FontName</name>
+        <type>String</type>
+      </parameter>
+    </method>
+    <method>
+      <name DesignerName="setAddOnlineCustomFontToChart" HideFromIDE="true">_setaddonlinecustomfonttochart</name>
+      <comment>Add a font from Google Fonts.
+FontName: Name of the selected font, CASE SENSITIVE.</comment>
+      <returntype>String</returntype>
+      <parameter>
+        <name>FontName</name>
+        <type>String</type>
+      </parameter>
+    </method>
+    <method>
+      <name DesignerName="setBarChartBarsColor" HideFromIDE="true">_setbarchartbarscolor</name>
+      <comment>Colors to assign to each bar. </comment>
+      <returntype>String</returntype>
+      <parameter>
+        <name>Color</name>
+        <type>anywheresoftware.b4a.objects.collections.List</type>
+      </parameter>
+    </method>
+    <method>
+      <name DesignerName="setBarChartIsStacked" HideFromIDE="true">_setbarchartisstacked</name>
+      <comment>Stacks the elements in a series. </comment>
+      <returntype>String</returntype>
+      <parameter>
+        <name>IsStacked</name>
+        <type>boolean</type>
+      </parameter>
+    </method>
+    <method>
+      <name DesignerName="setBarChartOrientation" HideFromIDE="true">_setbarchartorientation</name>
+      <comment>The orientation of the chart. 
+Orientation: Posible values: Horizontal, Vertical.</comment>
+      <returntype>String</returntype>
+      <parameter>
+        <name>Orientation</name>
+        <type>String</type>
+      </parameter>
+    </method>
+    <method>
+      <name DesignerName="setBarChartReverseCategories" HideFromIDE="true">_setbarchartreversecategories</name>
+      <comment>If set to true, will draw series from right to left.  </comment>
+      <returntype>String</returntype>
+      <parameter>
+        <name>Reverse</name>
+        <type>boolean</type>
+      </parameter>
+    </method>
+    <method>
+      <name DesignerName="setBarChartSetAxisTitlesPosition" HideFromIDE="true">_setbarchartsetaxistitlesposition</name>
+      <comment>Position of the horizontal and vertical axis text, relative to the chart area.
+Position: Possible values: In, Out, None.</comment>
+      <returntype>String</returntype>
+      <parameter>
+        <name>Position</name>
+        <type>String</type>
+      </parameter>
+    </method>
+    <method>
+      <name DesignerName="setBarChartSetColumnLabel" HideFromIDE="true">_setbarchartsetcolumnlabel</name>
+      <comment>Description of every column on the chart.</comment>
+      <returntype>String</returntype>
+      <parameter>
+        <name>Text</name>
+        <type>String</type>
+      </parameter>
+    </method>
+    <method>
+      <name DesignerName="setBarChartShowColumnLabel" HideFromIDE="true">_setbarchartshowcolumnlabel</name>
+      <comment>Display the value of the column.</comment>
+      <returntype>String</returntype>
+      <parameter>
+        <name>Show</name>
+        <type>boolean</type>
+      </parameter>
+    </method>
+    <method>
+      <name DesignerName="setBarChartTitle" HideFromIDE="true">_setbarcharttitle</name>
+      <comment>Text to display above the chart. </comment>
+      <returntype>String</returntype>
+      <parameter>
+        <name>Title</name>
+        <type>String</type>
+      </parameter>
+    </method>
+    <method>
+      <name DesignerName="setBubbleChartLegendColorAxis" HideFromIDE="true">_setbubblechartlegendcoloraxis</name>
+      <comment>Colors to assign to values in the visualization. </comment>
+      <returntype>String</returntype>
+      <parameter>
+        <name>Color</name>
+        <type>anywheresoftware.b4a.objects.collections.List</type>
+      </parameter>
+    </method>
+    <method>
+      <name DesignerName="setBubbleChartReverseCategories" HideFromIDE="true">_setbubblechartreversecategories</name>
+      <comment>If set to true, will draw series from right to left.  </comment>
+      <returntype>String</returntype>
+      <parameter>
+        <name>Reverse</name>
+        <type>boolean</type>
+      </parameter>
+    </method>
+    <method>
+      <name DesignerName="setBubbleChartSeriesColor" HideFromIDE="true">_setbubblechartseriescolor</name>
+      <comment>Colors to assign to each object. </comment>
+      <returntype>String</returntype>
+      <parameter>
+        <name>Color</name>
+        <type>anywheresoftware.b4a.objects.collections.List</type>
+      </parameter>
+    </method>
+    <method>
+      <name DesignerName="setBubbleChartSetAxisTitlesPosition" HideFromIDE="true">_setbubblechartsetaxistitlesposition</name>
+      <comment>Position of the horizontal and vertical axis text, relative to the chart area.
+Position: Possible values: In, Out, None.</comment>
+      <returntype>String</returntype>
+      <parameter>
+        <name>Position</name>
+        <type>String</type>
+      </parameter>
+    </method>
+    <method>
+      <name DesignerName="setBubbleChartSetColumnLabel" HideFromIDE="true">_setbubblechartsetcolumnlabel</name>
+      <comment>Description of every column on the chart.</comment>
+      <returntype>String</returntype>
+      <parameter>
+        <name>ColumnLabel</name>
+        <type>String</type>
+      </parameter>
+    </method>
+    <method>
+      <name DesignerName="setBubbleChartTitle" HideFromIDE="true">_setbubblecharttitle</name>
+      <comment>Text to display above the chart. </comment>
+      <returntype>String</returntype>
+      <parameter>
+        <name>Title</name>
+        <type>String</type>
+      </parameter>
+    </method>
+    <method>
+      <name DesignerName="setChartDefaultFontName" HideFromIDE="true">_setchartdefaultfontname</name>
+      <comment>Set the default font for the whole chart.</comment>
+      <returntype>String</returntype>
+      <parameter>
+        <name>FontName</name>
+        <type>String</type>
+      </parameter>
+    </method>
+    <method>
+      <name DesignerName="setChartDefaultFontSize" HideFromIDE="true">_setchartdefaultfontsize</name>
+      <comment>Set the default font size for the whole chart.</comment>
+      <returntype>String</returntype>
+      <parameter>
+        <name>Size</name>
+        <type>int</type>
+      </parameter>
+    </method>
+    <method>
+      <name DesignerName="setComboChartDefaultCurveType" HideFromIDE="true">_setcombochartdefaultcurvetype</name>
+      <comment>Set the default way to draw lines.
+CurveType: None, Function.</comment>
+      <returntype>String</returntype>
+      <parameter>
+        <name>CurveType</name>
+        <type>String</type>
+      </parameter>
+    </method>
+    <method>
+      <name DesignerName="setComboChartIsStacked" HideFromIDE="true">_setcombochartisstacked</name>
+      <comment>Stacks the elements in a series. </comment>
+      <returntype>String</returntype>
+      <parameter>
+        <name>IsStacked</name>
+        <type>boolean</type>
+      </parameter>
+    </method>
+    <method>
+      <name DesignerName="setComboChartOrientation" HideFromIDE="true">_setcombochartorientation</name>
+      <comment>The orientation of the chart. 
+Orientation: Posible values: Horizontal, Vertical.</comment>
+      <returntype>String</returntype>
+      <parameter>
+        <name>Orientation</name>
+        <type>String</type>
+      </parameter>
+    </method>
+    <method>
+      <name DesignerName="setComboChartReverseCategories" HideFromIDE="true">_setcombochartreversecategories</name>
+      <comment>If set to true, will draw series from right to left.  </comment>
+      <returntype>String</returntype>
+      <parameter>
+        <name>Reverse</name>
+        <type>boolean</type>
+      </parameter>
+    </method>
+    <method>
+      <name DesignerName="setComboChartSeriesColor" HideFromIDE="true">_setcombochartseriescolor</name>
+      <comment>Colors to assign to each object. </comment>
+      <returntype>String</returntype>
+      <parameter>
+        <name>Color</name>
+        <type>anywheresoftware.b4a.objects.collections.List</type>
+      </parameter>
+    </method>
+    <method>
+      <name DesignerName="setComboChartSetAxisTitlesPosition" HideFromIDE="true">_setcombochartsetaxistitlesposition</name>
+      <comment>Position of the horizontal and vertical axis text, relative to the chart area.
+Position: Possible values: In, Out, None.</comment>
+      <returntype>String</returntype>
+      <parameter>
+        <name>Position</name>
+        <type>String</type>
+      </parameter>
+    </method>
+    <method>
+      <name DesignerName="setComboChartSetColumnLabel" HideFromIDE="true">_setcombochartsetcolumnlabel</name>
+      <comment>Description of every column on the chart.</comment>
+      <returntype>String</returntype>
+      <parameter>
+        <name>ColumnLabel</name>
+        <type>String</type>
+      </parameter>
+    </method>
+    <method>
+      <name DesignerName="setComboChartSetDefaultSeriesType" HideFromIDE="true">_setcombochartsetdefaultseriestype</name>
+      <comment>Sets the default type to represent data on a Combo Chart.
+SeriesType: Possible values: Line, Area, Bars, SteppedArea.</comment>
+      <returntype>String</returntype>
+      <parameter>
+        <name>SeriesType</name>
+        <type>String</type>
+      </parameter>
+    </method>
+    <method>
+      <name DesignerName="setComboChartTitle" HideFromIDE="true">_setcombocharttitle</name>
+      <comment>Text to display above the chart. </comment>
+      <returntype>String</returntype>
+      <parameter>
+        <name>Title</name>
+        <type>String</type>
+      </parameter>
+    </method>
+    <method>
+      <name DesignerName="setGeoChartDisplayMode" HideFromIDE="true">_setgeochartdisplaymode</name>
+      <comment>Which type of geochart this is. 
+Mode: Possible values: Auto, Regions, Markers, Text.</comment>
+      <returntype>String</returntype>
+      <parameter>
+        <name>Mode</name>
+        <type>String</type>
+      </parameter>
+    </method>
+    <method>
+      <name DesignerName="setGeoChartLegendColorAxis" HideFromIDE="true">_setgeochartlegendcoloraxis</name>
+      <comment>Colors to assign to values in the visualization. </comment>
+      <returntype>String</returntype>
+      <parameter>
+        <name>Color</name>
+        <type>anywheresoftware.b4a.objects.collections.List</type>
+      </parameter>
+    </method>
+    <method>
+      <name DesignerName="setGeoChartSetColumnLabel" HideFromIDE="true">_setgeochartsetcolumnlabel</name>
+      <comment>Description of every column on the chart.</comment>
+      <returntype>String</returntype>
+      <parameter>
+        <name>ColumnLabel</name>
+        <type>String</type>
+      </parameter>
+    </method>
+    <method>
+      <name DesignerName="setGeoChartSetDatalessColor" HideFromIDE="true">_setgeochartsetdatalesscolor</name>
+      <comment>Color to assign to regions with no associated data.</comment>
+      <returntype>String</returntype>
+      <parameter>
+        <name>Color</name>
+        <type>String</type>
+      </parameter>
+    </method>
+    <method>
+      <name DesignerName="setGeoChartSetRegion" HideFromIDE="true">_setgeochartsetregion</name>
+      <comment>The area to display on the geochart. 
+Region: Possible values: World, A continent or a sub-continent, specified by its 3-digit code.
+A country, specified by its ISO 3166-1 alpha-2 code.
+A state In the United States, specified by its ISO 3166-2:US code.</comment>
+      <returntype>String</returntype>
+      <parameter>
+        <name>Region</name>
+        <type>String</type>
+      </parameter>
+    </method>
+    <method>
+      <name DesignerName="setGeoChartSetResolution" HideFromIDE="true">_setgeochartsetresolution</name>
+      <comment>The resolution of the geochart borders. 
+Resolution: Possible values: Countries, Provinces, Metros (US only).</comment>
+      <returntype>String</returntype>
+      <parameter>
+        <name>Resolution</name>
+        <type>String</type>
+      </parameter>
+    </method>
+    <method>
+      <name DesignerName="setHistogramChartIsStacked" HideFromIDE="true">_sethistogramchartisstacked</name>
+      <comment>Stacks the elements in a series. </comment>
+      <returntype>String</returntype>
+      <parameter>
+        <name>IsStacked</name>
+        <type>boolean</type>
+      </parameter>
+    </method>
+    <method>
+      <name DesignerName="setHistogramChartOrientation" HideFromIDE="true">_sethistogramchartorientation</name>
+      <comment>The orientation of the chart. 
+Orientation: Posible values: Horizontal, Vertical.</comment>
+      <returntype>String</returntype>
+      <parameter>
+        <name>Orientation</name>
+        <type>String</type>
+      </parameter>
+    </method>
+    <method>
+      <name DesignerName="setHistogramChartReverseCategories" HideFromIDE="true">_sethistogramchartreversecategories</name>
+      <comment>If set to true, will draw series from right to left.  </comment>
+      <returntype>String</returntype>
+      <parameter>
+        <name>Reverse</name>
+        <type>boolean</type>
+      </parameter>
+    </method>
+    <method>
+      <name DesignerName="setHistogramChartSeriesColor" HideFromIDE="true">_sethistogramchartseriescolor</name>
+      <comment>Colors to assign to each column. </comment>
+      <returntype>String</returntype>
+      <parameter>
+        <name>Color</name>
+        <type>anywheresoftware.b4a.objects.collections.List</type>
+      </parameter>
+    </method>
+    <method>
+      <name DesignerName="setHistogramChartSetAxisTitlesPosition" HideFromIDE="true">_sethistogramchartsetaxistitlesposition</name>
+      <comment>Position of the horizontal and vertical axis text, relative to the chart area.
+Position: Possible values: In, Out, None.</comment>
+      <returntype>String</returntype>
+      <parameter>
+        <name>Position</name>
+        <type>String</type>
+      </parameter>
+    </method>
+    <method>
+      <name DesignerName="setHistogramChartSetColumnLabel" HideFromIDE="true">_sethistogramchartsetcolumnlabel</name>
+      <comment>Description of every column on the chart.</comment>
+      <returntype>String</returntype>
+      <parameter>
+        <name>ColumnLabel</name>
+        <type>String</type>
+      </parameter>
+    </method>
+    <method>
+      <name DesignerName="setHistogramChartTitle" HideFromIDE="true">_sethistogramcharttitle</name>
+      <comment>Text to display above the chart.</comment>
+      <returntype>String</returntype>
+      <parameter>
+        <name>Title</name>
+        <type>String</type>
+      </parameter>
+    </method>
+    <method>
+      <name DesignerName="setPieChart3D" HideFromIDE="true">_setpiechart3d</name>
+      <comment>Displays a three-dimensional pie chart.</comment>
+      <returntype>String</returntype>
+      <parameter>
+        <name>Is3D</name>
+        <type>boolean</type>
+      </parameter>
+    </method>
+    <method>
+      <name DesignerName="setPieChartPieHole" HideFromIDE="true">_setpiechartpiehole</name>
+      <comment>Display a donut chart.
+Size: From 1 through 9. The hole will have a radius equal to number times the radius of the chart.</comment>
+      <returntype>String</returntype>
+      <parameter>
+        <name>Size</name>
+        <type>int</type>
+      </parameter>
+    </method>
+    <method>
+      <name DesignerName="setPieChartReverseCategories" HideFromIDE="true">_setpiechartreversecategories</name>
+      <comment>If true, draws slices counterclockwise. The default is to draw clockwise.</comment>
+      <returntype>String</returntype>
+      <parameter>
+        <name>Reverse</name>
+        <type>boolean</type>
+      </parameter>
+    </method>
+    <method>
+      <name DesignerName="setPieChartSliceBorderColor" HideFromIDE="true">_setpiechartslicebordercolor</name>
+      <comment>Sets the color for the slices' border.</comment>
+      <returntype>String</returntype>
+      <parameter>
+        <name>Color</name>
+        <type>String</type>
+      </parameter>
+    </method>
+    <method>
+      <name DesignerName="setPieChartSlicesColor" HideFromIDE="true">_setpiechartslicescolor</name>
+      <comment>Colors to assign to each slice. </comment>
+      <returntype>String</returntype>
+      <parameter>
+        <name>Color</name>
+        <type>anywheresoftware.b4a.objects.collections.List</type>
+      </parameter>
+    </method>
+    <method>
+      <name DesignerName="setPieChartSliceText" HideFromIDE="true">_setpiechartslicetext</name>
+      <comment>The content of the text displayed on the slice.
+Text: Possible values: Percentage, Value, Label, None.</comment>
+      <returntype>String</returntype>
+      <parameter>
+        <name>Text</name>
+        <type>String</type>
+      </parameter>
+    </method>
+    <method>
+      <name DesignerName="setPieChartStartAngle" HideFromIDE="true">_setpiechartstartangle</name>
+      <comment>Set the angle in degrees to rotate the chart by.
+The default of 0 will orient the leftmost edge of the first slice directly up.</comment>
+      <returntype>String</returntype>
+      <parameter>
+        <name>Degrees</name>
+        <type>int</type>
+      </parameter>
+    </method>
+    <method>
+      <name DesignerName="setPieChartTitle" HideFromIDE="true">_setpiecharttitle</name>
+      <comment>Text to display above the chart. </comment>
+      <returntype>String</returntype>
+      <parameter>
+        <name>Title</name>
+        <type>String</type>
+      </parameter>
+    </method>
+    <method>
+      <name DesignerName="setScatterChartDotsColor" HideFromIDE="true">_setscatterchartdotscolor</name>
+      <comment>Colors to assign to each dot. </comment>
+      <returntype>String</returntype>
+      <parameter>
+        <name>Color</name>
+        <type>anywheresoftware.b4a.objects.collections.List</type>
+      </parameter>
+    </method>
+    <method>
+      <name DesignerName="setScatterChartReverseCategories" HideFromIDE="true">_setscatterchartreversecategories</name>
+      <comment>If true, draws the dots counterclockwise. The default is to draw clockwise.</comment>
+      <returntype>String</returntype>
+      <parameter>
+        <name>Reverse</name>
+        <type>boolean</type>
+      </parameter>
+    </method>
+    <method>
+      <name DesignerName="setScatterChartSetAxisTitlesPosition" HideFromIDE="true">_setscatterchartsetaxistitlesposition</name>
+      <comment>Position of the horizontal and vertical axis text, relative to the chart area.
+Position: Possible values: In, Out, None.</comment>
+      <returntype>String</returntype>
+      <parameter>
+        <name>Position</name>
+        <type>String</type>
+      </parameter>
+    </method>
+    <method>
+      <name DesignerName="setScatterChartTitle" HideFromIDE="true">_setscattercharttitle</name>
+      <comment>Text to display above the chart. </comment>
+      <returntype>String</returntype>
+      <parameter>
+        <name>Title</name>
+        <type>String</type>
+      </parameter>
+    </method>
+    <method>
+      <name DesignerName="ShowBarChart">_showbarchart</name>
+      <comment>Generate and display the Bar Chart.</comment>
+      <returntype>String</returntype>
+    </method>
+    <method>
+      <name DesignerName="ShowBubbleChart">_showbubblechart</name>
+      <comment>Generate and display the Combo Chart.</comment>
+      <returntype>String</returntype>
+    </method>
+    <method>
+      <name DesignerName="ShowComboChart">_showcombochart</name>
+      <comment>Generate and display the Combo Chart.</comment>
+      <returntype>String</returntype>
+    </method>
+    <method>
+      <name DesignerName="ShowGeoChart">_showgeochart</name>
+      <comment>Generate and display the Geo Chart.</comment>
+      <returntype>String</returntype>
+    </method>
+    <method>
+      <name DesignerName="ShowHistogramChart">_showhistogramchart</name>
+      <comment>Generate and display the Histogram Chart.</comment>
+      <returntype>String</returntype>
+    </method>
+    <method>
+      <name DesignerName="ShowPieChart">_showpiechart</name>
+      <comment>Generate and display the Pie Chart.</comment>
+      <returntype>String</returntype>
+    </method>
+    <method>
+      <name DesignerName="ShowScatterChart">_showscatterchart</name>
+      <comment>Generate and display the Scatter Chart.</comment>
+      <returntype>String</returntype>
+    </method>
+    <property>
+      <name DesignerName="AddOfflineCustomFontToChart">_addofflinecustomfonttochart</name>
+      <comment>Add a font from your assets directory.</comment>
+      <returntype>void</returntype>
+      <parameter>
+        <name>Value</name>
+        <type>String</type>
+      </parameter>
+    </property>
+    <property>
+      <name DesignerName="AddOnlineCustomFontToChart">_addonlinecustomfonttochart</name>
+      <comment>Add a font from Google Fonts.
+FontName: Name of the selected font, CASE SENSITIVE.</comment>
+      <returntype>void</returntype>
+      <parameter>
+        <name>Value</name>
+        <type>String</type>
+      </parameter>
+    </property>
+    <property>
+      <name DesignerName="BarChartBarsColor">_barchartbarscolor</name>
+      <comment>Colors to assign to each bar. </comment>
+      <returntype>void</returntype>
+      <parameter>
+        <name>Value</name>
+        <type>anywheresoftware.b4a.objects.collections.List</type>
+      </parameter>
+    </property>
+    <property>
+      <name DesignerName="BarChartIsStacked">_barchartisstacked</name>
+      <comment>Stacks the elements in a series. </comment>
+      <returntype>void</returntype>
+      <parameter>
+        <name>Value</name>
+        <type>boolean</type>
+      </parameter>
+    </property>
+    <property>
+      <name DesignerName="BarChartOrientation">_barchartorientation</name>
+      <comment>The orientation of the chart. 
+Orientation: Posible values: Horizontal, Vertical.</comment>
+      <returntype>void</returntype>
+      <parameter>
+        <name>Value</name>
+        <type>String</type>
+      </parameter>
+    </property>
+    <property>
+      <name DesignerName="BarChartReverseCategories">_barchartreversecategories</name>
+      <comment>If set to true, will draw series from right to left.  </comment>
+      <returntype>void</returntype>
+      <parameter>
+        <name>Value</name>
+        <type>boolean</type>
+      </parameter>
+    </property>
+    <property>
+      <name DesignerName="BarChartSetAxisTitlesPosition">_barchartsetaxistitlesposition</name>
+      <comment>Position of the horizontal and vertical axis text, relative to the chart area.
+Position: Possible values: In, Out, None.</comment>
+      <returntype>void</returntype>
+      <parameter>
+        <name>Value</name>
+        <type>String</type>
+      </parameter>
+    </property>
+    <property>
+      <name DesignerName="BarChartSetColumnLabel">_barchartsetcolumnlabel</name>
+      <comment>Description of every column on the chart.</comment>
+      <returntype>void</returntype>
+      <parameter>
+        <name>Value</name>
+        <type>String</type>
+      </parameter>
+    </property>
+    <property>
+      <name DesignerName="BarChartShowColumnLabel">_barchartshowcolumnlabel</name>
+      <comment>Display the value of the column.</comment>
+      <returntype>void</returntype>
+      <parameter>
+        <name>Value</name>
+        <type>boolean</type>
+      </parameter>
+    </property>
+    <property>
+      <name DesignerName="BarChartTitle">_barcharttitle</name>
+      <comment>Text to display above the chart. </comment>
+      <returntype>void</returntype>
+      <parameter>
+        <name>Value</name>
+        <type>String</type>
+      </parameter>
+    </property>
+    <property>
+      <name DesignerName="BubbleChartLegendColorAxis">_bubblechartlegendcoloraxis</name>
+      <comment>Colors to assign to values in the visualization. </comment>
+      <returntype>void</returntype>
+      <parameter>
+        <name>Value</name>
+        <type>anywheresoftware.b4a.objects.collections.List</type>
+      </parameter>
+    </property>
+    <property>
+      <name DesignerName="BubbleChartReverseCategories">_bubblechartreversecategories</name>
+      <comment>If set to true, will draw series from right to left.  </comment>
+      <returntype>void</returntype>
+      <parameter>
+        <name>Value</name>
+        <type>boolean</type>
+      </parameter>
+    </property>
+    <property>
+      <name DesignerName="BubbleChartSeriesColor">_bubblechartseriescolor</name>
+      <comment>Colors to assign to each object. </comment>
+      <returntype>void</returntype>
+      <parameter>
+        <name>Value</name>
+        <type>anywheresoftware.b4a.objects.collections.List</type>
+      </parameter>
+    </property>
+    <property>
+      <name DesignerName="BubbleChartSetAxisTitlesPosition">_bubblechartsetaxistitlesposition</name>
+      <comment>Position of the horizontal and vertical axis text, relative to the chart area.
+Position: Possible values: In, Out, None.</comment>
+      <returntype>void</returntype>
+      <parameter>
+        <name>Value</name>
+        <type>String</type>
+      </parameter>
+    </property>
+    <property>
+      <name DesignerName="BubbleChartSetColumnLabel">_bubblechartsetcolumnlabel</name>
+      <comment>Description of every column on the chart.</comment>
+      <returntype>void</returntype>
+      <parameter>
+        <name>Value</name>
+        <type>String</type>
+      </parameter>
+    </property>
+    <property>
+      <name DesignerName="BubbleChartTitle">_bubblecharttitle</name>
+      <comment>Text to display above the chart. </comment>
+      <returntype>void</returntype>
+      <parameter>
+        <name>Value</name>
+        <type>String</type>
+      </parameter>
+    </property>
+    <property>
+      <name DesignerName="ChartDefaultFontName">_chartdefaultfontname</name>
+      <comment>Set the default font for the whole chart.</comment>
+      <returntype>void</returntype>
+      <parameter>
+        <name>Value</name>
+        <type>String</type>
+      </parameter>
+    </property>
+    <property>
+      <name DesignerName="ChartDefaultFontSize">_chartdefaultfontsize</name>
+      <comment>Set the default font size for the whole chart.</comment>
+      <returntype>void</returntype>
+      <parameter>
+        <name>Value</name>
+        <type>int</type>
+      </parameter>
+    </property>
+    <property>
+      <name DesignerName="ComboChartDefaultCurveType">_combochartdefaultcurvetype</name>
+      <comment>Set the default way to draw lines.
+CurveType: None, Function.</comment>
+      <returntype>void</returntype>
+      <parameter>
+        <name>Value</name>
+        <type>String</type>
+      </parameter>
+    </property>
+    <property>
+      <name DesignerName="ComboChartIsStacked">_combochartisstacked</name>
+      <comment>Stacks the elements in a series. </comment>
+      <returntype>void</returntype>
+      <parameter>
+        <name>Value</name>
+        <type>boolean</type>
+      </parameter>
+    </property>
+    <property>
+      <name DesignerName="ComboChartOrientation">_combochartorientation</name>
+      <comment>The orientation of the chart. 
+Orientation: Posible values: Horizontal, Vertical.</comment>
+      <returntype>void</returntype>
+      <parameter>
+        <name>Value</name>
+        <type>String</type>
+      </parameter>
+    </property>
+    <property>
+      <name DesignerName="ComboChartReverseCategories">_combochartreversecategories</name>
+      <comment>If set to true, will draw series from right to left.  </comment>
+      <returntype>void</returntype>
+      <parameter>
+        <name>Value</name>
+        <type>boolean</type>
+      </parameter>
+    </property>
+    <property>
+      <name DesignerName="ComboChartSeriesColor">_combochartseriescolor</name>
+      <comment>Colors to assign to each object. </comment>
+      <returntype>void</returntype>
+      <parameter>
+        <name>Value</name>
+        <type>anywheresoftware.b4a.objects.collections.List</type>
+      </parameter>
+    </property>
+    <property>
+      <name DesignerName="ComboChartSetAxisTitlesPosition">_combochartsetaxistitlesposition</name>
+      <comment>Position of the horizontal and vertical axis text, relative to the chart area.
+Position: Possible values: In, Out, None.</comment>
+      <returntype>void</returntype>
+      <parameter>
+        <name>Value</name>
+        <type>String</type>
+      </parameter>
+    </property>
+    <property>
+      <name DesignerName="ComboChartSetColumnLabel">_combochartsetcolumnlabel</name>
+      <comment>Description of every column on the chart.</comment>
+      <returntype>void</returntype>
+      <parameter>
+        <name>Value</name>
+        <type>String</type>
+      </parameter>
+    </property>
+    <property>
+      <name DesignerName="ComboChartSetDefaultSeriesType">_combochartsetdefaultseriestype</name>
+      <comment>Sets the default type to represent data on a Combo Chart.
+SeriesType: Possible values: Line, Area, Bars, SteppedArea.</comment>
+      <returntype>void</returntype>
+      <parameter>
+        <name>Value</name>
+        <type>String</type>
+      </parameter>
+    </property>
+    <property>
+      <name DesignerName="ComboChartTitle">_combocharttitle</name>
+      <comment>Text to display above the chart. </comment>
+      <returntype>void</returntype>
+      <parameter>
+        <name>Value</name>
+        <type>String</type>
+      </parameter>
+    </property>
+    <property>
+      <name DesignerName="GeoChartDisplayMode">_geochartdisplaymode</name>
+      <comment>Which type of geochart this is. 
+Mode: Possible values: Auto, Regions, Markers, Text.</comment>
+      <returntype>void</returntype>
+      <parameter>
+        <name>Value</name>
+        <type>String</type>
+      </parameter>
+    </property>
+    <property>
+      <name DesignerName="GeoChartLegendColorAxis">_geochartlegendcoloraxis</name>
+      <comment>Colors to assign to values in the visualization. </comment>
+      <returntype>void</returntype>
+      <parameter>
+        <name>Value</name>
+        <type>anywheresoftware.b4a.objects.collections.List</type>
+      </parameter>
+    </property>
+    <property>
+      <name DesignerName="GeoChartSetColumnLabel">_geochartsetcolumnlabel</name>
+      <comment>Description of every column on the chart.</comment>
+      <returntype>void</returntype>
+      <parameter>
+        <name>Value</name>
+        <type>String</type>
+      </parameter>
+    </property>
+    <property>
+      <name DesignerName="GeoChartSetDatalessColor">_geochartsetdatalesscolor</name>
+      <comment>Color to assign to regions with no associated data.</comment>
+      <returntype>void</returntype>
+      <parameter>
+        <name>Value</name>
+        <type>String</type>
+      </parameter>
+    </property>
+    <property>
+      <name DesignerName="GeoChartSetRegion">_geochartsetregion</name>
+      <comment>The area to display on the geochart. 
+Region: Possible values: World, A continent or a sub-continent, specified by its 3-digit code.
+A country, specified by its ISO 3166-1 alpha-2 code.
+A state In the United States, specified by its ISO 3166-2:US code.</comment>
+      <returntype>void</returntype>
+      <parameter>
+        <name>Value</name>
+        <type>String</type>
+      </parameter>
+    </property>
+    <property>
+      <name DesignerName="GeoChartSetResolution">_geochartsetresolution</name>
+      <comment>The resolution of the geochart borders. 
+Resolution: Possible values: Countries, Provinces, Metros (US only).</comment>
+      <returntype>void</returntype>
+      <parameter>
+        <name>Value</name>
+        <type>String</type>
+      </parameter>
+    </property>
+    <property>
+      <name DesignerName="HistogramChartIsStacked">_histogramchartisstacked</name>
+      <comment>Stacks the elements in a series. </comment>
+      <returntype>void</returntype>
+      <parameter>
+        <name>Value</name>
+        <type>boolean</type>
+      </parameter>
+    </property>
+    <property>
+      <name DesignerName="HistogramChartOrientation">_histogramchartorientation</name>
+      <comment>The orientation of the chart. 
+Orientation: Posible values: Horizontal, Vertical.</comment>
+      <returntype>void</returntype>
+      <parameter>
+        <name>Value</name>
+        <type>String</type>
+      </parameter>
+    </property>
+    <property>
+      <name DesignerName="HistogramChartReverseCategories">_histogramchartreversecategories</name>
+      <comment>If set to true, will draw series from right to left.  </comment>
+      <returntype>void</returntype>
+      <parameter>
+        <name>Value</name>
+        <type>boolean</type>
+      </parameter>
+    </property>
+    <property>
+      <name DesignerName="HistogramChartSeriesColor">_histogramchartseriescolor</name>
+      <comment>Colors to assign to each column. </comment>
+      <returntype>void</returntype>
+      <parameter>
+        <name>Value</name>
+        <type>anywheresoftware.b4a.objects.collections.List</type>
+      </parameter>
+    </property>
+    <property>
+      <name DesignerName="HistogramChartSetAxisTitlesPosition">_histogramchartsetaxistitlesposition</name>
+      <comment>Position of the horizontal and vertical axis text, relative to the chart area.
+Position: Possible values: In, Out, None.</comment>
+      <returntype>void</returntype>
+      <parameter>
+        <name>Value</name>
+        <type>String</type>
+      </parameter>
+    </property>
+    <property>
+      <name DesignerName="HistogramChartSetColumnLabel">_histogramchartsetcolumnlabel</name>
+      <comment>Description of every column on the chart.</comment>
+      <returntype>void</returntype>
+      <parameter>
+        <name>Value</name>
+        <type>String</type>
+      </parameter>
+    </property>
+    <property>
+      <name DesignerName="HistogramChartTitle">_histogramcharttitle</name>
+      <comment>Text to display above the chart.</comment>
+      <returntype>void</returntype>
+      <parameter>
+        <name>Value</name>
+        <type>String</type>
+      </parameter>
+    </property>
+    <property>
+      <name DesignerName="PieChart3D">_piechart3d</name>
+      <comment>Displays a three-dimensional pie chart.</comment>
+      <returntype>void</returntype>
+      <parameter>
+        <name>Value</name>
+        <type>boolean</type>
+      </parameter>
+    </property>
+    <property>
+      <name DesignerName="PieChartPieHole">_piechartpiehole</name>
+      <comment>Display a donut chart.
+Size: From 1 through 9. The hole will have a radius equal to number times the radius of the chart.</comment>
+      <returntype>void</returntype>
+      <parameter>
+        <name>Value</name>
+        <type>int</type>
+      </parameter>
+    </property>
+    <property>
+      <name DesignerName="PieChartReverseCategories">_piechartreversecategories</name>
+      <comment>If true, draws slices counterclockwise. The default is to draw clockwise.</comment>
+      <returntype>void</returntype>
+      <parameter>
+        <name>Value</name>
+        <type>boolean</type>
+      </parameter>
+    </property>
+    <property>
+      <name DesignerName="PieChartSliceBorderColor">_piechartslicebordercolor</name>
+      <comment>Sets the color for the slices' border.</comment>
+      <returntype>void</returntype>
+      <parameter>
+        <name>Value</name>
+        <type>String</type>
+      </parameter>
+    </property>
+    <property>
+      <name DesignerName="PieChartSlicesColor">_piechartslicescolor</name>
+      <comment>Colors to assign to each slice. </comment>
+      <returntype>void</returntype>
+      <parameter>
+        <name>Value</name>
+        <type>anywheresoftware.b4a.objects.collections.List</type>
+      </parameter>
+    </property>
+    <property>
+      <name DesignerName="PieChartSliceText">_piechartslicetext</name>
+      <comment>The content of the text displayed on the slice.
+Text: Possible values: Percentage, Value, Label, None.</comment>
+      <returntype>void</returntype>
+      <parameter>
+        <name>Value</name>
+        <type>String</type>
+      </parameter>
+    </property>
+    <property>
+      <name DesignerName="PieChartStartAngle">_piechartstartangle</name>
+      <comment>Set the angle in degrees to rotate the chart by.
+The default of 0 will orient the leftmost edge of the first slice directly up.</comment>
+      <returntype>void</returntype>
+      <parameter>
+        <name>Value</name>
+        <type>int</type>
+      </parameter>
+    </property>
+    <property>
+      <name DesignerName="PieChartTitle">_piecharttitle</name>
+      <comment>Text to display above the chart. </comment>
+      <returntype>void</returntype>
+      <parameter>
+        <name>Value</name>
+        <type>String</type>
+      </parameter>
+    </property>
+    <property>
+      <name DesignerName="ScatterChartDotsColor">_scatterchartdotscolor</name>
+      <comment>Colors to assign to each dot. </comment>
+      <returntype>void</returntype>
+      <parameter>
+        <name>Value</name>
+        <type>anywheresoftware.b4a.objects.collections.List</type>
+      </parameter>
+    </property>
+    <property>
+      <name DesignerName="ScatterChartReverseCategories">_scatterchartreversecategories</name>
+      <comment>If true, draws the dots counterclockwise. The default is to draw clockwise.</comment>
+      <returntype>void</returntype>
+      <parameter>
+        <name>Value</name>
+        <type>boolean</type>
+      </parameter>
+    </property>
+    <property>
+      <name DesignerName="ScatterChartSetAxisTitlesPosition">_scatterchartsetaxistitlesposition</name>
+      <comment>Position of the horizontal and vertical axis text, relative to the chart area.
+Position: Possible values: In, Out, None.</comment>
+      <returntype>void</returntype>
+      <parameter>
+        <name>Value</name>
+        <type>String</type>
+      </parameter>
+    </property>
+    <property>
+      <name DesignerName="ScatterChartTitle">_scattercharttitle</name>
+      <comment>Text to display above the chart. </comment>
+      <returntype>void</returntype>
+      <parameter>
+        <name>Value</name>
+        <type>String</type>
+      </parameter>
+    </property>
+  </class>
+  <class>
+    <name>njdude.googlecharts.lib.jarfileloader</name>
+    <shortname>JarFileLoader</shortname>
+    <owner>process</owner>
+    <method>
+      <name>IsInitialized</name>
+      <comment>Tests whether the object has been initialized.</comment>
+      <returntype>boolean</returntype>
+    </method>
+    <method>
+      <name DesignerName="Initialize">_initialize</name>
+      <returntype>String</returntype>
+      <parameter>
+        <name>ba</name>
+        <type>anywheresoftware.b4a.BA</type>
+      </parameter>
+      <parameter>
+        <name>FromAssetsFile</name>
+        <type>boolean</type>
+      </parameter>
+    </method>
+    <method>
+      <name DesignerName="LoadBitmapFromJar">_loadbitmapfromjar</name>
+      <returntype>anywheresoftware.b4a.objects.drawable.CanvasWrapper.BitmapWrapper</returntype>
+      <parameter>
+        <name>FileName</name>
+        <type>String</type>
+      </parameter>
+    </method>
+    <method>
+      <name DesignerName="LoadFileFromJar">_loadfilefromjar</name>
+      <returntype>anywheresoftware.b4a.objects.streams.File.InputStreamWrapper</returntype>
+      <parameter>
+        <name>FileName</name>
+        <type>String</type>
+      </parameter>
+    </method>
+    <method>
+      <name DesignerName="LoadNinePatchDrawable">_loadninepatchdrawable</name>
+      <returntype>Object</returntype>
+      <parameter>
+        <name>FileName</name>
+        <type>String</type>
+      </parameter>
+      <parameter>
+        <name>Left</name>
+        <type>int</type>
+      </parameter>
+      <parameter>
+        <name>Right</name>
+        <type>int</type>
+      </parameter>
+    </method>
+    <method>
+      <name DesignerName="LoadTextFileFromJar">_loadtextfilefromjar</name>
+      <returntype>String</returntype>
+      <parameter>
+        <name>FileName</name>
+        <type>String</type>
+      </parameter>
+    </method>
+  </class>
+  <version>1</version>
+  <author>NJDude</author>
+</root>

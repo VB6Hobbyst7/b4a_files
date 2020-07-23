@@ -1,0 +1,1275 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root>
+    <doclet-version-NOT-library-version>1.01</doclet-version-NOT-library-version>
+    <class>
+        <name>anywheresoftware.b4a.agraham.ioio.B4AIOIO</name>
+        <shortname>IOIOBT</shortname>
+        <comment>This IOIO object contains the interface to an IOIO board connected by USB.
+This interface provides control over all the IOIO board functions.
+
+An instance of this interface is typically obtained by using the
+Initialize methd. Initially, a connection should be established, by
+calling waitForConnect(). This method will block until the board is
+connected and a connection has been established.
+
+As soon as a connection is established, the IOIO can be used, typically, by
+calling the OpenXXX() functions to obtain additional interfaces for
+controlling specific function of the board.
+
+Whenever a connection is lost as a result of physically disconnecting the
+board or as a result of calling disconnect(), this instance and all
+the interfaces obtained from it become invalid, and will throw a
+ConnectionLostException on every operation. Once the connection is
+lost, those instances cannot be recycled, but rather it is required to create
+new ones and wait for a connection again.
+
+Initially all pins are tri-stated (floating), and all functions are disabled.
+Whenever a connection is lost or dropped, the board will immediately return
+to the this initial state.
+
+In the Basic4android IDE Libs tab select ensure both IOIO and IOIOlib are selected.
+
+Typical usage:
+ 
+   Dim ioio As IOIO
+   ...
+   ioio.Initialize
+   ioio.waitForConnect();
+   Dim out As DigitalOutput
+   out = ioio.openDigitalOutput(10);
+   out.write(true);
+   ... *
+   ioio.disconnect();</comment>
+        <owner>process</owner>
+        <permission>android.permission.INTERNET</permission>
+        <permission>android.permission.BLUETOOTH</permission>
+        <method>
+            <name>Initialize</name>
+            <comment>Create a IOIO instance whore connection depends on the value of Bluetooth.
+If False creates a IOIO instance which works with the IOIO board connected
+via a TCP connection (typically over a wired USB connection).
+If True creates a IOIO instance which connects over a Bluetooth connection.
+The IOIO must be connected before invoking Initialize or it will fail.</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>Bluetooth</name>
+                <type>boolean</type>
+            </parameter>
+        </method>
+        <method>
+            <name>GetIOIOVersion</name>
+            <comment>Query the implementation version of the system's components. The
+ implementation version uniquely identifies a hardware revision or a
+ software build. Returned version IDs are always 8-character long,
+ according to the IOIO versioning system: first 4 characters are the
+ version authority and last 4 characters are the revision.</comment>
+            <returntype>java.lang.String</returntype>
+            <parameter>
+                <name>which</name>
+                <type EnumType="true">ioio.lib.api.IOIO.VersionType</type>
+            </parameter>
+        </method>
+        <method>
+            <name>OpenPulseInput</name>
+            <comment>Open a pin for pulse input.
+The pulse input module is quite flexible. It enables several kinds of
+timing measurements on a digital signal: pulse width measurement
+(positive or negative pulse), and frequency of a periodic signal.	 *
+Note that not every pin can be used as pulse input. In addition, the
+total number of concurrent pulse input modules in use is limited. See
+board documentation for the legal pins and limit on concurrent usage.	 *
+The pin will operate in this mode until close() is invoked on the
+returned interface. It is illegal to open a pin that has already been
+opened and has not been closed. A connection must have been established
+prior to calling this method.
+Returns a PulseInput object.
+ 
+
+rate
+            The clock rate to use for timing the signal. A faster clock
+            rate will result in better precision but will only be able to
+            measure narrow pulses / high frequencies.
+pulse mode
+            The mode in which to operate. Determines whether the module
+            will measure pulse durations or frequency.
+doublePrecision
+            Whether to open a double-precision pulse input module. Double-
+            precision modules enable reading of much longer pulses and
+            lower frequencies with high accuracy than single precision
+            modules. However, their number is limited, so when possible,
+            and if the resources are all needed, use single-precision.
+            
+For more details see &lt;link&gt;this link|http://codaset.com/ytai/ioio/wiki/Pulse-Input&lt;/link&gt;</comment>
+            <returntype>ioio.lib.api.PulseInput</returntype>
+            <parameter>
+                <name>pin</name>
+                <type>int</type>
+            </parameter>
+            <parameter>
+                <name>ipmode</name>
+                <type EnumType="true">ioio.lib.api.DigitalInput.Spec.Mode</type>
+            </parameter>
+            <parameter>
+                <name>rate</name>
+                <type EnumType="true">ioio.lib.api.PulseInput.ClockRate</type>
+            </parameter>
+            <parameter>
+                <name>pulsemode</name>
+                <type EnumType="true">ioio.lib.api.PulseInput.PulseMode</type>
+            </parameter>
+            <parameter>
+                <name>doublePrecision</name>
+                <type>boolean</type>
+            </parameter>
+        </method>
+        <method>
+            <name>OpenSpiMaster</name>
+            <comment>Open a SPI master module, enabling communication with multiple
+SPI-enabled slave modules.
+
+SPI is a common hardware communication protocol, enabling full-duplex,
+synchronous point-to-multi-point data transfer. It requires MOSI, MISO
+and CLK lines shared by all nodes, as well as a SS line per slave,
+connected between this slave and a respective pin on the master. The MISO
+line should operate in pull-up mode, using either the internal pull-up or
+an external resistor.
+
+Note that not every pin can be used for SPI MISO, MOSI or CLK. In
+addition, the total number of concurrent SPI modules in use is limited.
+See board documentation for the legal pins and limit on concurrent usage.
+
+The SPI module will operate, and the pins will work in their respective
+modes until close() is invoked on the returned interface. It is illegal
+to use pins that have already been opened and has not been closed. A
+connection must have been established prior to calling this method, by
+invoking WaitForConnect().
+ 
+misoXXX
+            Pin and mode specification for the MISO (Master In Slave Out) pin,
+            consisting of the pin number, as labeled on the board, and the
+            mode, which determines whether the pin will be floating,
+            pull-up or pull-down. See DigitalInput for more information.
+mosiXXX
+            Pin and modespecification for the MOSI (Master Out Slave In) pin,
+            consisting of the pin number, as labeled on the board, and the
+            mode, which determines whether the pin will be normal or
+            open-drain. See DigitalOutput for more information.
+clkXXX
+            Pin and mode specification for the CLK pin, consisting of the pin
+            number, as labeled on the board, and the mode, which
+            determines whether the pin will be normal or open-drain.
+            See DigitalOutput for more information.
+slaveselectXXX()
+            Arrays of pin and mode specifications for each of the slaves' SS
+            (Slave Select) pin. The index of an array designates the slave index,
+            used later to refer to this slave. Slaveselectpins is an Int array
+            specify the pin number, as labeled on the board, and slaveselectmodes
+            is an Object array determining whether a pin will be normal or
+            open-drain. See DigitalOutput for more information.
+rate
+            Data rate.
+invertClk
+            Whether to invert clock polarity.
+sampleOnTrailing
+            Whether to do the input and output sampling on the
+            trailing clock edge.</comment>
+            <returntype>ioio.lib.api.SpiMaster</returntype>
+            <parameter>
+                <name>misopin</name>
+                <type>int</type>
+            </parameter>
+            <parameter>
+                <name>misomode</name>
+                <type EnumType="true">ioio.lib.api.DigitalInput.Spec.Mode</type>
+            </parameter>
+            <parameter>
+                <name>mosipin</name>
+                <type>int</type>
+            </parameter>
+            <parameter>
+                <name>mosimode</name>
+                <type EnumType="true">ioio.lib.api.DigitalOutput.Spec.Mode</type>
+            </parameter>
+            <parameter>
+                <name>clkpin</name>
+                <type>int</type>
+            </parameter>
+            <parameter>
+                <name>clkmode</name>
+                <type EnumType="true">ioio.lib.api.DigitalOutput.Spec.Mode</type>
+            </parameter>
+            <parameter>
+                <name>slaveselectpins</name>
+                <type>int[]</type>
+            </parameter>
+            <parameter>
+                <name>slaveselectmodes</name>
+                <type>java.lang.Object[]</type>
+            </parameter>
+            <parameter>
+                <name>rate</name>
+                <type EnumType="true">ioio.lib.api.SpiMaster.Rate</type>
+            </parameter>
+            <parameter>
+                <name>invertClk</name>
+                <type>boolean</type>
+            </parameter>
+            <parameter>
+                <name>sampleOnTrailing</name>
+                <type>boolean</type>
+            </parameter>
+        </method>
+        <method>
+            <name>SoftReset</name>
+            <comment>Resets the entire state (returning to initial state), without dropping
+the connection. It is equivalent to calling close() on every interface 
+obtained from this instance. A connection must have been established
+prior to calling this method, by invoking waitForConnect().</comment>
+            <returntype>void</returntype>
+        </method>
+        <method>
+            <name>OpenAnalogInput</name>
+            <comment>Open a pin for analog input.
+An analog input pin can be used to measure voltage. Note that not every
+pin can be used as an analog input. See board documentation for the legal
+pins and permitted voltage range.
+The pin will operate in this mode until close() is invoked on the
+returned interface. It is illegal to open a pin that has already been
+opened and has not been closed. A connection must have been established
+prior to calling this method, by invoking waitForConnect().
+Returns an AnalogInput object.</comment>
+            <returntype>ioio.lib.api.AnalogInput</returntype>
+            <parameter>
+                <name>pin</name>
+                <type>int</type>
+            </parameter>
+        </method>
+        <method>
+            <name>Disconnect</name>
+            <comment>Closes the connection to the board, or aborts a connection process
+started with waitForConnect().
+Once this method is called, this IOIO instance and all the instances
+obtained from it become invalid and will throw an exception on every
+operation. Initialize can be called to obtain a new IOIO instance.
+This method is asynchronous, i.e. it returns immediately, but it is not
+guaranteed that all connection-related resources has already been freed
+and can be reused upon return. In cases when this is important, client
+can call waitForDisconnect(), which will block until all resources have
+been freed.</comment>
+            <returntype>void</returntype>
+        </method>
+        <method>
+            <name>WaitForDisconnect</name>
+            <comment>Blocks until IOIO has been disconnected and all connection-related
+resources have been freed, so that a new connection can be attempted.</comment>
+            <returntype>void</returntype>
+        </method>
+        <method>
+            <name>WaitForConnect</name>
+            <comment>Establishes connection with the IOIO board.
+This method is blocking until connection is established. This method can
+be aborted by calling disconnect()}. In this case, it will throw	a 
+ConnectionLostException.</comment>
+            <returntype>void</returntype>
+        </method>
+        <method>
+            <name>OpenUart</name>
+            <comment>Open a UART module, enabling a bulk transfer of byte buffers.
+UART is a very common hardware communication protocol, enabling full-
+duplex, asynchronous point-to-point data transfer. It typically serves
+for opening consoles or as a basis for higher-level protocols, such as
+MIDI RS-232, and RS-485. Returns a Uart object.
+
+Note that not every pin can be used for UART RX or TX. In addition, the
+total number of concurrent UART modules in use is limited. See board
+documentation for the legal pins and limit on concurrent usage.
+
+The UART module will operate, and the pins will work in their respective
+modes until close() is invoked on the returned interface. It is illegal
+to use pins that have already been opened and has not been closed. A
+connection must have been established prior to calling this method, by
+invoking waitForConnect().
+ 
+rx
+            Pin specification for the RX pin, consisting of the pin number
+            as labeled on the board. Uart.NO_PIN can be passed to designate
+            that we do not want RX input.
+            
+rxmode      
+            The mode of the rx pin. Uart.
+            
+tx
+            Pin specification for the TX pin, consisting of the pin number
+            as labeled on the board. Uart.NO_PIN can be passed to designate
+            that we do not want TX output.
+            
+txmode      
+            The mode of the rx pin. Uart.
+            
+baud
+            The clock frequency of the UART module in Hz.
+            
+parity
+            The parity mode.
+            
+stopbits
+            Number of stop bits.</comment>
+            <returntype>ioio.lib.api.Uart</returntype>
+            <parameter>
+                <name>rx</name>
+                <type>int</type>
+            </parameter>
+            <parameter>
+                <name>rxmode</name>
+                <type EnumType="true">ioio.lib.api.DigitalInput.Spec.Mode</type>
+            </parameter>
+            <parameter>
+                <name>tx</name>
+                <type>int</type>
+            </parameter>
+            <parameter>
+                <name>txmode</name>
+                <type EnumType="true">ioio.lib.api.DigitalOutput.Spec.Mode</type>
+            </parameter>
+            <parameter>
+                <name>baud</name>
+                <type>int</type>
+            </parameter>
+            <parameter>
+                <name>parity</name>
+                <type EnumType="true">ioio.lib.api.Uart.Parity</type>
+            </parameter>
+            <parameter>
+                <name>stopbits</name>
+                <type EnumType="true">ioio.lib.api.Uart.StopBits</type>
+            </parameter>
+        </method>
+        <method>
+            <name>OpenTwiMaster</name>
+            <comment>Open a TWI (Two-Wire Interface, such as I2C/SMBus) master module,
+enabling communication with multiple TWI-enabled slave modules.
+
+TWI is a common hardware communication protocol, enabling half-duplex,
+synchronous point-to-multi-point data transfer. It requires a physical
+connection of two lines (SDA, SCL) shared by all the bus nodes, where the
+SDA is open-drain and externally pulled-up.
+
+Note that there is a fixed number of TWI modules, and the pins they use
+are static. Client has to make sure these pins are not already opened
+before calling this method. See board documentation for the number of
+modules and the respective pins they use.
+
+The TWI module will operate, and the pins will work in their respective
+modes until close() is invoked on the returned interface. It is illegal
+to use pins that have already been opened and has not been closed. A
+connection must have been established prior to calling this method, by
+invoking waitForConnect().
+ 
+ twiNum
+            The TWI module index to use. Will also determine the pins
+            used.
+rate
+            The clock rate. Can be RATE_100KHz / RATE_400KHz / RATE_1MHz.
+smbus
+            When true, will use SMBus voltage levels. When false, I2C
+            voltage levels.</comment>
+            <returntype>ioio.lib.api.TwiMaster</returntype>
+            <parameter>
+                <name>twiNum</name>
+                <type>int</type>
+            </parameter>
+            <parameter>
+                <name>rate</name>
+                <type EnumType="true">ioio.lib.api.TwiMaster.Rate</type>
+            </parameter>
+            <parameter>
+                <name>smbus</name>
+                <type>boolean</type>
+            </parameter>
+        </method>
+        <method>
+            <name>OpenPwmOutput</name>
+            <comment>Open a pin for PWM (Pulse-Width Modulation) output in the specified mo.
+A PWM pin produces a logic-level PWM signal. These signals are typically
+used for simulating analog outputs for controlling the intensity of LEDs,
+the rotation speed of motors, etc. They are also frequently used for
+controlling hobby servo motors.
+Note that not every pin can be used as PWM output. In addition, the total
+number of concurrent PWM modules in use is limited. See board
+documentation for the legal pins and limit on concurrent usage.
+The pin will operate in this mode until close() is invoked on the
+returned interface. It is illegal to open a pin that has already been
+opened and has not been closed. A connection must have been established
+prior to calling this method, by invoking waitForConnect().
+Returns a PwmOutput object.</comment>
+            <returntype>ioio.lib.api.PwmOutput</returntype>
+            <parameter>
+                <name>pin</name>
+                <type>int</type>
+            </parameter>
+            <parameter>
+                <name>mode</name>
+                <type EnumType="true">ioio.lib.api.DigitalOutput.Spec.Mode</type>
+            </parameter>
+            <parameter>
+                <name>freqHz</name>
+                <type>int</type>
+            </parameter>
+        </method>
+        <method>
+            <name>HardReset</name>
+            <comment>Equivalent to disconnecting and reconnecting the board power supply.
+The connection will be dropped and not re-established. Full boot sequence
+will take place, so firmware upgrades can be performed. A connection must
+have been established prior to calling this method, by invoking waitForConnect()}.</comment>
+            <returntype>void</returntype>
+        </method>
+        <method>
+            <name>OpenDigitalOutput</name>
+            <comment>Open a pin for digital output.
+A digital output pin can be used to generate logic-level signals. The pin
+will operate in this mode until close() is invoked on the returned
+interface. It is illegal to open a pin that has already been opened and
+has not been closed. A connection must have been established prior to
+calling this method, by invoking waitForConnect().
+Returns a DigitalOutput object.</comment>
+            <returntype>ioio.lib.api.DigitalOutput</returntype>
+            <parameter>
+                <name>pin</name>
+                <type>int</type>
+            </parameter>
+            <parameter>
+                <name>mode</name>
+                <type EnumType="true">ioio.lib.api.DigitalOutput.Spec.Mode</type>
+            </parameter>
+            <parameter>
+                <name>startValue</name>
+                <type>boolean</type>
+            </parameter>
+        </method>
+        <method>
+            <name>OpenDigitalInput</name>
+            <comment>Open a pin for digital input.
+A digital input pin can be used to read logic-level signals. The pin will
+operate in this mode until close() is invoked on the returned interface.
+It is illegal to open a pin that has already been opened and has not been
+closed. A connection must have been established prior to calling this
+method, by invoking waitForConnect().
+Returns a DigitalInput object.</comment>
+            <returntype>ioio.lib.api.DigitalInput</returntype>
+            <parameter>
+                <name>pin</name>
+                <type>int</type>
+            </parameter>
+            <parameter>
+                <name>mode</name>
+                <type EnumType="true">ioio.lib.api.DigitalInput.Spec.Mode</type>
+            </parameter>
+        </method>
+        <property>
+            <name>Version</name>
+            <returntype>double</returntype>
+            <comment>Returns the version of the library.</comment>
+        </property>
+        <field>
+            <name>VER_FIRMWARE</name>
+            <comment>The version type to obtain the version of the IOIO firmware.</comment>
+            <returntype EnumType="true">ioio.lib.api.IOIO.VersionType</returntype>
+        </field>
+        <field>
+            <name>VER_HARDWARE</name>
+            <comment>The version type to obtain the version of the IOIO hardware.</comment>
+            <returntype EnumType="true">ioio.lib.api.IOIO.VersionType</returntype>
+        </field>
+        <field>
+            <name>VER_BOOTLOADER</name>
+            <comment>The version type to obtain the version of the IOIO bootloader.</comment>
+            <returntype EnumType="true">ioio.lib.api.IOIO.VersionType</returntype>
+        </field>
+        <field>
+            <name>VER_IOIOLIB</name>
+            <comment>The version type to obtain the version of the IOIOlib library.</comment>
+            <returntype EnumType="true">ioio.lib.api.IOIO.VersionType</returntype>
+        </field>
+    </class>
+    <class>
+        <name>anywheresoftware.b4a.agraham.ioio.B4AIOIO.B4AAnalogueInputWrapper</name>
+        <shortname>AnalogInput</shortname>
+        <comment>This object contains a representation of an analog input.</comment>
+        <objectwrapper>ioio.lib.api.AnalogInput</objectwrapper>
+        <owner>process</owner>
+        <method>
+            <name>Close</name>
+            <comment>Close the pin and make it available for further use.</comment>
+            <returntype>void</returntype>
+        </method>
+        <method>
+            <name>Read</name>
+            <comment>Gets the analog input reading, as a scaled real value between 0 and 1.
+It typically takes a few milliseconds between when the instance is
+created and until the first value can be read. In this case, the method
+may block shortly. If an absolute value is desired, consider using getVoltage().</comment>
+            <returntype>float</returntype>
+        </method>
+        <method>
+            <name>IsInitialized</name>
+            <comment></comment>
+            <returntype>boolean</returntype>
+        </method>
+        <property>
+            <name>Voltage</name>
+            <returntype>float</returntype>
+            <comment>Gets the analog input reading, as an absolute voltage in Volt units.
+It typically takes a few milliseconds between when the instance is
+created and until the first value can be read. In this case, the method
+may block shortly. If a scaled value is desired, consider using read().</comment>
+        </property>
+        <property>
+            <name>Reference</name>
+            <returntype>float</returntype>
+            <comment>Gets the maximum voltage value against which read() values are scaled.</comment>
+        </property>
+    </class>
+    <class>
+        <name>anywheresoftware.b4a.agraham.ioio.B4AIOIO.B4ADigitalInputWrapper</name>
+        <shortname>DigitalInput</shortname>
+        <comment>This object contains a representation of a digital input.</comment>
+        <objectwrapper>ioio.lib.api.DigitalInput</objectwrapper>
+        <owner>process</owner>
+        <method>
+            <name>Close</name>
+            <comment>Close the pin and make it available for further use.</comment>
+            <returntype>void</returntype>
+        </method>
+        <method>
+            <name>Read</name>
+            <comment>Read the value sensed on the pin. May block for a few milliseconds if
+called right after creation of the instance.</comment>
+            <returntype>boolean</returntype>
+        </method>
+        <method>
+            <name>IsInitialized</name>
+            <comment></comment>
+            <returntype>boolean</returntype>
+        </method>
+        <field>
+            <name>IP_FLOATING</name>
+            <comment>The digital input type to obtain a floating input.
+Pin is floating. When the pin is left disconnected the value
+sensed is undefined. Use this mode when an external pull-up or
+pull-down resistor is used or when interfacing push-pull type
+logic circuits.</comment>
+            <returntype EnumType="true">ioio.lib.api.DigitalInput.Spec.Mode</returntype>
+        </field>
+        <field>
+            <name>IP_PULL_UP</name>
+            <comment>The digital input type to obtain a pull up input.
+Internal pull-down resistor is used. When the pin is left
+disconnected, a logical "LOW" (false) will be sensed. This is
+useful for interacting with a switch connected between the pin
+and Vdd.</comment>
+            <returntype EnumType="true">ioio.lib.api.DigitalInput.Spec.Mode</returntype>
+        </field>
+        <field>
+            <name>IP_PULL_DOWN</name>
+            <comment>The digital input type to obtain a pull down input.
+Internal pull-up resistor is used. When the pin is left
+disconnected, a logical "HIGH" (true) will be sensed. This is
+useful for interfacing with open drain circuits or for
+interacting with a switch connected between the pin and ground.</comment>
+            <returntype EnumType="true">ioio.lib.api.DigitalInput.Spec.Mode</returntype>
+        </field>
+    </class>
+    <class>
+        <name>anywheresoftware.b4a.agraham.ioio.B4AIOIO.B4ADigitalOutputWrapper</name>
+        <shortname>DigitalOutput</shortname>
+        <comment>This object contains a representation of a digital output.</comment>
+        <objectwrapper>ioio.lib.api.DigitalOutput</objectwrapper>
+        <owner>process</owner>
+        <method>
+            <name>Close</name>
+            <comment>Close the pin and make it available for further use.</comment>
+            <returntype>void</returntype>
+        </method>
+        <method>
+            <name>Write</name>
+            <comment>Set the output of the pin.</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>val</name>
+                <type>java.lang.Boolean</type>
+            </parameter>
+        </method>
+        <method>
+            <name>IsInitialized</name>
+            <comment></comment>
+            <returntype>boolean</returntype>
+        </method>
+        <field>
+            <name>OP_NORMAL</name>
+            <comment>The digital output type to obtain a normal output.
+Pin operates in push-pull mode, i.e. a logical "HIGH" is
+represented by a voltage of Vdd on the pin and a logical "LOW" by
+a voltage of 0 (ground).</comment>
+            <returntype EnumType="true">ioio.lib.api.DigitalOutput.Spec.Mode</returntype>
+        </field>
+        <field>
+            <name>OP_OPEN_DRAIN</name>
+            <comment>The digital output type to obtain an open drain output.
+Pin operates in open-drain mode, i.e. a logical "HIGH" is
+represented by a high impedance on the pin (as if it is
+disconnected) and a logical "LOW" by a voltage of 0 (ground).
+This mode is most commonly used for generating 5V logical signal
+on a 3.3V pin: 5V tolerant pins must be used; a pull-up resistor
+is connected between the pin and 5V, and the pin is used in open-
+drain mode.</comment>
+            <returntype EnumType="true">ioio.lib.api.DigitalOutput.Spec.Mode</returntype>
+        </field>
+    </class>
+    <class>
+        <name>anywheresoftware.b4a.agraham.ioio.B4AIOIO.B4APulseInputWrapper</name>
+        <shortname>PulseInput</shortname>
+        <comment>This object contains a representation of a pulse input.</comment>
+        <objectwrapper>ioio.lib.api.PulseInput</objectwrapper>
+        <owner>process</owner>
+        <method>
+            <name>WaitPulseGetDuration</name>
+            <comment>Gets the momentary frequency of the measured signal. When scaling is
+used, this is compensated for here, so the true frequency of the signal
+will be returned.
+
+The first call to this method may block shortly until the first data
+update arrives. The client may interrupt the calling thread.
+ 
+Returns the frequency, in Hz.</comment>
+            <returntype>float</returntype>
+        </method>
+        <method>
+            <name>Close</name>
+            <comment>Close the pin and make it available for further use.</comment>
+            <returntype>void</returntype>
+        </method>
+        <method>
+            <name>IsInitialized</name>
+            <comment></comment>
+            <returntype>boolean</returntype>
+        </method>
+        <property>
+            <name>Duration</name>
+            <returntype>float</returntype>
+            <comment>Gets the pulse duration in case of pulse measurement mode, or the period
+in case of frequency mode. When scaling is used, this is compensated for
+here, so the duration of a single cycle will be returned.
+
+The first call to this method may block shortly until the first data
+update arrives. The client may interrupt the calling thread.
+ 
+Returns the duration, in seconds.</comment>
+        </property>
+        <property>
+            <name>Frequency</name>
+            <returntype>float</returntype>
+            <comment>Gets the momentary frequency of the measured signal. When scaling is
+used, this is compensated for here, so the true frequency of the signal
+will be returned.
+
+The first call to this method may block shortly until the first data
+update arrives. The client may interrupt the calling thread.
+ 
+Returns the frequency, in Hz.</comment>
+        </property>
+        <field>
+            <name>RATE_250KHZ</name>
+            <comment>The ClockRate for 250KHz.</comment>
+            <returntype EnumType="true">ioio.lib.api.PulseInput.ClockRate</returntype>
+        </field>
+        <field>
+            <name>POSITIVE</name>
+            <comment>The PulseMode for Positive pulse measurement (rising-edge-to-falling-edge).</comment>
+            <returntype EnumType="true">ioio.lib.api.PulseInput.PulseMode</returntype>
+        </field>
+        <field>
+            <name>IP_FLOATING</name>
+            <comment>The digital input type to obtain a floating input.
+Pin is floating. When the pin is left disconnected the value
+sensed is undefined. Use this mode when an external pull-up or
+pull-down resistor is used or when interfacing push-pull type
+logic circuits.</comment>
+            <returntype EnumType="true">ioio.lib.api.DigitalInput.Spec.Mode</returntype>
+        </field>
+        <field>
+            <name>RATE_2MHZ</name>
+            <comment>The ClockRate for 2MHz.</comment>
+            <returntype EnumType="true">ioio.lib.api.PulseInput.ClockRate</returntype>
+        </field>
+        <field>
+            <name>FREQ_SCALE_16</name>
+            <comment>The PulseMode for Frequency measurement (rising-edge-to-rising-edge) with 16x scaling.</comment>
+            <returntype EnumType="true">ioio.lib.api.PulseInput.PulseMode</returntype>
+        </field>
+        <field>
+            <name>IP_PULL_DOWN</name>
+            <comment>The digital input type to obtain a pull down input.
+Internal pull-up resistor is used. When the pin is left
+disconnected, a logical "HIGH" (true) will be sensed. This is
+useful for interfacing with open drain circuits or for
+interacting with a switch connected between the pin and ground.</comment>
+            <returntype EnumType="true">ioio.lib.api.DigitalInput.Spec.Mode</returntype>
+        </field>
+        <field>
+            <name>NEGATIVE</name>
+            <comment>The PulseMode for Negative pulse measurement (falling-edge-to-rising-edge).</comment>
+            <returntype EnumType="true">ioio.lib.api.PulseInput.PulseMode</returntype>
+        </field>
+        <field>
+            <name>RATE_625KHZ</name>
+            <comment>The ClockRate for 625KHz.</comment>
+            <returntype EnumType="true">ioio.lib.api.PulseInput.ClockRate</returntype>
+        </field>
+        <field>
+            <name>FREQ</name>
+            <comment>The PulseMode for Frequency measurement (rising-edge-to-rising-edge).</comment>
+            <returntype EnumType="true">ioio.lib.api.PulseInput.PulseMode</returntype>
+        </field>
+        <field>
+            <name>IP_PULL_UP</name>
+            <comment>The digital input type to obtain a pull up input.
+Internal pull-down resistor is used. When the pin is left
+disconnected, a logical "LOW" (false) will be sensed. This is
+useful for interacting with a switch connected between the pin
+and Vdd.</comment>
+            <returntype EnumType="true">ioio.lib.api.DigitalInput.Spec.Mode</returntype>
+        </field>
+        <field>
+            <name>FREQ_SCALE_4</name>
+            <comment>The PulseMode for Frequency measurement (rising-edge-to-rising-edge) with 4x scaling.</comment>
+            <returntype EnumType="true">ioio.lib.api.PulseInput.PulseMode</returntype>
+        </field>
+        <field>
+            <name>RATE_16MHZ</name>
+            <comment>The ClockRate for 16MHz.</comment>
+            <returntype EnumType="true">ioio.lib.api.PulseInput.ClockRate</returntype>
+        </field>
+    </class>
+    <class>
+        <name>anywheresoftware.b4a.agraham.ioio.B4AIOIO.B4APwmOutputWrapper</name>
+        <shortname>PwmOutput</shortname>
+        <comment>This object contains a representation of an PWM output.</comment>
+        <objectwrapper>ioio.lib.api.PwmOutput</objectwrapper>
+        <owner>process</owner>
+        <method>
+            <name>Close</name>
+            <comment>Close the pin and make it available for further use.</comment>
+            <returntype>void</returntype>
+        </method>
+        <method>
+            <name>IsInitialized</name>
+            <comment></comment>
+            <returntype>boolean</returntype>
+        </method>
+        <property>
+            <name>PulseWidth</name>
+            <parameter>
+                <name>pulseWidthUs</name>
+                <type>int</type>
+            </parameter>
+            <comment>Sets the pulse width of the PWM output to the specified number of microSeconds.
+The pulse width is duration of the high-time within a single period of the signal.
+For relative control of the pulse with, consider using setDutyCycle(float).</comment>
+        </property>
+        <property>
+            <name>DutyCycle</name>
+            <parameter>
+                <name>dutyCycle</name>
+                <type>float</type>
+            </parameter>
+            <comment>Sets the duty cycle of the PWM output. The duty cycle is defined to be
+the pulse width divided by the total cycle period. For absolute control
+of the pulse with, consider using setPulseWidth(int).</comment>
+        </property>
+        <field>
+            <name>OP_NORMAL</name>
+            <comment>The digital output type to obtain a normal output.
+Pin operates in push-pull mode, i.e. a logical "HIGH" is
+represented by a voltage of Vdd on the pin and a logical "LOW" by
+a voltage of 0 (ground).</comment>
+            <returntype EnumType="true">ioio.lib.api.DigitalOutput.Spec.Mode</returntype>
+        </field>
+        <field>
+            <name>OP_OPEN_DRAIN</name>
+            <comment>The digital output type to obtain an open drain output.
+Pin operates in open-drain mode, i.e. a logical "HIGH" is
+represented by a high impedance on the pin (as if it is
+disconnected) and a logical "LOW" by a voltage of 0 (ground).
+This mode is most commonly used for generating 5V logical signal
+on a 3.3V pin: 5V tolerant pins must be used; a pull-up resistor
+is connected between the pin and 5V, and the pin is used in open-
+drain mode.</comment>
+            <returntype EnumType="true">ioio.lib.api.DigitalOutput.Spec.Mode</returntype>
+        </field>
+    </class>
+    <class>
+        <name>anywheresoftware.b4a.agraham.ioio.B4AIOIO.B4APUartWrapper</name>
+        <shortname>Uart</shortname>
+        <comment>This object contains a representation of a Uart.</comment>
+        <objectwrapper>ioio.lib.api.Uart</objectwrapper>
+        <owner>process</owner>
+        <method>
+            <name>Close</name>
+            <comment>Close the pins and make them available for further use.</comment>
+            <returntype>void</returntype>
+        </method>
+        <method>
+            <name>IsInitialized</name>
+            <comment></comment>
+            <returntype>boolean</returntype>
+        </method>
+        <property>
+            <name>InputStream</name>
+            <returntype>java.io.InputStream</returntype>
+            <comment>Gets the input stream. Returns an input stream.</comment>
+        </property>
+        <property>
+            <name>OutputStream</name>
+            <returntype>java.io.OutputStream</returntype>
+            <comment>Gets the output stream. Returns an output stream.</comment>
+        </property>
+        <field>
+            <name>PARITY_NONE</name>
+            <comment>Selects no parity</comment>
+            <returntype EnumType="true">ioio.lib.api.Uart.Parity</returntype>
+        </field>
+        <field>
+            <name>PARITY_EVEN</name>
+            <comment>Selects even parity</comment>
+            <returntype EnumType="true">ioio.lib.api.Uart.Parity</returntype>
+        </field>
+        <field>
+            <name>IP_FLOATING</name>
+            <comment>The digital input type to obtain a floating input. See DigitalInput.</comment>
+            <returntype EnumType="true">ioio.lib.api.DigitalInput.Spec.Mode</returntype>
+        </field>
+        <field>
+            <name>OP_NORMAL</name>
+            <comment>The digital output type to obtain a normal output. See DigitalOuput.</comment>
+            <returntype EnumType="true">ioio.lib.api.DigitalOutput.Spec.Mode</returntype>
+        </field>
+        <field>
+            <name>NO_PIN</name>
+            <comment>The pin number to specify if either RX or TX is not required.</comment>
+            <returntype>int</returntype>
+        </field>
+        <field>
+            <name>OP_OPEN_DRAIN</name>
+            <comment>The digital output type to obtain an open drain output. See DigitalOuput.</comment>
+            <returntype EnumType="true">ioio.lib.api.DigitalOutput.Spec.Mode</returntype>
+        </field>
+        <field>
+            <name>PARITY_ODD</name>
+            <comment>Selects odd parity</comment>
+            <returntype EnumType="true">ioio.lib.api.Uart.Parity</returntype>
+        </field>
+        <field>
+            <name>IP_PULL_UP</name>
+            <comment>The digital input type to obtain a pull up input. See DigitalInput.</comment>
+            <returntype EnumType="true">ioio.lib.api.DigitalInput.Spec.Mode</returntype>
+        </field>
+        <field>
+            <name>STOPBIT_ONE</name>
+            <comment>Selects one stopbit</comment>
+            <returntype EnumType="true">ioio.lib.api.Uart.StopBits</returntype>
+        </field>
+        <field>
+            <name>IP_PULL_DOWN</name>
+            <comment>The digital input type to obtain a pull down input. See DigitalInput.</comment>
+            <returntype EnumType="true">ioio.lib.api.DigitalInput.Spec.Mode</returntype>
+        </field>
+        <field>
+            <name>STOPBITS_TWO</name>
+            <comment>Selects two stopbits</comment>
+            <returntype EnumType="true">ioio.lib.api.Uart.StopBits</returntype>
+        </field>
+    </class>
+    <class>
+        <name>anywheresoftware.b4a.agraham.ioio.B4AIOIO.B4ATwiMaster</name>
+        <shortname>TwiMaster</shortname>
+        <comment>This object contains a representation of a TwiMaster.</comment>
+        <objectwrapper>ioio.lib.api.TwiMaster</objectwrapper>
+        <owner>process</owner>
+        <method>
+            <name>WriteRead</name>
+            <comment>Perform a single TWI transaction which includes optional transmission and
+optional reception of data to a single slave. This is a blocking
+operation that can take a few milliseconds to a few tens of milliseconds.
+ 
+address
+            The slave address, either 7-bit or 10-bit. Note that in some
+            TWI device documentation the documented addresses are actually
+            2x the address values used here, as they regard the trailing
+            0-bit as part of the address.
+tenBitAddr
+            Whether this is a 10-bit addressing mode.
+writeData
+            The request data.
+writeSize
+            The number of bytes to write. Valid value are 0-255.
+readData
+            The array where the response should be stored.
+readSize
+            The expected number of response bytes. Valid value are 0-255.
+            
+Returns whether operation succeeded.</comment>
+            <returntype>boolean</returntype>
+            <parameter>
+                <name>address</name>
+                <type>int</type>
+            </parameter>
+            <parameter>
+                <name>tenBitAddr</name>
+                <type>boolean</type>
+            </parameter>
+            <parameter>
+                <name>writeData</name>
+                <type>byte[]</type>
+            </parameter>
+            <parameter>
+                <name>writeSize</name>
+                <type>int</type>
+            </parameter>
+            <parameter>
+                <name>readData</name>
+                <type>byte[]</type>
+            </parameter>
+            <parameter>
+                <name>readSize</name>
+                <type>int</type>
+            </parameter>
+        </method>
+        <method>
+            <name>Close</name>
+            <comment>Close the pins and make them available for further use.</comment>
+            <returntype>void</returntype>
+        </method>
+        <method>
+            <name>WriteReadAsync</name>
+            <comment>Asynchronous version of writeRead. Returns immediately.
+Use Status to determine when the transaction is complete.</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>address</name>
+                <type>int</type>
+            </parameter>
+            <parameter>
+                <name>tenBitAddr</name>
+                <type>boolean</type>
+            </parameter>
+            <parameter>
+                <name>writeData</name>
+                <type>byte[]</type>
+            </parameter>
+            <parameter>
+                <name>writeSize</name>
+                <type>int</type>
+            </parameter>
+            <parameter>
+                <name>readData</name>
+                <type>byte[]</type>
+            </parameter>
+            <parameter>
+                <name>readSize</name>
+                <type>int</type>
+            </parameter>
+        </method>
+        <method>
+            <name>IsInitialized</name>
+            <comment></comment>
+            <returntype>boolean</returntype>
+        </method>
+        <property>
+            <name>Status</name>
+            <returntype>boolean[]</returntype>
+            <comment>Returns a Boolean(2) array indicating the status of the last writeReadAsync call.
+The value at index 0 indicates whether the transaction has completed.
+If index 0 is True then index 1 indicates whether the transaction succeeded.
+If successful the read data will be available in the array passed to WriteReadAsync.</comment>
+        </property>
+        <field>
+            <name>RATE_400KHZ</name>
+            <comment></comment>
+            <returntype EnumType="true">ioio.lib.api.TwiMaster.Rate</returntype>
+        </field>
+        <field>
+            <name>RATE_1MHz</name>
+            <comment></comment>
+            <returntype EnumType="true">ioio.lib.api.TwiMaster.Rate</returntype>
+        </field>
+        <field>
+            <name>RATE_100KHZ</name>
+            <comment></comment>
+            <returntype EnumType="true">ioio.lib.api.TwiMaster.Rate</returntype>
+        </field>
+    </class>
+    <class>
+        <name>anywheresoftware.b4a.agraham.ioio.B4AIOIO.B4ASpiMaster</name>
+        <shortname>SpiMaster</shortname>
+        <comment>This object contains a representation of an SpiMaster.</comment>
+        <objectwrapper>ioio.lib.api.SpiMaster</objectwrapper>
+        <owner>process</owner>
+        <method>
+            <name>WriteRead</name>
+            <comment>Perform a single SPI transaction which includes optional transmission and
+optional reception of data to a single slave. This is a blocking
+operation that can take a few milliseconds to a few tens of milliseconds.
+To abort this operation, client can interrupt the blocked thread. If
+readSize is 0, the call returns immediately.
+ 
+slave
+            The slave index. It is determined by the index of its
+            slave-select pin, as per the array passed to OpenSpiMaster.
+
+writeData
+            A byte array of data to write. May be null if writeSize is 0.
+writeSize
+            Number of bytes to write. Valid values are 0 to totalSize.
+totalSize
+            Total transaction length, in bytes. Valid values are 1 to 64.
+readData
+            An array where the response is to be stored. May be null if
+            readSize is 0.
+readSize
+            The number of expected response bytes. Valid values are 0 to
+            totalSize.</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>slave</name>
+                <type>int</type>
+            </parameter>
+            <parameter>
+                <name>writeData</name>
+                <type>byte[]</type>
+            </parameter>
+            <parameter>
+                <name>writeSize</name>
+                <type>int</type>
+            </parameter>
+            <parameter>
+                <name>totalSize</name>
+                <type>int</type>
+            </parameter>
+            <parameter>
+                <name>readData</name>
+                <type>byte[]</type>
+            </parameter>
+            <parameter>
+                <name>readSize</name>
+                <type>int</type>
+            </parameter>
+        </method>
+        <method>
+            <name>Close</name>
+            <comment>Close the pins and make them available for further use.</comment>
+            <returntype>void</returntype>
+        </method>
+        <method>
+            <name>WriteReadAsync</name>
+            <comment>The same as writeRead(int, byte[], int, int, byte[], int)}, but returns immediately.
+Use Status to determine when the transaction is complete.</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>slave</name>
+                <type>int</type>
+            </parameter>
+            <parameter>
+                <name>writeData</name>
+                <type>byte[]</type>
+            </parameter>
+            <parameter>
+                <name>writeSize</name>
+                <type>int</type>
+            </parameter>
+            <parameter>
+                <name>totalSize</name>
+                <type>int</type>
+            </parameter>
+            <parameter>
+                <name>readData</name>
+                <type>byte[]</type>
+            </parameter>
+            <parameter>
+                <name>readSize</name>
+                <type>int</type>
+            </parameter>
+        </method>
+        <method>
+            <name>IsInitialized</name>
+            <comment></comment>
+            <returntype>boolean</returntype>
+        </method>
+        <property>
+            <name>Status</name>
+            <returntype>boolean</returntype>
+            <comment>Returns a Boolean indicating the status of the last writeReadAsync call.
+If successful the read data will be available in the array passed to WriteReadAsync.</comment>
+        </property>
+        <field>
+            <name>RATE_83K</name>
+            <comment></comment>
+            <returntype EnumType="true">ioio.lib.api.SpiMaster.Rate</returntype>
+        </field>
+        <field>
+            <name>IP_FLOATING</name>
+            <comment>The digital input type to obtain a floating input. See DigitalInput.</comment>
+            <returntype EnumType="true">ioio.lib.api.DigitalInput.Spec.Mode</returntype>
+        </field>
+        <field>
+            <name>RATE_5_3M</name>
+            <comment></comment>
+            <returntype EnumType="true">ioio.lib.api.SpiMaster.Rate</returntype>
+        </field>
+        <field>
+            <name>RATE_1M</name>
+            <comment></comment>
+            <returntype EnumType="true">ioio.lib.api.SpiMaster.Rate</returntype>
+        </field>
+        <field>
+            <name>IP_PULL_DOWN</name>
+            <comment>The digital input type to obtain a pull down input. See DigitalInput.</comment>
+            <returntype EnumType="true">ioio.lib.api.DigitalInput.Spec.Mode</returntype>
+        </field>
+        <field>
+            <name>RATE_200K</name>
+            <comment></comment>
+            <returntype EnumType="true">ioio.lib.api.SpiMaster.Rate</returntype>
+        </field>
+        <field>
+            <name>RATE_2M</name>
+            <comment></comment>
+            <returntype EnumType="true">ioio.lib.api.SpiMaster.Rate</returntype>
+        </field>
+        <field>
+            <name>RATE_3_2M</name>
+            <comment></comment>
+            <returntype EnumType="true">ioio.lib.api.SpiMaster.Rate</returntype>
+        </field>
+        <field>
+            <name>RATE_8M</name>
+            <comment></comment>
+            <returntype EnumType="true">ioio.lib.api.SpiMaster.Rate</returntype>
+        </field>
+        <field>
+            <name>RATE_2_2M</name>
+            <comment></comment>
+            <returntype EnumType="true">ioio.lib.api.SpiMaster.Rate</returntype>
+        </field>
+        <field>
+            <name>RATE_4M</name>
+            <comment></comment>
+            <returntype EnumType="true">ioio.lib.api.SpiMaster.Rate</returntype>
+        </field>
+        <field>
+            <name>RATE_500K</name>
+            <comment></comment>
+            <returntype EnumType="true">ioio.lib.api.SpiMaster.Rate</returntype>
+        </field>
+        <field>
+            <name>RATE_166K</name>
+            <comment></comment>
+            <returntype EnumType="true">ioio.lib.api.SpiMaster.Rate</returntype>
+        </field>
+        <field>
+            <name>RATE_571K</name>
+            <comment></comment>
+            <returntype EnumType="true">ioio.lib.api.SpiMaster.Rate</returntype>
+        </field>
+        <field>
+            <name>RATE_800K</name>
+            <comment></comment>
+            <returntype EnumType="true">ioio.lib.api.SpiMaster.Rate</returntype>
+        </field>
+        <field>
+            <name>RATE_35K</name>
+            <comment></comment>
+            <returntype EnumType="true">ioio.lib.api.SpiMaster.Rate</returntype>
+        </field>
+        <field>
+            <name>RATE_250K</name>
+            <comment></comment>
+            <returntype EnumType="true">ioio.lib.api.SpiMaster.Rate</returntype>
+        </field>
+        <field>
+            <name>RATE_666K</name>
+            <comment></comment>
+            <returntype EnumType="true">ioio.lib.api.SpiMaster.Rate</returntype>
+        </field>
+        <field>
+            <name>RATE_31K</name>
+            <comment></comment>
+            <returntype EnumType="true">ioio.lib.api.SpiMaster.Rate</returntype>
+        </field>
+        <field>
+            <name>RATE_50K</name>
+            <comment></comment>
+            <returntype EnumType="true">ioio.lib.api.SpiMaster.Rate</returntype>
+        </field>
+        <field>
+            <name>OP_OPEN_DRAIN</name>
+            <comment>The digital output type to obtain an open drain output. See DigitalOuput.</comment>
+            <returntype EnumType="true">ioio.lib.api.DigitalOutput.Spec.Mode</returntype>
+        </field>
+        <field>
+            <name>RATE_41K</name>
+            <comment></comment>
+            <returntype EnumType="true">ioio.lib.api.SpiMaster.Rate</returntype>
+        </field>
+        <field>
+            <name>RATE_142K</name>
+            <comment></comment>
+            <returntype EnumType="true">ioio.lib.api.SpiMaster.Rate</returntype>
+        </field>
+        <field>
+            <name>RATE_62K</name>
+            <comment></comment>
+            <returntype EnumType="true">ioio.lib.api.SpiMaster.Rate</returntype>
+        </field>
+        <field>
+            <name>RATE_2_6M</name>
+            <comment></comment>
+            <returntype EnumType="true">ioio.lib.api.SpiMaster.Rate</returntype>
+        </field>
+        <field>
+            <name>OP_NORMAL</name>
+            <comment>The digital output type to obtain a normal output. See DigitalOuput.</comment>
+            <returntype EnumType="true">ioio.lib.api.DigitalOutput.Spec.Mode</returntype>
+        </field>
+        <field>
+            <name>RATE_1_3M</name>
+            <comment></comment>
+            <returntype EnumType="true">ioio.lib.api.SpiMaster.Rate</returntype>
+        </field>
+        <field>
+            <name>IP_PULL_UP</name>
+            <comment>The digital input type to obtain a pull up input. See DigitalInput.</comment>
+            <returntype EnumType="true">ioio.lib.api.DigitalInput.Spec.Mode</returntype>
+        </field>
+        <field>
+            <name>RATE_125K</name>
+            <comment></comment>
+            <returntype EnumType="true">ioio.lib.api.SpiMaster.Rate</returntype>
+        </field>
+        <field>
+            <name>RATE_333K</name>
+            <comment></comment>
+            <returntype EnumType="true">ioio.lib.api.SpiMaster.Rate</returntype>
+        </field>
+    </class>
+    <version>1.5</version>
+    <comment>This library contains a driver for the IOIO for Android board distributed
+by sparkfun electronics - http://www.sparkfun.com/products/10585
+The IOIO (pronounced "yo-yo") is a board specially designed to work with 
+Android devices (OS versions 1.5 and greater).
+The board provides extensive and robust connectivity to an Android device via
+a USB connection and is fully controllable from within a Basic4android application.
+
+In the Basic4android IDE Libs tab select ensure both IOIO and IOIOlib are selected.</comment>
+    <author>Andrew Graham</author>
+</root>

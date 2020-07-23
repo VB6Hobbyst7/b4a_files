@@ -1,0 +1,1223 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root>
+    <doclet-version-NOT-library-version>1.07</doclet-version-NOT-library-version>
+    <class>
+        <name>de.donmanfred.LottieAnimationViewwrapper</name>
+        <shortname>LottieAnimationView</shortname>
+        <objectwrapper>com.airbnb.lottie.LottieAnimationView</objectwrapper>
+        <owner>activity</owner>
+        <permission>android.permission.INTERNET</permission>
+        <permission>android.permission.ACCESS_NETWORK_STATE</permission>
+        <method>
+            <name>updateBitmap</name>
+            <comment>Allows you to modify or clear a bitmap that was loaded for an image either automatically
+ through {@link #setImageAssetsFolder(String)} or with an {@link ImageAssetDelegate}.
+Return type: @return:the previous Bitmap or null.</comment>
+            <returntype>Bitmap</returntype>
+            <parameter>
+                <name>id</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>bitmap</name>
+                <type>java.lang.Object</type>
+            </parameter>
+        </method>
+        <method>
+            <name>reverseAnimationSpeed</name>
+            <comment>Reverses the current animation speed. This does NOT play the animation.</comment>
+            <returntype>void</returntype>
+        </method>
+        <method>
+            <name>removeAnimatorListener</name>
+            <comment></comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>listener</name>
+                <type>Animator.AnimatorListener</type>
+            </parameter>
+        </method>
+        <method>
+            <name>DesignerCreateView</name>
+            <comment></comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>base</name>
+                <type>anywheresoftware.b4a.objects.PanelWrapper</type>
+            </parameter>
+            <parameter>
+                <name>lw</name>
+                <type>anywheresoftware.b4a.objects.LabelWrapper</type>
+            </parameter>
+            <parameter>
+                <name>props</name>
+                <type>anywheresoftware.b4a.objects.collections.Map</type>
+            </parameter>
+        </method>
+        <method>
+            <name>hasMatte</name>
+            <comment>Returns whether or not any layers in this composition has a matte layer.</comment>
+            <returntype>boolean</returntype>
+        </method>
+        <method>
+            <name>IsInitialized</name>
+            <comment></comment>
+            <returntype>boolean</returntype>
+        </method>
+        <method>
+            <name>Initialize</name>
+            <comment></comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>ba</name>
+                <type>anywheresoftware.b4a.BA</type>
+            </parameter>
+            <parameter>
+                <name>EventName</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+        <method>
+            <name>setAnimationFromJson</name>
+            <comment>Sets the animation from json string. This is the ideal API to use when loading an animation
+ over the network because you can use the raw response body here and a conversion to a
+ JSONObject never has to be done.</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>jsonString</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>cacheKey</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+        <method>
+            <name>invalidateDrawable</name>
+            <comment></comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>dr</name>
+                <type>Drawable</type>
+            </parameter>
+        </method>
+        <method>
+            <name>SetLayout</name>
+            <comment></comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>arg0</name>
+                <type Pixel="true">int</type>
+            </parameter>
+            <parameter>
+                <name>arg1</name>
+                <type Pixel="true">int</type>
+            </parameter>
+            <parameter>
+                <name>arg2</name>
+                <type Pixel="true">int</type>
+            </parameter>
+            <parameter>
+                <name>arg3</name>
+                <type Pixel="true">int</type>
+            </parameter>
+        </method>
+        <method>
+            <name>setImageResource</name>
+            <comment></comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>Type</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>Name</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+        <method>
+            <name>removeAllAnimatorListeners</name>
+            <comment></comment>
+            <returntype>void</returntype>
+        </method>
+        <method>
+            <name>setMinAndMaxProgress</name>
+            <comment></comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>minProgress</name>
+                <type>float</type>
+            </parameter>
+            <parameter>
+                <name>maxProgress</name>
+                <type>float</type>
+            </parameter>
+        </method>
+        <method>
+            <name>loop</name>
+            <comment></comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>loop</name>
+                <type>boolean</type>
+            </parameter>
+        </method>
+        <method>
+            <name>buildDrawingCache</name>
+            <comment>If rendering via software, Android will fail to generate a bitmap if the view is too large. Rather than displaying
+ nothing, fallback on hardware acceleration which may incur a performance hit.</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>autoScale</name>
+                <type>boolean</type>
+            </parameter>
+        </method>
+        <method>
+            <name>cancelAnimation</name>
+            <comment></comment>
+            <returntype>void</returntype>
+        </method>
+        <method>
+            <name>addAnimatorUpdateListener</name>
+            <comment></comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>updateListener</name>
+                <type>ValueAnimator.AnimatorUpdateListener</type>
+            </parameter>
+        </method>
+        <method>
+            <name>pauseAnimation</name>
+            <comment></comment>
+            <returntype>void</returntype>
+        </method>
+        <method>
+            <name>RemoveView</name>
+            <comment></comment>
+            <returntype>void</returntype>
+        </method>
+        <method>
+            <name>removeLottieOnCompositionLoadedListener</name>
+            <comment></comment>
+            <returntype>boolean</returntype>
+            <parameter>
+                <name>lottieOnCompositionLoadedListener</name>
+                <type>com.airbnb.lottie.LottieOnCompositionLoadedListener</type>
+            </parameter>
+        </method>
+        <method>
+            <name>Invalidate3</name>
+            <comment></comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>arg0</name>
+                <type>int</type>
+            </parameter>
+            <parameter>
+                <name>arg1</name>
+                <type>int</type>
+            </parameter>
+            <parameter>
+                <name>arg2</name>
+                <type>int</type>
+            </parameter>
+            <parameter>
+                <name>arg3</name>
+                <type>int</type>
+            </parameter>
+        </method>
+        <method>
+            <name>Invalidate2</name>
+            <comment></comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>arg0</name>
+                <type>android.graphics.Rect</type>
+            </parameter>
+        </method>
+        <method>
+            <name>setAnimation3</name>
+            <comment>Sets the animation from an arbitrary InputStream.
+ This will load and deserialize the file asynchronously.
+ &lt;p&gt;
+ This is particularly useful for animations loaded from the network. You can fetch the
+ bodymovin json from the network and pass it directly here.</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>stream</name>
+                <type>java.io.InputStream</type>
+            </parameter>
+            <parameter>
+                <name>cacheKey</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+        <method>
+            <name DesignerName="SetBackgroundImage">SetBackgroundImageNew</name>
+            <comment></comment>
+            <returntype>anywheresoftware.b4a.objects.drawable.BitmapDrawable</returntype>
+            <parameter>
+                <name>arg0</name>
+                <type>android.graphics.Bitmap</type>
+            </parameter>
+        </method>
+        <method>
+            <name>setAnimation2</name>
+            <comment>Sets the animation from a file in the raw directory.
+ This will load and deserialize the file asynchronously.
+Type: 
+Name: </comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>Type</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>Name</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+        <method>
+            <name>addAnimatorListener</name>
+            <comment></comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>listener</name>
+                <type>Animator.AnimatorListener</type>
+            </parameter>
+        </method>
+        <method>
+            <name>CreateLottieOnCompositionLoadedListener</name>
+            <comment></comment>
+            <returntype>com.airbnb.lottie.LottieOnCompositionLoadedListener</returntype>
+        </method>
+        <method>
+            <name>setMinAndMaxFrame3</name>
+            <comment></comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>minFrame</name>
+                <type>int</type>
+            </parameter>
+            <parameter>
+                <name>maxFrame</name>
+                <type>int</type>
+            </parameter>
+        </method>
+        <method>
+            <name>setMinAndMaxFrame2</name>
+            <comment>Sets the minimum and maximum frame to the start marker start and the maximum frame to the end marker start.
+ playEndMarkerStartFrame determines whether or not to play the frame that the end marker is on. If the end marker
+ represents the end of the section that you want, it should be true. If the marker represents the beginning of the
+ next section, it should be false.</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>startMarkerName</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>endMarkerName</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>playEndMarkerStartFrame</name>
+                <type>boolean</type>
+            </parameter>
+        </method>
+        <method>
+            <name>RequestFocus</name>
+            <comment></comment>
+            <returntype>boolean</returntype>
+        </method>
+        <method>
+            <name>removeAllLottieOnCompositionLoadedListener</name>
+            <comment></comment>
+            <returntype>void</returntype>
+        </method>
+        <method>
+            <name>setAnimationFromUrl2</name>
+            <comment>Load a lottie animation from a url. The url can be a json file or a zip file. Use a zip file if you have images. Simply zip them together and lottie
+ will unzip and link the images automatically.
+
+ Under the hood, Lottie uses Java HttpURLConnection because it doesn't require any transitive networking dependencies. It will download the file
+ to the application cache under a temporary name. If the file successfully parses to a composition, it will rename the temporary file to one that
+ can be accessed immediately for subsequent requests. If the file does not parse to a composition, the temporary file will be deleted.</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>url</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>cacheKey</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+        <method>
+            <name>hasMasks</name>
+            <comment>Returns whether or not any layers in this composition has masks.</comment>
+            <returntype>boolean</returntype>
+        </method>
+        <method>
+            <name>BringToFront</name>
+            <comment></comment>
+            <returntype>void</returntype>
+        </method>
+        <method>
+            <name>SendToBack</name>
+            <comment></comment>
+            <returntype>void</returntype>
+        </method>
+        <method>
+            <name>addLottieOnCompositionLoadedListener</name>
+            <comment></comment>
+            <returntype>boolean</returntype>
+            <parameter>
+                <name>lottieOnCompositionLoadedListener</name>
+                <type>com.airbnb.lottie.LottieOnCompositionLoadedListener</type>
+            </parameter>
+        </method>
+        <method>
+            <name>SetVisibleAnimated</name>
+            <comment></comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>arg0</name>
+                <type>int</type>
+            </parameter>
+            <parameter>
+                <name>arg1</name>
+                <type>boolean</type>
+            </parameter>
+        </method>
+        <method>
+            <name>CreateLottieListener</name>
+            <comment></comment>
+            <returntype>com.airbnb.lottie.LottieListener</returntype>
+        </method>
+        <method>
+            <name>removeAllUpdateListeners</name>
+            <comment></comment>
+            <returntype>void</returntype>
+        </method>
+        <method>
+            <name>CreateAnimatorListener</name>
+            <comment></comment>
+            <returntype>AnimatorListener</returntype>
+        </method>
+        <method>
+            <name>disableExtraScaleModeInFitXY</name>
+            <comment>Disable the extraScale mode in {@link #draw(Canvas)} function when scaleType is FitXY. It doesn't affect the rendering with other scaleTypes.
+
+ &lt;p&gt;When there are 2 animation layout side by side, the default extra scale mode might leave 1 pixel not drawn between 2 animation, and
+ disabling the extraScale mode can fix this problem&lt;/p&gt;
+
+ &lt;b&gt;Attention:&lt;/b&gt; Disable the extra scale mode can downgrade the performance and may lead to larger memory footprint. Please only disable this
+ mode when using animation with a reasonable dimension (smaller than screen size).</comment>
+            <returntype>void</returntype>
+        </method>
+        <method>
+            <name>SetColorAnimated</name>
+            <comment></comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>arg0</name>
+                <type>int</type>
+            </parameter>
+            <parameter>
+                <name>arg1</name>
+                <type>int</type>
+            </parameter>
+            <parameter>
+                <name>arg2</name>
+                <type>int</type>
+            </parameter>
+        </method>
+        <method>
+            <name>resumeAnimation</name>
+            <comment>Continues playing the animation from its current position. If speed &lt; 0, it will play backwards
+ from the current position.</comment>
+            <returntype>void</returntype>
+        </method>
+        <method>
+            <name>CreateAnimatorUpdateListener</name>
+            <comment></comment>
+            <returntype>AnimatorUpdateListener</returntype>
+        </method>
+        <method>
+            <name>playAnimation</name>
+            <comment>Plays the animation from the beginning. If speed is &lt; 0, it will start at the end
+ and play towards the beginning</comment>
+            <returntype>void</returntype>
+        </method>
+        <method>
+            <name>Invalidate</name>
+            <comment></comment>
+            <returntype>void</returntype>
+        </method>
+        <method>
+            <name>removeUpdateListener</name>
+            <comment></comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>updateListener</name>
+                <type>ValueAnimator.AnimatorUpdateListener</type>
+            </parameter>
+        </method>
+        <method>
+            <name>SetLayoutAnimated</name>
+            <comment></comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>arg0</name>
+                <type>int</type>
+            </parameter>
+            <parameter>
+                <name>arg1</name>
+                <type Pixel="true">int</type>
+            </parameter>
+            <parameter>
+                <name>arg2</name>
+                <type Pixel="true">int</type>
+            </parameter>
+            <parameter>
+                <name>arg3</name>
+                <type Pixel="true">int</type>
+            </parameter>
+            <parameter>
+                <name>arg4</name>
+                <type Pixel="true">int</type>
+            </parameter>
+        </method>
+        <property>
+            <name>RepeatCount</name>
+            <returntype>int</returntype>
+            <parameter>
+                <name>count</name>
+                <type>int</type>
+            </parameter>
+            <comment>Defines how many times the animation should repeat. The default value
+ is 0.</comment>
+        </property>
+        <property>
+            <name>Frame</name>
+            <returntype>int</returntype>
+            <parameter>
+                <name>frame</name>
+                <type>int</type>
+            </parameter>
+            <comment>Get the currently rendered frame.</comment>
+        </property>
+        <property>
+            <name>RenderMode</name>
+            <parameter>
+                <name>renderMode</name>
+                <type EnumType="true">com.airbnb.lottie.RenderMode</type>
+            </parameter>
+            <comment>Call this to set whether or not to render with hardware or software acceleration.
+ Lottie defaults to Automatic which will use hardware acceleration unless:
+ 1) There are dash paths and the device is pre-Pie.
+ 2) There are more than 4 masks and mattes and the device is pre-Pie.
+    Hardware acceleration is generally faster for those devices unless
+    there are many large mattes and masks in which case there is a ton
+    of GPU uploadTexture thrashing which makes it much slower.
+
+ In most cases, hardware rendering will be faster, even if you have mattes and masks.
+ However, if you have multiple mattes and masks (especially large ones) then you
+ should test both render modes. You should also test on pre-Pie and Pie+ devices
+ because the underlying rendering enginge changed significantly.</comment>
+        </property>
+        <property>
+            <name>Left</name>
+            <returntype>int</returntype>
+            <parameter>
+                <name>arg0</name>
+                <type Pixel="true">int</type>
+            </parameter>
+            <comment></comment>
+        </property>
+        <property>
+            <name>ImageAssetsFolder</name>
+            <returntype>java.lang.String</returntype>
+            <parameter>
+                <name>imageAssetsFolder</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <comment>If you use image assets, you must explicitly specify the folder in assets/ in which they are
+ located because bodymovin uses the name filenames across all compositions (img_#).
+ Do NOT rename the images themselves.
+
+ If your images are located in src/main/assets/airbnb_loader/ then call
+ `setImageAssetsFolder("airbnb_loader/");`.
+
+ Be wary if you are using many images, however. Lottie is designed to work with vector shapes
+ from After Effects. If your images look like they could be represented with vector shapes,
+ see if it is possible to convert them to shape layers and re-export your animation. Check
+ the documentation at http://airbnb.io/lottie for more information about importing shapes from
+ Sketch or Illustrator to avoid this.</comment>
+        </property>
+        <property>
+            <name>MaxFrame</name>
+            <returntype>float</returntype>
+            <parameter>
+                <name>endFrame</name>
+                <type>int</type>
+            </parameter>
+            <comment>Returns the maximum frame set by {@link #setMaxFrame(int)} or {@link #setMaxProgress(float)}</comment>
+        </property>
+        <property>
+            <name>Parent</name>
+            <returntype>java.lang.Object</returntype>
+            <comment></comment>
+        </property>
+        <property>
+            <name>ScaleType</name>
+            <parameter>
+                <name>scaleType</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <comment></comment>
+        </property>
+        <property>
+            <name>PerformanceTracker</name>
+            <returntype>com.airbnb.lottie.PerformanceTracker</returntype>
+            <comment></comment>
+        </property>
+        <property>
+            <name>RepeatMode</name>
+            <returntype>int</returntype>
+            <parameter>
+                <name>mode</name>
+                <type>int</type>
+            </parameter>
+            <comment>Defines what this animation should do when it reaches the end.</comment>
+        </property>
+        <property>
+            <name>ApplyingOpacityToLayersEnabled</name>
+            <parameter>
+                <name>isApplyingOpacityToLayersEnabled</name>
+                <type>boolean</type>
+            </parameter>
+            <comment>Sets whether to apply opacity to the each layer instead of shape.
+ &lt;p&gt;
+ Opacity is normally applied directly to a shape. In cases where translucent shapes overlap, applying opacity to a layer will be more accurate
+ at the expense of performance.
+ &lt;p&gt;
+ The default value is false.
+ &lt;p&gt;
+ Note: This process is very expensive. The performance impact will be reduced when hardware acceleration is enabled.</comment>
+        </property>
+        <property>
+            <name>Visible</name>
+            <returntype>boolean</returntype>
+            <parameter>
+                <name>arg0</name>
+                <type>boolean</type>
+            </parameter>
+            <comment></comment>
+        </property>
+        <property>
+            <name>Padding</name>
+            <returntype>int[]</returntype>
+            <parameter>
+                <name>arg0</name>
+                <type>int[]</type>
+            </parameter>
+            <comment></comment>
+        </property>
+        <property>
+            <name>Height</name>
+            <returntype>int</returntype>
+            <parameter>
+                <name>arg0</name>
+                <type Pixel="true">int</type>
+            </parameter>
+            <comment></comment>
+        </property>
+        <property>
+            <name>Width</name>
+            <returntype>int</returntype>
+            <parameter>
+                <name>arg0</name>
+                <type Pixel="true">int</type>
+            </parameter>
+            <comment></comment>
+        </property>
+        <property>
+            <name>PerformanceTrackingEnabled</name>
+            <parameter>
+                <name>enabled</name>
+                <type>boolean</type>
+            </parameter>
+            <comment></comment>
+        </property>
+        <property>
+            <name>MinAndMaxFrame</name>
+            <parameter>
+                <name>markerName</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <comment>Sets the minimum and maximum frame to the start time and start time + duration
+ of the specified marker.</comment>
+        </property>
+        <property>
+            <name>Speed</name>
+            <returntype>float</returntype>
+            <parameter>
+                <name>speed</name>
+                <type>float</type>
+            </parameter>
+            <comment>Returns the current playback speed. This will be &lt; 0 if the animation is playing backwards.</comment>
+        </property>
+        <property>
+            <name>Composition</name>
+            <returntype>com.airbnb.lottie.LottieComposition</returntype>
+            <parameter>
+                <name>composition</name>
+                <type>com.airbnb.lottie.LottieComposition</type>
+            </parameter>
+            <comment>Sets a composition.
+ You can set a default cache strategy if this view was inflated with xml by
+ using {@link R.attr#lottie_cacheStrategy}.</comment>
+        </property>
+        <property>
+            <name>Progress</name>
+            <returntype>float</returntype>
+            <parameter>
+                <name>progress</name>
+                <type>float</type>
+            </parameter>
+            <comment></comment>
+        </property>
+        <property>
+            <name>Animating</name>
+            <returntype>boolean</returntype>
+            <comment></comment>
+        </property>
+        <property>
+            <name>Background</name>
+            <returntype>android.graphics.drawable.Drawable</returntype>
+            <parameter>
+                <name>arg0</name>
+                <type>android.graphics.drawable.Drawable</type>
+            </parameter>
+            <comment></comment>
+        </property>
+        <property>
+            <name>CacheComposition</name>
+            <parameter>
+                <name>cacheComposition</name>
+                <type>boolean</type>
+            </parameter>
+            <comment>If set to true, all future compositions that are set will be cached so that they don't need to be parsed
+ next time they are loaded. This won't apply to compositions that have already been loaded.
+
+ Defaults to true.
+
+ {@link R.attr#lottie_cacheComposition}</comment>
+        </property>
+        <property>
+            <name>Color</name>
+            <parameter>
+                <name>arg0</name>
+                <type>int</type>
+            </parameter>
+            <comment></comment>
+        </property>
+        <property>
+            <name>Enabled</name>
+            <returntype>boolean</returntype>
+            <parameter>
+                <name>arg0</name>
+                <type>boolean</type>
+            </parameter>
+            <comment></comment>
+        </property>
+        <property>
+            <name>Scale</name>
+            <returntype>float</returntype>
+            <parameter>
+                <name>scale</name>
+                <type>float</type>
+            </parameter>
+            <comment>Set the scale on the current composition. The only cost of this function is re-rendering the
+ current frame so you may call it frequent to scale something up or down.
+
+ The smaller the animation is, the better the performance will be. You may find that scaling an
+ animation down then rendering it in a larger ImageView and letting ImageView scale it back up
+ with a scaleType such as centerInside will yield better performance with little perceivable
+ quality loss.
+
+ You can also use a fixed view width/height in conjunction with the normal ImageView
+ scaleTypes centerCrop and centerInside.</comment>
+        </property>
+        <property>
+            <name>Duration</name>
+            <returntype>long</returntype>
+            <comment></comment>
+        </property>
+        <property>
+            <name>SafeMode</name>
+            <parameter>
+                <name>safeMode</name>
+                <type>boolean</type>
+            </parameter>
+            <comment>If you are experiencing a device specific crash that happens during drawing, you can set this to true
+ for those devices. If set to true, draw will be wrapped with a try/catch which will cause Lottie to
+ render an empty frame rather than crash your app.
+
+ Ideally, you will never need this and the vast majority of apps and animations won't. However, you may use
+ this for very specific cases if absolutely necessary.
+
+ There is no XML attr for this because it should be set programmatically and only for specific devices that
+ are known to be problematic.</comment>
+        </property>
+        <property>
+            <name>MaxProgress</name>
+            <parameter>
+                <name>endProgress</name>
+                <type>float</type>
+            </parameter>
+            <comment>Sets the maximum progress that the animation will end at when playing or looping.</comment>
+        </property>
+        <property>
+            <name>ImageDrawable</name>
+            <parameter>
+                <name>drawable</name>
+                <type>Drawable</type>
+            </parameter>
+            <comment></comment>
+        </property>
+        <property>
+            <name>MinFrame2</name>
+            <parameter>
+                <name>markerName</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <comment>Sets the minimum frame to the start time of the specified marker.</comment>
+        </property>
+        <property>
+            <name>MaxFrame2</name>
+            <parameter>
+                <name>markerName</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <comment>Sets the maximum frame to the start time + duration of the specified marker.</comment>
+        </property>
+        <property>
+            <name>MergePathsEnabledForKitKatAndAbove</name>
+            <returntype>boolean</returntype>
+            <comment>Returns whether merge paths are enabled for KitKat and above.</comment>
+        </property>
+        <property>
+            <name>Top</name>
+            <returntype>int</returntype>
+            <parameter>
+                <name>arg0</name>
+                <type Pixel="true">int</type>
+            </parameter>
+            <comment></comment>
+        </property>
+        <property>
+            <name>FailureListener</name>
+            <parameter>
+                <name>failureListener</name>
+                <type>com.airbnb.lottie.LottieListener</type>
+            </parameter>
+            <comment>Set a default failure listener that will be called if any of the setAnimation APIs fail for any reason.
+ This can be used to replace the default behavior.
+
+ The default behavior will log any network errors and rethrow all other exceptions.
+
+ If you are loading an animation from the network, errors may occur if your user has no internet.
+ You can use this listener to retry the download or you can have it default to an error drawable
+ with {@link #setFallbackResource(int)}.
+
+ Unless you are using {@link #setAnimationFromUrl(String)}, errors are unexpected.
+
+ Set the listener to null to revert to the default behavior.</comment>
+        </property>
+        <property>
+            <name>MinFrame</name>
+            <returntype>float</returntype>
+            <parameter>
+                <name>startFrame</name>
+                <type>int</type>
+            </parameter>
+            <comment>Returns the minimum frame set by {@link #setMinFrame(int)} or {@link #setMinProgress(float)}</comment>
+        </property>
+        <property>
+            <name>Animation</name>
+            <parameter>
+                <name>assetName</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <comment></comment>
+        </property>
+        <property>
+            <name>AnimationFromUrl</name>
+            <parameter>
+                <name>url</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <comment>Load a lottie animation from a url. The url can be a json file or a zip file. Use a zip file if you have images. Simply zip them together and lottie
+ will unzip and link the images automatically.
+
+ Under the hood, Lottie uses Java HttpURLConnection because it doesn't require any transitive networking dependencies. It will download the file
+ to the application cache under a temporary name. If the file successfully parses to a composition, it will rename the temporary file to one that
+ can be accessed immediately for subsequent requests. If the file does not parse to a composition, the temporary file will be deleted.</comment>
+        </property>
+        <property>
+            <name>Tag</name>
+            <returntype>java.lang.Object</returntype>
+            <parameter>
+                <name>arg0</name>
+                <type>java.lang.Object</type>
+            </parameter>
+            <comment></comment>
+        </property>
+        <property>
+            <name>ImageBitmap</name>
+            <parameter>
+                <name>bm</name>
+                <type>java.lang.Object</type>
+            </parameter>
+            <comment></comment>
+        </property>
+        <property>
+            <name>MergePathsForKitKatAndAbove</name>
+            <parameter>
+                <name>enable</name>
+                <type>boolean</type>
+            </parameter>
+            <comment>Enable this to get merge path support for devices running KitKat (19) and above.
+
+ Merge paths currently don't work if the the operand shape is entirely contained within the
+ first shape. If you need to cut out one shape from another shape, use an even-odd fill type
+ instead of using merge paths.</comment>
+        </property>
+        <property>
+            <name>FallbackResource</name>
+            <parameter>
+                <name>fallbackResource</name>
+                <type>int</type>
+            </parameter>
+            <comment>Set a drawable that will be rendered if the LottieComposition fails to load for any reason.
+ Unless you are using {@link #setAnimationFromUrl(String)}, this is an unexpected error and
+ you should handle it with {@link #setFailureListener(LottieListener)}.
+
+ If this is a network animation, you may use this to show an error to the user or
+ you can use a failure listener to retry the download.</comment>
+        </property>
+        <property>
+            <name>MinProgress</name>
+            <parameter>
+                <name>startProgress</name>
+                <type>float</type>
+            </parameter>
+            <comment>Sets the minimum progress that the animation will start from when playing or looping.</comment>
+        </property>
+    </class>
+    <class>
+        <name>de.donmanfred.LottieCompositionFactorywrapper</name>
+        <shortname>LottieCompositionFactory</shortname>
+        <objectwrapper>com.airbnb.lottie.LottieCompositionFactory</objectwrapper>
+        <owner>process</owner>
+        <event>onResult(success As Boolean, result As Object)</event>
+        <method>
+            <name>fromJsonString</name>
+            <comment></comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>json</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>cacheKey</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+        <method>
+            <name>fromJsonReader</name>
+            <comment></comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>reader</name>
+                <type>com.airbnb.lottie.parser.moshi.JsonReader</type>
+            </parameter>
+            <parameter>
+                <name>cacheKey</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+        <method>
+            <name>clearCache</name>
+            <comment></comment>
+            <returntype>void</returntype>
+        </method>
+        <method>
+            <name>fromAssetSync2</name>
+            <comment>Parse an animation from src/main/assets. It is recommended to use {@link #fromRawRes(Context, int)} instead.
+ The asset file name will be used as a cache key so future usages won't have to parse the json again.
+ However, if your animation has images, you may package the json and images as a single flattened zip file in assets.
+
+ Pass null as the cache key to skip the cache.</comment>
+            <returntype>com.airbnb.lottie.LottieResult</returntype>
+            <parameter>
+                <name>context</name>
+                <type>Context</type>
+            </parameter>
+            <parameter>
+                <name>fileName</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>cacheKey</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+        <method>
+            <name>IsInitialized</name>
+            <comment></comment>
+            <returntype>boolean</returntype>
+        </method>
+        <method>
+            <name>Initialize</name>
+            <comment></comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>ba</name>
+                <type>anywheresoftware.b4a.BA</type>
+            </parameter>
+            <parameter>
+                <name>EventName</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+        <method>
+            <name>fromAsset</name>
+            <comment>Parse an animation from src/main/assets. It is recommended to use {@link #fromRawRes(Context, int)} instead.
+ The asset file name will be used as a cache key so future usages won't have to parse the json again.
+ However, if your animation has images, you may package the json and images as a single flattened zip file in assets.
+
+ To skip the cache, add null as a third parameter.</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>fileName</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+        <method>
+            <name>fromJsonSync</name>
+            <comment>Prefer passing in the json string directly. This method just calls `toString()` on your JSONObject.
+ If you are loading this animation from the network, just use the response body string instead of
+ parsing it first for improved performance.</comment>
+            <returntype>com.airbnb.lottie.LottieResult</returntype>
+            <parameter>
+                <name>json</name>
+                <type>JSONObject</type>
+            </parameter>
+            <parameter>
+                <name>cacheKey</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+        <method>
+            <name>fromJsonReaderSync</name>
+            <comment></comment>
+            <returntype>com.airbnb.lottie.LottieResult</returntype>
+            <parameter>
+                <name>reader</name>
+                <type>com.airbnb.lottie.parser.moshi.JsonReader</type>
+            </parameter>
+            <parameter>
+                <name>cacheKey</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+        <method>
+            <name>fromUrlSync</name>
+            <comment>Fetch an animation from an http url. Once it is downloaded once, Lottie will cache the file to disk for
+ future use. Because of this, you may call `fromUrl` ahead of time to warm the cache if you think you
+ might need an animation in the future.</comment>
+            <returntype>com.airbnb.lottie.LottieResult</returntype>
+            <parameter>
+                <name>context</name>
+                <type>Context</type>
+            </parameter>
+            <parameter>
+                <name>url</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+        <method>
+            <name>fromJsonInputStreamSync</name>
+            <comment>Return a LottieComposition for the given InputStream to json.</comment>
+            <returntype>com.airbnb.lottie.LottieResult</returntype>
+            <parameter>
+                <name>stream</name>
+                <type>java.io.InputStream</type>
+            </parameter>
+            <parameter>
+                <name>cacheKey</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+        <method>
+            <name>fromAsset2</name>
+            <comment>Parse an animation from src/main/assets. It is recommended to use {@link #fromRawRes(Context, int)} instead.
+ The asset file name will be used as a cache key so future usages won't have to parse the json again.
+ However, if your animation has images, you may package the json and images as a single flattened zip file in assets.
+
+ Pass null as the cache key to skip the cache.</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>fileName</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>cacheKey</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+        <method>
+            <name>fromJsonStringSync</name>
+            <comment>Return a LottieComposition for the specified raw json string.
+ If loading from a file, it is preferable to use the InputStream or rawRes version.</comment>
+            <returntype>com.airbnb.lottie.LottieResult</returntype>
+            <parameter>
+                <name>json</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>cacheKey</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+        <method>
+            <name>fromJsonInputStream</name>
+            <comment>Auto-closes the stream.</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>stream</name>
+                <type>java.io.InputStream</type>
+            </parameter>
+            <parameter>
+                <name>cacheKey</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+        <method>
+            <name>fromUrlSync2</name>
+            <comment>Fetch an animation from an http url. Once it is downloaded once, Lottie will cache the file to disk for
+ future use. Because of this, you may call `fromUrl` ahead of time to warm the cache if you think you
+ might need an animation in the future.</comment>
+            <returntype>com.airbnb.lottie.LottieResult</returntype>
+            <parameter>
+                <name>context</name>
+                <type>Context</type>
+            </parameter>
+            <parameter>
+                <name>url</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>cacheKey</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+        <method>
+            <name>fromZipStream</name>
+            <comment></comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>inputStream</name>
+                <type>java.util.zip.ZipInputStream</type>
+            </parameter>
+            <parameter>
+                <name>cacheKey</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+        <method>
+            <name>fromUrl</name>
+            <comment>Fetch an animation from an http url. Once it is downloaded once, Lottie will cache the file to disk for
+ future use. Because of this, you may call `fromUrl` ahead of time to warm the cache if you think you
+ might need an animation in the future.
+
+ To skip the cache, add null as a third parameter.</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>url</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+        <method>
+            <name>fromAssetSync</name>
+            <comment>Parse an animation from src/main/assets. It is recommended to use {@link #fromRawRes(Context, int)} instead.
+ The asset file name will be used as a cache key so future usages won't have to parse the json again.
+ However, if your animation has images, you may package the json and images as a single flattened zip file in assets.
+
+ To skip the cache, add null as a third parameter.</comment>
+            <returntype>com.airbnb.lottie.LottieResult</returntype>
+            <parameter>
+                <name>fileName</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+        <method>
+            <name>fromJson</name>
+            <comment></comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>json</name>
+                <type>JSONObject</type>
+            </parameter>
+            <parameter>
+                <name>cacheKey</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+        <method>
+            <name>fromZipStreamSync</name>
+            <comment>Parses a zip input stream into a Lottie composition.
+ Your zip file should just be a folder with your json file and images zipped together.
+ It will automatically store and configure any images inside the animation if they exist.</comment>
+            <returntype>com.airbnb.lottie.LottieResult</returntype>
+            <parameter>
+                <name>inputStream</name>
+                <type>java.util.zip.ZipInputStream</type>
+            </parameter>
+            <parameter>
+                <name>cacheKey</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+        <method>
+            <name>fromUrl2</name>
+            <comment>Fetch an animation from an http url. Once it is downloaded once, Lottie will cache the file to disk for
+ future use. Because of this, you may call `fromUrl` ahead of time to warm the cache if you think you
+ might need an animation in the future.</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>url</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>cacheKey</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+        <property>
+            <name>MaxCacheSize</name>
+            <parameter>
+                <name>size</name>
+                <type>int</type>
+            </parameter>
+            <comment>Set the maximum number of compositions to keep cached in memory.
+ This must be &gt; 0.</comment>
+        </property>
+    </class>
+    <version>3.4</version>
+    <comment>&lt;link&gt;...|http://www.b4x.com&lt;/link&gt;</comment>
+    <author>DonManfred</author>
+</root>

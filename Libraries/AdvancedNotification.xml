@@ -1,0 +1,263 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root>
+    <doclet-version-NOT-library-version>1.02</doclet-version-NOT-library-version>
+    <class>
+        <name>barxdroid.advancednotification.AdvancedNotification</name>
+        <shortname>AdvancedNotification</shortname>
+        <objectwrapper>android.app.Notification</objectwrapper>
+        <owner>process</owner>
+        <method>
+            <name>Initialize</name>
+            <comment>Initializes the notification. By default the notification plays shows a light.
+ 
+ Example:
+ Dim an as AdvancedNotification
+ 
+ an.Initialize()
+ ...</comment>
+            <returntype>void</returntype>
+        </method>
+        <method>
+            <name>SetInfo</name>
+            <comment>Sets the message text and action.
+         Title - The message title.
+         Body - The message body.
+         Activity - The activity to start when the user presses on the notification.
+         Pass an empty string to start the current activity (when calling from an activity module).
+         Example:
+         an.SetInfo("Some title", "Some text", Main)</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>ba</name>
+                <type>anywheresoftware.b4a.BA</type>
+            </parameter>
+            <parameter>
+                <name>Title</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>Body</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>Activity</name>
+                <type>java.lang.Object</type>
+            </parameter>
+        </method>
+        <method>
+            <name>SetCustomVibrate</name>
+            <comment>Sets A custom vibrate sequence for notification Vibration
+ The Array of values can be as long as you wish.
+ The First Value is the pause before vibration starts, then it's ON, OFF, ON, OFF, etc.
+ 
+ NOTE: 
+ Automatically sets 'an.Vibrate = False'
+ This required for this method to work. Do not set an.Vibrate = True' after setting a custom vibration pattern or the custom pattern will not work.
+ 
+ Example:
+ Dim v() as Long
+ 
+ v = Array as Long(0, 100, 200, 300, 400)
+ an.SetCustomVibrate(v)</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>Values</name>
+                <type>long[]</type>
+            </parameter>
+        </method>
+        <method>
+            <name>SetCustomSound</name>
+            <comment>Sets a custom sound to be played on new notification. 
+ 
+ NOTE:
+ Automatically sets 'an.Sound = False'
+ This is required for this method to work, Do not set 'an.Sound = True' after setting a custom sound or the custom sound will no work.
+ 
+ Example:
+ an.SetCustomSound("file:///sdcard/notification/ringer.mp3")</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>path</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+        <method>
+            <name>SetInfo2</name>
+            <comment>Similar to SetInfo. Also sets a string that can be later extracted in Activity_Resume.
+         Title - The message title.
+         Body - The message body.
+         Tag - An arbitrary string that can be later extract when the user clicks on the notification.
+         Activity - The activity to start when the user presses on the notification.
+         Pass an empty string to start the current activity (when calling from an activity module).
+         Example of extracting the tag:
+         Sub Activity_Resume
+         Dim in As Intent
+         in = Activity.GetStartingIntent
+          If in.HasExtra("Notification_Tag") Then
+                Log(in.GetExtra("Notification_Tag")) 'Will log the tag
+          End If
+         End Sub</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>ba</name>
+                <type>anywheresoftware.b4a.BA</type>
+            </parameter>
+            <parameter>
+                <name>Title</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>Body</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>Tag</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>Activity</name>
+                <type>java.lang.Object</type>
+            </parameter>
+        </method>
+        <method>
+            <name>Cancel</name>
+            <comment>Cancels the notification with the given Id</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>Id</name>
+                <type>int</type>
+            </parameter>
+        </method>
+        <method>
+            <name>Notify</name>
+            <comment>Displays the notification.
+ Id - The notification Id. This Id can be used later to update the notification (by calling Notify again with the same Id),
+ or to cancel the notification</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>Id</name>
+                <type>int</type>
+            </parameter>
+        </method>
+        <method>
+            <name>IsInitialized</name>
+            <comment></comment>
+            <returntype>boolean</returntype>
+        </method>
+        <property>
+            <name>NoClear</name>
+            <parameter>
+                <name>v</name>
+                <type>boolean</type>
+            </parameter>
+            <comment>Sets whether the notification should NOT be cancelled when the user clicks the Clear All button.
+ 
+ Example:
+ an.NoClear = True 'Notification will not clear.</comment>
+        </property>
+        <property>
+            <name>Insistent</name>
+            <parameter>
+                <name>v</name>
+                <type>boolean</type>
+            </parameter>
+            <comment>Sets whether the sound will play repeatedly until the user opens the notifications screen.</comment>
+        </property>
+        <property>
+            <name>AlertOnce</name>
+            <parameter>
+                <name>v</name>
+                <type>boolean</type>
+            </parameter>
+            <comment>Sets whether the notification sound and/or vibration should sound each time the notification is sent, even if it has not been cancelled before.</comment>
+        </property>
+        <property>
+            <name>OnGoingEvent</name>
+            <parameter>
+                <name>v</name>
+                <type>boolean</type>
+            </parameter>
+            <comment>Sets whether the notification is an 'ongoing event'. 
+ The notification will be shown in the ongoing section and will not be cleared.</comment>
+        </property>
+        <property>
+            <name>Number</name>
+            <returntype>int</returntype>
+            <parameter>
+                <name>v</name>
+                <type>int</type>
+            </parameter>
+            <comment>Gets or Sets the number that will be shown on the icon. 
+ This is useful to represent multiple events in a single notification.</comment>
+        </property>
+        <property>
+            <name>AutoCancel</name>
+            <parameter>
+                <name>v</name>
+                <type>boolean</type>
+            </parameter>
+            <comment>Sets whether the notification will be cancelled automatically when the user clicks on it.</comment>
+        </property>
+        <property>
+            <name>TickerText</name>
+            <parameter>
+                <name>text</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <comment>Sets the Ticker Text which shows along side the status bar icon on new notification.
+ 
+ Example:
+ an.TickerText = "New notification"</comment>
+        </property>
+        <property>
+            <name>Sound</name>
+            <parameter>
+                <name>v</name>
+                <type>boolean</type>
+            </parameter>
+            <comment>Sets whether the notification will play a sound.
+
+ Example:
+ an.Sound = False</comment>
+        </property>
+        <property>
+            <name>Light</name>
+            <parameter>
+                <name>v</name>
+                <type>boolean</type>
+            </parameter>
+            <comment>Sets whether the notification will show a light.
+ 
+ Example:
+ an.Light = False</comment>
+        </property>
+        <property>
+            <name>Vibrate</name>
+            <parameter>
+                <name>v</name>
+                <type>boolean</type>
+            </parameter>
+            <comment>Sets whether the notification will vibrate the device
+ 
+ Example:
+ an.Vibrate = False</comment>
+        </property>
+        <property>
+            <name>Icon</name>
+            <parameter>
+                <name>s</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <comment>Sets the icon to be displayed.
+ The image file should manually copied to the Objects\res\drawable\ folder and set to read-only.
+ The file name is case sensitive and should not contain the file extension.
+ You can use "icon" to use the applications icon.
+ 
+ Example:
+ 'NotificationIcon.png copied to Objects\res\drawable\ folder and set to read-only.
+ an.Icon("NotificationIcon")</comment>
+        </property>
+    </class>
+    <version>1.11</version>
+    <author>Barx</author>
+</root>

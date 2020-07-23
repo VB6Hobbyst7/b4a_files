@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root>
+    <doclet-version-NOT-library-version>1.02</doclet-version-NOT-library-version>
+    <class>
+        <name>com.rootsoft.rspopupmenu.RSPopupMenu</name>
+        <shortname>RSPopupMenu</shortname>
+        <objectwrapper>android.widget.PopupMenu</objectwrapper>
+        <owner>activity</owner>
+        <method>
+            <name>Initialize</name>
+            <comment>Initializes the Popup Menu.
+ A PopupMenu displays a Menu in a modal popup window anchored to a View. 
+ The popup will appear below the anchor view if there is room, or above it if there is not. 
+ If the IME is visible the popup will not overlap it until it is touched. 
+ Touching outside of the popup will dismiss it.</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>ba</name>
+                <type>anywheresoftware.b4a.BA</type>
+            </parameter>
+            <parameter>
+                <name>EventName</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>view</name>
+                <type>anywheresoftware.b4a.objects.ConcreteViewWrapper</type>
+            </parameter>
+        </method>
+        <method>
+            <name>AddSubMenuItem</name>
+            <comment>Add a new item to the menu.</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>ItemId</name>
+                <type>int</type>
+            </parameter>
+            <parameter>
+                <name>Order</name>
+                <type>int</type>
+            </parameter>
+            <parameter>
+                <name>Title</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+        <method>
+            <name>Show</name>
+            <comment>Show the menu popup anchored to the view specified during construction.</comment>
+            <returntype>void</returntype>
+        </method>
+        <method>
+            <name>Dismiss</name>
+            <comment>Dismiss the menu popup.</comment>
+            <returntype>void</returntype>
+        </method>
+        <method>
+            <name>AddMenuItem</name>
+            <comment>Add a new item to the menu.</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>ItemId</name>
+                <type>int</type>
+            </parameter>
+            <parameter>
+                <name>Order</name>
+                <type>int</type>
+            </parameter>
+            <parameter>
+                <name>Title</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+        <method>
+            <name>AddMenuItem2</name>
+            <comment>Add a new item to the menu.</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>GroupId</name>
+                <type>int</type>
+            </parameter>
+            <parameter>
+                <name>ItemId</name>
+                <type>int</type>
+            </parameter>
+            <parameter>
+                <name>Order</name>
+                <type>int</type>
+            </parameter>
+            <parameter>
+                <name>Title</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+        <method>
+            <name>AddSubMenuItem2</name>
+            <comment>Add a new item to the menu.</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>GroupId</name>
+                <type>int</type>
+            </parameter>
+            <parameter>
+                <name>ItemId</name>
+                <type>int</type>
+            </parameter>
+            <parameter>
+                <name>Order</name>
+                <type>int</type>
+            </parameter>
+            <parameter>
+                <name>Title</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+        <method>
+            <name>Initialize2</name>
+            <comment>Initializes the Popup Menu.
+ A PopupMenu displays a Menu in a modal popup window anchored to a View. 
+ The popup will appear below the anchor view if there is room, or above it if there is not. 
+ If the IME is visible the popup will not overlap it until it is touched. 
+ Touching outside of the popup will dismiss it.</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>ba</name>
+                <type>anywheresoftware.b4a.BA</type>
+            </parameter>
+            <parameter>
+                <name>EventName</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>view</name>
+                <type>anywheresoftware.b4a.objects.ConcreteViewWrapper</type>
+            </parameter>
+            <parameter>
+                <name>Gravity</name>
+                <type>int</type>
+            </parameter>
+        </method>
+        <method>
+            <name>IsInitialized</name>
+            <comment></comment>
+            <returntype>boolean</returntype>
+        </method>
+    </class>
+    <version>1.0</version>
+    <author>XverhelstX</author>
+</root>

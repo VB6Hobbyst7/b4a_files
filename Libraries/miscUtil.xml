@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root>
+    <doclet-version-NOT-library-version>1.00</doclet-version-NOT-library-version>
+    <class>
+        <name>lilivel.b4a.miscUtil.miscUtil</name>
+        <shortname>miscUtil</shortname>
+        <owner>activity</owner>
+        <permission>android.permission.GET_ACCOUNTS</permission>
+        <permission>android.permission.READ_CONTACTS</permission>
+        <permission>android.permission.WRITE_CONTACTS</permission>
+        <method>
+            <name>Initialize</name>
+            <comment>Common initialisations</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>ba</name>
+                <type>anywheresoftware.b4a.BA</type>
+            </parameter>
+        </method>
+        <method>
+            <name>createContactEntry</name>
+            <comment>Creates the contact entry</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>name</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>phone</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>phoneType</name>
+                <type>int</type>
+            </parameter>
+            <parameter>
+                <name>email</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>emailType</name>
+                <type>int</type>
+            </parameter>
+        </method>
+        <field>
+            <name>TAG</name>
+            <comment></comment>
+            <returntype>java.lang.String</returntype>
+        </field>
+    </class>
+    <version>1.0</version>
+    <author>Michael Peter</author>
+</root>

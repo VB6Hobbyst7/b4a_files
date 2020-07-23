@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <doclet-version-NOT-library-version>1.00</doclet-version-NOT-library-version>
+  <dependsOn>animationplus</dependsOn>
+  <dependsOn>animation</dependsOn>
+  <class>
+    <name>dominex.modularmenu.modularmenu</name>
+    <shortname>ModularMenu</shortname>
+    <owner>activity</owner>
+    <event>Click</event>
+    <event>LongClick</event>
+    <method>
+      <name>IsInitialized</name>
+      <comment>Tests whether the object has been initialized.</comment>
+      <returntype>boolean</returntype>
+    </method>
+    <method>
+      <name DesignerName="AddMenuItem">_addmenuitem</name>
+      <comment>Adds an item to the menu.</comment>
+      <returntype>String</returntype>
+      <parameter>
+        <name>Title</name>
+        <type>String</type>
+      </parameter>
+      <parameter>
+        <name>Image</name>
+        <type>anywheresoftware.b4a.objects.drawable.CanvasWrapper.BitmapWrapper</type>
+      </parameter>
+      <parameter>
+        <name>EventName</name>
+        <type>String</type>
+      </parameter>
+    </method>
+    <method>
+      <name DesignerName="AddMenuItemAt">_addmenuitemat</name>
+      <comment>Adds an item to the menu in the specified position.</comment>
+      <returntype>String</returntype>
+      <parameter>
+        <name>Title</name>
+        <type>String</type>
+      </parameter>
+      <parameter>
+        <name>Image</name>
+        <type>anywheresoftware.b4a.objects.drawable.CanvasWrapper.BitmapWrapper</type>
+      </parameter>
+      <parameter>
+        <name>EventName</name>
+        <type>String</type>
+      </parameter>
+      <parameter>
+        <name>Position</name>
+        <type>int</type>
+      </parameter>
+    </method>
+    <method>
+      <name DesignerName="CloseMenu">_closemenu</name>
+      <comment>Programmatically closes the menu.</comment>
+      <returntype>String</returntype>
+    </method>
+    <method>
+      <name DesignerName="Initialize">_initialize</name>
+      <comment>Initializes the ModularMenu.
+MaxItemShow - maximum number of item visible in the menu without scrolling.
+HeightItem - height of each item.
+Parent - where is the Activity create the ModularMenu.
+Module - must be Me
+
+Example:&lt;code&gt;
+Menu.Initialize(7,43dip,Activity,Me)&lt;/code&gt;</comment>
+      <returntype>String</returntype>
+      <parameter>
+        <name>ba</name>
+        <type>anywheresoftware.b4a.BA</type>
+      </parameter>
+      <parameter>
+        <name>MaxItemShow</name>
+        <type>int</type>
+      </parameter>
+      <parameter>
+        <name>HeightItem</name>
+        <type>int</type>
+      </parameter>
+      <parameter>
+        <name>Parent</name>
+        <type>anywheresoftware.b4a.objects.ActivityWrapper</type>
+      </parameter>
+      <parameter>
+        <name>Module</name>
+        <type>Object</type>
+      </parameter>
+    </method>
+    <method>
+      <name DesignerName="IsOpen">_isopen</name>
+      <comment>Returns True if the menu is open.</comment>
+      <returntype>boolean</returntype>
+    </method>
+    <method>
+      <name DesignerName="KeyMenuPress">_keymenupress</name>
+      <comment>Action to be sent to the class by listening to the menu button press event.
+
+Example:&lt;code&gt;
+Sub Activity_KeyPress (KeyCode As Int) As Boolean
+	If KeyCode = KeyCodes.KEYCODE_MENU Then Menu.KeyMenuPress
+End Sub&lt;/code&gt;</comment>
+      <returntype>String</returntype>
+    </method>
+    <method>
+      <name DesignerName="LoadItem">_loaditem</name>
+      <comment>Upload the menu with the items on the List previously saved.
+See the example Multi-Activity.</comment>
+      <returntype>boolean</returntype>
+      <parameter>
+        <name>MenuItem</name>
+        <type>anywheresoftware.b4a.objects.collections.List</type>
+      </parameter>
+    </method>
+    <method>
+      <name DesignerName="MenuLock">_menulock</name>
+      <comment>Locks the menu so that it can be opened until it is unlocked.</comment>
+      <returntype>String</returntype>
+    </method>
+    <method>
+      <name DesignerName="MenuUnlock">_menuunlock</name>
+      <comment>Unlock the menu so that it can re-open if it was previously locked.</comment>
+      <returntype>String</returntype>
+    </method>
+    <method>
+      <name DesignerName="OpenMenu">_openmenu</name>
+      <comment>Programmatically opens the menu.</comment>
+      <returntype>String</returntype>
+    </method>
+    <method>
+      <name DesignerName="RemoveAll">_removeall</name>
+      <comment>Removes all item from to menu.</comment>
+      <returntype>boolean</returntype>
+    </method>
+    <method>
+      <name DesignerName="RemoveAt">_removeat</name>
+      <comment>Removes the item at the specified position.</comment>
+      <returntype>boolean</returntype>
+      <parameter>
+        <name>Index</name>
+        <type>int</type>
+      </parameter>
+    </method>
+    <method>
+      <name DesignerName="RenameItem">_renameitem</name>
+      <comment>Rename a Title of an Item.</comment>
+      <returntype>boolean</returntype>
+      <parameter>
+        <name>oldTitle</name>
+        <type>String</type>
+      </parameter>
+      <parameter>
+        <name>newTitle</name>
+        <type>String</type>
+      </parameter>
+    </method>
+    <method>
+      <name DesignerName="SaveItem">_saveitem</name>
+      <comment>Passing in a list of the items stored in the menu.
+See the example Multi-Activity.</comment>
+      <returntype>anywheresoftware.b4a.objects.collections.List</returntype>
+    </method>
+    <method>
+      <name DesignerName="Size">_size</name>
+      <comment>Returns the number of item storeds in the list [read only].</comment>
+      <returntype>int</returntype>
+    </method>
+  </class>
+  <version>1.37</version>
+  <author>Giancarlo "Dominex" Fioretti</author>
+</root>

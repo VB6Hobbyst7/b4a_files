@@ -1,0 +1,28 @@
+help message : help
+show version num : version
+list PIDs of processes hosting a JDWP transport : jdwp
+
+copy file/dir to device : push <local> <remote>
+copy file/dir from device : pull <remote> [<local>]
+copy host->device only if changed : sync [ <directory> ]
+run remote shell command : shell <command>
+run emulator console command : emu <command>
+View device log : logcat [ <filter-spec> ]
+forward socket connections : forward <local> <remote>
+push a package to the device and install it : install [-l] [-r] [-s] <file>
+remove a package from the device : uninstall [-k] <package>
+return bug report : bugreport
+block until device is online : wait-for-device
+ensure that there is a server running : start-server
+kill the server if it is running : kill-server
+prints offline | bootloader | device : get-state
+prints <serial-number> : get-serialno
+remounts the /system partition on the device read-write : remount
+reboots the device : reboot [bootloader|recovery]
+reboots the device into the bootloader : reboot-bootloader
+restarts the adbd daemon with root permissions : root
+restarts the adbd daemon listening on USB : usb
+restarts the adbd daemon listening on TCP port : tcpip <port>
+Run PPP over USB. : ppp <tty> [parameters]
+
+

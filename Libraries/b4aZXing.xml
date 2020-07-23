@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root>
+    <doclet-version-NOT-library-version>1.02</doclet-version-NOT-library-version>
+    <class>
+        <name>ice.zxing.b4aZXingLib</name>
+        <shortname>Zxing_B4A</shortname>
+        <owner>activity</owner>
+        <event>result(atype as String,Values as String)</event>
+        <permission>android.permission.CAMERA</permission>
+        <permission>android.permission.WRITE_EXTERNAL_STORAGE</permission>
+        <permission>android.hardware.camera</permission>
+        <permission>android.hardware.camera.autofocus</permission>
+        <permission>android.permission.VIBRATE</permission>
+        <permission>android.permission.FLASHLIGHT</permission>
+        <method>
+            <name>BeginScan</name>
+            <comment>please handle the event
+ add this to manifest:&amp;lt;activity android:name="ice.zxing.CaptureActivity"
+			android:screenOrientation="landscape" android:configChanges="orientation|keyboardHidden"
+			android:theme="@android:style/Theme.NoTitleBar.Fullscreen"
+			android:windowSoftInputMode="stateAlwaysHidden"&amp;gt;&amp;lt;/activity&amp;gt;</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>ba</name>
+                <type>anywheresoftware.b4a.BA</type>
+            </parameter>
+            <parameter>
+                <name>EventName</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+    </class>
+    <version>1.2</version>
+    <author>IceFairy333</author>
+</root>

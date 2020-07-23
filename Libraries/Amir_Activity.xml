@@ -1,0 +1,652 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root>
+    <doclet-version-NOT-library-version>1.07</doclet-version-NOT-library-version>
+    <class>
+        <name>com.aghajari.activity.Amir_ActivityLuncher</name>
+        <shortname>Amir_ActivityLuncher</shortname>
+        <comment>Amir Hossein Aghajari
+ &lt;i&gt;&lt;b&gt;hi.&lt;/b&gt; Tnx For Select &lt;u&gt;Amir_Activity&lt;/u&gt; Library.&lt;/i&gt;
+ Amir_Activity Version 1.00</comment>
+        <owner>activity</owner>
+        <method>
+            <name>ActivityName</name>
+            <comment>Set Showing Activity Name .
+ Example : &lt;code&gt; Luncher.ActivityName("Amir $Position") &lt;/code&gt;
+ 
+ You Can Get ActivityName From Intent :
+ &lt;code&gt; Log(Intent.GetExtra("actname")) &lt;/code&gt;</comment>
+            <returntype>com.aghajari.activity.Amir_ActivityLuncher</returntype>
+            <parameter>
+                <name>ActName</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+        <method>
+            <name>Initializer</name>
+            <comment></comment>
+            <returntype>com.aghajari.activity.Amir_ActivityLuncher.Initializer</returntype>
+            <parameter>
+                <name>ClassName</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+        <method>
+            <name>IncludeTitle</name>
+            <comment></comment>
+            <returntype>com.aghajari.activity.Amir_ActivityLuncher</returntype>
+            <parameter>
+                <name>IncludeTitle</name>
+                <type>boolean</type>
+            </parameter>
+        </method>
+        <method>
+            <name>SetExitAnimation</name>
+            <comment>Set Animation From Resource anim</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>InAnimation</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>OutAnimation</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+        <method>
+            <name>SetStartAnimation</name>
+            <comment>Set Animation From Resource anim</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>ba</name>
+                <type>anywheresoftware.b4a.BA</type>
+            </parameter>
+            <parameter>
+                <name>InAnimation</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>OutAnimation</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+        <method>
+            <name>AddFlags</name>
+            <comment></comment>
+            <returntype>com.aghajari.activity.Amir_ActivityLuncher</returntype>
+            <parameter>
+                <name>flags</name>
+                <type>int</type>
+            </parameter>
+        </method>
+        <method>
+            <name>FullScreen</name>
+            <comment></comment>
+            <returntype>com.aghajari.activity.Amir_ActivityLuncher</returntype>
+            <parameter>
+                <name>FullScreen</name>
+                <type>boolean</type>
+            </parameter>
+        </method>
+        <method>
+            <name>SetTheme</name>
+            <comment>Set Activity Theme</comment>
+            <returntype>com.aghajari.activity.Amir_ActivityLuncher</returntype>
+            <parameter>
+                <name>Name</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+        <method>
+            <name>StartActivity</name>
+            <comment>Start Activity</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>ba</name>
+                <type>anywheresoftware.b4a.BA</type>
+            </parameter>
+        </method>
+        <method>
+            <name>SetTAG</name>
+            <comment>Set a Object Tag for send to Target Activity
+ You Can get or set tag from Amir_ActivityManager And
+ Intent_Updated , Manager_Created Events</comment>
+            <returntype>com.aghajari.activity.Amir_ActivityLuncher</returntype>
+            <parameter>
+                <name>TAG</name>
+                <type>java.lang.Object</type>
+            </parameter>
+        </method>
+        <property>
+            <name>Intent</name>
+            <returntype>anywheresoftware.b4a.objects.IntentWrapper</returntype>
+            <comment>Get Activity Intent</comment>
+        </property>
+        <field>
+            <name>FLAG_ACTIVITY_BROUGHT_TO_FRONT</name>
+            <comment>This flag is not normally set by application code, but set for you by the system as 
+ described in the launchMode documentation for the singleTask mode.</comment>
+            <returntype>int</returntype>
+        </field>
+        <field>
+            <name>FLAG_ACTIVITY_NEW_TASK</name>
+            <comment>If set, this activity will become the start of a new task on this history stack. 
+ A task (from the activity that started it to the next task activity) defines an 
+ atomic group of activities that the user can move to. Tasks can be moved to the 
+ foreground and background; all of the activities inside of a particular task always
+ remain in the same order. See Tasks and Back Stack for more information about tasks.
+
+ This flag is generally used by activities that want to present a "launcher" style
+ behavior: they give the user a list of separate things that can be done, which 
+ otherwise run completely independently of the activity launching them.
+ 
+ When using this flag, if a task is already running for the activity you are 
+ now starting, then a new activity will not be started; instead, the current task 
+ will simply be brought to the front of the screen with the state it was last in. 
+ See FLAG_ACTIVITY_MULTIPLE_TASK for a flag to disable this behavior.
+ 
+ This flag can not be used when the caller is requesting a result from the activity 
+ being launched.</comment>
+            <returntype>int</returntype>
+        </field>
+        <field>
+            <name>FLAG_ACTIVITY_TASK_ON_HOME</name>
+            <comment>his flag will cause a newly launching task to be placed on top of the current 
+ home activity task (if there is one). That is, pressing back from the task will 
+ always return the user to home even if that was not the last activity they saw. 
+ This can only be used in conjunction with FLAG_ACTIVITY_NEW_TASK.</comment>
+            <returntype>int</returntype>
+        </field>
+        <field>
+            <name>FLAG_ACTIVITY_LAUNCH_ADJACENT</name>
+            <comment>This flag is only used in split-screen multi-window mode. The new activity will be 
+ displayed adjacent to the one launching it. This can only be used in conjunction with 
+ FLAG_ACTIVITY_NEW_TASK. Also, setting FLAG_ACTIVITY_MULTIPLE_TASK is required if you 
+ want a new instance of an existing activity to be created.</comment>
+            <returntype>int</returntype>
+        </field>
+        <field>
+            <name>FLAG_ACTIVITY_CLEAR_WHEN_TASK_RESET</name>
+            <comment>&lt;b&gt;This constant was deprecated in API level 21.&lt;/b&gt;
+ As of API 21 this performs identically to FLAG_ACTIVITY_NEW_DOCUMENT 
+ which should be used instead of this.</comment>
+            <returntype>int</returntype>
+        </field>
+        <field>
+            <name>FLAG_ACTIVITY_MULTIPLE_TASK</name>
+            <comment>This flag is used to create a new task and launch an activity into it. 
+ This flag is always paired with either FLAG_ACTIVITY_NEW_DOCUMENT or 
+ FLAG_ACTIVITY_NEW_TASK. In both cases these flags alone would search through 
+ existing tasks for ones matching this Intent. Only if no such task is found 
+ would a new task be created. When paired with FLAG_ACTIVITY_MULTIPLE_TASK both 
+ of these behaviors are modified to skip the search for a matching task and 
+ unconditionally start a new task. When used with FLAG_ACTIVITY_NEW_TASK do not 
+ use this flag unless you are implementing your own top-level application launcher.
+ Used in conjunction with FLAG_ACTIVITY_NEW_TASK to disable the behavior of 
+ bringing an existing task to the foreground. When set, a new task is always started 
+ to host the Activity for the Intent, regardless of whether there is already an 
+ existing task running the same thing.
+ 
+ Because the default system does not include graphical task management, you should not 
+ use this flag unless you provide some way for a user to return back to the tasks you 
+ have launched. See FLAG_ACTIVITY_NEW_DOCUMENT for details of this flag's use for 
+ creating new document tasks.
+ 
+ This flag is ignored if one of FLAG_ACTIVITY_NEW_TASK or 
+ FLAG_ACTIVITY_NEW_DOCUMENT is not also set.</comment>
+            <returntype>int</returntype>
+        </field>
+        <field>
+            <name>FLAG_ACTIVITY_PREVIOUS_IS_TOP</name>
+            <comment>If set and this intent is being used to launch a new activity from an existing one,
+ the current activity will not be counted as the top activity for deciding whether 
+ the new intent should be delivered to the top instead of starting a new one. The 
+ previous activity will be used as the top, with the assumption being that the current 
+ activity will finish itself immediately.</comment>
+            <returntype>int</returntype>
+        </field>
+        <field>
+            <name>FLAG_ACTIVITY_MATCH_EXTERNAL</name>
+            <comment>If set in an Intent passed to Context.startActivity(), this flag will attempt to launch 
+ an instant app if no full app on the device can already handle the intent.</comment>
+            <returntype>int</returntype>
+        </field>
+        <field>
+            <name>FLAG_ACTIVITY_NO_ANIMATION</name>
+            <comment>If set in an Intent passed to Context.startActivity(), this flag will prevent 
+ the system from applying an activity transition animation to go to the next 
+ activity state. This doesn't mean an animation will never run -- if another 
+ activity change happens that doesn't specify this flag before the activity started 
+ here is displayed, then that transition will be used. This flag can be put to good 
+ use when you are going to do a series of activity operations but the animation seen 
+ by the user shouldn't be driven by the first activity change but rather a later one.</comment>
+            <returntype>int</returntype>
+        </field>
+        <field>
+            <name>FLAG_ACTIVITY_NEW_DOCUMENT</name>
+            <comment>This flag is used to open a document into a new task rooted at the activity launched 
+ by this Intent. Through the use of this flag, or its equivalent attribute, 
+ R.attr.documentLaunchMode multiple instances of the same activity containing different 
+ documents will appear in the recent tasks list.
+ 
+ The use of the activity attribute form of this, R.attr.documentLaunchMode, is preferred 
+ over the Intent flag described here. The attribute form allows the Activity to specify 
+ multiple document behavior for all launchers of the Activity whereas using this flag 
+ requires each Intent that launches the Activity to specify it.
+ 
+ Note that the default semantics of this flag w.r.t. whether the recents entry for it is 
+ kept after the activity is finished is different than the use of FLAG_ACTIVITY_NEW_TASK 
+ and R.attr.documentLaunchMode -- if this flag is being used to create a new recents entry, 
+ then by default that entry will be removed once the activity is finished. You can modify 
+ this behavior with FLAG_ACTIVITY_RETAIN_IN_RECENTS.
+ 
+ FLAG_ACTIVITY_NEW_DOCUMENT may be used in conjunction with FLAG_ACTIVITY_MULTIPLE_TASK. 
+ When used alone it is the equivalent of the Activity manifest specifying 
+ R.attr.documentLaunchMode="intoExisting". When used with FLAG_ACTIVITY_MULTIPLE_TASK it 
+ is the equivalent of the Activity manifest specifying R.attr.documentLaunchMode="always". 
+ Refer to R.attr.documentLaunchMode for more information.</comment>
+            <returntype>int</returntype>
+        </field>
+        <field>
+            <name>FLAG_ACTIVITY_RETAIN_IN_RECENTS</name>
+            <comment>By default a document created by FLAG_ACTIVITY_NEW_DOCUMENT will have its entry 
+ in recent tasks removed when the user closes it (with back or however else it 
+ may finish()). If you would like to instead allow the document to be kept in recents
+ so that it can be re-launched, you can use this flag. When set and the task's 
+ activity is finished, the recents entry will remain in the interface for the user 
+ to re-launch it, like a recents entry for a top-level application.</comment>
+            <returntype>int</returntype>
+        </field>
+        <field>
+            <name>FLAG_ACTIVITY_EXCLUDE_FROM_RECENTS</name>
+            <comment>If set, the new activity is not kept in the list of recently launched activities.</comment>
+            <returntype>int</returntype>
+        </field>
+        <field>
+            <name>FLAG_ACTIVITY_LAUNCHED_FROM_HISTORY</name>
+            <comment>This flag is not normally set by application code, but set for you by the system if 
+ this activity is being launched from history (longpress home key).</comment>
+            <returntype>int</returntype>
+        </field>
+        <field>
+            <name>FLAG_ACTIVITY_CLEAR_TASK</name>
+            <comment>If set in an Intent passed to Context.startActivity(), this flag will cause any 
+ existing task that would be associated with the activity to be cleared before the 
+ activity is started. That is, the activity becomes the new root of an otherwise 
+ empty task, and any old activities are finished. This can only be used in conjunction 
+ with FLAG_ACTIVITY_NEW_TASK.</comment>
+            <returntype>int</returntype>
+        </field>
+        <field>
+            <name>FLAG_ACTIVITY_SINGLE_TOP</name>
+            <comment>If set, the activity will not be launched if it is already running 
+ at the top of the history stack.</comment>
+            <returntype>int</returntype>
+        </field>
+        <field>
+            <name>FLAG_ACTIVITY_NO_HISTORY</name>
+            <comment>If set, the new activity is not kept in the history stack. As soon as the 
+ user navigates away from it, the activity is finished. This may also be set 
+ with the noHistory attribute.
+ 
+ If set, onActivityResult() is never invoked when the current activity starts 
+ a new activity which sets a result and finishes.</comment>
+            <returntype>int</returntype>
+        </field>
+        <field>
+            <name>FLAG_ACTIVITY_CLEAR_TOP</name>
+            <comment>If set, and the activity being launched is already running in the current task, 
+ then instead of launching a new instance of that activity, all of the other activities 
+ on top of it will be closed and this Intent will be delivered to the (now on top) old 
+ activity as a new Intent.</comment>
+            <returntype>int</returntype>
+        </field>
+        <field>
+            <name>FLAG_ACTIVITY_REORDER_TO_FRONT</name>
+            <comment>If set in an Intent passed to Context.startActivity(), this flag will cause the 
+ launched activity to be brought to the front of its task's history stack if it 
+ is already running.</comment>
+            <returntype>int</returntype>
+        </field>
+        <field>
+            <name>FLAG_ACTIVITY_FORWARD_RESULT</name>
+            <comment>If set and this intent is being used to launch a new activity from an existing one, 
+ then the reply target of the existing activity will be transfered to the new activity. 
+ This way the new activity can call Activity.setResult(int) and have that result sent 
+ back to the reply target of the original activity.</comment>
+            <returntype>int</returntype>
+        </field>
+        <field>
+            <name>FLAG_ACTIVITY_NO_USER_ACTION</name>
+            <comment>If set, this flag will prevent the normal Activity.onUserLeaveHint() callback 
+ from occurring on the current frontmost activity before it is paused as the 
+ newly-started activity is brought to the front.
+
+ Typically, an activity can rely on that callback to indicate that an explicit 
+ user action has caused their activity to be moved out of the foreground. The 
+ callback marks an appropriate point in the activity's lifecycle for it to dismiss 
+ any notifications that it intends to display "until the user has seen them," such 
+ as a blinking LED.
+ 
+ If an activity is ever started via any non-user-driven events such as phone-call 
+ receipt or an alarm handler, this flag should be passed to Context.startActivity, 
+ ensuring that the pausing activity does not think the user has acknowledged its 
+ notification.</comment>
+            <returntype>int</returntype>
+        </field>
+        <field>
+            <name>FLAG_ACTIVITY_RESET_TASK_IF_NEEDED</name>
+            <comment>If set, and this activity is either being started in a new task or bringing to 
+ the top an existing task, then it will be launched as the front door of the task. 
+ This will result in the application of any affinities needed to have that task in 
+ the proper state (either moving activities to or from it), or simply resetting 
+ that task to its initial state if needed.</comment>
+            <returntype>int</returntype>
+        </field>
+    </class>
+    <class>
+        <name>com.aghajari.activity.Amir_ActivityLuncher.Initializer</name>
+        <owner>process</owner>
+        <method>
+            <name>ACActivity</name>
+            <comment>AppCompatActivity
+ &lt;b&gt; Manifest Code : &lt;/b&gt;
+&lt;code&gt;	AddApplicationText(&lt;activity 
+	android:name="com.aghajari.activity.AppCompatActivity"
+	android:theme="Theme.AppCompat"&gt;
+	&lt;/activity&gt;)&lt;/code&gt;</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>ba</name>
+                <type>anywheresoftware.b4a.BA</type>
+            </parameter>
+        </method>
+        <method>
+            <name>Activity</name>
+            <comment>&lt;b&gt; Manifest Code : &lt;/b&gt;
+&lt;code&gt; 	AddApplicationText(&lt;activity 
+	android:name="com.aghajari.activity.Activity"&gt;
+	&lt;/activity&gt;)&lt;/code&gt;</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>ba</name>
+                <type>anywheresoftware.b4a.BA</type>
+            </parameter>
+        </method>
+    </class>
+    <class>
+        <name>com.aghajari.activity.Amir_ActivityManager</name>
+        <shortname>Amir_ActivityManager</shortname>
+        <comment>Amir Hossein Aghajari
+ &lt;i&gt;&lt;b&gt;hi.&lt;/b&gt; Tnx For Select &lt;u&gt;Amir_Activity&lt;/u&gt; Library.&lt;/i&gt;
+ Amir_Activity Version 1.00</comment>
+        <owner>activity</owner>
+        <event>Manager_Created (mManager As Amir_ActivityManager,Tag As Object)</event>
+        <event>Intent_Updated (Intent As Intent,Tag As Object,FirstTime As Boolean)</event>
+        <method>
+            <name>FinishAfterTransition</name>
+            <comment>finish After Transition Activity</comment>
+            <returntype>void</returntype>
+        </method>
+        <method>
+            <name>Recreate</name>
+            <comment>recreate activity</comment>
+            <returntype>void</returntype>
+        </method>
+        <method>
+            <name>Initialize2</name>
+            <comment>Initialize New Manager With ActivityName.</comment>
+            <returntype>boolean</returntype>
+            <parameter>
+                <name>ActivityName</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+        <method>
+            <name>AddMenuItem</name>
+            <comment>add menu item
+ Event : &lt;code&gt; EventName_Click (item as Object) &lt;/code&gt;</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>title</name>
+                <type>java.lang.CharSequence</type>
+            </parameter>
+            <parameter>
+                <name>drawable</name>
+                <type>android.graphics.drawable.Drawable</type>
+            </parameter>
+            <parameter>
+                <name>eventName</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>addToBar</name>
+                <type>boolean</type>
+            </parameter>
+        </method>
+        <method>
+            <name>ReleaseInstance</name>
+            <comment>Release Activity Instance</comment>
+            <returntype>boolean</returntype>
+        </method>
+        <method>
+            <name>FinishAndRemoveTask</name>
+            <comment>finish And RemoveTask Activity</comment>
+            <returntype>void</returntype>
+        </method>
+        <method>
+            <name>Initialize</name>
+            <comment>Initialize New Manager.
+ You Should Initialize this from target activity</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>ba</name>
+                <type>anywheresoftware.b4a.BA</type>
+            </parameter>
+        </method>
+        <method>
+            <name>Release</name>
+            <comment>remove processBA , activityBA from TargetActivity</comment>
+            <returntype>void</returntype>
+        </method>
+        <method>
+            <name>Reinitialize</name>
+            <comment>Reinitialize Activity.
+ Note that you donʻt need to Reinitialize in Intent_Updated event.</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>ba</name>
+                <type>anywheresoftware.b4a.BA</type>
+            </parameter>
+            <parameter>
+                <name>Recreate</name>
+                <type>boolean</type>
+            </parameter>
+        </method>
+        <method>
+            <name>About</name>
+            <comment>&lt;b&gt; Amir Hossein Aghajari &lt;/b&gt;
+Telegram Id : &lt;code&gt; @KingAmir272 &lt;/code&gt;
+Instagram : &lt;code&gt; amirhossein_aghajari_official &lt;/code&gt;</comment>
+            <returntype>java.lang.String</returntype>
+        </method>
+        <property>
+            <name>ActivityBA</name>
+            <returntype>anywheresoftware.b4a.BA</returntype>
+            <comment>get Activity BA</comment>
+        </property>
+        <property>
+            <name>IsFinishing</name>
+            <returntype>boolean</returntype>
+            <comment>is Finishing Activity</comment>
+        </property>
+        <property>
+            <name>ActivityName</name>
+            <returntype>java.lang.String</returntype>
+            <comment>get showing activity name</comment>
+        </property>
+        <property>
+            <name>ActivityClass</name>
+            <returntype>java.lang.Class</returntype>
+            <comment></comment>
+        </property>
+        <property>
+            <name>AppCompatActivity</name>
+            <returntype>com.aghajari.activity.AppCompatActivity</returntype>
+            <comment>get android.support.v7.app.AppCompatActivity</comment>
+        </property>
+        <property>
+            <name>Activity</name>
+            <returntype>com.aghajari.activity.Activity</returntype>
+            <comment>get android.app.Activity</comment>
+        </property>
+        <property>
+            <name>Intent</name>
+            <returntype>anywheresoftware.b4a.objects.IntentWrapper</returntype>
+            <comment>get activity starting intent</comment>
+        </property>
+        <property>
+            <name>BALayout</name>
+            <returntype>anywheresoftware.b4a.BALayout</returntype>
+            <comment>get BALayout , activity content view</comment>
+        </property>
+        <property>
+            <name>IsIncludedTitle</name>
+            <returntype>boolean</returntype>
+            <comment></comment>
+        </property>
+        <property>
+            <name>IsFullScreen</name>
+            <returntype>boolean</returntype>
+            <comment></comment>
+        </property>
+        <property>
+            <name>IsAppCompatActivity</name>
+            <returntype>boolean</returntype>
+            <comment></comment>
+        </property>
+        <property>
+            <name>BALayoutAsPanel</name>
+            <returntype>anywheresoftware.b4a.objects.PanelWrapper</returntype>
+            <comment>get BALayout As Panel, activity content view</comment>
+        </property>
+        <property>
+            <name>ClassName</name>
+            <returntype>java.lang.String</returntype>
+            <comment>get target activity name</comment>
+        </property>
+        <property>
+            <name>B4AActivity</name>
+            <returntype>anywheresoftware.b4a.objects.ActivityWrapper</returntype>
+            <comment>get activity wrapper</comment>
+        </property>
+        <property>
+            <name>BAActivityClass</name>
+            <returntype>java.lang.Object</returntype>
+            <comment></comment>
+        </property>
+        <property>
+            <name>Tag</name>
+            <returntype>java.lang.Object</returntype>
+            <parameter>
+                <name>Tag</name>
+                <type>java.lang.Object</type>
+            </parameter>
+            <comment>get or set activity tag</comment>
+        </property>
+        <property>
+            <name>IsDestroyed</name>
+            <returntype>boolean</returntype>
+            <comment>is Destroyed Activity</comment>
+        </property>
+        <property>
+            <name>ProcessBA</name>
+            <returntype>anywheresoftware.b4a.BA</returntype>
+            <comment>get process BA</comment>
+        </property>
+        <property>
+            <name>BA</name>
+            <returntype>anywheresoftware.b4a.BA</returntype>
+            <comment>get BA , Useing on target activity</comment>
+        </property>
+    </class>
+    <class b4a_type="StaticCode">
+        <name>com.aghajari.activity.StartActivity2</name>
+        <shortname>StartActivity2</shortname>
+        <comment>Start Activity In New Task..
+ For more features, use &lt;b&gt;Amir_ActivityLuncher&lt;/b&gt;
+ 
+ &lt;b&gt;&lt;i&gt;Amir Hossein Aghajari&lt;/i&gt;&lt;/b&gt;</comment>
+        <owner>process</owner>
+        <method>
+            <name>ACActivity</name>
+            <comment>Start AppCompatActivity In New Task..
+ &lt;b&gt;ActivityName :&lt;/b&gt; Target Activity
+ &lt;b&gt;ThemeName :&lt;/b&gt; name of the style theme . It reads style from the
+  resource. or null for default theme
+ &lt;b&gt;TAG :&lt;/b&gt; a Object Tag for send to target Activity. You can get and 
+  set tag in Amir_ActivityManager And Intent_Updated , Manager_Created Events. 
+  
+ &lt;b&gt; Example : &lt;/b&gt;
+ &lt;code&gt;StartActivity2.ACActivity("ActivityName","Theme.AppCompat",Null)&lt;/code&gt;
+ _____________________________________________________________________________
+  &lt;i&gt; Donʻt forgot to add AppCompatActivity in manifest : &lt;/i&gt;
+&lt;code&gt;	AddApplicationText(&lt;activity 
+	android:name="com.aghajari.activity.AppCompatActivity"&gt;
+	&lt;/activity&gt;)&lt;/code&gt;
+ _____________________________________________________________________________
+ For more features, use &lt;b&gt;Amir_ActivityLuncher&lt;/b&gt;
+ &lt;i&gt;Amir Hossein Aghajari&lt;/i&gt;</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>ba</name>
+                <type>anywheresoftware.b4a.BA</type>
+            </parameter>
+            <parameter>
+                <name>ActivityName</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>ThemeName</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>TAG</name>
+                <type>java.lang.Object</type>
+            </parameter>
+        </method>
+        <method>
+            <name>Activity</name>
+            <comment>Start Activity In New Task..
+ &lt;b&gt;ActivityName :&lt;/b&gt; Target Activity
+ &lt;b&gt;TAG :&lt;/b&gt; a Object Tag for send to target Activity.
+  You can get and set tag in Amir_ActivityManager And 
+  Intent_Updated , Manager_Created Events. 
+  
+ &lt;b&gt; Example : &lt;/b&gt;
+ &lt;code&gt;StartActivity2.Activity("ActivityName",Null)&lt;/code&gt;
+ __________________________________________________
+  &lt;i&gt; Donʻt forgot to add Activity in manifest : &lt;/i&gt;
+&lt;code&gt; 	AddApplicationText(&lt;activity 
+	android:name="com.aghajari.activity.Activity"&gt;
+	&lt;/activity&gt;)&lt;/code&gt;
+ __________________________________________________
+ For more features, use &lt;b&gt;Amir_ActivityLuncher&lt;/b&gt;
+ &lt;i&gt;Amir Hossein Aghajari&lt;/i&gt;</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>ba</name>
+                <type>anywheresoftware.b4a.BA</type>
+            </parameter>
+            <parameter>
+                <name>ActivityName</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>TAG</name>
+                <type>java.lang.Object</type>
+            </parameter>
+        </method>
+    </class>
+    <version>1.0</version>
+    <author>AmirHosseinAghajari</author>
+</root>

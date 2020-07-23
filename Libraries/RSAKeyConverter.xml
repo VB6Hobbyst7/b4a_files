@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <doclet-version-NOT-library-version>1.00</doclet-version-NOT-library-version>
+  <dependsOn>stringutils</dependsOn>
+  <dependsOn>byteconverter</dependsOn>
+  <class>
+    <name>b4a.example.rsakeyconverter</name>
+    <shortname>RSAKeyConverter</shortname>
+    <owner>process</owner>
+    <method>
+      <name>IsInitialized</name>
+      <comment>Tests whether the object has been initialized.</comment>
+      <returntype>boolean</returntype>
+    </method>
+    <method>
+      <name DesignerName="B4x2OpenSSL">_b4x2openssl</name>
+      <returntype>String</returntype>
+      <parameter>
+        <name>B4xRSAKey</name>
+        <type>byte[]</type>
+      </parameter>
+    </method>
+    <method>
+      <name DesignerName="Class_Globals">_class_globals</name>
+      <comment>Class module
+</comment>
+      <returntype>String</returntype>
+    </method>
+    <method>
+      <name DesignerName="Initialize">_initialize</name>
+      <comment>Initializes the object. You can add parameters to this method if needed.
+</comment>
+      <returntype>String</returntype>
+      <parameter>
+        <name>ba</name>
+        <type>anywheresoftware.b4a.BA</type>
+      </parameter>
+    </method>
+    <method>
+      <name DesignerName="OpenSSL2B4x">_openssl2b4x</name>
+      <returntype>byte[]</returntype>
+      <parameter>
+        <name>OpenSSLRSAPubKey</name>
+        <type>String</type>
+      </parameter>
+    </method>
+  </class>
+  <version>1</version>
+  <author>Klaus Matlé</author>
+</root>

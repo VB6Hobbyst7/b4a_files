@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <doclet-version-NOT-library-version>1.00</doclet-version-NOT-library-version>
+  <dependsOn>irlsdk</dependsOn>
+  <dependsOn>javaobject</dependsOn>
+  <dependsOn>byteconverter</dependsOn>
+  <dependsOn>bitmapextended</dependsOn>
+  <dependsOn>reflection</dependsOn>
+  <dependsOn>phone</dependsOn>
+  <class>
+    <name>ir.amin.irwebp</name>
+    <shortname>irWebp</shortname>
+    <owner>process</owner>
+    <permission>android.permission.BIND_WALLPAPER</permission>
+    <permission>android.permission.SET_WALLPAPER</permission>
+    <permission>android.permission.WRITE_EXTERNAL_STORAGE</permission>
+    <method>
+      <name>IsInitialized</name>
+      <comment>Tests whether the object has been initialized.</comment>
+      <returntype>boolean</returntype>
+    </method>
+    <method>
+      <name DesignerName="bitmapToWebp">_bitmaptowebp</name>
+      <returntype>String</returntype>
+      <parameter>
+        <name>bmp</name>
+        <type>android.graphics.Bitmap</type>
+      </parameter>
+      <parameter>
+        <name>wpPath</name>
+        <type>String</type>
+      </parameter>
+      <parameter>
+        <name>wpname</name>
+        <type>String</type>
+      </parameter>
+      <parameter>
+        <name>quality</name>
+        <type>float</type>
+      </parameter>
+    </method>
+    <method>
+      <name DesignerName="webpToBitmap">_webptobitmap</name>
+      <returntype>anywheresoftware.b4a.objects.drawable.CanvasWrapper.BitmapWrapper</returntype>
+      <parameter>
+        <name>inp</name>
+        <type>anywheresoftware.b4a.objects.streams.File.InputStreamWrapper</type>
+      </parameter>
+    </method>
+  </class>
+  <version>1</version>
+</root>

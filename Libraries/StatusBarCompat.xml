@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root>
+    <doclet-version-NOT-library-version>1.04</doclet-version-NOT-library-version>
+    <class>
+        <name>wrap.Wrap</name>
+        <shortname>StatusBarCompat</shortname>
+        <owner>activity</owner>
+        <method>
+            <name>TranslucentStatusBar</name>
+            <comment></comment>
+            <returntype>void</returntype>
+        </method>
+        <method>
+            <name>Initialize</name>
+            <comment>Min SDK : 19 (Android 4.4 KitKat)
+
+	Wrapped By Sadeq Nameni (Hitexroid)</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>ba</name>
+                <type>anywheresoftware.b4a.BA</type>
+            </parameter>
+        </method>
+        <property>
+            <name>StatusBarColor</name>
+            <parameter>
+                <name>statusColor</name>
+                <type>int</type>
+            </parameter>
+            <comment>Dim Status As StatusBarCompat
+	Status.Initialize
+	Status.StatusBarColor = Colors.Red</comment>
+        </property>
+    </class>
+    <version>1.0</version>
+    <author>Sadeq_Nameni</author>
+    <dependsOn>android-support-v4</dependsOn>
+</root>

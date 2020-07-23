@@ -1,0 +1,258 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <doclet-version-NOT-library-version>1.00</doclet-version-NOT-library-version>
+  <dependsOn>gestures</dependsOn>
+  <dependsOn>reflection</dependsOn>
+  <class>
+    <name>dominex.example.pinchzoomandmove._touchdata</name>
+    <shortname>TouchData</shortname>
+    <owner>process</owner>
+    <method>
+      <name>Initialize</name>
+      <comment>Initializes the fields to their default value.</comment>
+      <returntype>void</returntype>
+    </method>
+    <field>
+      <name>IsInitialized</name>
+      <comment>Tests whether the object has been initialized.</comment>
+      <returntype>boolean</returntype>
+    </field>
+    <field>
+      <name>X</name>
+      <returntype>int</returntype>
+    </field>
+    <field>
+      <name>Y</name>
+      <returntype>int</returntype>
+    </field>
+    <field>
+      <name>Tag</name>
+      <returntype>Object</returntype>
+    </field>
+  </class>
+  <class>
+    <name>dominex.example.pinchzoomandmove._layoutdata</name>
+    <shortname>LayoutData</shortname>
+    <owner>process</owner>
+    <method>
+      <name>Initialize</name>
+      <comment>Initializes the fields to their default value.</comment>
+      <returntype>void</returntype>
+    </method>
+    <field>
+      <name>IsInitialized</name>
+      <comment>Tests whether the object has been initialized.</comment>
+      <returntype>boolean</returntype>
+    </field>
+    <field>
+      <name>Left</name>
+      <returntype>int</returntype>
+    </field>
+    <field>
+      <name>Top</name>
+      <returntype>int</returntype>
+    </field>
+    <field>
+      <name>Width</name>
+      <returntype>int</returntype>
+    </field>
+    <field>
+      <name>Height</name>
+      <returntype>int</returntype>
+    </field>
+    <field>
+      <name>Tag</name>
+      <returntype>Object</returntype>
+    </field>
+  </class>
+  <class>
+    <name>dominex.example.pinchzoomandmove</name>
+    <shortname>PinchZoomAndMove</shortname>
+    <owner>activity</owner>
+    <event>Click</event>
+    <event>LongClick</event>
+    <event>Change</event>
+    <method>
+      <name>IsInitialized</name>
+      <comment>Tests whether the object has been initialized.</comment>
+      <returntype>boolean</returntype>
+    </method>
+    <method>
+      <name DesignerName="getCanMove" HideFromIDE="true">_getcanmove</name>
+      <returntype>boolean</returntype>
+    </method>
+    <method>
+      <name DesignerName="getCanZoom" HideFromIDE="true">_getcanzoom</name>
+      <returntype>boolean</returntype>
+    </method>
+    <method>
+      <name DesignerName="getLimitArea" HideFromIDE="true">_getlimitarea</name>
+      <returntype>boolean</returntype>
+    </method>
+    <method>
+      <name DesignerName="getLimitBorder" HideFromIDE="true">_getlimitborder</name>
+      <returntype>boolean</returntype>
+    </method>
+    <method>
+      <name DesignerName="getZoom" HideFromIDE="true">_getzoom</name>
+      <comment>Gets or sets the Zoom in percentage (eg. 100 = 100%).</comment>
+      <returntype>float</returntype>
+    </method>
+    <method>
+      <name DesignerName="Initialize">_initialize</name>
+      <comment>Initialize the View.
+&lt;i&gt;Target&lt;/i&gt; - View on which to apply the PinchZoomAndMove.
+&lt;i&gt;NameEvent&lt;/i&gt; - name of the event.
+&lt;i&gt;ZoomMin&lt;/i&gt; - minimum Zoom (eg. 0.5 = 50%).
+&lt;i&gt;ZoomMax&lt;/i&gt; - maximum Zoom (eg. 3 = 300%).
+&lt;i&gt;Increase&lt;/i&gt; - factor of increase / decrease during the Pinch Zoom.
+&lt;i&gt;Tag&lt;/i&gt; - is the Tags View.
+&lt;i&gt;BringToFront&lt;/i&gt; - if True active the BringToFront.
+&lt;i&gt;Module&lt;/i&gt; - must be Me.</comment>
+      <returntype>String</returntype>
+      <parameter>
+        <name>ba</name>
+        <type>anywheresoftware.b4a.BA</type>
+      </parameter>
+      <parameter>
+        <name>Target</name>
+        <type>anywheresoftware.b4a.objects.ConcreteViewWrapper</type>
+      </parameter>
+      <parameter>
+        <name>NameEvent</name>
+        <type>String</type>
+      </parameter>
+      <parameter>
+        <name>Tag</name>
+        <type>Object</type>
+      </parameter>
+      <parameter>
+        <name>ZoomMin</name>
+        <type>float</type>
+      </parameter>
+      <parameter>
+        <name>ZoomMax</name>
+        <type>float</type>
+      </parameter>
+      <parameter>
+        <name>Increase</name>
+        <type>float</type>
+      </parameter>
+      <parameter>
+        <name>BringToFront</name>
+        <type>boolean</type>
+      </parameter>
+      <parameter>
+        <name>Module</name>
+        <type>Object</type>
+      </parameter>
+    </method>
+    <method>
+      <name DesignerName="setCanMove" HideFromIDE="true">_setcanmove</name>
+      <comment>Gets or sets whether the View may translare or not.
+True if the View can translate.</comment>
+      <returntype>String</returntype>
+      <parameter>
+        <name>Option</name>
+        <type>boolean</type>
+      </parameter>
+    </method>
+    <method>
+      <name DesignerName="setCanZoom" HideFromIDE="true">_setcanzoom</name>
+      <comment>Gets or sets whether the View may zoom or not.
+True if the View can Zoom.</comment>
+      <returntype>String</returntype>
+      <parameter>
+        <name>Option</name>
+        <type>boolean</type>
+      </parameter>
+    </method>
+    <method>
+      <name DesignerName="setLimitArea" HideFromIDE="true">_setlimitarea</name>
+      <comment>Gets or sets then value of LimitArea.
+If True, the edges of the View will remain within its Parent.
+If the View has dimensions inferior the Parent, will be automatically increased.
+The zoom 100% is equal to the new size of the View.</comment>
+      <returntype>String</returntype>
+      <parameter>
+        <name>Option</name>
+        <type>boolean</type>
+      </parameter>
+    </method>
+    <method>
+      <name DesignerName="setLimitBorder" HideFromIDE="true">_setlimitborder</name>
+      <comment>Gets or sets the LimitBorder.
+If it is true, the View will not come out from the edges of its parent.
+If the View Is larger than the Parent, will be automatically reduced.
+The 100% zoom Is equal To the new size of the View.</comment>
+      <returntype>String</returntype>
+      <parameter>
+        <name>Option</name>
+        <type>boolean</type>
+      </parameter>
+    </method>
+    <method>
+      <name DesignerName="setZoom" HideFromIDE="true">_setzoom</name>
+      <returntype>String</returntype>
+      <parameter>
+        <name>Zoom</name>
+        <type>float</type>
+      </parameter>
+    </method>
+    <property>
+      <name DesignerName="CanMove">_canmove</name>
+      <comment>Gets or sets whether the View may translare or not.
+True if the View can translate.</comment>
+      <returntype>boolean</returntype>
+      <parameter>
+        <name>Value</name>
+        <type>boolean</type>
+      </parameter>
+    </property>
+    <property>
+      <name DesignerName="CanZoom">_canzoom</name>
+      <comment>Gets or sets whether the View may zoom or not.
+True if the View can Zoom.</comment>
+      <returntype>boolean</returntype>
+      <parameter>
+        <name>Value</name>
+        <type>boolean</type>
+      </parameter>
+    </property>
+    <property>
+      <name DesignerName="LimitArea">_limitarea</name>
+      <comment>Gets or sets then value of LimitArea.
+If True, the edges of the View will remain within its Parent.
+If the View has dimensions inferior the Parent, will be automatically increased.
+The zoom 100% is equal to the new size of the View.</comment>
+      <returntype>boolean</returntype>
+      <parameter>
+        <name>Value</name>
+        <type>boolean</type>
+      </parameter>
+    </property>
+    <property>
+      <name DesignerName="LimitBorder">_limitborder</name>
+      <comment>Gets or sets the LimitBorder.
+If it is true, the View will not come out from the edges of its parent.
+If the View Is larger than the Parent, will be automatically reduced.
+The 100% zoom Is equal To the new size of the View.</comment>
+      <returntype>boolean</returntype>
+      <parameter>
+        <name>Value</name>
+        <type>boolean</type>
+      </parameter>
+    </property>
+    <property>
+      <name DesignerName="Zoom">_zoom</name>
+      <comment>Gets or sets the Zoom in percentage (eg. 100 = 100%).</comment>
+      <returntype>float</returntype>
+      <parameter>
+        <name>Value</name>
+        <type>float</type>
+      </parameter>
+    </property>
+  </class>
+  <version>1.45</version>
+  <author>Giancarlo "Dominex" Fioretti</author>
+</root>

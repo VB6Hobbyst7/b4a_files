@@ -1,0 +1,1348 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root>
+    <doclet-version-NOT-library-version>1.07</doclet-version-NOT-library-version>
+    <class>
+        <name>com.aghajari.fragmentsanim.Amir_AnimationBuilder</name>
+        <shortname>Amir_AnimationBuilder</shortname>
+        <objectwrapper>android.view.animation.Animation</objectwrapper>
+        <owner>process</owner>
+        <event>onAnimationStart</event>
+        <event>onAnimationRepeat</event>
+        <event>onAnimationEnd</event>
+        <method>
+            <name>RepeatCount</name>
+            <comment>Sets how many times the animation should be repeated. If the repeat
+ count is 0, the animation is never repeated. If the repeat count is
+ greater than 0 or INFINITE, the repeat mode will be taken
+ into account. The repeat count is 0 by default.</comment>
+            <returntype>com.aghajari.fragmentsanim.Amir_AnimationBuilder</returntype>
+            <parameter>
+                <name>RepeatCount</name>
+                <type>int</type>
+            </parameter>
+        </method>
+        <method>
+            <name>StartOffset</name>
+            <comment>When this animation should start relative to the start time. This is most
+ useful when composing complex animations using an AnimationSet 
+ where some of the animations components start at different times.</comment>
+            <returntype>com.aghajari.fragmentsanim.Amir_AnimationBuilder</returntype>
+            <parameter>
+                <name>StartOffset</name>
+                <type>long</type>
+            </parameter>
+        </method>
+        <method>
+            <name>FillBefore</name>
+            <comment>If fillBefore is true, this animation will apply its transformation
+ before the start time of the animation. Defaults to true if not set.
+ Note that this applies when using an {@link
+ android.view.animation.AnimationSet AnimationSet} to chain
+ animations. The transformation is not applied before the AnimationSet
+ itself starts.</comment>
+            <returntype>com.aghajari.fragmentsanim.Amir_AnimationBuilder</returntype>
+            <parameter>
+                <name>FillBefore</name>
+                <type>boolean</type>
+            </parameter>
+        </method>
+        <method>
+            <name>StartTime</name>
+            <comment>When this animation should start. When the start time is set to
+  START_ON_FIRST_FRAME
+startTimeMillis: the start time in milliseconds</comment>
+            <returntype>com.aghajari.fragmentsanim.Amir_AnimationBuilder</returntype>
+            <parameter>
+                <name>startTimeMillis</name>
+                <type>long</type>
+            </parameter>
+        </method>
+        <method>
+            <name>DetachWallpape</name>
+            <comment>If detachWallpaper is true, and this is a window animation of a window
+ that has a wallpaper background, then the window will be detached from
+ the wallpaper while it runs.  That is, the animation will only be applied
+ to the window, and the wallpaper behind it will remain static.</comment>
+            <returntype>com.aghajari.fragmentsanim.Amir_AnimationBuilder</returntype>
+            <parameter>
+                <name>DetachWallpape</name>
+                <type>boolean</type>
+            </parameter>
+        </method>
+        <method>
+            <name>Duration</name>
+            <comment>How long this animation should last. The duration cannot be negative.</comment>
+            <returntype>com.aghajari.fragmentsanim.Amir_AnimationBuilder</returntype>
+            <parameter>
+                <name>durationMillis</name>
+                <type>long</type>
+            </parameter>
+        </method>
+        <method>
+            <name>RestrictDuration</name>
+            <comment>Ensure that the duration that this animation will run is not longer
+ than &lt;var&gt;durationMillis&lt;/var&gt;.  In addition to adjusting the duration
+ itself, this ensures that the repeat count also will not make it run
+ longer than the given time.</comment>
+            <returntype>com.aghajari.fragmentsanim.Amir_AnimationBuilder</returntype>
+            <parameter>
+                <name>durationMillis</name>
+                <type>long</type>
+            </parameter>
+        </method>
+        <method>
+            <name>IsInitialized</name>
+            <comment></comment>
+            <returntype>boolean</returntype>
+        </method>
+        <method>
+            <name>SetListener</name>
+            <comment></comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>ba</name>
+                <type>anywheresoftware.b4a.BA</type>
+            </parameter>
+            <parameter>
+                <name>EventName</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+        <method>
+            <name>FillEnabled</name>
+            <comment>If fillEnabled is true, the animation will apply the value of fillBefore and
+ fillAfter. Otherwise, fillBefore and fillAfter are ignored and the animation
+ transformation is always applied.</comment>
+            <returntype>com.aghajari.fragmentsanim.Amir_AnimationBuilder</returntype>
+            <parameter>
+                <name>FillEnabled</name>
+                <type>boolean</type>
+            </parameter>
+        </method>
+        <method>
+            <name>RepeatMode</name>
+            <comment>Defines what this animation should do when it reaches the end. This
+ setting is applied only when the repeat count is either greater than
+ 0 or INFINITE. Defaults to RESTART.</comment>
+            <returntype>com.aghajari.fragmentsanim.Amir_AnimationBuilder</returntype>
+            <parameter>
+                <name>RepeatMode</name>
+                <type>int</type>
+            </parameter>
+        </method>
+        <method>
+            <name>Initializer</name>
+            <comment></comment>
+            <returntype>com.aghajari.fragmentsanim.Amir_AnimationBuilder.AnimationTypes</returntype>
+            <parameter>
+                <name>ba</name>
+                <type>anywheresoftware.b4a.BA</type>
+            </parameter>
+            <parameter>
+                <name>EventName</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+        <method>
+            <name>ZAdjustment</name>
+            <comment>Set the Z ordering mode to use while running the animation.
+zAdjustment: The desired mode, one of  ZORDER_NORMAL,
+ ZORDER_TOP, or ZORDER_BOTTOM.</comment>
+            <returntype>com.aghajari.fragmentsanim.Amir_AnimationBuilder</returntype>
+            <parameter>
+                <name>zAdjustment</name>
+                <type>int</type>
+            </parameter>
+        </method>
+        <method>
+            <name>Interpolator</name>
+            <comment>Sets the interpolator used to interpolate the delays between the
+ children.</comment>
+            <returntype>com.aghajari.fragmentsanim.Amir_AnimationBuilder.Interpolators</returntype>
+        </method>
+        <method>
+            <name>FillAfter</name>
+            <comment>If fillAfter is true, the transformation that this animation performed
+ will persist when it is finished. Defaults to false if not set.
+ Note that this applies when using an {@link
+ android.view.animation.AnimationSet AnimationSet} to chain
+ animations. The transformation is not applied before the AnimationSet
+ itself starts.</comment>
+            <returntype>com.aghajari.fragmentsanim.Amir_AnimationBuilder</returntype>
+            <parameter>
+                <name>FillAfter</name>
+                <type>boolean</type>
+            </parameter>
+        </method>
+        <method>
+            <name>BackgroundColor</name>
+            <comment></comment>
+            <returntype>com.aghajari.fragmentsanim.Amir_AnimationBuilder</returntype>
+            <parameter>
+                <name>bg</name>
+                <type>int</type>
+            </parameter>
+        </method>
+        <field>
+            <name>ABSOLUTE</name>
+            <comment>The specified dimension is an absolute number of pixels.</comment>
+            <returntype>int</returntype>
+        </field>
+        <field>
+            <name>ZORDER_NORMAL</name>
+            <comment>Requests that the content being animated be kept in its current Z
+ order.</comment>
+            <returntype>int</returntype>
+        </field>
+        <field>
+            <name>RELATIVE_TO_PARENT</name>
+            <comment>The specified dimension holds a float and should be multiplied by the
+ height or width of the parent of the object being animated.</comment>
+            <returntype>int</returntype>
+        </field>
+        <field>
+            <name>RESTART</name>
+            <comment>When the animation reaches the end and the repeat count is INFINTE_REPEAT
+ or a positive value, the animation restarts from the beginning.</comment>
+            <returntype>int</returntype>
+        </field>
+        <field>
+            <name>REVERSE</name>
+            <comment>When the animation reaches the end and the repeat count is INFINTE_REPEAT
+ or a positive value, the animation plays backward (and then forward again).</comment>
+            <returntype>int</returntype>
+        </field>
+        <field>
+            <name>INFINITE</name>
+            <comment>Repeat the animation indefinitely.</comment>
+            <returntype>int</returntype>
+        </field>
+        <field>
+            <name>ZORDER_TOP</name>
+            <comment>Requests that the content being animated be forced on top of all other
+ content for the duration of the animation.</comment>
+            <returntype>int</returntype>
+        </field>
+        <field>
+            <name>START_ON_FIRST_FRAME</name>
+            <comment>Can be used as the start time to indicate the start time should be the current
+ time when getTransformation(long, Transformation) is invoked for the
+ first animation frame. This can is useful for short animations.</comment>
+            <returntype>int</returntype>
+        </field>
+        <field>
+            <name>RELATIVE_TO_SELF</name>
+            <comment>The specified dimension holds a float and should be multiplied by the
+ height or width of the object being animated.</comment>
+            <returntype>int</returntype>
+        </field>
+        <field>
+            <name>ZORDER_BOTTOM</name>
+            <comment>Requests that the content being animated be forced under all other
+ content for the duration of the animation.</comment>
+            <returntype>int</returntype>
+        </field>
+    </class>
+    <class>
+        <name>com.aghajari.fragmentsanim.Amir_AnimationBuilder.AnimationTypes</name>
+        <owner>process</owner>
+        <method>
+            <name>Rotate3</name>
+            <comment></comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>fromDegrees</name>
+                <type>float</type>
+            </parameter>
+            <parameter>
+                <name>toDegrees</name>
+                <type>float</type>
+            </parameter>
+            <parameter>
+                <name>pivotXtype</name>
+                <type>int</type>
+            </parameter>
+            <parameter>
+                <name>pivotXvalue</name>
+                <type>float</type>
+            </parameter>
+            <parameter>
+                <name>pivotYtype</name>
+                <type>int</type>
+            </parameter>
+            <parameter>
+                <name>pivotYvalue</name>
+                <type>float</type>
+            </parameter>
+        </method>
+        <method>
+            <name>Rotate</name>
+            <comment></comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>fromDegrees</name>
+                <type>float</type>
+            </parameter>
+            <parameter>
+                <name>toDegrees</name>
+                <type>float</type>
+            </parameter>
+        </method>
+        <method>
+            <name>Alpha</name>
+            <comment></comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>fromAlpha</name>
+                <type>float</type>
+            </parameter>
+            <parameter>
+                <name>toAlpha</name>
+                <type>float</type>
+            </parameter>
+        </method>
+        <method>
+            <name>Resource</name>
+            <comment>Load Animation from Resource</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>ba</name>
+                <type>anywheresoftware.b4a.BA</type>
+            </parameter>
+            <parameter>
+                <name>Animation</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+        <method>
+            <name>Scale3</name>
+            <comment></comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>fromX</name>
+                <type>float</type>
+            </parameter>
+            <parameter>
+                <name>toX</name>
+                <type>float</type>
+            </parameter>
+            <parameter>
+                <name>fromY</name>
+                <type>float</type>
+            </parameter>
+            <parameter>
+                <name>toY</name>
+                <type>float</type>
+            </parameter>
+            <parameter>
+                <name>pivotXtype</name>
+                <type>int</type>
+            </parameter>
+            <parameter>
+                <name>pivotXvalue</name>
+                <type>float</type>
+            </parameter>
+            <parameter>
+                <name>pivotYtype</name>
+                <type>int</type>
+            </parameter>
+            <parameter>
+                <name>pivotYvalue</name>
+                <type>float</type>
+            </parameter>
+        </method>
+        <method>
+            <name>Scale</name>
+            <comment></comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>fromX</name>
+                <type>float</type>
+            </parameter>
+            <parameter>
+                <name>toX</name>
+                <type>float</type>
+            </parameter>
+            <parameter>
+                <name>fromY</name>
+                <type>float</type>
+            </parameter>
+            <parameter>
+                <name>toY</name>
+                <type>float</type>
+            </parameter>
+        </method>
+        <method>
+            <name>Custom</name>
+            <comment></comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>anim</name>
+                <type>android.view.animation.Animation</type>
+            </parameter>
+        </method>
+        <method>
+            <name>Scale2</name>
+            <comment></comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>fromX</name>
+                <type>float</type>
+            </parameter>
+            <parameter>
+                <name>toX</name>
+                <type>float</type>
+            </parameter>
+            <parameter>
+                <name>fromY</name>
+                <type>float</type>
+            </parameter>
+            <parameter>
+                <name>toY</name>
+                <type>float</type>
+            </parameter>
+            <parameter>
+                <name>pivotX</name>
+                <type>float</type>
+            </parameter>
+            <parameter>
+                <name>pivotY</name>
+                <type>float</type>
+            </parameter>
+        </method>
+        <method>
+            <name>Translate2</name>
+            <comment></comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>fromXtype</name>
+                <type>int</type>
+            </parameter>
+            <parameter>
+                <name>fromXvalue</name>
+                <type>float</type>
+            </parameter>
+            <parameter>
+                <name>toXtype</name>
+                <type>int</type>
+            </parameter>
+            <parameter>
+                <name>toXvalue</name>
+                <type>float</type>
+            </parameter>
+            <parameter>
+                <name>fromYtype</name>
+                <type>int</type>
+            </parameter>
+            <parameter>
+                <name>fromYvalue</name>
+                <type>float</type>
+            </parameter>
+            <parameter>
+                <name>toYtype</name>
+                <type>int</type>
+            </parameter>
+            <parameter>
+                <name>toYvalue</name>
+                <type>float</type>
+            </parameter>
+        </method>
+        <method>
+            <name>Translate</name>
+            <comment></comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>fromXDelta</name>
+                <type>float</type>
+            </parameter>
+            <parameter>
+                <name>toXDelta</name>
+                <type>float</type>
+            </parameter>
+            <parameter>
+                <name>fromYDelta</name>
+                <type>float</type>
+            </parameter>
+            <parameter>
+                <name>toYDelta</name>
+                <type>float</type>
+            </parameter>
+        </method>
+        <method>
+            <name>Rotate2</name>
+            <comment></comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>fromDegrees</name>
+                <type>float</type>
+            </parameter>
+            <parameter>
+                <name>toDegrees</name>
+                <type>float</type>
+            </parameter>
+            <parameter>
+                <name>pivotX</name>
+                <type>float</type>
+            </parameter>
+            <parameter>
+                <name>pivotY</name>
+                <type>float</type>
+            </parameter>
+        </method>
+    </class>
+    <class>
+        <name>com.aghajari.fragmentsanim.Amir_AnimationBuilder.Interpolators</name>
+        <owner>process</owner>
+        <method>
+            <name>Path</name>
+            <comment></comment>
+            <returntype>com.aghajari.fragmentsanim.Amir_AnimationBuilder</returntype>
+            <parameter>
+                <name>controlX</name>
+                <type>float</type>
+            </parameter>
+            <parameter>
+                <name>controlY</name>
+                <type>float</type>
+            </parameter>
+        </method>
+        <method>
+            <name>Accelerate2</name>
+            <comment></comment>
+            <returntype>com.aghajari.fragmentsanim.Amir_AnimationBuilder</returntype>
+            <parameter>
+                <name>factor</name>
+                <type>float</type>
+            </parameter>
+        </method>
+        <method>
+            <name>Anticipate2</name>
+            <comment></comment>
+            <returntype>com.aghajari.fragmentsanim.Amir_AnimationBuilder</returntype>
+            <parameter>
+                <name>tension</name>
+                <type>float</type>
+            </parameter>
+        </method>
+        <method>
+            <name>Decelerate2</name>
+            <comment></comment>
+            <returntype>com.aghajari.fragmentsanim.Amir_AnimationBuilder</returntype>
+            <parameter>
+                <name>factor</name>
+                <type>float</type>
+            </parameter>
+        </method>
+        <method>
+            <name>Anticipate</name>
+            <comment></comment>
+            <returntype>com.aghajari.fragmentsanim.Amir_AnimationBuilder</returntype>
+        </method>
+        <method>
+            <name>Decelerate</name>
+            <comment></comment>
+            <returntype>com.aghajari.fragmentsanim.Amir_AnimationBuilder</returntype>
+        </method>
+        <method>
+            <name>Overshoot</name>
+            <comment></comment>
+            <returntype>com.aghajari.fragmentsanim.Amir_AnimationBuilder</returntype>
+        </method>
+        <method>
+            <name>Accelerate</name>
+            <comment></comment>
+            <returntype>com.aghajari.fragmentsanim.Amir_AnimationBuilder</returntype>
+        </method>
+        <method>
+            <name>AnticipateOvershoot3</name>
+            <comment></comment>
+            <returntype>com.aghajari.fragmentsanim.Amir_AnimationBuilder</returntype>
+            <parameter>
+                <name>tension</name>
+                <type>float</type>
+            </parameter>
+            <parameter>
+                <name>ExtraTension</name>
+                <type>float</type>
+            </parameter>
+        </method>
+        <method>
+            <name>AnticipateOvershoot2</name>
+            <comment></comment>
+            <returntype>com.aghajari.fragmentsanim.Amir_AnimationBuilder</returntype>
+            <parameter>
+                <name>tension</name>
+                <type>float</type>
+            </parameter>
+        </method>
+        <method>
+            <name>Cycle</name>
+            <comment></comment>
+            <returntype>com.aghajari.fragmentsanim.Amir_AnimationBuilder</returntype>
+            <parameter>
+                <name>cycles</name>
+                <type>float</type>
+            </parameter>
+        </method>
+        <method>
+            <name>Linear</name>
+            <comment></comment>
+            <returntype>com.aghajari.fragmentsanim.Amir_AnimationBuilder</returntype>
+        </method>
+        <method>
+            <name>AnticipateOvershoot</name>
+            <comment></comment>
+            <returntype>com.aghajari.fragmentsanim.Amir_AnimationBuilder</returntype>
+        </method>
+        <method>
+            <name>Path2</name>
+            <comment></comment>
+            <returntype>com.aghajari.fragmentsanim.Amir_AnimationBuilder</returntype>
+            <parameter>
+                <name>controlX</name>
+                <type>float</type>
+            </parameter>
+            <parameter>
+                <name>controlY</name>
+                <type>float</type>
+            </parameter>
+            <parameter>
+                <name>controlX2</name>
+                <type>float</type>
+            </parameter>
+            <parameter>
+                <name>controlY2</name>
+                <type>float</type>
+            </parameter>
+        </method>
+        <method>
+            <name>AccelerateDecelerate</name>
+            <comment></comment>
+            <returntype>com.aghajari.fragmentsanim.Amir_AnimationBuilder</returntype>
+        </method>
+        <method>
+            <name>Bounce</name>
+            <comment></comment>
+            <returntype>com.aghajari.fragmentsanim.Amir_AnimationBuilder</returntype>
+        </method>
+        <method>
+            <name>Overshoot2</name>
+            <comment></comment>
+            <returntype>com.aghajari.fragmentsanim.Amir_AnimationBuilder</returntype>
+            <parameter>
+                <name>tension</name>
+                <type>float</type>
+            </parameter>
+        </method>
+    </class>
+    <class>
+        <name>com.aghajari.fragmentsanim.Amir_AnimationSetBuilder</name>
+        <shortname>Amir_AnimationSetBuilder</shortname>
+        <comment>Represents a group of Animations that should be played together.
+ The transformation of each individual animation are composed
+ together into a single transform.
+ If AnimationSet sets any properties that its children also set
+ (for example, duration or fillBefore), the values of AnimationSet
+ override the child values.</comment>
+        <objectwrapper>android.view.animation.AnimationSet</objectwrapper>
+        <owner>process</owner>
+        <method>
+            <name>RepeatCount</name>
+            <comment>Sets how many times the animation should be repeated. If the repeat
+ count is 0, the animation is never repeated. If the repeat count is
+ greater than 0 or INFINITE, the repeat mode will be taken
+ into account. The repeat count is 0 by default.</comment>
+            <returntype>com.aghajari.fragmentsanim.Amir_AnimationSetBuilder</returntype>
+            <parameter>
+                <name>RepeatCount</name>
+                <type>int</type>
+            </parameter>
+        </method>
+        <method>
+            <name>StartOffset</name>
+            <comment>When this animation should start relative to the start time. This is most
+ useful when composing complex animations using an AnimationSet 
+ where some of the animations components start at different times.</comment>
+            <returntype>com.aghajari.fragmentsanim.Amir_AnimationSetBuilder</returntype>
+            <parameter>
+                <name>StartOffset</name>
+                <type>long</type>
+            </parameter>
+        </method>
+        <method>
+            <name>FillBefore</name>
+            <comment>If fillBefore is true, this animation will apply its transformation
+ before the start time of the animation. Defaults to true if not set.
+ Note that this applies when using an {@link
+ android.view.animation.AnimationSet AnimationSet} to chain
+ animations. The transformation is not applied before the AnimationSet
+ itself starts.</comment>
+            <returntype>com.aghajari.fragmentsanim.Amir_AnimationSetBuilder</returntype>
+            <parameter>
+                <name>FillBefore</name>
+                <type>boolean</type>
+            </parameter>
+        </method>
+        <method>
+            <name>StartTime</name>
+            <comment>When this animation should start. When the start time is set to
+  START_ON_FIRST_FRAME
+startTimeMillis: the start time in milliseconds</comment>
+            <returntype>com.aghajari.fragmentsanim.Amir_AnimationSetBuilder</returntype>
+            <parameter>
+                <name>startTimeMillis</name>
+                <type>long</type>
+            </parameter>
+        </method>
+        <method>
+            <name>DetachWallpape</name>
+            <comment>If detachWallpaper is true, and this is a window animation of a window
+ that has a wallpaper background, then the window will be detached from
+ the wallpaper while it runs.  That is, the animation will only be applied
+ to the window, and the wallpaper behind it will remain static.</comment>
+            <returntype>com.aghajari.fragmentsanim.Amir_AnimationSetBuilder</returntype>
+            <parameter>
+                <name>DetachWallpape</name>
+                <type>boolean</type>
+            </parameter>
+        </method>
+        <method>
+            <name>Duration</name>
+            <comment>How long this animation should last. The duration cannot be negative.</comment>
+            <returntype>com.aghajari.fragmentsanim.Amir_AnimationSetBuilder</returntype>
+            <parameter>
+                <name>durationMillis</name>
+                <type>long</type>
+            </parameter>
+        </method>
+        <method>
+            <name>RestrictDuration</name>
+            <comment>Ensure that the duration that this animation will run is not longer
+ than &lt;var&gt;durationMillis&lt;/var&gt;.  In addition to adjusting the duration
+ itself, this ensures that the repeat count also will not make it run
+ longer than the given time.</comment>
+            <returntype>com.aghajari.fragmentsanim.Amir_AnimationSetBuilder</returntype>
+            <parameter>
+                <name>durationMillis</name>
+                <type>long</type>
+            </parameter>
+        </method>
+        <method>
+            <name>IsInitialized</name>
+            <comment></comment>
+            <returntype>boolean</returntype>
+        </method>
+        <method>
+            <name>Initialize</name>
+            <comment>Constructor to use when building an AnimationSet from code
+
+ &lt;b&gt;shareInterpolator : &lt;/b&gt;
+ Pass true if all of the animations in this set
+ should use the interpolator associated with this AnimationSet.
+ Pass false if each animation should use its own interpolator.</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>shareInterpolator</name>
+                <type>boolean</type>
+            </parameter>
+        </method>
+        <method>
+            <name>FillEnabled</name>
+            <comment>If fillEnabled is true, the animation will apply the value of fillBefore and
+ fillAfter. Otherwise, fillBefore and fillAfter are ignored and the animation
+ transformation is always applied.</comment>
+            <returntype>com.aghajari.fragmentsanim.Amir_AnimationSetBuilder</returntype>
+            <parameter>
+                <name>FillEnabled</name>
+                <type>boolean</type>
+            </parameter>
+        </method>
+        <method>
+            <name>RepeatMode</name>
+            <comment>Defines what this animation should do when it reaches the end. This
+ setting is applied only when the repeat count is either greater than
+ 0 or INFINITE. Defaults to RESTART.</comment>
+            <returntype>com.aghajari.fragmentsanim.Amir_AnimationSetBuilder</returntype>
+            <parameter>
+                <name>RepeatMode</name>
+                <type>int</type>
+            </parameter>
+        </method>
+        <method>
+            <name>ZAdjustment</name>
+            <comment>Set the Z ordering mode to use while running the animation.
+zAdjustment: The desired mode, one of  ZORDER_NORMAL,
+ ZORDER_TOP, or ZORDER_BOTTOM.</comment>
+            <returntype>com.aghajari.fragmentsanim.Amir_AnimationSetBuilder</returntype>
+            <parameter>
+                <name>zAdjustment</name>
+                <type>int</type>
+            </parameter>
+        </method>
+        <method>
+            <name>Interpolator</name>
+            <comment>Sets the interpolator used to interpolate the delays between the
+ children.</comment>
+            <returntype>com.aghajari.fragmentsanim.Amir_AnimationSetBuilder.Interpolators</returntype>
+        </method>
+        <method>
+            <name>FillAfter</name>
+            <comment>If fillAfter is true, the transformation that this animation performed
+ will persist when it is finished. Defaults to false if not set.
+ Note that this applies when using an {@link
+ android.view.animation.AnimationSet AnimationSet} to chain
+ animations. The transformation is not applied before the AnimationSet
+ itself starts.</comment>
+            <returntype>com.aghajari.fragmentsanim.Amir_AnimationSetBuilder</returntype>
+            <parameter>
+                <name>FillAfter</name>
+                <type>boolean</type>
+            </parameter>
+        </method>
+        <method>
+            <name>AddAnimation</name>
+            <comment>Add a child animation to this animation set.
+ The transforms of the child animations are applied in the order
+ that they were added</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>Animation</name>
+                <type>android.view.animation.Animation</type>
+            </parameter>
+        </method>
+        <method>
+            <name>BackgroundColor</name>
+            <comment></comment>
+            <returntype>com.aghajari.fragmentsanim.Amir_AnimationSetBuilder</returntype>
+            <parameter>
+                <name>bg</name>
+                <type>int</type>
+            </parameter>
+        </method>
+        <property>
+            <name>Animations</name>
+            <returntype>java.util.List</returntype>
+            <comment>return All the child animations in this AnimationSet. Note that
+ this may include other AnimationSets, which are not expanded.</comment>
+        </property>
+        <field>
+            <name>ABSOLUTE</name>
+            <comment>The specified dimension is an absolute number of pixels.</comment>
+            <returntype>int</returntype>
+        </field>
+        <field>
+            <name>ZORDER_NORMAL</name>
+            <comment>Requests that the content being animated be kept in its current Z
+ order.</comment>
+            <returntype>int</returntype>
+        </field>
+        <field>
+            <name>RELATIVE_TO_PARENT</name>
+            <comment>The specified dimension holds a float and should be multiplied by the
+ height or width of the parent of the object being animated.</comment>
+            <returntype>int</returntype>
+        </field>
+        <field>
+            <name>RESTART</name>
+            <comment>When the animation reaches the end and the repeat count is INFINTE_REPEAT
+ or a positive value, the animation restarts from the beginning.</comment>
+            <returntype>int</returntype>
+        </field>
+        <field>
+            <name>REVERSE</name>
+            <comment>When the animation reaches the end and the repeat count is INFINTE_REPEAT
+ or a positive value, the animation plays backward (and then forward again).</comment>
+            <returntype>int</returntype>
+        </field>
+        <field>
+            <name>INFINITE</name>
+            <comment>Repeat the animation indefinitely.</comment>
+            <returntype>int</returntype>
+        </field>
+        <field>
+            <name>ZORDER_TOP</name>
+            <comment>Requests that the content being animated be forced on top of all other
+ content for the duration of the animation.</comment>
+            <returntype>int</returntype>
+        </field>
+        <field>
+            <name>START_ON_FIRST_FRAME</name>
+            <comment>Can be used as the start time to indicate the start time should be the current
+ time when getTransformation(long, Transformation) is invoked for the
+ first animation frame. This can is useful for short animations.</comment>
+            <returntype>int</returntype>
+        </field>
+        <field>
+            <name>RELATIVE_TO_SELF</name>
+            <comment>The specified dimension holds a float and should be multiplied by the
+ height or width of the object being animated.</comment>
+            <returntype>int</returntype>
+        </field>
+        <field>
+            <name>ZORDER_BOTTOM</name>
+            <comment>Requests that the content being animated be forced under all other
+ content for the duration of the animation.</comment>
+            <returntype>int</returntype>
+        </field>
+    </class>
+    <class>
+        <name>com.aghajari.fragmentsanim.Amir_AnimationSetBuilder.Interpolators</name>
+        <owner>process</owner>
+        <method>
+            <name>Path</name>
+            <comment></comment>
+            <returntype>com.aghajari.fragmentsanim.Amir_AnimationSetBuilder</returntype>
+            <parameter>
+                <name>controlX</name>
+                <type>float</type>
+            </parameter>
+            <parameter>
+                <name>controlY</name>
+                <type>float</type>
+            </parameter>
+        </method>
+        <method>
+            <name>Accelerate2</name>
+            <comment></comment>
+            <returntype>com.aghajari.fragmentsanim.Amir_AnimationSetBuilder</returntype>
+            <parameter>
+                <name>factor</name>
+                <type>float</type>
+            </parameter>
+        </method>
+        <method>
+            <name>Anticipate2</name>
+            <comment></comment>
+            <returntype>com.aghajari.fragmentsanim.Amir_AnimationSetBuilder</returntype>
+            <parameter>
+                <name>tension</name>
+                <type>float</type>
+            </parameter>
+        </method>
+        <method>
+            <name>Decelerate2</name>
+            <comment></comment>
+            <returntype>com.aghajari.fragmentsanim.Amir_AnimationSetBuilder</returntype>
+            <parameter>
+                <name>factor</name>
+                <type>float</type>
+            </parameter>
+        </method>
+        <method>
+            <name>Anticipate</name>
+            <comment></comment>
+            <returntype>com.aghajari.fragmentsanim.Amir_AnimationSetBuilder</returntype>
+        </method>
+        <method>
+            <name>Decelerate</name>
+            <comment></comment>
+            <returntype>com.aghajari.fragmentsanim.Amir_AnimationSetBuilder</returntype>
+        </method>
+        <method>
+            <name>Overshoot</name>
+            <comment></comment>
+            <returntype>com.aghajari.fragmentsanim.Amir_AnimationSetBuilder</returntype>
+        </method>
+        <method>
+            <name>Accelerate</name>
+            <comment></comment>
+            <returntype>com.aghajari.fragmentsanim.Amir_AnimationSetBuilder</returntype>
+        </method>
+        <method>
+            <name>AnticipateOvershoot3</name>
+            <comment></comment>
+            <returntype>com.aghajari.fragmentsanim.Amir_AnimationSetBuilder</returntype>
+            <parameter>
+                <name>tension</name>
+                <type>float</type>
+            </parameter>
+            <parameter>
+                <name>ExtraTension</name>
+                <type>float</type>
+            </parameter>
+        </method>
+        <method>
+            <name>AnticipateOvershoot2</name>
+            <comment></comment>
+            <returntype>com.aghajari.fragmentsanim.Amir_AnimationSetBuilder</returntype>
+            <parameter>
+                <name>tension</name>
+                <type>float</type>
+            </parameter>
+        </method>
+        <method>
+            <name>Cycle</name>
+            <comment></comment>
+            <returntype>com.aghajari.fragmentsanim.Amir_AnimationSetBuilder</returntype>
+            <parameter>
+                <name>cycles</name>
+                <type>float</type>
+            </parameter>
+        </method>
+        <method>
+            <name>Linear</name>
+            <comment></comment>
+            <returntype>com.aghajari.fragmentsanim.Amir_AnimationSetBuilder</returntype>
+        </method>
+        <method>
+            <name>AnticipateOvershoot</name>
+            <comment></comment>
+            <returntype>com.aghajari.fragmentsanim.Amir_AnimationSetBuilder</returntype>
+        </method>
+        <method>
+            <name>Path2</name>
+            <comment></comment>
+            <returntype>com.aghajari.fragmentsanim.Amir_AnimationSetBuilder</returntype>
+            <parameter>
+                <name>controlX</name>
+                <type>float</type>
+            </parameter>
+            <parameter>
+                <name>controlY</name>
+                <type>float</type>
+            </parameter>
+            <parameter>
+                <name>controlX2</name>
+                <type>float</type>
+            </parameter>
+            <parameter>
+                <name>controlY2</name>
+                <type>float</type>
+            </parameter>
+        </method>
+        <method>
+            <name>AccelerateDecelerate</name>
+            <comment></comment>
+            <returntype>com.aghajari.fragmentsanim.Amir_AnimationSetBuilder</returntype>
+        </method>
+        <method>
+            <name>Bounce</name>
+            <comment></comment>
+            <returntype>com.aghajari.fragmentsanim.Amir_AnimationSetBuilder</returntype>
+        </method>
+        <method>
+            <name>Overshoot2</name>
+            <comment></comment>
+            <returntype>com.aghajari.fragmentsanim.Amir_AnimationSetBuilder</returntype>
+            <parameter>
+                <name>tension</name>
+                <type>float</type>
+            </parameter>
+        </method>
+    </class>
+    <class>
+        <name>com.aghajari.fragmentsanim.Amir_FragmentAnimation</name>
+        <shortname>Amir_FragmentAnimation</shortname>
+        <owner>process</owner>
+        <method>
+            <name>CubeAnimation</name>
+            <comment></comment>
+            <returntype>com.aghajari.fragmentsanim.Amir_ViewPropertyAnimation</returntype>
+            <parameter>
+                <name>direction</name>
+                <type>int</type>
+            </parameter>
+            <parameter>
+                <name>enter</name>
+                <type>boolean</type>
+            </parameter>
+            <parameter>
+                <name>duration</name>
+                <type>int</type>
+            </parameter>
+        </method>
+        <method>
+            <name>NewAnimationSetBuilder</name>
+            <comment></comment>
+            <returntype>com.aghajari.fragmentsanim.Amir_AnimationSetBuilder</returntype>
+        </method>
+        <method>
+            <name>NewViewPropertyAnimation</name>
+            <comment></comment>
+            <returntype>com.aghajari.fragmentsanim.Amir_ViewPropertyAnimation</returntype>
+        </method>
+        <method>
+            <name>MoveAnimation</name>
+            <comment></comment>
+            <returntype>com.aghajari.fragmentsanim.Amir_ViewPropertyAnimation</returntype>
+            <parameter>
+                <name>direction</name>
+                <type>int</type>
+            </parameter>
+            <parameter>
+                <name>enter</name>
+                <type>boolean</type>
+            </parameter>
+            <parameter>
+                <name>duration</name>
+                <type>int</type>
+            </parameter>
+        </method>
+        <method>
+            <name>PushPullAnimation</name>
+            <comment></comment>
+            <returntype>com.aghajari.fragmentsanim.Amir_ViewPropertyAnimation</returntype>
+            <parameter>
+                <name>direction</name>
+                <type>int</type>
+            </parameter>
+            <parameter>
+                <name>enter</name>
+                <type>boolean</type>
+            </parameter>
+            <parameter>
+                <name>duration</name>
+                <type>int</type>
+            </parameter>
+        </method>
+        <method>
+            <name>FlipAnimation</name>
+            <comment></comment>
+            <returntype>com.aghajari.fragmentsanim.Amir_ViewPropertyAnimation</returntype>
+            <parameter>
+                <name>direction</name>
+                <type>int</type>
+            </parameter>
+            <parameter>
+                <name>enter</name>
+                <type>boolean</type>
+            </parameter>
+            <parameter>
+                <name>duration</name>
+                <type>int</type>
+            </parameter>
+        </method>
+        <method>
+            <name>SidesAnimation</name>
+            <comment></comment>
+            <returntype>com.aghajari.fragmentsanim.Amir_ViewPropertyAnimation</returntype>
+            <parameter>
+                <name>direction</name>
+                <type>int</type>
+            </parameter>
+            <parameter>
+                <name>enter</name>
+                <type>boolean</type>
+            </parameter>
+            <parameter>
+                <name>duration</name>
+                <type>int</type>
+            </parameter>
+        </method>
+        <method>
+            <name>NewAnimationBuilder</name>
+            <comment></comment>
+            <returntype>com.aghajari.fragmentsanim.Amir_AnimationBuilder</returntype>
+        </method>
+        <field>
+            <name>DIRECTION_RIGHT</name>
+            <comment></comment>
+            <returntype>int</returntype>
+        </field>
+        <field>
+            <name>DIRECTION_UP</name>
+            <comment></comment>
+            <returntype>int</returntype>
+        </field>
+        <field>
+            <name>DIRECTION_DOWN</name>
+            <comment></comment>
+            <returntype>int</returntype>
+        </field>
+        <field>
+            <name>DIRECTION_LEFT</name>
+            <comment></comment>
+            <returntype>int</returntype>
+        </field>
+    </class>
+    <class>
+        <name>com.aghajari.fragmentsanim.Amir_ViewPropertyAnimation</name>
+        <shortname>Amir_ViewPropertyAnimation</shortname>
+        <objectwrapper>com.aghajari.fragmentsanim.ViewPropertyAnimation</objectwrapper>
+        <owner>process</owner>
+        <event>onSizeReady (Anim As Amir_ViewPropertyAnimation,Width As Int,Height As Int,ParentWidth As Int,ParentHeight As Int)</event>
+        <event>ApplyTransformation (Anim As Amir_ViewPropertyAnimation,InterpolatedTime As Float,Transformation As Object)</event>
+        <method>
+            <name>Fading</name>
+            <comment></comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>fromAlpha</name>
+                <type>float</type>
+            </parameter>
+            <parameter>
+                <name>toAlpha</name>
+                <type>float</type>
+            </parameter>
+        </method>
+        <method>
+            <name>IsInitialized</name>
+            <comment></comment>
+            <returntype>boolean</returntype>
+        </method>
+        <method>
+            <name>Initialize</name>
+            <comment></comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>ba</name>
+                <type>anywheresoftware.b4a.BA</type>
+            </parameter>
+            <parameter>
+                <name>EventName</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+        <property>
+            <name>RotationY</name>
+            <returntype>float</returntype>
+            <parameter>
+                <name>v</name>
+                <type>float</type>
+            </parameter>
+            <comment></comment>
+        </property>
+        <property>
+            <name>RotationX</name>
+            <returntype>float</returntype>
+            <parameter>
+                <name>v</name>
+                <type>float</type>
+            </parameter>
+            <comment></comment>
+        </property>
+        <property>
+            <name>CameraZ</name>
+            <returntype>float</returntype>
+            <parameter>
+                <name>v</name>
+                <type>float</type>
+            </parameter>
+            <comment></comment>
+        </property>
+        <property>
+            <name>CameraY</name>
+            <returntype>float</returntype>
+            <parameter>
+                <name>v</name>
+                <type>float</type>
+            </parameter>
+            <comment></comment>
+        </property>
+        <property>
+            <name>CameraX</name>
+            <returntype>float</returntype>
+            <parameter>
+                <name>v</name>
+                <type>float</type>
+            </parameter>
+            <comment></comment>
+        </property>
+        <property>
+            <name>RotationZ</name>
+            <returntype>float</returntype>
+            <parameter>
+                <name>v</name>
+                <type>float</type>
+            </parameter>
+            <comment></comment>
+        </property>
+        <property>
+            <name>ScaleY</name>
+            <returntype>float</returntype>
+            <parameter>
+                <name>v</name>
+                <type>float</type>
+            </parameter>
+            <comment></comment>
+        </property>
+        <property>
+            <name>ScaleX</name>
+            <returntype>float</returntype>
+            <parameter>
+                <name>v</name>
+                <type>float</type>
+            </parameter>
+            <comment></comment>
+        </property>
+        <property>
+            <name>PivotX</name>
+            <returntype>float</returntype>
+            <parameter>
+                <name>v</name>
+                <type>float</type>
+            </parameter>
+            <comment></comment>
+        </property>
+        <property>
+            <name>PivotY</name>
+            <returntype>float</returntype>
+            <parameter>
+                <name>v</name>
+                <type>float</type>
+            </parameter>
+            <comment></comment>
+        </property>
+        <property>
+            <name>TranslationZ</name>
+            <returntype>float</returntype>
+            <parameter>
+                <name>v</name>
+                <type>float</type>
+            </parameter>
+            <comment></comment>
+        </property>
+        <property>
+            <name>TranslationY</name>
+            <returntype>float</returntype>
+            <parameter>
+                <name>v</name>
+                <type>float</type>
+            </parameter>
+            <comment></comment>
+        </property>
+        <property>
+            <name>Alpha</name>
+            <returntype>float</returntype>
+            <parameter>
+                <name>v</name>
+                <type>float</type>
+            </parameter>
+            <comment></comment>
+        </property>
+        <property>
+            <name>TranslationX</name>
+            <returntype>float</returntype>
+            <parameter>
+                <name>v</name>
+                <type>float</type>
+            </parameter>
+            <comment></comment>
+        </property>
+        <property>
+            <name>Animation</name>
+            <returntype>com.aghajari.fragmentsanim.Amir_AnimationBuilder</returntype>
+            <comment></comment>
+        </property>
+        <property>
+            <name>Height</name>
+            <returntype>int</returntype>
+            <parameter>
+                <name>v</name>
+                <type>int</type>
+            </parameter>
+            <comment></comment>
+        </property>
+        <property>
+            <name>Width</name>
+            <returntype>int</returntype>
+            <parameter>
+                <name>v</name>
+                <type>int</type>
+            </parameter>
+            <comment></comment>
+        </property>
+    </class>
+    <version>1.0</version>
+    <author>AmirHosseinAghajri</author>
+</root>

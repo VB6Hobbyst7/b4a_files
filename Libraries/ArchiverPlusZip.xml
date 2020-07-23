@@ -1,0 +1,735 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root>
+    <doclet-version-NOT-library-version>1.02</doclet-version-NOT-library-version>
+    <class>
+        <name>b4a.flm.archiverplus.ArchiverPlusZip</name>
+        <shortname>ArchiverPlusZip</shortname>
+        <owner>process</owner>
+        <event>ZipProgression(Operation As Int, FileName As String, PercentDone As Float)</event>
+        <event>ZipResult(Result As Int, ErrorMsg As String)</event>
+        <method>
+            <name>CreateSplitZip</name>
+            <comment>Compresses the given folder and its subfolders into a split zip archive.
+A split zip archive is made of multiple parts that are limited to a specified size. It cannot be modified with Add or Remove functions.
+An exception is thrown if the zip archive already exists.
+FolderToZip: path of the folder to zip.
+ArchivePath: location of the zip archive.
+SplitLength: maximum length in bytes of each part. Has to be more than 65536 bytes.
+EventPrefix: prefix of the "ZipProgression" and "ZipResult" events.</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>ba</name>
+                <type>anywheresoftware.b4a.BA</type>
+            </parameter>
+            <parameter>
+                <name>FolderToZip</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>ArchivePath</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>SplitLength</name>
+                <type>int</type>
+            </parameter>
+            <parameter>
+                <name>EventPrefix</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+        <method>
+            <name>IsValidZipFile</name>
+            <comment></comment>
+            <returntype>boolean</returntype>
+            <parameter>
+                <name>ArchivePath</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+        <method>
+            <name>UnZipFile</name>
+            <comment>Extracts a specific file from the given zip archive to the destination path.
+ArchivePath: location of the archive to unzip.
+FileName: the file to unzip. The path to the file is relative.
+DestPath: location where to unzip the file.
+EventPrefix: prefix of the "ZipProgression" and "ZipResult" events.</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>ba</name>
+                <type>anywheresoftware.b4a.BA</type>
+            </parameter>
+            <parameter>
+                <name>ArchivePath</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>FileName</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>DestPath</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>EventPrefix</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+        <method>
+            <name>CancelAllZipTasks</name>
+            <comment>Tries to cancel all zip/unzip tasks in progress.</comment>
+            <returntype>void</returntype>
+        </method>
+        <method>
+            <name>GetZipComment</name>
+            <comment></comment>
+            <returntype>java.lang.String</returntype>
+            <parameter>
+                <name>ArchivePath</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+        <method>
+            <name>UnZip</name>
+            <comment>Extracts all the files from the given zip archive to the destination path.
+ArchivePath: location of the archive to unzip.
+DestPath: location where to unzip the files.
+EventPrefix: prefix of the "ZipProgression" and "ZipResult" events.</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>ba</name>
+                <type>anywheresoftware.b4a.BA</type>
+            </parameter>
+            <parameter>
+                <name>ArchivePath</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>DestPath</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>EventPrefix</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+        <method>
+            <name>DecryptZipWithArray</name>
+            <comment>Sets the password to be used for decryption.
+UTF8: Whether to use the UTF-8 charset (True) or the ISO-8859-1 charset (False).</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>Password</name>
+                <type>byte[]</type>
+            </parameter>
+            <parameter>
+                <name>UTF8</name>
+                <type>boolean</type>
+            </parameter>
+        </method>
+        <method>
+            <name>SetZipComment</name>
+            <comment></comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>ArchivePath</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>Comment</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+        <method>
+            <name>IsEncryptedZipFile</name>
+            <comment></comment>
+            <returntype>boolean</returntype>
+            <parameter>
+                <name>ArchivePath</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+        <method>
+            <name>UnZipToStream</name>
+            <comment>Writes the contents of the specified file of a zip archive to an output stream.
+ArchivePath: location of the zip archive.
+FileName: the file to unzip. The path to the file is relative.
+Stream: the output stream. This stream is closed after the last byte is written.</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>ba</name>
+                <type>anywheresoftware.b4a.BA</type>
+            </parameter>
+            <parameter>
+                <name>ArchivePath</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>FileName</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>Stream</name>
+                <type>java.io.OutputStream</type>
+            </parameter>
+        </method>
+        <method>
+            <name>ListZipEntries</name>
+            <comment>Returns a list containing the properties of all files of the specified zip archive. Each item of this list is an ArchiverZipInfo object.
+Example:&lt;code&gt;
+Dim lstEntries As List = Arc.ListZipEntries(ArchiveFolder &amp; "MyArchive.zip")
+For i = 0 To lstEntries.Size - 1
+	Dim ZipInfo As ArchiverZipInfo = lstEntries.Get(i)
+	Log(ZipInfo.FileName &amp; ": Compressed=" &amp; ZipInfo.CompressedSize &amp; " / Uncompressed=" &amp; ZipInfo.UncompressedSize &amp; " / CRC32= " &amp; ZipInfo.CRC32)
+	Log(" Last modification=" &amp; DateTime.Date(ZipInfo.LastModFileTime) &amp; " " &amp; DateTime.Time(ZipInfo.LastModFileTime))
+Next&lt;/code&gt;</comment>
+            <returntype>anywheresoftware.b4a.objects.collections.List</returntype>
+            <parameter>
+                <name>ArchivePath</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+        <method>
+            <name>AddStreamToZip</name>
+            <comment>Creates a new entry in the specified zip archive with the content of the given InputStream.
+Stream: the input stream.
+FileName: a file name for the new entry.
+ArchivePath: location of the zip archive.</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>ba</name>
+                <type>anywheresoftware.b4a.BA</type>
+            </parameter>
+            <parameter>
+                <name>Stream</name>
+                <type>java.io.InputStream</type>
+            </parameter>
+            <parameter>
+                <name>FileName</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>ArchivePath</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+        <method>
+            <name>DecryptZipWithString</name>
+            <comment>Sets the password to be used for decryption.
+For security reasons, Strings are not recommended to store passwords (http://docs.oracle.com/javase/1.5.0/docs/guide/security/jce/JCERefGuide.html#PBEEx). You should use an array of bytes instead and set the password with DecryptZipWithArray.</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>Password</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+        <method>
+            <name>AddFolderToZip</name>
+            <comment>Adds a folder and its subfolders to the specified zip archive. If the zip archive does not exist, it is created.
+FolderPath: path of the folder to add.
+ArchivePath: location of the zip archive.
+EventPrefix: prefix of the "ZipProgression" and "ZipResult" events.</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>ba</name>
+                <type>anywheresoftware.b4a.BA</type>
+            </parameter>
+            <parameter>
+                <name>FolderPath</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>ArchivePath</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>EventPrefix</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+        <method>
+            <name>RemoveFileFromZip</name>
+            <comment>Removes a file from the specified zip archive. Throws an exception if the file was not found.
+ArchivePath: location of the zip archive.
+FilePath: path of the file to remove. This path is relative.
+EventPrefix: prefix of the "ZipProgression" and "ZipResult" events.</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>ba</name>
+                <type>anywheresoftware.b4a.BA</type>
+            </parameter>
+            <parameter>
+                <name>ArchivePath</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>FilePath</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>EventPrefix</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+        <method>
+            <name>RemoveFilesFromZip</name>
+            <comment>Removes a list of files from the specified zip archive. Throws an exception if the file was not found.
+ArchivePath: location of the zip archive.
+FileNames: list of the files to remove. Paths to the files are relative.
+EventPrefix: prefix of the "ZipProgression" and "ZipResult" events.</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>ba</name>
+                <type>anywheresoftware.b4a.BA</type>
+            </parameter>
+            <parameter>
+                <name>ArchivePath</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>FileNames</name>
+                <type>anywheresoftware.b4a.objects.collections.List</type>
+            </parameter>
+            <parameter>
+                <name>EventPrefix</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+        <method>
+            <name>CountZipEntries</name>
+            <comment>Returns the number of entries in the specified zip archive.</comment>
+            <returntype>int</returntype>
+            <parameter>
+                <name>ArchivePath</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+        <method>
+            <name>ListSplitZipFiles</name>
+            <comment>Returns a list of all parts of the specified split zip archive.</comment>
+            <returntype>anywheresoftware.b4a.objects.collections.List</returntype>
+            <parameter>
+                <name>ArchivePath</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+        <method>
+            <name>IsSplitZipArchive</name>
+            <comment></comment>
+            <returntype>boolean</returntype>
+            <parameter>
+                <name>ArchivePath</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+        <method>
+            <name>EncryptZipWithArray</name>
+            <comment>Sets the encryption properties and forces ZipEncryption to True.
+EncryptionMethod: One of the ZIP_ENC_ constants.
+AESKeyStrength: Either ZIP_AES_STRENGTH_128 or ZIP_AES_STRENGTH_256. ZIP_AES_STRENGTH_192 cannot be used for encryption. This parameter is ignored if the encryption method is not AES.
+Password: An array of bytes containing the password to be used for encryption. Cannot be empty.</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>EncryptionMethod</name>
+                <type>int</type>
+            </parameter>
+            <parameter>
+                <name>AESKeyStrength</name>
+                <type>int</type>
+            </parameter>
+            <parameter>
+                <name>Password</name>
+                <type>byte[]</type>
+            </parameter>
+        </method>
+        <method>
+            <name>AddFileToZip</name>
+            <comment>Adds a file to the specified zip archive. If the zip archive does not exist, it is created.
+FilePath: path of the file to add.
+ArchivePath: location of the zip archive.
+EventPrefix: prefix of the "ZipProgression" and "ZipResult" events.</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>ba</name>
+                <type>anywheresoftware.b4a.BA</type>
+            </parameter>
+            <parameter>
+                <name>FilePath</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>ArchivePath</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>EventPrefix</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+        <method>
+            <name>UnZipFiles</name>
+            <comment>Extracts a list of files from the given zip archive to the destination path.
+ArchivePath: location of the archive to unzip.
+FileNames: list of the files to unzip. Paths to the files are relative.
+DestPath: location where to unzip the files.
+EventPrefix: prefix of the "ZipProgression" and "ZipResult" events.</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>ba</name>
+                <type>anywheresoftware.b4a.BA</type>
+            </parameter>
+            <parameter>
+                <name>ArchivePath</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>FileNames</name>
+                <type>anywheresoftware.b4a.objects.collections.List</type>
+            </parameter>
+            <parameter>
+                <name>DestPath</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>EventPrefix</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+        <method>
+            <name>EncryptZipWithString</name>
+            <comment>Sets the encryption properties and forces ZipEncryption to True.
+EncryptionMethod: One of the ZIP_ENC_ constants.
+AESKeyStrength: Either ZIP_AES_STRENGTH_128 or ZIP_AES_STRENGTH_256. ZIP_AES_STRENGTH_192 cannot be used for encryption. This parameter is ignored if the encryption method is not AES.
+Password: The password to be used for encryption. Cannot be empty. For security reasons, Strings are not recommended to store passwords (http://docs.oracle.com/javase/1.5.0/docs/guide/security/jce/JCERefGuide.html#PBEEx). You should use an array of bytes instead and set the password with EncryptZipWithArray.</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>EncryptionMethod</name>
+                <type>int</type>
+            </parameter>
+            <parameter>
+                <name>AESKeyStrength</name>
+                <type>int</type>
+            </parameter>
+            <parameter>
+                <name>Password</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+        <method>
+            <name>AddFilesToZip</name>
+            <comment>Adds a list of files to the specified zip archive. If the zip archive does not exist, it is created.
+FileNames: list of the files to add.
+ArchivePath: location of the zip archive.
+EventPrefix: prefix of the "ZipProgression" and "ZipResult" events.</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>ba</name>
+                <type>anywheresoftware.b4a.BA</type>
+            </parameter>
+            <parameter>
+                <name>FileNames</name>
+                <type>anywheresoftware.b4a.objects.collections.List</type>
+            </parameter>
+            <parameter>
+                <name>ArchivePath</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>EventPrefix</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+        <method>
+            <name>MergeSplitZip</name>
+            <comment>Merges the specified split zip archive into a single zip file without the need to extract the files.
+SplitZip: location of the split zip archive
+NewArchive: location of the combined archive
+EventPrefix: prefix of the "ZipProgression" and "ZipResult" events.</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>ba</name>
+                <type>anywheresoftware.b4a.BA</type>
+            </parameter>
+            <parameter>
+                <name>SplitZip</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>NewArchive</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>EventPrefix</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+        <method>
+            <name>UnZipFile2</name>
+            <comment>Extracts a specific file from the given zip archive and changes its name.
+ArchivePath: location of the archive to unzip.
+FileName: the file to unzip. The path to the file is relative.
+DestPath: location where to unzip the file.
+NewName: new name of the extracted file.
+EventPrefix: prefix of the "ZipProgression" and "ZipResult" events.</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>ba</name>
+                <type>anywheresoftware.b4a.BA</type>
+            </parameter>
+            <parameter>
+                <name>ArchivePath</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>FileName</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>DestPath</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>NewName</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>EventPrefix</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+        <method>
+            <name>GetZipEntry</name>
+            <comment>Returns an ArchiverZipInfo object containing the properties of the specified file.
+ArchivePath: location of the zip archive.
+FileName: the file whose properties are requested.</comment>
+            <returntype>b4a.flm.archiverplus.ArchiverPlusZip.ZipInfo</returntype>
+            <parameter>
+                <name>ArchivePath</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>FileName</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+        <property>
+            <name>ZipCompression</name>
+            <returntype>boolean</returntype>
+            <parameter>
+                <name>Enabled</name>
+                <type>boolean</type>
+            </parameter>
+            <comment>Gets or sets whether the files are compressed (true) or stored (false).</comment>
+        </property>
+        <property>
+            <name>ZipExecutionMode</name>
+            <returntype>byte</returntype>
+            <parameter>
+                <name>ExecutionMode</name>
+                <type>byte</type>
+            </parameter>
+            <comment>Gets or sets the execution mode of zip/unzip tasks (one of the ZIP_EXECMODE_ constants).
+SYNCHRONOUS: waits for the end of the task (default mode).
+ASYNCHRONOUS: does not wait for the end of the task. The function returns immediately and the task continues in the background. Check ZipResultCode to know whether the task has ended.
+In both modes, do not try to handle views from within the events.</comment>
+        </property>
+        <property>
+            <name>RootFolderInZip</name>
+            <returntype>java.lang.String</returntype>
+            <parameter>
+                <name>RootFolder</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <comment>Gets or sets the root folder in the zip archive.</comment>
+        </property>
+        <property>
+            <name>ZipAESKeyStrength</name>
+            <returntype>int</returntype>
+            <comment></comment>
+        </property>
+        <property>
+            <name>ZipResultCode</name>
+            <returntype>int</returntype>
+            <comment>Returns a result code (one of the ZIP_RESULT_ constants) when a task is done, or ZIP_RESULT_WORKING when the task is still in progress.</comment>
+        </property>
+        <property>
+            <name>ZipCompressionLevel</name>
+            <returntype>int</returntype>
+            <parameter>
+                <name>Level</name>
+                <type>int</type>
+            </parameter>
+            <comment>Gets or sets the compression level.
+ From 1: lowest compression level but higher speed of compression.
+ To 9: highest compression level but low speed.
+Setting a compression level forces ZipCompression to True.</comment>
+        </property>
+        <property>
+            <name>ZipEncryption</name>
+            <returntype>boolean</returntype>
+            <parameter>
+                <name>Enabled</name>
+                <type>boolean</type>
+            </parameter>
+            <comment>Gets or sets whether the encryption is enabled.</comment>
+        </property>
+        <property>
+            <name>ZipEncryptionMethod</name>
+            <returntype>int</returntype>
+            <comment>Returns the encryption method (one of the ZIP_ENC_ constants) set with EncryptZipWith.</comment>
+        </property>
+        <field>
+            <name>ZIP_RESULT_WORKING</name>
+            <comment></comment>
+            <returntype>int</returntype>
+        </field>
+        <field>
+            <name>ZIP_UNKNOWN_ERROR</name>
+            <comment></comment>
+            <returntype>java.lang.String</returntype>
+        </field>
+        <field>
+            <name>ZIP_AES_STRENGTH_128</name>
+            <comment></comment>
+            <returntype>int</returntype>
+        </field>
+        <field>
+            <name>ZIP_EXECMODE_ASYNCHRONOUS</name>
+            <comment></comment>
+            <returntype>byte</returntype>
+        </field>
+        <field>
+            <name>ZIP_OPERATION_ADD</name>
+            <comment></comment>
+            <returntype>int</returntype>
+        </field>
+        <field>
+            <name>ZIP_ENC_METHOD_AES</name>
+            <comment></comment>
+            <returntype>int</returntype>
+        </field>
+        <field>
+            <name>ZIP_AES_STRENGTH_192</name>
+            <comment></comment>
+            <returntype>int</returntype>
+        </field>
+        <field>
+            <name>ZIP_OPERATION_REMOVE</name>
+            <comment></comment>
+            <returntype>int</returntype>
+        </field>
+        <field>
+            <name>ZIP_RESULT_SUCCESS</name>
+            <comment></comment>
+            <returntype>int</returntype>
+        </field>
+        <field>
+            <name>ZIP_AES_STRENGTH_256</name>
+            <comment></comment>
+            <returntype>int</returntype>
+        </field>
+        <field>
+            <name>ZIP_COMP_STORE</name>
+            <comment></comment>
+            <returntype>int</returntype>
+        </field>
+        <field>
+            <name>ZIP_COMP_AES_ENC</name>
+            <comment></comment>
+            <returntype>int</returntype>
+        </field>
+        <field>
+            <name>ZIP_ENC_NO_ENCRYPTION</name>
+            <comment></comment>
+            <returntype>int</returntype>
+        </field>
+        <field>
+            <name>ZIP_ENC_METHOD_STANDARD</name>
+            <comment></comment>
+            <returntype>int</returntype>
+        </field>
+        <field>
+            <name>ZIP_OPERATION_MERGE</name>
+            <comment></comment>
+            <returntype>int</returntype>
+        </field>
+        <field>
+            <name>ZIP_EXECMODE_SYNCHRONOUS</name>
+            <comment></comment>
+            <returntype>byte</returntype>
+        </field>
+        <field>
+            <name>ZIP_OPERATION_CALC_CRC</name>
+            <comment></comment>
+            <returntype>int</returntype>
+        </field>
+        <field>
+            <name>ZIP_RESULT_ERROR</name>
+            <comment></comment>
+            <returntype>int</returntype>
+        </field>
+        <field>
+            <name>ZIP_OPERATION_EXTRACT</name>
+            <comment></comment>
+            <returntype>int</returntype>
+        </field>
+        <field>
+            <name>ZIP_RESULT_CANCELLED</name>
+            <comment></comment>
+            <returntype>int</returntype>
+        </field>
+        <field>
+            <name>ZIP_COMP_DEFLATE</name>
+            <comment></comment>
+            <returntype>int</returntype>
+        </field>
+    </class>
+    <class>
+        <name>b4a.flm.archiverplus.ArchiverPlusZip.ZipInfo</name>
+        <shortname>ArchiverZipInfo</shortname>
+        <owner>process</owner>
+        <method>
+            <name>IsFileNameUTF8Encoded</name>
+            <comment></comment>
+            <returntype>boolean</returntype>
+        </method>
+        <property>
+            <name>EncryptionMethod</name>
+            <returntype>int</returntype>
+            <comment>Returns the encryption method (one of the ZIP_ENC_ constants).</comment>
+        </property>
+        <property>
+            <name>UncompressedSize</name>
+            <returntype>long</returntype>
+            <comment>Returns the uncompressed size in bytes.</comment>
+        </property>
+        <property>
+            <name>LastModFileTime</name>
+            <returntype>long</returntype>
+            <comment>Returns the timestamp of the file.</comment>
+        </property>
+        <property>
+            <name>CompressionMethod</name>
+            <returntype>int</returntype>
+            <comment>Returns the compression method (one of the ZIP_COMP_ constants).</comment>
+        </property>
+        <property>
+            <name>FileName</name>
+            <returntype>java.lang.String</returntype>
+            <comment></comment>
+        </property>
+        <property>
+            <name>CRC32</name>
+            <returntype>long</returntype>
+            <comment></comment>
+        </property>
+        <property>
+            <name>CompressedSize</name>
+            <returntype>long</returntype>
+            <comment>Returns the compressed size in bytes.</comment>
+        </property>
+    </class>
+    <version>1.11</version>
+    <author>Fr\u00e9d\u00e9ric Leneuf-Magaud, Srikanth Reddy Lingala</author>
+</root>

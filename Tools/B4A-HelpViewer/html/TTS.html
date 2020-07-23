@@ -1,0 +1,56 @@
+<HTML>
+<HEAD>
+<META http-equiv="Content-Type" content="text/html; charset=utf-8">
+<TITLE>
+Basic4android - TTS
+</TITLE>
+<link rel="stylesheet" type="text/css" href="images/help.css" />
+
+</HEAD>
+
+<BODY BGCOLOR="white" leftmargin="50">
+<a name="top"/>
+<h1>TTS</h1>
+
+</h5>
+<h4>List of types:</h4>
+<a href='#tts'>TTS</a><br/>
+<hr/>
+<h3><u><a name='tts'>TTS</a></u></h3>
+</h5>Synthesizes text to speech and plays it.<br/>After initializing the object you should wait for the Ready event.<br/>See this <a href='http://www.basic4ppc.com/forum/basic4android-getting-started-tutorials/7043-android-text-speech-example.html'>example</a>.
+<br/>
+
+<h4>Events:</h4>
+Ready (Success As Boolean)<br/>
+<h4>Members:</h4><br/>
+<img src='images/15.png'/>&nbsp;&nbsp;<span style="color: #000000;"><a href='#tts_initialize'><b>Initialize</b></a> (EventName </span><span style="color: #0000FF;">As</span><span style="color: #000000;"> </span><span style="color: #008B8B;">String</span><span style="color: #000000;">)</span><br/><br/>
+<img src='images/15.png'/>&nbsp;&nbsp;<span style="color: #000000;"><a href='#tts_isinitialized'><b>IsInitialized</b></a> </span><span style="color: #0000FF;">As</span><span style="color: #000000;"> </span><span style="color: #008B8B;">Boolean</span><br/><br/>
+<img src='images/19.png'/>&nbsp;&nbsp;<span style="color: #000000;"><a href='#tts_pitch'><b>Pitch</b></a> </span><span style="color: #0000FF;">As</span><span style="color: #000000;"> </span><span style="color: #008B8B;">Float</span><span style="color: #000000;">  [write only]</span><br/><br/>
+<img src='images/15.png'/>&nbsp;&nbsp;<span style="color: #000000;"><a href='#tts_release'><b>Release</b></a></span><br/><br/>
+<img src='images/15.png'/>&nbsp;&nbsp;<span style="color: #000000;"><a href='#tts_setlanguage'><b>SetLanguage</b></a> (Language </span><span style="color: #0000FF;">As</span><span style="color: #000000;"> </span><span style="color: #008B8B;">String</span><span style="color: #000000;">, Country </span><span style="color: #0000FF;">As</span><span style="color: #000000;"> </span><span style="color: #008B8B;">String</span><span style="color: #000000;">) </span><span style="color: #0000FF;">As</span><span style="color: #000000;"> </span><span style="color: #008B8B;">Boolean</span><br/><br/>
+<img src='images/15.png'/>&nbsp;&nbsp;<span style="color: #000000;"><a href='#tts_speak'><b>Speak</b></a> (Text </span><span style="color: #0000FF;">As</span><span style="color: #000000;"> </span><span style="color: #008B8B;">String</span><span style="color: #000000;">, ClearQueue </span><span style="color: #0000FF;">As</span><span style="color: #000000;"> </span><span style="color: #008B8B;">Boolean</span><span style="color: #000000;">)</span><br/><br/>
+<img src='images/19.png'/>&nbsp;&nbsp;<span style="color: #000000;"><a href='#tts_speechrate'><b>SpeechRate</b></a> </span><span style="color: #0000FF;">As</span><span style="color: #000000;"> </span><span style="color: #008B8B;">Float</span><span style="color: #000000;">  [write only]</span><br/><br/>
+<img src='images/15.png'/>&nbsp;&nbsp;<span style="color: #000000;"><a href='#tts_stop'><b>Stop</b></a></span><br/><br/>
+
+<h4>Members description:</h4>
+<a name='tts_initialize'/>
+<h5><img src='images/15.png'/>
+<span style="color: #000000;">Initialize (EventName </span><span style="color: #0000FF;">As</span><span style="color: #000000;"> </span><span style="color: #008B8B;">String</span><span style="color: #000000;">)</span></h5>Initializes the object.<br/>The Ready event will be raised when the text to speech engine is ready.<br/>EventName - The Sub that will handle the Ready event.<a name='tts_isinitialized'/>
+<h5><img src='images/15.png'/>
+<span style="color: #000000;">IsInitialized </span><span style="color: #0000FF;">As</span><span style="color: #000000;"> </span><span style="color: #008B8B;">Boolean</span></h5><a name='tts_pitch'/>
+<h5><img src='images/19.png'/>
+<span style="color: #000000;">Pitch </span><span style="color: #0000FF;">As</span><span style="color: #000000;"> </span><span style="color: #008B8B;">Float</span><span style="color: #000000;">  [write only]</span></h5>Sets the pitch value. Default is 1.<br/>Example: <span class='pre'><span style="color: #000000;">TTS1.Pitch = </span><span style="color: #800080;">1.5</span></span><a name='tts_release'/>
+<h5><img src='images/15.png'/>
+<span style="color: #000000;">Release</span></h5>Releases any resources related to this object. You will need to initialize the object again before use.<br/>Note that it is safe to call this method with an uninitialized object.<a name='tts_setlanguage'/>
+<h5><img src='images/15.png'/>
+<span style="color: #000000;">SetLanguage (Language </span><span style="color: #0000FF;">As</span><span style="color: #000000;"> </span><span style="color: #008B8B;">String</span><span style="color: #000000;">, Country </span><span style="color: #0000FF;">As</span><span style="color: #000000;"> </span><span style="color: #008B8B;">String</span><span style="color: #000000;">) </span><span style="color: #0000FF;">As</span><span style="color: #000000;"> </span><span style="color: #008B8B;">Boolean</span></h5>Sets the spoken language.<br/>Language - Language code. Two lowercase letters.<br/>Country - Country code. Two uppercase letters. Pass an empty string if not needed.<br/>Returns True if a matching language is available. The country value will be ignored if the language code matches and the country code does not match.<a name='tts_speak'/>
+<h5><img src='images/15.png'/>
+<span style="color: #000000;">Speak (Text </span><span style="color: #0000FF;">As</span><span style="color: #000000;"> </span><span style="color: #008B8B;">String</span><span style="color: #000000;">, ClearQueue </span><span style="color: #0000FF;">As</span><span style="color: #000000;"> </span><span style="color: #008B8B;">Boolean</span><span style="color: #000000;">)</span></h5>Speaks the given text.<br/>ClearQueue - If True then all waiting texts are dismissed and the new text is spoken.<br/>Otherwise the new text is added to the queue.<a name='tts_speechrate'/>
+<h5><img src='images/19.png'/>
+<span style="color: #000000;">SpeechRate </span><span style="color: #0000FF;">As</span><span style="color: #000000;"> </span><span style="color: #008B8B;">Float</span><span style="color: #000000;">  [write only]</span></h5>Sets the speech rate. Default is 1.<br/>Example: <span class='pre'><span style="color: #000000;">TTS1.SpeechRate = </span><span style="color: #800080;">0.5</span></span><a name='tts_stop'/>
+<h5><img src='images/15.png'/>
+<span style="color: #000000;">Stop</span></h5>Stops speaking any currently playing text (and dismisses texts in the queue).
+<hr/>
+<a href="#top">Top</a>
+</body>
+</html>

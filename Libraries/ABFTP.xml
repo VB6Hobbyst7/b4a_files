@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root>
+    <doclet-version-NOT-library-version>1.00</doclet-version-NOT-library-version>
+    <class>
+        <name>com.AB.FTP.ABFTP</name>
+        <shortname>ABFTP</shortname>
+        <owner>process</owner>
+        <permission>android.permission.INTERNET</permission>
+        <method>
+            <name>ABFTPDownload</name>
+            <comment>Downloads a file from the ftp to the device
+sourceFolder (String): folder on the ftp starting and ending with /
+sourceFile (String)  : filename on the ftp
+targetFolder (String): folder on the device starting and ending with /
+targetFile (String)  : filename on the device
+Example:&lt;code&gt;
+sdRoot = File.DirRootExternal &amp; "/"
+myftp.ABFTPDownload("/upload/", "test.txt", sdRoot, "test2.txt")
+If myftp.ABFTPLastError &lt;&gt; "" Then
+	Msgbox(myftp.ABFTPLastError,"")
+Else
+	Msgbox("File downloaded!, "")
+End If
+&lt;/code&gt;</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>sourceFolder</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>sourceFile</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>targetFolder</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>targetFile</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+        <method>
+            <name>ABFTPDisconnect</name>
+            <comment>Disconnects from the ftp
+Example:&lt;code&gt;
+myftp.ABFTPDisconnect()
+&lt;/code&gt;</comment>
+            <returntype>void</returntype>
+        </method>
+        <method>
+            <name>ABFTPConnect</name>
+            <comment>Connects with a ftp site
+host (String) : ftp site e.g. ftp.mywebsite.com
+port (Int)    : connection port, usually 21
+login (String): user login
+pwd (String)  : user password
+Example:&lt;code&gt;
+myFTP.ABFTPConnect("ftp.mywebsite.com", 21, "login", "password")
+If myFTP.ABFTPConnected = True Then
+	Msgbox("Connected", "")
+Else
+	Msgbox(myFTP.ABFTPLastError, "")
+End If
+&lt;/code&gt;</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>host</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>port</name>
+                <type>int</type>
+            </parameter>
+            <parameter>
+                <name>login</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>pwd</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+        <method>
+            <name>ABFTPUpload</name>
+            <comment>Uploads a file from the device to the ftp
+sourceFolder (String): folder on the device starting and ending with /
+sourceFile (String)  : filename on the device
+targetFolder (String): folder on the ftp starting and ending with /
+targetFile (String)  : filename on the ftp
+Example:&lt;code&gt;
+sdRoot = File.DirRootExternal &amp; "/"
+myftp.ABFTPUpload(sdRoot, "test.txt","upload","test.txt")
+If myftp.ABFTPLastError &lt;&gt; "" Then
+	Msgbox(myftp.ABFTPLastError,"")
+Else
+	Msgbox("file uploaded!","")
+End If
+&lt;/code&gt;</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>sourceFolder</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>sourceFile</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>targetFolder</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>targetFile</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+        <method>
+            <name>ABFTPListFiles</name>
+            <comment>Returns a table of strings with the file names
+listFolder (String): the folder to list
+Example:&lt;code&gt;
+Dim myFiles() As String
+myfiles = myftp.ABFTPListFiles("/upload/")
+If myftp.ABFTPLastError &lt;&gt; "" Then
+	Msgbox(myftp.ABFTPLastError,"")
+Else
+	For a = 0 To myfiles.Length - 1
+		listview1.AddSingleLine(myfiles(a))
+	Next
+End If
+&lt;/code&gt;</comment>
+            <returntype>java.lang.String[]</returntype>
+            <parameter>
+                <name>listFolder</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+        <method>
+            <name>ABFTPDeleteFile</name>
+            <comment>Deletes a file from the ftp site
+targetFolder (String): folder on the ftp site starting and ending with /
+targetFile (String)  : file name
+Example:&lt;code&gt;
+myftp.ABFTPDeleteFile("/upload/","test.txt")
+If myftp.ABFTPLastError &lt;&gt; "" Then
+	Msgbox(myftp.ABFTPLastError,"")
+Else
+	Msgbox("file deleted!", "")
+End If
+&lt;/code&gt;</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>targetFolder</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>targetFile</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+        <property>
+            <name>ABFTPLastError</name>
+            <returntype>java.lang.String</returntype>
+            <comment>returns the last error message if any
+Example:&lt;code&gt;
+If myftp.ABFTPLastError &lt;&gt; "" Then
+	Msgbox(myftp.ABFTPLastError,"")
+Else
+	Msgbox("everything ok", "")
+End If 
+&lt;/code&gt;</comment>
+        </property>
+        <property>
+            <name>ABFTPConnected</name>
+            <returntype>boolean</returntype>
+            <comment>returns if you are connected to the ftp
+Example:&lt;code&gt;
+If myFTP.ABFTPConnected = True Then
+	Msgbox("Connected", "")
+Else
+	Msgbox(myFTP.ABFTPLastError, "")
+End If 
+&lt;/code&gt;</comment>
+        </property>
+    </class>
+    <version>1.0</version>
+    <author>Alain Bailleul</author>
+</root>

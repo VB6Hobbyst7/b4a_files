@@ -1,0 +1,539 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root>
+    <doclet-version-NOT-library-version>1.04</doclet-version-NOT-library-version>
+    <class>
+        <name>de.amberhome.actionbarhelper.SearchViewWrapper</name>
+        <shortname>SearchView</shortname>
+        <owner>activity</owner>
+        <event>QuerySubmitted (Query as String)</event>
+        <method>
+            <name>Initialize</name>
+            <comment>Initialize the object
+ 
+ EventName: Name of the event</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>ba</name>
+                <type>anywheresoftware.b4a.BA</type>
+            </parameter>
+            <parameter>
+                <name>EventName</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+        <method>
+            <name>Submit</name>
+            <comment>Programatically Submit the search phrase.</comment>
+            <returntype>void</returntype>
+        </method>
+        <property>
+            <name>Iconfied</name>
+            <returntype>boolean</returntype>
+            <parameter>
+                <name>Iconified</name>
+                <type>boolean</type>
+            </parameter>
+            <comment>Set/Get if the SerachView is iconified</comment>
+        </property>
+        <property>
+            <name>QueryHint</name>
+            <returntype>java.lang.String</returntype>
+            <parameter>
+                <name>Hint</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <comment>Set/Get the query hint
+ 
+ Hint: Text to set</comment>
+        </property>
+        <property>
+            <name>Query</name>
+            <returntype>java.lang.String</returntype>
+            <parameter>
+                <name>Query</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <comment>Set/Get the query text
+ 
+ Query: Text to set</comment>
+        </property>
+        <property>
+            <name>SubmitButtonEnabled</name>
+            <returntype>boolean</returntype>
+            <parameter>
+                <name>Enabled</name>
+                <type>boolean</type>
+            </parameter>
+            <comment>Set/Get if the submit button is enabled</comment>
+        </property>
+        <property>
+            <name>IconifiedByDefault</name>
+            <returntype>boolean</returntype>
+            <parameter>
+                <name>Iconified</name>
+                <type>boolean</type>
+            </parameter>
+            <comment>Set/Get if the SearchView is iconified by default</comment>
+        </property>
+    </class>
+    <class>
+        <name>de.amberhome.actionbarhelper.PopupMenuWrapper</name>
+        <shortname>PopupMenu</shortname>
+        <owner>activity</owner>
+        <event>ItemClicked (Item As MenuItem)</event>
+        <event>Closed</event>
+        <method>
+            <name>Initialize</name>
+            <comment>Initialize the PopupMenu
+ 
+ EventName: Name for the events
+ View: Anchor View which is used for the PopupMenu position</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>ba</name>
+                <type>anywheresoftware.b4a.BA</type>
+            </parameter>
+            <parameter>
+                <name>EventName</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>view</name>
+                <type>android.view.View</type>
+            </parameter>
+        </method>
+        <method>
+            <name>Close</name>
+            <comment>Close the Popup menu</comment>
+            <returntype>void</returntype>
+        </method>
+        <method>
+            <name>RemoveMenuItem</name>
+            <comment>Remove menu item
+ 
+ ItemId: Item to be removed</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>ItemId</name>
+                <type>int</type>
+            </parameter>
+        </method>
+        <method>
+            <name>GetMenu</name>
+            <comment>Gets the menu object</comment>
+            <returntype>de.amberhome.actionbarhelper.MenuWrapper</returntype>
+        </method>
+        <method>
+            <name>Show</name>
+            <comment>Show the popup menu.</comment>
+            <returntype>void</returntype>
+        </method>
+        <method>
+            <name>GetItem</name>
+            <comment>Get the Menu Item Object for a given Id</comment>
+            <returntype>android.view.MenuItem</returntype>
+            <parameter>
+                <name>ItemId</name>
+                <type>int</type>
+            </parameter>
+        </method>
+        <method>
+            <name>AddMenuItem</name>
+            <comment>Add a new menu item and then return it.
+ 
+ ItemId: Id for the menu item
+ Title: Title for the menu 
+ Icon: Drawable to be shown as menu icon</comment>
+            <returntype>de.amberhome.actionbarhelper.MenuItemWrapper</returntype>
+            <parameter>
+                <name>ItemId</name>
+                <type>int</type>
+            </parameter>
+            <parameter>
+                <name>Title</name>
+                <type>java.lang.CharSequence</type>
+            </parameter>
+            <parameter>
+                <name>Icon</name>
+                <type>android.graphics.drawable.Drawable</type>
+            </parameter>
+        </method>
+    </class>
+    <class>
+        <name>de.amberhome.actionbarhelper.MenuWrapper</name>
+        <shortname>Menu</shortname>
+        <objectwrapper>android.view.Menu</objectwrapper>
+        <owner>process</owner>
+        <method>
+            <name>Clear</name>
+            <comment>Clears all menu items from the menu.</comment>
+            <returntype>void</returntype>
+        </method>
+        <method>
+            <name>GetItem</name>
+            <comment>returns the item with the given index.</comment>
+            <returntype>de.amberhome.actionbarhelper.MenuItemWrapper</returntype>
+            <parameter>
+                <name>Index</name>
+                <type>int</type>
+            </parameter>
+        </method>
+        <method>
+            <name>Close</name>
+            <comment>Close the menu if it is open.</comment>
+            <returntype>void</returntype>
+        </method>
+        <method>
+            <name>RemoveItem</name>
+            <comment>Remove Item from menu
+
+ItemId : item to be removed</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>ItemId</name>
+                <type>int</type>
+            </parameter>
+        </method>
+        <method>
+            <name>FindItem</name>
+            <comment>returns the item with the given Id. Returns null if the item cannot be found.
+
+ItemId : Id of the item to be searched for.</comment>
+            <returntype>de.amberhome.actionbarhelper.MenuItemWrapper</returntype>
+            <parameter>
+                <name>ItemId</name>
+                <type>int</type>
+            </parameter>
+        </method>
+        <method>
+            <name>Add</name>
+            <comment>Add a menu item to the menu
+ 
+ItemId : Id for the item
+Title : Title for the item
+Icon : Bitmap that is used as an icon. Pass null for no icon.</comment>
+            <returntype>de.amberhome.actionbarhelper.MenuItemWrapper</returntype>
+            <parameter>
+                <name>ItemId</name>
+                <type>int</type>
+            </parameter>
+            <parameter>
+                <name>SortOrder</name>
+                <type>int</type>
+            </parameter>
+            <parameter>
+                <name>Title</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>Icon</name>
+                <type>android.graphics.Bitmap</type>
+            </parameter>
+        </method>
+        <method>
+            <name>Add2</name>
+            <comment>Add a menu item to the menu
+ 
+ItemId : Id for the item
+Title : Title for the item
+Icon : Drawable that is used as an icon. Pass null for no icon.</comment>
+            <returntype>de.amberhome.actionbarhelper.MenuItemWrapper</returntype>
+            <parameter>
+                <name>ItemId</name>
+                <type>int</type>
+            </parameter>
+            <parameter>
+                <name>SortOrder</name>
+                <type>int</type>
+            </parameter>
+            <parameter>
+                <name>Title</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>Icon</name>
+                <type>android.graphics.drawable.Drawable</type>
+            </parameter>
+        </method>
+        <method>
+            <name>Size</name>
+            <comment>Returns the number of items in the menu</comment>
+            <returntype>int</returntype>
+        </method>
+        <method>
+            <name>IsInitialized</name>
+            <comment></comment>
+            <returntype>boolean</returntype>
+        </method>
+    </class>
+    <class>
+        <name>de.amberhome.actionbarhelper.MenuItemWrapper</name>
+        <shortname>MenuItem</shortname>
+        <objectwrapper>android.view.MenuItem</objectwrapper>
+        <owner>process</owner>
+        <method>
+            <name>IsInitialized</name>
+            <comment></comment>
+            <returntype>boolean</returntype>
+        </method>
+        <property>
+            <name>ItemCollapsed</name>
+            <returntype>boolean</returntype>
+            <parameter>
+                <name>Flag</name>
+                <type>boolean</type>
+            </parameter>
+            <comment>Set/get the item to collapsed mode. (For the SearchView for example)</comment>
+        </property>
+        <property>
+            <name>Enabled</name>
+            <returntype>boolean</returntype>
+            <parameter>
+                <name>Enabled</name>
+                <type>boolean</type>
+            </parameter>
+            <comment>Enable/disable the item</comment>
+        </property>
+        <property>
+            <name>ShowAsAction</name>
+            <parameter>
+                <name>ActionType</name>
+                <type>int</type>
+            </parameter>
+            <comment>Show menu item as action if possible.</comment>
+        </property>
+        <property>
+            <name>Visible</name>
+            <returntype>boolean</returntype>
+            <parameter>
+                <name>Visible</name>
+                <type>boolean</type>
+            </parameter>
+            <comment>Show/hide the item</comment>
+        </property>
+        <property>
+            <name>Checkable</name>
+            <returntype>boolean</returntype>
+            <parameter>
+                <name>Cheackable</name>
+                <type>boolean</type>
+            </parameter>
+            <comment>Make the item checkable</comment>
+        </property>
+        <property>
+            <name>SearchView</name>
+            <parameter>
+                <name>SearchView</name>
+                <type>de.amberhome.actionbarhelper.SearchViewWrapper</type>
+            </parameter>
+            <comment>Connects a SearchView to this MenuItem.
+ 
+ SearchView: Instance of a SearchView object</comment>
+        </property>
+        <property>
+            <name>Checked</name>
+            <returntype>boolean</returntype>
+            <parameter>
+                <name>Checked</name>
+                <type>boolean</type>
+            </parameter>
+            <comment>Check the item</comment>
+        </property>
+        <property>
+            <name>Id</name>
+            <returntype>int</returntype>
+            <comment>Gets the item id</comment>
+        </property>
+        <property>
+            <name>Title</name>
+            <returntype>java.lang.String</returntype>
+            <parameter>
+                <name>Title</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <comment>Sets/gets the title of the menu</comment>
+        </property>
+        <property>
+            <name>Icon</name>
+            <returntype>android.graphics.drawable.Drawable</returntype>
+            <parameter>
+                <name>Icon</name>
+                <type>android.graphics.drawable.Drawable</type>
+            </parameter>
+            <comment>Sets or gets the Icon for the menu item.
+ 
+ Icon : Icon drawable</comment>
+        </property>
+        <field>
+            <name>SHOW_AS_ACTION_WITH_TEXT</name>
+            <comment></comment>
+            <returntype>int</returntype>
+        </field>
+        <field>
+            <name>SHOW_AS_ACTION_ALWAYS</name>
+            <comment></comment>
+            <returntype>int</returntype>
+        </field>
+        <field>
+            <name>SHOW_AS_ACTION_IF_ROOM</name>
+            <comment></comment>
+            <returntype>int</returntype>
+        </field>
+        <field>
+            <name>SHOW_AS_ACTION_NEVER</name>
+            <comment></comment>
+            <returntype>int</returntype>
+        </field>
+    </class>
+    <class>
+        <name>de.amberhome.actionbarhelper.ActionModeWrapper</name>
+        <shortname>ActionMode</shortname>
+        <owner>activity</owner>
+        <event>ItemClicked (Item As MenuItem)</event>
+        <event>Created (Menu as Menu)</event>
+        <event>Prepared (Menu as Menu)</event>
+        <event>Closed</event>
+        <method>
+            <name>Invalidate</name>
+            <comment>Invalidate the ActionMode and recreate the menu. If this method is called the _Prepared event is called again where the menu can be modified.</comment>
+            <returntype>void</returntype>
+        </method>
+        <method>
+            <name>Initialize</name>
+            <comment>Initialize the ActionMode object
+
+EventName: Name for the Events</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>ba</name>
+                <type>anywheresoftware.b4a.BA</type>
+            </parameter>
+            <parameter>
+                <name>EventName</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+        <method>
+            <name>Start</name>
+            <comment>Start the ActionMode</comment>
+            <returntype>void</returntype>
+        </method>
+        <method>
+            <name>IsActive</name>
+            <comment>returns true if the ActionMode is currently active</comment>
+            <returntype>boolean</returntype>
+        </method>
+        <method>
+            <name>Finish</name>
+            <comment>End the ActionMode and close the contextual ActionBar</comment>
+            <returntype>void</returntype>
+        </method>
+        <property>
+            <name>SubTitle</name>
+            <returntype>java.lang.String</returntype>
+            <parameter>
+                <name>SubTitle</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <comment>Sets or gets the SubTitle</comment>
+        </property>
+        <property>
+            <name>Title</name>
+            <returntype>java.lang.String</returntype>
+            <parameter>
+                <name>Title</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <comment>Sets or gets the Title</comment>
+        </property>
+    </class>
+    <class>
+        <name>de.amberhome.actionbarhelper.ActionBarHelper</name>
+        <shortname>StdActionBarHelper</shortname>
+        <owner>activity</owner>
+        <method>
+            <name>Initialize</name>
+            <comment>Initializes the object</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>ba</name>
+                <type>anywheresoftware.b4a.BA</type>
+            </parameter>
+        </method>
+        <method>
+            <name>Hide</name>
+            <comment>Hide the ActionBar</comment>
+            <returntype>void</returntype>
+        </method>
+        <method>
+            <name>Show</name>
+            <comment>Show the ActionBar</comment>
+            <returntype>void</returntype>
+        </method>
+        <method>
+            <name>IsShowing</name>
+            <comment>Returns if the ActionBar is currently hidden or not.</comment>
+            <returntype>boolean</returntype>
+        </method>
+        <method>
+            <name>SetHomeAsUpIndicator</name>
+            <comment>Set the up indicator drawable. Useful for implementing the NavigationDrawer pattern.
+  
+ Icon: Drawable to be used for the Icon
+ Description: Description for the Homebutton (long press info)</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>ba</name>
+                <type>anywheresoftware.b4a.BA</type>
+            </parameter>
+            <parameter>
+                <name>Icon</name>
+                <type>android.graphics.drawable.Drawable</type>
+            </parameter>
+        </method>
+        <property>
+            <name>HomeVisible</name>
+            <parameter>
+                <name>Value</name>
+                <type>boolean</type>
+            </parameter>
+            <comment>Show/Hide the home icon</comment>
+        </property>
+        <property>
+            <name>ShowHomeAsUp</name>
+            <parameter>
+                <name>Value</name>
+                <type>boolean</type>
+            </parameter>
+            <comment>Show Home Icon with up indicator</comment>
+        </property>
+        <property>
+            <name>HomeButtonEnabled</name>
+            <parameter>
+                <name>Value</name>
+                <type>boolean</type>
+            </parameter>
+            <comment>Enable/Disable the home button</comment>
+        </property>
+        <property>
+            <name>TitleVisible</name>
+            <parameter>
+                <name>Value</name>
+                <type>boolean</type>
+            </parameter>
+            <comment>Show/Hide the title</comment>
+        </property>
+        <property>
+            <name>Icon</name>
+            <parameter>
+                <name>Icon</name>
+                <type>android.graphics.drawable.Drawable</type>
+            </parameter>
+            <comment>Set the icon of the ActionBar
+ 
+ Drawable to be used for the Home Icon</comment>
+        </property>
+    </class>
+    <version>1.1</version>
+    <author>Markus Stipp</author>
+</root>

@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root>
+    <doclet-version-NOT-library-version>1.05</doclet-version-NOT-library-version>
+    <class>
+        <name>de.donmanfred.AnimatedGifEncoderWrapper</name>
+        <shortname>AnimatedGifEncoder</shortname>
+        <objectwrapper>com.github.AnimatedGifEncoder</objectwrapper>
+        <owner>process</owner>
+        <method>
+            <name>start</name>
+            <comment>Initiates GIF file creation on the given stream. The stream is not closed
+ automatically.
+os: OutputStream on which GIF images are written.
+Return type: @return:false if initial write failed.</comment>
+            <returntype>boolean</returntype>
+            <parameter>
+                <name>os</name>
+                <type>java.io.OutputStream</type>
+            </parameter>
+        </method>
+        <method>
+            <name>IsInitialized</name>
+            <comment></comment>
+            <returntype>boolean</returntype>
+        </method>
+        <method>
+            <name>Initialize</name>
+            <comment></comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>ba</name>
+                <type>anywheresoftware.b4a.BA</type>
+            </parameter>
+            <parameter>
+                <name>EventName</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+        <method>
+            <name>setPosition</name>
+            <comment>Sets the GIF frame position. The position is 0,0 by default. Useful for
+ only updating a section of the image
+w: int frame width.
+h: int frame width.</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>x</name>
+                <type>int</type>
+            </parameter>
+            <parameter>
+                <name>y</name>
+                <type>int</type>
+            </parameter>
+        </method>
+        <method>
+            <name>setSize</name>
+            <comment>Sets the GIF frame size. The default size is the size of the first frame
+ added if this method is not invoked.
+w: int frame width.
+h: int frame width.</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>w</name>
+                <type>int</type>
+            </parameter>
+            <parameter>
+                <name>h</name>
+                <type>int</type>
+            </parameter>
+        </method>
+        <method>
+            <name>addFrame</name>
+            <comment>Adds next GIF frame. The frame is not written immediately, but is actually
+ deferred until the next frame is received so that timing data can be
+ inserted. Invoking &lt;code&gt;finish()&lt;/code&gt; flushes all frames. If
+ &lt;code&gt;setSize&lt;/code&gt; was not invoked, the size of the first image is used
+ for all subsequent frames.
+im: BufferedImage containing frame to write.
+Return type: @return:true if successful.</comment>
+            <returntype>boolean</returntype>
+            <parameter>
+                <name>im</name>
+                <type>android.graphics.Bitmap</type>
+            </parameter>
+        </method>
+        <method>
+            <name>finish</name>
+            <comment>Flushes any pending data and closes output file. If writing to an
+ OutputStream, the stream is not closed.</comment>
+            <returntype>boolean</returntype>
+        </method>
+        <property>
+            <name>Dispose</name>
+            <parameter>
+                <name>code</name>
+                <type>int</type>
+            </parameter>
+            <comment>Sets the GIF frame disposal code for the last added frame and any
+ subsequent frames. Default is 0 if no transparent color has been set,
+ otherwise 2.</comment>
+        </property>
+        <property>
+            <name>FrameRate</name>
+            <parameter>
+                <name>fps</name>
+                <type>float</type>
+            </parameter>
+            <comment>Sets frame rate in frames per second. Equivalent to
+ &lt;code&gt;setDelay(1000/fps)&lt;/code&gt;.</comment>
+        </property>
+        <property>
+            <name>Transparent</name>
+            <parameter>
+                <name>c</name>
+                <type>int</type>
+            </parameter>
+            <comment>Sets the transparent color for the last added frame and any subsequent
+ frames. Since all colors are subject to modification in the quantization
+ process, the color in the final palette for each frame closest to the given
+ color becomes the transparent color for that frame. May be set to null to
+ indicate no transparent color.</comment>
+        </property>
+        <property>
+            <name>Quality</name>
+            <parameter>
+                <name>quality</name>
+                <type>int</type>
+            </parameter>
+            <comment>Sets quality of color quantization (conversion of images to the maximum 256
+ colors allowed by the GIF specification). Lower values (minimum = 1)
+ produce better colors, but slow processing significantly. 10 is the
+ default, and produces good color mapping at reasonable speeds. Values
+ greater than 20 do not yield significant improvements in speed.</comment>
+        </property>
+        <property>
+            <name>Repeat</name>
+            <parameter>
+                <name>iter</name>
+                <type>int</type>
+            </parameter>
+            <comment>Sets the number of times the set of GIF frames should be played. Default is
+ 1; 0 means play indefinitely. Must be invoked before the first image is
+ added.</comment>
+        </property>
+        <property>
+            <name>Delay</name>
+            <parameter>
+                <name>ms</name>
+                <type>int</type>
+            </parameter>
+            <comment>Sets the delay time between each frame, or changes it for subsequent frames
+ (applies to last frame added).</comment>
+        </property>
+    </class>
+    <version>1.0</version>
+    <author>DonManfred (wrapper)</author>
+</root>

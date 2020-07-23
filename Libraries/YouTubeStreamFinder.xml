@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root>
+    <doclet-version-NOT-library-version>1.02</doclet-version-NOT-library-version>
+    <class>
+        <name>uk.co.martinpearman.b4a.youtubestreamfinder.VideoInfo</name>
+        <shortname>YouTubeVideoInfo</shortname>
+        <owner>process</owner>
+        <property>
+            <name>VideoId</name>
+            <returntype>java.lang.String</returntype>
+            <comment></comment>
+        </property>
+        <property>
+            <name>Duration</name>
+            <returntype>int</returntype>
+            <comment>Get the duration of the video in seconds.</comment>
+        </property>
+        <property>
+            <name>Author</name>
+            <returntype>java.lang.String</returntype>
+            <comment></comment>
+        </property>
+        <property>
+            <name>ThumbnailUrl</name>
+            <returntype>java.lang.String</returntype>
+            <comment></comment>
+        </property>
+        <property>
+            <name>Streams</name>
+            <returntype>anywheresoftware.b4a.objects.collections.Map</returntype>
+            <comment>Get a Map where the Map keys are Int FormatIds and
+the Map values are YouTubeStreamInfo objects.</comment>
+        </property>
+        <property>
+            <name>Title</name>
+            <returntype>java.lang.String</returntype>
+            <comment></comment>
+        </property>
+        <property>
+            <name>Timestamp</name>
+            <returntype>long</returntype>
+            <comment>Get the date this video was uploaded to You Tube as a PHP timestamp.</comment>
+        </property>
+        <property>
+            <name>Keywords</name>
+            <returntype>java.lang.String[]</returntype>
+            <comment></comment>
+        </property>
+    </class>
+    <class>
+        <name>uk.co.martinpearman.b4a.youtubestreamfinder.StreamInfo</name>
+        <shortname>YouTubeStreamInfo</shortname>
+        <owner>process</owner>
+        <property>
+            <name>FormatId</name>
+            <returntype>int</returntype>
+            <comment></comment>
+        </property>
+        <property>
+            <name>StreamUrl</name>
+            <returntype>java.lang.String</returntype>
+            <comment></comment>
+        </property>
+        <property>
+            <name>Height</name>
+            <returntype>int</returntype>
+            <comment></comment>
+        </property>
+        <property>
+            <name>Width</name>
+            <returntype>int</returntype>
+            <comment></comment>
+        </property>
+    </class>
+    <class>
+        <name>uk.co.martinpearman.b4a.youtubestreamfinder.StreamFinder</name>
+        <shortname>YouTubeStreamFinder</shortname>
+        <owner>process</owner>
+        <event>Ready(VideoId1 As String, YouTubeVideoInfo1 As YouTubeVideoInfo)</event>
+        <permission>android.permission.INTERNET</permission>
+        <method>
+            <name>Initialize</name>
+            <comment>Initialize the YouTubeStreamFinder with an EventName.</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>EventName</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+        <method>
+            <name>GetLastError</name>
+            <comment>Get the last error associated with this VideoId.</comment>
+            <returntype>java.lang.String</returntype>
+            <parameter>
+                <name>VideoId</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+        <method>
+            <name>GetVideoInfo2</name>
+            <comment>Get VideoInfo for more than one video.
+The Ready(VideoId1 As String, YouTubeVideoInfo1 As YouTubeVideoInfo) event
+will be raised for each video when VideoInfo is available or an error occurs.</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>pBA</name>
+                <type>anywheresoftware.b4a.BA</type>
+            </parameter>
+            <parameter>
+                <name>VideoIds</name>
+                <type>java.lang.String[]</type>
+            </parameter>
+        </method>
+        <method>
+            <name>GetVideoInfo</name>
+            <comment>Get VideoInfo for a single video.
+The Ready(VideoId1 As String, YouTubeVideoInfo1 As YouTubeVideoInfo) event
+will be raised when VideoInfo is available or an error occurs.</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>pBA</name>
+                <type>anywheresoftware.b4a.BA</type>
+            </parameter>
+            <parameter>
+                <name>VideoId</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+    </class>
+    <version>1.3</version>
+    <author>Martin Pearman</author>
+</root>

@@ -1,0 +1,377 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <doclet-version-NOT-library-version>1.00</doclet-version-NOT-library-version>
+  <dependsOn>gps</dependsOn>
+  <dependsOn>pageturnview</dependsOn>
+  <dependsOn>threading</dependsOn>
+  <class>
+    <name>anywheresoftware.b4a.agraham.pageturnviewdemo.book</name>
+    <shortname>Book</shortname>
+    <owner>activity</owner>
+    <method>
+      <name>IsInitialized</name>
+      <comment>Tests whether the object has been initialized.</comment>
+      <returntype>boolean</returntype>
+    </method>
+    <method>
+      <name DesignerName="AddText">_addtext</name>
+      <returntype>String</returntype>
+      <parameter>
+        <name>Text</name>
+        <type>String</type>
+      </parameter>
+    </method>
+    <method>
+      <name DesignerName="Class_Globals">_class_globals</name>
+      <returntype>String</returntype>
+    </method>
+    <method>
+      <name DesignerName="getOffsetPage" HideFromIDE="true">_getoffsetpage</name>
+      <returntype>int</returntype>
+    </method>
+    <method>
+      <name DesignerName="getPagesCount" HideFromIDE="true">_getpagescount</name>
+      <returntype>int</returntype>
+    </method>
+    <method>
+      <name DesignerName="Initialize">_initialize</name>
+      <comment>Initializes the object. You can add parameters to this method if needed.
+Smoothness for turn page state
+Panel1 for add Book to it
+Padding for space between book and panel
+LineSpacing for between two line space
+LeftMargin for margin book from left
+TopMargin for margin book from top</comment>
+      <returntype>String</returntype>
+      <parameter>
+        <name>ba</name>
+        <type>anywheresoftware.b4a.BA</type>
+      </parameter>
+      <parameter>
+        <name>Module</name>
+        <type>Object</type>
+      </parameter>
+      <parameter>
+        <name>Smoothness</name>
+        <type>int</type>
+      </parameter>
+      <parameter>
+        <name>Panel1</name>
+        <type>anywheresoftware.b4a.objects.PanelWrapper</type>
+      </parameter>
+      <parameter>
+        <name>Padding</name>
+        <type>int</type>
+      </parameter>
+      <parameter>
+        <name>LineSpacing</name>
+        <type>int</type>
+      </parameter>
+      <parameter>
+        <name>LeftMargin</name>
+        <type>int</type>
+      </parameter>
+      <parameter>
+        <name>TopMargin</name>
+        <type>int</type>
+      </parameter>
+    </method>
+    <method>
+      <name DesignerName="OnPause">_onpause</name>
+      <comment>place this subrotine in pause event of activity</comment>
+      <returntype>String</returntype>
+    </method>
+    <method>
+      <name DesignerName="OnResume">_onresume</name>
+      <comment>place this subrotine in resume event of activity</comment>
+      <returntype>String</returntype>
+    </method>
+    <method>
+      <name DesignerName="ScreenshopPage">_screenshoppage</name>
+      <returntype>anywheresoftware.b4a.objects.drawable.CanvasWrapper.BitmapWrapper</returntype>
+    </method>
+    <method>
+      <name DesignerName="setBorderColor" HideFromIDE="true">_setbordercolor</name>
+      <comment>change color of book border</comment>
+      <returntype>String</returntype>
+      <parameter>
+        <name>Color</name>
+        <type>int</type>
+      </parameter>
+    </method>
+    <method>
+      <name DesignerName="setEndCover" HideFromIDE="true">_setendcover</name>
+      <returntype>String</returntype>
+      <parameter>
+        <name>Image</name>
+        <type>anywheresoftware.b4a.objects.drawable.CanvasWrapper.BitmapWrapper</type>
+      </parameter>
+    </method>
+    <method>
+      <name DesignerName="setEndPageBackgroundColor" HideFromIDE="true">_setendpagebackgroundcolor</name>
+      <comment>change background color of last page</comment>
+      <returntype>String</returntype>
+      <parameter>
+        <name>Color</name>
+        <type>int</type>
+      </parameter>
+    </method>
+    <method>
+      <name DesignerName="setEndPageTitle" HideFromIDE="true">_setendpagetitle</name>
+      <returntype>String</returntype>
+      <parameter>
+        <name>Title</name>
+        <type>String</type>
+      </parameter>
+    </method>
+    <method>
+      <name DesignerName="setEndTitleTextColor" HideFromIDE="true">_setendtitletextcolor</name>
+      <returntype>String</returntype>
+      <parameter>
+        <name>Color</name>
+        <type>int</type>
+      </parameter>
+    </method>
+    <method>
+      <name DesignerName="setEndTitleTextSize" HideFromIDE="true">_setendtitletextsize</name>
+      <returntype>String</returntype>
+      <parameter>
+        <name>Size</name>
+        <type>int</type>
+      </parameter>
+    </method>
+    <method>
+      <name DesignerName="setFirstCover" HideFromIDE="true">_setfirstcover</name>
+      <returntype>String</returntype>
+      <parameter>
+        <name>Image</name>
+        <type>anywheresoftware.b4a.objects.drawable.CanvasWrapper.BitmapWrapper</type>
+      </parameter>
+    </method>
+    <method>
+      <name DesignerName="setFirstPageBackgroundColor" HideFromIDE="true">_setfirstpagebackgroundcolor</name>
+      <comment>change background color of first page</comment>
+      <returntype>String</returntype>
+      <parameter>
+        <name>Color</name>
+        <type>int</type>
+      </parameter>
+    </method>
+    <method>
+      <name DesignerName="setFirstPageTitle" HideFromIDE="true">_setfirstpagetitle</name>
+      <returntype>String</returntype>
+      <parameter>
+        <name>Title</name>
+        <type>String</type>
+      </parameter>
+    </method>
+    <method>
+      <name DesignerName="setFirstTitleTextColor" HideFromIDE="true">_setfirsttitletextcolor</name>
+      <returntype>String</returntype>
+      <parameter>
+        <name>Color</name>
+        <type>int</type>
+      </parameter>
+    </method>
+    <method>
+      <name DesignerName="setFirstTitleTextSize" HideFromIDE="true">_setfirsttitletextsize</name>
+      <returntype>String</returntype>
+      <parameter>
+        <name>Size</name>
+        <type>int</type>
+      </parameter>
+    </method>
+    <method>
+      <name DesignerName="setFontName" HideFromIDE="true">_setfontname</name>
+      <comment>add font in asset and change book font</comment>
+      <returntype>String</returntype>
+      <parameter>
+        <name>FontName</name>
+        <type>String</type>
+      </parameter>
+    </method>
+    <method>
+      <name DesignerName="setPagesBackgroundColor" HideFromIDE="true">_setpagesbackgroundcolor</name>
+      <comment>change background color of all page except of first and last page</comment>
+      <returntype>String</returntype>
+      <parameter>
+        <name>Color</name>
+        <type>int</type>
+      </parameter>
+    </method>
+    <method>
+      <name DesignerName="setTextColor" HideFromIDE="true">_settextcolor</name>
+      <comment>change text color of book</comment>
+      <returntype>String</returntype>
+      <parameter>
+        <name>Color</name>
+        <type>int</type>
+      </parameter>
+    </method>
+    <method>
+      <name DesignerName="setTextSize" HideFromIDE="true">_settextsize</name>
+      <comment>change text size of book</comment>
+      <returntype>String</returntype>
+      <parameter>
+        <name>Size</name>
+        <type>int</type>
+      </parameter>
+    </method>
+    <method>
+      <name DesignerName="setTurnMusic" HideFromIDE="true">_setturnmusic</name>
+      <comment>Load from asset
+play audio for turn page</comment>
+      <returntype>String</returntype>
+      <parameter>
+        <name>Filename</name>
+        <type>String</type>
+      </parameter>
+    </method>
+    <property>
+      <name DesignerName="OffsetPage">_offsetpage</name>
+      <returntype>int</returntype>
+    </property>
+    <property>
+      <name DesignerName="PagesCount">_pagescount</name>
+      <returntype>int</returntype>
+    </property>
+    <property>
+      <name DesignerName="BorderColor">_bordercolor</name>
+      <comment>change color of book border</comment>
+      <returntype>void</returntype>
+      <parameter>
+        <name>Value</name>
+        <type>int</type>
+      </parameter>
+    </property>
+    <property>
+      <name DesignerName="EndCover">_endcover</name>
+      <returntype>void</returntype>
+      <parameter>
+        <name>Value</name>
+        <type>anywheresoftware.b4a.objects.drawable.CanvasWrapper.BitmapWrapper</type>
+      </parameter>
+    </property>
+    <property>
+      <name DesignerName="EndPageBackgroundColor">_endpagebackgroundcolor</name>
+      <comment>change background color of last page</comment>
+      <returntype>void</returntype>
+      <parameter>
+        <name>Value</name>
+        <type>int</type>
+      </parameter>
+    </property>
+    <property>
+      <name DesignerName="EndPageTitle">_endpagetitle</name>
+      <returntype>void</returntype>
+      <parameter>
+        <name>Value</name>
+        <type>String</type>
+      </parameter>
+    </property>
+    <property>
+      <name DesignerName="EndTitleTextColor">_endtitletextcolor</name>
+      <returntype>void</returntype>
+      <parameter>
+        <name>Value</name>
+        <type>int</type>
+      </parameter>
+    </property>
+    <property>
+      <name DesignerName="EndTitleTextSize">_endtitletextsize</name>
+      <returntype>void</returntype>
+      <parameter>
+        <name>Value</name>
+        <type>int</type>
+      </parameter>
+    </property>
+    <property>
+      <name DesignerName="FirstCover">_firstcover</name>
+      <returntype>void</returntype>
+      <parameter>
+        <name>Value</name>
+        <type>anywheresoftware.b4a.objects.drawable.CanvasWrapper.BitmapWrapper</type>
+      </parameter>
+    </property>
+    <property>
+      <name DesignerName="FirstPageBackgroundColor">_firstpagebackgroundcolor</name>
+      <comment>change background color of first page</comment>
+      <returntype>void</returntype>
+      <parameter>
+        <name>Value</name>
+        <type>int</type>
+      </parameter>
+    </property>
+    <property>
+      <name DesignerName="FirstPageTitle">_firstpagetitle</name>
+      <returntype>void</returntype>
+      <parameter>
+        <name>Value</name>
+        <type>String</type>
+      </parameter>
+    </property>
+    <property>
+      <name DesignerName="FirstTitleTextColor">_firsttitletextcolor</name>
+      <returntype>void</returntype>
+      <parameter>
+        <name>Value</name>
+        <type>int</type>
+      </parameter>
+    </property>
+    <property>
+      <name DesignerName="FirstTitleTextSize">_firsttitletextsize</name>
+      <returntype>void</returntype>
+      <parameter>
+        <name>Value</name>
+        <type>int</type>
+      </parameter>
+    </property>
+    <property>
+      <name DesignerName="FontName">_fontname</name>
+      <comment>add font in asset and change book font</comment>
+      <returntype>void</returntype>
+      <parameter>
+        <name>Value</name>
+        <type>String</type>
+      </parameter>
+    </property>
+    <property>
+      <name DesignerName="PagesBackgroundColor">_pagesbackgroundcolor</name>
+      <comment>change background color of all page except of first and last page</comment>
+      <returntype>void</returntype>
+      <parameter>
+        <name>Value</name>
+        <type>int</type>
+      </parameter>
+    </property>
+    <property>
+      <name DesignerName="TextColor">_textcolor</name>
+      <comment>change text color of book</comment>
+      <returntype>void</returntype>
+      <parameter>
+        <name>Value</name>
+        <type>int</type>
+      </parameter>
+    </property>
+    <property>
+      <name DesignerName="TextSize">_textsize</name>
+      <comment>change text size of book</comment>
+      <returntype>void</returntype>
+      <parameter>
+        <name>Value</name>
+        <type>int</type>
+      </parameter>
+    </property>
+    <property>
+      <name DesignerName="TurnMusic">_turnmusic</name>
+      <comment>Load from asset
+play audio for turn page</comment>
+      <returntype>void</returntype>
+      <parameter>
+        <name>Value</name>
+        <type>String</type>
+      </parameter>
+    </property>
+  </class>
+  <version>1</version>
+</root>

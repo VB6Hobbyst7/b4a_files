@@ -1,0 +1,2560 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root>
+    <doclet-version-NOT-library-version>1.04</doclet-version-NOT-library-version>
+    <class>
+        <name>ariagp.amin.shahedi.asyncytask.AriaAsyncTask</name>
+        <shortname>AriaAsyncTask</shortname>
+        <owner>process</owner>
+        <event>DoInBackground(Params() As Object) As Object</event>
+        <event>OnProgressUpdate(Progress As Int)</event>
+        <event>OnPreExecute</event>
+        <event>OnCancelled</event>
+        <event>OnPostExecute(Result As Object)</event>
+        <method>
+            <name>isCancelled</name>
+            <comment></comment>
+            <returntype>boolean</returntype>
+        </method>
+        <method>
+            <name>PublishProgress</name>
+            <comment></comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>progress</name>
+                <type>int</type>
+            </parameter>
+        </method>
+        <method>
+            <name>Cancel</name>
+            <comment></comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>MayInterruptIfRunning</name>
+                <type>boolean</type>
+            </parameter>
+        </method>
+        <method>
+            <name>Run</name>
+            <comment></comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>params</name>
+                <type>java.lang.Object[]</type>
+            </parameter>
+        </method>
+        <method>
+            <name>Initialize</name>
+            <comment>&lt;link&gt;AnswerCenter.ir|http://www.answercenter.ir&lt;/link&gt; - AminShahedi -
+ All rights reserved</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>b</name>
+                <type>anywheresoftware.b4a.BA</type>
+            </parameter>
+            <parameter>
+                <name>event</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+        <method>
+            <name>GetStatus</name>
+            <comment></comment>
+            <returntype>int</returntype>
+        </method>
+        <property>
+            <name>Downloader</name>
+            <returntype>ariagp.amin.shahedi.asyncytask.Downloader</returntype>
+            <comment></comment>
+        </property>
+        <field>
+            <name>Status_FINISHED</name>
+            <comment></comment>
+            <returntype>int</returntype>
+        </field>
+        <field>
+            <name>Status_RUNNING</name>
+            <comment></comment>
+            <returntype>int</returntype>
+        </field>
+        <field>
+            <name>Status_PENDING</name>
+            <comment></comment>
+            <returntype>int</returntype>
+        </field>
+    </class>
+    <class>
+        <name>ariagp.amin.shahedi.asyncytask.AriaAsyncTaskNewObject</name>
+        <shortname>AriaAsyncTask2</shortname>
+        <owner>process</owner>
+        <event>DoInBackground(params() As Object,CustomObjects() As Object,CurrentTask as AriaAsyncTask2) As Object</event>
+        <event>OnPreExecute(CustomObjects() As Object)</event>
+        <event>OnProgressUpdate(Progress As Int,CustomObjects() As Object)</event>
+        <event>OnPostExecute(Result As Object,CustomObjects() As Object)</event>
+        <method>
+            <name>RunOnExecutor</name>
+            <comment></comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>params</name>
+                <type>java.lang.Object[]</type>
+            </parameter>
+            <parameter>
+                <name>CustomObjects</name>
+                <type>java.lang.Object[]</type>
+            </parameter>
+        </method>
+        <method>
+            <name>PublishProgress</name>
+            <comment></comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>progress</name>
+                <type>int</type>
+            </parameter>
+        </method>
+        <method>
+            <name>RunOnSerial</name>
+            <comment></comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>params</name>
+                <type>java.lang.Object[]</type>
+            </parameter>
+            <parameter>
+                <name>CustomObjects</name>
+                <type>java.lang.Object[]</type>
+            </parameter>
+        </method>
+        <method>
+            <name>Initialize</name>
+            <comment>&lt;link&gt;AnswerCenter.ir|http://www.answercenter.ir&lt;/link&gt; - AminShahedi -
+ All rights reserved</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>b</name>
+                <type>anywheresoftware.b4a.BA</type>
+            </parameter>
+            <parameter>
+                <name>event</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+        <property>
+            <name>Downloader</name>
+            <returntype>ariagp.amin.shahedi.asyncytask.DownloaderNewObject</returntype>
+            <comment></comment>
+        </property>
+    </class>
+    <class>
+        <name>ariagp.amin.shahedi.asyncytask.AriaThread</name>
+        <shortname>AriaThread</shortname>
+        <owner>process</owner>
+        <event>ThreadEnd (Successful As Boolean)</event>
+        <event>ChangeUI (Arg As Object)</event>
+        <method>
+            <name>Sleep</name>
+            <comment></comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>MiliSeconds</name>
+                <type>int</type>
+            </parameter>
+        </method>
+        <method>
+            <name>StartThread</name>
+            <comment></comment>
+            <returntype>boolean</returntype>
+            <parameter>
+                <name>SubName</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>Args</name>
+                <type>java.lang.Object[]</type>
+            </parameter>
+        </method>
+        <method>
+            <name>Initialize</name>
+            <comment></comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>baa</name>
+                <type>anywheresoftware.b4a.BA</type>
+            </parameter>
+            <parameter>
+                <name>EventName</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+        <method>
+            <name>ChangeUI</name>
+            <comment></comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>arg</name>
+                <type>java.lang.Object</type>
+            </parameter>
+        </method>
+        <property>
+            <name>IsInterrupted</name>
+            <returntype>boolean</returntype>
+            <comment></comment>
+        </property>
+        <property>
+            <name>MinPriority</name>
+            <returntype>int</returntype>
+            <comment></comment>
+        </property>
+        <property>
+            <name>Priority</name>
+            <returntype>int</returntype>
+            <parameter>
+                <name>priority</name>
+                <type>int</type>
+            </parameter>
+            <comment></comment>
+        </property>
+        <property>
+            <name>IsRunning</name>
+            <returntype>boolean</returntype>
+            <comment></comment>
+        </property>
+        <property>
+            <name>MaxPriority</name>
+            <returntype>int</returntype>
+            <comment></comment>
+        </property>
+        <property>
+            <name>NormalPriority</name>
+            <returntype>int</returntype>
+            <comment></comment>
+        </property>
+    </class>
+    <class>
+        <name>ariagp.amin.shahedi.asyncytask.AriaTimer</name>
+        <comment>Created by AMiN on 6/2/2016.</comment>
+        <owner>process</owner>
+        <method>
+            <name>Start</name>
+            <comment>shoru shodane Timer az tariqe Thread
+callback: </comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>callback</name>
+                <type>ariagp.amin.shahedi.asyncytask.AriaTimer.Tickable</type>
+            </parameter>
+        </method>
+        <method>
+            <name>Stop</name>
+            <comment>Tavaqofe Timer</comment>
+            <returntype>void</returntype>
+        </method>
+        <method>
+            <name>isTimerRunning</name>
+            <comment>Check kardane ejra budane Timer
+Return type: @return:</comment>
+            <returntype>boolean</returntype>
+        </method>
+        <property>
+            <name>MaximumTick</name>
+            <parameter>
+                <name>maximumtick</name>
+                <type>int</type>
+            </parameter>
+            <comment>Moshakhas kardane hadaksar meqdare Tick khordane timer</comment>
+        </property>
+        <property>
+            <name>Interval</name>
+            <parameter>
+                <name>interval</name>
+                <type>int</type>
+            </parameter>
+            <comment>Moshakhash kardane Meqdare Interval(fasele harbar tick khordane timer)</comment>
+        </property>
+    </class>
+    <class>
+        <name>ariagp.amin.shahedi.asyncytask.Downloader</name>
+        <shortname>AriaAsyncTaskDownloader</shortname>
+        <owner>process</owner>
+        <event>OnSpeedCalculate (Speed As Long,Speed_en As String,Speed_FA As String)</event>
+        <permission>android.permission.INTERNET</permission>
+        <permission>android.permission.ACCESS_NETWORK_STATE</permission>
+        <method>
+            <name>UploadFile</name>
+            <comment></comment>
+            <returntype>java.lang.String</returntype>
+            <parameter>
+                <name>Url</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>file</name>
+                <type>java.io.File</type>
+            </parameter>
+            <parameter>
+                <name>AdditionalProperty</name>
+                <type>anywheresoftware.b4a.objects.collections.Map</type>
+            </parameter>
+        </method>
+        <method>
+            <name>Upload22</name>
+            <comment></comment>
+            <returntype>java.lang.String</returntype>
+            <parameter>
+                <name>Url</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>file</name>
+                <type>java.io.File</type>
+            </parameter>
+            <parameter>
+                <name>AdditionalProperty</name>
+                <type>anywheresoftware.b4a.objects.collections.Map</type>
+            </parameter>
+        </method>
+        <method>
+            <name>Get</name>
+            <comment></comment>
+            <returntype>ariagp.amin.shahedi.asyncytask.Downloader.get</returntype>
+            <parameter>
+                <name>url</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+        <method>
+            <name>Initialize</name>
+            <comment></comment>
+            <returntype>ariagp.amin.shahedi.asyncytask.Downloader</returntype>
+            <parameter>
+                <name>task</name>
+                <type>ariagp.amin.shahedi.asyncytask.AriaAsyncTask</type>
+            </parameter>
+        </method>
+        <method>
+            <name>Download</name>
+            <comment>dar surate anjam shodane task "done" bargasht dade mishe va dar surate
+ error dadan matne eror</comment>
+            <returntype>java.lang.String</returntype>
+            <parameter>
+                <name>ba</name>
+                <type>anywheresoftware.b4a.BA</type>
+            </parameter>
+            <parameter>
+                <name>url</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>Address</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+        <method>
+            <name>IsConnected</name>
+            <comment></comment>
+            <returntype>boolean</returntype>
+        </method>
+        <property>
+            <name>DownloadInfo</name>
+            <returntype>ariagp.amin.shahedi.asyncytask.DownloadInfo</returntype>
+            <comment></comment>
+        </property>
+        <field>
+            <name>LastGetSize</name>
+            <comment></comment>
+            <returntype>int</returntype>
+        </field>
+    </class>
+    <class>
+        <name>ariagp.amin.shahedi.asyncytask.Downloader.get</name>
+        <owner>process</owner>
+        <method>
+            <name>POST</name>
+            <comment></comment>
+            <returntype>ariagp.amin.shahedi.asyncytask.Downloader.get</returntype>
+            <parameter>
+                <name>text</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+        <method>
+            <name>File</name>
+            <comment>return file address</comment>
+            <returntype>java.lang.String</returntype>
+            <parameter>
+                <name>file</name>
+                <type>java.io.File</type>
+            </parameter>
+        </method>
+        <method>
+            <name>POST2</name>
+            <comment></comment>
+            <returntype>ariagp.amin.shahedi.asyncytask.Downloader.get</returntype>
+            <parameter>
+                <name>Dir</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>FileName</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+        <property>
+            <name>Bitmap</name>
+            <returntype>anywheresoftware.b4a.objects.drawable.CanvasWrapper.BitmapWrapper</returntype>
+            <comment></comment>
+        </property>
+        <property>
+            <name>InputStream</name>
+            <returntype>anywheresoftware.b4a.objects.streams.File.InputStreamWrapper</returntype>
+            <comment></comment>
+        </property>
+        <property>
+            <name>String</name>
+            <returntype>java.lang.String</returntype>
+            <comment></comment>
+        </property>
+        <property>
+            <name>Int</name>
+            <returntype>int</returntype>
+            <comment></comment>
+        </property>
+    </class>
+    <class>
+        <name>ariagp.amin.shahedi.asyncytask.DownloaderNewObject</name>
+        <shortname>AriaAsyncTaskDownloader2</shortname>
+        <owner>process</owner>
+        <event>OnSpeedCalculate (Speed As Long,Speed_en As String,Speed_FA As String)</event>
+        <permission>android.permission.INTERNET</permission>
+        <permission>android.permission.ACCESS_NETWORK_STATE</permission>
+        <method>
+            <name>UploadFile</name>
+            <comment></comment>
+            <returntype>java.lang.String</returntype>
+            <parameter>
+                <name>Url</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>file</name>
+                <type>java.io.File</type>
+            </parameter>
+            <parameter>
+                <name>AdditionalProperty</name>
+                <type>anywheresoftware.b4a.objects.collections.Map</type>
+            </parameter>
+        </method>
+        <method>
+            <name>Get</name>
+            <comment></comment>
+            <returntype>ariagp.amin.shahedi.asyncytask.DownloaderNewObject.get</returntype>
+            <parameter>
+                <name>url</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+        <method>
+            <name>Initialize</name>
+            <comment></comment>
+            <returntype>ariagp.amin.shahedi.asyncytask.DownloaderNewObject</returntype>
+            <parameter>
+                <name>task</name>
+                <type>ariagp.amin.shahedi.asyncytask.AriaAsyncTaskNewObject</type>
+            </parameter>
+        </method>
+        <method>
+            <name>Download</name>
+            <comment>dar surate anjam shodane task "done" bargasht dade mishe va dar surate
+ error dadan matne eror</comment>
+            <returntype>java.lang.String</returntype>
+            <parameter>
+                <name>ba</name>
+                <type>anywheresoftware.b4a.BA</type>
+            </parameter>
+            <parameter>
+                <name>url</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>Address</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+        <method>
+            <name>IsConnected</name>
+            <comment></comment>
+            <returntype>boolean</returntype>
+        </method>
+    </class>
+    <class>
+        <name>ariagp.amin.shahedi.asyncytask.DownloaderNewObject.get</name>
+        <owner>process</owner>
+        <method>
+            <name>POST</name>
+            <comment></comment>
+            <returntype>ariagp.amin.shahedi.asyncytask.DownloaderNewObject.get</returntype>
+            <parameter>
+                <name>text</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+        <method>
+            <name>File</name>
+            <comment>return file address</comment>
+            <returntype>java.lang.String</returntype>
+            <parameter>
+                <name>file</name>
+                <type>java.io.File</type>
+            </parameter>
+        </method>
+        <method>
+            <name>POST2</name>
+            <comment></comment>
+            <returntype>ariagp.amin.shahedi.asyncytask.DownloaderNewObject.get</returntype>
+            <parameter>
+                <name>Dir</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>FileName</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+        <property>
+            <name>Bitmap</name>
+            <returntype>anywheresoftware.b4a.objects.drawable.CanvasWrapper.BitmapWrapper</returntype>
+            <comment></comment>
+        </property>
+        <property>
+            <name>InputStream</name>
+            <returntype>anywheresoftware.b4a.objects.streams.File.InputStreamWrapper</returntype>
+            <comment></comment>
+        </property>
+        <property>
+            <name>String</name>
+            <returntype>java.lang.String</returntype>
+            <comment></comment>
+        </property>
+        <property>
+            <name>Int</name>
+            <returntype>int</returntype>
+            <comment></comment>
+        </property>
+    </class>
+    <class>
+        <name>ariagp.amin.shahedi.asyncytask.DownloadInfo</name>
+        <comment>Created by AMiN on 7/10/2016.</comment>
+        <owner>process</owner>
+        <property>
+            <name>FilePath</name>
+            <returntype>java.lang.String</returntype>
+            <comment></comment>
+        </property>
+        <property>
+            <name>Speed</name>
+            <returntype>java.lang.Long</returntype>
+            <comment></comment>
+        </property>
+        <property>
+            <name>Progress</name>
+            <returntype>int</returntype>
+            <comment></comment>
+        </property>
+        <property>
+            <name>Port</name>
+            <returntype>int</returntype>
+            <comment></comment>
+        </property>
+        <property>
+            <name>TimeElapsed</name>
+            <returntype>java.lang.String</returntype>
+            <comment></comment>
+        </property>
+        <property>
+            <name>Speed_ENG</name>
+            <returntype>java.lang.String</returntype>
+            <comment></comment>
+        </property>
+        <property>
+            <name>Host</name>
+            <returntype>java.lang.String</returntype>
+            <comment></comment>
+        </property>
+        <property>
+            <name>TimeElapsedSeconds</name>
+            <returntype>int</returntype>
+            <comment></comment>
+        </property>
+        <property>
+            <name>TotalSize</name>
+            <returntype>int</returntype>
+            <comment></comment>
+        </property>
+        <property>
+            <name>URL</name>
+            <returntype>java.lang.String</returntype>
+            <comment></comment>
+        </property>
+        <property>
+            <name>TimeRemainingSeconds</name>
+            <returntype>int</returntype>
+            <comment></comment>
+        </property>
+        <property>
+            <name>FileType</name>
+            <returntype>java.lang.String</returntype>
+            <comment></comment>
+        </property>
+        <property>
+            <name>DownloadedSize</name>
+            <returntype>int</returntype>
+            <comment></comment>
+        </property>
+        <property>
+            <name>Speed_PER</name>
+            <returntype>java.lang.String</returntype>
+            <comment></comment>
+        </property>
+        <property>
+            <name>TimeRemaining</name>
+            <returntype>java.lang.String</returntype>
+            <comment></comment>
+        </property>
+        <property>
+            <name>Protocol</name>
+            <returntype>java.lang.String</returntype>
+            <comment></comment>
+        </property>
+    </class>
+    <class>
+        <name>ariagp.amin.shahedi.asyncytask.HttpRequest</name>
+        <comment>A fluid interface for making HTTP requests using an underlying
+ {@link HttpURLConnection} (or sub-class).
+ &lt;p&gt;
+ Each instance supports making a single request and cannot be reused for
+ further requests.</comment>
+        <owner>process</owner>
+        <method>
+            <name>disconnect</name>
+            <comment>Disconnect the connection
+Return type: @return:this request</comment>
+            <returntype>ariagp.amin.shahedi.asyncytask.HttpRequest</returntype>
+        </method>
+        <method>
+            <name>put</name>
+            <comment>Start a 'PUT' request to the given URL
+url: 
+Return type: @return:request</comment>
+            <returntype>ariagp.amin.shahedi.asyncytask.HttpRequest</returntype>
+            <parameter>
+                <name>url</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+        <method>
+            <name>authorization</name>
+            <comment>Set the 'Authorization' header to given value
+authorization: 
+Return type: @return:this request</comment>
+            <returntype>ariagp.amin.shahedi.asyncytask.HttpRequest</returntype>
+            <parameter>
+                <name>authorization</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+        <method>
+            <name>bufferedReader</name>
+            <comment>Get buffered reader to response body using the given character set r and
+ the configured buffer size
+charset: 
+Return type: @return:reader</comment>
+            <returntype>java.io.BufferedReader</returntype>
+            <parameter>
+                <name>charset</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+        <method>
+            <name>proxyBasic</name>
+            <comment>Set the 'Proxy-Authorization' header to given values in Basic
+ authentication format
+name: 
+password: 
+Return type: @return:this request</comment>
+            <returntype>ariagp.amin.shahedi.asyncytask.HttpRequest</returntype>
+            <parameter>
+                <name>name</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>password</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+        <method>
+            <name>followRedirects</name>
+            <comment>Set whether or not the underlying connection should follow redirects in
+ the response.
+followRedirects: - true fo follow redirects, false to not.
+Return type: @return:this request</comment>
+            <returntype>ariagp.amin.shahedi.asyncytask.HttpRequest</returntype>
+            <parameter>
+                <name>followRedirects</name>
+                <type>boolean</type>
+            </parameter>
+        </method>
+        <method>
+            <name>options</name>
+            <comment>Start an 'OPTIONS' request to the given URL
+url: 
+Return type: @return:request</comment>
+            <returntype>ariagp.amin.shahedi.asyncytask.HttpRequest</returntype>
+            <parameter>
+                <name>url</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+        <method>
+            <name>options2</name>
+            <comment>Start an 'OPTIONS' request to the given URL
+url: 
+Return type: @return:request</comment>
+            <returntype>ariagp.amin.shahedi.asyncytask.HttpRequest</returntype>
+            <parameter>
+                <name>url</name>
+                <type>java.net.URL</type>
+            </parameter>
+        </method>
+        <method>
+            <name>header3</name>
+            <comment>Set header name to given value
+name: 
+value: 
+Return type: @return:this request</comment>
+            <returntype>ariagp.amin.shahedi.asyncytask.HttpRequest</returntype>
+            <parameter>
+                <name>name</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>value</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+        <method>
+            <name>header2</name>
+            <comment>Set header name to given value
+name: 
+value: 
+Return type: @return:this request</comment>
+            <returntype>ariagp.amin.shahedi.asyncytask.HttpRequest</returntype>
+            <parameter>
+                <name>name</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>value</name>
+                <type>java.lang.Number</type>
+            </parameter>
+        </method>
+        <method>
+            <name>getParam</name>
+            <comment>Get parameter value from header value
+value: 
+paramName: 
+Return type: @return:parameter value or null if none</comment>
+            <returntype>java.lang.String</returntype>
+            <parameter>
+                <name>value</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>paramName</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+        <method>
+            <name>partHeader</name>
+            <comment>Write a multipart header to the response body
+name: 
+value: 
+Return type: @return:this request</comment>
+            <returntype>ariagp.amin.shahedi.asyncytask.HttpRequest</returntype>
+            <parameter>
+                <name>name</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>value</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+        <method>
+            <name>method</name>
+            <comment>Get the HTTP method of this request
+Return type: @return:method</comment>
+            <returntype>java.lang.String</returntype>
+        </method>
+        <method>
+            <name>byteStream</name>
+            <comment>Create byte array output stream
+Return type: @return:stream</comment>
+            <returntype>java.io.ByteArrayOutputStream</returntype>
+        </method>
+        <method>
+            <name>acceptCharset</name>
+            <comment>Set the 'Accept-Charset' header to given value
+acceptCharset: 
+Return type: @return:this request</comment>
+            <returntype>ariagp.amin.shahedi.asyncytask.HttpRequest</returntype>
+            <parameter>
+                <name>acceptCharset</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+        <method>
+            <name>send4</name>
+            <comment>Write reader to request body
+ &lt;p&gt;
+ The given reader will be closed once sending completes
+input: 
+Return type: @return:this request</comment>
+            <returntype>ariagp.amin.shahedi.asyncytask.HttpRequest</returntype>
+            <parameter>
+                <name>input</name>
+                <type>java.io.Reader</type>
+            </parameter>
+        </method>
+        <method>
+            <name>cacheControl</name>
+            <comment>Get the 'Cache-Control' header from the response
+Return type: @return:cache control</comment>
+            <returntype>java.lang.String</returntype>
+        </method>
+        <method>
+            <name>send2</name>
+            <comment>Write byte array to request body
+input: 
+Return type: @return:this request</comment>
+            <returntype>ariagp.amin.shahedi.asyncytask.HttpRequest</returntype>
+            <parameter>
+                <name>input</name>
+                <type>byte[]</type>
+            </parameter>
+        </method>
+        <method>
+            <name>accept</name>
+            <comment>Set the 'Accept' header to given value
+accept: 
+Return type: @return:this request</comment>
+            <returntype>ariagp.amin.shahedi.asyncytask.HttpRequest</returntype>
+            <parameter>
+                <name>accept</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+        <method>
+            <name>send3</name>
+            <comment>Write stream to request body
+ &lt;p&gt;
+ The given stream will be closed once sending completes
+input: 
+Return type: @return:this request</comment>
+            <returntype>ariagp.amin.shahedi.asyncytask.HttpRequest</returntype>
+            <parameter>
+                <name>input</name>
+                <type>java.io.InputStream</type>
+            </parameter>
+        </method>
+        <method>
+            <name>put3</name>
+            <comment>Start a 'PUT' request to the given URL along with the query params
+baseUrl: 
+params: the query parameters to include as part of the baseUrl
+encode: true to encode the full URL
+Return type: @return:request</comment>
+            <returntype>ariagp.amin.shahedi.asyncytask.HttpRequest</returntype>
+            <parameter>
+                <name>baseUrl</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>params</name>
+                <type>java.util.Map</type>
+            </parameter>
+            <parameter>
+                <name>encode</name>
+                <type>boolean</type>
+            </parameter>
+        </method>
+        <method>
+            <name>put4</name>
+            <comment>Start a 'PUT' request to the given URL along with the query params
+baseUrl: 
+encode: true to encode the full URL
+params: the name/value query parameter pairs to include as part of the
+            baseUrl
+Return type: @return:request</comment>
+            <returntype>ariagp.amin.shahedi.asyncytask.HttpRequest</returntype>
+            <parameter>
+                <name>baseUrl</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>encode</name>
+                <type>boolean</type>
+            </parameter>
+            <parameter>
+                <name>params</name>
+                <type>java.lang.Object[]</type>
+            </parameter>
+        </method>
+        <method>
+            <name>put2</name>
+            <comment>Start a 'PUT' request to the given URL
+url: 
+Return type: @return:request</comment>
+            <returntype>ariagp.amin.shahedi.asyncytask.HttpRequest</returntype>
+            <parameter>
+                <name>url</name>
+                <type>java.net.URL</type>
+            </parameter>
+        </method>
+        <method>
+            <name>ignoreCloseExceptions</name>
+            <comment>Set whether or not to ignore exceptions that occur from calling
+ {@link Closeable#close()}
+ &lt;p&gt;
+ The default value of this setting is &lt;code&gt;true&lt;/code&gt;
+ignore: 
+Return type: @return:this request</comment>
+            <returntype>ariagp.amin.shahedi.asyncytask.HttpRequest</returntype>
+            <parameter>
+                <name>ignore</name>
+                <type>boolean</type>
+            </parameter>
+        </method>
+        <method>
+            <name>charset</name>
+            <comment>Get 'charset' parameter from 'Content-Type' response header
+Return type: @return:charset or null if none</comment>
+            <returntype>java.lang.String</returntype>
+        </method>
+        <method>
+            <name>server</name>
+            <comment>Get the 'Server' header from the response
+Return type: @return:server</comment>
+            <returntype>java.lang.String</returntype>
+        </method>
+        <method>
+            <name>code2</name>
+            <comment>Set the value of the given {@link AtomicInteger} to the status code of
+ the response
+output: 
+Return type: @return:this request</comment>
+            <returntype>ariagp.amin.shahedi.asyncytask.HttpRequest</returntype>
+            <parameter>
+                <name>output</name>
+                <type>java.util.concurrent.atomic.AtomicInteger</type>
+            </parameter>
+        </method>
+        <method>
+            <name>badRequest</name>
+            <comment>Is the response code a 400 Bad Request?
+Return type: @return:true if 400, false otherwise</comment>
+            <returntype>boolean</returntype>
+        </method>
+        <method>
+            <name>body2</name>
+            <comment>Get response as {@link String} in given character set
+ &lt;p&gt;
+ This will fall back to using the UTF-8 character set if the given charset
+ is null
+charset: 
+Return type: @return:string</comment>
+            <returntype>java.lang.String</returntype>
+            <parameter>
+                <name>charset</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+        <method>
+            <name>body3</name>
+            <comment>Get the response body as a {@link String} and set it as the value of the
+ given reference.
+output: 
+charset: 
+Return type: @return:this request</comment>
+            <returntype>ariagp.amin.shahedi.asyncytask.HttpRequest</returntype>
+            <parameter>
+                <name>output</name>
+                <type>java.util.concurrent.atomic.AtomicReference</type>
+            </parameter>
+            <parameter>
+                <name>charset</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+        <method>
+            <name>body4</name>
+            <comment>Get the response body as a {@link String} and set it as the value of the
+ given reference.
+output: 
+Return type: @return:this request</comment>
+            <returntype>ariagp.amin.shahedi.asyncytask.HttpRequest</returntype>
+            <parameter>
+                <name>output</name>
+                <type>java.util.concurrent.atomic.AtomicReference</type>
+            </parameter>
+        </method>
+        <method>
+            <name>sendString</name>
+            <comment>Write char sequence to request body
+ &lt;p&gt;
+ The charset configured via {@link #contentType(String)} will be used and
+ UTF-8 will be used if it is unset.
+value: 
+Return type: @return:this request</comment>
+            <returntype>ariagp.amin.shahedi.asyncytask.HttpRequest</returntype>
+            <parameter>
+                <name>value</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+        <method>
+            <name>stream</name>
+            <comment>Get stream to response body
+Return type: @return:stream</comment>
+            <returntype>java.io.InputStream</returntype>
+        </method>
+        <method>
+            <name>get</name>
+            <comment>Start a 'GET' request to the given URL
+url: 
+Return type: @return:request</comment>
+            <returntype>ariagp.amin.shahedi.asyncytask.HttpRequest</returntype>
+            <parameter>
+                <name>url</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+        <method>
+            <name>copy</name>
+            <comment>Copy from input stream to output stream
+input: 
+output: 
+Return type: @return:this request</comment>
+            <returntype>ariagp.amin.shahedi.asyncytask.HttpRequest</returntype>
+            <parameter>
+                <name>input</name>
+                <type>java.io.InputStream</type>
+            </parameter>
+            <parameter>
+                <name>output</name>
+                <type>java.io.OutputStream</type>
+            </parameter>
+        </method>
+        <method>
+            <name>trustAllCerts</name>
+            <comment>Configure HTTPS connection to trust all certificates
+ &lt;p&gt;
+ This method does nothing if the current request is not a HTTPS request
+Return type: @return:this request</comment>
+            <returntype>ariagp.amin.shahedi.asyncytask.HttpRequest</returntype>
+        </method>
+        <method>
+            <name>receive</name>
+            <comment>Stream response body to file
+file: 
+Return type: @return:this request</comment>
+            <returntype>ariagp.amin.shahedi.asyncytask.HttpRequest</returntype>
+            <parameter>
+                <name>file</name>
+                <type>java.io.File</type>
+            </parameter>
+        </method>
+        <method>
+            <name>keepAlive</name>
+            <comment>Set the 'http.keepAlive' property to the given value.
+ &lt;p&gt;
+ This setting will apply to all requests.
+keepAlive: </comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>keepAlive</name>
+                <type>boolean</type>
+            </parameter>
+        </method>
+        <method>
+            <name>startPart</name>
+            <comment>Start part of a multipart
+Return type: @return:this request</comment>
+            <returntype>ariagp.amin.shahedi.asyncytask.HttpRequest</returntype>
+        </method>
+        <method>
+            <name>userAgent</name>
+            <comment>Set the 'User-Agent' header to given value
+userAgent: 
+Return type: @return:this request</comment>
+            <returntype>ariagp.amin.shahedi.asyncytask.HttpRequest</returntype>
+            <parameter>
+                <name>userAgent</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+        <method>
+            <name>useProxy</name>
+            <comment>Configure an HTTP proxy on this connection. Use {
+ {@link #proxyBasic(String, String)} if this proxy requires basic
+ authentication.
+proxyHost: 
+proxyPort: 
+Return type: @return:this request</comment>
+            <returntype>ariagp.amin.shahedi.asyncytask.HttpRequest</returntype>
+            <parameter>
+                <name>proxyHost</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>proxyPort</name>
+                <type>int</type>
+            </parameter>
+        </method>
+        <method>
+            <name>url</name>
+            <comment>Get the {@link URL} of this request's connection
+Return type: @return:request URL</comment>
+            <returntype>java.net.URL</returntype>
+        </method>
+        <method>
+            <name>acceptGzipEncoding</name>
+            <comment>Set the 'Accept-Encoding' header to 'gzip'
+Return type: @return:this request</comment>
+            <returntype>ariagp.amin.shahedi.asyncytask.HttpRequest</returntype>
+        </method>
+        <method>
+            <name>readTimeout</name>
+            <comment>Set read timeout on connection to given value
+timeout: 
+Return type: @return:this request</comment>
+            <returntype>ariagp.amin.shahedi.asyncytask.HttpRequest</returntype>
+            <parameter>
+                <name>timeout</name>
+                <type>int</type>
+            </parameter>
+        </method>
+        <method>
+            <name>progress</name>
+            <comment>Set the UploadProgress callback for this request
+callback: 
+Return type: @return:this request</comment>
+            <returntype>ariagp.amin.shahedi.asyncytask.HttpRequest</returntype>
+            <parameter>
+                <name>callback</name>
+                <type>ariagp.amin.shahedi.asyncytask.HttpRequest.UploadProgress</type>
+            </parameter>
+        </method>
+        <method>
+            <name>toString</name>
+            <comment></comment>
+            <returntype>java.lang.String</returntype>
+        </method>
+        <method>
+            <name>contentLength</name>
+            <comment>Get the 'Content-Length' header from the response
+Return type: @return:response header value</comment>
+            <returntype>int</returntype>
+        </method>
+        <method>
+            <name>encode</name>
+            <comment>Encode the given URL as an ASCII {@link String}
+ &lt;p&gt;
+ This method ensures the path and query segments of the URL are properly
+ encoded such as ' ' characters being encoded to '%20' or any UTF-8
+ characters that are non-ASCII. No encoding of URLs is done by default by
+ the {@link HttpRequest} constructors and so if URL encoding is needed
+ this method should be called before calling the {@link HttpRequest}
+ constructor.
+url: 
+Return type: @return:encoded URL</comment>
+            <returntype>java.lang.String</returntype>
+            <parameter>
+                <name>url</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+        <method>
+            <name>date</name>
+            <comment>Get the 'Date' header from the response
+Return type: @return:date value, -1 on failures</comment>
+            <returntype>long</returntype>
+        </method>
+        <method>
+            <name>noContent</name>
+            <comment>Is the response code a 204 No Content?
+Return type: @return:true if 204, false otherwise</comment>
+            <returntype>boolean</returntype>
+        </method>
+        <method>
+            <name>referer</name>
+            <comment>Set the 'Referer' header to given value
+referer: 
+Return type: @return:this request</comment>
+            <returntype>ariagp.amin.shahedi.asyncytask.HttpRequest</returntype>
+            <parameter>
+                <name>referer</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+        <method>
+            <name>delete3</name>
+            <comment>Start a 'DELETE' request to the given URL along with the query params
+baseUrl: 
+params: The query parameters to include as part of the baseUrl
+encode: true to encode the full URL
+Return type: @return:request</comment>
+            <returntype>ariagp.amin.shahedi.asyncytask.HttpRequest</returntype>
+            <parameter>
+                <name>baseUrl</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>params</name>
+                <type>java.util.Map</type>
+            </parameter>
+            <parameter>
+                <name>encode</name>
+                <type>boolean</type>
+            </parameter>
+        </method>
+        <method>
+            <name>delete4</name>
+            <comment>Start a 'DELETE' request to the given URL along with the query params
+baseUrl: 
+encode: true to encode the full URL
+params: the name/value query parameter pairs to include as part of the
+            baseUrl
+Return type: @return:request</comment>
+            <returntype>ariagp.amin.shahedi.asyncytask.HttpRequest</returntype>
+            <parameter>
+                <name>baseUrl</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>encode</name>
+                <type>boolean</type>
+            </parameter>
+            <parameter>
+                <name>params</name>
+                <type>java.lang.Object[]</type>
+            </parameter>
+        </method>
+        <method>
+            <name>useCaches</name>
+            <comment>Set value of {@link HttpURLConnection#setUseCaches(boolean)}
+useCaches: 
+Return type: @return:this request</comment>
+            <returntype>ariagp.amin.shahedi.asyncytask.HttpRequest</returntype>
+            <parameter>
+                <name>useCaches</name>
+                <type>boolean</type>
+            </parameter>
+        </method>
+        <method>
+            <name>reader</name>
+            <comment>Get reader to response body using given character set.
+ &lt;p&gt;
+ This will fall back to using the UTF-8 character set if the given charset
+ is null
+charset: 
+Return type: @return:reader</comment>
+            <returntype>java.io.InputStreamReader</returntype>
+            <parameter>
+                <name>charset</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+        <method>
+            <name>body</name>
+            <comment>Get response as {@link String} using character set returned from
+ {@link #charset()}
+Return type: @return:string</comment>
+            <returntype>java.lang.String</returntype>
+        </method>
+        <method>
+            <name>delete2</name>
+            <comment>Start a 'DELETE' request to the given URL
+url: 
+Return type: @return:request</comment>
+            <returntype>ariagp.amin.shahedi.asyncytask.HttpRequest</returntype>
+            <parameter>
+                <name>url</name>
+                <type>java.net.URL</type>
+            </parameter>
+        </method>
+        <method>
+            <name>proxyPort</name>
+            <comment>Set the 'http.proxyPort' and 'https.proxyPort' properties to the given
+ port number.
+ &lt;p&gt;
+ This setting will apply to all requests.
+port: </comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>port</name>
+                <type>int</type>
+            </parameter>
+        </method>
+        <method>
+            <name>nonProxyHosts</name>
+            <comment>Set the 'http.nonProxyHosts' property to the given host values.
+ &lt;p&gt;
+ Hosts will be separated by a '|' character.
+ &lt;p&gt;
+ This setting will apply to all requests.
+hosts: </comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>hosts</name>
+                <type>java.lang.String[]</type>
+            </parameter>
+        </method>
+        <method>
+            <name>closeOutput</name>
+            <comment>Close output stream
+Return type: @return:this request</comment>
+            <returntype>ariagp.amin.shahedi.asyncytask.HttpRequest</returntype>
+        </method>
+        <method>
+            <name>post</name>
+            <comment>Start a 'POST' request to the given URL
+url: 
+Return type: @return:request</comment>
+            <returntype>ariagp.amin.shahedi.asyncytask.HttpRequest</returntype>
+            <parameter>
+                <name>url</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+        <method>
+            <name>connectTimeout</name>
+            <comment>Set connect timeout on connection to given value
+timeout: 
+Return type: @return:this request</comment>
+            <returntype>ariagp.amin.shahedi.asyncytask.HttpRequest</returntype>
+            <parameter>
+                <name>timeout</name>
+                <type>int</type>
+            </parameter>
+        </method>
+        <method>
+            <name>contentEncoding</name>
+            <comment>Get the 'Content-Encoding' header from the response
+Return type: @return:this request</comment>
+            <returntype>java.lang.String</returntype>
+        </method>
+        <method>
+            <name>buffer</name>
+            <comment>Get response in a buffered stream
+Return type: @return:stream</comment>
+            <returntype>java.io.BufferedInputStream</returntype>
+        </method>
+        <method>
+            <name>contentType</name>
+            <comment>Set the 'Content-Type' request header to the given value
+contentType: 
+Return type: @return:this request</comment>
+            <returntype>ariagp.amin.shahedi.asyncytask.HttpRequest</returntype>
+            <parameter>
+                <name>contentType</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+        <method>
+            <name>created</name>
+            <comment>Is the response code a 201 Created?
+Return type: @return:true if 201, false otherwise</comment>
+            <returntype>boolean</returntype>
+        </method>
+        <method>
+            <name>proxyHost</name>
+            <comment>Set the 'http.proxyHost' and 'https.proxyHost' properties to the given
+ host value.
+ &lt;p&gt;
+ This setting will apply to all requests.
+host: </comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>host</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+        <method>
+            <name>header</name>
+            <comment>Set header to have given entry's key as the name and value as the value
+header: 
+Return type: @return:this request</comment>
+            <returntype>ariagp.amin.shahedi.asyncytask.HttpRequest</returntype>
+            <parameter>
+                <name>header</name>
+                <type>java.util.Map.Entry</type>
+            </parameter>
+        </method>
+        <method>
+            <name>head2</name>
+            <comment>Start a 'HEAD' request to the given URL
+url: 
+Return type: @return:request</comment>
+            <returntype>ariagp.amin.shahedi.asyncytask.HttpRequest</returntype>
+            <parameter>
+                <name>url</name>
+                <type>java.net.URL</type>
+            </parameter>
+        </method>
+        <method>
+            <name>isBodyEmpty</name>
+            <comment>Is the response body empty?
+Return type: @return:true if the Content-Length response header is 0, false otherwise</comment>
+            <returntype>boolean</returntype>
+        </method>
+        <method>
+            <name>head3</name>
+            <comment>Start a 'HEAD' request to the given URL along with the query params
+baseUrl: 
+params: The query parameters to include as part of the baseUrl
+encode: true to encode the full URL
+Return type: @return:request</comment>
+            <returntype>ariagp.amin.shahedi.asyncytask.HttpRequest</returntype>
+            <parameter>
+                <name>baseUrl</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>params</name>
+                <type>java.util.Map</type>
+            </parameter>
+            <parameter>
+                <name>encode</name>
+                <type>boolean</type>
+            </parameter>
+        </method>
+        <method>
+            <name>uncompress</name>
+            <comment>Set whether or not the response body should be automatically uncompressed
+ when read from.
+ &lt;p&gt;
+ This will only affect requests that have the 'Content-Encoding' response
+ header set to 'gzip'.
+ &lt;p&gt;
+ This causes all receive methods to use a {@link GZIPInputStream} when
+ applicable so that higher level streams and readers can read the data
+ uncompressed.
+ &lt;p&gt;
+ Setting this option does not cause any request headers to be set
+ automatically so {@link #acceptGzipEncoding()} should be used in
+ conjunction with this setting to tell the server to gzip the response.
+uncompress: 
+Return type: @return:this request</comment>
+            <returntype>ariagp.amin.shahedi.asyncytask.HttpRequest</returntype>
+            <parameter>
+                <name>uncompress</name>
+                <type>boolean</type>
+            </parameter>
+        </method>
+        <method>
+            <name>lastModified</name>
+            <comment>Get the 'Last-Modified' header from the response
+Return type: @return:last modified value, -1 on failures</comment>
+            <returntype>long</returntype>
+        </method>
+        <method>
+            <name>head4</name>
+            <comment>Start a 'GET' request to the given URL along with the query params
+baseUrl: 
+encode: true to encode the full URL
+params: the name/value query parameter pairs to include as part of the
+            baseUrl
+Return type: @return:request</comment>
+            <returntype>ariagp.amin.shahedi.asyncytask.HttpRequest</returntype>
+            <parameter>
+                <name>baseUrl</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>encode</name>
+                <type>boolean</type>
+            </parameter>
+            <parameter>
+                <name>params</name>
+                <type>java.lang.Object[]</type>
+            </parameter>
+        </method>
+        <method>
+            <name>basic</name>
+            <comment>Set the 'Authorization' header to given values in Basic authentication
+ format
+name: 
+password: 
+Return type: @return:this request</comment>
+            <returntype>ariagp.amin.shahedi.asyncytask.HttpRequest</returntype>
+            <parameter>
+                <name>name</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>password</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+        <method>
+            <name>parameters</name>
+            <comment>Get all parameters from header value in response
+ &lt;p&gt;
+ This will be all key=value pairs after the first ';' that are separated
+ by a ';'
+headerName: 
+Return type: @return:non-null but possibly empty map of parameter headers</comment>
+            <returntype>java.util.Map</returntype>
+            <parameter>
+                <name>headerName</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+        <method>
+            <name>send</name>
+            <comment>Write contents of file to request body
+input: 
+Return type: @return:this request</comment>
+            <returntype>ariagp.amin.shahedi.asyncytask.HttpRequest</returntype>
+            <parameter>
+                <name>input</name>
+                <type>java.io.File</type>
+            </parameter>
+        </method>
+        <method>
+            <name>getParams</name>
+            <comment>Get parameter values from header value
+header: 
+Return type: @return:parameter value or null if none</comment>
+            <returntype>java.util.Map</returntype>
+            <parameter>
+                <name>header</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+        <method>
+            <name>expires</name>
+            <comment>Get the 'Expires' header from the response
+Return type: @return:expires value, -1 on failures</comment>
+            <returntype>long</returntype>
+        </method>
+        <method>
+            <name>code</name>
+            <comment>Get the status code of the response
+Return type: @return:the response code</comment>
+            <returntype>int</returntype>
+        </method>
+        <method>
+            <name>proxyAuthorization</name>
+            <comment>Set the 'Proxy-Authorization' header to given value
+proxyAuthorization: 
+Return type: @return:this request</comment>
+            <returntype>ariagp.amin.shahedi.asyncytask.HttpRequest</returntype>
+            <parameter>
+                <name>proxyAuthorization</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+        <method>
+            <name>part</name>
+            <comment>Write part of a multipart request to the request body
+name: 
+filename: 
+contentType: value of the Content-Type part header
+part: 
+Return type: @return:this request</comment>
+            <returntype>ariagp.amin.shahedi.asyncytask.HttpRequest</returntype>
+            <parameter>
+                <name>name</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>filename</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>contentType</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>part</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+        <method>
+            <name>part2</name>
+            <comment>Write part of a multipart request to the request body
+name: 
+filename: 
+part: 
+Return type: @return:this request</comment>
+            <returntype>ariagp.amin.shahedi.asyncytask.HttpRequest</returntype>
+            <parameter>
+                <name>name</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>filename</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>part</name>
+                <type>java.io.File</type>
+            </parameter>
+        </method>
+        <method>
+            <name>chunk</name>
+            <comment>Set chunked streaming mode to the given size
+size: 
+Return type: @return:this request</comment>
+            <returntype>ariagp.amin.shahedi.asyncytask.HttpRequest</returntype>
+            <parameter>
+                <name>size</name>
+                <type>int</type>
+            </parameter>
+        </method>
+        <method>
+            <name>acceptJson</name>
+            <comment>Set the 'Accept' header to 'application/json'
+Return type: @return:this request</comment>
+            <returntype>ariagp.amin.shahedi.asyncytask.HttpRequest</returntype>
+        </method>
+        <method>
+            <name>post4</name>
+            <comment>Start a 'POST' request to the given URL
+url: 
+Return type: @return:request</comment>
+            <returntype>ariagp.amin.shahedi.asyncytask.HttpRequest</returntype>
+            <parameter>
+                <name>url</name>
+                <type>java.net.URL</type>
+            </parameter>
+        </method>
+        <method>
+            <name>ifModifiedSince</name>
+            <comment>Set the 'If-Modified-Since' request header to the given value
+ifModifiedSince: 
+Return type: @return:this request</comment>
+            <returntype>ariagp.amin.shahedi.asyncytask.HttpRequest</returntype>
+            <parameter>
+                <name>ifModifiedSince</name>
+                <type>long</type>
+            </parameter>
+        </method>
+        <method>
+            <name>bufferSize2</name>
+            <comment>Set the size used when buffering and copying between streams
+ &lt;p&gt;
+ This size is also used for send and receive buffers created for both char
+ and byte arrays
+ &lt;p&gt;
+ The default buffer size is 8,192 bytes
+size: 
+Return type: @return:this request</comment>
+            <returntype>ariagp.amin.shahedi.asyncytask.HttpRequest</returntype>
+            <parameter>
+                <name>size</name>
+                <type>int</type>
+            </parameter>
+        </method>
+        <method>
+            <name>post2</name>
+            <comment>Start a 'POST' request to the given URL along with the query params
+baseUrl: 
+encode: true to encode the full URL
+params: the name/value query parameter pairs to include as part of the
+            baseUrl
+Return type: @return:request</comment>
+            <returntype>ariagp.amin.shahedi.asyncytask.HttpRequest</returntype>
+            <parameter>
+                <name>baseUrl</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>encode</name>
+                <type>boolean</type>
+            </parameter>
+            <parameter>
+                <name>params</name>
+                <type>java.lang.Object[]</type>
+            </parameter>
+        </method>
+        <method>
+            <name>post3</name>
+            <comment>Start a 'POST' request to the given URL along with the query params
+baseUrl: 
+params: the query parameters to include as part of the baseUrl
+encode: true to encode the full URL
+Return type: @return:request</comment>
+            <returntype>ariagp.amin.shahedi.asyncytask.HttpRequest</returntype>
+            <parameter>
+                <name>baseUrl</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>params</name>
+                <type>java.util.Map</type>
+            </parameter>
+            <parameter>
+                <name>encode</name>
+                <type>boolean</type>
+            </parameter>
+        </method>
+        <method>
+            <name>delete</name>
+            <comment>Start a 'DELETE' request to the given URL
+url: 
+Return type: @return:request</comment>
+            <returntype>ariagp.amin.shahedi.asyncytask.HttpRequest</returntype>
+            <parameter>
+                <name>url</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+        <method>
+            <name>dateHeader</name>
+            <comment>Get a date header from the response falling back to returning -1 if the
+ header is missing or parsing fails
+name: 
+Return type: @return:date, -1 on failures</comment>
+            <returntype>long</returntype>
+            <parameter>
+                <name>name</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+        <method>
+            <name>head</name>
+            <comment>Start a 'HEAD' request to the given URL
+url: 
+Return type: @return:request</comment>
+            <returntype>ariagp.amin.shahedi.asyncytask.HttpRequest</returntype>
+            <parameter>
+                <name>url</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+        <method>
+            <name>trace</name>
+            <comment>Start a 'TRACE' request to the given URL
+url: 
+Return type: @return:request</comment>
+            <returntype>ariagp.amin.shahedi.asyncytask.HttpRequest</returntype>
+            <parameter>
+                <name>url</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+        <method>
+            <name>writePartHeader</name>
+            <comment>Write part header
+name: 
+filename: 
+Return type: @return:this request</comment>
+            <returntype>ariagp.amin.shahedi.asyncytask.HttpRequest</returntype>
+            <parameter>
+                <name>name</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>filename</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+        <method>
+            <name>parameter</name>
+            <comment>Get parameter with given name from header value in response
+headerName: 
+paramName: 
+Return type: @return:parameter value or null if missing</comment>
+            <returntype>java.lang.String</returntype>
+            <parameter>
+                <name>headerName</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>paramName</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+        <method>
+            <name>eTag</name>
+            <comment>Get the 'ETag' header from the response
+Return type: @return:entity tag</comment>
+            <returntype>java.lang.String</returntype>
+        </method>
+        <method>
+            <name>ok</name>
+            <comment>Is the response code a 200 OK?
+Return type: @return:true if 200, false otherwise</comment>
+            <returntype>boolean</returntype>
+        </method>
+        <method>
+            <name>serverError</name>
+            <comment>Is the response code a 500 Internal Server Error?
+Return type: @return:true if 500, false otherwise</comment>
+            <returntype>boolean</returntype>
+        </method>
+        <method>
+            <name>maxConnections</name>
+            <comment>Set the 'http.maxConnections' property to the given value.
+ &lt;p&gt;
+ This setting will apply to all requests.
+maxConnections: </comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>maxConnections</name>
+                <type>int</type>
+            </parameter>
+        </method>
+        <method>
+            <name>headers</name>
+            <comment>Set all headers found in given map where the keys are the header names
+ and the values are the header values
+headers: 
+Return type: @return:this request</comment>
+            <returntype>ariagp.amin.shahedi.asyncytask.HttpRequest</returntype>
+            <parameter>
+                <name>headers</name>
+                <type>java.util.Map</type>
+            </parameter>
+        </method>
+        <method>
+            <name>trustAllHosts</name>
+            <comment>Configure HTTPS connection to trust all hosts using a custom
+ {@link HostnameVerifier} that always returns &lt;code&gt;true&lt;/code&gt; for each
+ host verified
+ &lt;p&gt;
+ This method does nothing if the current request is not a HTTPS request
+Return type: @return:this request</comment>
+            <returntype>ariagp.amin.shahedi.asyncytask.HttpRequest</returntype>
+        </method>
+        <method>
+            <name>intHeader</name>
+            <comment>Get an integer header from the response falling back to returning -1 if
+ the header is missing or parsing fails
+name: 
+Return type: @return:header value as an integer, -1 when missing or parsing fails</comment>
+            <returntype>int</returntype>
+            <parameter>
+                <name>name</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+        <method>
+            <name>acceptEncoding</name>
+            <comment>Set the 'Accept-Encoding' header to given value
+acceptEncoding: 
+Return type: @return:this request</comment>
+            <returntype>ariagp.amin.shahedi.asyncytask.HttpRequest</returntype>
+            <parameter>
+                <name>acceptEncoding</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+        <method>
+            <name>closeOutputQuietly</name>
+            <comment>Call {@link #closeOutput()} and re-throw a caught {@link IOException}s as
+ an {@link HttpRequestException}
+Return type: @return:this request</comment>
+            <returntype>ariagp.amin.shahedi.asyncytask.HttpRequest</returntype>
+        </method>
+        <method>
+            <name>openOutput</name>
+            <comment>Open output stream
+Return type: @return:this request</comment>
+            <returntype>ariagp.amin.shahedi.asyncytask.HttpRequest</returntype>
+        </method>
+        <method>
+            <name>trace2</name>
+            <comment>Start a 'TRACE' request to the given URL
+url: 
+Return type: @return:request</comment>
+            <returntype>ariagp.amin.shahedi.asyncytask.HttpRequest</returntype>
+            <parameter>
+                <name>url</name>
+                <type>java.net.URL</type>
+            </parameter>
+        </method>
+        <method>
+            <name>message</name>
+            <comment>Get status message of the response
+Return type: @return:message</comment>
+            <returntype>java.lang.String</returntype>
+        </method>
+        <method>
+            <name>ifNoneMatch</name>
+            <comment>Set the 'If-None-Match' request header to the given value
+ifNoneMatch: 
+Return type: @return:this request</comment>
+            <returntype>ariagp.amin.shahedi.asyncytask.HttpRequest</returntype>
+            <parameter>
+                <name>ifNoneMatch</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+        <method>
+            <name>form</name>
+            <comment>Write the values in the map as form data to the request body
+ &lt;p&gt;
+ The pairs specified will be URL-encoded in UTF-8 and sent with the
+ 'application/x-www-form-urlencoded' content-type
+values: 
+Return type: @return:this request</comment>
+            <returntype>ariagp.amin.shahedi.asyncytask.HttpRequest</returntype>
+            <parameter>
+                <name>values</name>
+                <type>java.util.Map</type>
+            </parameter>
+        </method>
+        <method>
+            <name>notModified</name>
+            <comment>Is the response code a 304 Not Modified?
+Return type: @return:true if 304, false otherwise</comment>
+            <returntype>boolean</returntype>
+        </method>
+        <method>
+            <name>bytes</name>
+            <comment>Get response as byte array
+Return type: @return:byte array</comment>
+            <returntype>byte[]</returntype>
+        </method>
+        <method>
+            <name>part11</name>
+            <comment>Write part of a multipart request to the request body
+name: 
+part: 
+Return type: @return:this request</comment>
+            <returntype>ariagp.amin.shahedi.asyncytask.HttpRequest</returntype>
+            <parameter>
+                <name>name</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>part</name>
+                <type>java.io.File</type>
+            </parameter>
+        </method>
+        <method>
+            <name>part3</name>
+            <comment>Write part of a multipart request to the request body
+name: 
+filename: 
+contentType: value of the Content-Type part header
+part: 
+Return type: @return:this request</comment>
+            <returntype>ariagp.amin.shahedi.asyncytask.HttpRequest</returntype>
+            <parameter>
+                <name>name</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>filename</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>contentType</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>part</name>
+                <type>java.io.File</type>
+            </parameter>
+        </method>
+        <method>
+            <name>part10</name>
+            <comment>Write part of a multipart request to the request body
+name: 
+filename: 
+part: 
+Return type: @return:this request</comment>
+            <returntype>ariagp.amin.shahedi.asyncytask.HttpRequest</returntype>
+            <parameter>
+                <name>name</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>filename</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>part</name>
+                <type>java.lang.Number</type>
+            </parameter>
+        </method>
+        <method>
+            <name>notFound</name>
+            <comment>Is the response code a 404 Not Found?
+Return type: @return:true if 404, false otherwise</comment>
+            <returntype>boolean</returntype>
+        </method>
+        <method>
+            <name>location</name>
+            <comment>Get the 'Location' header from the response
+Return type: @return:location</comment>
+            <returntype>java.lang.String</returntype>
+        </method>
+        <method>
+            <name>part5</name>
+            <comment>Write part of a multipart request to the request body
+name: 
+part: 
+Return type: @return:this request</comment>
+            <returntype>ariagp.amin.shahedi.asyncytask.HttpRequest</returntype>
+            <parameter>
+                <name>name</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>part</name>
+                <type>java.io.InputStream</type>
+            </parameter>
+        </method>
+        <method>
+            <name>part6</name>
+            <comment>Write part of a multipart request to the request body
+name: 
+filename: 
+contentType: value of the Content-Type part header
+part: 
+Return type: @return:this request</comment>
+            <returntype>ariagp.amin.shahedi.asyncytask.HttpRequest</returntype>
+            <parameter>
+                <name>name</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>filename</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>contentType</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>part</name>
+                <type>java.io.InputStream</type>
+            </parameter>
+        </method>
+        <method>
+            <name>writer</name>
+            <comment>Create writer to request output stream
+Return type: @return:writer</comment>
+            <returntype>java.io.OutputStreamWriter</returntype>
+        </method>
+        <method>
+            <name>part7</name>
+            <comment>Write part of a multipart request to the request body
+name: 
+filename: 
+part: 
+Return type: @return:this request</comment>
+            <returntype>ariagp.amin.shahedi.asyncytask.HttpRequest</returntype>
+            <parameter>
+                <name>name</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>filename</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>part</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+        <method>
+            <name>part8</name>
+            <comment>Write part of a multipart request to the request body
+name: 
+part: 
+Return type: @return:this request</comment>
+            <returntype>ariagp.amin.shahedi.asyncytask.HttpRequest</returntype>
+            <parameter>
+                <name>name</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>part</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+        <method>
+            <name>append</name>
+            <comment>Append given map as query parameters to the base URL
+ &lt;p&gt;
+ Each map entry's key will be a parameter name and the value's
+ {@link Object#toString()} will be the parameter value.
+url: 
+params: 
+Return type: @return:URL with appended query params</comment>
+            <returntype>java.lang.String</returntype>
+            <parameter>
+                <name>url</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>params</name>
+                <type>java.util.Map</type>
+            </parameter>
+        </method>
+        <method>
+            <name>part9</name>
+            <comment>Write part of a multipart request to the request body
+name: 
+part: 
+Return type: @return:this request</comment>
+            <returntype>ariagp.amin.shahedi.asyncytask.HttpRequest</returntype>
+            <parameter>
+                <name>name</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>part</name>
+                <type>java.lang.Number</type>
+            </parameter>
+        </method>
+        <method>
+            <name>bufferSize</name>
+            <comment>Get the configured buffer size
+ &lt;p&gt;
+ The default buffer size is 8,192 bytes
+Return type: @return:buffer size</comment>
+            <returntype>int</returntype>
+        </method>
+        <property>
+            <name>ConnectionFactory</name>
+            <parameter>
+                <name>connectionFactory</name>
+                <type>ariagp.amin.shahedi.asyncytask.HttpRequest.ConnectionFactory</type>
+            </parameter>
+            <comment>Specify the {@link ConnectionFactory} used to create new requests.</comment>
+        </property>
+        <property>
+            <name>Connection</name>
+            <returntype>java.net.HttpURLConnection</returntype>
+            <comment>Get underlying connection</comment>
+        </property>
+        <field>
+            <name>HEADER_CONTENT_ENCODING</name>
+            <comment>'Content-Encoding' header name</comment>
+            <returntype>java.lang.String</returntype>
+        </field>
+        <field>
+            <name>HEADER_USER_AGENT</name>
+            <comment>'User-Agent' header name</comment>
+            <returntype>java.lang.String</returntype>
+        </field>
+        <field>
+            <name>HEADER_CACHE_CONTROL</name>
+            <comment>'Cache-Control' header name</comment>
+            <returntype>java.lang.String</returntype>
+        </field>
+        <field>
+            <name>HEADER_DATE</name>
+            <comment>'Date' header name</comment>
+            <returntype>java.lang.String</returntype>
+        </field>
+        <field>
+            <name>ENCODING_GZIP</name>
+            <comment>'gzip' encoding header value</comment>
+            <returntype>java.lang.String</returntype>
+        </field>
+        <field>
+            <name>HEADER_ACCEPT_CHARSET</name>
+            <comment>'Accept-Charset' header name</comment>
+            <returntype>java.lang.String</returntype>
+        </field>
+        <field>
+            <name>CONTENT_TYPE_JSON</name>
+            <comment>'application/json' content type header value</comment>
+            <returntype>java.lang.String</returntype>
+        </field>
+        <field>
+            <name>HEADER_AUTHORIZATION</name>
+            <comment>'Authorization' header name</comment>
+            <returntype>java.lang.String</returntype>
+        </field>
+        <field>
+            <name>HEADER_REFERER</name>
+            <comment>'Referer' header name</comment>
+            <returntype>java.lang.String</returntype>
+        </field>
+        <field>
+            <name>HEADER_LOCATION</name>
+            <comment>'Location' header name</comment>
+            <returntype>java.lang.String</returntype>
+        </field>
+        <field>
+            <name>HEADER_SERVER</name>
+            <comment>'Server' header name</comment>
+            <returntype>java.lang.String</returntype>
+        </field>
+        <field>
+            <name>CONTENT_TYPE_FORM</name>
+            <comment>'application/x-www-form-urlencoded' content type header value</comment>
+            <returntype>java.lang.String</returntype>
+        </field>
+        <field>
+            <name>METHOD_DELETE</name>
+            <comment>'DELETE' request method</comment>
+            <returntype>java.lang.String</returntype>
+        </field>
+        <field>
+            <name>HEADER_IF_NONE_MATCH</name>
+            <comment>'If-None-Match' header name</comment>
+            <returntype>java.lang.String</returntype>
+        </field>
+        <field>
+            <name>HEADER_ETAG</name>
+            <comment>'ETag' header name</comment>
+            <returntype>java.lang.String</returntype>
+        </field>
+        <field>
+            <name>HEADER_PROXY_AUTHORIZATION</name>
+            <comment>'Proxy-Authorization' header name</comment>
+            <returntype>java.lang.String</returntype>
+        </field>
+        <field>
+            <name>HEADER_CONTENT_LENGTH</name>
+            <comment>'Content-Length' header name</comment>
+            <returntype>java.lang.String</returntype>
+        </field>
+        <field>
+            <name>METHOD_POST</name>
+            <comment>'POST' request method</comment>
+            <returntype>java.lang.String</returntype>
+        </field>
+        <field>
+            <name>PARAM_CHARSET</name>
+            <comment>'charset' header value parameter</comment>
+            <returntype>java.lang.String</returntype>
+        </field>
+        <field>
+            <name>HEADER_ACCEPT_ENCODING</name>
+            <comment>'Accept-Encoding' header name</comment>
+            <returntype>java.lang.String</returntype>
+        </field>
+        <field>
+            <name>METHOD_HEAD</name>
+            <comment>'HEAD' request method</comment>
+            <returntype>java.lang.String</returntype>
+        </field>
+        <field>
+            <name>CHARSET_UTF8</name>
+            <comment>'UTF-8' charset name</comment>
+            <returntype>java.lang.String</returntype>
+        </field>
+        <field>
+            <name>HEADER_CONTENT_TYPE</name>
+            <comment>'Content-Type' header name</comment>
+            <returntype>java.lang.String</returntype>
+        </field>
+        <field>
+            <name>HEADER_ACCEPT</name>
+            <comment>'Accept' header name</comment>
+            <returntype>java.lang.String</returntype>
+        </field>
+        <field>
+            <name>METHOD_PUT</name>
+            <comment>'PUT' request method</comment>
+            <returntype>java.lang.String</returntype>
+        </field>
+        <field>
+            <name>METHOD_TRACE</name>
+            <comment>'TRACE' request method</comment>
+            <returntype>java.lang.String</returntype>
+        </field>
+        <field>
+            <name>HEADER_EXPIRES</name>
+            <comment>'Expires' header name</comment>
+            <returntype>java.lang.String</returntype>
+        </field>
+        <field>
+            <name>HEADER_LAST_MODIFIED</name>
+            <comment>'Last-Modified' header name</comment>
+            <returntype>java.lang.String</returntype>
+        </field>
+        <field>
+            <name>METHOD_OPTIONS</name>
+            <comment>'OPTIONS' options method</comment>
+            <returntype>java.lang.String</returntype>
+        </field>
+        <field>
+            <name>METHOD_GET</name>
+            <comment>'GET' request method</comment>
+            <returntype>java.lang.String</returntype>
+        </field>
+    </class>
+    <class>
+        <name>ariagp.amin.shahedi.asyncytask.HttpRequest.Base64</name>
+        <comment>&lt;p&gt;
+ Encodes and decodes to and from Base64 notation.
+ &lt;/p&gt;
+ &lt;p&gt;
+ I am placing this code in the Public Domain. Do with it as you will. This
+ software comes with no guarantees or warranties but with plenty of
+ well-wishing instead! Please visit &lt;a
+ href="http://iharder.net/base64"&gt;http://iharder.net/base64&lt;/a&gt;
+ periodically to check for updates or to contribute improvements.
+ &lt;/p&gt;</comment>
+        <owner>process</owner>
+        <method>
+            <name>encode</name>
+            <comment>Encode string as a byte array in Base64 annotation.
+string: 
+Return type: @return:The Base64-encoded data as a string</comment>
+            <returntype>java.lang.String</returntype>
+            <parameter>
+                <name>string</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+        <method>
+            <name>encodeBytes</name>
+            <comment>Encodes a byte array into Base64 notation.
+source: The data to convert
+Return type: @return:The Base64-encoded data as a String</comment>
+            <returntype>java.lang.String</returntype>
+            <parameter>
+                <name>source</name>
+                <type>byte[]</type>
+            </parameter>
+        </method>
+        <method>
+            <name>encodeBytesToBytes</name>
+            <comment>Similar to {@link #encodeBytes(byte[], int, int)} but returns a byte
+ array instead of instantiating a String. This is more efficient if
+ you're working with I/O streams and have large data sets to encode.
+source: The data to convert
+off: Offset in array where conversion should begin
+len: Length of data to convert
+Return type: @return:The Base64-encoded data as a String if there is an error</comment>
+            <returntype>byte[]</returntype>
+            <parameter>
+                <name>source</name>
+                <type>byte[]</type>
+            </parameter>
+            <parameter>
+                <name>off</name>
+                <type>int</type>
+            </parameter>
+            <parameter>
+                <name>len</name>
+                <type>int</type>
+            </parameter>
+        </method>
+    </class>
+    <class>
+        <name>ariagp.amin.shahedi.asyncytask.HttpRequest.HttpRequestException</name>
+        <comment>HTTP request exception whose cause is always an {@link IOException}</comment>
+        <owner>process</owner>
+        <method>
+            <name>printStackTrace</name>
+            <comment></comment>
+            <returntype>void</returntype>
+        </method>
+        <method>
+            <name>addSuppressed</name>
+            <comment></comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>arg0</name>
+                <type>java.lang.Throwable</type>
+            </parameter>
+        </method>
+        <method>
+            <name>initCause</name>
+            <comment></comment>
+            <returntype>java.lang.Throwable</returntype>
+            <parameter>
+                <name>arg0</name>
+                <type>java.lang.Throwable</type>
+            </parameter>
+        </method>
+        <method>
+            <name>toString</name>
+            <comment></comment>
+            <returntype>java.lang.String</returntype>
+        </method>
+        <method>
+            <name>fillInStackTrace</name>
+            <comment></comment>
+            <returntype>java.lang.Throwable</returntype>
+        </method>
+        <property>
+            <name>Message</name>
+            <returntype>java.lang.String</returntype>
+            <comment></comment>
+        </property>
+        <property>
+            <name>StackTrace</name>
+            <returntype>java.lang.StackTraceElement[]</returntype>
+            <parameter>
+                <name>arg0</name>
+                <type>java.lang.StackTraceElement[]</type>
+            </parameter>
+            <comment></comment>
+        </property>
+        <property>
+            <name>Suppressed</name>
+            <returntype>java.lang.Throwable[]</returntype>
+            <comment></comment>
+        </property>
+        <property>
+            <name>Cause</name>
+            <returntype>java.io.IOException</returntype>
+            <comment>Get {@link IOException} that triggered this request exception</comment>
+        </property>
+        <property>
+            <name>LocalizedMessage</name>
+            <returntype>java.lang.String</returntype>
+            <comment></comment>
+        </property>
+    </class>
+    <class>
+        <name>ariagp.amin.shahedi.asyncytask.HttpRequest.Operation</name>
+        <comment>Operation that handles executing a callback once complete and handling
+ nested exceptions</comment>
+        <owner>process</owner>
+        <method>
+            <name>call</name>
+            <comment></comment>
+            <returntype>V</returntype>
+        </method>
+        <method>
+            <name>run</name>
+            <comment>Run operation
+Return type: @return:result</comment>
+            <returntype>V</returntype>
+        </method>
+        <method>
+            <name>done</name>
+            <comment>Operation complete callback</comment>
+            <returntype>void</returntype>
+        </method>
+    </class>
+    <class>
+        <name>ariagp.amin.shahedi.asyncytask.HttpRequest.CloseOperation</name>
+        <comment>Class that ensures a {@link Closeable} gets closed with proper exception
+ handling.</comment>
+        <owner>process</owner>
+        <method>
+            <name>call</name>
+            <comment></comment>
+            <returntype>V</returntype>
+        </method>
+        <method>
+            <name>run</name>
+            <comment>Run operation
+Return type: @return:result</comment>
+            <returntype>V</returntype>
+        </method>
+        <method>
+            <name>done</name>
+            <comment>Operation complete callback</comment>
+            <returntype>void</returntype>
+        </method>
+    </class>
+    <class>
+        <name>ariagp.amin.shahedi.asyncytask.HttpRequest.FlushOperation</name>
+        <comment>Class that and ensures a {@link Flushable} gets flushed with proper
+ exception handling.</comment>
+        <owner>process</owner>
+        <method>
+            <name>call</name>
+            <comment></comment>
+            <returntype>V</returntype>
+        </method>
+        <method>
+            <name>run</name>
+            <comment>Run operation
+Return type: @return:result</comment>
+            <returntype>V</returntype>
+        </method>
+        <method>
+            <name>done</name>
+            <comment>Operation complete callback</comment>
+            <returntype>void</returntype>
+        </method>
+    </class>
+    <class>
+        <name>ariagp.amin.shahedi.asyncytask.HttpRequest.RequestOutputStream</name>
+        <comment>Request output stream</comment>
+        <owner>process</owner>
+        <method>
+            <name>flush</name>
+            <comment></comment>
+            <returntype>void</returntype>
+        </method>
+        <method>
+            <name>write</name>
+            <comment>Write string to stream
+value: 
+Return type: @return:this stream</comment>
+            <returntype>ariagp.amin.shahedi.asyncytask.HttpRequest.RequestOutputStream</returntype>
+            <parameter>
+                <name>value</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+        <method>
+            <name>close</name>
+            <comment></comment>
+            <returntype>void</returntype>
+        </method>
+        <field>
+            <name>buf</name>
+            <comment></comment>
+            <returntype>byte[]</returntype>
+        </field>
+        <field>
+            <name>count</name>
+            <comment></comment>
+            <returntype>int</returntype>
+        </field>
+        <field>
+            <name>out</name>
+            <comment></comment>
+            <returntype>java.io.OutputStream</returntype>
+        </field>
+    </class>
+    <class>
+        <name>ariagp.amin.shahedi.asyncytask.SpeedDownloader</name>
+        <owner>process</owner>
+        <method>
+            <name>CancelCheck</name>
+            <comment></comment>
+            <returntype>void</returntype>
+        </method>
+        <method>
+            <name>Check</name>
+            <comment></comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>downloader</name>
+                <type>ariagp.amin.shahedi.asyncytask.Downloader</type>
+            </parameter>
+            <parameter>
+                <name>ba</name>
+                <type>anywheresoftware.b4a.BA</type>
+            </parameter>
+            <parameter>
+                <name>FilePath</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+    </class>
+    <version>6.0</version>
+    <author>Amin Shahedi</author>
+</root>

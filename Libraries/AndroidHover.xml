@@ -1,0 +1,959 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root>
+    <doclet-version-NOT-library-version>1.04</doclet-version-NOT-library-version>
+    <class>
+        <name>com.daimajia.androidviewhover.Hover</name>
+        <shortname>AndroidHover</shortname>
+        <objectwrapper>com.daimajia.androidviewhover.BlurLayout</objectwrapper>
+        <owner>activity</owner>
+        <event>onendappear</event>
+        <event>onstartappear</event>
+        <event>onenddisappear</event>
+        <event>onstartdisappear</event>
+        <event>onendremoveappear</event>
+        <event>onstartremoveappear</event>
+        <event>onendremovedisappear</event>
+        <event>onstartremovedisappear</event>
+        <event>onitemclick</event>
+        <event>onitemlongclick</event>
+        <method>
+            <name>RemoveView</name>
+            <comment></comment>
+            <returntype>void</returntype>
+        </method>
+        <method>
+            <name>SetBackgroundImage</name>
+            <comment></comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>arg0</name>
+                <type>android.graphics.Bitmap</type>
+            </parameter>
+        </method>
+        <method>
+            <name>SetHoverAppearAnimator2</name>
+            <comment></comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>technique</name>
+                <type EnumType="true">com.daimajia.androidanimations.library.Techniques</type>
+            </parameter>
+            <parameter>
+                <name>duration</name>
+                <type>long</type>
+            </parameter>
+        </method>
+        <method>
+            <name>DismissHover</name>
+            <comment>Let hover view dismiss.
+ Notice: only when hover view status is appeared, then, this may work.</comment>
+            <returntype>void</returntype>
+        </method>
+        <method>
+            <name>AddChildDisappearAnimator2</name>
+            <comment></comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>hoverView</name>
+                <type>android.view.View</type>
+            </parameter>
+            <parameter>
+                <name>resId</name>
+                <type>int</type>
+            </parameter>
+            <parameter>
+                <name>technique</name>
+                <type EnumType="true">com.daimajia.androidanimations.library.Techniques</type>
+            </parameter>
+            <parameter>
+                <name>duration</name>
+                <type>long</type>
+            </parameter>
+        </method>
+        <method>
+            <name>AddChildDisappearAnimator3</name>
+            <comment></comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>hoverView</name>
+                <type>android.view.View</type>
+            </parameter>
+            <parameter>
+                <name>resId</name>
+                <type>int</type>
+            </parameter>
+            <parameter>
+                <name>technique</name>
+                <type EnumType="true">com.daimajia.androidanimations.library.Techniques</type>
+            </parameter>
+            <parameter>
+                <name>duration</name>
+                <type>long</type>
+            </parameter>
+            <parameter>
+                <name>delay</name>
+                <type>long</type>
+            </parameter>
+        </method>
+        <method>
+            <name>AddChildDisappearAnimator4</name>
+            <comment></comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>hoverView</name>
+                <type>android.view.View</type>
+            </parameter>
+            <parameter>
+                <name>resId</name>
+                <type>int</type>
+            </parameter>
+            <parameter>
+                <name>technique</name>
+                <type EnumType="true">com.daimajia.androidanimations.library.Techniques</type>
+            </parameter>
+            <parameter>
+                <name>duration</name>
+                <type>long</type>
+            </parameter>
+            <parameter>
+                <name>delay</name>
+                <type>long</type>
+            </parameter>
+            <parameter>
+                <name>invisibleWhenDelaying</name>
+                <type>boolean</type>
+            </parameter>
+        </method>
+        <method>
+            <name>IsInitialized</name>
+            <comment></comment>
+            <returntype>boolean</returntype>
+        </method>
+        <method>
+            <name>Initialize</name>
+            <comment></comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>bA</name>
+                <type>anywheresoftware.b4a.BA</type>
+            </parameter>
+            <parameter>
+                <name>EventName</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+        <method>
+            <name>SetHoverDisappearAnimator2</name>
+            <comment></comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>technique</name>
+                <type EnumType="true">com.daimajia.androidanimations.library.Techniques</type>
+            </parameter>
+            <parameter>
+                <name>duration</name>
+                <type>long</type>
+            </parameter>
+        </method>
+        <method>
+            <name>GetHoverStatus</name>
+            <comment>get currently hover status.</comment>
+            <returntype EnumType="true">com.daimajia.androidviewhover.BlurLayout.HOVER_STATUS</returntype>
+        </method>
+        <method>
+            <name>SetBlurZoomRatio</name>
+            <comment></comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>ratio</name>
+                <type>float</type>
+            </parameter>
+        </method>
+        <method>
+            <name>Invalidate</name>
+            <comment></comment>
+            <returntype>void</returntype>
+        </method>
+        <method>
+            <name>SetLayout</name>
+            <comment></comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>arg0</name>
+                <type Pixel="true">int</type>
+            </parameter>
+            <parameter>
+                <name>arg1</name>
+                <type Pixel="true">int</type>
+            </parameter>
+            <parameter>
+                <name>arg2</name>
+                <type Pixel="true">int</type>
+            </parameter>
+            <parameter>
+                <name>arg3</name>
+                <type Pixel="true">int</type>
+            </parameter>
+        </method>
+        <method>
+            <name>DesignerCreateView</name>
+            <comment></comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>panelWrapper</name>
+                <type>anywheresoftware.b4a.objects.PanelWrapper</type>
+            </parameter>
+            <parameter>
+                <name>labelWrapper</name>
+                <type>anywheresoftware.b4a.objects.LabelWrapper</type>
+            </parameter>
+            <parameter>
+                <name>map</name>
+                <type>anywheresoftware.b4a.objects.collections.Map</type>
+            </parameter>
+        </method>
+        <method>
+            <name>AddToParent</name>
+            <comment></comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>viewGroup</name>
+                <type>android.view.ViewGroup</type>
+            </parameter>
+            <parameter>
+                <name>n</name>
+                <type Pixel="true">int</type>
+            </parameter>
+            <parameter>
+                <name>n2</name>
+                <type Pixel="true">int</type>
+            </parameter>
+            <parameter>
+                <name>n3</name>
+                <type Pixel="true">int</type>
+            </parameter>
+            <parameter>
+                <name>n4</name>
+                <type Pixel="true">int</type>
+            </parameter>
+        </method>
+        <method>
+            <name>ToggleHover</name>
+            <comment></comment>
+            <returntype>void</returntype>
+        </method>
+        <method>
+            <name>ShowHover</name>
+            <comment></comment>
+            <returntype>void</returntype>
+        </method>
+        <method>
+            <name>EnableTouchEvent</name>
+            <comment>Sets whether or not touching the BlurLayout will trigger the Hover View and blur effect
+enableTouchEvent: </comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>enableTouchEvent</name>
+                <type>boolean</type>
+            </parameter>
+        </method>
+        <method>
+            <name>SetHoverAppearAnimator</name>
+            <comment></comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>technique</name>
+                <type EnumType="true">com.daimajia.androidanimations.library.Techniques</type>
+            </parameter>
+        </method>
+        <method>
+            <name>BringToFront</name>
+            <comment></comment>
+            <returntype>void</returntype>
+        </method>
+        <method>
+            <name>RequestFocus</name>
+            <comment></comment>
+            <returntype>boolean</returntype>
+        </method>
+        <method>
+            <name>RaiseEventItemClick</name>
+            <comment></comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>id</name>
+                <type>int</type>
+            </parameter>
+            <parameter>
+                <name>mTechniques</name>
+                <type EnumType="true">com.daimajia.androidanimations.library.Techniques</type>
+            </parameter>
+            <parameter>
+                <name>mdurationAnim</name>
+                <type>long</type>
+            </parameter>
+            <parameter>
+                <name>mItemEventName</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+        <method>
+            <name>SetHoverView</name>
+            <comment>bind a hover view with BlurLayout.
+hover: </comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>hover</name>
+                <type>android.view.View</type>
+            </parameter>
+        </method>
+        <method>
+            <name>SetBlurRadius</name>
+            <comment>set background blur radius.
+radius: radius to be used for the gaussian blur operation, integer between 0 and 25 (inclusive)</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>radius</name>
+                <type>int</type>
+            </parameter>
+        </method>
+        <method>
+            <name>SetBlurDuration</name>
+            <comment>set background blur duration.
+duration: </comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>duration</name>
+                <type>long</type>
+            </parameter>
+        </method>
+        <method>
+            <name>Invalidate3</name>
+            <comment></comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>arg0</name>
+                <type>int</type>
+            </parameter>
+            <parameter>
+                <name>arg1</name>
+                <type>int</type>
+            </parameter>
+            <parameter>
+                <name>arg2</name>
+                <type>int</type>
+            </parameter>
+            <parameter>
+                <name>arg3</name>
+                <type>int</type>
+            </parameter>
+        </method>
+        <method>
+            <name>AddChildAppearAnimator2</name>
+            <comment></comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>hoverView</name>
+                <type>android.view.View</type>
+            </parameter>
+            <parameter>
+                <name>resId</name>
+                <type>int</type>
+            </parameter>
+            <parameter>
+                <name>technique</name>
+                <type EnumType="true">com.daimajia.androidanimations.library.Techniques</type>
+            </parameter>
+            <parameter>
+                <name>duration</name>
+                <type>long</type>
+            </parameter>
+        </method>
+        <method>
+            <name>Invalidate2</name>
+            <comment></comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>arg0</name>
+                <type>android.graphics.Rect</type>
+            </parameter>
+        </method>
+        <method>
+            <name>AddChildAppearAnimator3</name>
+            <comment></comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>hoverView</name>
+                <type>android.view.View</type>
+            </parameter>
+            <parameter>
+                <name>resId</name>
+                <type>int</type>
+            </parameter>
+            <parameter>
+                <name>technique</name>
+                <type EnumType="true">com.daimajia.androidanimations.library.Techniques</type>
+            </parameter>
+            <parameter>
+                <name>duration</name>
+                <type>long</type>
+            </parameter>
+            <parameter>
+                <name>delay</name>
+                <type>long</type>
+            </parameter>
+        </method>
+        <method>
+            <name>RaiseEventItemLongClick</name>
+            <comment></comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>id</name>
+                <type>int</type>
+            </parameter>
+            <parameter>
+                <name>mTechniques</name>
+                <type EnumType="true">com.daimajia.androidanimations.library.Techniques</type>
+            </parameter>
+            <parameter>
+                <name>mdurationAnim</name>
+                <type>long</type>
+            </parameter>
+            <parameter>
+                <name>mItemEventName</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+        <method>
+            <name>AddChildAppearAnimator4</name>
+            <comment></comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>hoverView</name>
+                <type>android.view.View</type>
+            </parameter>
+            <parameter>
+                <name>resId</name>
+                <type>int</type>
+            </parameter>
+            <parameter>
+                <name>technique</name>
+                <type EnumType="true">com.daimajia.androidanimations.library.Techniques</type>
+            </parameter>
+            <parameter>
+                <name>duration</name>
+                <type>long</type>
+            </parameter>
+            <parameter>
+                <name>delay</name>
+                <type>long</type>
+            </parameter>
+            <parameter>
+                <name>hiddenWhenDelaying</name>
+                <type>boolean</type>
+            </parameter>
+        </method>
+        <method>
+            <name>AddChildAppearAnimator</name>
+            <comment></comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>hoverView</name>
+                <type>android.view.View</type>
+            </parameter>
+            <parameter>
+                <name>resId</name>
+                <type>int</type>
+            </parameter>
+            <parameter>
+                <name>technique</name>
+                <type EnumType="true">com.daimajia.androidanimations.library.Techniques</type>
+            </parameter>
+        </method>
+        <method>
+            <name>AddChildDisappearAnimator</name>
+            <comment></comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>hoverView</name>
+                <type>android.view.View</type>
+            </parameter>
+            <parameter>
+                <name>resId</name>
+                <type>int</type>
+            </parameter>
+            <parameter>
+                <name>technique</name>
+                <type EnumType="true">com.daimajia.androidanimations.library.Techniques</type>
+            </parameter>
+        </method>
+        <method>
+            <name>SetColorAnimated</name>
+            <comment></comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>arg0</name>
+                <type>int</type>
+            </parameter>
+            <parameter>
+                <name>arg1</name>
+                <type>int</type>
+            </parameter>
+            <parameter>
+                <name>arg2</name>
+                <type>int</type>
+            </parameter>
+        </method>
+        <method>
+            <name>EnableBlurBackground</name>
+            <comment></comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>enable</name>
+                <type>boolean</type>
+            </parameter>
+        </method>
+        <method>
+            <name>EnableZoomBackground</name>
+            <comment></comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>enable</name>
+                <type>boolean</type>
+            </parameter>
+        </method>
+        <method>
+            <name>SetLayoutAnimated</name>
+            <comment></comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>arg0</name>
+                <type>int</type>
+            </parameter>
+            <parameter>
+                <name>arg1</name>
+                <type Pixel="true">int</type>
+            </parameter>
+            <parameter>
+                <name>arg2</name>
+                <type Pixel="true">int</type>
+            </parameter>
+            <parameter>
+                <name>arg3</name>
+                <type Pixel="true">int</type>
+            </parameter>
+            <parameter>
+                <name>arg4</name>
+                <type Pixel="true">int</type>
+            </parameter>
+        </method>
+        <method>
+            <name>SetHoverDisappearAnimator</name>
+            <comment></comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>technique</name>
+                <type EnumType="true">com.daimajia.androidanimations.library.Techniques</type>
+            </parameter>
+        </method>
+        <method>
+            <name>SetVisibleAnimated</name>
+            <comment></comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>arg0</name>
+                <type>int</type>
+            </parameter>
+            <parameter>
+                <name>arg1</name>
+                <type>boolean</type>
+            </parameter>
+        </method>
+        <method>
+            <name>SendToBack</name>
+            <comment></comment>
+            <returntype>void</returntype>
+        </method>
+        <property>
+            <name>Enabled</name>
+            <returntype>boolean</returntype>
+            <parameter>
+                <name>arg0</name>
+                <type>boolean</type>
+            </parameter>
+            <comment></comment>
+        </property>
+        <property>
+            <name>Parent</name>
+            <returntype>java.lang.Object</returntype>
+            <comment></comment>
+        </property>
+        <property>
+            <name>Visible</name>
+            <returntype>boolean</returntype>
+            <parameter>
+                <name>arg0</name>
+                <type>boolean</type>
+            </parameter>
+            <comment></comment>
+        </property>
+        <property>
+            <name>Tag</name>
+            <returntype>java.lang.Object</returntype>
+            <parameter>
+                <name>arg0</name>
+                <type>java.lang.Object</type>
+            </parameter>
+            <comment></comment>
+        </property>
+        <property>
+            <name>Height</name>
+            <returntype>int</returntype>
+            <parameter>
+                <name>arg0</name>
+                <type Pixel="true">int</type>
+            </parameter>
+            <comment></comment>
+        </property>
+        <property>
+            <name>Background</name>
+            <returntype>android.graphics.drawable.Drawable</returntype>
+            <parameter>
+                <name>arg0</name>
+                <type>android.graphics.drawable.Drawable</type>
+            </parameter>
+            <comment></comment>
+        </property>
+        <property>
+            <name>Width</name>
+            <returntype>int</returntype>
+            <parameter>
+                <name>arg0</name>
+                <type Pixel="true">int</type>
+            </parameter>
+            <comment></comment>
+        </property>
+        <property>
+            <name>Color</name>
+            <parameter>
+                <name>arg0</name>
+                <type>int</type>
+            </parameter>
+            <comment></comment>
+        </property>
+        <field>
+            <name>Techniques_FadeOutUp</name>
+            <comment></comment>
+            <returntype EnumType="true">com.daimajia.androidanimations.library.Techniques</returntype>
+        </field>
+        <field>
+            <name>Techniques_TakingOff</name>
+            <comment></comment>
+            <returntype EnumType="true">com.daimajia.androidanimations.library.Techniques</returntype>
+        </field>
+        <field>
+            <name>Techniques_RotateInUpLeft</name>
+            <comment></comment>
+            <returntype EnumType="true">com.daimajia.androidanimations.library.Techniques</returntype>
+        </field>
+        <field>
+            <name>Techniques_ZoomOutRight</name>
+            <comment></comment>
+            <returntype EnumType="true">com.daimajia.androidanimations.library.Techniques</returntype>
+        </field>
+        <field>
+            <name>Techniques_SlideInLeft</name>
+            <comment></comment>
+            <returntype EnumType="true">com.daimajia.androidanimations.library.Techniques</returntype>
+        </field>
+        <field>
+            <name>Techniques_FlipOutY</name>
+            <comment></comment>
+            <returntype EnumType="true">com.daimajia.androidanimations.library.Techniques</returntype>
+        </field>
+        <field>
+            <name>Techniques_RollOut</name>
+            <comment></comment>
+            <returntype EnumType="true">com.daimajia.androidanimations.library.Techniques</returntype>
+        </field>
+        <field>
+            <name>Techniques_SlideInUp</name>
+            <comment></comment>
+            <returntype EnumType="true">com.daimajia.androidanimations.library.Techniques</returntype>
+        </field>
+        <field>
+            <name>HOVER_STATUS_DISAPPEARED</name>
+            <comment></comment>
+            <returntype EnumType="true">com.daimajia.androidviewhover.BlurLayout.HOVER_STATUS</returntype>
+        </field>
+        <field>
+            <name>Techniques_FlipOutX</name>
+            <comment></comment>
+            <returntype EnumType="true">com.daimajia.androidanimations.library.Techniques</returntype>
+        </field>
+        <field>
+            <name>Techniques_Flash</name>
+            <comment></comment>
+            <returntype EnumType="true">com.daimajia.androidanimations.library.Techniques</returntype>
+        </field>
+        <field>
+            <name>Techniques_Wobble</name>
+            <comment></comment>
+            <returntype EnumType="true">com.daimajia.androidanimations.library.Techniques</returntype>
+        </field>
+        <field>
+            <name>Techniques_FadeInDown</name>
+            <comment></comment>
+            <returntype EnumType="true">com.daimajia.androidanimations.library.Techniques</returntype>
+        </field>
+        <field>
+            <name>Techniques_ZoomIn</name>
+            <comment></comment>
+            <returntype EnumType="true">com.daimajia.androidanimations.library.Techniques</returntype>
+        </field>
+        <field>
+            <name>Techniques_SlideOutLeft</name>
+            <comment></comment>
+            <returntype EnumType="true">com.daimajia.androidanimations.library.Techniques</returntype>
+        </field>
+        <field>
+            <name>Techniques_ZoomOutUp</name>
+            <comment></comment>
+            <returntype EnumType="true">com.daimajia.androidanimations.library.Techniques</returntype>
+        </field>
+        <field>
+            <name>Techniques_ZoomInRight</name>
+            <comment></comment>
+            <returntype EnumType="true">com.daimajia.androidanimations.library.Techniques</returntype>
+        </field>
+        <field>
+            <name>Techniques_ZoomInLeft</name>
+            <comment></comment>
+            <returntype EnumType="true">com.daimajia.androidanimations.library.Techniques</returntype>
+        </field>
+        <field>
+            <name>Techniques_FlipInX</name>
+            <comment></comment>
+            <returntype EnumType="true">com.daimajia.androidanimations.library.Techniques</returntype>
+        </field>
+        <field>
+            <name>Techniques_BounceInDown</name>
+            <comment></comment>
+            <returntype EnumType="true">com.daimajia.androidanimations.library.Techniques</returntype>
+        </field>
+        <field>
+            <name>Techniques_Swing</name>
+            <comment></comment>
+            <returntype EnumType="true">com.daimajia.androidanimations.library.Techniques</returntype>
+        </field>
+        <field>
+            <name>Techniques_FadeInLeft</name>
+            <comment></comment>
+            <returntype EnumType="true">com.daimajia.androidanimations.library.Techniques</returntype>
+        </field>
+        <field>
+            <name>Techniques_RotateInDownRight</name>
+            <comment></comment>
+            <returntype EnumType="true">com.daimajia.androidanimations.library.Techniques</returntype>
+        </field>
+        <field>
+            <name>Techniques_SlideOutDown</name>
+            <comment></comment>
+            <returntype EnumType="true">com.daimajia.androidanimations.library.Techniques</returntype>
+        </field>
+        <field>
+            <name>Techniques_SlideInDown</name>
+            <comment></comment>
+            <returntype EnumType="true">com.daimajia.androidanimations.library.Techniques</returntype>
+        </field>
+        <field>
+            <name>Techniques_BounceIn</name>
+            <comment></comment>
+            <returntype EnumType="true">com.daimajia.androidanimations.library.Techniques</returntype>
+        </field>
+        <field>
+            <name>Techniques_FadeOutRight</name>
+            <comment></comment>
+            <returntype EnumType="true">com.daimajia.androidanimations.library.Techniques</returntype>
+        </field>
+        <field>
+            <name>Techniques_Shake</name>
+            <comment></comment>
+            <returntype EnumType="true">com.daimajia.androidanimations.library.Techniques</returntype>
+        </field>
+        <field>
+            <name>Techniques_RotateInUpRight</name>
+            <comment></comment>
+            <returntype EnumType="true">com.daimajia.androidanimations.library.Techniques</returntype>
+        </field>
+        <field>
+            <name>Techniques_StandUp</name>
+            <comment></comment>
+            <returntype EnumType="true">com.daimajia.androidanimations.library.Techniques</returntype>
+        </field>
+        <field>
+            <name>Techniques_Tada</name>
+            <comment></comment>
+            <returntype EnumType="true">com.daimajia.androidanimations.library.Techniques</returntype>
+        </field>
+        <field>
+            <name>Techniques_BounceInLeft</name>
+            <comment></comment>
+            <returntype EnumType="true">com.daimajia.androidanimations.library.Techniques</returntype>
+        </field>
+        <field>
+            <name>Techniques_Wave</name>
+            <comment></comment>
+            <returntype EnumType="true">com.daimajia.androidanimations.library.Techniques</returntype>
+        </field>
+        <field>
+            <name>Techniques_FadeOutLeft</name>
+            <comment></comment>
+            <returntype EnumType="true">com.daimajia.androidanimations.library.Techniques</returntype>
+        </field>
+        <field>
+            <name>Techniques_RotateIn</name>
+            <comment></comment>
+            <returntype EnumType="true">com.daimajia.androidanimations.library.Techniques</returntype>
+        </field>
+        <field>
+            <name>Techniques_FadeOutDown</name>
+            <comment></comment>
+            <returntype EnumType="true">com.daimajia.androidanimations.library.Techniques</returntype>
+        </field>
+        <field>
+            <name>Techniques_ZoomOutLeft</name>
+            <comment></comment>
+            <returntype EnumType="true">com.daimajia.androidanimations.library.Techniques</returntype>
+        </field>
+        <field>
+            <name>Techniques_SlideOutUp</name>
+            <comment></comment>
+            <returntype EnumType="true">com.daimajia.androidanimations.library.Techniques</returntype>
+        </field>
+        <field>
+            <name>Techniques_ZoomInUp</name>
+            <comment></comment>
+            <returntype EnumType="true">com.daimajia.androidanimations.library.Techniques</returntype>
+        </field>
+        <field>
+            <name>Techniques_BounceInRight</name>
+            <comment></comment>
+            <returntype EnumType="true">com.daimajia.androidanimations.library.Techniques</returntype>
+        </field>
+        <field>
+            <name>Techniques_SlideInRight</name>
+            <comment></comment>
+            <returntype EnumType="true">com.daimajia.androidanimations.library.Techniques</returntype>
+        </field>
+        <field>
+            <name>HOVER_STATUS_DISAPPEARING</name>
+            <comment></comment>
+            <returntype EnumType="true">com.daimajia.androidviewhover.BlurLayout.HOVER_STATUS</returntype>
+        </field>
+        <field>
+            <name>Techniques_ZoomInDown</name>
+            <comment></comment>
+            <returntype EnumType="true">com.daimajia.androidanimations.library.Techniques</returntype>
+        </field>
+        <field>
+            <name>Techniques_RubberBand</name>
+            <comment></comment>
+            <returntype EnumType="true">com.daimajia.androidanimations.library.Techniques</returntype>
+        </field>
+        <field>
+            <name>Techniques_Bounce</name>
+            <comment></comment>
+            <returntype EnumType="true">com.daimajia.androidanimations.library.Techniques</returntype>
+        </field>
+        <field>
+            <name>Techniques_SlideOutRight</name>
+            <comment></comment>
+            <returntype EnumType="true">com.daimajia.androidanimations.library.Techniques</returntype>
+        </field>
+        <field>
+            <name>Techniques_FadeInUp</name>
+            <comment></comment>
+            <returntype EnumType="true">com.daimajia.androidanimations.library.Techniques</returntype>
+        </field>
+        <field>
+            <name>Techniques_ZoomOut</name>
+            <comment></comment>
+            <returntype EnumType="true">com.daimajia.androidanimations.library.Techniques</returntype>
+        </field>
+        <field>
+            <name>HOVER_STATUS_APPEARING</name>
+            <comment></comment>
+            <returntype EnumType="true">com.daimajia.androidviewhover.BlurLayout.HOVER_STATUS</returntype>
+        </field>
+        <field>
+            <name>Techniques_RollIn</name>
+            <comment></comment>
+            <returntype EnumType="true">com.daimajia.androidanimations.library.Techniques</returntype>
+        </field>
+        <field>
+            <name>ba</name>
+            <comment></comment>
+            <returntype>anywheresoftware.b4a.BA</returntype>
+        </field>
+        <field>
+            <name>Techniques_RotateInDownLeft</name>
+            <comment></comment>
+            <returntype EnumType="true">com.daimajia.androidanimations.library.Techniques</returntype>
+        </field>
+        <field>
+            <name>Techniques_BounceInUp</name>
+            <comment></comment>
+            <returntype EnumType="true">com.daimajia.androidanimations.library.Techniques</returntype>
+        </field>
+        <field>
+            <name>HOVER_STATUS_APPEARED</name>
+            <comment></comment>
+            <returntype EnumType="true">com.daimajia.androidviewhover.BlurLayout.HOVER_STATUS</returntype>
+        </field>
+        <field>
+            <name>Techniques_Pulse</name>
+            <comment></comment>
+            <returntype EnumType="true">com.daimajia.androidanimations.library.Techniques</returntype>
+        </field>
+        <field>
+            <name>Techniques_ZoomOutDown</name>
+            <comment></comment>
+            <returntype EnumType="true">com.daimajia.androidanimations.library.Techniques</returntype>
+        </field>
+        <field>
+            <name>Techniques_FadeOut</name>
+            <comment></comment>
+            <returntype EnumType="true">com.daimajia.androidanimations.library.Techniques</returntype>
+        </field>
+        <field>
+            <name>Techniques_FadeIn</name>
+            <comment></comment>
+            <returntype EnumType="true">com.daimajia.androidanimations.library.Techniques</returntype>
+        </field>
+        <field>
+            <name>Techniques_Landing</name>
+            <comment></comment>
+            <returntype EnumType="true">com.daimajia.androidanimations.library.Techniques</returntype>
+        </field>
+        <field>
+            <name>Techniques_Hinge</name>
+            <comment></comment>
+            <returntype EnumType="true">com.daimajia.androidanimations.library.Techniques</returntype>
+        </field>
+        <field>
+            <name>Techniques_FadeInRight</name>
+            <comment></comment>
+            <returntype EnumType="true">com.daimajia.androidanimations.library.Techniques</returntype>
+        </field>
+        <field>
+            <name>Techniques_DropOut</name>
+            <comment></comment>
+            <returntype EnumType="true">com.daimajia.androidanimations.library.Techniques</returntype>
+        </field>
+    </class>
+    <version>1.06</version>
+    <author>Mohsen Soltaniyan</author>
+    <dependsOn>nineoldandroids-2.4.0</dependsOn>
+    <dependsOn>AndroidViewAnimations-1.1.2</dependsOn>
+</root>

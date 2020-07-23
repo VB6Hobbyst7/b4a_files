@@ -1,0 +1,2052 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root>
+    <doclet-version-NOT-library-version>1.04</doclet-version-NOT-library-version>
+    <class>
+        <name>com.johan.battery.BatteryInformation</name>
+        <shortname>B4Abattery</shortname>
+        <owner>process</owner>
+        <method>
+            <name>getBatteryInformation</name>
+            <comment>Return information about the battery status. It returns the following 11 values in an integer array: 
+EXTRA_LEVEL = current battery level, from 0 to EXTRA_SCALE. 
+EXTRA_SCALE = the maximum battery level possible.
+EXTRA_HEALTH = the current health constant.
+EXTRA_ICON_SMALL = the resource ID of a small status bar icon indicating the current battery state. 
+EXTRA_PLUGGED = whether the device is plugged in to a power source; 0 means it is on battery, other constants are different types of power sources.
+EXTRA_STATUS = the current status constant.
+EXTRA_TEMPERATURE = the current battery temperature. 
+EXTRA_VOLTAGE = the current battery voltage level.
+A value indicating if the battery is being charged or fully charged (if neither it returns 0 else it returns 1)
+A value indicating if it is charging via USB (0 = not USB, 2 = USB)
+A value indicating if it is charging via AC (0 = not AC, 1 = AC)
+
+Example:&lt;code&gt;
+Dim mb As B4Abattery
+
+Dim mybat(11) As Int
+mybat = mb.getBatteryInformation
+For i = 0 To 10
+  Log(mybat(i))
+Next&lt;/code&gt;</comment>
+            <returntype>int[]</returntype>
+            <parameter>
+                <name>ba</name>
+                <type>anywheresoftware.b4a.BA</type>
+            </parameter>
+        </method>
+    </class>
+    <class>
+        <name>com.johan.dateUtils.dateUtils</name>
+        <shortname>B4AdateTimeUtils</shortname>
+        <owner>process</owner>
+        <method>
+            <name>GetCurrentTimeStamp</name>
+            <comment></comment>
+            <returntype>java.lang.String</returntype>
+        </method>
+        <method>
+            <name>DateTimeNowInfo</name>
+            <comment>Get the year, month, day, hour, minute, and second (return an array of type int) 
+
+Example:&lt;code&gt;
+Dim md As B4AdateTimeUtils
+
+Dim mydate(6) As Int
+mydate = md.DateInfoNow
+For i = 0 To 5
+  Log(mydate(i))
+Next
+&lt;/code&gt;</comment>
+            <returntype>int[]</returntype>
+        </method>
+        <method>
+            <name>elapsedTime</name>
+            <comment></comment>
+            <returntype>long[]</returntype>
+            <parameter>
+                <name>dat1</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>tim1</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>dat2</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>tim2</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+    </class>
+    <class>
+        <name>com.johan.flash.flash</name>
+        <shortname>B4Aflash</shortname>
+        <owner>process</owner>
+        <method>
+            <name>TurnFlashOff</name>
+            <comment>Turn OFF the camera flash (that is in TORCH MODE)
+You need to add the following to the manifest file of the B4A project:
+AddPermission("android.permission.CAMERA")
+Example:&lt;code&gt;
+Dim myflash as flash
+Log(mf.TurnFlashOff)
+&lt;/code&gt;</comment>
+            <returntype>java.lang.String</returntype>
+        </method>
+        <method>
+            <name>TurnFlashOn</name>
+            <comment>Turn the camera flash ON (in TORCH MODE)
+You need to add the following to the manifest file of the B4A project:
+AddPermission("android.permission.CAMERA")
+Example:&lt;code&gt;
+Dim myflash as flash
+log(myflash.TurnFlashOn(True))
+&lt;/code&gt;</comment>
+            <returntype>java.lang.String</returntype>
+            <parameter>
+                <name>turnOn</name>
+                <type>boolean</type>
+            </parameter>
+        </method>
+    </class>
+    <class>
+        <name>com.johan.flash2.flash2</name>
+        <shortname>B4Aflash2</shortname>
+        <owner>process</owner>
+        <method>
+            <name>TurnFlashOff</name>
+            <comment></comment>
+            <returntype>void</returntype>
+        </method>
+        <method>
+            <name>TurnFlashOn</name>
+            <comment></comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>turnOn</name>
+                <type>boolean</type>
+            </parameter>
+        </method>
+    </class>
+    <class>
+        <name>com.johan.Geometry.Geometry</name>
+        <shortname>B4Ageometry</shortname>
+        <owner>process</owner>
+        <method>
+            <name>coneVolume</name>
+            <comment></comment>
+            <returntype>double</returntype>
+            <parameter>
+                <name>r</name>
+                <type>double</type>
+            </parameter>
+            <parameter>
+                <name>h</name>
+                <type>double</type>
+            </parameter>
+        </method>
+        <method>
+            <name>cylinderVolume</name>
+            <comment></comment>
+            <returntype>double</returntype>
+            <parameter>
+                <name>r</name>
+                <type>double</type>
+            </parameter>
+            <parameter>
+                <name>h</name>
+                <type>double</type>
+            </parameter>
+        </method>
+        <method>
+            <name>sphereSurface</name>
+            <comment>Calculates the surface area of a sphere
+Example:&lt;code&gt;
+Dim mySphereSurface As Double
+mySphereSurface = mymath1.sphereSurface(4)
+&lt;/code&gt;</comment>
+            <returntype>double</returntype>
+            <parameter>
+                <name>radius</name>
+                <type>double</type>
+            </parameter>
+        </method>
+        <method>
+            <name>cylinderSurface</name>
+            <comment></comment>
+            <returntype>double</returntype>
+            <parameter>
+                <name>r</name>
+                <type>double</type>
+            </parameter>
+            <parameter>
+                <name>h</name>
+                <type>double</type>
+            </parameter>
+        </method>
+        <method>
+            <name>sphereVolume</name>
+            <comment>Calculates the volume of a sphere
+Example:&lt;code&gt;
+Dim myvolume As Double
+myvolume = mymath1.sphereVolume(4)
+&lt;/code&gt;</comment>
+            <returntype>double</returntype>
+            <parameter>
+                <name>radius</name>
+                <type>double</type>
+            </parameter>
+        </method>
+        <method>
+            <name>coneSurface</name>
+            <comment></comment>
+            <returntype>double</returntype>
+            <parameter>
+                <name>r</name>
+                <type>double</type>
+            </parameter>
+            <parameter>
+                <name>h</name>
+                <type>double</type>
+            </parameter>
+        </method>
+    </class>
+    <class>
+        <name>com.johan.Location.B4ALocation</name>
+        <shortname>B4Alocation</shortname>
+        <owner>process</owner>
+        <method>
+            <name>getNetworkProviderPosition</name>
+            <comment>Get the latitude and longitude of the device as obtained from the Network Provider (last known location).
+Note that this location could be out-of-date, for example if the device was turned off and moved to another location.
+Add the following permission to the manifest file of the B4A project:
+AddPermission("android.permission.ACCESS_FINE_LOCATION")
+
+Example:&lt;code&gt;
+Dim ml As B4Alocation
+
+Dim mypos(2) As Double
+mypos = ml.getNetworkProviderPosition
+Log(mypos(0))
+Log(mypos(1))
+&lt;/code&gt;</comment>
+            <returntype>double[]</returntype>
+            <parameter>
+                <name>ba</name>
+                <type>anywheresoftware.b4a.BA</type>
+            </parameter>
+        </method>
+        <method>
+            <name>getGPSposition</name>
+            <comment>Get the latitude and longitude of the device as obtained from the GPS.
+Add the following permission to the manifest file of the B4A project:
+AddPermission("android.permission.ACCESS_FINE_LOCATION")
+
+Example:&lt;code&gt;
+Dim ml As B4Alocation
+
+Dim mypos(2) As Double
+mypos = ml.getGPSposition
+Log(mypos(0))
+Log(mypos(1))
+&lt;/code&gt;</comment>
+            <returntype>double[]</returntype>
+            <parameter>
+                <name>ba</name>
+                <type>anywheresoftware.b4a.BA</type>
+            </parameter>
+        </method>
+    </class>
+    <class>
+        <name>com.johan.B4ALocation1.B4ALocation1</name>
+        <shortname>B4Alocation1</shortname>
+        <owner>process</owner>
+        <method>
+            <name>myPosition</name>
+            <comment>Return the latitude and longitude of the device 
+Add the following permission to the manifest file of the B4A project:
+AddPermission("android.permission.ACCESS_FINE_LOCATION")
+
+Example:&lt;code&gt;
+Dim ml1 As B4Alocation1
+
+Dim myposition(2) As Double
+myposition = ml1.myPosition
+Log(myposition(0))   'latitude
+Log(myposition(1))   'longitude
+&lt;/code&gt;</comment>
+            <returntype>double[]</returntype>
+            <parameter>
+                <name>ba</name>
+                <type>anywheresoftware.b4a.BA</type>
+            </parameter>
+        </method>
+    </class>
+    <class>
+        <name>com.johan.Location2.B4ALocation2</name>
+        <shortname>B4Alocation2</shortname>
+        <owner>process</owner>
+        <method>
+            <name>myLocation</name>
+            <comment>Return the latitude and longitude of the device.
+Add the following permission to the manifest file of the B4A project:
+AddPermission("android.permission.ACCESS_FINE_LOCATION")
+
+Example:&lt;code&gt;
+Dim ml2 As B4Alocation2
+
+Dim myposition(2) As Double
+myposition = ml2.myLocation
+Log(myposition(0))   'latitude
+Log(myposition(1))   'longitude
+&lt;/code&gt;</comment>
+            <returntype>double[]</returntype>
+            <parameter>
+                <name>ba</name>
+                <type>anywheresoftware.b4a.BA</type>
+            </parameter>
+        </method>
+    </class>
+    <class>
+        <name>com.johan.Location2.LocationManagerHelper</name>
+        <owner>process</owner>
+        <method>
+            <name>onProviderEnabled</name>
+            <comment></comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>provider</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+        <method>
+            <name>onProviderDisabled</name>
+            <comment></comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>provider</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+        <method>
+            <name>onStatusChanged</name>
+            <comment></comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>provider</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>status</name>
+                <type>int</type>
+            </parameter>
+            <parameter>
+                <name>extras</name>
+                <type>android.os.Bundle</type>
+            </parameter>
+        </method>
+        <method>
+            <name>onLocationChanged</name>
+            <comment></comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>loc</name>
+                <type>android.location.Location</type>
+            </parameter>
+        </method>
+        <property>
+            <name>Latitude</name>
+            <returntype>double</returntype>
+            <comment></comment>
+        </property>
+        <property>
+            <name>Longitude</name>
+            <returntype>double</returntype>
+            <comment></comment>
+        </property>
+    </class>
+    <class>
+        <name>com.johan.Location3.Location3</name>
+        <shortname>B4Alocation3</shortname>
+        <owner>process</owner>
+        <method>
+            <name>B4APosition</name>
+            <comment></comment>
+            <returntype>double[]</returntype>
+            <parameter>
+                <name>ba</name>
+                <type>anywheresoftware.b4a.BA</type>
+            </parameter>
+        </method>
+    </class>
+    <class>
+        <name>com.johan.math.math</name>
+        <shortname>fiddleAround</shortname>
+        <owner>process</owner>
+        <method>
+            <name>ConvertDecToHex_2</name>
+            <comment>Converts a decimal number to a hexadecimal number.
+Example:&lt;code&gt;
+Dim mystring As String
+mystring = mymath.ConvertDecToHex_2(123456)
+&lt;/code&gt;</comment>
+            <returntype>java.lang.String</returntype>
+            <parameter>
+                <name>number</name>
+                <type>int</type>
+            </parameter>
+        </method>
+        <method>
+            <name>ConvertDecToHex_1</name>
+            <comment>Converts a decimal number to a hexadecimal number.
+Example:&lt;code&gt;
+Dim mystring As String
+mystring = mymath.ConvertDecToHex_2(123456)
+&lt;/code&gt;</comment>
+            <returntype>java.lang.String</returntype>
+            <parameter>
+                <name>number</name>
+                <type>int</type>
+            </parameter>
+        </method>
+        <method>
+            <name>minimum</name>
+            <comment>Returns the minimum of two values
+Example:&lt;code&gt;
+Dim myminimum As Double
+myminimum = mymath.minimum(50,299)
+&lt;/code&gt;</comment>
+            <returntype>double</returntype>
+            <parameter>
+                <name>a</name>
+                <type>double</type>
+            </parameter>
+            <parameter>
+                <name>b</name>
+                <type>double</type>
+            </parameter>
+        </method>
+        <method>
+            <name>BubbleSortAscending</name>
+            <comment>Returns an array of integers sorted in ascending order
+Example:&lt;code&gt;
+Dim aa(100) As Int
+For i = 0 To 99
+  aa(i) = Rnd(0,1000)
+  Log(aa(i))
+Next
+aa = mymath.BubbleSortAscending(aa)
+For i = 0 To 99
+  Log(aa(j))
+Next&lt;/code&gt;</comment>
+            <returntype>int[]</returntype>
+            <parameter>
+                <name>intsToSort</name>
+                <type>int[]</type>
+            </parameter>
+        </method>
+        <method>
+            <name>ConvertDecToOct</name>
+            <comment>Converts a decimal number to an octal number.
+Example:&lt;code&gt;
+Dim mystring As String
+mystring = mymath.ConvertDecToOct(123456)
+&lt;/code&gt;</comment>
+            <returntype>java.lang.String</returntype>
+            <parameter>
+                <name>number</name>
+                <type>int</type>
+            </parameter>
+        </method>
+        <method>
+            <name>hsGreatCircleKm</name>
+            <comment>Calculates the distance (in kilometers) between two geographical points
+by using the Haversine Formula (pass values as decimal degrees).
+East Longitude is +, West Longitude is -
+North Latitude is +, South Latitude is -
+Example:&lt;code&gt;
+Dim myDistance As Double
+myDistance = mymath.hsGreatCircleKm(40.35, 74.65, 48.87, -2.33)&lt;/code&gt;</comment>
+            <returntype>double</returntype>
+            <parameter>
+                <name>lat1</name>
+                <type>double</type>
+            </parameter>
+            <parameter>
+                <name>long1</name>
+                <type>double</type>
+            </parameter>
+            <parameter>
+                <name>lat2</name>
+                <type>double</type>
+            </parameter>
+            <parameter>
+                <name>long2</name>
+                <type>double</type>
+            </parameter>
+        </method>
+        <method>
+            <name>locGreatCircleNm</name>
+            <comment>Calculates the distance (in nautical miles) between two geographical points
+by using the law of cosines (pass values as decimal degrees).
+East Longitude is +, West Longitude is -
+North Latitude is +, South Latitude is -
+Example:&lt;code&gt;
+Dim myDistance As Double
+myDistance = mymath.locGreatCircleNm(59.9, -30.3, 37.8, 122.4)&lt;/code&gt;</comment>
+            <returntype>double</returntype>
+            <parameter>
+                <name>lat1</name>
+                <type>double</type>
+            </parameter>
+            <parameter>
+                <name>long1</name>
+                <type>double</type>
+            </parameter>
+            <parameter>
+                <name>lat2</name>
+                <type>double</type>
+            </parameter>
+            <parameter>
+                <name>long2</name>
+                <type>double</type>
+            </parameter>
+        </method>
+        <method>
+            <name>Factorial</name>
+            <comment>Calculate and return the factorial of an Integer number
+Example:&lt;code&gt;
+Dim myval As Int
+myval = mymath.Factorial(6)&lt;/code&gt;</comment>
+            <returntype>int</returntype>
+            <parameter>
+                <name>calcFactorial</name>
+                <type>int</type>
+            </parameter>
+        </method>
+        <method>
+            <name>GetCurrentDateAndTime</name>
+            <comment>Returns the current date and time
+Example:&lt;code&gt;
+Dim mydatestring As String
+mydatestring = mymath.GetCurrentDateAndTime&lt;/code&gt;
+
+Returned string will be for eg Current date is 15/12/2014 Current time is  9:50:57</comment>
+            <returntype>java.lang.String</returntype>
+        </method>
+        <method>
+            <name>divide</name>
+            <comment>Divide a by b
+Example:&lt;code&gt;
+Dim mydivide As Double
+mydivide = mymath.divide(5,3)
+&lt;/code&gt;</comment>
+            <returntype>double</returntype>
+            <parameter>
+                <name>a</name>
+                <type>double</type>
+            </parameter>
+            <parameter>
+                <name>b</name>
+                <type>double</type>
+            </parameter>
+        </method>
+        <method>
+            <name>ConvertDecToBin</name>
+            <comment>Converts a decimal number to a binary number.
+Example:&lt;code&gt;
+Dim mystring As String
+mystring = mymath.ConvertDecToBin(255)
+&lt;/code&gt;</comment>
+            <returntype>java.lang.String</returntype>
+            <parameter>
+                <name>number</name>
+                <type>int</type>
+            </parameter>
+        </method>
+        <method>
+            <name>GregorianCalendar</name>
+            <comment>Example:&lt;code&gt;
+Dim myCalendar(11) As Int       
+myCalendar = mymath.GregorianCalendar
+For i = 0 To 10
+  Log (myCalendar(i))
+Next  
+
+myCalendar(0) contains the Year
+myCalendar(1) contains the Month
+myCalendar(2) contains the Day of Month
+myCalendar(3) contains the Day of Week
+myCalendar(4) contains the Week of Year
+myCalendar(5) contains the Week of Month
+myCalendar(6) contains the Hour --&gt; 12 hour format
+myCalendar(7) contains the Hour --&gt; 24 hour format
+myCalendar(8) contains the Minute
+myCalendar(9) contains the Second
+myCalendar(10) contains the Millisecond&lt;/code&gt;</comment>
+            <returntype>int[]</returntype>
+        </method>
+        <method>
+            <name>maximum</name>
+            <comment>Returns the maximum of two values
+Example:&lt;code&gt;
+Dim mymaximum As Double
+mymaximum = mymath.maximum(50,299)
+&lt;/code&gt;</comment>
+            <returntype>double</returntype>
+            <parameter>
+                <name>a</name>
+                <type>double</type>
+            </parameter>
+            <parameter>
+                <name>b</name>
+                <type>double</type>
+            </parameter>
+        </method>
+        <method>
+            <name>BubbleSortDecending</name>
+            <comment>Returns an array of integers sorted in decending order
+Example:&lt;code&gt;
+Dim aa(100) As Int
+For i = 0 To 99
+  aa(i) = Rnd(0,1000)
+  Log(aa(i))
+Next
+aa = mymath.BubbleSortDecending(aa)
+For i = 0 To 99
+  Log(aa(j))
+Next&lt;/code&gt;</comment>
+            <returntype>int[]</returntype>
+            <parameter>
+                <name>intsToSort</name>
+                <type>int[]</type>
+            </parameter>
+        </method>
+        <method>
+            <name>isPrime</name>
+            <comment>Test an integer number for it being a Prime number
+Example:&lt;code&gt;
+Dim myboolean As Boolean
+myboolean = mymath.isPrime(17)&lt;/code&gt;</comment>
+            <returntype>boolean</returntype>
+            <parameter>
+                <name>n</name>
+                <type>int</type>
+            </parameter>
+        </method>
+        <method>
+            <name>dateAndTime</name>
+            <comment>Returns the current date and time
+Example:&lt;code&gt;
+Dim mydatestring As String
+mydatestring = mymath.dateAndTime
+&lt;/code&gt;
+
+Returned string will be for eg Mon Dec 15 21:50:57 SAST 2014</comment>
+            <returntype>java.lang.String</returntype>
+        </method>
+        <method>
+            <name>sortarray</name>
+            <comment>Sorts an array from smallest to largest
+Example:&lt;code&gt;
+Dim myarray(5) As Double
+myarray(0) = 12.3
+myarray(1) = 12.2
+myarray(2) = 12.9
+myarray(3) = 12.66
+myarray(4)= 12.615
+myarray = mymath.sortarray(myarray)&lt;/code&gt;</comment>
+            <returntype>double[]</returntype>
+            <parameter>
+                <name>value</name>
+                <type>double[]</type>
+            </parameter>
+        </method>
+        <method>
+            <name>hsGreatCircleNm</name>
+            <comment>Calculates the distance (in nautical miles) between two geographical points
+by using the Haversine Formula (pass values as decimal degrees).
+East Longitude is +, West Longitude is -
+North Latitude is +, South Latitude is -
+Example:&lt;code&gt;
+Dim myDistance As Double
+myDistance = mymath.hsGreatCircleNm(40.35, 74.65, 48.87, -2.33)&lt;/code&gt;</comment>
+            <returntype>double</returntype>
+            <parameter>
+                <name>lat1</name>
+                <type>double</type>
+            </parameter>
+            <parameter>
+                <name>long1</name>
+                <type>double</type>
+            </parameter>
+            <parameter>
+                <name>lat2</name>
+                <type>double</type>
+            </parameter>
+            <parameter>
+                <name>long2</name>
+                <type>double</type>
+            </parameter>
+        </method>
+        <method>
+            <name>yearNow</name>
+            <comment>Get the current year
+Example:&lt;code&gt;
+Dim myval As Int
+myval = mymath.yearNow&lt;/code&gt;</comment>
+            <returntype>int</returntype>
+        </method>
+        <method>
+            <name>DateTimeNow</name>
+            <comment>Get the current date and time
+Example:&lt;code&gt;
+Dim mystring As String
+mystring = mymath.DateTimeNow&lt;/code&gt;
+
+mystring will contain for eg 2014/12/15 21:50:57</comment>
+            <returntype>java.lang.String</returntype>
+        </method>
+    </class>
+    <class>
+        <name>com.johan.morseCode1.morseCode1</name>
+        <shortname>B4AMorseCode1</shortname>
+        <owner>process</owner>
+        <method>
+            <name>transmitMorse</name>
+            <comment>Flashes a Morse Code message via the rear camera flash
+ 
+myMorseString = The input string to be converted to Morse Code
+myRate = The flashing rate (specify "Fast", "Medium", "Slow", or "Ultra Slow")
+ 
+Example:&lt;code&gt;
+Dim mmc As B4AMorseCode1
+
+mmc.transmitMorse("SOS SOS SOS SOS","Slow")
+&lt;/code&gt;</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>ba</name>
+                <type>anywheresoftware.b4a.BA</type>
+            </parameter>
+            <parameter>
+                <name>myMorseString</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>myRate</name>
+                <type>int</type>
+            </parameter>
+        </method>
+    </class>
+    <class>
+        <name>com.johan.morseCode1.morseCode1.FlashOutRunnable</name>
+        <owner>process</owner>
+        <method>
+            <name>run</name>
+            <comment></comment>
+            <returntype>void</returntype>
+        </method>
+    </class>
+    <class>
+        <name>com.johan.morseCode1.morseCode1.ToastOutRunnable</name>
+        <owner>process</owner>
+        <method>
+            <name>run</name>
+            <comment></comment>
+            <returntype>void</returntype>
+        </method>
+    </class>
+    <class>
+        <name>com.johan.morseVibrate.morseVibrate</name>
+        <shortname>morseVibrate</shortname>
+        <owner>process</owner>
+        <method>
+            <name>vibrateMorseCode</name>
+            <comment>Vibrates a Morse code according to the input string
+Valid chars are a-z, A-Z, 0-9 
+ 
+Example:&lt;code&gt;
+Dim morse As morseVibrate
+ 
+morse.vibrateMorseCode("SOS SOS SOS")
+   &lt;/code&gt;</comment>
+            <returntype>long[]</returntype>
+            <parameter>
+                <name>ba</name>
+                <type>anywheresoftware.b4a.BA</type>
+            </parameter>
+            <parameter>
+                <name>text</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>vib</name>
+                <type>int</type>
+            </parameter>
+        </method>
+    </class>
+    <class>
+        <name>com.johan.myColorUtils.MathUtils</name>
+        <shortname>MathUtils</shortname>
+        <owner>process</owner>
+        <method>
+            <name>min</name>
+            <comment></comment>
+            <returntype>float</returntype>
+            <parameter>
+                <name>a</name>
+                <type>float</type>
+            </parameter>
+            <parameter>
+                <name>b</name>
+                <type>float</type>
+            </parameter>
+        </method>
+        <method>
+            <name>radians</name>
+            <comment></comment>
+            <returntype>float</returntype>
+            <parameter>
+                <name>degrees</name>
+                <type>float</type>
+            </parameter>
+        </method>
+        <method>
+            <name>randomSeed</name>
+            <comment></comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>seed</name>
+                <type>long</type>
+            </parameter>
+        </method>
+        <method>
+            <name>atan</name>
+            <comment></comment>
+            <returntype>float</returntype>
+            <parameter>
+                <name>value</name>
+                <type>float</type>
+            </parameter>
+        </method>
+        <method>
+            <name>constrain</name>
+            <comment></comment>
+            <returntype>int</returntype>
+            <parameter>
+                <name>amount</name>
+                <type>int</type>
+            </parameter>
+            <parameter>
+                <name>low</name>
+                <type>int</type>
+            </parameter>
+            <parameter>
+                <name>high</name>
+                <type>int</type>
+            </parameter>
+        </method>
+        <method>
+            <name>pow</name>
+            <comment></comment>
+            <returntype>float</returntype>
+            <parameter>
+                <name>a</name>
+                <type>float</type>
+            </parameter>
+            <parameter>
+                <name>b</name>
+                <type>float</type>
+            </parameter>
+        </method>
+        <method>
+            <name>max</name>
+            <comment></comment>
+            <returntype>float</returntype>
+            <parameter>
+                <name>a</name>
+                <type>float</type>
+            </parameter>
+            <parameter>
+                <name>b</name>
+                <type>float</type>
+            </parameter>
+        </method>
+        <method>
+            <name>asin</name>
+            <comment></comment>
+            <returntype>float</returntype>
+            <parameter>
+                <name>value</name>
+                <type>float</type>
+            </parameter>
+        </method>
+        <method>
+            <name>sq</name>
+            <comment></comment>
+            <returntype>float</returntype>
+            <parameter>
+                <name>v</name>
+                <type>float</type>
+            </parameter>
+        </method>
+        <method>
+            <name>random</name>
+            <comment></comment>
+            <returntype>int</returntype>
+            <parameter>
+                <name>howbig</name>
+                <type>int</type>
+            </parameter>
+        </method>
+        <method>
+            <name>degrees</name>
+            <comment></comment>
+            <returntype>float</returntype>
+            <parameter>
+                <name>radians</name>
+                <type>float</type>
+            </parameter>
+        </method>
+        <method>
+            <name>log</name>
+            <comment></comment>
+            <returntype>float</returntype>
+            <parameter>
+                <name>a</name>
+                <type>float</type>
+            </parameter>
+        </method>
+        <method>
+            <name>exp</name>
+            <comment></comment>
+            <returntype>float</returntype>
+            <parameter>
+                <name>a</name>
+                <type>float</type>
+            </parameter>
+        </method>
+        <method>
+            <name>atan2</name>
+            <comment></comment>
+            <returntype>float</returntype>
+            <parameter>
+                <name>a</name>
+                <type>float</type>
+            </parameter>
+            <parameter>
+                <name>b</name>
+                <type>float</type>
+            </parameter>
+        </method>
+        <method>
+            <name>abs</name>
+            <comment></comment>
+            <returntype>float</returntype>
+            <parameter>
+                <name>v</name>
+                <type>float</type>
+            </parameter>
+        </method>
+        <method>
+            <name>norm</name>
+            <comment></comment>
+            <returntype>float</returntype>
+            <parameter>
+                <name>start</name>
+                <type>float</type>
+            </parameter>
+            <parameter>
+                <name>stop</name>
+                <type>float</type>
+            </parameter>
+            <parameter>
+                <name>value</name>
+                <type>float</type>
+            </parameter>
+        </method>
+        <method>
+            <name>mag</name>
+            <comment></comment>
+            <returntype>float</returntype>
+            <parameter>
+                <name>a</name>
+                <type>float</type>
+            </parameter>
+            <parameter>
+                <name>b</name>
+                <type>float</type>
+            </parameter>
+        </method>
+        <method>
+            <name>map</name>
+            <comment></comment>
+            <returntype>float</returntype>
+            <parameter>
+                <name>minStart</name>
+                <type>float</type>
+            </parameter>
+            <parameter>
+                <name>minStop</name>
+                <type>float</type>
+            </parameter>
+            <parameter>
+                <name>maxStart</name>
+                <type>float</type>
+            </parameter>
+            <parameter>
+                <name>maxStop</name>
+                <type>float</type>
+            </parameter>
+            <parameter>
+                <name>value</name>
+                <type>float</type>
+            </parameter>
+        </method>
+        <method>
+            <name>tan</name>
+            <comment></comment>
+            <returntype>float</returntype>
+            <parameter>
+                <name>angle</name>
+                <type>float</type>
+            </parameter>
+        </method>
+        <method>
+            <name>acos</name>
+            <comment></comment>
+            <returntype>float</returntype>
+            <parameter>
+                <name>value</name>
+                <type>float</type>
+            </parameter>
+        </method>
+        <method>
+            <name>lerp</name>
+            <comment></comment>
+            <returntype>float</returntype>
+            <parameter>
+                <name>start</name>
+                <type>float</type>
+            </parameter>
+            <parameter>
+                <name>stop</name>
+                <type>float</type>
+            </parameter>
+            <parameter>
+                <name>amount</name>
+                <type>float</type>
+            </parameter>
+        </method>
+        <method>
+            <name>dist</name>
+            <comment></comment>
+            <returntype>float</returntype>
+            <parameter>
+                <name>x1</name>
+                <type>float</type>
+            </parameter>
+            <parameter>
+                <name>y1</name>
+                <type>float</type>
+            </parameter>
+            <parameter>
+                <name>x2</name>
+                <type>float</type>
+            </parameter>
+            <parameter>
+                <name>y2</name>
+                <type>float</type>
+            </parameter>
+        </method>
+    </class>
+    <class>
+        <name>com.johan.myColorUtils.myColorUtils</name>
+        <shortname>myColorUtils</shortname>
+        <owner>process</owner>
+        <method>
+            <name>redComp</name>
+            <comment>Return the red component of a color int. This is the same as saying
+ (color &gt;&gt; 16) &amp;amp; 0xFF</comment>
+            <returntype>int</returntype>
+            <parameter>
+                <name>color</name>
+                <type>int</type>
+            </parameter>
+        </method>
+        <method>
+            <name>hue</name>
+            <comment>Returns the hue component of a color int.
+Return type: @return:A value between 0.0f and 1.0f</comment>
+            <returntype>float</returntype>
+            <parameter>
+                <name>color</name>
+                <type>int</type>
+            </parameter>
+        </method>
+        <method>
+            <name>alphaComp</name>
+            <comment>Return the alpha component of a color int. This is the same as saying
+ color &gt;&gt;&gt; 24</comment>
+            <returntype>int</returntype>
+            <parameter>
+                <name>color</name>
+                <type>int</type>
+            </parameter>
+        </method>
+        <method>
+            <name>colorToHSV</name>
+            <comment>Convert the argb color to its HSV components.
+     hsv[0] is Hue [0 .. 360)
+     hsv[1] is Saturation [0...1]
+     hsv[2] is Value [0...1]
+color: the argb color to convert. The alpha component is ignored.
+hsv: 3 element array which holds the resulting HSV components.</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>color</name>
+                <type>int</type>
+            </parameter>
+            <parameter>
+                <name>hsv</name>
+                <type>float[]</type>
+            </parameter>
+        </method>
+        <method>
+            <name>rgb</name>
+            <comment>Return a color-int from red, green, blue components.
+ The alpha component is implicity 255 (fully opaque).
+ These component values should be [0..255], but there is no
+ range check performed, so if they are out of range, the
+ returned color is undefined.
+red: red component [0..255] of the color
+green: green component [0..255] of the color
+blue: blue component [0..255] of the color</comment>
+            <returntype>int</returntype>
+            <parameter>
+                <name>red</name>
+                <type>int</type>
+            </parameter>
+            <parameter>
+                <name>green</name>
+                <type>int</type>
+            </parameter>
+            <parameter>
+                <name>blue</name>
+                <type>int</type>
+            </parameter>
+        </method>
+        <method>
+            <name>RGBToHSV</name>
+            <comment>Convert RGB components to HSV.
+     hsv[0] is Hue [0 .. 360)
+     hsv[1] is Saturation [0...1]
+     hsv[2] is Value [0...1]
+red: red component value [0..255]
+green: green component value [0..255]
+blue: blue component value [0..255]
+hsv: 3 element array which holds the resulting HSV components.</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>red</name>
+                <type>int</type>
+            </parameter>
+            <parameter>
+                <name>green</name>
+                <type>int</type>
+            </parameter>
+            <parameter>
+                <name>blue</name>
+                <type>int</type>
+            </parameter>
+            <parameter>
+                <name>hsv</name>
+                <type>float[]</type>
+            </parameter>
+        </method>
+        <method>
+            <name>blueComp</name>
+            <comment>Return the blue component of a color int. This is the same as saying
+ color &amp;amp; 0xFF</comment>
+            <returntype>int</returntype>
+            <parameter>
+                <name>color</name>
+                <type>int</type>
+            </parameter>
+        </method>
+        <method>
+            <name>brightness</name>
+            <comment>Returns the brightness component of a color int.
+Return type: @return:A value between 0.0f and 1.0f</comment>
+            <returntype>float</returntype>
+            <parameter>
+                <name>color</name>
+                <type>int</type>
+            </parameter>
+        </method>
+        <method>
+            <name>HSBtoColor</name>
+            <comment>Convert HSB components to an ARGB color. Alpha set to 0xFF.
+     hsv[0] is Hue [0 .. 1)
+     hsv[1] is Saturation [0...1]
+     hsv[2] is Value [0...1]
+ If hsv values are out of range, they are pinned.
+hsb: 3 element array which holds the input HSB components.
+Return type: @return:the resulting argb color</comment>
+            <returntype>int</returntype>
+            <parameter>
+                <name>hsb</name>
+                <type>float[]</type>
+            </parameter>
+        </method>
+        <method>
+            <name>saturation</name>
+            <comment>Returns the saturation component of a color int.
+Return type: @return:A value between 0.0f and 1.0f</comment>
+            <returntype>float</returntype>
+            <parameter>
+                <name>color</name>
+                <type>int</type>
+            </parameter>
+        </method>
+        <method>
+            <name>argb</name>
+            <comment>Return a color-int from alpha, red, green, blue components.
+ These component values should be [0..255], but there is no
+ range check performed, so if they are out of range, the
+ returned color is undefined.
+alpha: Alpha component [0..255] of the color
+red: red component [0..255] of the color
+green: green component [0..255] of the color
+blue: blue component [0..255] of the color</comment>
+            <returntype>int</returntype>
+            <parameter>
+                <name>alpha</name>
+                <type>int</type>
+            </parameter>
+            <parameter>
+                <name>red</name>
+                <type>int</type>
+            </parameter>
+            <parameter>
+                <name>green</name>
+                <type>int</type>
+            </parameter>
+            <parameter>
+                <name>blue</name>
+                <type>int</type>
+            </parameter>
+        </method>
+        <method>
+            <name>parseColor</name>
+            <comment>Parse the color string, and return the corresponding color-int.
+ If the string cannot be parsed, throws an IllegalArgumentException
+ exception. Supported formats are:
+ #RRGGBB
+ #AARRGGBB
+ 'red', 'blue', 'green', 'black', 'white', 'gray', 'cyan', 'magenta',
+ 'yellow', 'lightgray', 'darkgray'</comment>
+            <returntype>int</returntype>
+            <parameter>
+                <name>colorString</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+        <method>
+            <name>HSVToColor</name>
+            <comment>Convert HSV components to an ARGB color. Alpha set to 0xFF.
+     hsv[0] is Hue [0 .. 360)
+     hsv[1] is Saturation [0...1]
+     hsv[2] is Value [0...1]
+ If hsv values are out of range, they are pinned.
+hsv: 3 element array which holds the input HSV components.
+Return type: @return:the resulting argb color</comment>
+            <returntype>int</returntype>
+            <parameter>
+                <name>hsv</name>
+                <type>float[]</type>
+            </parameter>
+        </method>
+        <method>
+            <name>greenComp</name>
+            <comment>Return the green component of a color int. This is the same as saying
+ (color &gt;&gt; 8) &amp;amp; 0xFF</comment>
+            <returntype>int</returntype>
+            <parameter>
+                <name>color</name>
+                <type>int</type>
+            </parameter>
+        </method>
+        <field>
+            <name>BLUE</name>
+            <comment></comment>
+            <returntype>int</returntype>
+        </field>
+        <field>
+            <name>WHITE</name>
+            <comment></comment>
+            <returntype>int</returntype>
+        </field>
+        <field>
+            <name>TRANSPARENT</name>
+            <comment></comment>
+            <returntype>int</returntype>
+        </field>
+        <field>
+            <name>YELLOW</name>
+            <comment></comment>
+            <returntype>int</returntype>
+        </field>
+        <field>
+            <name>CYAN</name>
+            <comment></comment>
+            <returntype>int</returntype>
+        </field>
+        <field>
+            <name>GREEN</name>
+            <comment></comment>
+            <returntype>int</returntype>
+        </field>
+        <field>
+            <name>BLACK</name>
+            <comment></comment>
+            <returntype>int</returntype>
+        </field>
+        <field>
+            <name>MAGENTA</name>
+            <comment></comment>
+            <returntype>int</returntype>
+        </field>
+        <field>
+            <name>RED</name>
+            <comment></comment>
+            <returntype>int</returntype>
+        </field>
+        <field>
+            <name>LTGRAY</name>
+            <comment></comment>
+            <returntype>int</returntype>
+        </field>
+        <field>
+            <name>DKGRAY</name>
+            <comment></comment>
+            <returntype>int</returntype>
+        </field>
+        <field>
+            <name>GRAY</name>
+            <comment></comment>
+            <returntype>int</returntype>
+        </field>
+    </class>
+    <class>
+        <name>com.johan.myPhone.myPhone</name>
+        <shortname>myPhone</shortname>
+        <owner>process</owner>
+    </class>
+    <class>
+        <name>com.johan.myPhone.myPhone.myPhoneSensors</name>
+        <shortname>myPhoneSensors</shortname>
+        <owner>process</owner>
+        <method>
+            <name>Initialize</name>
+            <comment></comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>SensorType</name>
+                <type>int</type>
+            </parameter>
+        </method>
+        <method>
+            <name>StartListening</name>
+            <comment></comment>
+            <returntype>boolean</returntype>
+            <parameter>
+                <name>ba</name>
+                <type>anywheresoftware.b4a.BA</type>
+            </parameter>
+            <parameter>
+                <name>EventName</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+        <method>
+            <name>StopListening</name>
+            <comment></comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>ba</name>
+                <type>anywheresoftware.b4a.BA</type>
+            </parameter>
+        </method>
+        <method>
+            <name>Initialize2</name>
+            <comment></comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>SensorType</name>
+                <type>int</type>
+            </parameter>
+            <parameter>
+                <name>SensorDelay</name>
+                <type>int</type>
+            </parameter>
+        </method>
+        <property>
+            <name>MaxValue</name>
+            <returntype>float</returntype>
+            <comment></comment>
+        </property>
+        <field>
+            <name>TYPE_ACCELEROMETER</name>
+            <comment></comment>
+            <returntype>int</returntype>
+        </field>
+        <field>
+            <name>TYPE_GYROSCOPE</name>
+            <comment></comment>
+            <returntype>int</returntype>
+        </field>
+        <field>
+            <name>TYPE_PROXIMITY</name>
+            <comment></comment>
+            <returntype>int</returntype>
+        </field>
+        <field>
+            <name>TYPE_TEMPERATURE</name>
+            <comment></comment>
+            <returntype>int</returntype>
+        </field>
+        <field>
+            <name>TYPE_MAGNETIC_FIELD</name>
+            <comment></comment>
+            <returntype>int</returntype>
+        </field>
+        <field>
+            <name>TYPE_LIGHT</name>
+            <comment></comment>
+            <returntype>int</returntype>
+        </field>
+        <field>
+            <name>TYPE_ORIENTATION</name>
+            <comment></comment>
+            <returntype>int</returntype>
+        </field>
+        <field>
+            <name>TYPE_PRESSURE</name>
+            <comment></comment>
+            <returntype>int</returntype>
+        </field>
+    </class>
+    <class>
+        <name>com.johan.mySound.mySound</name>
+        <shortname>mySound</shortname>
+        <owner>process</owner>
+        <method>
+            <name>Initialize</name>
+            <comment></comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>ba</name>
+                <type>anywheresoftware.b4a.BA</type>
+            </parameter>
+        </method>
+        <method>
+            <name>setTone</name>
+            <comment></comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>ba</name>
+                <type>anywheresoftware.b4a.BA</type>
+            </parameter>
+            <parameter>
+                <name>myTone</name>
+                <type>int</type>
+            </parameter>
+        </method>
+        <method>
+            <name>startPlay</name>
+            <comment></comment>
+            <returntype>void</returntype>
+        </method>
+        <method>
+            <name>stopPlay</name>
+            <comment></comment>
+            <returntype>void</returntype>
+        </method>
+        <field>
+            <name>TYPE_NOTIFICATION</name>
+            <comment></comment>
+            <returntype>int</returntype>
+        </field>
+        <field>
+            <name>TYPE_RINGTONE</name>
+            <comment></comment>
+            <returntype>int</returntype>
+        </field>
+        <field>
+            <name>TYPE_ALARM</name>
+            <comment></comment>
+            <returntype>int</returntype>
+        </field>
+    </class>
+    <class>
+        <name>com.johan.myTTS.myTTS</name>
+        <shortname>myTTS</shortname>
+        <owner>process</owner>
+        <method>
+            <name>Initialize</name>
+            <comment></comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>ba</name>
+                <type>anywheresoftware.b4a.BA</type>
+            </parameter>
+        </method>
+        <method>
+            <name>speakOut</name>
+            <comment>Speaks out the text that is passed in the call
+
+Example:&lt;code&gt;
+Dim mts As myTTS
+
+mts.Initialize
+mts.speakOut("Today is a lovely day")&lt;/code&gt;</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>mystr</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+        <method>
+            <name>killMyTTS</name>
+            <comment>Releases the resources used by the TextToSpeech engine. 
+It is good practice for instance to call this method in 
+sub Activity_Pause so the TextToSpeech engine can be cleanly stopped.  
+
+Example:&lt;code&gt;
+Dim mts As myTTS
+
+mts.Initialize
+
+Sub Activity_Pause (UserClosed As Boolean)
+  mts.killMyTTS
+End Sub&lt;/code&gt;</comment>
+            <returntype>void</returntype>
+        </method>
+        <property>
+            <name>SpeakPitch</name>
+            <parameter>
+                <name>value</name>
+                <type>float</type>
+            </parameter>
+            <comment>Sets the speech pitch for the TextToSpeech engine. This has no effect 
+on any pre-recorded speech.
+Speech pitch. 1.0 is the normal pitch, lower values lower the tone of 
+the synthesized voice, greater values increase it.
+
+Example:&lt;code&gt;
+Dim mts As myTTS
+
+mts.Initialize
+mts.SpeakPitch = 0.6
+mts.speakOut("Today is a lovely day")&lt;/code&gt;</comment>
+        </property>
+        <property>
+            <name>SpeakRate</name>
+            <parameter>
+                <name>value</name>
+                <type>float</type>
+            </parameter>
+            <comment>Sets the speech rate. This has no effect on any pre-recorded speech.
+Speech rate. 1.0 is the normal speech rate, lower values slow down the
+speech (0.5 is half the normal speech rate), greater values accelerate
+it (2.0 is twice the normal speech rate).
+
+Example:&lt;code&gt;
+Dim mts As myTTS
+
+mts.Initialize
+mts.SpeakRate = 0.6
+mts.speakOut("Today is a lovely day")&lt;/code&gt;</comment>
+        </property>
+    </class>
+    <class>
+        <name>com.johan.sensors.sensors</name>
+        <shortname>B4Asensors</shortname>
+        <owner>process</owner>
+        <method>
+            <name>mySensors</name>
+            <comment></comment>
+            <returntype>java.util.List</returntype>
+            <parameter>
+                <name>ba</name>
+                <type>anywheresoftware.b4a.BA</type>
+            </parameter>
+        </method>
+    </class>
+    <class>
+        <name>com.johan.stringUtils.stringUtils</name>
+        <shortname>B4AstringUtils</shortname>
+        <owner>process</owner>
+        <method>
+            <name>replaceChar</name>
+            <comment>Replace all occurances of a char in a string with a new char
+Example:&lt;code&gt;
+Dim msu As B4AstringUtils
+
+Dim mystring As String
+mystring = "Basic4Android is Great!"
+log(msu.replaceChar(mystring,"A","B")
+&lt;/code&gt;</comment>
+            <returntype>java.lang.String</returntype>
+            <parameter>
+                <name>inputString</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>oldChar</name>
+                <type>char</type>
+            </parameter>
+            <parameter>
+                <name>newChar</name>
+                <type>char</type>
+            </parameter>
+        </method>
+        <method>
+            <name>stringStartsWith</name>
+            <comment>This method returns true/false when the input string starts with the substring
+Example:&lt;code&gt;
+Dim msu As B4AstringUtils
+
+Dim mystring as String
+mystring = "Replace Region"
+log(msu.StringStartsWith(mystring,"Replace")
+&lt;/code&gt;</comment>
+            <returntype>boolean</returntype>
+            <parameter>
+                <name>inputString</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>substring</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+        <method>
+            <name>replaceFirstOccur</name>
+            <comment>Replaces only the first occurances of a given String with a new one
+Example:&lt;code&gt;
+Dim msu As B4AstringUtils
+
+Dim mystring As String
+mystring = "Replace Region"
+log(msu.replaceFirstOccur(mystring,"Re","Ra")
+&lt;/code&gt;</comment>
+            <returntype>java.lang.String</returntype>
+            <parameter>
+                <name>inputString</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>oldString</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>newString</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+        <method>
+            <name>reverseString</name>
+            <comment>Reverses the order of a string
+Example:&lt;code&gt;
+Dim msu As B4AstringUtils
+
+Dim mystring As String
+mystring = msu.reverseString("Basic4Android is Great!")
+&lt;/code&gt;</comment>
+            <returntype>java.lang.String</returntype>
+            <parameter>
+                <name>stringToReverse</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+        <method>
+            <name>sortStringCaseSensitive</name>
+            <comment>Sorts an array of strings in decending order
+It is case SENSITIVE. Therefore A-Z takes preference over a-z
+Example:&lt;code&gt;
+Dim msu As B4AstringUtils
+
+Dim mywords() As String
+mywords = Array As String("My", "name", "is", "Johan", "Schoeman")
+mywords = msu.sortStringCaseSensitive(mywords)
+For i = 0 To mywords.Length-1
+  Log(mywords(i))
+Next
+&lt;/code&gt;</comment>
+            <returntype>java.lang.String[]</returntype>
+            <parameter>
+                <name>strNames</name>
+                <type>java.lang.String[]</type>
+            </parameter>
+        </method>
+        <method>
+            <name>subString2</name>
+            <comment>Returns a substring of the string starting from fromIndex upto toIndex-1
+Here fromIndex is inclusive while toIndex is exclusive.
+Example:&lt;code&gt;
+Dim msu As B4AstringUtils
+
+Dim mystring As String
+Dim fromIndex as Int = 0
+Dim toIndex as Int = 5
+mystring = "Hello World"
+Log(msu.subString2(mystring, fromIndex, toIndex))
+&lt;/code&gt;
+Returned substring = Hello</comment>
+            <returntype>java.lang.String</returntype>
+            <parameter>
+                <name>myString</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>fromIndex</name>
+                <type>int</type>
+            </parameter>
+            <parameter>
+                <name>toIndex</name>
+                <type>int</type>
+            </parameter>
+        </method>
+        <method>
+            <name>StringToLowerCase</name>
+            <comment>Converts a string to LOWERCASE
+Example:&lt;code&gt;
+Dim msu As B4AstringUtils
+
+Dim mystring As String
+mystring = "Basic4Android is Great!"
+log(msu.StringToLowerCase(mystring)
+&lt;/code&gt;</comment>
+            <returntype>java.lang.String</returntype>
+            <parameter>
+                <name>inputString</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+        <method>
+            <name>subString1</name>
+            <comment>Returns a substring of the string starting from index
+
+Example:&lt;code&gt;
+Dim msu As B4AstringUtils
+
+Dim mystring As String
+Dim myindex as Int = 6
+mystring = "Hello World"
+Log(msu.subString1(mystring,myindex))
+&lt;/code&gt;
+Returned substring = World</comment>
+            <returntype>java.lang.String</returntype>
+            <parameter>
+                <name>myString</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>myIndex</name>
+                <type>int</type>
+            </parameter>
+        </method>
+        <method>
+            <name>Trim</name>
+            <comment>Removes the leading and trailing spaces from a string
+Example:&lt;code&gt;
+Dim msu As B4AstringUtils
+
+Dim mystring as String
+mystring = "    Replace Region    "
+log(msu.Trim(mystring)
+&lt;/code&gt;</comment>
+            <returntype>java.lang.String</returntype>
+            <parameter>
+                <name>inputString</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+        <method>
+            <name>replaceAllOccur</name>
+            <comment>Replace all occurances of a given String with a new one
+Example:&lt;code&gt;
+Dim msu As B4AstringUtils
+
+Dim mystring As String
+mystring = "Replace Region"
+log(msu.replaceAllOccur(mystring,"Re","Ra")
+&lt;/code&gt;</comment>
+            <returntype>java.lang.String</returntype>
+            <parameter>
+                <name>inputString</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>oldString</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>newString</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+        <method>
+            <name>stringLength</name>
+            <comment>Get the length of a string
+Example:&lt;code&gt;
+Dim msu As B4AstringUtils
+
+Dim mystring As String
+mystring = "Basic4Android is Great!"
+log(msu.stringLength(mystring)
+&lt;/code&gt;</comment>
+            <returntype>int</returntype>
+            <parameter>
+                <name>inputString</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+        <method>
+            <name>containString</name>
+            <comment>This method returns true/false if the input string contains a given substring.
+Example:&lt;code&gt;
+Dim msu As B4AstringUtils
+
+Dim mystring as String
+mystring = "Replace Region"
+log(msu.containString(mystring,"Re")
+&lt;/code&gt;</comment>
+            <returntype>boolean</returntype>
+            <parameter>
+                <name>inputString</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>substring</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+        <method>
+            <name>StringToUpperCase</name>
+            <comment>Converts a string to UPPERCASE
+Example:&lt;code&gt;
+Dim msu As B4AstringUtils
+
+Dim mystring As String
+mystring = "Basic4Android is Great!"
+log(msu.StringToUpperCase(mystring)
+&lt;/code&gt;</comment>
+            <returntype>java.lang.String</returntype>
+            <parameter>
+                <name>inputString</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+        <method>
+            <name>sortStringArrayDecendingCaseSensitive</name>
+            <comment>Sorts an array of strings in decending order
+It is case SENSITIVE
+Example:&lt;code&gt;
+Dim msu As B4AstringUtils
+
+Dim mywords() As String
+mywords = Array As String("a", "B", "c", "D", "z")
+mywords = msu.sortStringArrayDecendingCaseSensitive(mywords)
+For i = 0 To mywords.Length-1
+  Log(mywords(i))
+Next
+&lt;/code&gt;
+
+Return array will be (starting from index 0) z, c, a, D, B</comment>
+            <returntype>java.lang.String[]</returntype>
+            <parameter>
+                <name>strNames</name>
+                <type>java.lang.String[]</type>
+            </parameter>
+        </method>
+        <method>
+            <name>sortStringArrayDecendingCaseInSensitive</name>
+            <comment>Sorts an array of strings in ascending order
+It is case SENSITIVE
+Example:&lt;code&gt;
+Dim msu As B4AstringUtils
+
+Dim mywords() As String
+mywords = Array As String("a", "B", "c", "D", "z")
+mywords = msu.sortStringArrayDecendingCaseSensitive(mywords)
+For i = 0 To mywords.Length-1
+  Log(mywords(i))
+Next
+&lt;/code&gt;
+
+Return array will be (starting from index 0) z, D, c, B, a</comment>
+            <returntype>java.lang.String[]</returntype>
+            <parameter>
+                <name>strNames</name>
+                <type>java.lang.String[]</type>
+            </parameter>
+        </method>
+        <method>
+            <name>sortStringCaseInSensitive</name>
+            <comment>Sorts an array of strings in decending order
+It is case INSENSITIVE. Therefore b will for eg take preference over Z
+Example:&lt;code&gt;
+Dim msu As B4AstringUtils
+
+Dim mywords() As String
+mywords = Array As String("My", "name", "is", "Johan", "Schoeman")
+mywords = msu.sortStringCaseInSensitive(mywords)
+For i = 0 To mywords.Length-1
+  Log(mywords(i))
+Next
+&lt;/code&gt;</comment>
+            <returntype>java.lang.String[]</returntype>
+            <parameter>
+                <name>strNames</name>
+                <type>java.lang.String[]</type>
+            </parameter>
+        </method>
+    </class>
+    <class>
+        <name>com.johan.telephony.SNNeighboringCellInfo</name>
+        <shortname>B4AneighboringCellInfo</shortname>
+        <owner>process</owner>
+        <method>
+            <name>Initialize</name>
+            <comment></comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>ncf</name>
+                <type>android.telephony.NeighboringCellInfo</type>
+            </parameter>
+        </method>
+        <property>
+            <name>Cid</name>
+            <returntype>int</returntype>
+            <comment></comment>
+        </property>
+        <property>
+            <name>Rssi</name>
+            <returntype>int</returntype>
+            <comment></comment>
+        </property>
+    </class>
+    <class>
+        <name>com.johan.telephony.SNTelephony</name>
+        <shortname>B4Atelephony</shortname>
+        <owner>process</owner>
+        <method>
+            <name>getAllCellInfo</name>
+            <comment></comment>
+            <returntype>anywheresoftware.b4a.objects.collections.List</returntype>
+            <parameter>
+                <name>ba</name>
+                <type>anywheresoftware.b4a.BA</type>
+            </parameter>
+        </method>
+    </class>
+    <class>
+        <name>com.johan.twocolorledblinker.twocolorledblinker</name>
+        <shortname>twocolorledblinker</shortname>
+        <owner>process</owner>
+        <method>
+            <name>blinkLED</name>
+            <comment>Called when the activity is first created.</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>ba</name>
+                <type>anywheresoftware.b4a.BA</type>
+            </parameter>
+        </method>
+        <method>
+            <name>stopBlinkLED</name>
+            <comment></comment>
+            <returntype>void</returntype>
+        </method>
+    </class>
+    <class>
+        <name>com.johan.Vibrate.Vibrate</name>
+        <shortname>B4Avibrate</shortname>
+        <owner>process</owner>
+        <method>
+            <name>vibratePattern</name>
+            <comment>Vibrate with a given pattern. 
+Pass in an array of Longs that are the durations for which to turn on or off the vibrator in milliseconds. 
+The first value indicates the number of milliseconds to wait before turning the vibrator on. The next 
+value indicates the number of milliseconds for which to keep the vibrator on before turning it off. 
+Subsequent values alternate between durations in milliseconds to turn the vibrator off or to turn the vibrator on.
+Parameters:
+pattern ---&gt; an array of longs of times for which to turn the vibrator on or off.
+repeat ---&gt; the index into pattern at which to repeat, or -1 if you don't want to repeat.
+
+You need to add the following to the manifest file of the B4A project:
+AddPermission("android.permission.VIBRATE")
+Example:&lt;code&gt;
+Dim mv As Vibrate
+Dim pattern() As Long
+pattern = Array As Long(0, 100, 1000, 300, 1000, 100, 1000, 200, 1000)
+Dim repeat as Int = 0
+mv.vibratePattern(pattern, repeat)&lt;/code&gt;</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>ba</name>
+                <type>anywheresoftware.b4a.BA</type>
+            </parameter>
+            <parameter>
+                <name>pattern</name>
+                <type>long[]</type>
+            </parameter>
+            <parameter>
+                <name>repeat</name>
+                <type>int</type>
+            </parameter>
+        </method>
+        <method>
+            <name>vibrateOnce</name>
+            <comment>Vibrate continuously for the specified number of milliseconds 
+You need to add the following to the manifest file of the B4A project:
+AddPermission("android.permission.VIBRATE")
+Example:&lt;code&gt;
+Dim mv As Vibrate
+Dim duration as Long = 2000
+mv.vibrateOnce(duration)&lt;/code&gt;</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>ba</name>
+                <type>anywheresoftware.b4a.BA</type>
+            </parameter>
+            <parameter>
+                <name>duration</name>
+                <type>long</type>
+            </parameter>
+        </method>
+        <method>
+            <name>vibrateCancel</name>
+            <comment>Cancel vibration (in case of method vibratePattern being active)
+You need to add the following to the manifest file of the B4A project:
+AddPermission("android.permission.VIBRATE")
+Example:&lt;code&gt;
+Dim mv As Vibrate
+mv.vibrateCancel&lt;/code&gt;</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>ba</name>
+                <type>anywheresoftware.b4a.BA</type>
+            </parameter>
+        </method>
+    </class>
+    <version>1.0</version>
+    <comment></comment>
+</root>

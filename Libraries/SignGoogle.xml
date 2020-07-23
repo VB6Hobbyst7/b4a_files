@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <doclet-version-NOT-library-version>1.00</doclet-version-NOT-library-version>
+  <dependsOn includesSingletonModules="true">httputils2</dependsOn>
+  <dependsOn>javaobject</dependsOn>
+  <dependsOn>signgoogle</dependsOn>
+  <dependsOn>json</dependsOn>
+  <dependsOn includesSingletonModules="true">googleaccountmanager</dependsOn>
+  <dependsOn>http</dependsOn>
+  <dependsOn>stringutils</dependsOn>
+  <dependsOn>threading</dependsOn>
+  <class>
+    <name>b4a.signin.signgoogle</name>
+    <shortname>SignGoogle</shortname>
+    <owner>process</owner>
+    <event>SigningGoogle(Result as Map,State As Boolean)</event>
+    <event>AccessToken(Result as Map,AccessToken As String)</event>
+    <method>
+      <name>IsInitialized</name>
+      <comment>Tests whether the object has been initialized.</comment>
+      <returntype>boolean</returntype>
+    </method>
+    <method>
+      <name DesignerName="GetAccountList">_getaccountlist</name>
+      <comment>Step 2
+</comment>
+      <returntype>anywheresoftware.b4a.objects.collections.List</returntype>
+    </method>
+    <method>
+      <name DesignerName="Initialize">_initialize</name>
+      <comment>Step 1
+You should create OAuth api in google console with current packagename
+</comment>
+      <returntype>String</returntype>
+      <parameter>
+        <name>ba</name>
+        <type>anywheresoftware.b4a.BA</type>
+      </parameter>
+      <parameter>
+        <name>Module</name>
+        <type>Object</type>
+      </parameter>
+    </method>
+    <method>
+      <name DesignerName="RequestSign">_requestsign</name>
+      <comment>Step 4
+Send user details to event
+</comment>
+      <returntype>String</returntype>
+      <parameter>
+        <name>Event</name>
+        <type>String</type>
+      </parameter>
+    </method>
+    <method>
+      <name DesignerName="SelectAccount">_selectaccount</name>
+      <comment>Step 3
+AccountName should be gmail address
+</comment>
+      <returntype>String</returntype>
+      <parameter>
+        <name>AccountName</name>
+        <type>String</type>
+      </parameter>
+    </method>
+  </class>
+  <version>1</version>
+</root>

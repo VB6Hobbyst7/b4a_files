@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <doclet-version-NOT-library-version>1.00</doclet-version-NOT-library-version>
+  <dependsOn>javaobject</dependsOn>
+  <dependsOn>reflection</dependsOn>
+  <class>
+    <name>b4a.example.prbazarinappsecurity</name>
+    <shortname>PRBazarInappSecurity</shortname>
+    <owner>process</owner>
+    <method>
+      <name>IsInitialized</name>
+      <comment>Tests whether the object has been initialized.</comment>
+      <returntype>boolean</returntype>
+    </method>
+    <method>
+      <name DesignerName="Initialize">_initialize</name>
+      <comment>Initializes the PRBazarInappSecurity Libraries</comment>
+      <returntype>String</returntype>
+      <parameter>
+        <name>ba</name>
+        <type>anywheresoftware.b4a.BA</type>
+      </parameter>
+    </method>
+    <method>
+      <name DesignerName="Security">_security</name>
+      <comment>&lt;p&gt;&amp;nbsp;If security = True Then Pay Successful Else Failed AND User Use The HackTool : LuckyPatcher-GameHacker AND ...&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;&amp;nbsp; Sample :&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;&amp;nbsp;&lt;/strong&gt;Sub pardakht_PurchaseCompleted(Successed As Boolean, Product As Purchase)&lt;/p&gt;
+&lt;p&gt;Dim&amp;nbsp;PRBazarInappSecurity1 As&amp;nbsp;PRBazarInappSecurity&lt;/p&gt;
+Try
+If PRBazarInappSecurity1.security = True Then
+If Successed=True Then
+ToastMessageShow("Pay Successful Thank You !",False)
+File.WriteString(File.DirInternal,"Success-pay.txt","paysuccess")
+B1.Visible=False
+Else
+ToastMessageShow("Pay Failed",False)
+End If
+Else
+ToastMessageShow("Please Dont Hack App !!",False)
+End If
+Catch
+End Try
+End Sub
+&lt;p&gt;&lt;strong&gt;&amp;nbsp;  Plase Add To ManiFirst Code : &lt;/strong&gt;&lt;/p&gt;
+AddPermission(android.permission.GET_TASKS)
+---------------------------------
+&lt;p&gt;This&amp;nbsp;Librarie Coded By&amp;nbsp;&lt;strong&gt;Alireza Ghafari And Mohsen Parandvar &amp;nbsp;&lt;/strong&gt;- &amp;nbsp;www.Alireza-Ghafari.Ml&lt;/p&gt;</comment>
+      <returntype>boolean</returntype>
+    </method>
+  </class>
+  <version>1</version>
+</root>

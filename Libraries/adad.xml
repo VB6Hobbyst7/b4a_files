@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root>
+    <doclet-version-NOT-library-version>1.02</doclet-version-NOT-library-version>
+    <class>
+        <name>ir.adad</name>
+        <shortname>adad</shortname>
+        <objectwrapper>ir.adad</objectwrapper>
+		<objectwrapper>ir.adad.AdView</objectwrapper>
+        <owner>activity</owner>
+    </class>
+    <version>2.9</version>
+</root>

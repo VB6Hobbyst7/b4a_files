@@ -1,0 +1,396 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root>
+    <doclet-version-NOT-library-version>1.01</doclet-version-NOT-library-version>
+    <class>
+        <name>giuseppe.salvi.icos.library.ICOSTitleBarAnimation</name>
+        <shortname>ICOSTitleBarAnimation</shortname>
+        <objectwrapper>android.view.animation.Animation</objectwrapper>
+        <owner>activity</owner>
+        <event>animationend</event>
+        <method>
+            <name>StopAnimTitleBar</name>
+            <comment>Stop the animation</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>ba</name>
+                <type>anywheresoftware.b4a.BA</type>
+            </parameter>
+        </method>
+        <method>
+            <name>InfinitySlideReverseTitleBar</name>
+            <comment>Example:
+ Dim anim As ICOSAnimation
+ Dim Button1 As Button
+ 
+ Sub b1_Click
+ anim.InfinitySlideReverseTitleBar("anim",600,2)
+ anim.StartAnimTitleBar
+ End Sub</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>ba</name>
+                <type>anywheresoftware.b4a.BA</type>
+            </parameter>
+            <parameter>
+                <name>EventName</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>SlideValue</name>
+                <type>float</type>
+            </parameter>
+            <parameter>
+                <name>Duration</name>
+                <type>long</type>
+            </parameter>
+        </method>
+        <method>
+            <name>AutoRepeat</name>
+            <comment>Set repeat infinity automatically</comment>
+            <returntype>void</returntype>
+        </method>
+        <method>
+            <name>StartAnimTitleBar</name>
+            <comment>anim.StartAnimTitleBar</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>ba</name>
+                <type>anywheresoftware.b4a.BA</type>
+            </parameter>
+        </method>
+        <method>
+            <name>FadeInTitleBar</name>
+            <comment>Example:
+ Dim anim As ICOSAnimation
+ Dim ImageView1 As ImageView
+ Dim Button1 As Button
+ 
+ Sub b1_Click
+ anim.FadeInTitleBar("anim",2)
+ anim.StartAnimTitleBar
+ End Sub</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>ba</name>
+                <type>anywheresoftware.b4a.BA</type>
+            </parameter>
+            <parameter>
+                <name>EventName</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>Duration</name>
+                <type>long</type>
+            </parameter>
+        </method>
+        <method>
+            <name>SlideTitleBarFromRightToLeft</name>
+            <comment>Example:
+ Dim anim As ICOSAnimation
+ Dim Button1 As Button
+ 
+ Sub b1_Click
+ anim.SlideTitleBarFromRightToLeft("anim",600,2)
+ anim.StartAnimTitleBar
+ End Sub</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>ba</name>
+                <type>anywheresoftware.b4a.BA</type>
+            </parameter>
+            <parameter>
+                <name>EventName</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>SlideValue</name>
+                <type>float</type>
+            </parameter>
+            <parameter>
+                <name>Duration</name>
+                <type>long</type>
+            </parameter>
+        </method>
+        <method>
+            <name>FadeOutTitleBar</name>
+            <comment>Example:
+ Dim anim As ICOSAnimation
+ Dim ImageView1 As ImageView
+ Dim Button1 As Button
+ 
+ Sub b1_Click
+ anim.FadeOutTitleBar("anim",2)
+ anim.StartAnimTitleBar
+ End Sub</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>ba</name>
+                <type>anywheresoftware.b4a.BA</type>
+            </parameter>
+            <parameter>
+                <name>EventName</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>Duration</name>
+                <type>long</type>
+            </parameter>
+        </method>
+        <method>
+            <name>InfinitySlideTitleBar</name>
+            <comment>Example:
+ Dim anim As ICOSAnimation
+ Dim Button1 As Button
+ 
+ Sub b1_Click
+ anim.SlideInfinityTitleBar("anim",600,2)
+ anim.StartAnimTitleBar
+ End Sub</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>ba</name>
+                <type>anywheresoftware.b4a.BA</type>
+            </parameter>
+            <parameter>
+                <name>EventName</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>SlideValue</name>
+                <type>float</type>
+            </parameter>
+            <parameter>
+                <name>Duration</name>
+                <type>long</type>
+            </parameter>
+        </method>
+        <method>
+            <name>ScaleTitleBarToRight</name>
+            <comment>Example:
+ Dim anim As ICOSAnimation
+ Dim Button1 As Button
+ 
+ Sub b1_Click
+ anim.SaleTitleBarToRight("anim",2)
+ anim.StartAnimTitleBar
+ End Sub</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>ba</name>
+                <type>anywheresoftware.b4a.BA</type>
+            </parameter>
+            <parameter>
+                <name>EventName</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>Duration</name>
+                <type>long</type>
+            </parameter>
+        </method>
+        <method>
+            <name>ScaleTitleBarFromCentreToLeftRight</name>
+            <comment>Example:
+ Dim anim As ICOSAnimation
+ Dim Button1 As Button
+ 
+ Sub b1_Click
+ anim.SaleTitleBarFromCentreToLeftRight("anim",2)
+ anim.StartAnimTitleBar
+ End Sub</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>ba</name>
+                <type>anywheresoftware.b4a.BA</type>
+            </parameter>
+            <parameter>
+                <name>EventName</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>Duration</name>
+                <type>long</type>
+            </parameter>
+        </method>
+        <method>
+            <name>Flip3DTitleBar</name>
+            <comment>Direction -&gt; FLIP_HORIZONTAL = 1
+ Direction -&gt; FLIP_VERTICAL	= 2
+ Example:
+ Dim anim As ICOSAnimation
+ Dim ImageView1 As ImageView
+ Dim Button1 As Button
+ 
+ Sub b1_Click
+ anim.Flip3DTitleBar("anim",ImageView1,180,3,anim.FLIP_HORIZONTAL)
+ anim.StartAnim(ImageView1)
+ End Sub</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>ba</name>
+                <type>anywheresoftware.b4a.BA</type>
+            </parameter>
+            <parameter>
+                <name>EventName</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>Degrees</name>
+                <type>float</type>
+            </parameter>
+            <parameter>
+                <name>Duration</name>
+                <type>long</type>
+            </parameter>
+            <parameter>
+                <name>Direction</name>
+                <type>int</type>
+            </parameter>
+        </method>
+        <method>
+            <name>InfinityFadeTitleBar</name>
+            <comment>Example:
+ Dim anim As ICOSAnimation
+ Dim ImageView1 As ImageView
+ Dim Button1 As Button
+ 
+ Sub b1_Click
+ anim.InfiniteFadeTitleBar("anim",2)
+ anim.StartAnimTitleBar
+ End Sub</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>ba</name>
+                <type>anywheresoftware.b4a.BA</type>
+            </parameter>
+            <parameter>
+                <name>EventName</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>Duration</name>
+                <type>long</type>
+            </parameter>
+        </method>
+        <method>
+            <name>ScaleTitleBarToLeft</name>
+            <comment>Example:
+ Dim anim As ICOSAnimation
+ Dim Button1 As Button
+ 
+ Sub b1_Click
+ anim.SaleTitleBarToLeft("anim",2)
+ anim.StartAnimTitleBar
+ End Sub</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>ba</name>
+                <type>anywheresoftware.b4a.BA</type>
+            </parameter>
+            <parameter>
+                <name>EventName</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>Duration</name>
+                <type>long</type>
+            </parameter>
+        </method>
+        <method>
+            <name>ScaleTitleBarFromLeftRightToCentre</name>
+            <comment>Example:
+ Dim anim As ICOSAnimation
+ Dim Button1 As Button
+ 
+ Sub b1_Click
+ anim.ScaleTitleBarFromLeftRightToCentre("anim",2)
+ anim.StartAnimTitleBar
+ End Sub</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>ba</name>
+                <type>anywheresoftware.b4a.BA</type>
+            </parameter>
+            <parameter>
+                <name>EventName</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>Duration</name>
+                <type>long</type>
+            </parameter>
+        </method>
+        <method>
+            <name>SlideTitleBarFromLeftToRight</name>
+            <comment>Example:
+ Dim anim As ICOSAnimation
+ Dim Button1 As Button
+ 
+ Sub b1_Click
+ anim.SlideTitleBarFromLeftToRight("anim",600,2)
+ anim.StartAnimTitleBar
+ End Sub</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>ba</name>
+                <type>anywheresoftware.b4a.BA</type>
+            </parameter>
+            <parameter>
+                <name>EventName</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>SlideValue</name>
+                <type>float</type>
+            </parameter>
+            <parameter>
+                <name>Duration</name>
+                <type>long</type>
+            </parameter>
+        </method>
+        <method>
+            <name>AutoReverse</name>
+            <comment>Set reverse automatically</comment>
+            <returntype>void</returntype>
+        </method>
+        <method>
+            <name>IsInitialized</name>
+            <comment></comment>
+            <returntype>boolean</returntype>
+        </method>
+        <property>
+            <name>StartAnimAtTime</name>
+            <parameter>
+                <name>Seconds</name>
+                <type>long</type>
+            </parameter>
+            <comment>Example:
+ Dim anim As ICOSAnimation
+ Dim ImageView1 As ImageView
+ Dim Button1 As Button
+ 
+ Sub b1_Click
+ anim.StartAnimAtTime=5000 The Animation Will start after 5 seconds
+ anim.FadeOut(2)
+ anim.StartAnim(ImageView1)
+ End Sub</comment>
+        </property>
+        <property>
+            <name>Version</name>
+            <returntype>double</returntype>
+            <comment>Return the version of this library</comment>
+        </property>
+        <field>
+            <name>FLIP_VERTICAL</name>
+            <comment></comment>
+            <returntype>int</returntype>
+        </field>
+        <field>
+            <name>FLIP_HORIZONTAL</name>
+            <comment></comment>
+            <returntype>int</returntype>
+        </field>
+    </class>
+    <version>1.4</version>
+    <author>Giuseppe Salvi</author>
+</root>

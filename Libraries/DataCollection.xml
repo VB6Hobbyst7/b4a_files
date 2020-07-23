@@ -1,0 +1,1317 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root>
+    <doclet-version-NOT-library-version>1.02</doclet-version-NOT-library-version>
+    <class>
+        <name>flm.b4a.datacollection.TreeSet</name>
+        <shortname>dcTreeSet</shortname>
+        <owner>process</owner>
+        <event>Compare(Obj1 As Object, Obj2 As Object) As Int</event>
+        <method>
+            <name>Initialize</name>
+            <comment>Initializes a new TreeSet which uses natural ordering.</comment>
+            <returntype>void</returntype>
+        </method>
+        <method>
+            <name>Iterator</name>
+            <comment>Returns an iterator on the objects of this set.</comment>
+            <returntype>flm.b4a.datacollection.Iterator</returntype>
+        </method>
+        <method>
+            <name>Lower</name>
+            <comment>Returns the greatest element in this set strictly less than the given object, or Null if there is no such element.</comment>
+            <returntype>java.lang.Object</returntype>
+            <parameter>
+                <name>Obj</name>
+                <type>java.lang.Object</type>
+            </parameter>
+        </method>
+        <method>
+            <name>Higher</name>
+            <comment>Returns the least element in this set strictly greater than the given object, or Null if there is no such element.</comment>
+            <returntype>java.lang.Object</returntype>
+            <parameter>
+                <name>Obj</name>
+                <type>java.lang.Object</type>
+            </parameter>
+        </method>
+        <method>
+            <name>PollLast</name>
+            <comment>Retrieves and removes the last object, or returns Null if this set is empty.</comment>
+            <returntype>java.lang.Object</returntype>
+        </method>
+        <method>
+            <name>Ceiling</name>
+            <comment>Returns the least element in this set greater than or equal to the given object, or Null if there is no such element.</comment>
+            <returntype>java.lang.Object</returntype>
+            <parameter>
+                <name>Obj</name>
+                <type>java.lang.Object</type>
+            </parameter>
+        </method>
+        <method>
+            <name>Clear</name>
+            <comment>Removes all objects from this set, leaving it empty.</comment>
+            <returntype>void</returntype>
+        </method>
+        <method>
+            <name>Contains</name>
+            <comment>Searches this set for the specified object.</comment>
+            <returntype>boolean</returntype>
+            <parameter>
+                <name>Obj</name>
+                <type>java.lang.Object</type>
+            </parameter>
+        </method>
+        <method>
+            <name>First</name>
+            <comment>Returns the first object in this set.</comment>
+            <returntype>java.lang.Object</returntype>
+        </method>
+        <method>
+            <name>Floor</name>
+            <comment>Returns the greatest element in this set less than or equal to the given object, or Null if there is no such element.</comment>
+            <returntype>java.lang.Object</returntype>
+            <parameter>
+                <name>Obj</name>
+                <type>java.lang.Object</type>
+            </parameter>
+        </method>
+        <method>
+            <name>IsEmpty</name>
+            <comment>Returns True if this set has no element, otherwise False.</comment>
+            <returntype>boolean</returntype>
+        </method>
+        <method>
+            <name>DescendingIterator</name>
+            <comment>Returns an iterator on the objects of this set, in descending order.</comment>
+            <returntype>flm.b4a.datacollection.Iterator</returntype>
+        </method>
+        <method>
+            <name>Last</name>
+            <comment>Returns the last object in this set.</comment>
+            <returntype>java.lang.Object</returntype>
+        </method>
+        <method>
+            <name>PollFirst</name>
+            <comment>Retrieves and removes the first object, or returns Null if this set is empty.</comment>
+            <returntype>java.lang.Object</returntype>
+        </method>
+        <method>
+            <name>Add</name>
+            <comment>Adds the specified object to this set.</comment>
+            <returntype>boolean</returntype>
+            <parameter>
+                <name>Obj</name>
+                <type>java.lang.Object</type>
+            </parameter>
+        </method>
+        <method>
+            <name>Remove</name>
+            <comment>Removes an occurrence of the specified object from this set.</comment>
+            <returntype>boolean</returntype>
+            <parameter>
+                <name>Obj</name>
+                <type>java.lang.Object</type>
+            </parameter>
+        </method>
+        <method>
+            <name>Get</name>
+            <comment>Returns the object at the given index in this set, or Null if not found.</comment>
+            <returntype>java.lang.Object</returntype>
+            <parameter>
+                <name>Index</name>
+                <type>int</type>
+            </parameter>
+        </method>
+        <method>
+            <name>Initialize2</name>
+            <comment>Initializes a new TreeSet which uses the specified comparison function.
+The comparison function must return:
+an integer &amp;lt; 0 if Obj1 is less than Obj2;
+0 if they are equal;
+an integer &amp;gt; 0 if Obj1 is greater than Obj2.</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>ba</name>
+                <type>anywheresoftware.b4a.BA</type>
+            </parameter>
+            <parameter>
+                <name>Comparator</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+        <method>
+            <name>Size</name>
+            <comment>Returns the number of objects in this set.</comment>
+            <returntype>int</returntype>
+        </method>
+        <method>
+            <name>IsInitialized</name>
+            <comment></comment>
+            <returntype>boolean</returntype>
+        </method>
+    </class>
+    <class>
+        <name>flm.b4a.datacollection.TreeMap</name>
+        <shortname>dcTreeMap</shortname>
+        <owner>process</owner>
+        <event>Compare(Obj1 As Object, Obj2 As Object) As Int</event>
+        <method>
+            <name>Values</name>
+            <comment>Returns an object which can be used to iterate over all the values with a For Each block.</comment>
+            <returntype>anywheresoftware.b4a.BA.IterableList</returntype>
+        </method>
+        <method>
+            <name>Initialize</name>
+            <comment>Initializes a new TreeMap which uses natural ordering.</comment>
+            <returntype>void</returntype>
+        </method>
+        <method>
+            <name>KeysIterator</name>
+            <comment>Returns an iterator on the keys of this map.</comment>
+            <returntype>flm.b4a.datacollection.Iterator</returntype>
+        </method>
+        <method>
+            <name>GetDefault</name>
+            <comment>Returns the value of the mapping with the specified key, or the specified default value if no mapping for the specified key is found.</comment>
+            <returntype>java.lang.Object</returntype>
+            <parameter>
+                <name>Key</name>
+                <type>java.lang.Object</type>
+            </parameter>
+            <parameter>
+                <name>Default</name>
+                <type>java.lang.Object</type>
+            </parameter>
+        </method>
+        <method>
+            <name>Put</name>
+            <comment>Maps the specified key to the specified value. Returns the value of any previous mapping with the specified key or Null if there was no mapping.</comment>
+            <returntype>java.lang.Object</returntype>
+            <parameter>
+                <name>Key</name>
+                <type>java.lang.Object</type>
+            </parameter>
+            <parameter>
+                <name>Value</name>
+                <type>java.lang.Object</type>
+            </parameter>
+        </method>
+        <method>
+            <name>GetValueAt</name>
+            <comment>Returns the value of the mapping at the given index, or Null if not found.</comment>
+            <returntype>java.lang.Object</returntype>
+            <parameter>
+                <name>Index</name>
+                <type>int</type>
+            </parameter>
+        </method>
+        <method>
+            <name>ValuesIterator</name>
+            <comment>Returns an iterator on the values of this map.</comment>
+            <returntype>flm.b4a.datacollection.Iterator</returntype>
+        </method>
+        <method>
+            <name>Clear</name>
+            <comment>Removes all elements from this map, leaving it empty.</comment>
+            <returntype>void</returntype>
+        </method>
+        <method>
+            <name>Keys</name>
+            <comment>Returns an object which can be used to iterate over all the keys with a For Each block.</comment>
+            <returntype>anywheresoftware.b4a.BA.IterableList</returntype>
+        </method>
+        <method>
+            <name>IsEmpty</name>
+            <comment>Returns whether this map is empty.</comment>
+            <returntype>boolean</returntype>
+        </method>
+        <method>
+            <name>ContainsValue</name>
+            <comment>Returns whether this map contains the specified value.</comment>
+            <returntype>boolean</returntype>
+            <parameter>
+                <name>Value</name>
+                <type>java.lang.Object</type>
+            </parameter>
+        </method>
+        <method>
+            <name>ContainsKey</name>
+            <comment>Returns whether this map contains the specified key.</comment>
+            <returntype>boolean</returntype>
+            <parameter>
+                <name>Key</name>
+                <type>java.lang.Object</type>
+            </parameter>
+        </method>
+        <method>
+            <name>Remove</name>
+            <comment>Removes a mapping with the specified key from this map. Returns the value of the removed mapping or Null if no mapping for the specified key was found.</comment>
+            <returntype>java.lang.Object</returntype>
+            <parameter>
+                <name>Key</name>
+                <type>java.lang.Object</type>
+            </parameter>
+        </method>
+        <method>
+            <name>Get</name>
+            <comment>Returns the value of the mapping with the specified key, or Null if no mapping for the specified key is found.</comment>
+            <returntype>java.lang.Object</returntype>
+            <parameter>
+                <name>Key</name>
+                <type>java.lang.Object</type>
+            </parameter>
+        </method>
+        <method>
+            <name>Initialize2</name>
+            <comment>Initializes a new TreeMap which uses the specified comparison function.
+The comparison function must return:
+an integer &amp;lt; 0 if Obj1 is less than Obj2;
+0 if they are equal;
+an integer &amp;gt; 0 if Obj1 is greater than Obj2.</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>ba</name>
+                <type>anywheresoftware.b4a.BA</type>
+            </parameter>
+            <parameter>
+                <name>Comparator</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+        <method>
+            <name>GetKeyAt</name>
+            <comment>Returns the key of the mapping at the given index, or Null if not found.</comment>
+            <returntype>java.lang.Object</returntype>
+            <parameter>
+                <name>Index</name>
+                <type>int</type>
+            </parameter>
+        </method>
+        <method>
+            <name>IsInitialized</name>
+            <comment></comment>
+            <returntype>boolean</returntype>
+        </method>
+        <method>
+            <name>Size</name>
+            <comment>Returns the number of mappings in this map.</comment>
+            <returntype>int</returntype>
+        </method>
+    </class>
+    <class>
+        <name>flm.b4a.datacollection.Stack</name>
+        <shortname>dcStack</shortname>
+        <owner>process</owner>
+        <method>
+            <name>Initialize</name>
+            <comment></comment>
+            <returntype>void</returntype>
+        </method>
+        <method>
+            <name>toArray</name>
+            <comment>Returns a new array containing all objects contained in this stack.</comment>
+            <returntype>java.lang.Object[]</returntype>
+        </method>
+        <method>
+            <name>IndexOf</name>
+            <comment>Returns the index of the first occurrence of the object, starting from the top of the stack, or -1 if not found.</comment>
+            <returntype>int</returntype>
+            <parameter>
+                <name>Obj</name>
+                <type>java.lang.Object</type>
+            </parameter>
+        </method>
+        <method>
+            <name>Clear</name>
+            <comment>Removes all objects from this stack, leaving it empty.</comment>
+            <returntype>void</returntype>
+        </method>
+        <method>
+            <name>Push</name>
+            <comment>Pushes the specified object onto the top of the stack.</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>Obj</name>
+                <type>java.lang.Object</type>
+            </parameter>
+        </method>
+        <method>
+            <name>IsEmpty</name>
+            <comment>Returns whether the stack is empty or not.</comment>
+            <returntype>boolean</returntype>
+        </method>
+        <method>
+            <name>Pop</name>
+            <comment>Returns the object at the top of the stack and removes it.</comment>
+            <returntype>java.lang.Object</returntype>
+        </method>
+        <method>
+            <name>RemoveAt</name>
+            <comment>Removes the object at the specified location from this stack.</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>Index</name>
+                <type>int</type>
+            </parameter>
+        </method>
+        <method>
+            <name>Peek</name>
+            <comment>Returns the object at the top of the stack without removing it.</comment>
+            <returntype>java.lang.Object</returntype>
+        </method>
+        <method>
+            <name>Get</name>
+            <comment>Returns the object at the specified location in this stack.</comment>
+            <returntype>java.lang.Object</returntype>
+            <parameter>
+                <name>Index</name>
+                <type>int</type>
+            </parameter>
+        </method>
+        <method>
+            <name>Set</name>
+            <comment>Replaces the object at the specified location in this stack with the specified object.</comment>
+            <returntype>java.lang.Object</returntype>
+            <parameter>
+                <name>Index</name>
+                <type>int</type>
+            </parameter>
+            <parameter>
+                <name>Obj</name>
+                <type>java.lang.Object</type>
+            </parameter>
+        </method>
+        <method>
+            <name>InsertAt</name>
+            <comment>Inserts the specified object into this stack at the specified location.</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>Obj</name>
+                <type>java.lang.Object</type>
+            </parameter>
+            <parameter>
+                <name>Index</name>
+                <type>int</type>
+            </parameter>
+        </method>
+        <method>
+            <name>Size</name>
+            <comment>Returns the number of objects in this stack.</comment>
+            <returntype>int</returntype>
+        </method>
+        <method>
+            <name>IsInitialized</name>
+            <comment></comment>
+            <returntype>boolean</returntype>
+        </method>
+    </class>
+    <class>
+        <name>flm.b4a.datacollection.SparseArray</name>
+        <shortname>dcSparseArray</shortname>
+        <owner>process</owner>
+        <method>
+            <name>Initialize</name>
+            <comment>Creates a new SparseArray containing no mappings.</comment>
+            <returntype>void</returntype>
+        </method>
+        <method>
+            <name>IndexOfValue</name>
+            <comment>Returns an index for which GetValueAt would return the specified value, or a negative number if no key maps to the specified value.</comment>
+            <returntype>int</returntype>
+            <parameter>
+                <name>Value</name>
+                <type>java.lang.Object</type>
+            </parameter>
+        </method>
+        <method>
+            <name>GetDefault</name>
+            <comment>Gets the Object mapped from the specified key, or the specified default value if no such mapping has been made.</comment>
+            <returntype>java.lang.Object</returntype>
+            <parameter>
+                <name>Key</name>
+                <type>int</type>
+            </parameter>
+            <parameter>
+                <name>DefaultValue</name>
+                <type>java.lang.Object</type>
+            </parameter>
+        </method>
+        <method>
+            <name>Put</name>
+            <comment>Adds a mapping from the specified key to the specified value, replacing the previous mapping from the specified key if there was one.</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>Key</name>
+                <type>int</type>
+            </parameter>
+            <parameter>
+                <name>Value</name>
+                <type>java.lang.Object</type>
+            </parameter>
+        </method>
+        <method>
+            <name>GetValueAt</name>
+            <comment>Returns the value from the Indexth key-value mapping that this SparseArray stores. Index must be in the range 0..Size-1.</comment>
+            <returntype>java.lang.Object</returntype>
+            <parameter>
+                <name>Index</name>
+                <type>int</type>
+            </parameter>
+        </method>
+        <method>
+            <name>Append</name>
+            <comment>Same as Put but faster to append mappings where the key is greater than all existing keys in the array.</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>Key</name>
+                <type>int</type>
+            </parameter>
+            <parameter>
+                <name>Value</name>
+                <type>java.lang.Object</type>
+            </parameter>
+        </method>
+        <method>
+            <name>SetValueAt</name>
+            <comment>Sets a new value for the Indexth key-value mapping that this SparseArray stores. Index must be in the range 0..Size-1.</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>Index</name>
+                <type>int</type>
+            </parameter>
+            <parameter>
+                <name>Value</name>
+                <type>java.lang.Object</type>
+            </parameter>
+        </method>
+        <method>
+            <name>Clear</name>
+            <comment>Removes all key-value mappings from this SparseArray.</comment>
+            <returntype>void</returntype>
+        </method>
+        <method>
+            <name>IndexOfKey</name>
+            <comment>Returns an index for which GetKeyAt would return the specified key, or a negative number if the specified key is not mapped.</comment>
+            <returntype>int</returntype>
+            <parameter>
+                <name>Key</name>
+                <type>int</type>
+            </parameter>
+        </method>
+        <method>
+            <name>toString</name>
+            <comment>Returns a string containing a concise, human-readable description of this object.</comment>
+            <returntype>java.lang.String</returntype>
+        </method>
+        <method>
+            <name>Remove</name>
+            <comment>Removes the mapping from the specified key, if there was any.</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>Key</name>
+                <type>int</type>
+            </parameter>
+        </method>
+        <method>
+            <name>Get</name>
+            <comment>Gets the Object mapped from the specified key, or Null if no such mapping has been made.</comment>
+            <returntype>java.lang.Object</returntype>
+            <parameter>
+                <name>Key</name>
+                <type>int</type>
+            </parameter>
+        </method>
+        <method>
+            <name>Initialize2</name>
+            <comment>Creates a new SparseArray containing no mappings that will not require any additional memory allocation to store the specified number of mappings.</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>Capacity</name>
+                <type>int</type>
+            </parameter>
+        </method>
+        <method>
+            <name>Size</name>
+            <comment>Returns the number of key-value mappings that this SparseArray currently stores.</comment>
+            <returntype>int</returntype>
+        </method>
+        <method>
+            <name>IsInitialized</name>
+            <comment></comment>
+            <returntype>boolean</returntype>
+        </method>
+        <method>
+            <name>GetKeyAt</name>
+            <comment>Returns the key from the Indexth key-value mapping that this SparseArray stores. Index must be in the range 0..Size-1.</comment>
+            <returntype>int</returntype>
+            <parameter>
+                <name>Index</name>
+                <type>int</type>
+            </parameter>
+        </method>
+    </class>
+    <class>
+        <name>flm.b4a.datacollection.PriorityQueue</name>
+        <shortname>dcPriorityQueue</shortname>
+        <owner>process</owner>
+        <event>Compare(Obj1 As Object, Obj2 As Object) As Int</event>
+        <method>
+            <name>Initialize</name>
+            <comment>Initializes a priority queue with an initial capacity of 11 and natural ordering.</comment>
+            <returntype>void</returntype>
+        </method>
+        <method>
+            <name>toArray</name>
+            <comment>Returns a new array containing all objects contained in this queue. The objects are in no particular order.</comment>
+            <returntype>java.lang.Object[]</returntype>
+        </method>
+        <method>
+            <name>Iterator</name>
+            <comment>Returns an iterator over the objects in this queue. The iterator does not return the objects in any particular order.</comment>
+            <returntype>flm.b4a.datacollection.Iterator</returntype>
+        </method>
+        <method>
+            <name>Poll</name>
+            <comment>Gets and removes the head of the queue.</comment>
+            <returntype>java.lang.Object</returntype>
+        </method>
+        <method>
+            <name>Add</name>
+            <comment>Adds the specified object to the priority queue.</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>Obj</name>
+                <type>java.lang.Object</type>
+            </parameter>
+        </method>
+        <method>
+            <name>Remove</name>
+            <comment>Removes the specified object from the priority queue.</comment>
+            <returntype>boolean</returntype>
+            <parameter>
+                <name>Obj</name>
+                <type>java.lang.Object</type>
+            </parameter>
+        </method>
+        <method>
+            <name>Peek</name>
+            <comment>Gets but does not remove the head of the queue.</comment>
+            <returntype>java.lang.Object</returntype>
+        </method>
+        <method>
+            <name>Contains</name>
+            <comment>Returns True if this queue contains the specified object.</comment>
+            <returntype>boolean</returntype>
+            <parameter>
+                <name>Obj</name>
+                <type>java.lang.Object</type>
+            </parameter>
+        </method>
+        <method>
+            <name>Clear</name>
+            <comment>Removes all the objects of the priority queue.</comment>
+            <returntype>void</returntype>
+        </method>
+        <method>
+            <name>Initialize2</name>
+            <comment>Initializes a priority queue with the specified capacity and natural ordering.</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>InitialCapacity</name>
+                <type>int</type>
+            </parameter>
+        </method>
+        <method>
+            <name>Initialize3</name>
+            <comment>Initializes a priority queue with the specified capacity.
+This queue orders the objects with the specified comparison function, which must return:
+an integer &amp;lt; 0 if Obj1 is less than Obj2;
+0 if they are equal;
+an integer &amp;gt; 0 if Obj1 is greater than Obj2.</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>ba</name>
+                <type>anywheresoftware.b4a.BA</type>
+            </parameter>
+            <parameter>
+                <name>InitialCapacity</name>
+                <type>int</type>
+            </parameter>
+            <parameter>
+                <name>Comparator</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+        <method>
+            <name>IsEmpty</name>
+            <comment>Returns whether the queue is empty or not.</comment>
+            <returntype>boolean</returntype>
+        </method>
+        <method>
+            <name>Size</name>
+            <comment>Returns the number of objects in this queue.</comment>
+            <returntype>int</returntype>
+        </method>
+        <method>
+            <name>IsInitialized</name>
+            <comment></comment>
+            <returntype>boolean</returntype>
+        </method>
+    </class>
+    <class>
+        <name>flm.b4a.datacollection.Iterator</name>
+        <shortname>dcIterator</shortname>
+        <owner>process</owner>
+        <method>
+            <name>HasNext</name>
+            <comment>Returns True if there is at least one more element, False otherwise.</comment>
+            <returntype>boolean</returntype>
+        </method>
+        <method>
+            <name>Remove</name>
+            <comment>Removes the last object returned by NextObject from the collection. This function can only be called once between each call to NextObject.</comment>
+            <returntype>void</returntype>
+        </method>
+        <method>
+            <name>NextObject</name>
+            <comment>Returns the next object and advances the iterator.</comment>
+            <returntype>java.lang.Object</returntype>
+        </method>
+    </class>
+    <class>
+        <name>flm.b4a.datacollection.CollectionSerializer</name>
+        <shortname>dcCollectionSerializer</shortname>
+        <owner>process</owner>
+        <method>
+            <name>PriorityQueueToCompressedBytes</name>
+            <comment></comment>
+            <returntype>byte[]</returntype>
+            <parameter>
+                <name>PriorityQueue</name>
+                <type>flm.b4a.datacollection.PriorityQueue</type>
+            </parameter>
+        </method>
+        <method>
+            <name>StackToBytes</name>
+            <comment></comment>
+            <returntype>byte[]</returntype>
+            <parameter>
+                <name>Stack</name>
+                <type>flm.b4a.datacollection.Stack</type>
+            </parameter>
+        </method>
+        <method>
+            <name>TreeSetToCompressedBytes</name>
+            <comment></comment>
+            <returntype>byte[]</returntype>
+            <parameter>
+                <name>TreeSet</name>
+                <type>flm.b4a.datacollection.TreeSet</type>
+            </parameter>
+        </method>
+        <method>
+            <name>ObjectToBytes</name>
+            <comment></comment>
+            <returntype>byte[]</returntype>
+            <parameter>
+                <name>Object</name>
+                <type>java.lang.Object</type>
+            </parameter>
+        </method>
+        <method>
+            <name>ArrayDequeToBytes</name>
+            <comment></comment>
+            <returntype>byte[]</returntype>
+            <parameter>
+                <name>ArrayDeque</name>
+                <type>flm.b4a.datacollection.ArrayDeque</type>
+            </parameter>
+        </method>
+        <method>
+            <name>CompressedBytesToTreeMap</name>
+            <comment></comment>
+            <returntype>flm.b4a.datacollection.TreeMap</returntype>
+            <parameter>
+                <name>arrBytes</name>
+                <type>byte[]</type>
+            </parameter>
+        </method>
+        <method>
+            <name>ObjectToCompressedBytes</name>
+            <comment></comment>
+            <returntype>byte[]</returntype>
+            <parameter>
+                <name>Object</name>
+                <type>java.lang.Object</type>
+            </parameter>
+        </method>
+        <method>
+            <name>MapToCompressedBytes</name>
+            <comment></comment>
+            <returntype>byte[]</returntype>
+            <parameter>
+                <name>Map</name>
+                <type>anywheresoftware.b4a.objects.collections.Map</type>
+            </parameter>
+        </method>
+        <method>
+            <name>PriorityQueueToBytes</name>
+            <comment></comment>
+            <returntype>byte[]</returntype>
+            <parameter>
+                <name>PriorityQueue</name>
+                <type>flm.b4a.datacollection.PriorityQueue</type>
+            </parameter>
+        </method>
+        <method>
+            <name>CompressedBytesToTreeSet</name>
+            <comment></comment>
+            <returntype>flm.b4a.datacollection.TreeSet</returntype>
+            <parameter>
+                <name>arrBytes</name>
+                <type>byte[]</type>
+            </parameter>
+        </method>
+        <method>
+            <name>BytesToTreeSet</name>
+            <comment></comment>
+            <returntype>flm.b4a.datacollection.TreeSet</returntype>
+            <parameter>
+                <name>arrBytes</name>
+                <type>byte[]</type>
+            </parameter>
+        </method>
+        <method>
+            <name>SparseArrayToCompressedBytes</name>
+            <comment></comment>
+            <returntype>byte[]</returntype>
+            <parameter>
+                <name>SpArr</name>
+                <type>flm.b4a.datacollection.SparseArray</type>
+            </parameter>
+        </method>
+        <method>
+            <name>ListToCompressedBytes</name>
+            <comment></comment>
+            <returntype>byte[]</returntype>
+            <parameter>
+                <name>List</name>
+                <type>anywheresoftware.b4a.objects.collections.List</type>
+            </parameter>
+        </method>
+        <method>
+            <name>BytesToBitSet</name>
+            <comment></comment>
+            <returntype>flm.b4a.datacollection.BitSet</returntype>
+            <parameter>
+                <name>arrBytes</name>
+                <type>byte[]</type>
+            </parameter>
+        </method>
+        <method>
+            <name>BytesToMap</name>
+            <comment></comment>
+            <returntype>anywheresoftware.b4a.objects.collections.Map</returntype>
+            <parameter>
+                <name>arrBytes</name>
+                <type>byte[]</type>
+            </parameter>
+        </method>
+        <method>
+            <name>CompressedBytesToList</name>
+            <comment></comment>
+            <returntype>anywheresoftware.b4a.objects.collections.List</returntype>
+            <parameter>
+                <name>arrBytes</name>
+                <type>byte[]</type>
+            </parameter>
+        </method>
+        <method>
+            <name>BytesToTreeMap</name>
+            <comment></comment>
+            <returntype>flm.b4a.datacollection.TreeMap</returntype>
+            <parameter>
+                <name>arrBytes</name>
+                <type>byte[]</type>
+            </parameter>
+        </method>
+        <method>
+            <name>BytesToArrayDeque</name>
+            <comment></comment>
+            <returntype>flm.b4a.datacollection.ArrayDeque</returntype>
+            <parameter>
+                <name>arrBytes</name>
+                <type>byte[]</type>
+            </parameter>
+        </method>
+        <method>
+            <name>ArrayDequeToCompressedBytes</name>
+            <comment></comment>
+            <returntype>byte[]</returntype>
+            <parameter>
+                <name>ArrayDeque</name>
+                <type>flm.b4a.datacollection.ArrayDeque</type>
+            </parameter>
+        </method>
+        <method>
+            <name>TreeMapToBytes</name>
+            <comment></comment>
+            <returntype>byte[]</returntype>
+            <parameter>
+                <name>TreeMap</name>
+                <type>flm.b4a.datacollection.TreeMap</type>
+            </parameter>
+        </method>
+        <method>
+            <name>CompressedBytesToBitSet</name>
+            <comment></comment>
+            <returntype>flm.b4a.datacollection.BitSet</returntype>
+            <parameter>
+                <name>arrBytes</name>
+                <type>byte[]</type>
+            </parameter>
+        </method>
+        <method>
+            <name>BitSetToBytes</name>
+            <comment></comment>
+            <returntype>byte[]</returntype>
+            <parameter>
+                <name>BitSet</name>
+                <type>flm.b4a.datacollection.BitSet</type>
+            </parameter>
+        </method>
+        <method>
+            <name>SparseArrayToBytes</name>
+            <comment></comment>
+            <returntype>byte[]</returntype>
+            <parameter>
+                <name>SpArr</name>
+                <type>flm.b4a.datacollection.SparseArray</type>
+            </parameter>
+        </method>
+        <method>
+            <name>BytesToSparseArray</name>
+            <comment></comment>
+            <returntype>flm.b4a.datacollection.SparseArray</returntype>
+            <parameter>
+                <name>arrBytes</name>
+                <type>byte[]</type>
+            </parameter>
+        </method>
+        <method>
+            <name>BitSetToCompressedBytes</name>
+            <comment></comment>
+            <returntype>byte[]</returntype>
+            <parameter>
+                <name>BitSet</name>
+                <type>flm.b4a.datacollection.BitSet</type>
+            </parameter>
+        </method>
+        <method>
+            <name>CompressedBytesToMap</name>
+            <comment></comment>
+            <returntype>anywheresoftware.b4a.objects.collections.Map</returntype>
+            <parameter>
+                <name>arrBytes</name>
+                <type>byte[]</type>
+            </parameter>
+        </method>
+        <method>
+            <name>FillWithMap</name>
+            <comment>Fills Obj with the Map data returned by a deserialization function (BytesTo... or CompressedBytesTo...).
+The two structures may not fully match. If a field is not found in the map, its value stays unchanged.
+It is recommended to initialize Obj before calling this function.</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>Obj</name>
+                <type>java.lang.Object</type>
+            </parameter>
+            <parameter>
+                <name>Map</name>
+                <type>anywheresoftware.b4a.objects.collections.Map</type>
+            </parameter>
+        </method>
+        <method>
+            <name>BytesToStack</name>
+            <comment></comment>
+            <returntype>flm.b4a.datacollection.Stack</returntype>
+            <parameter>
+                <name>arrBytes</name>
+                <type>byte[]</type>
+            </parameter>
+        </method>
+        <method>
+            <name>BytesToObject</name>
+            <comment></comment>
+            <returntype>java.lang.Object</returntype>
+            <parameter>
+                <name>arrBytes</name>
+                <type>byte[]</type>
+            </parameter>
+        </method>
+        <method>
+            <name>CompressedBytesToSparseArray</name>
+            <comment></comment>
+            <returntype>flm.b4a.datacollection.SparseArray</returntype>
+            <parameter>
+                <name>arrBytes</name>
+                <type>byte[]</type>
+            </parameter>
+        </method>
+        <method>
+            <name>CompressedBytesToObject</name>
+            <comment></comment>
+            <returntype>java.lang.Object</returntype>
+            <parameter>
+                <name>arrBytes</name>
+                <type>byte[]</type>
+            </parameter>
+        </method>
+        <method>
+            <name>CompressedBytesToPriorityQueue</name>
+            <comment></comment>
+            <returntype>flm.b4a.datacollection.PriorityQueue</returntype>
+            <parameter>
+                <name>arrBytes</name>
+                <type>byte[]</type>
+            </parameter>
+        </method>
+        <method>
+            <name>StackToCompressedBytes</name>
+            <comment></comment>
+            <returntype>byte[]</returntype>
+            <parameter>
+                <name>Stack</name>
+                <type>flm.b4a.datacollection.Stack</type>
+            </parameter>
+        </method>
+        <method>
+            <name>ListToBytes</name>
+            <comment></comment>
+            <returntype>byte[]</returntype>
+            <parameter>
+                <name>List</name>
+                <type>anywheresoftware.b4a.objects.collections.List</type>
+            </parameter>
+        </method>
+        <method>
+            <name>CompressedBytesToArrayDeque</name>
+            <comment></comment>
+            <returntype>flm.b4a.datacollection.ArrayDeque</returntype>
+            <parameter>
+                <name>arrBytes</name>
+                <type>byte[]</type>
+            </parameter>
+        </method>
+        <method>
+            <name>CompressedBytesToStack</name>
+            <comment></comment>
+            <returntype>flm.b4a.datacollection.Stack</returntype>
+            <parameter>
+                <name>arrBytes</name>
+                <type>byte[]</type>
+            </parameter>
+        </method>
+        <method>
+            <name>TreeMapToCompressedBytes</name>
+            <comment></comment>
+            <returntype>byte[]</returntype>
+            <parameter>
+                <name>TreeMap</name>
+                <type>flm.b4a.datacollection.TreeMap</type>
+            </parameter>
+        </method>
+        <method>
+            <name>BytesToPriorityQueue</name>
+            <comment></comment>
+            <returntype>flm.b4a.datacollection.PriorityQueue</returntype>
+            <parameter>
+                <name>arrBytes</name>
+                <type>byte[]</type>
+            </parameter>
+        </method>
+        <method>
+            <name>MapToBytes</name>
+            <comment></comment>
+            <returntype>byte[]</returntype>
+            <parameter>
+                <name>Map</name>
+                <type>anywheresoftware.b4a.objects.collections.Map</type>
+            </parameter>
+        </method>
+        <method>
+            <name>BytesToList</name>
+            <comment></comment>
+            <returntype>anywheresoftware.b4a.objects.collections.List</returntype>
+            <parameter>
+                <name>arrBytes</name>
+                <type>byte[]</type>
+            </parameter>
+        </method>
+        <method>
+            <name>TreeSetToBytes</name>
+            <comment></comment>
+            <returntype>byte[]</returntype>
+            <parameter>
+                <name>TreeSet</name>
+                <type>flm.b4a.datacollection.TreeSet</type>
+            </parameter>
+        </method>
+    </class>
+    <class>
+        <name>flm.b4a.datacollection.BitSet</name>
+        <shortname>dcBitSet</shortname>
+        <owner>process</owner>
+        <method>
+            <name>Initialize</name>
+            <comment>Initializes a new BitSet with size equal to 64 bits.</comment>
+            <returntype>void</returntype>
+        </method>
+        <method>
+            <name>Clear</name>
+            <comment>Clears all the bits in this BitSet. This function does not change the capacity.</comment>
+            <returntype>void</returntype>
+        </method>
+        <method>
+            <name>IsEmpty</name>
+            <comment>Returns True if all the bits in this BitSet are set to False, otherwise False.</comment>
+            <returntype>boolean</returntype>
+        </method>
+        <method>
+            <name>AndNot</name>
+            <comment>Clears all bits in this BitSet which are also set in BS.</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>BS</name>
+                <type>flm.b4a.datacollection.BitSet</type>
+            </parameter>
+        </method>
+        <method>
+            <name>Or</name>
+            <comment>Performs a logical OR of this BitSet with BS.</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>BS</name>
+                <type>flm.b4a.datacollection.BitSet</type>
+            </parameter>
+        </method>
+        <method>
+            <name>toString</name>
+            <comment></comment>
+            <returntype>java.lang.String</returntype>
+        </method>
+        <method>
+            <name>Get</name>
+            <comment>Returns the bit at the given index. Indexes greater than the current length return False.</comment>
+            <returntype>boolean</returntype>
+            <parameter>
+                <name>Index</name>
+                <type>int</type>
+            </parameter>
+        </method>
+        <method>
+            <name>Set</name>
+            <comment>Sets the bit at the given index to State.</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>Index</name>
+                <type>int</type>
+            </parameter>
+            <parameter>
+                <name>State</name>
+                <type>boolean</type>
+            </parameter>
+        </method>
+        <method>
+            <name>Xor</name>
+            <comment>Performs a logical XOR of this BitSet with BS.</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>BS</name>
+                <type>flm.b4a.datacollection.BitSet</type>
+            </parameter>
+        </method>
+        <method>
+            <name>Initialize2</name>
+            <comment>Initializes a new BitSet with size equal to BitCount, rounded up to a multiple of 64.</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>BitCount</name>
+                <type>int</type>
+            </parameter>
+        </method>
+        <method>
+            <name>SetRange</name>
+            <comment>Sets the range of bits FromIndex...ToIndex to State.</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>FromIndex</name>
+                <type>int</type>
+            </parameter>
+            <parameter>
+                <name>ToIndex</name>
+                <type>int</type>
+            </parameter>
+            <parameter>
+                <name>State</name>
+                <type>boolean</type>
+            </parameter>
+        </method>
+        <method>
+            <name>Flip</name>
+            <comment>Flips the bit at the given index.</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>Index</name>
+                <type>int</type>
+            </parameter>
+        </method>
+        <method>
+            <name>And</name>
+            <comment>Performs a logical AND of this BitSet with BS.</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>BS</name>
+                <type>flm.b4a.datacollection.BitSet</type>
+            </parameter>
+        </method>
+        <method>
+            <name>IsInitialized</name>
+            <comment></comment>
+            <returntype>boolean</returntype>
+        </method>
+        <property>
+            <name>Cardinality</name>
+            <returntype>int</returntype>
+            <comment>Returns the number of bits that are True in this BitSet.</comment>
+        </property>
+        <property>
+            <name>Length</name>
+            <returntype>int</returntype>
+            <comment>Returns the number of bits up to and including the highest bit set. This is unrelated to the capacity of the BitSet.</comment>
+        </property>
+    </class>
+    <class>
+        <name>flm.b4a.datacollection.ArrayDeque</name>
+        <shortname>dcArrayDeque</shortname>
+        <owner>process</owner>
+        <method>
+            <name>Initialize</name>
+            <comment>Constructs an empty array deque with an initial capacity sufficient to hold 16 objects.</comment>
+            <returntype>void</returntype>
+        </method>
+        <method>
+            <name>PeekFirst</name>
+            <comment>Retrieves, but does not remove, the first object of this deque, or returns Null if this deque is empty.</comment>
+            <returntype>java.lang.Object</returntype>
+        </method>
+        <method>
+            <name>toArray</name>
+            <comment>Returns an array containing all of the objects in this deque in proper sequence (from first to last element).</comment>
+            <returntype>java.lang.Object[]</returntype>
+        </method>
+        <method>
+            <name>Iterator</name>
+            <comment>Returns an iterator over the objects in this deque. The objects will be ordered from first (head) to last (tail).</comment>
+            <returntype>flm.b4a.datacollection.Iterator</returntype>
+        </method>
+        <method>
+            <name>PeekLast</name>
+            <comment>Retrieves, but does not remove, the last object of this deque, or returns Null if this deque is empty.</comment>
+            <returntype>java.lang.Object</returntype>
+        </method>
+        <method>
+            <name>AddFirst</name>
+            <comment>Inserts the specified object at the front of this deque.</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>Obj</name>
+                <type>java.lang.Object</type>
+            </parameter>
+        </method>
+        <method>
+            <name>PollLast</name>
+            <comment>Retrieves and removes the last object of this deque, or returns Null if this deque is empty.</comment>
+            <returntype>java.lang.Object</returntype>
+        </method>
+        <method>
+            <name>Clear</name>
+            <comment>Removes all objects from this deque, leaving it empty.</comment>
+            <returntype>void</returntype>
+        </method>
+        <method>
+            <name>Contains</name>
+            <comment>Returns True if this deque contains the specified object.</comment>
+            <returntype>boolean</returntype>
+            <parameter>
+                <name>Obj</name>
+                <type>java.lang.Object</type>
+            </parameter>
+        </method>
+        <method>
+            <name>IsEmpty</name>
+            <comment>Returns true if this deque contains no objects.</comment>
+            <returntype>boolean</returntype>
+        </method>
+        <method>
+            <name>DescendingIterator</name>
+            <comment>Returns an iterator over the objects in this deque in reverse sequential order. The elements will be returned in order from last (tail) to first (head).</comment>
+            <returntype>flm.b4a.datacollection.Iterator</returntype>
+        </method>
+        <method>
+            <name>AddLast</name>
+            <comment>Inserts the specified object at the end of this deque.</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>Obj</name>
+                <type>java.lang.Object</type>
+            </parameter>
+        </method>
+        <method>
+            <name>PollFirst</name>
+            <comment>Retrieves and removes the first object of this deque, or returns Null if this deque is empty.</comment>
+            <returntype>java.lang.Object</returntype>
+        </method>
+        <method>
+            <name>Remove</name>
+            <comment>Removes the first occurrence of the specified object in this deque (when traversing the deque from head to tail). If the deque does not contain the object, it is unchanged.
+Returns True if this deque contained the specified object.</comment>
+            <returntype>boolean</returntype>
+            <parameter>
+                <name>Obj</name>
+                <type>java.lang.Object</type>
+            </parameter>
+        </method>
+        <method>
+            <name>Get</name>
+            <comment>Returns the object at the given index in this deque, or Null if not found.</comment>
+            <returntype>java.lang.Object</returntype>
+            <parameter>
+                <name>Index</name>
+                <type>int</type>
+            </parameter>
+        </method>
+        <method>
+            <name>Initialize2</name>
+            <comment>Constructs an empty array deque with an initial capacity sufficient to hold the specified number of objects.</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>InitialCapacity</name>
+                <type>int</type>
+            </parameter>
+        </method>
+        <method>
+            <name>Size</name>
+            <comment>Returns the number of objects in this deque.</comment>
+            <returntype>int</returntype>
+        </method>
+        <method>
+            <name>IsInitialized</name>
+            <comment></comment>
+            <returntype>boolean</returntype>
+        </method>
+    </class>
+    <version>1.06</version>
+    <author>Fr\u00e9d\u00e9ric Leneuf-Magaud</author>
+</root>

@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root>
+    <doclet-version-NOT-library-version>1.02</doclet-version-NOT-library-version>
+    <class>
+        <name>flm.b4a.callsubextended.CallSubExtended</name>
+        <shortname>CallSubExtended</shortname>
+        <owner>process</owner>
+        <method>
+            <name>IsRunning</name>
+            <comment></comment>
+            <returntype>boolean</returntype>
+            <parameter>
+                <name>ID</name>
+                <type>int</type>
+            </parameter>
+        </method>
+        <method>
+            <name>Sleep</name>
+            <comment>Causes the thread to sleep for the given interval of time (in milliseconds). The precision is not guaranteed; the thread may sleep more or less than requested.
+This is intended to be called only from within an asynchronous thread started by AsyncCallSub or AsyncCallSubX.</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>Millis</name>
+                <type>long</type>
+            </parameter>
+        </method>
+        <method>
+            <name>AsyncCallSub</name>
+            <comment>Runs the specified Sub in a separate thread and returns an identifier that can be used with IsRunning to detect whether the asynchronous sub is still running, or with the WaitForEndOf functions.
+Beware: do not try to update a view directly from the asynchronous thread. Call RunOnMainThread to do it safely.
+To cancel an asynchronous thread, it is recommended to set a boolean variable (a flag) declared in Globals to indicate that the thread should stop running. The target thread should check this variable regularly and return properly when the flag is set.
+Priority: Sets the priority of this thread. From 1 to 10 (5 is the normal priority value assigned to the main thread).</comment>
+            <returntype>int</returntype>
+            <parameter>
+                <name>ba</name>
+                <type>anywheresoftware.b4a.BA</type>
+            </parameter>
+            <parameter>
+                <name>Component</name>
+                <type>java.lang.Object</type>
+            </parameter>
+            <parameter>
+                <name>Sub</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>Priority</name>
+                <type>int</type>
+            </parameter>
+        </method>
+        <method>
+            <name>AsyncCallSubX</name>
+            <comment>Runs the specified Sub in a separate thread and returns an identifier that can be used with IsRunning to detect whether the asynchronous sub is still running, or with the WaitForEndOf functions.
+Beware: do not try to update a view directly from the asynchronous thread. Call RunOnMainThread to do it safely.
+To cancel an asynchronous thread, it is recommended to set a boolean variable (a flag) declared in Globals to indicate that the thread should stop running. The target thread should check this variable regularly and return properly when the flag is set.
+Priority: Sets the priority of this thread. From 1 to 10 (5 is the normal priority value assigned to the main thread).</comment>
+            <returntype>int</returntype>
+            <parameter>
+                <name>ba</name>
+                <type>anywheresoftware.b4a.BA</type>
+            </parameter>
+            <parameter>
+                <name>Component</name>
+                <type>java.lang.Object</type>
+            </parameter>
+            <parameter>
+                <name>Sub</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>Arguments</name>
+                <type>java.lang.Object[]</type>
+            </parameter>
+            <parameter>
+                <name>Priority</name>
+                <type>int</type>
+            </parameter>
+        </method>
+        <method>
+            <name>CallSubX</name>
+            <comment></comment>
+            <returntype>java.lang.Object</returntype>
+            <parameter>
+                <name>ba</name>
+                <type>anywheresoftware.b4a.BA</type>
+            </parameter>
+            <parameter>
+                <name>Component</name>
+                <type>java.lang.Object</type>
+            </parameter>
+            <parameter>
+                <name>Sub</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>Arguments</name>
+                <type>java.lang.Object[]</type>
+            </parameter>
+        </method>
+        <method>
+            <name>WaitForEndOf2</name>
+            <comment>Blocks the current thread until the asynchronous sub with the specified ID finishes its execution or the specified timeout (in milliseconds) expires, whatever happens first.
+Does nothing if the sub has returned or the ID was not found.</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>ID</name>
+                <type>int</type>
+            </parameter>
+            <parameter>
+                <name>Millis</name>
+                <type>long</type>
+            </parameter>
+        </method>
+        <method>
+            <name>RunOnMainThread</name>
+            <comment>Runs the specified Sub on the main thread.
+This is intended to be called only from within an asynchronous thread started by AsyncCallSub or AsyncCallSubX.</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>ba</name>
+                <type>anywheresoftware.b4a.BA</type>
+            </parameter>
+            <parameter>
+                <name>Sub</name>
+                <type>java.lang.String</type>
+            </parameter>
+            <parameter>
+                <name>Arguments</name>
+                <type>java.lang.Object[]</type>
+            </parameter>
+        </method>
+        <method>
+            <name>WaitForEndOf</name>
+            <comment>Blocks the current thread until the asynchronous sub with the specified ID finishes its execution.
+Does nothing if the sub has returned or the ID was not found.</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>ID</name>
+                <type>int</type>
+            </parameter>
+        </method>
+    </class>
+    <version>2.0</version>
+    <author>Fr\u00e9d\u00e9ric Leneuf-Magaud/Informatix</author>
+</root>

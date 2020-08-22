@@ -160,6 +160,7 @@ Private Sub exeucute_request(Arg2 As Object,Headers2 As Object)
 	
 	Else If Method = "DELETE" Then
 		job.PostString(Configuration.URL_ & Segment,query)
+		job.GetRequest.SetContentType("x-www-form-urlencoded")
 		job.GetRequest.InitializeDelete(Url)
 	
 	Else If Method = "GET" Then

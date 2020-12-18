@@ -1,0 +1,239 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root>
+    <doclet-version-NOT-library-version>1.05</doclet-version-NOT-library-version>
+    <class>
+        <name>com.hitex.bazaar.BazaarResponse</name>
+        <shortname>BazaarResponse</shortname>
+        <objectwrapper>com.farsitel.bazaar.BazaarResponse</objectwrapper>
+        <owner>process</owner>
+        <method>
+            <name>IsInitialized</name>
+            <comment></comment>
+            <returntype>boolean</returntype>
+        </method>
+        <property>
+            <name>Data</name>
+            <returntype>java.lang.Object</returntype>
+            <comment></comment>
+        </property>
+        <property>
+            <name>IsSuccessful</name>
+            <returntype>boolean</returntype>
+            <comment></comment>
+        </property>
+        <property>
+            <name>ErrorResponse</name>
+            <returntype>com.farsitel.bazaar.ErrorResponse</returntype>
+            <comment></comment>
+        </property>
+    </class>
+    <class>
+        <name>com.hitex.bazaar.BazaarResponseArray</name>
+        <shortname>BazaarResponseArray</shortname>
+        <objectwrapper>com.farsitel.bazaar.BazaarResponse</objectwrapper>
+        <owner>process</owner>
+        <method>
+            <name>IsInitialized</name>
+            <comment></comment>
+            <returntype>boolean</returntype>
+        </method>
+        <property>
+            <name>Data</name>
+            <returntype>byte[]</returntype>
+            <comment></comment>
+        </property>
+        <property>
+            <name>IsSuccessful</name>
+            <returntype>boolean</returntype>
+            <comment></comment>
+        </property>
+        <property>
+            <name>ErrorResponse</name>
+            <returntype>com.farsitel.bazaar.ErrorResponse</returntype>
+            <comment></comment>
+        </property>
+    </class>
+    <class>
+        <name>com.hitex.bazaar.Hitex_BazaarAuth</name>
+        <shortname>Hitex_BazaarAuth</shortname>
+        <objectwrapper>com.farsitel.bazaar.auth.BazaarSignInClient</objectwrapper>
+        <owner CheckForReinitialize="true">process</owner>
+        <event>onLoginResult (RequestCode As Int, AccountId As String)</event>
+        <event>onAccountReceived (Response As BazaarResponse)</event>
+        <event>onDataReceived (Response As BazaarResponseArray)</event>
+        <method>
+            <name>IsInitialized</name>
+            <comment></comment>
+            <returntype>boolean</returntype>
+        </method>
+        <method>
+            <name>GetLastSignedInAccount</name>
+            <comment>_onAccountReceived (Response As BazaarResponse)</comment>
+            <returntype>void</returntype>
+        </method>
+        <method>
+            <name>Initialize</name>
+            <comment>Created By Sadeq Nameni (@Hitexroid_channel)
+
+ Don't forget to call bellow java code
+ &lt;code&gt;
+ #IF JAVA
+ public androidx.lifecycle.LifecycleOwner getOwner() {
+ return this;
+ }
+ public android.content.Context getContext() {
+ return this;
+ }
+ #End If
+ &lt;/code&gt;
+
+
+ Manifest :
+
+ &lt;code&gt;
+ AddApplicationText(
+ &lt;activity
+ android:name="com.farsitel.bazaar.auth.view.BazaarInstallerActivity"
+ android:theme="@style/Theme.Transparent" /&gt;
+
+ &lt;receiver android:name="com.farsitel.bazaar.auth.receiver.AuthReceiver" &gt;
+ &lt;intent-filter&gt;
+ &lt;action android:name="com.farsitel.bazaar.lastAccountRes" /&gt;
+ &lt;/intent-filter&gt;
+ &lt;/receiver&gt;
+ &lt;receiver android:name="com.farsitel.bazaar.storage.receiver.StorageReceiver" &gt;
+ &lt;intent-filter&gt;
+ &lt;action android:name="com.farsitel.bazaar.getInAppData" /&gt;
+ &lt;action android:name="com.farsitel.bazaar.getInAppDataRes" /&gt;
+ &lt;action android:name="com.farsitel.bazaar.setInAppData" /&gt;
+ &lt;action android:name="com.farsitel.bazaar.setInAppDataRes" /&gt;
+ &lt;/intent-filter&gt;
+ &lt;/receiver&gt;
+ )
+ &lt;/code&gt;</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>ba</name>
+                <type>anywheresoftware.b4a.BA</type>
+            </parameter>
+            <parameter>
+                <name>EventName</name>
+                <type>java.lang.String</type>
+            </parameter>
+        </method>
+        <method>
+            <name>IsNeededToUpdateBazaar</name>
+            <comment>Bazaar.FOR_STORAGE
+ Bazaar.FOR_AUTH</comment>
+            <returntype>boolean</returntype>
+            <parameter>
+                <name>For</name>
+                <type>int</type>
+            </parameter>
+        </method>
+        <method>
+            <name>SaveDataToStorage</name>
+            <comment>Don't forget to call bellow java code
+ &lt;code&gt;
+ #IF JAVA
+ public androidx.lifecycle.LifecycleOwner getOwner() {
+ return this;
+ }
+ public android.content.Context getContext() {
+ return this;
+ }
+ #End If
+ &lt;/code&gt;</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>data</name>
+                <type>byte[]</type>
+            </parameter>
+        </method>
+        <method>
+            <name>GetDataFromStorage</name>
+            <comment>Don't forget to call bellow java code
+ &lt;code&gt;
+ #IF JAVA
+ public androidx.lifecycle.LifecycleOwner getOwner() {
+ return this;
+ }
+ public android.content.Context getContext() {
+ return this;
+ }
+ #End If
+ &lt;/code&gt;</comment>
+            <returntype>void</returntype>
+        </method>
+        <method>
+            <name>ShowUpdateBazaarView</name>
+            <comment>Don't forget to call bellow java code
+ &lt;code&gt;
+ #IF JAVA
+ public androidx.lifecycle.LifecycleOwner getOwner() {
+ return this;
+ }
+ public android.content.Context getContext() {
+ return this;
+ }
+ #End If
+ &lt;/code&gt;</comment>
+            <returntype>void</returntype>
+        </method>
+        <method>
+            <name>GetLastSignedInAccountSync</name>
+            <comment>Note : Can't call this method on UI thread.</comment>
+            <returntype>com.hitex.bazaar.BazaarResponse</returntype>
+            <parameter>
+                <name>lifecycleOwner</name>
+                <type>androidx.lifecycle.LifecycleOwner</type>
+            </parameter>
+        </method>
+        <method>
+            <name>ShowLogin</name>
+            <comment>_onLoginResult (RequestCode As Int, AccountId As String)</comment>
+            <returntype>void</returntype>
+            <parameter>
+                <name>RequestCde</name>
+                <type>int</type>
+            </parameter>
+        </method>
+        <method>
+            <name>ShowInstallBazaarView</name>
+            <comment>Don't forget to call bellow java code
+ &lt;code&gt;
+ #IF JAVA
+ public androidx.lifecycle.LifecycleOwner getOwner() {
+ return this;
+ }
+ public android.content.Context getContext() {
+ return this;
+ }
+ #End If
+ &lt;/code&gt;</comment>
+            <returntype>void</returntype>
+        </method>
+        <property>
+            <name>IsBazaarInstalledOnDevice</name>
+            <returntype>boolean</returntype>
+            <comment></comment>
+        </property>
+        <field>
+            <name>FOR_AUTH</name>
+            <comment></comment>
+            <returntype>int</returntype>
+        </field>
+        <field>
+            <name>FOR_STORAGE</name>
+            <comment></comment>
+            <returntype>int</returntype>
+        </field>
+    </class>
+    <version>1.0</version>
+    <author>Sadeq Nameni</author>
+    <dependsOn>JavaObject</dependsOn>
+    <dependsOn>kotlin-stdlib-1.2.0</dependsOn>
+    <dependsOn>androidx.constraintlayout:constraintlayout</dependsOn>
+    <dependsOn>androidx.appcompat:appcompat</dependsOn>
+    <dependsOn>auth-1.0.0-alpha05.aar</dependsOn>
+</root>

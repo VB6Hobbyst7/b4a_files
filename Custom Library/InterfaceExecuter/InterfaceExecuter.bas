@@ -22,6 +22,7 @@ Version=7.3
 Sub Process_Globals
 	Public StoreData	As Map
 	Public Queue2		As Map
+	Private ElapseTime As Long
 End Sub
 
 Sub Service_Create
@@ -143,11 +144,11 @@ Private Sub exeucute_request(Arg2 As Object,Headers2 As Object)
 		For Each v1 As String In Fields.Keys
 			query = query & v1 & "=" & Fields.Get(v1) & "&"
 		Next
-		query = query.SubString2(0,query.Length-1) & "&vc=" & Application.VersionCode & "&vn=" & Application.VersionName & "&pn=" & Application.PackageName & "&os=android"
-	Else
-		query	=	"vc=" & Application.VersionCode & "&vn=" & Application.VersionName & "&pn=" & Application.PackageName & "&os=android"
+		query = query.SubString2(0,query.Length-1)
 	End If
 	#end region
+	
+	ElapseTime = DateTime.Now
 	
 	#region Detect Method(POST,DELETE or ...)
 	If Method = "POST" Then
@@ -179,6 +180,11 @@ Private Sub exeucute_request(Arg2 As Object,Headers2 As Object)
 	#region Add Headers
 	job.GetRequest.SetHeader("Cache-Control","no-store, no-cache, must-revalidate, max-age=0")
 	job.GetRequest.SetHeader("user-agent","Custom user agent")
+	job.GetRequest.SetHeader("vc",Application.VersionCode)
+	job.GetRequest.SetHeader("vn",Application.VersionName)
+	job.GetRequest.SetHeader("pn",Application.PackageName)
+	job.GetRequest.SetHeader("os","android")
+	
 	If job.GetRequest.Timeout <> 40000 Then job.GetRequest.Timeout = 20000
 	
 	For Each Key As String In Headers.Keys
@@ -189,6 +195,8 @@ Private Sub exeucute_request(Arg2 As Object,Headers2 As Object)
 End Sub
 
 Private Sub JobDone(HttpJob2 As HttpJob)
+	
+	Log(DateTime.Now - ElapseTime)
 	
 	Dim tag As Map
 	tag = HttpJob2.Tag

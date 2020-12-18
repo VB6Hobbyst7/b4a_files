@@ -240,6 +240,18 @@ Sub ChangeNullValue(Map As Map) As Map
 	
 End Sub
 
+Sub ChangeNullValueByDefault(Map As Map,Default As String) As Map 
+	
+	For i = 0 To Map.Size - 1
+		If Map.GetValueAt(i) = Null Or Map.GetValueAt(i) = "null" Then
+			Map.Put(Map.GetKeyAt(i),Default)
+		End If
+	Next
+	
+	Return Map
+	
+End Sub
+
 '<code><uses-permission android:name="com.android.launcher.permission.INSTALL_SHORTCUT"/>
 'AddActivityText("main",<action android:name="android.intent.action.CREATE_SHORTCUT" />)</code>
 Sub AddShortcut(ActivityName As String,Title As String,Icon As Bitmap)

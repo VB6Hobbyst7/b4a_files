@@ -6,6 +6,7 @@
         <shortname>RangeBar</shortname>
         <objectwrapper>com.appyvet.rangebar.RangeBar</objectwrapper>
         <owner>process</owner>
+        <event>onRangeBarChange(rangeBar As Object, leftPinIndex As Int, rightPinIndex As Int,  leftPinValue As String, rightPinValue As String)</event>
         <method>
             <name>DesignerCreateView</name>
             <comment></comment>
@@ -515,5 +516,5 @@
             <returntype>anywheresoftware.b4a.BA</returntype>
         </field>
     </class>
-    <version>1.0</version>
+    <version>1.01</version>
 </root>

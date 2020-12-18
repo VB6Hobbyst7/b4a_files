@@ -32,10 +32,24 @@ Sub SetBorder(Panel As Panel,Radius As Int,BorderWidth As Int,BorderColor As Int
 	
 End Sub
 
+Sub ChangeFont(Panel As Panel,FontName As String)
+	
+End Sub
+
 '0:Done | 1:Enter | 2:Go | 3:Search | 4:Send | 5:Next
 Sub SetKeyboardIMEOption(EditText As Object,  Action As Int)
 	Dim jo = EditText As JavaObject
 	jo.RunMethod("setImeOptions",Array(Action))
+End Sub
+
+Sub SetElevation(v As View, e As Float)
+	Dim jo As JavaObject
+	Dim p As Phone
+   
+	If p.SdkVersion >= 21 Then
+		jo = v
+		jo.RunMethod("setElevation", Array As Object(e))
+	End If
 End Sub
 
 'sample:
@@ -191,7 +205,7 @@ Sub ShowKeyboard(View1 As View)
 	ime.ShowKeyboard(View1)
 End Sub
 
-Sub HideKeyboard
+Sub HideKeyboard(Object_ As Object)
 	Dim ime As IME
 	ime.Initialize("")
 	ime.HideKeyboard
@@ -721,7 +735,7 @@ Sub LinkifyTextView(textViewArg As View, maskArg As Int,LinksColor As Int)
 	r.RunMethod2("setLinkTextColor", LinksColor, "java.lang.int")
 End Sub
 
-'#AdditionalJar: com.android.support:support-compat
+'<code>#AdditionalJar: com.android.support:support-compat</code>
 Sub SetAutoSizeBasedOnText(v As View)
 	Dim jo As JavaObject
 	jo.InitializeStatic("android.support.v4.widget.TextViewCompat")

@@ -289,7 +289,15 @@ Private Sub gpu_PictureTaken (Data() As Byte)
 End Sub
 
 Public Sub ChooseFromGallery
+	Dim r As RuntimePermissions
+	
+	If r.Check(r.PERMISSION_READ_EXTERNAL_STORAGE) = False Then
+		r.CheckAndRequest(r.PERMISSION_READ_EXTERNAL_STORAGE)
+		Return
+	End If
+	
 	chooser.Show("image/*",Chooser_Title)
+
 End Sub
 
 'use below permission
@@ -318,30 +326,31 @@ End Sub
 '</code>
 Public Sub ChooseFromCamera
 	
-	Dim ru As RuntimePermissions
-	ru.CheckAndRequest(ru.PERMISSION_CAMERA)
-	Wait For Activity_PermissionResult (Permission As String, Result As Boolean)
-		If Result Then
-			Dim i As Intent
-			i.Initialize("android.media.action.IMAGE_CAPTURE", "")
-			File.Delete(imageFolder, tempImageFile)
-			Dim p As Phone
-			Dim u As Object
-			If p.SdkVersion < 24 Then
-				Dim uri As Uri
-				uri.Parse("file://" & File.Combine(imageFolder, tempImageFile))
-				u = uri
-			Else
-				u = CreateFileProviderUri(imageFolder, tempImageFile)
-			End If
-			i.PutExtra("output", u) 'the image will be saved to this path
-			Try
-				StartActivityForResult(i,"ion")
-			Catch
-				ToastMessageShow("Camera is not available.", True)
-				Log(LastException)
-			End Try
-		End If
+	Dim r As RuntimePermissions
+	If r.Check(r.PERMISSION_CAMERA) = False Then
+		r.CheckAndRequest(r.PERMISSION_CAMERA)
+		Return
+	End If
+	
+	Dim i As Intent
+	i.Initialize("android.media.action.IMAGE_CAPTURE", "")
+	File.Delete(imageFolder, tempImageFile)
+	Dim p As Phone
+	Dim u As Object
+	If p.SdkVersion < 24 Then
+		Dim uri As Uri
+		uri.Parse("file://" & File.Combine(imageFolder, tempImageFile))
+		u = uri
+	Else
+		u = CreateFileProviderUri(imageFolder, tempImageFile)
+	End If
+	i.PutExtra("output", u) 'the image will be saved to this path
+	Try
+		StartActivityForResult(i,"ion")
+	Catch
+		ToastMessageShow("Camera is not available.", True)
+		Log(LastException)
+	End Try
 	
 End Sub
 

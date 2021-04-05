@@ -327,6 +327,7 @@ Sub ShowCustomToast(Text As Object, LongDuration As Boolean,X As Int,Y As Int,Ba
 	toast.RunMethod("show", Null)
 End Sub
 
+'use <code>#AdditionalJar: com.android.support:support-compat</code>
 Sub SetBackgroundTintList(View As View,Active As Int, Enabled As Int)
 	Dim States(2,1) As Int
 	States(0,0) = 16842908     'Active

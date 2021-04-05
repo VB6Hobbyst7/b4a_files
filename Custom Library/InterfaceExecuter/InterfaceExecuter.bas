@@ -172,10 +172,12 @@ Private Sub exeucute_request(Arg2 As Object,Headers2 As Object)
 		ListFiles	=	Arg.Get("files")
 		
 		job.PostMultipart(Url,Fields,ListFiles)
-		job.GetRequest.Timeout = 40000
+		job.GetRequest.Timeout = 700000
 	
 	End If
 	#end region
+	
+	job.GetRequest.Timeout = 20000
 	
 	#region Add Headers
 	job.GetRequest.SetHeader("Cache-Control","no-store, no-cache, must-revalidate, max-age=0")
@@ -184,8 +186,6 @@ Private Sub exeucute_request(Arg2 As Object,Headers2 As Object)
 	job.GetRequest.SetHeader("vn",Application.VersionName)
 	job.GetRequest.SetHeader("pn",Application.PackageName)
 	job.GetRequest.SetHeader("os","android")
-	
-	If job.GetRequest.Timeout <> 40000 Then job.GetRequest.Timeout = 20000
 	
 	For Each Key As String In Headers.Keys
 		job.GetRequest.SetHeader(Key,Headers.Get(Key))

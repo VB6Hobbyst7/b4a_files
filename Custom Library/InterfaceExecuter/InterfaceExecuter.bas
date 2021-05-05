@@ -153,19 +153,25 @@ Private Sub exeucute_request(Arg2 As Object,Headers2 As Object)
 	#region Detect Method(POST,DELETE or ...)
 	If Method = "POST" Then
 		job.PostString(Url,query)
+		job.GetRequest.Timeout = 20000
 		
 	Else If Method = "PUT" Then
 		job.PostString(Configuration.URL_ & Segment,"")
 		job.GetRequest.InitializePut2(Url,query.GetBytes("UTF8"))
 		job.GetRequest.SetContentType("x-www-form-urlencoded")
+		job.GetRequest.Timeout = 20000
 	
 	Else If Method = "DELETE" Then
-		job.PostString(Configuration.URL_ & Segment,query)
-		job.GetRequest.SetContentType("x-www-form-urlencoded")
-		job.GetRequest.InitializeDelete(Url)
-	
+		job.PostBytes(Url,query.GetBytes("utf8"))
+		#if b4i
+		Dim no As NativeObject = job.GetRequest
+		no.GetField("object").RunMethod("setHTTPMethod:", Array("DELETE"))
+		#end if
+		job.GetRequest.Timeout = 20000
+		
 	Else If Method = "GET" Then
 		job.Download(Url & "?" & query)
+		job.GetRequest.Timeout = 20000
 	
 	Else If Method = "FILE" Then
 		Dim ListFiles As List
@@ -176,8 +182,6 @@ Private Sub exeucute_request(Arg2 As Object,Headers2 As Object)
 	
 	End If
 	#end region
-	
-	job.GetRequest.Timeout = 20000
 	
 	#region Add Headers
 	job.GetRequest.SetHeader("Cache-Control","no-store, no-cache, must-revalidate, max-age=0")
